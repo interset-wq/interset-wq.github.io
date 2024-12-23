@@ -19,20 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>kindle(第10代)使用体验</title>
-    <url>/2024/12/21/kindle-%E7%AC%AC10%E4%BB%A3-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<pre><code>暂时还没有写内容。
-&#123;% asset_img "1.jpg" "图片" %&#125;
-</code></pre>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>kindle</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>text</title>
     <url>/2024/12/21/text/</url>
     <content><![CDATA[<p>计篇</p>
@@ -44,6 +30,20 @@
 ]]></content>
       <tags>
         <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kindle(第10代)使用体验</title>
+    <url>/2024/12/21/kindle-%E7%AC%AC10%E4%BB%A3-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<pre><code>暂时还没有写内容。
+&#123;% asset_img "1.jpg" "图片" %&#125;
+</code></pre>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>kindle</tag>
       </tags>
   </entry>
   <entry>
