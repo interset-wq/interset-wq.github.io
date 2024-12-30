@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2024/12/21/hello-world/</url>
+    <url>/posts/undefined.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -23,7 +23,7 @@
   </entry>
   <entry>
     <title>kindle第十代使用体验</title>
-    <url>/2024/12/24/kindle%E7%AC%AC%E5%8D%81%E4%BB%A3%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
+    <url>/posts/undefined.html</url>
     <content><![CDATA[<p>我使用kindle将近半年了，因为kindle，我对电纸书有了一些兴趣，先后使用过kindle touch, 汉王N618， NOOK2， 以及kindle10。<br>接下来，我给大家介绍一下我对于kindle10的使用体验。<br>kindle第十代,简称k10，但是在网上常被称为kindle青春版2019，说是青春版，实际上是同代系中的普通版，实际上亚马逊并没有青春版之类的命名，青春版的英文为New Kindle,也就是推出的新机器，青春版的定位是同系列中的低端机，并不是什么时尚之类的代名词。恰恰相反，青春版的外形是同代系中最拉跨的。<br>我们先来看看kindle10的外型：<br><img src="https://s2.loli.net/2024/12/28/Atv2ylH9mGk6cXw.jpg" alt="正面"><br><img src="https://s2.loli.net/2024/12/28/2mMseJZgi7d9l8H.jpg" alt="反面"><br>采用的塑料外壳是一种非常普通的外壳，由于我是在咸鱼上买的二手，外壳本来就有些损坏，非常影响美观。外壳没有任何防滑的处理，也没有耐脏的处理，而且还很容易与桌面摩擦造成外壳上面的划痕。为了保护我的外壳已经损坏的kindle，我使用胶带将外壳粘住了，这也可以防止破口处刮到手。<br><img src="https://s2.loli.net/2024/12/28/gAJuIKjpBS96M1t.jpg" alt="正面"><br><img src="https://s2.loli.net/2024/12/28/rAdOLxoYVcU76N3.jpg" alt="反面"><br>总的来说，kindle青春版2019外壳非常平庸。而且阅读体验也比较平庸。<br>我的kindle青春版2019内存是8G的，跟10多年前的kindle touch相比，只是增大了内存，增加了背光功能，以及稍微加快了漫画的翻页速度，其他方面大致相同。<br>算了，就先写这么多吧。这是我第一次写博客，还不太熟练，就不写多了。</p>
 ]]></content>
       <categories>
@@ -35,35 +35,8 @@
       </tags>
   </entry>
   <entry>
-    <title>vscode常用快捷键</title>
-    <url>/2024/12/30/vscode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<p>我常用的代码编辑器是VS Code，虽然经常用，但是我总会忘记一些快捷键，在此记录，方便以后查找。</p>
-<h2 id="缩进-取消缩进"><a href="#缩进-取消缩进" class="headerlink" title="缩进&#x2F;取消缩进"></a>缩进&#x2F;取消缩进</h2><p>缩进 CTRL-]<br>取消缩进 ctrl-[</p>
-<h2 id="注释-取消注释-CTRL"><a href="#注释-取消注释-CTRL" class="headerlink" title="注释&#x2F;取消注释 CTRL-&#x2F;"></a>注释&#x2F;取消注释 CTRL-&#x2F;</h2><h2 id="上下移动代码块"><a href="#上下移动代码块" class="headerlink" title="上下移动代码块"></a>上下移动代码块</h2><p>向上移动 alt-PgUp<br>向下移动 alt-PgDn</p>
-<h2 id="隐藏资源管理器-CTRL-B"><a href="#隐藏资源管理器-CTRL-B" class="headerlink" title="隐藏资源管理器 CTRL-B"></a>隐藏资源管理器 CTRL-B</h2>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>vscode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机二级备考word</title>
-    <url>/2024/12/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7%E5%A4%87%E8%80%83word/</url>
-    <content><![CDATA[<p>2024&#x2F;12&#x2F;26，我终于报名计算机二级Ms Office考试了。我总是在贴吧上看到有同学说计算机二级没什么用，而且学校对于这个也不重视，因为学校官网从来没有报名计算机等级考试的通知，但是当我去看双选会的时候，几乎每个招聘上面都写要熟练使用word,excel,ppt,wps等办公软件。再有就是大一德育答辩的时候，很多同学都不会制作ppt，甚至有些同学连如何放映ppt都不知道。有好几次小组作业，老师要求上交word文档，然而大部分人连最基本的首行缩进都要靠敲空格才能实现，文档目录全凭打字实现。以上种种情况说明计算机二级并不是一无是处。为了备考明年3月的计算机二级，我关注b站上的小黑老师已经很久了，并且专门写下这篇文章用来记录学习笔记。</p>
-<h2 id="0"><a href="#0" class="headerlink" title="0"></a>0</h2><p>设置对应段落制表位 开始-段落-制表位（段落对话框左下角）<br>多级列表 开始-段落-多级列表-定义新的多级列表-更多（对话框左下角）-按题目要求操作（将级别链接到样式、编号格式、位置、编号之后、正规形式编号）<br>word图表 插入-图表（使用时不要先选中数据，将光标放在空白处操作，再弹出excel工作表时点击excel左上角行列处的小三角，将数据复制到excel中<br>字符间距 开始-字体-高级<br>段落排序 开始-段落-排序<br>插入横线 开始-段落-边框-横线-横线出现后双击可调整格式</p>
-]]></content>
-      <categories>
-        <category>office</category>
-      </categories>
-      <tags>
-        <tag>Word</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用bs4下载所有xkcd漫画</title>
-    <url>/2024/12/29/%E4%BD%BF%E7%94%A8bs4%E4%B8%8B%E8%BD%BD%E6%89%80%E6%9C%89xkcd%E6%BC%AB%E7%94%BB/</url>
+    <url>/posts/undefined.html</url>
     <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我第一次知道python爬虫，是在我看到了这么一本书，书的名字是《Python编程快速上手：让繁琐的工作自动化》（网上找图的时候，突然发现出第二版了，我找时间自己看看）。不过我不推荐大家去阅读这本书，因为这本书用的python版本是3.4，而我的python版本是3.12。就是因为版本相差太大，导致书上很多代码都无法实现。这本书的涉及面挺广的，介绍了很多有趣的第三方库。上面有一个项目，叫做“下载所有xkcd漫画”，为了实现这个项目，书上介绍了和爬虫密切相关的两个库：requests和bs4。接下来，我会来回顾这个项目。<br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.cATZrXN1CMvn_qVWhGC8IAHaKE?w=146&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手"><br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.x0Iqi8lgVN-Iex0N702btAHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手（第二版）"></p>
 <h2 id="两个第三方库requests和bs4"><a href="#两个第三方库requests和bs4" class="headerlink" title="两个第三方库requests和bs4"></a>两个第三方库requests和bs4</h2><h3 id="requests"><a href="#requests" class="headerlink" title="requests"></a>requests</h3><p>requests是爬虫中最常用的一个第三方库。<br>我们先来安装requests,此处安装的版本是2.32.3</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">&gt; pip install requests</span><br></pre></td></tr></table></figure>
@@ -77,6 +50,33 @@
       <tags>
         <tag>bs4</tag>
         <tag>BeautifulSoup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vscode常用快捷键</title>
+    <url>/posts/undefined.html</url>
+    <content><![CDATA[<p>我常用的代码编辑器是VS Code，虽然经常用，但是我总会忘记一些快捷键，在此记录，方便以后查找。</p>
+<h2 id="缩进-取消缩进"><a href="#缩进-取消缩进" class="headerlink" title="缩进&#x2F;取消缩进"></a>缩进&#x2F;取消缩进</h2><p>缩进 CTRL-]<br>取消缩进 ctrl-[</p>
+<h2 id="注释-取消注释-CTRL"><a href="#注释-取消注释-CTRL" class="headerlink" title="注释&#x2F;取消注释 CTRL-&#x2F;"></a>注释&#x2F;取消注释 CTRL-&#x2F;</h2><h2 id="上下移动代码块"><a href="#上下移动代码块" class="headerlink" title="上下移动代码块"></a>上下移动代码块</h2><p>向上移动 alt-PgUp<br>向下移动 alt-PgDn</p>
+<h2 id="隐藏资源管理器-CTRL-B"><a href="#隐藏资源管理器-CTRL-B" class="headerlink" title="隐藏资源管理器 CTRL-B"></a>隐藏资源管理器 CTRL-B</h2>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机二级备考word</title>
+    <url>/posts/undefined.html</url>
+    <content><![CDATA[<p>2024&#x2F;12&#x2F;26，我终于报名计算机二级Ms Office考试了。我总是在贴吧上看到有同学说计算机二级没什么用，而且学校对于这个也不重视，因为学校官网从来没有报名计算机等级考试的通知，但是当我去看双选会的时候，几乎每个招聘上面都写要熟练使用word,excel,ppt,wps等办公软件。再有就是大一德育答辩的时候，很多同学都不会制作ppt，甚至有些同学连如何放映ppt都不知道。有好几次小组作业，老师要求上交word文档，然而大部分人连最基本的首行缩进都要靠敲空格才能实现，文档目录全凭打字实现。以上种种情况说明计算机二级并不是一无是处。为了备考明年3月的计算机二级，我关注b站上的小黑老师已经很久了，并且专门写下这篇文章用来记录学习笔记。</p>
+<h2 id="0"><a href="#0" class="headerlink" title="0"></a>0</h2><p>设置对应段落制表位 开始-段落-制表位（段落对话框左下角）<br>多级列表 开始-段落-多级列表-定义新的多级列表-更多（对话框左下角）-按题目要求操作（将级别链接到样式、编号格式、位置、编号之后、正规形式编号）<br>word图表 插入-图表（使用时不要先选中数据，将光标放在空白处操作，再弹出excel工作表时点击excel左上角行列处的小三角，将数据复制到excel中<br>字符间距 开始-字体-高级<br>段落排序 开始-段落-排序<br>插入横线 开始-段落-边框-横线-横线出现后双击可调整格式</p>
+]]></content>
+      <categories>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>Word</tag>
       </tags>
   </entry>
 </search>
