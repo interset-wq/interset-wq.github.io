@@ -37,7 +37,7 @@
   <entry>
     <title>使用bs4下载所有xkcd漫画</title>
     <url>/posts/297e2f26.html</url>
-    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我第一次知道python爬虫，是在我看到了这么一本书，书的名字是《Python编程快速上手：让繁琐的工作自动化》（网上找图的时候，突然发现出第二版了，我找时间自己看看）。不过我不推荐大家去阅读这本书，因为这本书用的python版本是3.4，而我的python版本是3.12。就是因为版本相差太大，导致书上很多代码都无法实现。这本书的涉及面挺广的，介绍了很多有趣的第三方库。上面有一个项目，叫做“下载所有xkcd漫画”，为了实现这个项目，书上介绍了和爬虫密切相关的两个库：requests和bs4。接下来，我会来回顾这个项目。<br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.cATZrXN1CMvn_qVWhGC8IAHaKE?w=146&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手"><br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.x0Iqi8lgVN-Iex0N702btAHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手（第二版）"></p>
+    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我第一次知道python爬虫，是在我看到了这么一本书，书的名字是《Python编程快速上手：让繁琐工作自动化》（网上找图的时候，突然发现出第二版了，我找时间自己看看）。不过我不推荐大家去阅读这本书，因为这本书用的python版本是3.4，而我的python版本是3.12。就是因为版本相差太大，导致书上很多代码都无法实现。这本书的涉及面挺广的，介绍了很多有趣的第三方库。上面有一个项目，叫做“下载所有xkcd漫画”，为了实现这个项目，书上介绍了和爬虫密切相关的两个库：requests和bs4。接下来，我会来回顾这个项目。<br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.cATZrXN1CMvn_qVWhGC8IAHaKE?w=146&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手"><br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.x0Iqi8lgVN-Iex0N702btAHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手（第二版）"></p>
 <h2 id="两个第三方库requests和bs4"><a href="#两个第三方库requests和bs4" class="headerlink" title="两个第三方库requests和bs4"></a>两个第三方库requests和bs4</h2><h3 id="requests"><a href="#requests" class="headerlink" title="requests"></a>requests</h3><p>requests是爬虫中最常用的一个第三方库。<br>我们先来安装requests,此处安装的版本是2.32.3</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">&gt; pip install requests</span><br></pre></td></tr></table></figure>
 <p>安装完成之后就可以使用requests了。</p>
@@ -85,7 +85,7 @@
 </tr>
 </tbody></table>
 <p>上面的表格只是列举了几种常见的情况，在使用时可以直接在浏览器（我常用的是Google chrome）开发者模式elements内单击鼠标右键复制selector。<br>select()方法返回一个tag列表，常用elements表示。tag值，常用element表示，可以传递给str()函数，显示其代表的HTML标签。element也可以有attrs属性，它将该element的所有HTML属性作为一个字典。对element使用get_text()方法,可以获取元素的文本。对element使用get(‘属性名’)方法可以获取对应的属性值。<br>需要特别注意的是，bs4适用于静态网页，对于动态网页，bs4将失效。</p>
-<h2 id="下载所有xkcd漫画"><a href="#下载所有xkcd漫画" class="headerlink" title="下载所有xkcd漫画"></a>下载所有xkcd漫画</h2><h3 id="分析xkcd网站"><a href="#分析xkcd网站" class="headerlink" title="分析xkcd网站"></a>分析xkcd网站</h3><p><img src="https://s2.loli.net/2024/12/31/mhKjwWDL72epR3i.png" alt="xkcd"><br><a href="https://xkcd.com/">https://xkcd.com/</a> 的首页默认是最新的一张漫画，如果此时点击next，网站url则会变成<a href="https://xkcd.com/#">https://xkcd.com/#</a> ，第一页的url是<a href="https://xkcd.com/1/">https://xkcd.com/1/</a> ，如果此时再点击prev,网站url则会变为<a href="https://xkcd.com/1/#">https://xkcd.com/1/#</a>  。而且url中的数字是连续变化的，中间没有空值。<br>使用F12进入开发者模式（Google，edge，firefox），在network页面找到图片的url,和下一页的url。<br><img src="https://s2.loli.net/2024/12/31/SC7z5O1xBdQA8mZ.png" alt="开发者模式copy selector"></p>
+<h2 id="下载所有xkcd漫画"><a href="#下载所有xkcd漫画" class="headerlink" title="下载所有xkcd漫画"></a>下载所有xkcd漫画</h2><h3 id="分析xkcd网站"><a href="#分析xkcd网站" class="headerlink" title="分析xkcd网站"></a>分析xkcd网站</h3><p><img src="https://s2.loli.net/2024/12/31/mhKjwWDL72epR3i.png" alt="xkcd"><br><a href="https://xkcd.com/">https://xkcd.com/</a> 的首页默认是最新的一张漫画，如果此时点击next，网站url则会变成<a href="https://xkcd.com/#">https://xkcd.com/#</a> ，第一页的url是<a href="https://xkcd.com/1/">https://xkcd.com/1/</a> ，如果此时再点击prev,网站url则会变为<a href="https://xkcd.com/1/#">https://xkcd.com/1/#</a>  。而且url中的数字是连续变化的，中间没有空值。<br>使用F12进入开发者模式（Google，edge，firefox），在elements页面找到图片的url,和下一页的url。<br><img src="https://s2.loli.net/2024/12/31/SC7z5O1xBdQA8mZ.png" alt="开发者模式copy selector"></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests, os, time, re</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://xkcd.com/1/&#x27;</span></span><br><span class="line">os.makedirs(<span class="string">&#x27;xkcd&#x27;</span>, exist_ok=<span class="literal">True</span>) <span class="comment"># 在此目录下创建xkcd文件夹</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">not</span> url.endswith(<span class="string">&#x27;#&#x27;</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;开始下载页面<span class="subst">&#123;url&#125;</span>...&#x27;</span>)</span><br><span class="line">    res = requests.get(url)</span><br><span class="line">    res.raise_for_status()</span><br><span class="line">    soup = BeautifulSoup(res.text, <span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line">    comic_elems = soup.select(<span class="string">&#x27;#comic img&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> comic_elems == []:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;未发现图片&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        comic_url = <span class="string">&#x27;https:&#x27;</span> + comic_elems[<span class="number">0</span>].get(<span class="string">&#x27;src&#x27;</span>) <span class="comment"># 补全省略的前缀https:</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;下载图片<span class="subst">&#123;url&#125;</span>&#x27;</span>)</span><br><span class="line">        res = requests.get(comic_url)</span><br><span class="line">        res.raise_for_status()</span><br><span class="line">        i = re.findall(<span class="string">r&#x27;\d+&#x27;</span>, url)[<span class="number">0</span>] <span class="comment"># 使用正则表达式，从页面url中提取数字用来命名下载到的图片</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&#x27;./xkcd/<span class="subst">&#123;i&#125;</span>.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(res.content)</span><br><span class="line">        next_link = soup.select(<span class="string">&#x27;a[rel=&quot;next&quot;]&#x27;</span>)[<span class="number">0</span>] <span class="comment"># 获取下一页的url,由于xkcd网站图片上下都有next按键，此处取第一个</span></span><br><span class="line">        url = <span class="string">&#x27;https://xkcd.com&#x27;</span> + next_link.get(<span class="string">&#x27;href&#x27;</span>) <span class="comment"># 补全省略的前缀https://xkcd.com</span></span><br><span class="line">        time.sleep(<span class="number">5</span>) <span class="comment"># 暂停5秒，是否需要暂停取决于你的需要，我使用这个函数方便测试代码</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;下载完成&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="关于代码的一些说明"><a href="#关于代码的一些说明" class="headerlink" title="关于代码的一些说明"></a>关于代码的一些说明</h3><p>原书中是从最新一张漫画的页面开始，一直获取上一页的url，但是我们看漫画的顺序都是从前往后看，所以我将顺序更改为了从第一张图片开始。<br>原书中是用图片的comic_url来命名图片，这使得图片名称过长，我更改为了使用url的数字序号来命名。</p>
 ]]></content>
@@ -95,6 +95,21 @@
       <tags>
         <tag>bs4</tag>
         <tag>BeautifulSoup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多线程xkcd下载程序</title>
+    <url>/posts/58338ab0.html</url>
+    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为《Python编程快速上手：让繁琐工作自动化》这本书，我对爬虫产生了浓烈的兴趣。我按照书上的说明，顺利的完成了“下载所有xkcd漫画”这个小项目，那已经是半年前的事情了。那时候的我并没有完全搞懂requests和bs4的工作原理，只是一味的照搬书上的代码。然后到了后面的“多线程xkcd下载程序”这个项目时，我发现照搬书上的代码是实现不了的，试了很多次还在网上搜索了一些资料，还是没有成功。看到终端上面全是报错，令我十分失望，也让我受到了沉重的打击。现在回想起来发现，当时的我有些太高估自己了。毕竟在半年之前，我还是python刚入门的小白，在b站上看了一些视频，边看边忘，然后放弃看视频，转而是自己看python相关的书籍自学。那时，我确实不应该太高估自己的实力了。现在看这个项目，按照自己的思路来，感觉很简单。<br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.cATZrXN1CMvn_qVWhGC8IAHaKE?w=146&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手"></p>
+<h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>上一篇文章，我介绍了“<a href="https://interset-wq.github.io/posts/297e2f26.html">使用bs4下载所有xkcd漫画</a>”,这个项目将在那个项目上修改一些代码，实现多线程下载。多线程程序可以从不同的地方同时执行不同的代码行，从而大大提高效率。</p>
+<h2 id="threading"><a href="#threading" class="headerlink" title="threading"></a>threading</h2>]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>bs4</tag>
+        <tag>threading</tag>
+        <tag>多线程</tag>
       </tags>
   </entry>
   <entry>
@@ -112,6 +127,17 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机二级备考excel</title>
+    <url>/posts/c50466a1.html</url>
+    <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <categories>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>Excel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机二级备考word</title>
     <url>/posts/76905695.html</url>
     <content><![CDATA[<p>2024&#x2F;12&#x2F;26，我终于报名计算机二级Ms Office考试了。我总是在贴吧上看到有同学说计算机二级没什么用，而且学校对于这个也不重视，因为学校官网从来没有报名计算机等级考试的通知，但是当我去看双选会的时候，几乎每个招聘上面都写要熟练使用word,excel,ppt,wps等办公软件。再有就是大一德育答辩的时候，很多同学都不会制作ppt，甚至有些同学连如何放映ppt都不知道。有好几次小组作业，老师要求上交word文档，然而大部分人连最基本的首行缩进都要靠敲空格才能实现，文档目录全凭打字实现。以上种种情况说明计算机二级并不是一无是处。为了备考明年3月的计算机二级，我关注b站上的小黑老师已经很久了，并且专门写下这篇文章用来记录学习笔记。</p>
@@ -122,17 +148,6 @@
       </categories>
       <tags>
         <tag>Word</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机二级备考excel</title>
-    <url>/posts/c50466a1.html</url>
-    <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-      <categories>
-        <category>office</category>
-      </categories>
-      <tags>
-        <tag>Excel</tag>
       </tags>
   </entry>
 </search>
