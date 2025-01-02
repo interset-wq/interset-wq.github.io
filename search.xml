@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hello world</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>kindle第十代使用体验</title>
+    <url>/posts/fc3b4b02.html</url>
+    <content><![CDATA[<p>我使用kindle将近半年了，因为kindle，我对电纸书有了一些兴趣，先后使用过kindle touch, 汉王N618， NOOK2， 以及kindle10。<br>接下来，我给大家介绍一下我对于kindle10的使用体验。<br>kindle第十代,简称k10，但是在网上常被称为kindle青春版2019，说是青春版，实际上是同代系中的普通版，实际上亚马逊并没有青春版之类的命名，青春版的英文为New Kindle,也就是推出的新机器，青春版的定位是同系列中的低端机，并不是什么时尚之类的代名词。恰恰相反，青春版的外形是同代系中最拉跨的。<br>我们先来看看kindle10的外型：<br><img src="https://s2.loli.net/2024/12/28/Atv2ylH9mGk6cXw.jpg" alt="正面"><br><img src="https://s2.loli.net/2024/12/28/2mMseJZgi7d9l8H.jpg" alt="反面"><br>采用的塑料外壳是一种非常普通的外壳，由于我是在咸鱼上买的二手，外壳本来就有些损坏，非常影响美观。外壳没有任何防滑的处理，也没有耐脏的处理，而且还很容易与桌面摩擦造成外壳上面的划痕。为了保护我的外壳已经损坏的kindle，我使用胶带将外壳粘住了，这也可以防止破口处刮到手。<br><img src="https://s2.loli.net/2024/12/28/gAJuIKjpBS96M1t.jpg" alt="正面"><br><img src="https://s2.loli.net/2024/12/28/rAdOLxoYVcU76N3.jpg" alt="反面"><br>总的来说，kindle青春版2019外壳非常平庸。而且阅读体验也比较平庸。<br>我的kindle青春版2019内存是8G的，跟10多年前的kindle touch相比，只是增大了内存，增加了背光功能，以及稍微加快了漫画的翻页速度，其他方面大致相同。<br>算了，就先写这么多吧。这是我第一次写博客，还不太熟练，就不写多了。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>kindle</tag>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用bs4下载所有xkcd漫画</title>
     <url>/posts/297e2f26.html</url>
     <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我第一次知道python爬虫，是在我看到了这么一本书，书的名字是《Python编程快速上手：让繁琐工作自动化》（网上找图的时候，突然发现出第二版了，我找时间自己看看）。不过我不推荐大家去阅读这本书，因为这本书用的python版本是3.4，而我的python版本是3.12。就是因为版本相差太大，导致书上很多代码都无法实现。这本书的涉及面挺广的，介绍了很多有趣的第三方库。上面有一个项目，叫做“下载所有xkcd漫画”，为了实现这个项目，书上介绍了和爬虫密切相关的两个库：requests和bs4。接下来，我会来回顾这个项目。<br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.cATZrXN1CMvn_qVWhGC8IAHaKE?w=146&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手"><br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.x0Iqi8lgVN-Iex0N702btAHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手（第二版）"></p>
@@ -64,25 +98,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>计算机二级备考excel</title>
+    <url>/posts/c50466a1.html</url>
+    <content><![CDATA[<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>CTRL-SHIFT-PgDn 连续向下选择<br>套用表格格式 选中表格，注意不要选合并后居中的标题，开始-套用表格格式<br>VLOOKUP查询函数 VLOOKUP（查询对象，查询的数据区域，结果在第几列，TRUE&#x2F;FALSE）<br>SUMIFS条件求和函数 SUMIFS（计算求和区域，条件区域，”条件”，[条件区域，”条件”，…]）</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>插入001格式的能参与计算的序号 开始-数字-自定义-000<br>调整行高列宽 点击左上角三角-自行调整<br>添加内外框线 开始-字体-边框-线条颜色-所有框线<br>隔行填充（奇数行） 开始-条件格式-新建规则-使用公式&#x3D;isodd(row())<br>从字符串中取字符函数mid(字符，开始字符，取几个字符)<br>普通排名&#x2F;美式排名 函数rank()<br>中式排名 复制需要排名的区域到空白处-数据-删除重复项-将原数据在辅助列中使用rank()来排名<br>分类汇总，每组结果分页显示 在表中选中分类字段-数据-排序-分级显示-分类汇总-勾选每组数据分页<br>移动图表 设计-移动图表</p>
 ]]></content>
       <categories>
-        <category>hello world</category>
+        <category>office</category>
       </categories>
+      <tags>
+        <tag>Excel</tag>
+        <tag>计算机二级</tag>
+      </tags>
   </entry>
   <entry>
     <title>vscode常用快捷键</title>
@@ -96,43 +123,6 @@
       </categories>
       <tags>
         <tag>vscode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多线程xkcd下载程序</title>
-    <url>/posts/58338ab0.html</url>
-    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为《Python编程快速上手：让繁琐工作自动化》这本书，我对爬虫产生了浓烈的兴趣。我按照书上的说明，顺利的完成了“下载所有xkcd漫画”这个小项目，那已经是半年前的事情了。那时候的我并没有完全搞懂requests和bs4的工作原理，只是一味的照搬书上的代码。然后到了后面的“多线程xkcd下载程序”这个项目时，我发现照搬书上的代码是实现不了的，试了很多次还在网上搜索了一些资料，还是没有成功。看到终端上面全是报错，令我十分失望，也让我受到了沉重的打击。现在回想起来发现，当时的我有些太高估自己了。毕竟在半年之前，我还是python刚入门的小白，在b站上看了一些视频，边看边忘，然后放弃看视频，转而是自己看python相关的书籍自学。那时，我确实不应该太高估自己的实力了。现在看这个项目，按照自己的思路来，感觉很简单。<br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.cATZrXN1CMvn_qVWhGC8IAHaKE?w=146&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手"></p>
-<h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>上一篇文章，我介绍了“<a href="https://interset-wq.github.io/posts/297e2f26.html">使用bs4下载所有xkcd漫画</a>”,这个项目将在那个项目上修改一些代码，实现多线程下载。多线程程序可以从不同的地方同时执行不同的代码行，从而大大提高效率。</p>
-<h2 id="threading"><a href="#threading" class="headerlink" title="threading"></a>threading</h2><p>我们可以使用threading库来创建新线程。先调用threading.Thread()函数来生产一个Thread对象，我用thread_obj表示。然后对thread_obj调用start()方法开始新线程。我引用原书中的例子来帮助大家理解Thread函数的用法。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主线程</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;开始&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新线程调用的函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">nap</span>():</span><br><span class="line">  sleep(<span class="number">5</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;新线程开始&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新线程</span></span><br><span class="line">thread_obj = Thread(target=nap)</span><br><span class="line">thread_obj.start()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主线程</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;结束&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>运行结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">开始</span><br><span class="line">结束</span><br><span class="line">新线程开始</span><br></pre></td></tr></table></figure>
-<p>从这个例子可以看出两个线程互不干扰。</p>
-<h2 id="多线程下载xkcd漫画"><a href="#多线程下载xkcd漫画" class="headerlink" title="多线程下载xkcd漫画"></a>多线程下载xkcd漫画</h2><p>从上一篇文章的分析中，我们已经知道了xkcd网站的页面url中的数字序号是从1开始连续变化的，因此我们可以不需要从页面中获取下一页的url，只要修改url的数字序号就行了。<br><img src="https://s2.loli.net/2025/01/01/gQvTrJbKa5XM8o1.png" alt="不存在https://xkcd.com/0/"></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests, os</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;xkcd&#x27;</span>, exist_ok=<span class="literal">True</span>) <span class="comment"># 在此目录下创建xkcd文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_xkcd</span>(<span class="params">start_comic, end_comic</span>):</span><br><span class="line">    <span class="keyword">for</span> url_num <span class="keyword">in</span> <span class="built_in">range</span>(start_comic, end_comic):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;开始下载页面<span class="subst">&#123;url_num&#125;</span>...&#x27;</span>)</span><br><span class="line">        url = <span class="string">&#x27;http://xkcd.com/&#x27;</span> + <span class="built_in">str</span>(url_num) + <span class="string">&#x27;/&#x27;</span> <span class="comment"># xkcd每个页面的url格式为http://xkcd.com/序号/</span></span><br><span class="line">        res = requests.get(url)</span><br><span class="line">        res.raise_for_status()</span><br><span class="line">        soup = BeautifulSoup(res.text, <span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line">        comic_elems = soup.select(<span class="string">&#x27;#comic img&#x27;</span>) <span class="comment"># 从页面url中获取与漫画图片相关的元素</span></span><br><span class="line">        <span class="keyword">if</span> comic_elems == []:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;未发现图片&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            comic_url = <span class="string">&#x27;https:&#x27;</span> + comic_elems[<span class="number">0</span>].get(<span class="string">&#x27;src&#x27;</span>) <span class="comment"># 补全图片comic_url中省略的https:</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;下载图片<span class="subst">&#123;url&#125;</span>&#x27;</span>)</span><br><span class="line">            res = requests.get(comic_url)</span><br><span class="line">            res.raise_for_status</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&#x27;./xkcd/<span class="subst">&#123;url_num&#125;</span>.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                f.write(res.content)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">download_threads = [] <span class="comment"># thread对象列表，创建一系列新线程</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">50</span>, <span class="number">10</span>): <span class="comment"># 不能从0开始，因为url为https://xkcd.com/0/ 的页面不存在，会报错</span></span><br><span class="line">    <span class="comment"># 分别创建i的取值分别为1， 11， 21， 31， 41</span></span><br><span class="line">    download_thread = Thread(target=download_xkcd, args=(i, i + <span class="number">10</span>)) </span><br><span class="line">    <span class="comment"># target参数是新线程调用函数的函数名，args是函数download_xkcd()的参数</span></span><br><span class="line">    <span class="comment"># 创建新线程，同时执行download_xkcd(1, 11), (11, 21), (21, 31), (31, 41), (41, 51)</span></span><br><span class="line">    <span class="comment"># 需要特别注意的是区间右端点不包括在内，及执行download_xkcd(1, 11)时只会下载1~10张图片，以此类推</span></span><br><span class="line">    download_threads.append(download_thread) <span class="comment">#将创建的新线程放入线程列表中</span></span><br><span class="line">    download_thread.start() <span class="comment"># 开始新线程</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待所有线程结束，再打印“下载完成”</span></span><br><span class="line"><span class="keyword">for</span> download_thread <span class="keyword">in</span> download_threads:</span><br><span class="line">    download_thread.join()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;下载完成&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h3><p>执行这个代码，在半分钟之内就可以轻松下载50张图片了。我并没有像原书中那样创建14个线程，因为我的笔记本电脑只是四千的低端机。你可以根据自己的需要修改for i in range(1, 50, 10):中的数字。<br>变量和函数名的命名方法我习惯采用python官方推荐的下划线法，而不使用原书作者使用的驼峰法（单词首字母大写）。<br>如果代码有问题，请及时联系我。本文同时上传到csdn和我的个人<a href="https://interset-wq.github.io/posts/58338ab0.html">博客</a>,如需转载请注明作者和文章原地址。</p>
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>bs4</tag>
-        <tag>threading</tag>
-        <tag>多线程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机二级备考excel</title>
-    <url>/posts/c50466a1.html</url>
-    <content><![CDATA[<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>CTRL-SHIFT-PgDn 连续向下选择<br>套用表格格式 选中表格，注意不要选合并后居中的标题，开始-套用表格格式<br>VLOOKUP查询函数 VLOOKUP（查询对象，查询的数据区域，结果在第几列，TRUE&#x2F;FALSE）<br>SUMIFS条件求和函数 SUMIFS（计算求和区域，条件区域，”条件”，[条件区域，”条件”，…]）</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>插入001格式的能参与计算的序号 开始-数字-自定义-000<br>调整行高列宽 点击左上角三角-自行调整<br>添加内外框线 开始-字体-边框-线条颜色-所有框线<br>隔行填充（奇数行） 开始-条件格式-新建规则-使用公式&#x3D;isodd(row())<br>从字符串中取字符函数mid(字符，开始字符，取几个字符)<br>普通排名&#x2F;美式排名 函数rank()<br>中式排名 复制需要排名的区域到空白处-数据-删除重复项-将原数据在辅助列中使用rank()来排名<br>分类汇总，每组结果分页显示 在表中选中分类字段-数据-排序-分级显示-分类汇总-勾选每组数据分页<br>移动图表 设计-移动图表</p>
-]]></content>
-      <categories>
-        <category>office</category>
-      </categories>
-      <tags>
-        <tag>Excel</tag>
-        <tag>计算机二级</tag>
       </tags>
   </entry>
   <entry>
@@ -171,6 +161,29 @@
       </tags>
   </entry>
   <entry>
+    <title>多线程xkcd下载程序</title>
+    <url>/posts/58338ab0.html</url>
+    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为《Python编程快速上手：让繁琐工作自动化》这本书，我对爬虫产生了浓烈的兴趣。我按照书上的说明，顺利的完成了“下载所有xkcd漫画”这个小项目，那已经是半年前的事情了。那时候的我并没有完全搞懂requests和bs4的工作原理，只是一味的照搬书上的代码。然后到了后面的“多线程xkcd下载程序”这个项目时，我发现照搬书上的代码是实现不了的，试了很多次还在网上搜索了一些资料，还是没有成功。看到终端上面全是报错，令我十分失望，也让我受到了沉重的打击。现在回想起来发现，当时的我有些太高估自己了。毕竟在半年之前，我还是python刚入门的小白，在b站上看了一些视频，边看边忘，然后放弃看视频，转而是自己看python相关的书籍自学。那时，我确实不应该太高估自己的实力了。现在看这个项目，按照自己的思路来，感觉很简单。<br><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.cATZrXN1CMvn_qVWhGC8IAHaKE?w=146&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Python编程快速上手"></p>
+<h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>上一篇文章，我介绍了“<a href="https://interset-wq.github.io/posts/297e2f26.html">使用bs4下载所有xkcd漫画</a>”,这个项目将在那个项目上修改一些代码，实现多线程下载。多线程程序可以从不同的地方同时执行不同的代码行，从而大大提高效率。</p>
+<h2 id="threading"><a href="#threading" class="headerlink" title="threading"></a>threading</h2><p>我们可以使用threading库来创建新线程。先调用threading.Thread()函数来生产一个Thread对象，我用thread_obj表示。然后对thread_obj调用start()方法开始新线程。我引用原书中的例子来帮助大家理解Thread函数的用法。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主线程</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;开始&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新线程调用的函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">nap</span>():</span><br><span class="line">  sleep(<span class="number">5</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;新线程开始&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新线程</span></span><br><span class="line">thread_obj = Thread(target=nap)</span><br><span class="line">thread_obj.start()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主线程</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;结束&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">开始</span><br><span class="line">结束</span><br><span class="line">新线程开始</span><br></pre></td></tr></table></figure>
+<p>从这个例子可以看出两个线程互不干扰。</p>
+<h2 id="多线程下载xkcd漫画"><a href="#多线程下载xkcd漫画" class="headerlink" title="多线程下载xkcd漫画"></a>多线程下载xkcd漫画</h2><p>从上一篇文章的分析中，我们已经知道了xkcd网站的页面url中的数字序号是从1开始连续变化的，因此我们可以不需要从页面中获取下一页的url，只要修改url的数字序号就行了。<br><img src="https://s2.loli.net/2025/01/01/gQvTrJbKa5XM8o1.png" alt="不存在https://xkcd.com/0/"></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests, os</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;xkcd&#x27;</span>, exist_ok=<span class="literal">True</span>) <span class="comment"># 在此目录下创建xkcd文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_xkcd</span>(<span class="params">start_comic, end_comic</span>):</span><br><span class="line">    <span class="keyword">for</span> url_num <span class="keyword">in</span> <span class="built_in">range</span>(start_comic, end_comic):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;开始下载页面<span class="subst">&#123;url_num&#125;</span>...&#x27;</span>)</span><br><span class="line">        url = <span class="string">&#x27;http://xkcd.com/&#x27;</span> + <span class="built_in">str</span>(url_num) + <span class="string">&#x27;/&#x27;</span> <span class="comment"># xkcd每个页面的url格式为http://xkcd.com/序号/</span></span><br><span class="line">        res = requests.get(url)</span><br><span class="line">        res.raise_for_status()</span><br><span class="line">        soup = BeautifulSoup(res.text, <span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line">        comic_elems = soup.select(<span class="string">&#x27;#comic img&#x27;</span>) <span class="comment"># 从页面url中获取与漫画图片相关的元素</span></span><br><span class="line">        <span class="keyword">if</span> comic_elems == []:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;未发现图片&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            comic_url = <span class="string">&#x27;https:&#x27;</span> + comic_elems[<span class="number">0</span>].get(<span class="string">&#x27;src&#x27;</span>) <span class="comment"># 补全图片comic_url中省略的https:</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;下载图片<span class="subst">&#123;url&#125;</span>&#x27;</span>)</span><br><span class="line">            res = requests.get(comic_url)</span><br><span class="line">            res.raise_for_status</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&#x27;./xkcd/<span class="subst">&#123;url_num&#125;</span>.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                f.write(res.content)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">download_threads = [] <span class="comment"># thread对象列表，创建一系列新线程</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">50</span>, <span class="number">10</span>): <span class="comment"># 不能从0开始，因为url为https://xkcd.com/0/ 的页面不存在，会报错</span></span><br><span class="line">    <span class="comment"># 分别创建i的取值分别为1， 11， 21， 31， 41</span></span><br><span class="line">    download_thread = Thread(target=download_xkcd, args=(i, i + <span class="number">10</span>)) </span><br><span class="line">    <span class="comment"># target参数是新线程调用函数的函数名，args是函数download_xkcd()的参数</span></span><br><span class="line">    <span class="comment"># 创建新线程，同时执行download_xkcd(1, 11), (11, 21), (21, 31), (31, 41), (41, 51)</span></span><br><span class="line">    <span class="comment"># 需要特别注意的是区间右端点不包括在内，及执行download_xkcd(1, 11)时只会下载1~10张图片，以此类推</span></span><br><span class="line">    download_threads.append(download_thread) <span class="comment">#将创建的新线程放入线程列表中</span></span><br><span class="line">    download_thread.start() <span class="comment"># 开始新线程</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待所有线程结束，再打印“下载完成”</span></span><br><span class="line"><span class="keyword">for</span> download_thread <span class="keyword">in</span> download_threads:</span><br><span class="line">    download_thread.join()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;下载完成&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h3><p>执行这个代码，在半分钟之内就可以轻松下载50张图片了。我并没有像原书中那样创建14个线程，因为我的笔记本电脑只是四千的低端机。你可以根据自己的需要修改for i in range(1, 50, 10):中的数字。<br>变量和函数名的命名方法我习惯采用python官方推荐的下划线法，而不使用原书作者使用的驼峰法（单词首字母大写）。<br>如果代码有问题，请及时联系我。本文同时上传到csdn和我的个人<a href="https://interset-wq.github.io/posts/58338ab0.html">博客</a>,如需转载请注明作者和文章原地址。</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>bs4</tag>
+        <tag>threading</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机二级备考word</title>
     <url>/posts/76905695.html</url>
     <content><![CDATA[<p>2024&#x2F;12&#x2F;26，我终于报名计算机二级Ms Office考试了。我总是在贴吧上看到有同学说计算机二级没什么用，而且学校对于这个也不重视，因为学校官网从来没有报名计算机等级考试的通知，但是当我去看双选会的时候，几乎每个招聘上面都写要熟练使用word,excel,ppt,wps等办公软件。再有就是大一德育答辩的时候，很多同学都不会制作ppt，甚至有些同学连如何放映ppt都不知道。有好几次小组作业，老师要求上交word文档，然而大部分人连最基本的首行缩进都要靠敲空格才能实现，文档目录全凭打字实现。以上种种情况说明计算机二级并不是一无是处。为了备考明年3月的计算机二级，我关注b站上的小黑老师已经很久了，并且专门写下这篇文章用来记录学习笔记。</p>
@@ -184,19 +197,6 @@
       <tags>
         <tag>计算机二级</tag>
         <tag>Word</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>kindle第十代使用体验</title>
-    <url>/posts/fc3b4b02.html</url>
-    <content><![CDATA[<p>我使用kindle将近半年了，因为kindle，我对电纸书有了一些兴趣，先后使用过kindle touch, 汉王N618， NOOK2， 以及kindle10。<br>接下来，我给大家介绍一下我对于kindle10的使用体验。<br>kindle第十代,简称k10，但是在网上常被称为kindle青春版2019，说是青春版，实际上是同代系中的普通版，实际上亚马逊并没有青春版之类的命名，青春版的英文为New Kindle,也就是推出的新机器，青春版的定位是同系列中的低端机，并不是什么时尚之类的代名词。恰恰相反，青春版的外形是同代系中最拉跨的。<br>我们先来看看kindle10的外型：<br><img src="https://s2.loli.net/2024/12/28/Atv2ylH9mGk6cXw.jpg" alt="正面"><br><img src="https://s2.loli.net/2024/12/28/2mMseJZgi7d9l8H.jpg" alt="反面"><br>采用的塑料外壳是一种非常普通的外壳，由于我是在咸鱼上买的二手，外壳本来就有些损坏，非常影响美观。外壳没有任何防滑的处理，也没有耐脏的处理，而且还很容易与桌面摩擦造成外壳上面的划痕。为了保护我的外壳已经损坏的kindle，我使用胶带将外壳粘住了，这也可以防止破口处刮到手。<br><img src="https://s2.loli.net/2024/12/28/gAJuIKjpBS96M1t.jpg" alt="正面"><br><img src="https://s2.loli.net/2024/12/28/rAdOLxoYVcU76N3.jpg" alt="反面"><br>总的来说，kindle青春版2019外壳非常平庸。而且阅读体验也比较平庸。<br>我的kindle青春版2019内存是8G的，跟10多年前的kindle touch相比，只是增大了内存，增加了背光功能，以及稍微加快了漫画的翻页速度，其他方面大致相同。<br>算了，就先写这么多吧。这是我第一次写博客，还不太熟练，就不写多了。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>kindle</tag>
-        <tag>测试</tag>
       </tags>
   </entry>
 </search>

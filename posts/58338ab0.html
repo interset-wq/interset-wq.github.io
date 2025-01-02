@@ -362,41 +362,4 @@
   } else {
     window.loadOtherComment = loadGiscus
   }
-})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script>(() => {
-  const isChatBtn = false
-  const isChatHideShow = false
-
-  if (isChatBtn) {
-    const close = () => {
-      Chatra('minimizeWidget')
-      Chatra('hide')
-    }
-
-    const open = () => {
-      Chatra('openChat', true)
-      Chatra('show')
-    }
-
-    window.ChatraSetup = { startHidden: true }
-  
-    window.chatBtnFn = () => {
-      document.getElementById('chatra').classList.contains('chatra--expanded') ? close() : open()
-    }
-  } else if (isChatHideShow) {
-    window.chatBtn = {
-      hide: () => Chatra('hide'),
-      show: () => Chatra('show')
-    }
-  }
-
-  (function(d, w, c) {
-    w.ChatraID = '94z8o63gAYmix99Hs'
-    var s = d.createElement('script')
-    w[c] = w[c] || function() {
-      (w[c].q = w[c].q || []).push(arguments)
-    }
-    s.async = true
-    s.src = 'https://call.chatra.io/chatra.js'
-    if (d.head) d.head.appendChild(s)
-  })(document, window, 'Chatra')
-})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="输入你想搜索的文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
+})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="输入你想搜索的文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
