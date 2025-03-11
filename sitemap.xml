@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://interset-wq.github.io/</loc>
-         <lastmod>2025-03-10</lastmod>
+         <lastmod>2025-03-11</lastmod>
+    </url>
+    <url>
+         <loc>https://interset-wq.github.io/markdown/</loc>
+         <lastmod>2025-03-11</lastmod>
     </url>
     <url>
          <loc>https://interset-wq.github.io/GUI/python/</loc>
-         <lastmod>2025-03-10</lastmod>
+         <lastmod>2025-03-11</lastmod>
     </url>
     <url>
          <loc>https://interset-wq.github.io/GUI/test/</loc>
-         <lastmod>2025-03-10</lastmod>
+         <lastmod>2025-03-11</lastmod>
     </url>
     <url>
          <loc>https://interset-wq.github.io/blog/</loc>
-         <lastmod>2025-03-10</lastmod>
+         <lastmod>2025-03-11</lastmod>
     </url>
 </urlset>
