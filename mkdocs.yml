@@ -4,30 +4,75 @@ theme:
   name: material
   custom_dir: overrides
   language: zh
+  icon:
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+    # 引用，提示等
+    # admonition:
+    #   note: octicons/tag-16
+    #   abstract: octicons/checklist-16
+    #   info: octicons/info-16
+    #   tip: octicons/squirrel-16
+    #   success: octicons/check-16
+    #   question: octicons/question-16
+    #   warning: octicons/alert-16
+    #   failure: octicons/x-circle-16
+    #   danger: octicons/zap-16
+    #   bug: octicons/bug-16
+    #   example: octicons/beaker-16
+    #   quote: octicons/quote-16
+  admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  # 文章中的注释
+  annotation: material/plus-circle-outline
+
   features:
-    - navigation.instant
-    - navigation.instant.progress
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.path
-    - navigation.expand
-    - navigation.prune
-    - navigation.indexes
-    - toc.integrate 
-    - navigation.top
-    - search.suggest
-    - search.share
+    - navigation.instant # 即时加载
+    - navigation.instant.prefetch # 预加载
+    - navigation.instant.progress # 进度指示器
+    - navigation.instant.preview # 全局即时预览
+    - navigation.tracking # 锚点跟踪
+    - navigation.tabs # 导航选项卡
+    - navigation.tabs.sticky # 固定导航选项卡
+    - navigation.sections # 左侧导航收缩箭头
+    - navigation.path # 导航路径
+    - navigation.expand # 默认展开左侧导航所有级别
+    # - navigation.prune # 导航修剪
+    - navigation.indexes # 章节索引
+    - toc.follow # 目录锚点跟踪
+    # - toc.integrate # 导航集成
+    - navigation.top # 返回顶部
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索结果高亮
+    - search.share # 搜索分享
     - social
-    - navigation.footer
+    - navigation.footer # 页脚翻页
+    - content.code.copy # 代码复制按钮
+    - content.code.select # 代码选择按钮
+    - content.code.annotate # 允许在代码块中使用注释
+    - content.footnote.tooltips # 脚注提示
+    - content.tooltips # 工具提示
+  
+  # 夜晚和白天的配色方案
   palette:
-    # 夜间模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
         icon: material/weather-night
         name: 切换到夜间模式
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
@@ -35,43 +80,132 @@ theme:
         name: 切换到白天模式
 
 extra:
-  consent:
-    title: 欢迎
-    description: >- 
-      欢迎访问我的网站,我在这里记录我的学习。学习是一场无止境的旅行,在这场旅行中总要留下一些纪念。
-    actions:
-      - accept
+  status:
+    new: 最近更新
+    deprecated: 过时文章
+  # # cookie提示
+  # consent:
+  #   title: Cookie 同意
+  #   description: >- 
+  #     我们使用 cookie 来识别您的重复访问和偏好，以此来优化您的阅读体验。
+  #   actions:
+  #     - accept
+  #     - reject
+      # - manage 
+
+  # 为tags设置图标
+  tags:
+    <tag>: <identifier> 
+    HTML5: html
+    JavaScript: js
+    CSS: css
+
   social:
     # 社交网站图标
     - icon: fontawesome/brands/github 
       link: https://github.com/interset-wq
+      name: Follow Me
     - icon: fontawesome/solid/paper-plane
       link: mailto:d111kc@foxmail.com
+      name: 通过邮箱联系我
 
 
-copyright: Copyright &copy; 2024 - 2025 by <a href="https://github.com/interset-wq" target="_blank">D111KC/interset-wq</a> <br> <a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
+
+  
+copyright: 
+  Copyright &copy; 2024 - 2025 by <a href="https://github.com/interset-wq" target="_blank">D111KC</a>
+  <br><a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
+
+# 插件
 plugins:
-  - blog
-  - search
+  - search # 搜索插件
+  - meta # 元插件
+  - blog: # 博客插件
+      blog_dir: blog # 博客文章路径
+      blog_toc: true # 博客目录
+      post_date_format: full # 博客日期格式（元数据）
+      post_url_date_format: yyyy/MM # 博客文章URL
+  - tags # 博客文章标签
   - git-revision-date-localized:
       enable_creation_date: true
+  # rss插件
   - rss:
       match_path: blog/posts/.* 
+      comments_path: "#__comments"
       date_from_meta:
         as_creation: date
       categories:
         - categories
         - tags 
+  - glightbox # 图片放大
 
 markdown_extensions:
-  - abbr
-  - admonition
+  - admonition # 提示，引用
+  - pymdownx.details # 详情，可折叠代码块
+  - pymdownx.superfences # 围栏代码块
+  - attr_list # 列表属性
+  - md_in_html # 兼容html
+  - pymdownx.highlight: # 代码高亮
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite # inlineHilite 系列
+  - pymdownx.snippets # 片段
+  # - content.tabs.link # 选项卡链接
+  - pymdownx.tabbed: # 选项卡
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - tables # 表格
+  - pymdownx.superfences: # 流程图等
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - footnotes # 脚注
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys # 键盘按键
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji: # 表情符号
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.blocks.caption # 图片
+  - def_list # 定义列表
+  - pymdownx.tasklist: # 任务列表
+      custom_checkbox: true
+  - pymdownx.arithmatex: # 数学公式
+      generic: true
+  - abbr # 缩写
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+#   # 自动预览
+#   - material.extensions.preview:
+#       configurations:
+#         - targets:
+#             include:
+#               - changelog/index.md
+#               - customization.md
+#               - insiders/changelog/*
+#               - setup/extensions/*
 nav:
-  - 主页: index.md
+  - 主页: 
+    - index.md
+    - markdown.md
+    - extended-markdown.md
   - 博客:
     - blog/index.md
   - GUI:
     - GUI/test.md
-    - GUI/python.md 
+    # - GUI/python.md 
 
 
