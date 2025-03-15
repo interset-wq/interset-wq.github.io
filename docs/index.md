@@ -6,6 +6,7 @@ hide:
 # 屏蔽搜索
 search:
   exclude: true
+create_time: 2025-03-15
 ---
 
 # 欢迎访问我的网站
@@ -32,6 +33,8 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
 
 一个由于自己的大学生活过于无聊，而对编程感兴趣的人。某个下午，闲来无事去图书馆闲逛了一下，看到了一本比较有意思的写python的书籍，于是我就在网上买了一本，花了一个暑假看完了。是那本书让我对python很感兴趣，我先后学习了pygame游戏、django网站开发、数据可视化、flask网站开发、网络爬虫、tkinter GUI设计，越是学习就越入迷，也越是发现自己知识的匮乏。最近打算学习一下JavaScript，增长自己的见识。
 
+联系我：<d111kc@foxmail.com>
+
 近期学习计划：
 
 - [ ] :fontawesome-brands-python: python
@@ -53,5 +56,5 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
 - [ ] 大学英语
     - [ ] CET-4
     - [ ] CET-6
+- [ ] :material-microsoft-office: 计算机二级 `MS Office`
 
-联系我：<d111kc@foxmail.com>

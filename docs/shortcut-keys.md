@@ -52,3 +52,9 @@ status:  new # deprecated # new
 - 运行当前代码文件 ++ctrl+shift+f10++
 - 重命名文件 ++shift+f6++
 - 搜索 ++ctrl+f++
+
+## Word
+
+- 批量取消超链接 ++ctrl+shift+f9++
+- 编辑域代码、退出编辑域代码 ++shift+f9++
+- 插入域 ++ctrl+f9++
