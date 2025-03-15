@@ -9,6 +9,8 @@ subtitle: Markdown 语法
 
 # Markdown 扩展语法
 
+:material-pen-plus: `本文创建于2025-3-12`
+
 ## 一、告诫
 
 支持嵌套使用。

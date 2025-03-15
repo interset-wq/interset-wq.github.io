@@ -6,6 +6,8 @@ status:  new # deprecated # new
 
 # 快捷键
 
+:material-pen-plus: `本文创建于2025-3-13`
+
 ## VS Code
 
 缩进

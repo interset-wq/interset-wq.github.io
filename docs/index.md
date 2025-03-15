@@ -6,10 +6,10 @@ hide:
 # 屏蔽搜索
 search:
   exclude: true
-create_time: 2025-03-15
 ---
-
 # 欢迎访问我的网站
+
+:material-pen-plus: `本文创建于2025-3-9`
 
 本站是使用python第三方库[mkdocs](https://www.mkdocs.org)搭建的静态网页。
 

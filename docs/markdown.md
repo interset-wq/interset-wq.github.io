@@ -1,11 +1,12 @@
 ---
 comments: true
-date: 2025-03-15
 icon: material/emoticon-happy 
 status: new
 ---
 
 # Markdown语法
+
+:material-pen-plus: `本文创建于2025-3-10`
 
 ## 一、标题
 
