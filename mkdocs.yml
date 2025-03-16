@@ -80,6 +80,7 @@ theme:
         name: 切换到白天模式
 
 extra:
+  include: CNAME
   status:
     new: 最近更新
     deprecated: 过时文章
