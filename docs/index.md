@@ -3,6 +3,8 @@
 hide:
   - navigation
   - toc
+comments: true
+date: 2025-3-9
 # 屏蔽搜索
 search:
   exclude: true

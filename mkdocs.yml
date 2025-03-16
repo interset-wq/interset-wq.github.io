@@ -208,7 +208,7 @@ nav:
   - 博客:
     - blog/index.md
   - GUI:
-    - GUI/test.md
+    - GUI/tkinter0.md
     # - GUI/python.md 
 
 
