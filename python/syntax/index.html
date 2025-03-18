@@ -1553,22 +1553,47 @@
 </ul>
 </details>
 <h3 id="list">列表list</h3>
-<p>使用方括号包裹，元素之间使用逗号分隔，列表中的数据可以是不同的数据类型，有顺序，使用下标获取元素。正向下标从 <code>0</code> 开始，反向下标从 <code>-1</code> 开始</p>
+<p>使用方括号 <code>[]</code> 包裹，元素之间使用逗号分隔，列表中的数据可以是不同的数据类型，有顺序，使用下标获取元素。正向下标从 <code>0</code> 开始，反向下标从 <code>-1</code> 开始，<mark>列表命名时建议使用名词复数形式</mark></p>
 <p>可以使用for循环或while循环遍历</p>
-<p>常用函数和方法</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="常用方法" name="__tabbed_3" type="radio" /><input id="del语句" name="__tabbed_3" type="radio" /><input id="常用函数" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="常用方法">常用方法</label><label for="del语句">del语句</label><label for="常用函数">常用函数</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ul>
 <li><code>index(元素)</code> 方法 返回查询元素的下标（正向下标）</li>
 <li><code>列表名[下标] = 新值</code> 更改元素的值</li>
 <li><code>insert(下标，值)</code> 方法 在指定位置插入元素</li>
 <li><code>append(值)</code> 方法 在列表末尾追加元素</li>
 <li><code>extend(数据容器)</code> 方法 将其它数据容器的内容取出，依次追加到列表尾部</li>
-<li><code>pop(下标)</code> 方法 删除元素</li>
-<li><code>del 列表名[下标]</code> 删除元素</li>
-<li><code>remove(元素)</code> 方法 删除某元素在列表中的第一个匹配项</li>
-<li><code>clear()</code> 方法 将列表转换为空列表[]</li>
+<li><code>pop(下标)</code> 方法 删除元素，不传入参数时删除末尾的元素，返回删除的元素</li>
+<li><code>remove(元素)</code> 方法 删除某元素在列表中的第一个匹配项，根据值删除元素，可以与while循环配合使用删除所有匹配项
+    <div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">while</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="c1"># 输出结果 [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</span>
+</span></code></pre></div></li>
+<li><code>clear()</code> 方法 将列表转换为空列表 <code>[]</code></li>
 <li><code>count(元素)</code> 方法 统计某元素在列表中出现次数</li>
-<li><code>len()</code> 函数 返回列表长度</li>
+<li><code>sort()</code>方法 正序排列，传入<code>reverse=True</code>时倒序排列（按照数字或字母顺序）</li>
+<li><code>reverse()</code>方法 倒置，将原顺序倒置</li>
 </ul>
+</div>
+<div class="tabbed-block">
+<p><code>del 列表名[下标]</code> 删除元素</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>len()</code> 函数 返回列表长度</li>
+<li><code>sorted()</code>函数 正序排列，传入参数reverse=True时倒序排列</li>
+<li><code>range([start,] end [,step])</code>函数 取值左闭右开区间，生成整数数值列表</li>
+<li><code>max(lst)</code>函数 取列表中的最大值</li>
+<li><code>min(lst)</code>函数 取列表中的最小值</li>
+<li><code>sum(lst)</code>函数 计算列表元素之和</li>
+<li><code><mark class="critic">zip(lst1, lst2)</mark></code>函数 同时遍历多个列表</li>
+<li><code><mark class="critic">enumerate(lst, start)</mark></code>函数 同时遍历列表下标和元素，可选参数start表示列表下标开始值，默认0</li>
+</ul>
+</div>
+</div>
+</div>
 <details class="note">
 <summary>Note</summary>
 <ul>
