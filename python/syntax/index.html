@@ -1043,6 +1043,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="判断语句和循环语句">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环语句
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1055,7 +1079,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       文件操作
     </span>
@@ -1064,7 +1088,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       异常
     </span>
@@ -1326,6 +1350,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="判断语句和循环语句">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环语句
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1338,7 +1386,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       文件操作
     </span>
@@ -1347,7 +1395,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       异常
     </span>
@@ -1414,7 +1462,7 @@
 </li>
 </ul>
 <h2 id="_3">运算符</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="算术运算符" name="__tabbed_1" type="radio" /><input id="赋值运算符" name="__tabbed_1" type="radio" /><input id="比较运算符" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="算术运算符">算术运算符</label><label for="赋值运算符">赋值运算符</label><label for="比较运算符">比较运算符</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="算术运算符" name="__tabbed_1" type="radio" /><input id="赋值运算符" name="__tabbed_1" type="radio" /><input id="比较运算符" name="__tabbed_1" type="radio" /><input id="逻辑运算符" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="算术运算符">算术运算符</label><label for="赋值运算符">赋值运算符</label><label for="比较运算符">比较运算符</label><label for="逻辑运算符">逻辑运算符</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -1447,6 +1495,13 @@
 <li><code>&lt;</code> 判断运算符左侧内容是否小于右侧，满足为True，不满足为False</li>
 <li><code>&gt;=</code> 判断运算符左侧内容是否大于等于右侧，满足为True，不满足为False</li>
 <li><code>&lt;=</code> 判断运算符左侧内容是否小于等于右侧，满足为True，不满足为False</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>与 <code>and</code></li>
+<li>或 <code>or</code></li>
+<li>非 <code>not</code></li>
 </ul>
 </div>
 </div>
@@ -1774,14 +1829,89 @@
 </ul>
 </details>
 <h2 id="_8">判断语句和循环语句</h2>
-<p>判断语句if，和布尔数以及比较运算符一起使用</p>
+<h3 id="_9">判断语句</h3>
+<p>判断语句if，和布尔数以及比较运算符一起使用。关键字<code>in</code> 检查特定值是否在列表、元组中。将数值 0、空值 None、空字符串“”、空列表[]、空元组()、空字典{} 用作条件表达式时，Python 都会返回 False</p>
 <p>三种if语句</p>
 <ul>
 <li><code>if</code> 语句</li>
-<li><code>if else</code> 语句</li>
-<li><code>if elif else</code> 语句</li>
+<li>
+<p><code>if else</code> 语句和 <em>双目运算符</em></p>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>使用双目运算符可以简化 <code>if else</code> 语句</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="if-else语句" name="__tabbed_4" type="radio" /><input id="双目运算符" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="if-else语句">if else语句</label><label for="双目运算符">双目运算符</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">num1</span> <span class="o">=</span> <span class="mi">9</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">num2</span> <span class="o">=</span> <span class="mi">7</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="n">num2</span><span class="p">:</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="n">num3</span> <span class="o">=</span> <span class="n">num1</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="n">num3</span> <span class="o">=</span> <span class="n">num2</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">num3</span><span class="p">)</span> <span class="c1"># 输出结果 7</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">num1</span> <span class="o">=</span> <span class="mi">9</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">num2</span> <span class="o">=</span> <span class="mi">7</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">num3</span> <span class="o">=</span> <span class="n">num1</span> <span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="n">num2</span> <span class="k">else</span> <span class="n">num2</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">num3</span><span class="p">)</span> <span class="c1"># 输出结果 7</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</details>
+</li>
+<li>
+<p><code>if elif else</code> 语句</p>
+</li>
 </ul>
-<p>循环语句</p>
+<p><code>match case</code> 语句</p>
+<ul>
+<li><code>case _:</code> 相当于是默认值，没有满足前面的条件时，执行此条件</li>
+<li>管道 <code>|</code> 相当于或，同一个 <code>case</code> 可以匹配多种情况</li>
+</ul>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="值匹配" name="__tabbed_5" type="radio" /><input id="类型匹配" name="__tabbed_5" type="radio" /><input id="使用管道" name="__tabbed_5" type="radio" /><input id="变量绑定" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="值匹配">值匹配</label><label for="类型匹配">类型匹配</label><label for="使用管道">使用管道</label><label for="变量绑定">变量绑定</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">num</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">match</span> <span class="n">num</span><span class="p">:</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;one&#39;</span><span class="p">)</span> <span class="c1"># num=1时，输出结果 one</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">)</span> <span class="c1"># num=2时，输出结果 two</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="k">case</span> <span class="mi">3</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;three&#39;</span><span class="p">)</span> <span class="c1"># num=3时，输出结果 three</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span> <span class="c1"># num!以上三个数字时，输出结果 default</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">var</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">match</span> <span class="n">var</span><span class="p">:</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="k">case</span> <span class="nb">int</span><span class="p">():</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;整数&#39;</span><span class="p">)</span> <span class="c1"># var的数据类型是整数时，输出结果 整数</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="k">case</span> <span class="nb">str</span><span class="p">():</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;字符串&#39;</span><span class="p">)</span> <span class="c1"># var的数据类型是字符串时，输出结果 字符串</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="k">case</span> <span class="nb">dict</span><span class="p">():</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;字典&#39;</span><span class="p">)</span> <span class="c1"># var的数据类型是字典时，输出结果 字典</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;其他&#39;</span><span class="p">)</span> <span class="c1"># var是以上三者之外的数据类型时，输出结果 其他</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;hi&#39;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">match</span> <span class="n">var</span><span class="p">:</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    <span class="k">case</span> <span class="s1">&#39;hello&#39;</span> <span class="o">|</span> <span class="s1">&#39;hi&#39;</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;你好&#39;</span><span class="p">)</span> <span class="c1"># var的值是&#39;hello&#39;或&#39;hi&#39;时，输出结果 你好</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="k">case</span> <span class="s1">&#39;for&#39;</span> <span class="o">|</span> <span class="s1">&#39;while&#39;</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;循环语句&#39;</span><span class="p">)</span> <span class="c1"># var的值是&#39;for&#39;或&#39;while&#39;时，输出结果 循环语句</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;默认&#39;</span><span class="p">)</span> <span class="c1"># var的值不是以上结果时，输出结果 默认</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;javascript&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">]</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">match</span> <span class="n">my_list</span><span class="p">:</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="k">case</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">控制行为，</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">控制结构，</span><span class="si">{</span><span class="n">z</span><span class="si">}</span><span class="s1">控制样式&#39;</span><span class="p">)</span> <span class="c1"># 当my_list有且仅有三个元素时，执行此语句</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;match的列表不是只有三个元素的列表&#39;</span><span class="p">)</span> 
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<h3 id="_10">循环语句</h3>
 <p>while循环 不断地运行，直到指定的条件不再满足为止。用途比for循环更广泛</p>
 <p>for循环 适用于可迭代类型（列表，字符串，元组，字典，<code>range()</code>函数生成的数字序列等）</p>
 <p>循环中断</p>
@@ -1800,7 +1930,7 @@
 <p>多返回值</p>
 <p>return语句得到返回值，如果想要返回多个可以使用逗号分隔，然后赋值给多个变量，类似于使用元组同时给多个变量赋值</p>
 <p>传参方式</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="位置参数" name="__tabbed_4" type="radio" /><input id="关键字参数" name="__tabbed_4" type="radio" /><input id="不定长参数" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="位置参数">位置参数</label><label for="关键字参数">关键字参数</label><label for="不定长参数">不定长参数</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="位置参数" name="__tabbed_6" type="radio" /><input id="关键字参数" name="__tabbed_6" type="radio" /><input id="不定长参数" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="位置参数">位置参数</label><label for="关键字参数">关键字参数</label><label for="不定长参数">不定长参数</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -1834,7 +1964,7 @@
 <li>所有的 <code>import</code> 语句都应放在文件开头，唯一的例外是，你要在文件开头使用注释来描述整个程序。</li>
 </ul>
 </details>
-<h2 id="_9">文件操作</h2>
+<h2 id="_11">文件操作</h2>
 <pre class="mermaid"><code>graph LR
 A[打开文件] --&gt; B{读写文件} ;
 B --&gt; C[关闭文件];</code></pre>
@@ -1882,7 +2012,7 @@ B --&gt; C[关闭文件];</code></pre>
 </li>
 </ol>
 <p>快捷操作 <code>with open() as f</code> 使用with open语句对文件操作结束后，会自动关闭文件</p>
-<h2 id="_10">异常</h2>
+<h2 id="_12">异常</h2>
 <p>捕获异常</p>
 <p><code>try except else finally</code>语句</p>
 <ul>
