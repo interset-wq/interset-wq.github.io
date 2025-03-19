@@ -1968,6 +1968,7 @@
 <ul>
 <li>函数调用时通过 <code>"键=值"</code> 形式传递参数，不受传参顺序影响，关键字参数必须写在位置参数之后默认值</li>
 <li>定义函数时可以为参数设置默认值，所有位置参数必须放在默认值参数之前</li>
+<li>通过将参数的默认值设为 <code>''</code> 或 <code>None</code>，可以使其成为可选参数，具体用哪个当做占位符取决于参数的数据类型</li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -1978,18 +1979,68 @@
 </div>
 </div>
 </div>
-<p>lambda匿名函数 临时使用的函数，只能使用一次</p>
-<p>语法 <code>lambda 参数 ： 函数体</code> 只能写一行代码</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">person_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;姓名&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;性别&#39;</span><span class="p">:</span> <span class="n">gender</span><span class="p">}</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="k">if</span> <span class="n">age</span><span class="p">:</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>        <span class="n">info</span><span class="p">[</span><span class="s1">&#39;年龄&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">age</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="k">return</span> <span class="n">info</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="n">my_dict</span> <span class="o">=</span> <span class="n">person_info</span><span class="p">(</span><span class="s1">&#39;cook&#39;</span><span class="p">,</span> <span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span> <span class="c1"># 输出结果 {&#39;姓名&#39;: &#39;cook&#39;, &#39;性别&#39;: &#39;male&#39;, &#39;年龄&#39;: 17}</span>
+</span></code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>当函数的参数是列表时，为了防止原列表被函数修改，传参数可以传入原列表的副本进行操作</p>
+</div>
+<details class="tip">
+<summary>函数注释</summary>
+<p>对函数进行解释说明，鼠标悬停在函数名上时，显示函数参数和返回值的解释说明。
+<div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">person_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="sd">    一个人的基本信息</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="sd">    :param name: 这个人的姓名</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="sd">    :param gender: 这个人的年龄</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="sd">    :param age: 这个人的年龄，可选参数</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="sd">    :return: 返回这个人的基本信息字典</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;姓名&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;性别&#39;</span><span class="p">:</span> <span class="n">gender</span><span class="p">}</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    <span class="k">if</span> <span class="n">age</span><span class="p">:</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>        <span class="n">info</span><span class="p">[</span><span class="s1">&#39;年龄&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">age</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>    <span class="k">return</span> <span class="n">info</span>
+</span></code></pre></div></p>
+</details>
 <details class="tip">
 <summary>函数编写指南</summary>
 <ul>
 <li>要给函数和模块一个描述性名称，且只使用小写字母和下划线。</li>
 <li>每个函数都应包含简要阐述其功能的注释，该注释应紧跟在函数定义后面，并采用文档字符串的格式。</li>
-<li>给形参指定默认值和调用函数传入实参时，等号两边不要有空格</li>
+<li><mark class="critic">给形参指定默认值和调用函数传入实参时，等号两边不要有空格</mark></li>
 <li>应使用两个空行分开不同的函数块</li>
 <li>所有的 <code>import</code> 语句都应放在文件开头，唯一的例外是，你要在文件开头使用注释来描述整个程序。</li>
 </ul>
 </details>
+<p>匿名函数</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="将函数作为参数" name="__tabbed_7" type="radio" /><input id="lambda函数" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="将函数作为参数">将函数作为参数</label><label for="lambda函数">lambda函数</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>none</p>
+</div>
+<div class="tabbed-block">
+<p>lambda匿名函数 临时使用的函数，只能使用一次</p>
+<p>语法 <code>lambda 参数 ： 函数体</code> 只能写一行代码</p>
+</div>
+</div>
+</div>
+<p>导入模块</p>
+<ul>
+<li><code>import module_name</code> 通过<code>module_name.function_name()</code>使用模块中的函数</li>
+<li><code>from module_name import function_0, function_1, function_2</code> 直接通过<code>function_0()</code>使用模块中的函数，这种用法需要防止有函数重名</li>
+<li><code>from module_name import function_name as fn</code> 使用<code>as</code>为函数取别名</li>
+<li><code>import module_name as mn</code> 使用<code>as</code>为模块取别名</li>
+<li><code>from module_name import *</code> 导入模块中所有函数（不推荐使用）</li>
+</ul>
 <h2 id="_11">文件操作</h2>
 <pre class="mermaid"><code>graph LR
 A[打开文件] --&gt; B{读写文件} ;
