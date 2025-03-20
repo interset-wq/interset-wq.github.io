@@ -1098,7 +1098,7 @@
         <li class="md-nav__item">
   <a href="#function" class="md-nav__link">
     <span class="md-ellipsis">
-      函数function和模块 (未完待续)
+      函数function和模块
     </span>
   </a>
   
@@ -1117,6 +1117,33 @@
   <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       异常
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      类和面向对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unittestpytest" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试unittest/pytest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准库
     </span>
   </a>
   
@@ -1405,7 +1432,7 @@
         <li class="md-nav__item">
   <a href="#function" class="md-nav__link">
     <span class="md-ellipsis">
-      函数function和模块 (未完待续)
+      函数function和模块
     </span>
   </a>
   
@@ -1424,6 +1451,33 @@
   <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       异常
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      类和面向对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unittestpytest" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试unittest/pytest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准库
     </span>
   </a>
   
@@ -1945,7 +1999,7 @@
 <li><code>continue</code> 中断本次循环，进入下一次循环</li>
 <li><code>break</code> 结束循环</li>
 </ul>
-<h2 id="function">函数function和模块 (未完待续)</h2>
+<h2 id="function">函数function和模块</h2>
 <p>使用 <code>def</code> 关键字定义函数，函数必须先定义再使用。使用 <code>return</code> 关键字设置返回值，没有定义返回值的函数返回 <code>None</code>，<mark>使用下划线命名法（蛇形命名法）</mark></p>
 <p>定义函数之后，在 <code>def</code> 的下一行使用三重引号解释函数的作用</p>
 <ul>
@@ -1994,7 +2048,13 @@
 <p class="admonition-title">Tip</p>
 <p>当函数的参数是列表时，为了防止原列表被函数修改，传参数可以传入原列表的副本进行操作</p>
 </div>
-<details class="tip">
+<details class="tip" open="open">
+<summary>函数编写指南</summary>
+<ul>
+<li>要给函数和模块一个描述性名称，且只使用小写字母和下划线。</li>
+<li>
+<p>每个函数都应包含简要阐述其功能的注释，该注释应紧跟在函数定义后面，并采用文档字符串的格式。</p>
+<details class="note">
 <summary>函数注释</summary>
 <p>对函数进行解释说明，鼠标悬停在函数名上时，显示函数参数和返回值的解释说明。
 <div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">person_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -2011,12 +2071,10 @@
 </span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>    <span class="k">return</span> <span class="n">info</span>
 </span></code></pre></div></p>
 </details>
-<details class="tip">
-<summary>函数编写指南</summary>
-<ul>
-<li>要给函数和模块一个描述性名称，且只使用小写字母和下划线。</li>
-<li>每个函数都应包含简要阐述其功能的注释，该注释应紧跟在函数定义后面，并采用文档字符串的格式。</li>
-<li><mark class="critic">给形参指定默认值和调用函数传入实参时，等号两边不要有空格</mark></li>
+</li>
+<li>
+<p><mark class="critic">给形参指定默认值和调用函数传入实参时，等号两边不要有空格</mark></p>
+</li>
 <li>应使用两个空行分开不同的函数块</li>
 <li>所有的 <code>import</code> 语句都应放在文件开头，唯一的例外是，你要在文件开头使用注释来描述整个程序。</li>
 </ul>
@@ -2025,11 +2083,22 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="将函数作为参数" name="__tabbed_7" type="radio" /><input id="lambda函数" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="将函数作为参数">将函数作为参数</label><label for="lambda函数">lambda函数</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>none</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">anonymous</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="n">anonymous</span><span class="p">(</span><span class="n">get_sum</span><span class="p">)</span> <span class="c1"># 输出结果 7</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>lambda匿名函数 临时使用的函数，只能使用一次</p>
-<p>语法 <code>lambda 参数 ： 函数体</code> 只能写一行代码</p>
+<p>语法 <code>lambda 参数 ： 函数体</code> 传入参数表示匿名函数的形式参数，函数体只能写一行代码</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">get_sum</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">get_sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># 输出结果 7</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -2045,15 +2114,18 @@
 <pre class="mermaid"><code>graph LR
 A[打开文件] --&gt; B{读写文件} ;
 B --&gt; C[关闭文件];</code></pre>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="open函数" name="__tabbed_8" type="radio" /><input id="pathlib库" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="open函数">open函数</label><label for="pathlib库">pathlib库</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
 <li>
-<p>打开文件</p>
 <ul>
 <li><code>open(name, mode, encoding)</code> 函数，返回文件对象，用于打开文件或创建文件</li>
 <li>name参数 文件路径字符串</li>
 <li>mode参数 文件访问模式</li>
 <li>encoding参数 编码方式，推荐使用utf-8</li>
 </ul>
+<p>打开文件</p>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>mode参数的可选值</p>
@@ -2088,20 +2160,67 @@ B --&gt; C[关闭文件];</code></pre>
 <p>关闭文件 <code>close()</code>方法</p>
 </li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>快捷操作 <code>with open() as f</code> 使用with open语句对文件操作结束后，会自动关闭文件</p>
+</div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>导入标准库 <code>pathlib</code></p>
+<div class="language-text highlight"><pre><span></span><code>from pathlib import Path
+</code></pre></div>
+</li>
+<li>
+<p>创建 <code>Path</code> 对象</p>
+<div class="language-text highlight"><pre><span></span><code>path = Path() # 传入文件路径
+</code></pre></div>
+</li>
+<li>
+<p>对 <code>Path</code> 对象进行操作</p>
+<p><code>Path</code> 对象的常用方法：</p>
+<ul>
+<li><code>read_text()</code> 方法 读取path对象路径文件的所有内容，可选参数encoding指定读取文件使用的编码，常用utf-8</li>
+<li><code>write_text()</code> 方法 将字符串写入文件，如果指定路径的文件不存在，则会创建它，使用此方法写入时会删除文件原有内容</li>
+<li><code>exists()</code> 方法 判断文件是否存在</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>常和字符串的 <code>splitlines()</code> 方法一起使用，按行分割字符串，返回列表</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
 <h2 id="_12">异常</h2>
-<p>捕获异常</p>
+<p>Python 使用称为异常（exception）的特殊对象来管理程序执行期间发生的错误。</p>
 <p><code>try except else finally</code>语句</p>
 <ul>
-<li>try语句 可能引发异常的代码</li>
-<li>except语句 出现异常时，不出现traceback终止程序<ul>
+<li><code>try</code> 语句 可能引发异常的代码</li>
+<li><code>except</code> 语句 出现异常时，不出现traceback终止程序<ul>
 <li>捕获一种异常 <code>except NameError as e:</code></li>
 <li>捕获多种异常 <code>except (NameError, ZeroDivisionError):</code></li>
 <li>捕获所有异常 <code>except Exception as e:</code></li>
 </ul>
 </li>
-<li>else语句（可选） 不出现异常继续执行的代码</li>
-<li>finally语句（可选） 无论是否异常都要执行的代码</li>
+<li><code>else</code> 语句（可选） 不出现异常继续执行的代码</li>
+<li><code>finally</code> 语句（可选） 无论是否异常都要执行的代码</li>
+</ul>
+<h2 id="_13">类和面向对象</h2>
+<p><a href="../../GUI/tkinter0/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> GUI</a></p>
+<h2 id="unittestpytest">测试unittest/pytest</h2>
+<h2 id="_14">标准库</h2>
+<p>json库 用于存储数据和处理json数据。模块 json 让你能很容易地将 Python 数据结构转换为 JSON 格式的字符串，并在程序再次运行时从文件中加载数据。    列表和字典都可以转换成json数据</p>
+<ul>
+<li><code>json.dumps()</code>函数 将python数据转换为json数据，可以配合pathlib库使用，将pyhon数据转换为json数据，并写入json文件中</li>
+<li><code>json.loads()</code>函数 读取数据，将json数据转换为python数据</li>
+</ul>
+<p>random库 与随机有关的库</p>
+<ul>
+<li>random.randint(start, end)函数 随机生成两个数之间的随机数，闭区间</li>
+<li>random.choice(lst)函数，随机返回传入的列表中的一个元素</li>
 </ul>
 
 

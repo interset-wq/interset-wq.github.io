@@ -1460,6 +1460,8 @@
 <h1 id="_1">预备节：面向对象</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-3-16</code></p>
 <p>要使用tkinter进行GUI设计，就不得不用到<strong>面向对象</strong>的编程思想。Tkinter提供的小部件非常有限，而且大多数小部件的功能往往不足以完成相应的任务。在这种情况之下，就不得不使用继承来加强小部件的功能，或者创建新的小部件。</p>
+<p>面向对象编程（object-oriented programming，OOP）是最有效的软件编写方法之一，在面向对象编程中，我们可以：编写表示现实世界中事物或情景的类（class），并基于这些类来创建对象（object）。通过类的实例化来根据类创建对象，并在代码中使用类的实例（instance）对象。</p>
+<p><mark>class关键字，类名以大写字母开头（大驼峰命名法）。</mark> 类名后面不需要加括号，但是子类后面需要加括号</p>
 <h2 id="_2">一、属性</h2>
 <p>使用 <code>dir()</code> 函数可以查看一个对象所有的方法和属性</p>
 <h3 id="11">1.1 类属性</h3>
@@ -1482,7 +1484,9 @@ print(Banana.colors)
 [&#39;green&#39;, &#39;green-yellow&#39;, &#39;yellow&#39;, &#39;brown spotted&#39;, &#39;black&#39;]
 </code></pre></div>
 <h3 id="12">1.2 实例属性</h3>
-<p>实例属性就是定义在构造方法 <code>__init__()</code> 中的带有 <em>self.</em> 前缀的变量，必须创建实例之后才能使用。不创建实例通过类名调用会报错。需要先创建实例，才能调用，创建实例后，可以对属性重新赋值，还可以创建新属性。</p>
+<p>使用初始化方法 <code>__init__()</code> 创建实例属性。<code>self</code> 形参：它是一个指向实例本身的引用，实例的每次调用都会自动传入自身，这样使得实例能够访问类中的属性和方法，self 形参必不可少，而且必须位于其他形参的前面。</p>
+<p>所有的实例属性定义时都有 <code>self.</code> 的前缀，有些属性无须通过形参来定义，可以在 <code>__init__()</code> 方法中为其指定默认值。</p>
+<p>实例属性就是定义在构造方法（又称初始化方法，属于魔术方法的一种） <code>__init__()</code> 中的带有 <em>self.</em> 前缀的变量，必须创建实例之后才能使用。不创建实例通过类名调用会报错。需要先创建实例，才能调用，创建实例后，可以对属性重新赋值，还可以创建新属性。</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">banana.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1573,6 +1577,8 @@ print(my_banana.color)
         继承</code></pre>
 <h3 id="31">3.1 继承</h3>
 <p>代码复用。</p>
+<p>在编写类时，并非总是要从头开始，如果要编写的类是一个已有类的特殊版本，那么我们就可以使用继承（inheritance）。被继承的类称为父类（parent class）或超类，而继承的类称为子类（child class）。子类可以继承父类的所有属性和方法，也可以定义自己的属性和方法。</p>
+<p>父类代码必须放在在子类代码的前面。需要在子类名称后添加括号，并在其中指定父类的名称，括号中指定了当前类继承的父类名称。在子类的初始化方法中， 我们使用了 super() 函数。这是一个特殊的函数，让你能够调用父类的方法，继承父类的实例属性。当父类中定义的一些方法不能满足子类的要求时，可以在子类中随时重写父类的方法：定义一个同名的方法。当调用子类生成的实例时，Python 首先会查找子类中的方法，从而忽略父类中被重写的同名方法。也可以把实例当作属性</p>
 <p>单继承 使用 <code>super().__init__()</code> 继承父类属性和方法</p>
 <p>多继承 使用 <code>父类类名.__init__ ()</code> 继承父类方法和属性</p>
 <p>在子类中重写方法 可以使用 <code>super()</code> 从父类继承原方法</p>
@@ -1613,6 +1619,15 @@ print(my_banana.color)
 </dd>
 </dl>
 <h2 id="_5">四、类型注解</h2>
+<details class="tip" open="open">
+<summary>类的编写风格</summary>
+<ul>
+<li>类名中的每个单词的首字母都应大写，并且不使用下划线。这种命名规则叫做大驼峰式命名法（也称为 Pascal 命名法）。实例名和模块名都应该使用全小写，并在单词之间加上下划线（_）。 这种命名规则叫做下划线命名法（也称为 🐍 蛇形命名法）   </li>
+<li>每个类定义后的第一行和模块文件的首行，都应该包含一个文档字符串，简要地描述类的功能，以帮助其他人理解我们的代码</li>
+<li>使用两个空行来分隔不同类，使用一个空行分隔类内的不同方法</li>
+<li>当使用 import 语句时，使用一个空行分隔标准库和自己的库</li>
+</ul>
+</details>
 <p>适用类型注解可以让 <code>PyCharm</code> 为自定义的方法、变量等添加代码提示。</p>
 <details class="note" open="open">
 <summary>Note</summary>
