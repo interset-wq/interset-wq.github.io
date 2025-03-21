@@ -194,10 +194,11 @@ extra_javascript:
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
   - https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js
 
+
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
   - stylesheets/extra.css
-  - javascripts/extra.js
+  
 
 
 nav:
@@ -208,8 +209,10 @@ nav:
     - shortcut-keys.md
   - 博客:
     - blog/index.md
+  - Python:
+    - python/syntax.md
+
   - GUI:
     - GUI/tkinter0.md
-    # - GUI/python.md 
 
 

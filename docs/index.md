@@ -3,7 +3,8 @@
 hide:
   - navigation
   - toc
-comments: true
+# comments: true
+twikoo: true
 date: 2025-3-9
 # 屏蔽搜索
 search:
@@ -31,11 +32,23 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
 
 ## 关于我
 
-我是D111KC，当然你也可以称呼我为interset-wq，目前就读于一所本科大学，学习土木工程专业。
+我是 `D111KC`，当然你也可以称呼我为 `interset-wq`，目前就读于一所本科大学，学习土木工程专业。
 
 一个由于自己的大学生活过于无聊，而对编程感兴趣的人。某个下午，闲来无事去图书馆闲逛了一下，看到了一本比较有意思的写python的书籍，于是我就在网上买了一本，花了一个暑假看完了。是那本书让我对python很感兴趣，我先后学习了pygame游戏、django网站开发、数据可视化、flask网站开发、网络爬虫、tkinter GUI设计，越是学习就越入迷，也越是发现自己知识的匮乏。最近打算学习一下JavaScript，增长自己的见识。
 
 联系我：<d111kc@foxmail.com>
+
+!!! info inline end "赞助"
+
+    如果您觉得本站的文章对您有帮助，欢迎赞助本站。您的打赏是对本站最大的支持！
+    === "微信赞赏"
+        <img src="https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg" width="200" align="left">
+        <!-- 您可以通过微信赞赏码为本站打赏 -->
+        <!-- ![wechat.jpg](https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg) -->
+    === "支付宝"
+        <!-- ![alipay.jpg](https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg) -->
+        <img src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg" width="200">
+        <!-- 欢迎使用支付宝赞赏本站 -->
 
 近期学习计划：
 
@@ -47,7 +60,7 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
         - [ ] :simple-django: django
         - [ ] :simple-flask: flask
         - [ ] :simple-fastapi: fastapi
-    - [ ] :simple-selenium: selenium/drissonpage
+    - [ ] :simple-selenium: selenium
     - [ ] :simple-qt: GUI
 - [ ] :material-google-chrome: :simple-firefox: :material-microsoft-edge: 前端
     - [x] :fontawesome-brands-html5: HTML5

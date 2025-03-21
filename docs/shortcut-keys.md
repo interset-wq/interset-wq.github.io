@@ -60,3 +60,7 @@ status:  new # deprecated # new
 - 批量取消超链接 ++ctrl+shift+f9++
 - 编辑域代码、退出编辑域代码 ++shift+f9++
 - 插入域 ++ctrl+f9++
+
+## Excel
+
+- 手动换行 ++alt+enter++

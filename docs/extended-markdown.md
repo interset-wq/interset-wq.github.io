@@ -2,7 +2,7 @@
 title: Markdown 扩展语法
 comments: true
 icon: material/emoticon-happy-outline
-status:  new # deprecated # new
+# status:  new # deprecated # new
 description: 适用于 mkdocs 的 markdown 扩展语法
 subtitle: Markdown 语法
 ---
@@ -17,105 +17,141 @@ subtitle: Markdown 语法
 
 常用的告诫有：`note` `abstract` `info` `tip` `success` `question` `warning` `failure` `danger` `bug` `example` `quote`
 
-### 1.1 写法一
+=== "写法一"
 
-输入以下代码：
+    输入以下代码：
+
+        !!! note
+            This is a test!
+
+    你可以看到：
 
     !!! note
+        This is a test!
 
-        这是一个 note
+=== "写法二"
 
-你可以看到：
+    输入以下代码：
 
-!!! note
+        !!! abstract "摘要"
+            This is a test!
 
-    这是一个 note
+    你可以看到：
 
-### 1.2 写法二
+    !!! abstract "摘要"
+        This is a test!
 
-输入以下代码：
+=== "写法三"
 
-    !!! note "注意"
+    输入以下代码：
 
-        这是一个 note
+        !!! info ""
+            This is a test!
 
-你可以看到：
+    你可以看到：
 
-!!! note "注意"
+    !!! info ""
+        This is a test!
 
-    这是一个 note
+=== "写法四"
 
-### 1.3 写法三
+    输入以下代码：
 
-输入以下代码：
+        ??? tip 
+            This is a test!
 
-    !!! note ""
+    你可以看到：
 
-        这是一个 note
+    ??? tip 
+        This is a test!
 
-你可以看到：
+=== "写法五"
 
-!!! note ""
+    输入以下代码：
 
-    这是一个 note
+        ???+ success
+            This is a test!
 
-### 1.4 写法四
+    你可以看到：
 
-输入以下代码：
+    ???+ success
+        This is a test!
 
-    ??? note
+=== "写法六"
 
-        这是一个 note
+    输入以下代码：
 
-你可以看到：
+        !!! question inline end 
+            This is a test!
 
-??? note
+    你可以看到：
 
-    这是一个 note
+    !!! question inline end 
+        This is a test!
 
-### 1.5 写法五
+=== "写法七"
 
-输入以下代码：
+    输入以下代码：
 
-    ???+ note
+        !!! warning inline 
+            This is a test!
 
-        这是一个 note
+    你可以看到：
 
-你可以看到：
+    !!! warning inline 
+        This is a test!
 
-???+ note
+=== "写法八"
 
-    这是一个 note
+    输入以下代码：
 
-### 1.6 写法六
+        ??? failure inline 
+            This is a test!
 
-输入以下代码：
+    你可以看到：
 
-    !!! info inline end 
+    ??? failure inline 
+        This is a test!
 
-        这是一个 info
+=== "写法九"
 
-你可以看到：
+    输入以下代码：
 
-!!! info inline end 
+        ???+ danger inline 
+            This is a test!
 
-    这是一个 info
+    你可以看到：
 
-### 1.7 写法七
+    ???+ danger inline 
+        This is a test!
 
-输入以下代码：
+=== "写法十"
 
-    !!! info inline 
+    输入以下代码：
 
-        这是一个 info
+        ??? bug inline end 
+            This is a test!
 
-你可以看到：
+    你可以看到：
 
-!!! info inline 
+    ??? bug inline end 
+        This is a test!
 
-    这是一个 info
+=== "写法十一"
 
-----
+    输入以下代码：
+
+        ???+ example inline end 
+            This is a test!
+
+    你可以看到：
+
+    ???+ example inline end 
+        This is a test!
+
+
+!!! quote "碎碎念"
+    上面写那么多写法主要是想展示所有的告诫的样式。
 
 ## 二、注释
 
@@ -262,6 +298,8 @@ root.mainloop()
      3. 老年
 
 ## 六、图形Mermaid
+
+官网 [Mermaid](https://mermaid.js.org/)
 
 ### 6.1 流程图
 
@@ -733,9 +771,6 @@ m^2^
 
     :smile:
 
-你可以看到：
-
-:smile:
 
 ### 10.2 图标
 

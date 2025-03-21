@@ -1,4 +1,4 @@
-<!-- 
+
 {% if page.meta.comments %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
   
@@ -55,15 +55,17 @@
     })
   </script>
 {% endif %}  
- -->
 
 
-{% if page.meta.comments %}
 
-  <h3 id="__comments">评论</h3>
+{% if page.meta.twikoo %}
+
+  <!-- <h3 id="__comments">评论</h3> -->
 
   <div id="tcomment"></div>
   <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js"></script>
+  
+
   <script>
   twikoo.init({
     envId: 'https://jade-crostata-8e220b.netlify.app/.netlify/functions/twikoo', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
