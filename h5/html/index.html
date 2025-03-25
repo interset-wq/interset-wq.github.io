@@ -1138,16 +1138,43 @@
           <li class="md-nav__item">
   <a href="#13" class="md-nav__link">
     <span class="md-ellipsis">
-      1.3 常用的文本标签
+      1.3 文本标签
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#13_1" class="md-nav__link">
+  <a href="#14" class="md-nav__link">
     <span class="md-ellipsis">
-      1.3 不常用的文本标签
+      1.4 图片标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 超链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 表格
     </span>
   </a>
   
@@ -1229,16 +1256,43 @@
           <li class="md-nav__item">
   <a href="#13" class="md-nav__link">
     <span class="md-ellipsis">
-      1.3 常用的文本标签
+      1.3 文本标签
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#13_1" class="md-nav__link">
+  <a href="#14" class="md-nav__link">
     <span class="md-ellipsis">
-      1.3 不常用的文本标签
+      1.4 图片标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 超链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 表格
     </span>
   </a>
   
@@ -1347,7 +1401,7 @@
 </li>
 <li>分区分节 <code>div</code> 无意义，用于排版，英文division</li>
 </ul>
-<h3 id="13">1.3 常用的文本标签</h3>
+<h3 id="13">1.3 文本标签</h3>
 <p>文本标签用于包裹词汇、短语等，通常写在排版标签里面</p>
 <p>以下文本标签都是双标签，行内元素：</p>
 <ul>
@@ -1355,7 +1409,8 @@
 <li>语气更重的强调 <code>strong</code></li>
 <li><code>span</code> 与 <code>div</code> 类似，没有意义，用于包裹短语</li>
 </ul>
-<h3 id="13_1">1.3 不常用的文本标签</h3>
+<details class="不常用的文本标签">
+<summary>不常用的文本标签</summary>
 <p>以下文本标签都是双标签：</p>
 <table>
 <thead>
@@ -1444,6 +1499,188 @@
 </tbody>
 </table>
 <p>除了 <code>blockquote</code> 和 <code>address</code> 是块级元素，其他都是行内元素</p>
+</details>
+<h3 id="14">1.4 图片标签</h3>
+<p>图片标签 <code>img</code> ，单标签</p>
+<p>常用的标签属性有：</p>
+<ul>
+<li><code>src</code> 图片地址</li>
+<li><code>alt</code> 图片文本描述（图片加载成功不显示alt，加载失败时显示alt），主要用于搜索引擎搜索图片</li>
+<li><code>width</code> 图片宽度，单位px，单位可以省略不写</li>
+<li><code>height</code> 图片高度，单位px</li>
+</ul>
+<p>相对路径：</p>
+<ul>
+<li><code>./</code> 同级目录，可以省略不写</li>
+<li><code>/</code> 下一级目录</li>
+<li><code>../</code> 上一级目录</li>
+</ul>
+<p>常用图片格式：</p>
+<ul>
+<li><code>.jpg</code> 或 <code>.jpeg</code> 有损压缩格式，颜色丰富，体积小，不支持透明背景，不支持动图。常用于宣传图。</li>
+<li><code>.png</code> 无损压缩格式，图片质量高，颜色丰富，体积大，支持透明背景，不支持动图。常用于logo</li>
+<li><code>.bmp</code> 不进行压缩，尽量保留较多的图片细节，颜色丰富，体积很大，不支持透明背景，不支持动图。常用于游戏，网页几乎不使用</li>
+<li><code>.gif</code> 仅支持256种颜色，色彩呈现不是很完整，支持简单透明背景，支持动图</li>
+<li><code>.webp</code> 专门用来呈现网页中的图片，具有前面几种图片的优点，但是兼容性不好</li>
+<li><code>base64格式</code> 一串文本，可以使用浏览器打开，但是看图软件无法打开，使用时直接将base64文本放入src属性即可，不受文件路径的影响。常用于较小的图片或需要和网页一起加载的图片</li>
+</ul>
+<h3 id="15">1.5 超链接</h3>
+<p>超链接标签 <code>a</code>，双标签，行内元素，但可以包裹除了 <code>a</code> 之外的其他元素。</p>
+<p>html文件中无论连续使用几个空格和回车，最终显示的都是一个空格的效果。</p>
+<p>通过 <code>a</code> 标签，可以跳转到指定页面，跳转到指定文件或下载指定文件，跳转到锚点位置，唤起指定应用（邮箱等）</p>
+<p>常用的标签属性有：</p>
+<ul>
+<li><code>href</code> 链接地址</li>
+<li><code>target</code> 如何打开页面，可选值如下：<ul>
+<li><code>_self</code> 在当前标签页打开（默认）</li>
+<li><code>_blank</code> 新标签页打开</li>
+</ul>
+</li>
+<li><code>id</code> 元素的唯一标识，用于设定锚点</li>
+<li><code>name</code> 元素的名字，也可用于设置锚点</li>
+<li><code>download</code> 强制触发下载文件</li>
+</ul>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<ol>
+<li>具有 href 属性的 a 标签是超链接，具有 name 属性的 a 标签是锚点。</li>
+<li>name 和 id 的属性值都是区分大小写的，且 id 最好别是数字开头。</li>
+</ol>
+</details>
+<details class="example" open="open">
+<summary>Example</summary>
+<ol>
+<li>
+<p>跳转到指定页面
+    <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://developer.mozilla.org/zh-CN/docs/Web/HTML&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>前往MDN文档<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>跳转到指定文件</p>
+<ul>
+<li>如果是浏览器可以打开的文件，将直接显示文件内容</li>
+<li>如果是浏览器无法打开的文件，则会触发下载</li>
+</ul>
+</li>
+<li>
+<p>跳转到锚点</p>
+<ul>
+<li>第一步：设置锚点
+    <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">&lt;!-- 第一种方式：使用a标签name属性 --&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;test1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cm">&lt;!-- 第二种方式：其他标签配合id属性 --&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;test2&quot;</span><span class="p">&gt;</span>一级标题<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></code></pre></div></li>
+<li>第二步：跳转到锚点位置
+    <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cm">&lt;!-- 跳转到test1锚点--&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#test1&quot;</span><span class="p">&gt;</span>去test1锚点<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cm">&lt;!-- 跳到本页面顶部 --&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>回到顶部<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="cm">&lt;!-- 跳转到其他页面锚点 --&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;demo.html#test1&quot;</span><span class="p">&gt;</span>去demo.html页面的test1锚点<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>刷新页面</p>
+<p><code>&lt;a href=""&gt;刷新页面&lt;/a&gt;</code></p>
+</li>
+<li>
+<p>执行 <code>JavaScript</code> 代码</p>
+<p><code>&lt;a href="javascript:alert('hello world')"&gt;弹窗&lt;/a&gt;</code></p>
+</li>
+<li>
+<p>唤起指定应用（电话、邮箱、短信）
+    <div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">&lt;!-- 唤起设备拨号 --&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;tel:10086&quot;</span><span class="p">&gt;</span>电话联系<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="cm">&lt;!-- 唤起设备发送邮件 --&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;mailto:d111kc@foxmail.com&quot;</span><span class="p">&gt;</span>邮件联系<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="cm">&lt;!-- 唤起设备发送短信 --&gt;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;sms:10086&quot;</span><span class="p">&gt;</span>短信联系<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+</details>
+<h3 id="16">1.6 列表</h3>
+<ol>
+<li>
+<p>有序列表</p>
+<p><code>ol</code> 标签用来表示有序列表ordered list，列表中的每个条目使用列表标签 <code>li</code> 包裹，英文list。</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>这是一个有序列表<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>cet-4<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>cet-6<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>无序列表</p>
+<p><code>ul</code> 标签用来表示有序列表unordered list，列表中的每个条目使用列表标签 <code>li</code> 包裹</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>这是一个无序列表<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>python<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>c<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>java<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>嵌套</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>这是一个嵌套列表<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        大学英语
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>cet-4<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>cet-6<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        前端
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>css<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>javascript<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>hello world<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</li>
+</ol>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>li 标签最好写在 ul 或 ol 中，不要单独使用。</p>
+</details>
+<ol>
+<li>
+<p>自定义列表</p>
+<p>包含术语名称和术语描述的列表</p>
+<p><code>dl</code> 标签表示自定义列表definitin list。<code>dt</code> 和 <code>dd</code> 标签放在其中，<code>dt</code> 用来表示术语名称definition term，<code>dd</code> 用来表述属于描述definition description。</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>这是一个自定义列表<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>大学英语<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>cet-4<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>cet-6<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>web框架<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>django<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>flask<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>fastapi<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>javascript<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>vue.js<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>node.js<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="17">1.7 表格</h3>
+<p>html表格基本结构如图:</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/03/25/OuMVU9c7gw2b84H.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="html.png" src="https://s2.loli.net/2025/03/25/OuMVU9c7gw2b84H.png" /></a></p>
 
 
 
