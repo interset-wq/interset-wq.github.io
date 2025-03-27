@@ -188,6 +188,15 @@
                 <td>6-5</td>
                 <td>6-6</td>
             </tr>
+            <!-- 第七行 -->
+            <tr>
+                <td>7-1</td>
+                <td>7-2</td>
+                <td>7-3</td>
+                <td>7-4</td>
+                <td>7-5</td>
+                <td>7-6</td>
+            </tr>
         </tbody>
     </table>
 
@@ -197,17 +206,17 @@
         <caption>课程表</caption>
         <!-- 标题行：第一行 -->
         <thead>
-            <th></th>
+            <th>时间</th>
             <th>周一</th>
             <th>周二</th>
             <th>周三</th>
             <th>周四</th>
             <th>周五</th>
         </thead>
-        <tbody>
+        <tbody align="center">
             <!-- 第二行 -->
             <tr>
-                <td>2-1</td>
+                <td rowspan="2">上午</td>
                 <td>材料力学</td>
                 <td>大学英语</td>
                 <td>马克思主义</td>
@@ -216,7 +225,6 @@
             </tr>
             <!-- 第三行 -->
             <tr>
-                <td>3-1</td>
                 <td>大学体育</td>
                 <td>工程测量</td>
                 <td>工程地质</td>
@@ -225,33 +233,148 @@
             </tr>
             <!-- 第四行 -->
             <tr>
-                <td>4-1</td>
-                <td>4-2</td>
+                <td>中午</td>
+                <td colspan="5">午休</td>
+            </tr>
+            <!-- 第五行 -->
+            <tr>
+                <td rowspan="2">下午</td>
+                <td rowspan="3">无课</td>
                 <td>概率论</td>
                 <td>物理实验</td>
                 <td>概率论</td>
                 <td>马克思主义</td>
             </tr>
-            <!-- 第五行 -->
-            <tr>
-                <td>5-1</td>
-                <td>5-2</td>
-                <td>5-3</td>
-                <td>材料力学</td>
-                <td>5-5</td>
-                <td>5-6</td>
-            </tr>
             <!-- 第六行 -->
             <tr>
+                <td>无课</td>
+                <td>材料力学</td>
+                <td>无课</td>
+                <td rowspan="2">无课</td>
+            </tr>
+            <!-- 第七行 -->
+            <tr>
                 <td>晚上</td>
-                <td>6-2</td>
                 <td>习近平新时代社会主义</td>
-                <td>6-4</td>
-                <td>6-5</td>
-                <td>6-6</td>
+                <td colspan="2">晚自习</td>
             </tr>
         </tbody>
     </table>
+
+    <br>
+    <h2>表单</h2>
+
+    <form action="https://www.baidu.com/s" target="_blank" method="get">
+        <input type="text" name="wd" placeholder="输入你想搜索的内容">
+        <button>去百度搜索</button>
+    </form>
+    <form action="https://www.sogou.com/web" target="_blank" method="get">
+        <input type="text" name="query" value="学习">
+        <button>去搜狗搜索</button>
+    </form>
+
+    <form action="https://www.sogou.com/web" target="_blank" method="get">
+        <input type="password" name="query" placeholder="请输入密码">
+        <button>提交</button>
+    </form>
+    
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <input type="radio" name="gender" value="male" checked>男
+        <input type="radio" name="gender" value="female">女
+        <br>
+        <button>提交</button>
+    </form>
+
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <input type="checkbox" name="hobby" value="chess" checked>下棋
+        <input type="checkbox" name="hobby" value="sports">运动
+        <br>
+        <button>提交</button>
+    </form>
+
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <input type="hidden" name="tag" value="100">
+        <button>提交</button>
+    </form>
+
+    <form action="https://www.sogou.com/web" target="_blank" method="get">
+        <input type="text" name="query">
+        <!-- <button>去搜狗搜索</button> -->
+        <input type="submit" value="点我提交表单">
+    </form>
+
+    <form action="https://www.sogou.com/web" target="_blank" method="get">
+        <input type="text" name="query">
+        <input type="reset">
+        <!-- <button type="reset">重置</button> -->
+    </form>
+
+    <form action="https://www.sogou.com/web" target="_blank" method="get">
+        <input type="text" name="query">
+        <input type="button" value="普通按钮">
+        <button type="button">普通按钮</button>
+    </form>
+
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <textarea name="msg" rows="3" cols="30" placeholder="我是文本域"></textarea>
+        <button>提交</button>
+    </form>
+
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <select name="lang">
+            <option value="py">Python</option>
+            <option value="md">Markdown</option>
+            <option value="h5">HTML5</option>
+        </select>
+        <button disabled>提交</button>
+    </form>
+
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <label for="my-name">姓名：</label>
+        <input type="text" name="name" id="my-name">
+        <button>提交</button>
+    </form>
+
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <label>姓名：
+            <input type="text" name="name">
+        </label>
+        <button>提交</button>
+    </form>
+
+    <form action="https://www.jd.com/" target="_blank" method="get">
+        <fieldset>
+            <legend>主要信息</legend>
+            姓名：
+            <input type="text" name="name">
+            <br>
+            性别：
+            <input type="radio" name="gender" value="male">男
+            <input type="radio" name="gender" value="female">女
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>联系方式</legend>
+            电话：
+            <input type="text" name="phone">
+            <br>
+            微信：
+            <input type="text" name="wechat">
+            <br>
+            邮箱：
+            <input type="text" name="email">
+        </fieldset>
+        <button>提交</button>
+    </form>
+
+    <iframe src="http://127.0.0.1:8000/h5/h4c2/" frameborder="0"></iframe>
+
+    <br>
+
+    <a href="http://127.0.0.1:8000/markdown/" target="md">点我查阅md语法</a>
+    <br>
+    <iframe name="md" frameborder="0"></iframe>
+
 </body>
 
 </html>
