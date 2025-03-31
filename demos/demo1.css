@@ -1,0 +1,58 @@
+/* 元素选择器 */
+h3 {
+    color: gray;
+    font-size: 30px;
+}
+h4 {
+    color: black;
+    font-size: 25px;
+}
+
+/* 通配选择器 */
+* {
+    font-size: 20px;
+    color: purple;
+}
+
+/* 类选择器 */
+.class-selector {
+    color: green;
+}
+
+/* id选择器 */
+#demo1 {
+    font-size: 50px;
+    color: black;
+}
+
+/* 交集选择器 */
+h4.zen {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+/* 并集选择器 */
+p,
+h4 {
+    text-align: center;
+}
+
+/* 后代选择器 */
+div h3 {
+    font-weight: lighter;
+}
+
+/* 子代选择器 */
+div > h4 {
+    color: chocolate;
+}
+
+/* 相邻兄弟选择器 */
+h3.easy + h4 {
+    color: red;
+}
+
+/* 通用兄弟选择器 */
+h4.zen ~ p {
+    color: skyblue;
+}
