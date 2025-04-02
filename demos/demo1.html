@@ -40,14 +40,14 @@
     <div>
         <h3>Example 3 复合选择器</h3>
         <h4 class="zen">The Zen of Python, by Tim Peters</h4>
-        <p>Beautiful is better than ugly.</p>
-        <p>Explicit is better than implicit.</p>
-        <p>Simple is better than complex.</p>
-        <p>Complex is better than complicated.</p>
-        <p>Flat is better than nested.</p>
-        <p>Sparse is better than dense.</p>
-        <p>Readability counts.</p>
-        <p>Special cases aren't special enough to break the rules.</p>
+        <p title="beautiful">Beautiful is better than ugly.</p>
+        <p title="explicit">Explicit is better than implicit.</p>
+        <p title="simple">Simple is better than complex.</p>
+        <p title="complex">Complex is better than complicated.</p>
+        <p title="better-flat">Flat is better than nested.</p>
+        <p title="better-sparse">Sparse is better than dense.</p>
+        <p title="counts">Readability counts.</p>
+        <p title="rules">Special cases aren't special enough to break the rules.</p>
         <p>Although practicality beats purity.</p>
         <p>Errors should never pass silently.</p>
         <p>Unless explicitly silenced.</p>
@@ -60,6 +60,86 @@
         <p>If the implementation is easy to explain, it may be a good idea.</p>
         <p>Namespaces are one honking great idea -- let's do more of those!</p>
     </div>
+    <div>
+        <h3>Example 4 复合选择器——伪类选择器</h3>
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">MDN HTML文档</a>
+        <br>
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">MDN CSS文档</a>
+        <br>
+        <form action="https://www.baidu.com/s" target="_blank" method="get">
+            <input type="text" name="wd" placeholder="输入你想搜索的内容">
+            <button>百度搜索</button>
+        </form>
+        <h4>结构伪类</h4>
+        <div class="structural">
+            <p>Although practicality beats purity.</p>
+            <p>Errors should never pass silently.</p>
+            <p>Unless explicitly silenced.</p>
+            <span>In the face of ambiguity, refuse the temptation to guess.</span>
+            <p>There should be one-- and preferably only one --obvious way to do it.</p>
+            <span>Although that way may not be obvious at first unless you're Dutch.</span>
+            <span>Now is better than never.</span>
+            <span>Although never is often better than *right* now.</span>
+            <p>If the implementation is hard to explain, it's a bad idea.</p>
+            <p>If the implementation is easy to explain, it may be a good idea.</p>
+            <p>Namespaces are one honking great idea -- let's do more of those!</p>    
+        </div>
+
+        <h4>否定伪类</h4>
+        <div class="not">
+            <p>Errors should never pass silently.</p>
+            <p>Unless explicitly silenced.</p>
+            <p>In the face of ambiguity, refuse the temptation to guess.</p>
+            <p>There should be one-- and preferably only one --obvious way to do it.</p>
+            <p class="although">Although that way may not be obvious at first unless you're Dutch.</p>
+            <p>Now is better than never.</p>
+            <p class="although">Although never is often better than *right* now.</p>    
+        </div>
+
+        <h4>UI伪类</h4>
+        <input type="checkbox">请勾选
+        <br>
+        <input type="text" disabled>
+        <br>
+        <input type="text">
+
+        <h4>目标伪类</h4>
+        <div class="target">
+            <a href="#error">Error</a>
+            <a href="#explicitly">Explicitly</a>
+            <a href="#guess">Guess</a>
+            <a href="#obvious">Obvious</a>
+            <a href="#Dutch">Dutch</a>
+            <p id="error">Errors should never pass silently.</p>
+            <p id="explicitly">Unless explicitly silenced.</p>
+            <p id="guess">In the face of ambiguity, refuse the temptation to guess.</p>
+            <p id="obvious">There should be one-- and preferably only one --obvious way to do it.</p>
+            <p id="Dutch">Although that way may not be obvious at first unless you're Dutch.</p>
+        </div>
+    </div>
+
+    <h4>语言伪类</h4>
+    <div class="language">
+        <p>Hello World</p>
+        <p lang="en">python</p>
+        <p lang="zh-CN">css</p>
+    </div>
+
+    <h3>伪元素选择器</h3>
+    <div class="element">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam error dignissimos voluptates culpa blanditiis animi illum fugiat in, ex itaque maxime recusandae exercitationem? Vero dignissimos atque culpa a iusto. Facilis aperiam atque ipsam facere impedit omnis natus unde distinctio non hic autem placeat, cum, sunt quos ducimus quasi labore temporibus!
+        <br>
+        <input type="text" placeholder="请输入文字">
+        <br>
+        <p>19.99</p>
+        <p>109.19</p>
+        <p>100.00</p>
+        <p>9.99</p>
+        <p>19.78</p>
+    </div>
+
+    <h3>Example 5 字体属性</h3>
+    <p class="e5">Hello World</p>
     
 
     <ul>
