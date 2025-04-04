@@ -168,3 +168,35 @@ input:enabled {
     font-style: italic;
     font-weight: bold;
 }
+.font {
+    font: bold italic 60px "STCaiyun","Microsoft YaHei",sans-serif;
+}
+
+/* 文本属性 */
+.sheep {
+    color: green;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    text-decoration: blue dashed underline;
+    text-align: left;
+    text-indent: 80px;
+    line-height: 60px;
+}
+
+/* 列表属性 */
+li {
+    list-style-type: square;
+}
+
+/* 表格边框属性 */
+.my-table {
+    border-width: 1px;
+    border-color: blue;
+    border-style: solid;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+td,
+th {
+    border: 1px red dotted;
+}
