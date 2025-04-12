@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 已知两个变量a,b
+        let a = 17
+        let b = 20
+
+        // a,b交换之前的输出结果
+        console.log(a, b) // 17 20
+
+        // 通过临时变量进行交换
+        let c = a
+        a = b
+        b = c
+
+        // a,b交换之后的输出结果
+        console.log(a, b) // 20 17
+
+    </script>
+</body>
+</html>
