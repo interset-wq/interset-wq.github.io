@@ -42,9 +42,9 @@ theme:
   features:
     - navigation.instant # 即时加载
     - navigation.instant.prefetch # 预加载
-    - navigation.instant.progress # 进度指示器
+    # - navigation.instant.progress # 进度指示器
     - navigation.instant.preview # 全局即时预览
-    - navigation.tracking # 锚点跟踪
+    # - navigation.tracking # 锚点跟踪
     - navigation.tabs # 导航选项卡
     - navigation.tabs.sticky # 固定导航选项卡
     - navigation.sections # 左侧导航收缩箭头
@@ -52,7 +52,7 @@ theme:
     - navigation.expand # 默认展开左侧导航所有级别
     # - navigation.prune # 导航修剪
     - navigation.indexes # 章节索引
-    - toc.follow # 目录锚点跟踪
+    # - toc.follow # 目录锚点跟踪
     # - toc.integrate # 导航集成
     - navigation.top # 返回顶部
     - search.suggest # 搜索建议
@@ -200,19 +200,28 @@ extra_css:
   - stylesheets/extra.css
   
 
-
 nav:
-  - 主页: 
+  - 首页:
     - index.md
-    - markdown.md
-    - extended-markdown.md
-    - shortcut-keys.md
+
+  - 速查表: 
+    - reference/markdown.md
+    - reference/extended-markdown.md
+    - reference/shortcut-keys.md
+
   - 博客:
     - blog/index.md
+
   - Python:
     - python/syntax.md
-
+    - python/bs4.md
   - GUI:
     - GUI/tkinter0.md
+  - 前端:
+    - h5/h4c2.md
+    - h5/classic-box.md
+    - h5/h5c3.md
+    - h5/js.md
+    
 
 

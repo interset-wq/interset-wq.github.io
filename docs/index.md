@@ -3,8 +3,7 @@
 hide:
   - navigation
   - toc
-# comments: true
-twikoo: true
+comments: true
 date: 2025-3-9
 # 屏蔽搜索
 search:
@@ -14,7 +13,7 @@ search:
 
 :material-pen-plus: `本文创建于2025-3-9`
 
-本站是使用python第三方库[mkdocs](https://www.mkdocs.org)搭建的静态网页。
+本站是使用python第三方库[mkdocs](https://www.mkdocs.org)搭建的静态网站。
 
 ## 为何创建此站点？
 

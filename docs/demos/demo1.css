@@ -1,0 +1,202 @@
+/* 元素选择器 */
+h3 {
+    color: gray;
+    font-size: 30px;
+}
+h4 {
+    color: black;
+    font-size: 25px;
+}
+
+/* 通配选择器 */
+* {
+    font-size: 20px;
+    color: purple;
+}
+
+/* 类选择器 */
+.class-selector {
+    color: green;
+}
+
+/* id选择器 */
+#demo1 {
+    font-size: 50px;
+    color: black;
+}
+
+/* 交集选择器 */
+h4.zen {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+/* 并集选择器 */
+p,
+h4 {
+    text-align: center;
+}
+
+/* 后代选择器 */
+div h3 {
+    font-weight: lighter;
+}
+
+/* 子代选择器 */
+div > h4 {
+    color: chocolate;
+}
+
+/* 相邻兄弟选择器 */
+h3.easy + h4 {
+    color: red;
+}
+
+/* 通用兄弟选择器 */
+h4.zen ~ p {
+    color: skyblue;
+}
+
+/* 属性选择器 */
+div p[title] {
+    color: red;
+}
+div p[title="explicit"] {
+    color: orange;
+}
+div p[title*="mp"] {
+    color: yellow;
+}
+div p[title^="better"] {
+    color: green;
+}
+div p[title$="s"] {
+    color: blue;
+}
+/* 伪类选择器——动态伪类 */
+a:link {
+    color: black;
+}
+a:visited {
+    color: red;
+}
+a:hover {
+    color: purple;
+}
+a:active {
+    color: pink;
+}
+input:focus {
+    color: red;
+    background-color: yellow;
+}
+
+/* 伪类选择器——结构伪类 */
+.structural > p:first-child {
+    background-color: yellow;
+}
+.structural > p:last-child {
+    background-color: yellow;
+}
+.structural > p:nth-child(5){
+    background-color: yellow;
+}
+.structural > span:first-of-type {
+    background-color: pink;
+}
+.structural > span:last-of-type {
+    background-color: pink;
+}
+.structural > span:nth-of-type(3) {
+    background-color: blue;
+}
+
+/* 伪类选择器——否定伪类 */
+.not > p:not(.although) {
+    color: red;
+}
+
+/* 伪类选择器——UI伪类 */
+input:checked {
+    width: 100px;
+    height: 100px;
+}
+input:disabled {
+    background: purple;
+}
+input:enabled {
+    background: white;
+}
+
+/* 伪类选择器——目标伪类 */
+.target > p:target {
+    background-color: pink;
+}
+
+/* 伪类选择器——语言伪类 */
+.language > p:lang(en) {
+    font-weight: bold;
+}
+.language > p:lang(zh-CN) {
+    font-weight: lighter;
+}
+
+/* 伪元素选择器 */
+.element::first-letter {
+    font-size: 40px;
+}
+.element::first-line {
+    background-color: yellow;
+}
+.element::selection {
+    background-color: pink;
+}
+.element input::placeholder {
+    color: red;
+}
+.element p::before {
+    content: "￥";
+}
+.element p::after {
+    content: " CNY";
+}
+
+/* 字体属性 */
+.e5 {
+    font-size: 40px;
+    font-family: "STCaiyun","Microsoft YaHei",sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.font {
+    font: bold italic 60px "STCaiyun","Microsoft YaHei",sans-serif;
+}
+
+/* 文本属性 */
+.sheep {
+    color: green;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    text-decoration: blue dashed underline;
+    text-align: left;
+    text-indent: 80px;
+    line-height: 60px;
+}
+
+/* 列表属性 */
+li {
+    list-style-type: square;
+}
+
+/* 表格边框属性 */
+.my-table {
+    border-width: 1px;
+    border-color: blue;
+    border-style: solid;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+td,
+th {
+    border: 1px red dotted;
+}
