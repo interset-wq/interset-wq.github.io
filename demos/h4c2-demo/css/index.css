@@ -1,0 +1,59 @@
+/* #region 版心 */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+    background-color: pink;
+    height: 3000px;
+}
+/* #endregion */
+
+/* #region 顶部topbar */
+.topbar {
+    height: 30px;
+    background-color: #ECECEC;
+}
+.topbar-wel {
+    /* height: 30px; */
+    line-height: 30px;
+    font-size: 0;
+}
+.topbar-wel span, .topbar-wel a {
+    font-size: 12px;
+}
+.topbar-wel .wel {
+    margin-right: 28px;
+}
+.topbar-wel .login {
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
+.topbar-wel .register {
+    padding-left: 10px;
+}
+
+.topbar-nav {
+    /* height: 30px; */
+    line-height: 30px;
+    font-size: 12px;
+}
+.topbar-nav li {
+    float: left;
+}
+.topbar-nav li a {
+    padding: 0 15px;
+    border-right: 1px solid black;
+}
+.topbar-nav li:first-child a {
+    padding-left: 0;
+}
+.topbar-nav li:last-child a {
+    padding-right: 0;
+    border: 0;
+}
+/* #endregion */
+
+
+
+
+
+
