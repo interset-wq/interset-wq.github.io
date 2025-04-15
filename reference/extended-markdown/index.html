@@ -687,57 +687,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="六、图形Mermaid">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 流程图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.2 序列图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.3 状态图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#64" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.4 类图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#65" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.5 实体关系图
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1738,57 +1687,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="六、图形Mermaid">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 流程图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.2 序列图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.3 状态图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#64" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.4 类图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#65" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.5 实体关系图
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2284,7 +2182,7 @@ root.mainloop()
 </div>
 <h2 id="mermaid">六、图形Mermaid</h2>
 <p>官网 <a href="https://mermaid.js.org/">Mermaid</a></p>
-<h3 id="61">6.1 流程图</h3>
+<p><strong>流程图</strong></p>
 <p>输入以下代码：</p>
 <div class="language-text highlight"><pre><span></span><code>``` mermaid
 graph LR
@@ -2302,140 +2200,6 @@ B ----&gt;|否| E[输出结果!];
   C --&gt; D[调试];
   D --&gt; B;
   B ----&gt;|否| E[输出结果!];</code></pre>
-<h3 id="62">6.2 序列图</h3>
-<p>输入以下代码：</p>
-<div class="language-text highlight"><pre><span></span><code>``` mermaid
-sequenceDiagram
-autonumber
-Alice-&gt;&gt;John: Hello John, how are you?
-loop Healthcheck
-    John-&gt;&gt;John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John--&gt;&gt;Alice: Great!
-John-&gt;&gt;Bob: How about you?
-Bob--&gt;&gt;John: Jolly good!
-```
-</code></pre></div>
-<p>你可以看到：</p>
-<pre class="mermaid"><code>sequenceDiagram
-  autonumber
-  Alice-&gt;&gt;John: Hello John, how are you?
-  loop Healthcheck
-      John-&gt;&gt;John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts!
-  John--&gt;&gt;Alice: Great!
-  John-&gt;&gt;Bob: How about you?
-  Bob--&gt;&gt;John: Jolly good!</code></pre>
-<h3 id="63">6.3 状态图</h3>
-<p>输入以下代码：</p>
-<div class="language-text highlight"><pre><span></span><code>``` mermaid
-stateDiagram-v2
-state fork_state &lt;&lt;fork&gt;&gt;
-    [*] --&gt; fork_state
-    fork_state --&gt; State2
-    fork_state --&gt; State3
-
-    state join_state &lt;&lt;join&gt;&gt;
-    State2 --&gt; join_state
-    State3 --&gt; join_state
-    join_state --&gt; State4
-    State4 --&gt; [*]
-```
-</code></pre></div>
-<p>你可以看到：</p>
-<pre class="mermaid"><code>stateDiagram-v2
-  state fork_state &lt;&lt;fork&gt;&gt;
-    [*] --&gt; fork_state
-    fork_state --&gt; State2
-    fork_state --&gt; State3
-
-    state join_state &lt;&lt;join&gt;&gt;
-    State2 --&gt; join_state
-    State3 --&gt; join_state
-    join_state --&gt; State4
-    State4 --&gt; [*]</code></pre>
-<h3 id="64">6.4 类图</h3>
-<p>输入以下代码：</p>
-<div class="language-text highlight"><pre><span></span><code>``` mermaid
-classDiagram
-Person &lt;|-- Student
-Person &lt;|-- Professor
-Person : +String name
-Person : +String phoneNumber
-Person : +String emailAddress
-Person: +purchaseParkingPass()
-Address &quot;1&quot; &lt;-- &quot;0..1&quot; Person:lives at
-class Student{
-    +int studentNumber
-    +int averageMark
-    +isEligibleToEnrol()
-    +getSeminarsTaken()
-}
-class Professor{
-    +int salary
-}
-class Address{
-    +String street
-    +String city
-    +String state
-    +int postalCode
-    +String country
-    -validate()
-    +outputAsLabel()  
-}
-```
-</code></pre></div>
-<p>你可以看到：</p>
-<pre class="mermaid"><code>classDiagram
-  Person &lt;|-- Student
-  Person &lt;|-- Professor
-  Person : +String name
-  Person : +String phoneNumber
-  Person : +String emailAddress
-  Person: +purchaseParkingPass()
-  Address "1" &lt;-- "0..1" Person:lives at
-  class Student{
-    +int studentNumber
-    +int averageMark
-    +isEligibleToEnrol()
-    +getSeminarsTaken()
-  }
-  class Professor{
-    +int salary
-  }
-  class Address{
-    +String street
-    +String city
-    +String state
-    +int postalCode
-    +String country
-    -validate()
-    +outputAsLabel()  
-  }</code></pre>
-<h3 id="65">6.5 实体关系图</h3>
-<p>输入以下代码：</p>
-<div class="language-text highlight"><pre><span></span><code>``` mermaid
-erDiagram
-CUSTOMER ||--o{ ORDER : places
-ORDER ||--|{ LINE-ITEM : contains
-LINE-ITEM {
-    string name
-    int pricePerUnit
-}
-CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-</code></pre></div>
-<p>你可以看到：</p>
-<pre class="mermaid"><code>erDiagram
-  CUSTOMER ||--o{ ORDER : places
-  ORDER ||--|{ LINE-ITEM : contains
-  LINE-ITEM {
-    string name
-    int pricePerUnit
-  }
-  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</code></pre>
 <h2 id="_6">七、脚注</h2>
 <p>输入以下代码：</p>
 <div class="language-text highlight"><pre><span></span><code>Tkinter[^1] 是python标准库之一，著名的 idle[^2] 就是使用它制作的。
