@@ -13,7 +13,7 @@
     background-color: #ECECEC;
 }
 .topbar-wel {
-    /* height: 30px; */
+    height: 30px; /* 这个height不能省略，否则会影响后面的排版 */
     line-height: 30px;
     font-size: 0;
 }
@@ -32,7 +32,7 @@
 }
 
 .topbar-nav {
-    /* height: 30px; */
+    height: 30px;
     line-height: 30px;
     font-size: 12px;
 }
@@ -52,8 +52,55 @@
 }
 /* #endregion */
 
+/* #region 头部header */
+.header {
+    height: 120px;
+    background-color: skyblue;
+}
+.searchbox {
+    margin-top: 42px;
+    font-size: 0;
+}
+.searchbox input {
+    height: 34px;
+    width: 508px;
+    border: 1px solid red;
+}
+.searchbox button {
+    height: 36px;
+    width: 80px;
+    background-color: red;
+    background-image: url('../images/serch_icon.png');
+    background-repeat: no-repeat;
+    vertical-align: top;
+    background-position: 28px 6px;
+}
+/* #endregion */
 
-
+/* #region 主导航 */
+.navigation {
+    height: 48px;
+    border-bottom: 1px solid red;
+}
+.goods-types {
+    width: 190px;
+    height: 48px;
+    line-height: 48px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.type-list {
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+}
+.type-list li {
+    float: left;
+    margin: 0 10px;
+}
+/* #endregion */
 
 
 
