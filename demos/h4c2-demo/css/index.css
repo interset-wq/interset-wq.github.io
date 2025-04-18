@@ -102,5 +102,51 @@
 }
 /* #endregion */
 
+/* #region 主要内容区main */
+.main {
+    margin-top: 10px;
+}
+.main-navbar {
+    background-color: #F4F4F4;
+    width: 190px;
+    height: 458px;
+}
+.main-navbar li {
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 16px;
+}
+.main-navbar li:first-child {
+    padding-top: 5px;
+}
+.main-navbar li:last-child {
+    padding-bottom: 5px;
+}
+.main-navbar li:hover {
+    background-color: red;
+}
+.main-navbar li:hover a {
+    color: white;
+}
+
+
+
+
+
+.main-banner {
+    width: 690px;
+    height: 458px;
+    background-color: green;
+    margin: 0 10px;
+}
+.main-other {
+    width: 290px;
+    height: 458px;
+    background-color: orange;
+}
+/* #endregion */
+
+
 
 
