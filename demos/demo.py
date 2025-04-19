@@ -1,11 +1,8 @@
-from threading import Thread
+from pathlib import Path
 
+p = Path(r'E:\my-website\tour\mkdocs.yml')
+print(p.suffix)
 
-def hi():
-    for _ in range(10):
-        print('hi')
-
-for _ in range(5):
-    thread = Thread(target=hi)
-    thread.start()
+print(Path.home())
+print(Path.cwd())
 

@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://tour.d111kc.top/blog/">
+        <link rel="canonical" href="https://tour.d111kc.top/python/path/">
       
       
-        <link rel="prev" href="../reference/shortcut-keys/">
+        <link rel="prev" href="../threading/">
       
       
-        <link rel="next" href="category/hello-world/">
+        <link rel="next" href="../../GUI/tkinter0/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>欢迎访问我的博客 - Tour</title>
+        <title>标准库 pathlib 和 os.path —— 文件操作 - Tour</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -73,16 +73,16 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -91,7 +91,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#pathlibospath" class="md-skip">
           跳转至
         </a>
       
@@ -126,7 +126,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Tour" class="md-header__button md-logo" aria-label="Tour" data-md-component="logo">
+    <a href="../.." title="Tour" class="md-header__button md-logo" aria-label="Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              欢迎访问我的博客
+              标准库 pathlib 和 os.path —— 文件操作
             
           </span>
         </div>
@@ -242,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -261,12 +261,32 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reference/markdown/" class="md-tabs__link">
+        <a href="../../reference/markdown/" class="md-tabs__link">
           
   
     
   
   速查表
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  博客
 
         </a>
       </li>
@@ -283,27 +303,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-    
-  
-  博客
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../python/syntax/" class="md-tabs__link">
+        <a href="../syntax/" class="md-tabs__link">
           
   
     
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../GUI/tkinter0/" class="md-tabs__link">
+        <a href="../../GUI/tkinter0/" class="md-tabs__link">
           
   
     
@@ -343,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../h5/h4c2/" class="md-tabs__link">
+        <a href="../../h5/h4c2/" class="md-tabs__link">
           
   
     
@@ -363,7 +363,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../mynote/surveying/" class="md-tabs__link">
+        <a href="../../mynote/surveying/" class="md-tabs__link">
           
   
     
@@ -404,7 +404,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Tour" class="md-nav__button md-logo" aria-label="Tour" data-md-component="logo">
+    <a href="../.." title="Tour" class="md-nav__button md-logo" aria-label="Tour" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -422,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/markdown/" class="md-nav__link">
+      <a href="../../reference/markdown/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
@@ -526,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/extended-markdown/" class="md-nav__link">
+      <a href="../../reference/extended-markdown/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
@@ -553,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/shortcut-keys/" class="md-nav__link">
+      <a href="../../reference/shortcut-keys/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
@@ -589,8 +589,6 @@
       
   
   
-    
-  
   
   
     
@@ -607,24 +605,23 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -636,13 +633,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             博客
@@ -667,13 +664,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -682,7 +676,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -710,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="archive/2025/" class="md-nav__link">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,13 +747,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -768,7 +759,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -796,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/hello-world/" class="md-nav__link">
+      <a href="../../blog/category/hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -820,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/%E9%9A%8F%E6%83%B3%E9%9A%8F%E8%AF%B4/" class="md-nav__link">
+      <a href="../../blog/category/%E9%9A%8F%E6%83%B3%E9%9A%8F%E8%AF%B4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/%E9%9A%8F%E7%AC%94/" class="md-nav__link">
+      <a href="../../blog/category/%E9%9A%8F%E7%AC%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,8 +869,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -894,21 +887,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -920,7 +914,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -934,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python/syntax/" class="md-nav__link">
+      <a href="../syntax/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
@@ -966,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python/bs4/" class="md-nav__link">
+      <a href="../bs4/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
@@ -998,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python/threading/" class="md-nav__link">
+      <a href="../threading/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
@@ -1027,10 +1021,39 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../python/path/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
+  
+  <span class="md-ellipsis">
+    标准库 pathlib 和 os.path —— 文件操作
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
@@ -1050,6 +1073,93 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pathlibospath" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一步：导入pathlib和os.path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二步：创建Path对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二步：对Path对象进行操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二步：对Path对象进行操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 path对象路径常用属性和方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 常用函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 创建、删除、重命名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 读写文件操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1116,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GUI/tkinter0/" class="md-nav__link">
+      <a href="../../GUI/tkinter0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h5/h4c2/" class="md-nav__link">
+      <a href="../../h5/h4c2/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13 18-4-4v3H4v-3H2v8h2v-3h5v3zm6-15h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v7h2V9h14v10h-4.2l-2 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M5 7V5h14v2z"/></svg>
@@ -1227,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h5/classic-box/" class="md-nav__link">
+      <a href="../../h5/classic-box/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"/></svg>
@@ -1254,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h5/h5c3/" class="md-nav__link">
+      <a href="../../h5/h5c3/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M14.064 0h.186C15.216 0 16 .784 16 1.75v.186a8.75 8.75 0 0 1-2.564 6.186l-.458.459q-.472.471-.979.904v3.207c0 .608-.315 1.172-.833 1.49l-2.774 1.707a.75.75 0 0 1-1.11-.418l-.954-3.102a1 1 0 0 1-.145-.125L3.754 9.816a1 1 0 0 1-.124-.145L.528 8.717a.75.75 0 0 1-.418-1.11l1.71-2.774A1.75 1.75 0 0 1 3.31 4h3.204q.433-.508.904-.979l.459-.458A8.75 8.75 0 0 1 14.064 0M8.938 3.623h-.002l-.458.458c-.76.76-1.437 1.598-2.02 2.5l-1.5 2.317 2.143 2.143 2.317-1.5c.902-.583 1.74-1.26 2.499-2.02l.459-.458a7.25 7.25 0 0 0 2.123-5.127V1.75a.25.25 0 0 0-.25-.25h-.186a7.25 7.25 0 0 0-5.125 2.123M3.56 14.56c-.732.732-2.334 1.045-3.005 1.148a.23.23 0 0 1-.201-.064.23.23 0 0 1-.064-.201c.103-.671.416-2.273 1.15-3.003a1.502 1.502 0 1 1 2.12 2.12m6.94-3.935q-.132.09-.266.175l-2.35 1.521.548 1.783 1.949-1.2a.25.25 0 0 0 .119-.213ZM3.678 8.116 5.2 5.766q.087-.135.176-.266H3.309a.25.25 0 0 0-.213.119l-1.2 1.95ZM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>
@@ -1278,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h5/js/" class="md-nav__link">
+      <a href="../../h5/js/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></svg>
@@ -1302,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h5/web-api/" class="md-nav__link">
+      <a href="../../h5/web-api/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
@@ -1383,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mynote/surveying/" class="md-nav__link">
+      <a href="../../mynote/surveying/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1422,8 +1532,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1432,38 +1540,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#pathlibospath" class="md-nav__link">
     <span class="md-ellipsis">
-      很多事情，其实并没有目的
+      第一步：导入pathlib和os.path
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#path" class="md-nav__link">
     <span class="md-ellipsis">
-      英语四级、计算机二级，我来了
+      第二步：创建Path对象
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#path_1" class="md-nav__link">
     <span class="md-ellipsis">
-      随笔1
+      第二步：对Path对象进行操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二步：对Path对象进行操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 path对象路径常用属性和方法
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#hello-world" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
     <span class="md-ellipsis">
-      Hello world!
+      2.2 常用函数
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 创建、删除、重命名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 读写文件操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1476,183 +1617,167 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="_1">欢迎访问我的博客</h1>
-<p>欢迎访问我的博客，我在这里记录我的生活和生活中的一些感悟。</p>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-03-21 00:00:00+00:00">2025年3月21日星期五</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="category/%E9%9A%8F%E6%83%B3%E9%9A%8F%E8%AF%B4/" class="md-meta__link">随想随说</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="_1"><a class="toclink" href="2025/03/feeling2/">很多事情，其实并没有目的</a></h2>
-<p>最近发现，很多自己曾经喜欢的事情，现在不想去做了。仔细想想，我发现当一件原来没有目的的事情，变成了有目的的事情之后，就变得无趣了。</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2025/03/feeling2/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-03-19 00:00:00+00:00">2025年3月19日星期三</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="category/%E9%9A%8F%E6%83%B3%E9%9A%8F%E8%AF%B4/" class="md-meta__link">随想随说</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="_1"><a class="toclink" href="2025/03/feeling1/">英语四级、计算机二级，我来了</a></h2>
-<p>今天是2025上半年英语四六级报名，我这次终于报上名了。时不我待，这次四级考试不能失败，必须通过。距离计算机二级考试也只剩下十多天了，这些天我得抓紧时间，认真备考。</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2025/03/feeling1/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-03-15 00:00:00+00:00">2025年3月15日星期六</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="category/%E9%9A%8F%E7%AC%94/" class="md-meta__link">随笔</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="1"><a class="toclink" href="2025/03/essay1/">随笔1</a></h2>
-<p>开学将近一个月了，我觉得这一个月自己的学习和生活状态非常不好，总是感觉不知所措。</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2025/03/essay1/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-03-10 00:00:00+00:00">2025年3月10日星期一</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="category/hello-world/" class="md-meta__link">Hello World</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="hello-world"><a class="toclink" href="2025/03/hello-world/">Hello world!</a></h2>
-<p>Whenever you begin a new project, remember to try to say <code>Hello World</code> to yourself. It can encourage to keep on!</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2025/03/hello-world/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-      
-        
-          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
 
 
 
-<nav class="md-pagination">
+  <h1>标准库 pathlib 和 os.path —— 文件操作</h1>
+
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-18</code></p>
+<h2 id="pathlibospath">第一步：导入pathlib和os.path</h2>
+<div class="language-text highlight"><pre><span></span><code>from pathlib import Path
+import os.path
+</code></pre></div>
+<h2 id="path">第二步：创建Path对象</h2>
+<p>Path类：</p>
+<p><code>Path(*pathsegments)</code> 传入文件路径或路径片段，路径之间使用逗号分隔，默认值是当前目录</p>
+<h2 id="path_1">第二步：对Path对象进行操作</h2>
+<h3 id="21-path">2.1 path对象路径常用属性和方法</h3>
+<ul>
+<li><code>parts</code> 将路径拆分，返回路径片段的元组</li>
+<li><code>drive</code> 返回盘符</li>
+<li><code>parents</code> 返回祖先路径</li>
+<li><code>parent</code> 返回父路径，相当于 <code>os.path.dirname()</code>函数</li>
+<li><code>name</code> 返回最末尾的路径（文件名或文件夹名），相当于 <code>os.path.basename()</code> 函数</li>
+<li><code>suffix</code> 返回文件后缀名（文件扩展名），相当于 <code>os.path.splitext()</code> 函数</li>
+<li><code>suffixes</code> 返回文件扩展名列表，主要针对文件后缀名中有多个 <code>.</code> 的后缀名</li>
+<li><code>stem</code> 返回去除后缀名的最末尾路径（不包含后缀名的文件名或文件夹名），相当于 <code>os.path.splitext()</code> 函数</li>
+<li><code>as_posix()</code> 返回使用 <code>/</code> 的文件路径，主要用于将windows路径的 <code>\\</code> 路径转换为 <code>/</code> 路径</li>
+<li><code>is_absolute()</code> 判断是否是绝对路径，相当于 <code>os.path.isabs()</code> 函数</li>
+<li><code>is_relative_to(other)</code> 判断此路径是否是相对于 other 的路径</li>
+<li><code>joinpath(*pathsegments)</code> 将传入的路径片段与path对象的路径组和，相当于 <code>os.path.join()</code> 函数</li>
+<li><code>with_name(name)</code> 返回一个新的路径并修改 name。如果原本路径没有 name，ValueError 被抛出</li>
+<li><code>with_stem(stem)</code> 返回一个带有修改后 stem 的新路径。 如果原路径没有名称，则会引发 ValueError</li>
+<li><code>with_suffix(suffix)</code> 返回一个新的路径并修改 suffix。如果原本的路径没有后缀，新的 suffix 则被追加以代替。如果 suffix 是空字符串，则原本的后缀被移除</li>
+<li><code>absolute()</code> 改为绝对路径，不会执行正规化或解析符号链接。 返回一个新的路径对象</li>
+<li><code>exists(*, follow_symlinks=True)</code>
+判断路径是否存在，此方法通常会跟随符号链接；要检查符号链接是否存在，请添加参数 follow_symlinks=False，相当于 <code>os.path.exists()</code> 函数</li>
+<li><code>is_file(*, follow_symlinks=True)</code> 判断路径是否指向普通文件（不是文件夹），路径不存在时也返回False，相当于 <code>os.path.isfile()</code> 函数</li>
+<li><code>is_dir(*, follow_symlinks=True)</code> 同上，判断路劲是否指向文件夹，相当于 <code>os.path.isdir()</code> 函数</li>
+<li><code>iterdir()</code> 当路径指向一个目录时，产生该路径下的对象的路径，用于for循环</li>
+</ul>
+<h3 id="22">2.2 常用函数</h3>
+<p>以下函数不需要创建path对象就可以直接使用：</p>
+<ul>
+<li><code>Path.home()</code> 返回当前用户的用户文件夹路径</li>
+<li><code>Path.cwd()</code> 返回一个新的表示当前工作目录的路径对象，相当于 <code>os.getcwd()</code> 函数</li>
+</ul>
+<h3 id="23">2.3 创建、删除、重命名</h3>
+<ul>
+<li><code>touch(mode=0o666, exist_ok=True)</code> 使用给定的路径创建文件。 如果给出了 mode，它将与进程的 umask 值合并以确定文件模式和访问旗标。 如果文件已存在，则当 exist_ok 为真值时函数将成功执行（并且其修改时间将更新为当前时间），在其他情况下则会引发 FileExistsError。</li>
+<li><code>mkdir(mode=0o777, parents=False, exist_ok=False)</code> 同上，创建文件夹，相当于<code>os.mkdir()</code> 和 <code>os.makedirs()</code> 函数</li>
+<li><code>rename(target)</code> 将此文件或目录重命名为给定的 target，并返回一个新的指向 target 的 Path 实例。相当于 <code>os.rename()</code> 函数</li>
+<li><code>replace(target)</code> 将此文件或目录重命名为给定的 target，并返回一个新的指向 target 的 Path 实例。 如果 target 指向一个现有文件或空目录，则它将被无条件地替换。相当于 <code>os.replace()</code> 函数</li>
+<li><code>rmdir()</code> 移除此目录。此目录必须为空的。相当于 <code>os.rmdir()</code> 函数</li>
+</ul>
+<h3 id="23_1">2.3 读写文件操作</h3>
+<p>path对象常用的文件读写操作方法：</p>
+<ul>
+<li><code>open(mode='r', buffering=-1, encoding=None, errors=None, newline=None)</code> 方法 打开路径指向的文件，和内置函数<code>open()</code>用法类似。Path.open()和open()相比，减少了文件路径file参数，因为创建path对象时就已经传入了文件路径。建议使用 <code>with path.open() as f</code> 语句读写文件参数说明如下：<ul>
+<li>mode 文件打开模式，可选值如下<ul>
+<li>'r'或'rt' 读取文件（默认）</li>
+<li>'w' 写入，若文件已存在则将其清空</li>
+<li>'x' 排它性创建，如果文件已存在则失败 </li>
+<li>'a' 打开文件用于写入，如果文件存在则在末尾追加</li>
+<li>'b' 二进制模式（配合前面的参数使用）</li>
+<li>'t' 文本模式（默认）（配合前面的参数使用）</li>
+<li>'+' 打开用于更新（读取与写入）（配合前面的参数使用）</li>
+</ul>
+</li>
+<li>encoding 设置编码格式，常用 utf_8</li>
+<li>newline 设置换行模式</li>
+<li>buffering 用于设置缓冲策略</li>
+<li>errors 处理错误</li>
+</ul>
+</li>
+<li><code>read_text(encoding=None, errors=None, newline=None)</code> 方法 读取文件内容，返回字符串。以字符串形式返回路径指向的文件的解码后文本内容。</li>
+<li><code>read_bytes()</code> 方法 以字节对象的形式返回路径指向的文件的二进制内容</li>
+<li><code>write_text(data, encoding=None, errors=None, newline=None)</code> 写入文件，同名的现有文件会被覆盖。</li>
+<li><code>write_bytes(data)</code> 将文件以二进制模式打开，写入 data 并关闭，同名的现存文件将被覆盖。</li>
+</ul>
+
+
+
+
+
+
+
   
-</nav>
-        
-      
-    </div>
-  </div>
+  
 
+
+
+
+
+
+
+  <h2 id="__comments">评论</h2>
+  
+  <script src="https://giscus.app/client.js"
+    data-repo="interset-wq/comment"
+    data-repo-id="R_kgDOOFimQg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOOFimQs4CnvJd"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+  
+
+
+<!-- 
+   
+-->
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1672,7 +1797,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../reference/shortcut-keys/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 快捷键">
+          <a href="../threading/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 标准库 threading —— 多线程">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1682,20 +1807,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                快捷键
+                标准库 threading —— 多线程
               </div>
             </div>
           </a>
         
         
           
-          <a href="category/hello-world/" class="md-footer__link md-footer__link--next" aria-label="下一页: Hello World">
+          <a href="../../GUI/tkinter0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 预备节：面向对象">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Hello World
+                预备节：面向对象
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1753,12 +1878,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "social", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "content.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"\u003ctag\u003e": "\u003cidentifier\u003e", "CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "social", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"\u003ctag\u003e": "\u003cidentifier\u003e", "CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

@@ -110,6 +110,7 @@
     background-color: #F4F4F4;
     width: 190px;
     height: 458px;
+    position: relative;
 }
 .main-navbar li {
     font-size: 14px;
@@ -126,8 +127,42 @@
 .main-navbar li:hover {
     background-color: red;
 }
-.main-navbar li:hover a {
+.main-navbar li:hover > a {
     color: white;
+}
+
+.main-navbar .menu-2nd {
+    width: 700px;
+    height: 458px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 190px;
+    display: none;
+}
+.main-navbar li:hover .menu-2nd {
+    display: block;
+}
+.main-navbar .menu-2nd dl {
+    height: 36px;
+    line-height: 36px;
+}
+.main-navbar .menu-2nd dl:first-child {
+    margin-top: 10px;
+}
+.main-navbar .menu-2nd dl dt {
+    float: left;
+    width: 70px;
+    margin-left: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.main-navbar .menu-2nd dl dd {
+    float: left;
+}
+.main-navbar .menu-2nd dl dd a {
+    padding: 0 10px;
+    border-left: 1px solid black;
 }
 
 
