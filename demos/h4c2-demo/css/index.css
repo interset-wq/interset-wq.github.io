@@ -200,7 +200,66 @@
 .main-other .func-nav {
     width: 290px;
     height: 290px;
-    background-color: orange;
+    /* background-color: orange; */
+    overflow: hidden; /* 防止margin塌陷 */
+    text-align: center;
+}
+.func-row:first-child {
+    margin-top: 16px;
+}
+.func-row:nth-child(2) {
+    margin: 17px 0;
+}
+.func-row li {
+    height: 70px;
+    width: 48px;
+    /* background-color: skyblue; */
+    float: left;
+    margin: 0 11px;
+}
+.func-row li:first-child {
+    margin-left: 16px;
+}
+.func-row li .pic {
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/精灵图-侧边功能.png');
+}
+.func-row:nth-child(1) li:nth-child(1) .pic {
+    background-position: 0 0;
+}
+.func-row:nth-child(1) li:nth-child(2) .pic {
+    background-position: -48px 0;
+}
+.func-row:nth-child(1) li:nth-child(3) .pic {
+    background-position: -96px 0;
+}
+.func-row:nth-child(1) li:nth-child(4) .pic {
+    background-position: -144px 0;
+}
+.func-row:nth-child(2) li:nth-child(1) .pic {
+    background-position: 0 -48px;
+}
+.func-row:nth-child(2) li:nth-child(2) .pic {
+    background-position: -48px -48px;
+}
+.func-row:nth-child(2) li:nth-child(3) .pic {
+    background-position: -96px -48px;
+}
+.func-row:nth-child(2) li:nth-child(4) .pic {
+    background-position: -144px -48px;
+}
+.func-row:nth-child(3) li:nth-child(1) .pic {
+    background-position: 0 -96px;
+}
+.func-row:nth-child(3) li:nth-child(2) .pic {
+    background-position: -48px -96px;
+}
+.func-row:nth-child(3) li:nth-child(3) .pic {
+    background-position: -96px -96px;
+}
+.func-row:nth-child(3) li:nth-child(4) .pic {
+    background-position: -144px -96px;
 }
 /* #endregion */
 
