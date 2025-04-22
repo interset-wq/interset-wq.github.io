@@ -3,7 +3,6 @@
     width: 1190px;
     margin: 0 auto;
     background-color: pink;
-    height: 3000px;
 }
 /* #endregion */
 
@@ -263,6 +262,19 @@
 }
 /* #endregion */
 
-
+/* #region 秒杀 */
+.sec-kill {
+    margin-top: 10px;
+    height: 190px;
+    background-color: skyblue;
+}
+.sec-kill img {
+    float: left;
+    margin-right: 11px;
+}
+.sec-kill img:last-child {
+    margin-right: 0;
+}
+/* #endregion */
 
 
