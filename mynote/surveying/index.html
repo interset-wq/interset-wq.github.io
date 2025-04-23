@@ -3345,7 +3345,116 @@ $$</li>
 </ol>
 </details>
 <h3 id="43">4.3 标准方向及方位角（重点）</h3>
+<p>确定地面两点在平面上的位置，不仅需要测量两点间的距离，还要确定两点间直线的方向，因此我们要进行直线定向的工作。确定地面直线与标准北方向的水平夹角称为直线定向。</p>
+<details class="info">
+<summary>测量中常用的标准方向（三北方向）</summary>
+<ol>
+<li>真北方向：地表任一点 P 与地球旋转轴所组成的平面与地球表面的交线称为 P 点的真子午线，真子午线在P 点的切线方向称为P点的真子午线方向。测量方法——天文测量，陀螺经纬仪。</li>
+<li>磁子午线方向：地表任一点 P 与地球磁场南北极连线所组成的平面与地球表面交线称为 P 点的磁子午线，磁子午线在点 P 的切线方向称为点 P 的磁子午线方向。磁北方向——磁针自由静止时北端所指方向。测量方法——罗盘仪。</li>
+<li>坐标北方向：在高斯平面直角坐标系中或者假定坐标系中，与纵轴平行的直线称为坐标纵轴方向</li>
+</ol>
+</details>
+<details class="info" open="open">
+<summary>表示直线方向的方法(方位角)</summary>
+<ul>
+<li>测量中常用方位角来表示直线方向。由标准方向的北端起，顺时针方向到某直线的水平夹角，称为该直线的方位角。方位角的取值范围为0~360°</li>
+<li>真方位角：若标准方向为真子午线方向，那么方位角就称为真方位角，用 A 表示。</li>
+<li>磁方位角：若标准方向为磁子午线方向，那么方位角就称为磁方位角，用 A<sub>m</sub> 表示。</li>
+<li>坐标方位角：若标准方向为坐标纵轴方向，那么方位角就称为坐标方位角，用 α 表示。</li>
+</ul>
+</details>
+<p><mark class="critic">三种方位角之间的关系</mark></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="真方位角与磁方位角" name="__tabbed_7" type="radio" /><input id="真方位角与坐标方位角" name="__tabbed_7" type="radio" /><input id="磁方位角与坐标方位角" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="真方位角与磁方位角">真方位角与磁方位角</label><label for="真方位角与坐标方位角">真方位角与坐标方位角</label><label for="磁方位角与坐标方位角">磁方位角与坐标方位角</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>由于地球的磁极与地球旋转轴的南北极不重合，因此过地面上某点的真北方向与磁北方向不重合，两者之间的夹角为磁偏角，记为:<span class="arithmatex">\(\delta\)</span>，并且规定如果磁北方向在真北方向以东称东偏，则<span class="arithmatex">\(\delta &gt; 0\)</span>，反之称西偏，<span class="arithmatex">\(\delta &lt; 0\)</span>。根据磁偏角的定义，我们可以推出真方位角和磁方位角的换算公式：
+$$
+A = A_m + \delta
+$$
+由于地球的磁极是在不断变化的，所以磁偏角也在不断变化。一般磁方位角精度较低。定向困难的地区，可用罗盘仪测出磁方位角来代替坐标方位角。真方位角主要是用在大地测量中。</p>
+</div>
+<div class="tabbed-block">
+<p>地面上不同经度的子午线都会汇聚于两极，所以只要不在赤道上，地面点的真北方向与坐标北方向就不会重合，两者之间的夹角就称为子午线收敛角，记为:<span class="arithmatex">\(\gamma\)</span>，与磁偏角的规定类似，坐标纵轴方向位于真子午线方向以东，称东偏，子午线收敛角<span class="arithmatex">\(\gamma &gt; 0\)</span>，反之称西偏<span class="arithmatex">\(\gamma &lt; 0\)</span>。那么真方位角与坐标方位角之间的关系为：
+$$
+A = \alpha + \gamma 
+$$</p>
+</div>
+<div class="tabbed-block">
+<p>由公式<span class="arithmatex">\(A = A_m + \delta\)</span>和<span class="arithmatex">\(A = \alpha + \gamma\)</span>可以推出磁方位角与坐标方位角的关系：
+$$
+\alpha = A_m + \delta - \gamma
+$$</p>
+</div>
+</div>
+</div>
+<details class="tip">
+<summary>方位角测量</summary>
+<ul>
+<li>真方位角——可用天文观测方法或用陀螺经纬仪来测定。</li>
+<li>磁方位角——可用罗盘仪来测定。不宜作精密定向。</li>
+<li>坐标方位角——由 2 个已知点坐标经“坐标反算”求得。</li>
+</ul>
+</details>
+<p><mark class="critic">正、反坐标方位角</mark></p>
+<p>测量中任何直线都有一定的方向。直线 AB，A 为起点，B 为终点。过起点 A的坐标北方向与直线 AB 的夹角 <span class="arithmatex">\(\alpha _{AB}\)</span> 称为直线 AB 的正方位角。过终点B的坐标北方向，与直线 BA 的夹角 <span class="arithmatex">\(\alpha _{BA}\)</span> 称为直线 AB 的反方位角。由于 A、B 两点的坐标北方向是平行的，所以正、反方位角相差180°</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/23/EDtqa9WGiMT47ZY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="方位角.png" src="https://s2.loli.net/2025/04/23/EDtqa9WGiMT47ZY.png" /></a></p>
+<p>计算公式：<span class="arithmatex">\(\alpha _正 = \alpha _反 ± 180°\)</span>，或<span class="arithmatex">\(\alpha _{AB} = \alpha _{BA} ± 180°\)</span></p>
+<details class="quote">
+<summary>说明</summary>
+<p>由于地面上 AB 两点的真子午线不平行，磁子午线随不同地点而变化， 所以 AB 两点正反真方位角之差不会刚好相差180°，而是随着这两点的纬度不同发生变化。同样，正反磁方位角间也没有固定的关系，这给测量计算带来不便，而坐标北方向是相互平行的。所以我们常采用坐标方位角来做直线定向。</p>
+</details>
+<p><mark class="critic">方位角的推算公式</mark></p>
+<p>在控制测量工作中，我们通常要在地面上布设一些控制点，然后从某一点出发，沿着一定的方向前进，测量出每一个控制点的坐标。由控制点连接而成的折线称为导线，相邻的导线边之间的夹角称为转折角。转折角有左右之分，在前进方向的左侧称为左角，在前进方向右侧的称为右角。</p>
+<p>注：在测量工作中，应该统一测量左角或右角。</p>
+<p>在测量工作中，每条边的坐标方位角不是直接测出，通过与已知边的连测，用与相邻边的水平夹角推算出的。</p>
+<details class="question" open="open">
+<summary>推算各导线边的坐标方位角</summary>
+<p>假设导线边12的方位角是已知的，并且我们用经纬仪采用测回法测量出来每个转折角的大小。如何推算各导线边的坐标方位角？</p>
+<p><span class="arithmatex">\(\alpha _前 = \alpha _后 + \beta _左 - 180 \degree\)</span>，或 <span class="arithmatex">\(\alpha _前 = \alpha _后 - \beta _左 + 180 \degree\)</span></p>
+<p>推广到 n 条（未知方位角的导线）边的情况：<span class="arithmatex">\(\alpha _n = \alpha _0 + \sum \beta_{i左} - n \times 180 \degree\)</span>，或<span class="arithmatex">\(\alpha _n = \alpha _0 - \sum \beta_{i左} + n \times 180 \degree\)</span>，其中<span class="arithmatex">\(\beta _i\)</span>为转折角，n 为转折角的个数，<span class="arithmatex">\(\alpha\)</span>为方位角</p>
+</details>
 <h3 id="44">4.4 方位角应用（重点）</h3>
+<p><mark class="critic">坐标计算</mark></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="坐标正算" name="__tabbed_8" type="radio" /><input id="坐标反算" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="坐标正算">坐标正算</label><label for="坐标反算">坐标反算</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>如图（没有图），有两个地面点 A、B，已知 A 点的坐标<span class="arithmatex">\((X_A, Y_A)\)</span>，方位角和 AB 间的水平距离 <span class="arithmatex">\(D_{AB}\)</span>，现在要求 B 点的坐标，这一过程称为坐标正算。</p>
+<p>假设 A 点到 B 点在 X 轴上的坐标增量为 <span class="arithmatex">\(\Delta X_{AB}\)</span>，在 Y 轴上的坐标增量为<span class="arithmatex">\(\Delta Y_{AB}\)</span>，则可得：</p>
+<p><span class="arithmatex">\(\Delta X_{AB} = D_{AB} \cdot cos \alpha _{AB}\)</span>， <span class="arithmatex">\(\Delta Y_{AB} = D_{AB} \cdot sin \alpha _{AB}\)</span></p>
+<p><span class="arithmatex">\(\therefore X_B = X_A + \Delta X_{AB} = X_A + D_{AB} \cdot cos \alpha _{AB}\)</span>， <span class="arithmatex">\(Y_B = Y_A + \Delta Y_{AB} = Y_A + D_{AB} \cdot sin \alpha _{AB}\)</span></p>
+</div>
+<div class="tabbed-block">
+<p>假如已知的 A、B 两点的坐标，现在要求两点间水平距离和方位角直线 AB 的方位角，应根据<span class="arithmatex">\(\Delta X\)</span>和 <span class="arithmatex">\(\Delta Y\)</span> 的符号来确定。</p>
+<p><span class="arithmatex">\(\alpha _{AB} = arctan \frac{\Delta Y}{\Delta X}\)</span>，<span class="arithmatex">\(D_{AB} = \sqrt{\Delta X_{AB} ^ 2 + \Delta Y_{AB} ^ 2}\)</span></p>
+</div>
+</div>
+</div>
+<p><strong>象限角</strong></p>
+<ul>
+<li>定义:从标准方向线的北端或南端，顺时针或逆时针量至
+某直线的锐角，称为直线的象限角 R</li>
+<li>
+<p>表示方法：角度值后面注明象限。</p>
+<details class="example" open="open">
+<summary>象限角举例</summary>
+<ul>
+<li><span class="arithmatex">\(R_{O1} = 35 \degree NE\)</span>，北东，表示象限角在第一象限</li>
+<li><span class="arithmatex">\(R_{O2} = 35 \degree SE\)</span>，南东，表示象限角在第二象限，这里需要注意测量坐标系的象限顺序与数学中坐标系的象限顺序不同）</li>
+<li><span class="arithmatex">\(R_{O3} = 35 \degree SW\)</span>，南西，表示象限角在第三象限</li>
+<li><span class="arithmatex">\(R_{O4} = 35 \degree NW\)</span>，北西，表示象限角在第四象限</li>
+</ul>
+</details>
+</li>
+<li>
+<p>方位角与象限角的关系</p>
+<ul>
+<li>在I象限中，直线的方位角就等于直线的象限角，即<span class="arithmatex">\(\alpha _{AB} = R\)</span></li>
+<li>在II象限中，直线的方位角等于180度减去它的象限角，即<span class="arithmatex">\(\alpha _{AB} = 180 \degree - R\)</span></li>
+<li>在III象限中，<span class="arithmatex">\(\alpha _{AB} = 180 \degree + R\)</span></li>
+<li>在IV象限中，<span class="arithmatex">\(\alpha _{AB} = 360 \degree - R\)</span></li>
+</ul>
+</li>
+</ul>
 <h2 id="_5">第五章 测量误差基本知识</h2>
 <h3 id="51">5.1 测量误差概念</h3>
 <h3 id="52">5.2 评定测量精度的标准（重点）</h3>
@@ -3545,6 +3654,8 @@ $$</li>
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js"></script>
+      
+        <script src="https://cloud.umami.is/script.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
