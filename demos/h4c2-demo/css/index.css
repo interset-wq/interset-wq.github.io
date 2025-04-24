@@ -312,25 +312,49 @@
 }
 
 .floor-info .item1 {
-    width: 230px;
-    background-color: skyblue;
+    width: 190px;
+    height: 392px;
+    background-color: #F4F4F4;
+    padding: 20px;
+}
+.item1-list {
+    margin-bottom: 30px;
+}
+.item1-list li {
+    width: 90px;
+    height: 22px;
+    font-size: 16px;
+    padding-bottom: 3.5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.item1-list li:nth-child(2n-1) {
+    float: left;
+}
+.item1-list li:nth-child(2n) {
+    float: right;
+}
+.item1-list li:nth-child(3),
+.item1-list li:nth-child(4) {
+    margin: 14.4px 0;
 }
 .floor-info .item2 {
     width: 340px;
-    background-color: green;
 }
-.floor-info .item3 {
+.floor-info .item3,
+.floor-info .item5 {
     width: 206px;
-    background-color: gray;
+}
+.item3 img,
+.item4 img,
+.item5 img {
+    border-bottom: 1px solid black;
 }
 .floor-info .item4 {
     width: 206px;
-    background-color: tomato;
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
-.floor-info .item5 {
-    width: 206px;
-    background-color: yellow;
-}
+
+
 /* #endregion */

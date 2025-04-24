@@ -1669,7 +1669,7 @@
           <li class="md-nav__item">
   <a href="#54" class="md-nav__link">
     <span class="md-ellipsis">
-      5.4 算术平均值（重点）
+      5.4 算术平均值中误差（重点）
     </span>
   </a>
   
@@ -2153,7 +2153,7 @@
           <li class="md-nav__item">
   <a href="#54" class="md-nav__link">
     <span class="md-ellipsis">
-      5.4 算术平均值（重点）
+      5.4 算术平均值中误差（重点）
     </span>
   </a>
   
@@ -3457,9 +3457,178 @@ $$</p>
 </ul>
 <h2 id="_5">第五章 测量误差基本知识</h2>
 <h3 id="51">5.1 测量误差概念</h3>
+<p>测量误差：真值与观测值之差，记为<span class="arithmatex">\(\Delta _i = X - L_i\)</span></p>
+<p>其中X 为真值，即能代表某个客观事物真正大小的数值。<span class="arithmatex">\(L_i\)</span>为观测值，即对某个客观事物观测得到的数值。<span class="arithmatex">\(\Delta _i\)</span>为观测误差，即真误差。</p>
+<details class="info">
+<summary>误差的来源</summary>
+<ol>
+<li>测量仪器<ul>
+<li>一是仪器本身的精度是有限的，不论精度多高的仪器，观测结果总是达不到真值的。二是仪器在装配、使用的过程中，仪器部件老化、松动或装配不到位使得仪器存在着自身的误差。</li>
+<li>如水准仪的水准管轴不平行视准轴，使得水准管气泡居中后，视线并不水平。水准尺刻划不均匀使得读数不准确。又如经纬仪的视准轴误差、横轴误差、竖盘指标差都是仪器本身的误差。</li>
+</ul>
+</li>
+<li>观测者<ul>
+<li>由于观测者自身的因素所带来的误差，如观测者的视力、观测者的经验甚至观测者的责任心都会影响到测量的结果。</li>
+<li>如水准尺倾斜、气泡未严格居中、估读不准确、未精确瞄准目标都是观测误差</li>
+</ul>
+</li>
+<li>外界条件：测量工作都是在一定的外界环境下进行的。例如温度、风力、大气折光、地球曲率、仪器下沉都会对观测结果带来影响。</li>
+</ol>
+<p>上述三项合称为观测条件</p>
+<ul>
+<li>等精度观测：在相同的观测条件下进行的一组观测。</li>
+<li>不等精度观测：在不同的观测条件下进行的一组观测。</li>
+</ul>
+</details>
+<details class="info">
+<summary>测量误差的分类</summary>
+<p>根据测量误差表现形式不同，误差可分为系统误差、偶然误差和粗差。</p>
+<ul>
+<li>
+<p>系统误差：误差的符号和大小保持不变或者按一定规律变化，则称其为系统误差。</p>
+<details class="example">
+<summary>系统误差举例</summary>
+<ul>
+<li>钢尺的尺长误差。一把钢尺的名义长度为30m，实际长度为30.005m，那么用这把钢尺量距时每量一个整尺段距离就量短了5mm，也就是会带来 -5mm的量距误差，而且量取的距离越长，尺长误差就会越大，因此系统误差具有积累性。</li>
+<li>水准仪的 i 角误差，由于水准管轴与视准轴不平行，两者之间形成了夹角 i，使得中丝在水准尺上的读数不准确。如果水准仪离水准尺越远，i 角误差就会越大。由于 i 角误差是有规律的，因此它也是系统误差。</li>
+</ul>
+</details>
+<p>正是由于系统误差具有一定的规律性，因此只要找到这种规律性，就可以通过一定的方法来消除或减弱系统误差的影响。</p>
+<details class="tip">
+<summary>减小系统误差的方法</summary>
+<ol>
+<li>采用观测方法消除<ul>
+<li>水准仪置于前后水准尺等距的地方可以消除 i 角误差和地球曲率的影响。</li>
+<li>通过后前前后的观测顺序可以减弱水准仪下沉的影响。</li>
+<li>通过盘左盘右观测水平角和竖直角可以消除经纬仪的横轴误差、视准轴误差、照准部偏心差和竖盘指标差的影响。</li>
+</ul>
+</li>
+<li>加改正数<ul>
+<li>如精密钢尺量距中的尺长改正、温度改正和高差改正。</li>
+<li>三角高程测量中的球气差改正数</li>
+</ul>
+</li>
+<li>检校仪器：将仪器的系统误差降低到最小限度或限制在一个允许的范围内。</li>
+</ol>
+</details>
+</li>
+<li>
+<p>偶然误差:偶然误差的符号和大小是无规律的，具有偶然性。</p>
+<ul>
+<li>如度盘分划不均匀引起的误差就是偶然误差，因为在度盘上有的地方可能分划的密度大一些，有的地方分划的密度小一些。又如我们在读数的时候，最后一位要估读，有时可能估读得大一些，有时估读得小一些，这是没有规律的。</li>
+<li>虽然单个的偶然误差没有规律，但大量的偶然误差具有统计规律。</li>
+</ul>
+</li>
+<li>粗差（错误）：如瞄错目标、读错、记错数据、算错结果等错误。在严格意义上，粗差并不属于误差的范围。<ul>
+<li>在测量工作中，粗差可以通过检核——包括测站检核、计算检核以及内业工作阶段的检核发现粗差，并从测量成果中予以剔除（如水平角实验中角度闭合差为十几分）。粗差可通过多余观测发现，重新观测含粗差的观测来消除粗差。</li>
+<li>而系统误差和偶然误差，是同时存在的。对于系统误差，通过找到其规律性，采用一定的观测方法来消除或减小。当系统误差很小，而误差的主要组成为偶然误差时，则可以根据其统计规律进行处理。</li>
+</ul>
+</li>
+</ul>
+</details>
+<p><mark class="critic">偶然误差的特性</mark></p>
+<p>在相同条件下，重复观测一个量，也就是等精度观测，经过重复观测所出现的大量的偶然误差具有规律性。如：在相同条件下，观测了n 个三角形的全部内角，由于每个三角形内角之和的真值为已知，可得到每次观测真误差的大小按一定的区间统计列表，可以发现偶然误差具有以下特性（正态分布）：</p>
+<ul>
+<li>在一定观测条件下，偶然误差的绝对值不会超过一定的界限（有界性）</li>
+<li>绝对值较小的误差比绝对值较大的误差出现的概率大（小误差的密集性）</li>
+<li>绝对值相等的正负误差，出现的机会相等（对称性）</li>
+<li>由对称性知，当<span class="arithmatex">\(n \to \infty\)</span>时，偶然误差的算术平均值（数学期望）<span class="arithmatex">\(\to 0\)</span>（抵偿性）</li>
+</ul>
+<p>消除或减弱偶然误差的方法：</p>
+<ul>
+<li>提高仪器等级</li>
+<li>进行多余观测</li>
+<li>降低外界影响</li>
+</ul>
 <h3 id="52">5.2 评定测量精度的标准（重点）</h3>
+<ul>
+<li>
+<p>精度：是指误差分布的集中与离散程度。如误差分布集中（正态分布曲线瘦高），则观测精度高；若误差分布离散（矮胖），则观测精度就低。误差分布的集中与离散程度可以用方差 <span class="arithmatex">\(\sigma ^2\)</span> 或标准差 <span class="arithmatex">\(\sigma\)</span> 来表示。如果 <span class="arithmatex">\(\sigma\)</span> 越小，误差偏离数学期望的程度就越低，则误差集中程度就会越高，即精度越高，反之如果 <span class="arithmatex">\(\sigma\)</span> 越大，则误差的离散程度越高，精度越低，因此我们可以用 <span class="arithmatex">\(\sigma\)</span> 即用标准差来衡量观测的精度。</p>
+</li>
+<li>
+<p>中误差（均方差）：按有限次数观测的偶然误差求得的标准差</p>
+<ul>
+<li>用改正数来确定中误差（白塞尔公式）——适用于观测量真值未知时</li>
+<li><mark class="critic">用真误差来确定中误差——适用于观测量真值已知时</mark></li>
+</ul>
+</li>
+</ul>
+<details class="tip" open="open">
+<summary>用真误差确定中误差</summary>
+<p>设在相同的观测条件下，对未知量进行 n 次重复独立观测，观测值为<span class="arithmatex">\(l_1, l_2,..., l_n\)</span>，其真误差为<span class="arithmatex">\(\Delta _1, \Delta _2,...,\Delta _n\)</span>，则真误差的方差：
+$$
+D(\Delta) = \sigma ^2 = E[\Delta - D(\Delta)]^2 = E(\Delta ^2) = \lim _{n \to \infty} \frac{[\Delta ^2]}{n}
+$$</p>
+<p>式中当 <span class="arithmatex">\(n \to \infty, E(\Delta) = 0\)</span>，根据数学期望 <span class="arithmatex">\(E(\Delta ^2)\)</span> 的定义就是<span class="arithmatex">\(\Delta ^2\)</span>的算术平均值，<span class="arithmatex">\([ ]\)</span>为累加符号，相当于<span class="arithmatex">\(\sum\)</span></p>
+<p>真误差的标准差
+$$
+\sigma = \pm \lim _{n \to \infty} \sqrt{\frac{[\Delta ^2]}{n}}
+$$</p>
+<p>实际工作中，观测次数有限，故取标准差的估值作为中误差
+$$
+m = \hat{\sigma} = \pm \sqrt{\frac{[\Delta ^2]}{n}} = \pm \sqrt{\frac{[\Delta \Delta]}{n}}
+$$</p>
+<details class="warning" open="open">
+<summary>注意事项</summary>
+<ul>
+<li><span class="arithmatex">\(\Delta _i\)</span>可以是对一个量进行 n 次同精度观测，亦可以是对 n 个量各进行一次同精度观测的误差。如：在全站仪测距时有的同学说测出来的距离不断地在变化，这实际上是全站仪在不断地测距，也就是对一个量（距离）——进行了多次等精度观测，而每次的观测值都有误差存在，误差有时大，有时小，所以测出来的距离值不断在变化。又如：方向法测水平角时，需要对多个方向观测，先瞄A，再瞄B，再瞄C…，这实际上就是对n个量进行了一次等精度观测）</li>
+<li>中误差 m 是衡量一组观测的精度标准，个别误差的大小并不能反映精度的高低；n 较大时，m 较可靠；n 较小时，m 仅做参考</li>
+<li>m 前要冠以±号，并有计量单位</li>
+<li>m为中误差，<span class="arithmatex">\(\Delta\)</span>为真误差，不要混淆</li>
+</ul>
+</details>
+</details>
+<details class="question">
+<summary>例题</summary>
+<p>设甲乙两组观测，真误差为：</p>
+<ul>
+<li>甲：<span class="arithmatex">\(+4”，+3”，0”，-2”，-4"\)</span></li>
+<li>乙：<span class="arithmatex">\(+6”，+1”，0”，-1”，-5"\)</span></li>
+</ul>
+<p>试比较两组的精度。</p>
+<p><strong>解：</strong> 分别计算甲乙的中误差：</p>
+<ul>
+<li>甲的中误差 <span class="arithmatex">\(m = \pm \sqrt{\frac{[\Delta \Delta]}{n}} = \pm \sqrt{\frac{16 + 9 + 0 + 4 + 16}{5}} = \pm 3.0"\)</span></li>
+<li>乙的中误差 <span class="arithmatex">\(m = \pm \sqrt{\frac{[\Delta \Delta]}{n}} = \pm \sqrt{\frac{36 + 1 + 0 + 1 + 25}{5}} = \pm 3.5"\)</span></li>
+</ul>
+<p><span class="arithmatex">\(\therefore\)</span> 甲组的精度高</p>
+<p>中误差的性质：中误差表示误差分布的离散度。等精度观测中，中误差表示一组观测值的精度，也表示单个观测值的精度。（如上例中甲组中误差为±3.0″，同时甲组单个观测值的中误差均为±3.0″）</p>
+</details>
+<p><strong>相对误差</strong></p>
+<ol>
+<li>
+<p>相对中误差：在距离测量中单纯地用中误差还不能反映距离丈量的精度情况，因为实际上距离测量的误差与长度相关，距离越大，误差的累积就越大，这就需要引入相对误差<span class="arithmatex">\(K = \frac{|M|}{D}\)</span></p>
+<details class="question">
+<summary>例题</summary>
+<p>假设现在丈量了两段距离：</p>
+<ul>
+<li>甲： 100米，±0.01m</li>
+<li>乙： 200米，±0.01m </li>
+</ul>
+<p>到底那组的精度高些呢？</p>
+<p><strong>解：</strong> 分别求出甲乙的相对误差</p>
+<p><span class="arithmatex">\(\because K_甲 = \frac{1}{10000} &gt; K_乙 = \frac{1}{20000}\)</span></p>
+<p><span class="arithmatex">\(\therefore\)</span> 乙的精度更高些。</p>
+</details>
+</li>
+<li>
+<p>相对真误差：在钢尺量距中我们还接触到了一个相对误差的计算公式<span class="arithmatex">\(K = \frac{|D_往- D_返|}{D_{平均}}\)</span>，这是相对真误差的计算公式（或称相对较差或相对差）。在答题中具体采用哪个公式应根据题目给出条件和要求来定。</p>
+</li>
+</ol>
+<p>根据正态分布的概率，对于真误差来说，它的值落在区间 <span class="arithmatex">\([-3 \sigma,+3 \sigma]\)</span> 几乎是肯定的事。因此在测量工作中，我们常常取三倍中误差作为偶然误差的容许值（或限差），如果精度要求较高时，就可以取两倍中误差作为限差，即 <span class="arithmatex">\(\Delta _允 = 3 m\)</span>，或 <span class="arithmatex">\(\Delta _允 = 2 m\)</span></p>
 <h3 id="53">5.3 误差传播定律（重难点）</h3>
-<h3 id="54">5.4 算术平均值（重点）</h3>
+<p>误差传播定律：是指描述观测值与其函数之间误差关系的定律，观测值函数中误差汇总如下：</p>
+<ul>
+<li>一般函数<span class="arithmatex">\(F(x_1, x_2, ..., x_n)\)</span>，中误差<span class="arithmatex">\(m_Z = \pm \sqrt{(\frac{\partial F}{\partial x_1}) ^ 2 m_1 ^ 2 + (\frac{\partial F}{\partial x_2}) ^ 2 m_2 ^ 2 + ... + (\frac{\partial F}{\partial x_n}) ^ 2 m_n ^ 2}\)</span></li>
+<li>倍数函数<span class="arithmatex">\(Z=Kx\)</span>，中误差<span class="arithmatex">\(m_Z = \pm \sqrt{K^2 m_x ^2} = \pm Km_x\)</span></li>
+<li>和差函数<span class="arithmatex">\(Z= x_1 \pm x_2 \pm ... \pm x_n\)</span>，中误差<span class="arithmatex">\(m_Z = \pm m \sqrt{n}\)</span></li>
+<li>线性函数<span class="arithmatex">\(Z= k_1 x_1 \pm k_2 x_2 \pm ... \pm k_n x_n\)</span>，中误差<span class="arithmatex">\(m_Z = \pm \sqrt{k_1 ^2 m_1 ^2 + k_2 ^2 m_2 ^2 + ... + k_n ^2 m_n ^2 }\)</span></li>
+<li>算术平均值<span class="arithmatex">\(x = \frac{[l]}{n} = \frac{l_1}{n} + \frac{l_2}{n} + ... + \frac{l_n}{n}\)</span>，中误差<span class="arithmatex">\(m_x = \pm \frac{m}{\sqrt{n}}\)</span></li>
+</ul>
+<h3 id="54">5.4 算术平均值中误差（重点）</h3>
+<p>中误差（均方差）
+1、用真误差来确定中误差——适用于观测量真值已知时。
+2、用改正数来确定中误差（白塞尔公式）——适用于观测量真值未知时。</p>
 <h3 id="55">5.5 加权平均值及其中误差（重点）</h3>
 <h2 id="_6">第六章 控制测量</h2>
 <h3 id="61">6.1 概述</h3>
