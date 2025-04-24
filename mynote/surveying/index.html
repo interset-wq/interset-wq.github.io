@@ -1666,24 +1666,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#54" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4 算术平均值中误差（重点）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#55" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.5 加权平均值及其中误差（重点）
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2145,24 +2127,6 @@
   <a href="#53" class="md-nav__link">
     <span class="md-ellipsis">
       5.3 误差传播定律（重难点）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4 算术平均值中误差（重点）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#55" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.5 加权平均值及其中误差（重点）
     </span>
   </a>
   
@@ -3625,15 +3589,227 @@ $$</p>
 <li>线性函数<span class="arithmatex">\(Z= k_1 x_1 \pm k_2 x_2 \pm ... \pm k_n x_n\)</span>，中误差<span class="arithmatex">\(m_Z = \pm \sqrt{k_1 ^2 m_1 ^2 + k_2 ^2 m_2 ^2 + ... + k_n ^2 m_n ^2 }\)</span></li>
 <li>算术平均值<span class="arithmatex">\(x = \frac{[l]}{n} = \frac{l_1}{n} + \frac{l_2}{n} + ... + \frac{l_n}{n}\)</span>，中误差<span class="arithmatex">\(m_x = \pm \frac{m}{\sqrt{n}}\)</span></li>
 </ul>
-<h3 id="54">5.4 算术平均值中误差（重点）</h3>
-<p>中误差（均方差）
+<details class="question">
+<summary>例题</summary>
+<ol>
+<li>
+<p>（一般函数）三角高程测量，测得斜距 <span class="arithmatex">\(S =163.563m\)</span>，其中误差为 <span class="arithmatex">\(m_s = \pm 0.006m\)</span>，测得竖直角为<span class="arithmatex">\(\alpha = 32 \degree 15'26"\)</span>，其中误差为 <span class="arithmatex">\(m_ \alpha = \pm 6"\)</span>，测距和测角的观测值是独立的，求高差计算值 h 的中误差 <span class="arithmatex">\(m_h\)</span></p>
+<p><strong>解</strong>：<span class="arithmatex">\(h = S sin \alpha\)</span></p>
+<p><span class="arithmatex">\(\because \frac{\partial h}{\partial S} = sin \alpha = 0.5337, \frac{\partial h}{\partial \alpha} = \frac{S cos \alpha}{\rho "}  = 0.000671\)</span></p>
+<p>根据误差传播定律 <span class="arithmatex">\(m_h = \pm \sqrt{(\frac{\partial h}{\partial S}) ^ 2 m_S ^ 2 + (\frac{\partial h}{\partial \alpha}) ^ 2 m_ \alpha ^ 2} = \pm 3.2 mm\)</span></p>
+</li>
+<li>
+<p>（倍数函数、和差函数）一个边长为 <span class="arithmatex">\(l\)</span> 的正方形，若测量一边中误差为 <span class="arithmatex">\(m_l = ±1cm\)</span>，求周长的中误差？若四边都测量，且测量精度相同，均为 <span class="arithmatex">\(m_l\)</span>，则周长中误差是多少？</p>
+<p><strong>解：</strong> 这两种方法测得周长的中误差并不相同，关键是要正确列出函数式。</p>
+<ul>
+<li><em>方法1（倍数函数）：</em> <span class="arithmatex">\(S = 4_l\)</span>（倍函数）故<span class="arithmatex">\(m_S = \pm \sqrt{4^2 m_l ^2} = \pm 4cm\)</span></li>
+<li><em>方法2（和差函数）：</em> <span class="arithmatex">\(S = l_1 + l_2 + l_3 + l_4\)</span> 故<span class="arithmatex">\(m_S = \pm \sqrt{4} m_l = \pm 2 cm\)</span></li>
+</ul>
+</li>
+<li>
+<p>（和差函数）在 O 点观测了 3 个方向，测得方向值 <span class="arithmatex">\(l_1、l_2、l_3\)</span>，设各方向的中误差均为 m，求<span class="arithmatex">\(m_ \alpha 、 m_ \beta、 m_ \gamma\)</span></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/24/QnNuEg875RJiVZI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="图示.png" src="https://s2.loli.net/2025/04/24/QnNuEg875RJiVZI.png" /></a></p>
+<p><strong>解：</strong> 分别计算三者的中误差</p>
+<ul>
+<li><span class="arithmatex">\(\alpha = l_2 - l_1，m_ \alpha = \sqrt{2} m\)</span></li>
+<li><span class="arithmatex">\(\beta = l_3 - l_2，m_ \beta = \sqrt{2} m\)</span></li>
+<li><span class="arithmatex">\(\gamma = l_3 - l_1，m_ \gamma = \sqrt{2} m\)</span></li>
+</ul>
+</li>
+<li>
+<p>（和差函数）已知 <span class="arithmatex">\(m_ \alpha = m_ \beta = m_ \gamma = m\)</span>，有 <span class="arithmatex">\(f = \alpha + \beta + \gamma - 180， \alpha ' = \alpha – \frac{f}{3}\)</span>，求<span class="arithmatex">\(m_ {\alpha '}\)</span></p>
+<p><strong>解：</strong></p>
+<p><span class="arithmatex">\(\because \alpha ' = \alpha – \frac{f}{3} = \alpha - \frac{\alpha + \beta + \gamma - 180}{3} = \frac{2 \alpha}{3} - \frac{\beta}{3} - \frac{\gamma}{3} + 60\)</span></p>
+<p><span class="arithmatex">\(\therefore m_ {\alpha '} = \pm \sqrt{\frac{4}{9} m_ \alpha ^2 + \frac{1}{9} m_ \beta ^2 + \frac{1}{9} m_ \gamma ^2} = \pm \sqrt{\frac{2}{3}} m\)</span></p>
+</li>
+</ol>
+</details>
+<p>（未完待续……）</p>
+<!-- ### 5.4 算术平均值中误差（重点）
+
+中误差（均方差）
 1、用真误差来确定中误差——适用于观测量真值已知时。
-2、用改正数来确定中误差（白塞尔公式）——适用于观测量真值未知时。</p>
-<h3 id="55">5.5 加权平均值及其中误差（重点）</h3>
+2、用改正数来确定中误差（白塞尔公式）——适用于观测量真值未知时。
+
+### 5.5 加权平均值及其中误差（重点） -->
+
 <h2 id="_6">第六章 控制测量</h2>
 <h3 id="61">6.1 概述</h3>
+<details class="info">
+<summary>控制测量</summary>
+<p>要测量某块区域，可以先在测区的范围内选定一些对整体具有控制作用的点，称为控制点。这些控制点组成了一个网状结构就称为控制网，为建立控制网所进行的测量工作就称为控制测量。</p>
+<p>目的和作用：</p>
+<ul>
+<li>为测图或工程建设的测区建立统一的平面和高程控制网</li>
+<li>作为进行各种细部测量的基准</li>
+<li>为了减少测量工作中的误差累积</li>
+</ul>
+<p>应该遵循三个基本原则：<mark class="critic">从整体到局部、由高级到低级、先控制后碎部</mark>。这几个基本原则说明我们的测量工作是首先建立控制网，进行控制测量，然后在控制网的基础上再进行施工测量、碎部测量等工作。另外这几个基本原则还有一层含义：控制测量是先布设能控制一个大范围、大区域的高等级控制网，然后由高等级控制网逐级加密，直至最低等级的图根控制网，控制网的范围也会一级一级的减小。</p>
+</details>
+<p>控制测量包括平面控制测量和高程控制测量，平面控制测量用来测定控制点的平面坐标，高程控制测量用来测定控制点的高程。</p>
+<ol>
+<li>平面控制网<ul>
+<li>平面控制网主要包括GNSS控制网、三角网和导线网。</li>
+<li>GNSS控制网是采用全球导航卫星定位系统建立的。</li>
+<li>三角网是指地面上一系列的控制点构成连续的三角形，这些三角形所形成的网状结构就是三角网。</li>
+<li>导线：将地面上一系列的控制点依次连接起来，所形成的折线就是导线。由导线所构成的控制网就是导线网。</li>
+</ul>
+</li>
+<li>高程控制网<ul>
+<li>高程控制网主要采用水准测量、三角高程测量的方法建立。</li>
+<li>用水准测量方法建立的高程控制网称为水准网。</li>
+<li>三角高程测量主要用于地形起伏较大、直接水准测量有困难的地区。</li>
+</ul>
+</li>
+</ol>
+<details class="info">
+<summary>控制测量分类</summary>
+<ul>
+<li>按内容分：平面控制测量、高程控制测量</li>
+<li>按精度分：一等、二等、三等、四等；一级、二级、三级</li>
+<li>按方法分：天文测量、常规测量 (三角测量、导线测量、水准测量) 、卫星定位测量</li>
+<li>按区域分：国家控制测量、城市控制测量、小区域工程控制测量</li>
+</ul>
+</details>
+<details class="info">
+<summary>国家控制网</summary>
+<p>在全国范围内建立的高程控制网和平面控制网，称为国家控制网。它是全国各种比例尺测图的基本控制网，也为研究地球的形状和大小提供依据，了解地壳水平形变和垂直形变的大小及趋势，为地震预测提供形变信息等服务。</p>
+<p>平面控制网：国家平面控制网由一、二、三、四等三角网组成。主要由三角测量法布设，在西部困难地区采用精密导线测量法。目前我国正采用GNSS控制测量逐步取代三角测量。</p>
+<p>新布设的平面控制网，需要已知一条边的方位角确定控制网的方向——定向，需要已知一个点的平面坐标确定控制网的位置——定位。</p>
+<p>高程控制网：国家高程控制网是由一、二、三、四等水准网组成，全国各地地面点的高程，不论是高山、平原及江河湖面的高程都是根据国家水准网统一传算的。</p>
+<p>三、四等水准网是国家高程控制点的进一步加密，主要是为测绘地形图和各种工程建设提供高程起算数据。三、四等水准路线应附合于高等级水准点之间，并尽可能交叉，构成闭合环。
+特点：高级点逐级控制低级点。四等水准点为基础，测定图根点高程。</p>
+</details>
+<details class="info">
+<summary>小区域控制网</summary>
+<p>小区域控制网应尽可能以国家控制网或城市控制网联测（城市控制网是指在城市地区建立的控制网，它属于区域控制网，它是国家控制网的发展和延伸），将国家或城市控制网的高级控制点作为小区域控制网的起算和校核数据。如果测区内或测区附近没有高级控制点，或联测较为困难，也可建立独立平面控制网。</p>
+<p>平面控制网的建立主要采用导线测量和小三角测量，高程控制网的建立主要采用三、四等水准测量和三角高程测量。小区域平面控制网，应根据测区的大小分级建立测区首级控制网和图根控制网。直接为测图而建立的控制网称为图根控制网，其控制点称为图根点。图根点的密度应根据测图比例尺和地形条件而定。小区域高程控制网，也应根据测区的大小和工程要求采用分级建立。一般以国家或城市等级水准点为基础，在测区建立三、四等水准路线或水准网，再以三、四等水准点为基础，测定图根点高程。</p>
+</details>
 <h3 id="62">6.2 导线测量（重点）</h3>
+<p><mark class="critic">导线的布设</mark></p>
+<ul>
+<li>将相邻控制点连成直线构成的折线——导线，控制点称为导线点。</li>
+<li>导线测量——依次测定导线边的水平距离与两相邻导线边的水平夹角，（注意相邻导线点之间要保证通视）根据起算数据，推算各边的方位角，求出导线点的平面坐标。</li>
+<li>水平角用经纬仪测量，边长用光电测距仪或钢尺丈量，也可使用全站仪测量水平角与边长。</li>
+<li>适用范围较广：地物分布复杂的建筑区，视线障碍多的隐蔽区和带状区，布设形式有闭合导线、附合导线和支导线。</li>
+<li>要求出控制点的平面坐标，关键是要知道一个已知点的坐标、导线边的方位角以及两个控制点之间的水平距离。通常我们会有一些起算数据，例如 AB 是更高一级的平面控制网的控制点，A、B 的坐标是已知的（通常用双线表示已知数据），然后我们将导线与 AB 进行联测。由于 A、B 的坐标已知，A、B 的方位角则已知，然后只要测量每条导线边的转折角，根据方位角的推算公式就可以把每条导线边的方位角求出来。而导线边的距离可以用距离测量的方法测出来。</li>
+</ul>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="导线.png" src="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" /></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="闭合导线" name="__tabbed_9" type="radio" /><input id="附合导线" name="__tabbed_9" type="radio" /><input id="支导线" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="闭合导线">闭合导线</label><label for="附合导线">附合导线</label><label for="支导线">支导线</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>起止于同一已知点的导线。</li>
+<li>从已知高级控制点 A，已知方向 BA 出发，经过1， 2，3，4点，返回到起点 A，形成闭合多边形。3个检核条件——1个多边形内角和条件，2个坐标增量条件。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>布设在两个已知点之间的导线。</li>
+<li>从一高级控制点 B 和已知方向 AB 出发，经过 5，6，7，8点，附合到另一已知高级点 C 和已知方向 CD。3个检核条件——1个坐标方位角条件，2个坐标增量条件。
+$$
+\alpha _终 = \alpha _始 + \sum \beta _i - n \times 180 \degree
+$$
+其中<span class="arithmatex">\(\alpha _始\)</span>为起始边的方位角，也就是 AB 边的方位角，<span class="arithmatex">\(\alpha _终\)</span>为终止边的方位角，也就是 CD 这条边的方位角，它们在理论上应该有公式描述的这种关系，但是由于测转折角（即 <span class="arithmatex">\(\beta\)</span> 角）的时候有误差存在，所以实际推算出来的并不会等于已知的 CD 边的方位角。所以可以采用这个公式作为一个检核条件，表明误差的大小，如果超出了一定限度就要重测转折角。对于坐标增量的和，有<span class="arithmatex">\(\sum \Delta x_理 = x_终 - x_始\)</span>，<span class="arithmatex">\(\sum \Delta y_理 = y_终 - y_始\)</span>，这两个检核条件也应该是显而易见的。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>由一已知点 C 和一已知边的方向 DC 出发，延伸出去的导线 C，9，10。支导线只有必要的起算数据，没有检核条件，只限于图根导线使用，支导线点数一般不应超过3个。当导线点的数目不能满足局部测图的需要时，常采用支导线的形式。</p>
+</div>
+</div>
+</div>
+<p><strong>导线测量外业：踏勘选点、建立标志、测角与量边</strong></p>
+<ol>
+<li>
+<p>踏勘选点及建立标志</p>
+<p>收集测区原有地形图与高一等级控制点的成果资料，在地形图上初步设计导线布设路线，按设计方案到实地踏勘选点。</p>
+<details class="warning">
+<summary>现场踏勘选点注意事项</summary>
+<ul>
+<li>相邻导线点间通视良好，便于角度测量和距离测量。</li>
+<li>点位选在土质坚实并便于保存之处。</li>
+<li>点位视野开阔，便于测绘周围地物和地貌。</li>
+<li>导线边长应符合规范规定，最长不应超过平均边长的两倍，相邻边长悬殊不应太大。</li>
+<li>导线均匀分布在测区，便于控制整个测区。</li>
+</ul>
+</details>
+<p>导线点位埋设：</p>
+<ul>
+<li>泥土地面，点位上打木桩，桩顶钉小钉——临时性标志</li>
+<li>碎石或沥青路面，用顶上凿十字纹的大铁钉代替木桩。</li>
+<li>混凝土场地或路面，钢凿凿十字纹，涂红油漆。</li>
+<li>需长期保存导线点，埋设混凝土导线点标石。</li>
+<li>导线点应分等级统一编号，便于测量资料统一管理。</li>
+</ul>
+<p>为便于观测时寻找，在点位附近房角或电线杆等明显地物上用红油漆标明指示导线点的位置。为每个导线点绘制点之记，注记地名、路名、导线点编号及导线点距邻近明显地物点</p>
+</li>
+<li>
+<p>导线边长测量</p>
+<p>图根导线边长——用检定过的钢尺丈量或检定过的光电测距仪测量；钢尺量距宜采用双次丈量法，相对误差应不大于<span class="arithmatex">\(\frac{1}{3000}\)</span>；钢尺的尺长改正数大于<span class="arithmatex">\(\frac{1}{10000}\)</span>时，应加尺长改正；量距时，平均尺温与检定时温度相差大于±10℃时，应进行温度改正；尺面倾斜大于1.5%时，应进行高差改正。</p>
+</li>
+<li>
+<p>导线转折角测量</p>
+<p>导线转折角——在导线点上由相邻导线边构成的水平角；导线转折角分为左角和右角，导线前进方向左侧的水平角称为左角，右侧的水平角称为右角；若观测无误差，在同一个导线点测得的左角与右角之和应等于360°；图根导线的转折角用DJ6级经纬仪测回法观测一测回。</p>
+</li>
+</ol>
 <h3 id="63">6.3 导线计算（重难点）</h3>
+<p>导线测量内业计算：计算各导线点的坐标。计算前，应检查导线测量的外业记录：数据是否齐全，有无遗漏、记错或算错，成果是否符合规范要求。检查无误后，绘制导线略图，将已知数据和观测成果标注于图上。</p>
+<p><strong>基本公式</strong></p>
+<ol>
+<li>坐标方位角的推算<span class="arithmatex">\(\alpha _前 = \alpha _后 - \beta _右 + 180 \degree\)</span>，或者<span class="arithmatex">\(\alpha _前 = \alpha _后 + \beta _左 - 180 \degree\)</span></li>
+<li>
+<p>坐标正算公式</p>
+<p>已知 A 点的坐标<span class="arithmatex">\((x_A，y_A)\)</span>，方位角 <span class="arithmatex">\(\alpha\)</span> 和 AB 间的水平距离 <span class="arithmatex">\(D_{AB}\)</span>，现在要求 B 点的坐标 <span class="arithmatex">\((x_B，y_B)\)</span></p>
+<p><span class="arithmatex">\(\Delta x_{AB} = D_{AB} \cdot cos \alpha, x_B = x_A + D_{AB} \cdot cos \alpha\)</span></p>
+<p><span class="arithmatex">\(\Delta y_{AB} = D_{AB} \cdot sin \alpha, y_B = y_A + D_{AB} \cdot cos \alpha\)</span></p>
+</li>
+<li>
+<p>坐标反算公式</p>
+<p>已知的 A、B 两点的坐标，现在要求两点间水平距离 <span class="arithmatex">\(D_{AB}\)</span>和方位角 <span class="arithmatex">\(\alpha\)</span></p>
+<p><span class="arithmatex">\(\alpha = arctan \frac{\Delta y}{\Delta x}\)</span>，<span class="arithmatex">\(D_{AB} = \sqrt{\Delta x_{AB} ^ 2 + \Delta y_{AB} ^ 2}\)</span></p>
+</li>
+</ol>
+<p><mark class="critic">坐标计算的步骤</mark></p>
+<details class="example" open="open">
+<summary>举例分析</summary>
+<ol>
+<li>第一步（已知坐标 -&gt; 水平距离和方位角）：已知 A、B 两点的坐标，计算 A→B 的水平距离和坐标方位角已知A 坐标(1228.568, 1337.337)， B 坐标(1188.043, 1377.210)</li>
+</ol>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="图示.png" src="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" /></a></p>
+<details class="info">
+<summary>解题步骤</summary>
+<ol>
+<li>计算坐标增量          <ul>
+<li><span class="arithmatex">\(\Delta x_{AB} = x_B - x_A = 1188.043 - 1228.568 = -40.525\)</span></li>
+<li><span class="arithmatex">\(\Delta y_{AB} = y_B - y_A = 1377.210 - 1337.337 = 39.873\)</span></li>
+</ul>
+</li>
+<li>计算水平距离<span class="arithmatex">\(D_{AB}\)</span><ul>
+<li><span class="arithmatex">\(D_{AB} = \sqrt{\Delta x_{AB} ^ 2 + \Delta y_{AB} ^ 2} = \sqrt{(-40.525) ^ 2 + (39.873) ^ 2} = 56.852\)</span></li>
+</ul>
+</li>
+<li>计算象限角<span class="arithmatex">\(R_{AB}\)</span><ul>
+<li><span class="arithmatex">\(R_{AB} = arctan \frac{\Delta y_{AB}}{\Delta x_{AB}} = arctan \frac{39.873}{-40.525} = -44 \degree 32' 07"\)</span></li>
+</ul>
+</li>
+</ol>
+<p><span class="arithmatex">\(\because \Delta x_{AB} &lt; 0, \Delta y_{AB} &gt; 0\)</span></p>
+<p><span class="arithmatex">\(\therefore\)</span> AB边方向位于第Ⅱ象限，坐标方位角 <span class="arithmatex">\(R_{AB} = 180 \degree - R_{AB} = 180 \degree + (-44 \degree 32' 07") = 135 \degree 27' 53"\)</span></p>
+</details>
+</details>
+<ol>
+<li>根据已知坐标方位角 αAB (135°27′53″)推算未知边的坐标方位角 αBC(难点)
+坐标方位角推算方向——A→B →C
+B 点安置经纬仪观测水平角 β 左 (100°47′53″)
+角度方程——
+求得——
+用右角 β 右 ，有
+方位角的取值范围——0~360° 综合公式——
+的结果 ≥ 180°时，取“-”
+的结果＜180°时，取“+”
+ BC  13527′53″+10047′53″-180=5615′46</li>
+</ol>
+<p>★ 3、根据坐标方位角 αBC与水平距离 DBC (66.085m)，计算 C 点平面坐标(难点)</p>
 <h3 id="64">6.4 交会定点的计算</h3>
 <h3 id="64_1">6.4 高程控制测量（重点）</h3>
 <h2 id="_7">第七章 地形测量</h2>
