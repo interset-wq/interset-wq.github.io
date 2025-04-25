@@ -2,7 +2,7 @@
 .container {
     width: 1190px;
     margin: 0 auto;
-    background-color: pink;
+    /* background-color: pink; */
 }
 /* #endregion */
 
@@ -54,7 +54,7 @@
 /* #region 头部header */
 .header {
     height: 120px;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 .searchbox {
     margin-top: 42px;
@@ -167,7 +167,7 @@
 .main-banner {
     width: 690px;
     height: 458px;
-    background-color: green;
+    /* background-color: green; */
     margin: 0 10px;
 }
 
@@ -266,7 +266,7 @@
 .sec-kill {
     margin-top: 10px;
     height: 190px;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 .sec-kill img {
     float: left;
@@ -280,13 +280,13 @@
 /* #region 楼层 */
 .floor {
     margin-top: 48px;
-    background-color: turquoise;
+    /* background-color: turquoise; */
 }
 .floor-nav {
     height: 30px;
     line-height: 30px;
     padding-bottom: 4px;
-    border-bottom: 2px solid red;
+    /* border-bottom: 2px solid red; */
 }
 .floor-title {
     font-size: 20px;
@@ -357,4 +357,62 @@
 }
 
 
+/* #endregion */
+
+/* #region 页脚footer */
+.footer {
+    height: 440px;
+    background-color: #483E3E;
+    margin-top: 48px;
+}
+
+.footer .top-links-list {
+    height: 176px;
+    width: 190px;
+    margin-top: 48px;
+    float: left;
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+}
+.footer .top-links-list:last-child {
+    margin-right: 0;
+}
+.footer .top-links-list a {
+    color: white;
+}
+
+.line {
+    height: 1px;
+    margin-top: 22px;
+    background-color: #584D4D;
+}
+
+
+.bottom-links {
+    margin-top: 47px;
+    text-align: center;
+}
+.bottom-links-list {
+    display: inline-block;
+}
+.bottom-links-list li {
+    float: left;
+}
+.bottom-links-list li a {
+    color: white;
+    padding: 0 26px;
+    border-right: 1px solid white;
+}
+.bottom-links-list li:first-child a {
+    padding-left: 0;
+}
+.bottom-links-list li:last-child a {
+    padding-right: 0;
+    border: none;
+}
+.copyright {
+    color: white;
+    margin-top: 10px;
+}
 /* #endregion */

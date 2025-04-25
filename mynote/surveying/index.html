@@ -1718,9 +1718,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#64_1" class="md-nav__link">
+  <a href="#65" class="md-nav__link">
     <span class="md-ellipsis">
-      6.4 高程控制测量（重点）
+      6.5 高程控制测量（重点）
     </span>
   </a>
   
@@ -2184,9 +2184,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#64_1" class="md-nav__link">
+  <a href="#65" class="md-nav__link">
     <span class="md-ellipsis">
-      6.4 高程控制测量（重点）
+      6.5 高程控制测量（重点）
     </span>
   </a>
   
@@ -3772,10 +3772,8 @@ $$
 <p><mark class="critic">坐标计算的步骤</mark></p>
 <details class="example" open="open">
 <summary>举例分析</summary>
-<ol>
-<li>第一步（已知坐标 -&gt; 水平距离和方位角）：已知 A、B 两点的坐标，计算 A→B 的水平距离和坐标方位角已知A 坐标(1228.568, 1337.337)， B 坐标(1188.043, 1377.210)</li>
-</ol>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="图示.png" src="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" /></a></p>
+<p><mark class="critic">第一步（已知坐标 -&gt; 水平距离和方位角）：已知 A、B 两点的坐标，计算 A→B 的水平距离和坐标方位角已知A 坐标(1228.568, 1337.337)， B 坐标(1188.043, 1377.210)</mark></p>
 <details class="info">
 <summary>解题步骤</summary>
 <ol>
@@ -3796,22 +3794,123 @@ $$
 <p><span class="arithmatex">\(\because \Delta x_{AB} &lt; 0, \Delta y_{AB} &gt; 0\)</span></p>
 <p><span class="arithmatex">\(\therefore\)</span> AB边方向位于第Ⅱ象限，坐标方位角 <span class="arithmatex">\(R_{AB} = 180 \degree - R_{AB} = 180 \degree + (-44 \degree 32' 07") = 135 \degree 27' 53"\)</span></p>
 </details>
+<p><mark class="critic">第二步：根据已知坐标方位角 <span class="arithmatex">\(\alpha _{AB} = 135 \degree 27' 53"\)</span>推算未知边的坐标方位角 <span class="arithmatex">\(\alpha _{BC}\)</span>，坐标方位角推算方向 A -&gt; B -&gt; C，B 点安置经纬仪观测水平角 <span class="arithmatex">\(\beta _左 = 100 \degree 47' 53"\)</span></mark></p>
+<p>由角度方程<span class="arithmatex">\(\alpha _{AB} - \alpha _{BC} = 180 \degree - \beta _左\)</span>，求得<span class="arithmatex">\(\alpha _{BC} = \alpha _{AB} + \beta _左 - 180 \degree = 135 \degree 27' 53" + 100 \degree 47' 53" - 180 \degree = 56 \degree 15' 46"\)</span></p>
+<details class="tip">
+<summary>使用右角计算</summary>
+<p>如果使用右角，则公式为</p>
+<p><span class="arithmatex">\(\because \beta _右 = 360 \degree - \beta _左 \Rightarrow \beta _左 = 360 \degree - \beta _右\)</span></p>
+<p><span class="arithmatex">\(\therefore \alpha _{BC} = \alpha _{AB} - \beta _右 + 180 \degree\)</span></p>
 </details>
-<ol>
-<li>根据已知坐标方位角 αAB (135°27′53″)推算未知边的坐标方位角 αBC(难点)
-坐标方位角推算方向——A→B →C
-B 点安置经纬仪观测水平角 β 左 (100°47′53″)
-角度方程——
-求得——
-用右角 β 右 ，有
-方位角的取值范围——0~360° 综合公式——
-的结果 ≥ 180°时，取“-”
-的结果＜180°时，取“+”
- BC  13527′53″+10047′53″-180=5615′46</li>
-</ol>
-<p>★ 3、根据坐标方位角 αBC与水平距离 DBC (66.085m)，计算 C 点平面坐标(难点)</p>
+<details class="tip">
+<summary>公式总结</summary>
+<ul>
+<li>方位角的取值范围0~360°</li>
+<li>综合公式<span class="arithmatex">\(\alpha _{BC} = \alpha _{AB} + \beta _左 \pm 180 \degree\)</span>，或<span class="arithmatex">\(\alpha _{BC} = \alpha _{AB} - \beta _右 \pm 180 \degree\)</span><ul>
+<li>当<span class="arithmatex">\(\alpha _{AB} + \beta _左 \ge 180 \degree\)</span>，或<span class="arithmatex">\(\alpha _{AB} - \beta _右 \ge 180 \degree\)</span>时，取“-”</li>
+<li>当<span class="arithmatex">\(\alpha _{AB} + \beta _左 &lt; 180 \degree\)</span>，或<span class="arithmatex">\(\alpha _{AB} - \beta _右 &lt; 180 \degree\)</span>时，取“+”</li>
+</ul>
+</li>
+</ul>
+</details>
+<p><mark class="critic">第三步：根据坐标方位角<span class="arithmatex">\(\alpha _{BC}\)</span>与水平距离 <span class="arithmatex">\(D _{BC} = 66.085m\)</span>，计算 C 点平面坐标</mark></p>
+<p><span class="arithmatex">\(x_C = x_B + D_{BC} \cdot cos \alpha _{BC} = 1188.043 + 66.085 \cdot cos 56 \degree 15' 46" = 1224.746m\)</span></p>
+<p><span class="arithmatex">\(y_C = y_B + D_{BC} \cdot sin \alpha _{BC} = 1377.210 + 66.085 \cdot sin 56 \degree 15' 46" = 1432.166m\)</span></p>
+</details>
+<p><mark class="critic">闭合导线测量内业计算</mark></p>
+<details class="example" open="open">
+<summary>举例分析</summary>
+</details>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/PtmHvwkTUVRpoIr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="闭合导线.png" src="https://s2.loli.net/2025/04/25/PtmHvwkTUVRpoIr.png" /></a></p>
+<p><mark class="critic">第一步：角度闭合差的计算与调整</mark></p>
+<p>n 边形的内角和应为<span class="arithmatex">\((n-2) \times 180 \degree\)</span></p>
+<p>n 边形的闭合导线的各内角分别为 <span class="arithmatex">\(\beta_1,\beta_2, ...,\beta _n\)</span>，则：</p>
+<ul>
+<li>内角和理论值<span class="arithmatex">\(\sum \beta _理 = (n -2) \times 180 \degree\)</span></li>
+<li>角度和理论值<span class="arithmatex">\((6 -2) \times 180 \degree = 720 \degree\)</span></li>
+<li>观测误差使得内角和实际值<span class="arithmatex">\(\sum \beta _测 \ne \sum \beta _理\)</span>，则角度闭合差<span class="arithmatex">\(f_ \beta = \sum \beta _测 - \sum \beta _理\)</span></li>
+<li>图根光电测距导线的角度闭合差允许值<span class="arithmatex">\(f_ {\beta 允} = \pm 40" \sqrt{n}\)</span>，取相反数平均分配角度闭合差<span class="arithmatex">\(\nu _ \beta = - \frac{f_ \beta}{n}\)</span>，改正后的角度值<span class="arithmatex">\(\hat{\beta} _i = \beta _i + \nu _ \beta\)</span></li>
+</ul>
+<p>（未完待续……）</p>
 <h3 id="64">6.4 交会定点的计算</h3>
-<h3 id="64_1">6.4 高程控制测量（重点）</h3>
+<p>测量交会点与周边已知坐标点构成三角形的水平角，计算交会点的平面坐标，是加密平面控制点的方法之一。前方交会、侧方交会、后方交会。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="前方交会测角交会" name="__tabbed_10" type="radio" /><input id="侧方交会" name="__tabbed_10" type="radio" /><input id="后方交会" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="前方交会测角交会">前方交会(测角交会)</label><label for="侧方交会">侧方交会</label><label for="后方交会">后方交会</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在已知坐标点A 、B 安置经纬仪向待定点 P 观测水平角 α、β，交会角 γ 为30°~120°之间，最好近于90°</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="前方交会.png" src="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" /></a></p>
+<p>P 点坐标计算公式（余切公式）
+$$
+x_P = \frac{x_A \cdot cot \beta + x_B \cdot cot \alpha + (y_B - y_A)}{cot \alpha + cot \beta}
+$$
+$$
+y_P = \frac{y_A \cdot cot \beta + y_B \cdot cot \alpha + (x_A - x_B)}{cot \alpha + cot \beta}
+$$</p>
+</div>
+<div class="tabbed-block">
+<p>在已知 A 点，待定点 P 安置经纬仪，观测水平角 α, γ, 检查角 θ，先算出 <span class="arithmatex">\(\beta = 180 \degree - (\alpha + \gamma)\)</span>，按余切公式计算点坐标。</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="侧方交会.png" src="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="后方交会.png" src="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" /></a></p>
+<p>在待定点 P 安置经纬仪，观测水平角 α, β, γ 和检查角 θ</p>
+<p>危险圆——不在一直线上3个已知点 A，B，C 构成的圆</p>
+<p>P 点位于危险圆上时，无法确定。选 P 点时，应避免使 P 点位于危险圆上。</p>
+<p>P 点坐标计算公式：
+$$
+x_P = \frac{P_A \cdot x_A + P_B \cdot x_B + P_C \cdot x_C}{P_A + P_B + P_C}
+$$
+$$
+y_P = \frac{P_A \cdot y_A + P_B \cdot y_B + P_C \cdot y_C}{P_A + P_B + P_C}
+$$</p>
+<p>其中
+$$
+P_A = \frac{1}{cot \angle A - cot \alpha} = \frac{tan \alpha \cdot \tan \angle A}{tan \alpha - tan \angle A}
+$$
+$$
+P_B = \frac{1}{cot \angle B - cot \beta} = \frac{tan \beta \cdot \tan \angle B}{tan \beta - tan \angle B}
+$$
+$$
+P_C = \frac{1}{cot \angle C - cot \gamma} = \frac{tan \gamma \cdot \tan \angle C}{tan \gamma - tan \angle C}
+$$</p>
+</div>
+</div>
+</div>
+<p>（使用Katex写完这些公式，随随便便一个公式写三四行代码，心中一万匹草泥马飞奔而过<img alt="🥲" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f972.svg" title=":smiling_face_with_tear:" /><img alt="😠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f620.svg" title=":angry:" />）</p>
+<h3 id="65">6.5 高程控制测量（重点）</h3>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/VDl4k97vrMUuhtE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="技术要求.png" src="https://s2.loli.net/2025/04/25/VDl4k97vrMUuhtE.png" /></a></p>
+<p><mark class="critic">三、四等水准测量的方法</mark></p>
+<p>一站观测顺序</p>
+<ol>
+<li>在测站上安置水准仪<ul>
+<li>后视水准尺黑面→旋转微倾螺旋→居中管水准气泡</li>
+<li>用上、下视距丝读数；用中丝读数</li>
+</ul>
+</li>
+<li>前视水准尺黑面<ul>
+<li>旋转微倾螺旋→居中管水准气泡</li>
+<li>用上、下视距丝读数；用中丝读数</li>
+</ul>
+</li>
+<li>前视水准尺红面<ul>
+<li>旋转微倾螺旋→居中管水准气泡→用中丝读数。</li>
+</ul>
+</li>
+<li>后视水准尺红面<ul>
+<li>旋转微倾螺旋→居中管水准气泡→用中丝读数</li>
+</ul>
+</li>
+</ol>
+<details class="tip" open="open">
+<summary>观测顺序</summary>
+<ul>
+<li>观测顺序三等——后、前、前、后。</li>
+<li>观测顺序四等——后、后、前、前。</li>
+</ul>
+</details>
+<p><mark class="critic">二、三角高程测量</mark></p>
+<p>地形高低起伏、两点间高差较大时，不便于水准测量。
+测定两点间的平距或斜距及竖直角。</p>
 <h2 id="_7">第七章 地形测量</h2>
 <h3 id="71">7.1 地形图的比例尺</h3>
 <h3 id="72">7.2 地形图图示（重点）</h3>
