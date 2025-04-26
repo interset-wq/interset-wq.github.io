@@ -3909,18 +3909,441 @@ $$</p>
 </ul>
 </details>
 <p><mark class="critic">二、三角高程测量</mark></p>
-<p>地形高低起伏、两点间高差较大时，不便于水准测量。
-测定两点间的平距或斜距及竖直角。</p>
+<p>地形高低起伏、两点间高差较大时，不便于水准测量。测定两点间的平距或斜距及竖直角。</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/lnrs5MGZXNmo9jO.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="三角高程测量.png" src="https://s2.loli.net/2025/04/25/lnrs5MGZXNmo9jO.png" /></a></p>
+<details class="tip" open="open">
+<summary>三角高程测量的严密计算公式</summary>
+</details>
+<p><span class="arithmatex">\(h_{AB} = S \cdot sin \alpha + i - v\)</span></p>
+<p>没有考虑地球和大气折光的影响，只适用于两点距离小于200m的三角高程计算。</p>
+<p>地球曲率改正(球差)<span class="arithmatex">\(f_1 = \Delta h = \frac{D ^2}{2R}\)</span>，其中R = 6371km</p>
+<p>地球表面大气层受重力影响，低层空气的密度大于高层空气的密度视线穿过密度不均匀的介质时，形成一条上凸曲线，视线切线方向向上太高，测得的竖直角偏大，称为大气垂直折光。受大气垂直折光影响的视线看成半径为 <span class="arithmatex">\(\frac{R}{k}\)</span> 的圆曲线，其中k表示大气垂直折光系数，大气垂直折光改正(气差)<span class="arithmatex">\(f_2 = -k \frac{D ^2}{2R}\)</span></p>
+<p>球差与气差改正之和（两差改正数）<span class="arithmatex">\(f = f_1 + f_2 = (1-k) \frac{D ^2}{2R}\)</span></p>
+<p>其中f为两差改正，<span class="arithmatex">\(k \in (0.08~0.14)\)</span>，f 恒大于零。k 是随地区、气候、季节、地面覆盖物和视线超出地面高度等条件变化不能准确地测定它的数值，一般取 k =0.14 计算两差改正 f ，水平距离 D =100~3500m 时两差改正数 f 的值如下表所示：</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/dcJiAegmawEDvUy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="改正数.png" src="https://s2.loli.net/2025/04/25/dcJiAegmawEDvUy.png" /></a></p>
+<p>考虑两差改正f的高差公式<span class="arithmatex">\(h_{AB} = D \cdot tan \alpha + i - v + f\)</span>，或<span class="arithmatex">\(h_{AB} = S \cdot sin \alpha + i - v + f\)</span></p>
+<p>因不能精确测定 k，f 有误差。距离 D 越长，误差越长。代替四等水准的光电测距三角高程，要求 D ＜1km，减少两差改正误差的另一个方法AB两点同时进行对向观测， k 相同，f 也相等，可得</p>
+<p><span class="arithmatex">\(h_{AB} = D \cdot tan \alpha _A + i_A - v_B + f\)</span></p>
+<p><span class="arithmatex">\(h_{BA} = D \cdot tan \alpha _B + i_B - v_A + f\)</span></p>
+<p>往返测高差均值抵消掉 f，可得</p>
+<p><span class="arithmatex">\(\bar{h} _{AB} = \frac{1}{2} (h_{AB} - H_{BA}) = \frac{1}{2} \Big [ (D tan \alpha _A + i_A - v_B) - (D tan \alpha _B + i_B - v_A) \Big ]\)</span></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/fN4gQeh5irEqI7s.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="举例.png" src="https://s2.loli.net/2025/04/25/fN4gQeh5irEqI7s.png" /></a></p>
 <h2 id="_7">第七章 地形测量</h2>
+<p><code>本章内容不再提供图片</code></p>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<ul>
+<li>地形测量的任务测绘地形图。地形图测绘是以控制点为依据，按以一定比例尺将地物和地貌测定在地形图上，并用规定的比例尺和符号绘制成图。在地形图上表示的主要内容有地物与地貌两大类。</li>
+<li>地物：是指地球表面上的具有明显轮廓的各种固定物体，可以分为自然地物与人工地物两类。如房屋、道路、森林等。</li>
+<li>地貌：地面上高低起伏的形态称为地貌。如高山、深谷和平原等。</li>
+<li>地形：地物和地貌合称为地形。</li>
+</ul>
+</details>
 <h3 id="71">7.1 地形图的比例尺</h3>
+<p><mark class="critic">比例尺的表示方法</mark></p>
+<p>比例尺：图上一段直线长度与地面上相应线段实际长度之比。可分为数字比例尺，图示比例尺。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="数字比例尺" name="__tabbed_11" type="radio" /><input id="图示比例尺直线比例尺" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="数字比例尺">数字比例尺</label><label for="图示比例尺直线比例尺">图示比例尺（直线比例尺）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\frac{d}{D} = \frac{1}{D/d} = \frac{1}{M} = 1: M\)</span></p>
+<ul>
+<li>数字比例尺分子化为1，分母为一个较大整数</li>
+<li>M 越大，比例尺越小； M 越小，比例尺越大<ul>
+<li>1：500、1：1000、1：2000、1：5000 地形图——大比例尺地形图</li>
+<li>1：1万、1：2.5万、1：5万、1：10万 地形图——中比例尺地形图</li>
+<li>1：25万、1：50万、1：100万 地形图——小比例尺地形图。</li>
+</ul>
+</li>
+<li>我国规定 1：1万、1：2.5万、1：5万、1：10万、1：25万、1：50万、1：100万 七种比例尺地形图——国家基本比例尺地形图，数字比例尺注记在南面图廓外的正中央</li>
+<li>中比例尺地形图为国家的基本地图，由国家专业测绘部门负责测绘，目前均用航空摄影测量方法成图，小比例尺地形图由中比例尺地图缩小编绘而成。</li>
+<li>城市和工程建设一般需要大比例尺地形图，比例尺为1：500和1：1000的地形图一般用平板仪、经纬仪或全站仪等测绘； 比例尺为1：2000和1：5000的地形图一般用由1：500或1：1000的地形图缩小编绘而成。大面积1：500~1：5000的地形图也用航空摄影测量方法成图</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>绘制在数字比例尺下方，作用是便于直接在图上量取直线段的水平距离，还可抵消在图上量取长度时图纸伸缩的影响</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>比例尺的精度</strong></p>
+<ul>
+<li>地物、地貌在图上表示的精确与详尽程度同比例尺有关。比例尺越大，越精确和详细。人肉眼能分辨的图上最小距离是0.1mm，地形图比例尺为1:M，图上0.1mm所表示的实地水平距离 0.1M(mm) ——比例尺的精度，可确定测绘地形图的距离测量精度。</li>
+<li>测绘1：1000比例尺的地形图，比例尺的精度为0.1m，量距精度为0.1m，小于0.1m的距离在图上表示不出来。</li>
+<li>当设计规定需要在图上能量出的实地最短长度时，可反算出测图比例尺1：M</li>
+<li>图上能量出的实地最短线段长度——0.05m，图纸比例尺不应小于<span class="arithmatex">\(\frac{0.1mm}{0.05m} = \frac{1}{500}\)</span></li>
+</ul>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/8drgp6nBKwSDNhm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="比例尺精度.png" src="https://s2.loli.net/2025/04/26/8drgp6nBKwSDNhm.png" /></a></p>
 <h3 id="72">7.2 地形图图示（重点）</h3>
+<p>地形图图示: 表示地物和地貌的符号和方法。</p>
+<p>一个国家的地形图图式统一，属于国家标准。我国当前使用的、最新的大比例尺地形图图式由国家质量监督检验检疫总局与国家标准化管理委员会发布的、2007年12月1日开始实施的《国家基本比例尺地图图示 第1部分：1：5001：1000 1：2000地形图图式》(GB/T20257.1-2017)</p>
+<p>图示符号有三类：地物符号、地貌符号、注记符号</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="地物符号重点" name="__tabbed_12" type="radio" /><input id="地貌符号" name="__tabbed_12" type="radio" /><input id="注记符号" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="地物符号重点">地物符号(重点)</label><label for="地貌符号">地貌符号</label><label for="注记符号">注记符号</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>根据地物的大小及描绘方法的不同，地物符号分为比例符号、非比例符号、半比例符号。<code>图示详见课本</code></p>
+<ol>
+<li>比例符号：可按测图比例尺缩小，用规定符号画出的地物符号称为比例符号，如房屋、较宽的道路、稻田、花圃、湖泊等。</li>
+<li>非比例符号：轮廓较小，无法将形状和大小按地形图比例尺绘到图上，不考虑其实际大小，采用规定符号表示，例如，三角点、导线点、水准点、独立树、路灯、检修井。</li>
+<li>半比例符号：带状延伸地物，如小路、通讯线、管道、垣栅等，长度可按比例缩绘，宽度无法按比例表示。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><code>图形详见课本</code></p>
+<p>地貌形态多种多样，对于一个地区可按其起伏的变化分为以下四种地形类型。地势起伏小，地面倾斜角在3°以下，比高不超过20m的，称为平坦地；地面高低变化大，倾斜角在3°，比高不超过150m的，称为丘陵地；高低变化悬殊，倾斜角为3°~ 10°，比高在150m以上的，称为山地；绝大多数倾斜角超过的25°，称为高山地。</p>
+<p>地形图上表示地貌的方法一般是等高线。等高线——首曲线、计曲线、间曲线；计曲线上注记等高线的高程；在谷地、鞍部、山头及斜坡方向不易判读的地方和凹地的最高、最低一条等高线上，绘制与等高线垂直的短线——示坡线，用以指示斜坡降落方向。</p>
+</div>
+<div class="tabbed-block">
+<p>地物的性质、名称等在图上需用文字和数字注记，房屋的结构、层数、地名、路名、单位名、计曲线的高程、碎部点高程、独立性地物的高程、河流水深、流速。</p>
+</div>
+</div>
+</div>
 <h3 id="73">7.3 等高线（重点）</h3>
+<p><strong>等高线的基本概念</strong></p>
+<p>等高线：地面高程相等的相邻各点连成的闭合曲线。</p>
+<p>等高距 h：地形图上相邻等高线间的高差，同一幅地形图的等高距应相同。</p>
+<p>一座高出水面的山头，与某一静止水面相交形成的水涯线为闭合曲线，曲线形状由山头与水面相交的位置确定，曲线上各点的高程相等。将不同高程的水涯线垂直投影到水平面，按一定比例尺缩绘在图纸上，山头就可以用等高线表示在地形图上</p>
+<p>等高距越小，表示的地貌细部越详尽；等高距越大，地貌细部表示就越粗略。等高距太小会使图上的等高线过于密集，从而影响图面的清晰度。</p>
+<table border="1" cellspacing="0">
+    <caption>地形图的基本等高距h（单位m）</caption>
+    <thead>
+        <th>比例尺</th>
+        <th>平地</th>
+        <th>丘陵地</th>
+        <th>山地</th>
+        <th>高山地</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1：500</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td>0.5 或 1.0</td>
+            <td>1.0</td>
+        </tr>
+        <tr>
+            <td>1：1000</td>
+            <td>0.5</td>
+            <td>0.5 或 1.0</td>
+            <td>1.0</td>
+            <td>1.0 或 2.0</td>
+        </tr>
+        <tr>
+            <td>1：2000</td>
+            <td>0.5 或 1.0</td>
+            <td>1.0</td>
+            <td>2.0</td>
+            <td>2.0</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul>
+<li>相邻等高线间的水平距离：等高线平距 d</li>
+<li>相邻等高线间的地面坡度<span class="arithmatex">\(i = \frac{h}{d \cdot M}\)</span></li>
+<li>同一幅地形图，等高线平距大，地貌坡度小；反之，坡度愈大</li>
+</ul>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/xNMz2coEywSLbhQ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="等高线.png" src="https://s2.loli.net/2025/04/26/xNMz2coEywSLbhQ.png" /></a></p>
+<p><strong>其他概念</strong></p>
+<ul>
+<li>首曲线——基本等高距测绘的等高线，0.15mm细实线；</li>
+<li>计曲线——从0m起算，每隔四条首曲线加粗一条等高线，该等高线称为计曲线。计曲线的高程值总是为等高距的5倍。计曲线用0.3mm宽的粗实线绘制。（计曲线主要是为读取高程时方便一些）</li>
+<li>间曲线：对于坡度很小的局部区域。当用基本等高线不足以反映地貌特征时，可按1/2基本等高距加绘一条等高线，该等高线称为间曲线。间曲线用0.15mm宽的长虚线绘制，可以不闭合</li>
+<li>助曲线：按1/4等高距测绘的等高线称为助曲线</li>
+</ul>
+<p>首曲线与计曲线是地形图中表示地貌必须描绘的曲线，而间曲线、助曲线根据需要来确定是否描绘。在谷地、鞍部、山头及斜坡方向不易判读的地方和凹地的最高、最低一条等高线上，绘制与等高线垂直的短线，称为示坡线，用以指示斜坡降落方向。<code>图示详见课本</code></p>
+<p><strong>典型地貌的等高线</strong></p>
+<p>山头和洼地、山脊和山谷、鞍部、陡崖和悬崖。<code>图示详见课本</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:4"><input checked="checked" id="山头和洼地" name="__tabbed_13" type="radio" /><input id="山脊和山谷" name="__tabbed_13" type="radio" /><input id="鞍部" name="__tabbed_13" type="radio" /><input id="陡崖和悬崖" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="山头和洼地">山头和洼地</label><label for="山脊和山谷">山脊和山谷</label><label for="鞍部">鞍部</label><label for="陡崖和悬崖">陡崖和悬崖</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>一组闭合曲线，山头等高线由外圈向内圈高程逐渐增加，洼地等高线由外圈向内圈高程逐渐减小，根据高程注记区分，也可用示坡线指示斜坡向下方向。</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>山脊——等高线向下坡方向凸出，两侧基本对称，又称分水线。</li>
+<li>山谷——等高线均凸向高处，两侧基本对称，又称集水线。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>相邻两山头之间呈马鞍形的低凹部，是山区道路选线的重要位置，左右两侧等高线是近似对称的两组山脊线和两组山谷线</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>陡崖(绝壁)——坡度 &gt;70°的陡峭崖壁</li>
+<li>悬崖——上部突出、下部凹进的陡崖</li>
+<li>上部等高线投影到水平面，与下部的等高线相交，下部凹进的等高线用虚线表示。</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>等高线的特征</strong></p>
+<ul>
+<li>等高性：同一条等高线上各点高程相等</li>
+<li>闭合性: 闭合曲线，不能中断，不在同一幅图内闭合，就在相邻的其它图幅内闭合</li>
+<li>非交性：等高线只有在陡崖或悬崖处才重合或相交</li>
+<li>正交性：等高线和山脊线或山谷线垂直相交</li>
+<li>同一幅图内，基本等高距相同，等高线平距大表示地面坡度小；等高线平距小表示地面坡度大</li>
+<li>不能中断(间曲线除外)，但遇道路、房屋、河流等地物符号和注记处可以局部中断</li>
+</ul>
 <h3 id="74">7.4 测图前的准备工作</h3>
+<p><code>图示详见课本</code></p>
+<ol>
+<li>图纸准备：聚酯薄膜图纸<ul>
+<li>厚度0.07 mm～0.1mm，经热定型处理后，伸缩率小于0.2‰</li>
+<li>具有透明度好、伸缩性小、不怕潮湿等优点。</li>
+<li>图纸弄脏后，可用水洗，便于野外作业。</li>
+<li>图纸着墨后，可直接复晒蓝图。</li>
+<li>缺点是易燃、易折，在使用与保管时应注意防火防折。</li>
+</ul>
+</li>
+<li>
+<p>绘制坐标方格网</p>
+<ul>
+<li>空白图纸和印有坐标方格网的图纸。</li>
+<li>印有坐标方格网的图纸又有50cm×50cm正方形分幅</li>
+<li>50cm×40cm矩形分幅</li>
+</ul>
+<details class="info">
+<summary>图纸方格网检查</summary>
+<ul>
+<li>直尺检查方格对角线方向角点应位于同一直线上，偏离不应大于0.2mm。</li>
+<li>检查各个方格的对角线长度，与理论值141.4mm之差不应超过0.2mm。</li>
+<li>图廓对角线长度与理论值之差不应超过0.3mm。</li>
+<li>超过限差要求，对印有坐标方格网的图纸，应予作废。</li>
+</ul>
+</details>
+</li>
+<li>
+<p>展绘控制点</p>
+<ul>
+<li>根据地形图的分幅位置，将坐标格网线的坐标值注记在图框外相应的位置。</li>
+<li>检查——图上量取已展绘控制点间长度，</li>
+<li>与已知值(由坐标反算长度除以地形图比例尺分母)之差不应超过±0.3mm，否则应重新展绘。</li>
+</ul>
+</li>
+</ol>
+<p>为保证地形图精度，测区内应有一定数目的图根控制点，《城市测量规范》规定，测区内解析图根点个数的要求。</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/D9nsF35ldNjTXPt.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="控制点.png" src="https://s2.loli.net/2025/04/26/D9nsF35ldNjTXPt.png" /></a></p>
 <h3 id="75">7.5 碎步测量（重点）</h3>
+<p><code>图示详见课本</code></p>
+<p>控制测量结束后，在图根控制点上安置全站仪或经纬仪（设立测站），测定其周围碎部点的平面位置和高程，并按规定的图示符号绘制成图。</p>
+<p><strong>选择碎部点</strong></p>
+<ol>
+<li>
+<p>地物特征点的选择
+    反映地物轮廓和几何位置的点称为地物特征点，简称地物点。</p>
+<ul>
+<li>一般选在地物轮廓的方向线变化处，如房屋角点、道路转折点或交叉点等</li>
+<li>形状不规则的地物，其凹凸部分在地形图上大于0.4mm应测定，小于0.4mm用直线连接</li>
+<li>一些非比例符号地物特征点的选择：树、井盖、电线杆等选在中心点位置。</li>
+</ul>
+</li>
+<li>
+<p>地貌特征点的选择</p>
+<ul>
+<li>能用等高线表示的地貌特征点的选择：如山头、盆地等。</li>
+<li>不能用等高线表示的地貌特征点的选择：如陡崖、冲沟等。</li>
+</ul>
+</li>
+</ol>
+<details class="warning">
+<summary>碎部测量中注意事项</summary>
+<ul>
+<li>正确地选择地物点和地貌点，对地物点一般只测其平面位置，若地物点可作地貌点时，除测定其平面位置外，还应测定其高程。</li>
+<li>根据地貌的复杂程度、测图比例尺大小以及用图目的等，综合考虑碎部点的密度。一般图上平均2~3cm远应有一个碎部点。在直线段或坡度均匀的地方，地貌点之间的最大间距和碎部测量中最大视距长度（单位m）不宜超过下表中的规定。</li>
+</ul>
+<p><table border="1" cellspacing="0">
+    <caption>地貌点间距表</caption>
+    <thead>
+        <th>测图比例尺</th>
+        <th>立尺点间隔m</th>
+        <th>主要地物视距长度m</th>
+        <th>次要地物地形点数据长度m</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1：500</td>
+            <td>15</td>
+            <td>80</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>1：1000</td>
+            <td>30</td>
+            <td>100</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>1：2000</td>
+            <td>50</td>
+            <td>180</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>1：5000</td>
+            <td>100</td>
+            <td>300</td>
+            <td>350</td>
+        </tr>
+    </tbody>
+</table></p>
+</details>
+<p><mark class="critic">地物地貌的描绘</mark></p>
+<p>展绘碎部点后，应对照实地随时描绘地物和等高线。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="地物描绘" name="__tabbed_14" type="radio" /><input id="等高线的勾绘" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="地物描绘">地物描绘</label><label for="等高线的勾绘">等高线的勾绘</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>按地形图图式规定的符号表示。</li>
+<li>房屋轮廓需要用直线连接起来，</li>
+<li>道路、河流的弯曲部分应逐点连成光滑曲线。</li>
+<li>不能依比例描绘的地物，应按规定的非比例符号表示。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>勾绘等高线时，首先用铅笔轻轻描绘出山脊线、山谷线等地性线，再根据碎部点的高程勾绘等高线。</li>
+<li>不能用等高线表示的地貌，如悬崖、陡崖、土堆、冲沟、雨裂等，应按图式规定的符号表示，碎部点是选在地面坡度变化处，相邻点之间可视为均匀坡度，可在两相邻碎部点的连线上，按平距与高差成比例的关系，内插出两点间各条等高线通过的位置。</li>
+<li>勾绘等高线时，应对照实地情况，先画计曲线，后画首曲线，并注意等高线通过山脊线、山谷线的走向。</li>
+<li>在实际工作中，一般采用目估法勾绘等高线。</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>测图方法</strong></p>
+<p>解析测图法和数字测图法。</p>
+<p>解析测图法——量角器配合经纬仪测图法、经纬仪联合光电测距仪测图法、大平板仪测图法小平板仪与经纬仪联合测图法，以下介绍量角器配合经纬仪测图法：</p>
+<p>经纬仪观测水平角，视距测量法测量测站至碎部点的平距，碎部点高程，用量角器展绘碎部点。</p>
+<p>在已知点安置经纬仪，量取仪器高<span class="arithmatex">\(i\)</span>，瞄准定向方向，水平盘置零；瞄准碎部点标尺，读取水平盘读数 <span class="arithmatex">\(\beta _i\)</span>，视距分别测量上丝读数 <span class="arithmatex">\(l_1 '\)</span>，下丝读数<span class="arithmatex">\(l_1 ''\)</span>，竖盘读数 <span class="arithmatex">\(L_1\)</span></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/PI7FfCVzeatic16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="视距测量.png" src="https://s2.loli.net/2025/04/26/PI7FfCVzeatic16.png" /></a></p>
 <h3 id="76">7.6 地形图拼接与检查</h3>
+<p>(1) 地形图的拼接
+在地形图绘制时，当测区面积较大、按照确定的比例尺在一幅图内测绘不完
+整个测区时，需要分幅测绘。由于测量和绘图误差的影响，在相邻图幅交接处，
+常出现同一地物错位、同一条等高线错开而使得绘制出的地物与地貌不吻合的现
+象，如图所示。
+将两幅图的同名坐标格网线重叠时, 图中的房屋河流等等高线都存在接边差。
+若接边差小于规定的平面高程中误差的 倍时, 可平均配赋, 并据此改正相邻图幅
+的地物地貌位置, 但应注意保持地物地貌相互位置和走向的正确性。超过限差时应
+到实地检查纠正。</p>
+<p>(2) 地形图的检查
+1) 内业检查
+① 图根控制点密度符合要求，位置恰当；
+各项较差、闭合差在规定范围内；
+原始记录和计算成果正确，项目填写齐全。
+② 地形图图廓、方格网、控制点展绘精度符合要求；
+测站点密度和精度符合规定；
+地物、地貌各要素测绘正确、齐全，取舍恰当；
+图式符号运用正确；接边精度符合要求；
+图历表填写应完整清楚，各项资料齐全。
+2) 外业检查
+根据内业检查的情况，有计划地确定巡视路线，
+实地对照查看，检查地物、地貌有无遗漏，
+等高线是否逼真合理，符号、注记是否正确等。</p>
+<p>根据内业检查和巡视检查发现的问题，
+到野外设站检查，
+对发现的问题进行修正和补测，
+对本测站所测地形进行检查，
+看原测地形图是否符合要求。
+仪器检查量为每幅图内容的10%左右。</p>
+<p>(3)清绘和整饰
+清绘和整饰必须使用地形图图式。顺序：先图内后图外，先地物后地
+貌，先注记后符号。
+图内：图廓、坐标格网、控制点、地物、地貌、符号等。
+图外：图名、图号、比例尺、平面坐标和高程系统、测绘单位和测绘
+日期等。
+注记：除公路、河流和等高线注记是随着各自的方向变化外，其他各
+种注记字向朝北，等高线高程注记字头指向上坡方向，避免倒置。等高线
+不能通过注记和地物。
+经过清绘和整饰后，图上内容齐全，线条清晰，取舍合理，注记正确。
+清绘原图是地形图的最后成果。</p>
 <h2 id="_8">第八章 地形图应用</h2>
 <h3 id="81">8.1 地形图的分幅和编号（重点）</h3>
+<p>由于图纸的尺寸有限，不可能将测区内的所有地形都绘制在一幅图内，因此，
+需要分幅测绘地形图。
+地形图的分幅可以分为两大类：一种是按经纬线分幅的梯形分幅法，另一种
+是按坐标格网划分的矩形分幅法。
+※1、梯形分幅和编号(重点)
+(1) 1:5000~1:100万比例尺地图的梯形分幅和编号
+梯形分幅法——按经纬线分幅，用于1:5000~1:100万的中、小比例尺地图的分幅；
+矩形分幅法——坐标格网分幅，用于城市和工程建设1:500~1:2000大比例尺地图分幅。
+梯形分幅——国际分幅，国际统一规定经线为图东西边界，统一规定纬线为图南北边界。
+因子午线向南北两极收敛，整个图幅呈梯形。</p>
+<p>1) 1:100万比例尺地图的分幅和编号
+纬度从 0°起，纬差 4°，分别向南北两极划分 22 横行，
+用字母 A，B，……，V 编号。
+经度从180°起，经差 6°，自西向东划分 60 纵列，
+用数字 1，2，……，60 编号。
+图幅编号——“横行字母－纵列数字”。</p>
+<p>2) 1:50 万、1 : 25 万、1 : 10 万比例尺地图的分幅和编号
+在 1:100 万比例尺地图分幅和编号基础上进行，
+每幅 1:100 万图，按经差 3°
+、纬差 2° 划分 4 幅1:50万图
+该图幅编号为 J50B001001。</p>
+<p>二、矩形分幅和编号(重点)
+大比例尺图(1∶ 5000以下)以坐标格网线划分图幅(矩形分幅)，图幅的尺寸为：
+50cm×50cm，50cm×40cm，40cm×40cm。 图幅的编号与测区的坐标值联系，
+便于按坐标查找图幅。
+矩形分幅又有多种编号法，例如：1. 图幅西南角坐标公里数编号法
+2. 行列编号法</p>
+<p>(１) 图幅西南角坐标公里数编号法
+以每幅图的图幅西南角坐标值(x，y) 的公里数作为该图幅的编号，如下
+图所示为1:1000比例尺的地形图，按图幅西南角坐标公里数编号法编号。其
+中画阴影线的两幅图的编号分别为3.0-1.5 和 2.5-2.5。</p>
+<p>(2) 矩形分幅的行列编号法
+基本分幅：1:5000, 以其西南角行列开始编号, 依次为行列号Ⅰ(1行1列)Ⅱ(1行2
+列)Ⅲ(2行1列)Ⅳ(2行2列)。</p>
 <h3 id="82">8.2 地形图的阅读</h3>
+<p>(1) 地形图的图廓外注记
+n图号、图名、接图表、比例尺、坐标系、使用图式、
+n等高距、测图日期、测绘单位、图廓线、坐标格网、
+n三北方向线和坡度尺等，
+n分布在东、南、西、北四面图廓线外。
+1) 图号、图名和接图表
+n图号——统一分幅规则编号，
+n图名——图内著名地名、最大村庄或突出地物、地貌名。
+n图号、图名注记在北图廓上方的中央。
+n接图表——北图廓左上方，四邻各图号(或图名)略图。
+n作用——便于查找到相邻图幅</p>
+<p>2) 比例尺
+n南图框外中央均注有数字比例尺，
+n数字比例尺下方绘出图示比例尺，
+n1：500，1：1000和1：2000大比例尺地形图，
+n只注明数字比例尺，不注明直线比例尺。</p>
+<p>3) 经纬度与坐标格网
+n中小比例尺的梯形图幅需标注地理坐标与高斯坐标。
+n图廓由上、下两条纬线和左、右两条经线构成，1：1万——经差为
+3′45″
+，纬差为2′30″
+。
+n地理坐标范围——东经116°15′00″~116°18′45″
+、
+n北纬39°55′00″~39°57′30″
+。
+n高斯平面直角坐标格网——x轴，y轴直线，间隔1km——公里格网。
+n第一坐标纵线20340km，20——高斯投影统一3°带带号横坐标值——
+340km－500km= －160km，位于20号带中央子午线以西160km。
+n第一坐标横线为4287km——位于赤道以北约4287km处。
+n经纬线——确定各点地理坐标，直线真子午线方位角，
+n公里格网——确定各点高斯平面坐标，直线坐标方位。
+4) 三北方向线关系图
+n真子午线北方向，磁子午线北
+n方向，高斯平面坐标 +x 轴方向。
+n绘制在中、小比例尺图东图
+n廓线坡度比例尺上方，用于
+n对图上任一方向真方位角，
+n磁方位角，坐标方位角，
+n相互换算。</p>
+<p>(2) 地形图平面直角坐标系统和高程系统
+1、平面直角坐标系统
+n统一的高斯平面直角坐标系(比例尺为1:10000 或比例尺更小的地形图) ；
+n城市独立坐标系(城市地形图) ；
+n工程独立坐标系(工程建设范围比城市更小时，如建筑坐标系)。
+2、高程系统
+n1956黄海高程系；72.289m
+n1985国家高程基准；72.260m
+各高程系统之间只需加减一个常数即可进行换算。</p>
 <h3 id="82_1">8.2 地形图的应用（重点）</h3>
 
 
@@ -3937,61 +4360,6 @@ $$</p>
 
 
 
-
-  <h2 id="__comments">评论</h2>
-  
-  <script src="https://giscus.app/client.js"
-    data-repo="interset-wq/comment"
-    data-repo-id="R_kgDOOFimQg"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOOFimQs4CnvJd"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
-  </script>
-
-
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
   
 
 
@@ -4086,7 +4454,7 @@ $$</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "social", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"\u003ctag\u003e": "\u003cidentifier\u003e", "CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "social", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"\u003ctag\u003e": "\u003cidentifier\u003e", "CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
