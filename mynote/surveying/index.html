@@ -79,7 +79,7 @@
     
     
     <script defer src="https://cloud.umami.is/script.js" data-website-id="eb4aa2bc-3afd-4efe-9336-5f8dc9c2addb"></script>
-    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.42/dist/twikoo.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.42/dist/twikoo.all.min.js"></script> -->
     
 
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
@@ -1525,7 +1525,7 @@
           <li class="md-nav__item">
   <a href="#23" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 水准测量的方法及成果整理（重难点）
+      2.3 水准测量的方法及成果整理（计算）
     </span>
   </a>
   
@@ -1991,7 +1991,7 @@
           <li class="md-nav__item">
   <a href="#23" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 水准测量的方法及成果整理（重难点）
+      2.3 水准测量的方法及成果整理（计算）
     </span>
   </a>
   
@@ -2548,24 +2548,21 @@
 <p>高差法</p>
 <details class="note" open="open">
 <summary>高差法</summary>
-<p>高差即两点间高程之差。A 点到 B 点的高差为 B 点的高程减去 A 点的高程，即： 
-$$
-h_{AB} = H_B-H_A
-$$</p>
-<p>假如 A 点的高程是已知的，那么要求出 B 点的高程，关键是要知道 hAB 多少。而求 h<sub>AB</sub> 可以通过水准测量来得到。</p>
+<p>高差即两点间高程之差。A 点到 B 点的高差为 B 点的高程减去 A 点的高程，即<span class="arithmatex">\(h_{AB} = H_B-H_A\)</span></p>
+<p>假如 A 点的高程是已知的，那么要求出 B 点的高程，关键是要知道 h<sub>AB</sub> 多少，而求 h<sub>AB</sub> 可以通过水准测量来得到。</p>
 <ul>
-<li>水准仪 水平视线，读取水平视线在标尺上的读数，水准测量方向——A→B。</li>
-<li>A尺——后视尺， 读数a——后视读数。</li>
-<li>B尺——前视尺， 读数b——前视读数。</li>
-<li>A→B高差 <span class="arithmatex">\(h_{AB} = a-b\)</span></li>
+<li>水准仪水平视线，读取水平视线在标尺上的读数，水准测量方向A → B</li>
+<li>A尺是后视尺， 读数a是后视读数</li>
+<li>B尺是前视尺， 读数b是前视读数</li>
+<li>A →B 高差 <span class="arithmatex">\(h_{AB} = a-b\)</span></li>
 <li>A点高程 H<sub>A</sub> 已知， 求出B点高程 <span class="arithmatex">\(H_B= H_A + h_{AB}\)</span></li>
-<li>中间法水准测量：测量时，使前视、后视的距离保持大致相等，可以消除水准面曲率的影响</li>
+<li><mark class="critic">中间法水准测量：测量时，使前视、后视的距离保持大致相等，可以消除水准面曲率的影响</mark></li>
 </ul>
 </details>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/18/Ol45CGd7iqYEFac.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="高差法.png" src="https://s2.loli.net/2025/04/18/Ol45CGd7iqYEFac.png" /></a> -->
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/18/Ol45CGd7iqYEFac.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/18/Ol45CGd7iqYEFac.png" alt="高差法" width="400px"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/18/Ol45CGd7iqYEFac.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/18/Ol45CGd7iqYEFac.png" alt="高差法" width="400px" loading="lazy"></a></p>
 </div>
 </li>
 <li>
@@ -2574,20 +2571,20 @@ $$</p>
 <summary>仪高法</summary>
 <p>图示同上：</p>
 <ul>
-<li>水准测量方向—— A →B</li>
-<li>视线高程（即水平视线到大地水准面的铅垂距离）   <span class="arithmatex">\(H_i = H_A + a = H_B + b\)</span></li>
+<li>水准测量方向 A →B</li>
+<li>视线高程（即水平视线到大地水准面的铅垂距离）<span class="arithmatex">\(H_i = H_A + a = H_B + b\)</span></li>
 <li>B 点高程 <span class="arithmatex">\(H_B = H_i - b\)</span></li>
 <li>常用于施工测量，放样点的高程</li>
 </ul>
 </details>
 </li>
 </ol>
-<p><strong>连续水准测量</strong></p>
+<details class="note" open="open">
+<summary>连续水准测量</summary>
 <p>当A、B两点距离较远时，分成多段，每段都使用中间法水准测量，最后的高差为后视读数之和减去前视读数之和</p>
+</details>
 <h3 id="22">2.2 水准仪与水准尺（重点）</h3>
-<p>水准测量所用的仪器为水准仪，工具有水准尺和尺垫</p>
-<p><mark class="critic">水准仪按其精度可以分为DS05、DS1、DS3、DS10等四个等级，“D”和“S”表示“大地测量”和“水准仪”，型号后毫米数，表
-示1公里往、返测量的高差平均值的中误差。</mark></p>
+<p>水准测量所用的仪器为水准仪，工具有水准尺和尺垫。<mark class="critic">水准仪按其精度可以分为DS05、DS1、DS3、DS10等四个等级，“D”和“S”表示“大地测量”和“水准仪”，型号后毫米数，表示1公里往、返测量的高差平均值的中误差。</mark></p>
 <p>水准仪按其构造可以分为以下4类：</p>
 <ul>
 <li>激光水准仪</li>
@@ -2601,13 +2598,13 @@ $$</p>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/19/Szon29PJyvcFXwI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="水准器.png" src="https://s2.loli.net/2025/04/19/Szon29PJyvcFXwI.png" /></a> -->
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/Szon29PJyvcFXwI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/Szon29PJyvcFXwI.png" width="200px" alt="水准器"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/Szon29PJyvcFXwI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/Szon29PJyvcFXwI.png" width="200px" alt="水准器" loading="lazy"></a></p>
 </div>
 <ul>
 <li>
 <p>望远镜：照准竖立水准尺并读取水准尺上的读数。</p>
-<details class="note" open="open">
-<summary>Note</summary>
+<details class="note">
+<summary>望远镜</summary>
 <ul>
 <li>DS3型微倾式水准仪在目镜端观察到的物体成像是倒立的，而DZS3型自动安平式水准仪看到的物体成像是正的。</li>
 <li>测量望远镜要能瞄准，所以要有十字丝。目标的象与十字丝重合即瞄准。十字丝分划板是一块玻璃片，上面刻有两条相互垂直的长线，竖直的一条称为竖丝，横的一条称为中丝。在中丝的上下还对称地刻有两条与中丝平行的短横线，是用来测量距离的，称为视距丝。由视距丝测量出的距离就称为视距。十字丝的交点与物镜光心的连线，称为视准轴。水准测量是在视准轴水平的时候，用十字丝的中丝截取水准尺上的读数。</li>
@@ -2623,24 +2620,25 @@ $$</p>
 </details>
 </li>
 </ul>
-<p><strong>水准尺和尺垫</strong></p>
+<details class="info">
+<summary>水准尺和尺垫</summary>
 <ul>
-<li>水准尺：2m~5m，据构造可以分为直尺、塔尺和折尺，其中直尺又分为单面分划和双面分划两种。</li>
-<li>双面水准尺，一般长3m，多用于三、四等水准测量，以两把尺为一对使用。尺的两面均有分划，一面为黑白相间称黑面尺；
-另一面为红白相间称红面尺，两面的最小分划均为1cm，分米处有注记。每 10cm处（ E 字形刻划的尖端）注有阿拉伯数字。</li>
-<li>两把尺的黑面均由零开始分划和注记。红面的分划和注记，一把尺由4.687m开始分划和注记，另一把尺由4.787m开始分划和注记，两把尺红面注记的零点差为0.1m。</li>
-<li>塔尺，有3m、4m、5m多种，常用于碎部测量。</li>
-<li>尺垫——转点处放置水准尺用，生铁铸成的三角形或圆形板座。</li>
+<li>水准尺：2m~5m，据构造可以分为直尺、塔尺和折尺，其中直尺又分为单面分划和双面分划两种</li>
+<li>双面水准尺，一般长3m，多用于三、四等水准测量，以两把尺为一对使用。尺的两面均有分划，一面为黑白相间称黑面尺；另一面为红白相间称红面尺，两面的最小分划均为1cm，分米处有注记。每 10cm处（ E 字形刻划的尖端）注有阿拉伯数字</li>
+<li>两把尺的黑面均由零开始分划和注记。红面的分划和注记，一把尺由4.687m开始分划和注记，另一把尺由4.787m开始分划和注记，两把尺红面注记的零点差为0.1m</li>
+<li>塔尺，有3m、4m、5m多种，常用于碎部测量</li>
+<li>尺垫：转点处放置水准尺用，生铁铸成的三角形或圆形板座</li>
 </ul>
-<h3 id="23">2.3 水准测量的方法及成果整理（重难点）</h3>
+</details>
+<h3 id="23">2.3 水准测量的方法及成果整理（计算）</h3>
 <p><strong>水准仪的技术操作</strong></p>
 <p><mark class="critic">水准测量操作步骤：粗平→瞄准→精平→读数</mark></p>
 <ul>
 <li>
-<p>粗平——旋转脚螺旋，使圆水准器气泡居中。方法：对向转动脚螺旋 1 、 2 ——使气泡移至 1 、 2 方向的中间——转动脚螺旋 3 ，使气泡居中。视律：气泡移动方向与左手大拇指运动的方向一致。</p>
+<p>粗平：旋转脚螺旋，使圆水准器气泡居中。方法：对向转动脚螺旋 1 、 2， 使气泡移至 1 、 2 方向的中间，转动脚螺旋 3 ，使气泡居中。规律：气泡移动方向与左手大拇指运动的方向一致。</p>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/vAXPUQre2da3FWK.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/vAXPUQre2da3FWK.jpg" width="200px" alt="如何使圆水准器气泡居中"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/vAXPUQre2da3FWK.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/vAXPUQre2da3FWK.jpg" width="200px" alt="如何使圆水准器气泡居中" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/19/vAXPUQre2da3FWK.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="如何使圆水准器气泡居中.jpg" src="https://s2.loli.net/2025/04/19/vAXPUQre2da3FWK.jpg" /></a> -->
 </div>
 </li>
@@ -2652,7 +2650,7 @@ $$</p>
 <p>读数：精平后，用十字丝的中丝在水准尺上读数。</p>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/FlCyIQdm2kc6D1N.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/FlCyIQdm2kc6D1N.png" width="200px" alt="读数"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/FlCyIQdm2kc6D1N.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/FlCyIQdm2kc6D1N.png" width="200px" alt="读数" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/19/FlCyIQdm2kc6D1N.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="读数.png" src="https://s2.loli.net/2025/04/19/FlCyIQdm2kc6D1N.png" /></a> -->
 </div>
 <ul>
@@ -2664,8 +2662,7 @@ $$</p>
 <p><mark class="critic">水准点和水准路线</mark></p>
 <ul>
 <li>为满足各种测量的需要, 国家各级测绘部门在全国各地埋设并测定了很多高程点称水准点(BM)。永久性的国家等级水准点一般用钢筋混凝土制成，并深埋入地下。在建筑工地上的临时性水准点可用木桩，在木桩的顶端再钉上一颗具有圆球形表面的钉子，木桩周围用水泥混凝土加固。水准点埋设之后，为便于以后使用时寻找，应做点之记。即详细记载水准点所在的位置（如水准点距离某个房子多少米，周围有什么建筑物等）、水准点的编号和高程，测设日期等。</li>
-<li>水准测量等级：一、二、三、四等与图根水准。</li>
-<li>一、二等为精密水准测量，三、四等为普通水准测量。</li>
+<li>水准测量等级：一、二、三、四等与图根水准。一、二等为精密水准测量，三、四等为普通水准测量。</li>
 <li>注：采用某等级的水准测量方法测出其高程的水准点称为该等级水准点；各等水准点均应埋设永久性标石或标志，水准点的等级应注记在水准点标石或标记面上。</li>
 <li>
 <p>水准路线：水准点之间进行水准测量所经过的路线</p>
@@ -2675,7 +2672,7 @@ $$</p>
 <li>支水准路线 ， 由已知点 BM8 ——已知点 BM8</li>
 <li>水准网：若干条单一水准路线相互连接构成的图形</li>
 </ul>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/1sF8PMWt29pVQcX.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="水准路线.png" src="https://s2.loli.net/2025/04/19/1sF8PMWt29pVQcX.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/1sF8PMWt29pVQcX.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="水准路线.png" loading="lazy" src="https://s2.loli.net/2025/04/19/1sF8PMWt29pVQcX.png" /></a></p>
 </li>
 </ul>
 <p><strong>水准测量的外业实施</strong></p>
@@ -2683,52 +2680,52 @@ $$</p>
 <li>一般要求：三、四等水准和图根控制应采用DS3型水准仪和双面尺，必须往返测。尽量采用中间法。</li>
 <li>
 <p>实测程序:</p>
-<ul>
-<li>如图，首先选前进的方向。假如 A 点是已知点，B 点是待求点，如果 AB 两点相距很远，或者 AB 两点不能通视，那么就需要将 AB 分成多段，按水准测量原理，测出各段高差。例如先测出A 和 TP1 之间的高差，然后再测出各点之间的高差最后将这些高差累加起来就可以得到 AB 之间的高差。由 A 点的已知高程，即可求得 B 点高程。分段点，起着传递高程的作用，称为转点。转点用 TP 或 ZD 表示，在转点上（一般依照具体的地面情况）放置尺垫，再把水准尺立在尺垫上面。安置仪器的位置称为测站。</li>
-<li>若要测 AB 两点间的高差，先在 A 点立水准尺，然后选择一个点作为转点，在转点上安放尺垫，尺垫上立水准尺。A 点与转点之间距离一般不超过100m。然后在 A 点和转点之间大致中点的位置（为了抵消地球曲率的影响），安置水准仪，读取后、前视读数。将观测的数据填写到相关的表格中。这就是在第一测站上的工作。然后前视尺不动（所谓前视尺，就是我们面向前进的方向所看见的水准尺，背对着的就是后视尺），后视尺移到第2个转点上，然后水准仪搬到TP1、TP2转点之间（也叫做搬站）。接着读数，记录。依次前进直到 B 点。）</li>
-</ul>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/vk3nHK9jbgY1JxS.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/vk3nHK9jbgY1JxS.png" width="400px" alt="外业测量"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/19/vk3nHK9jbgY1JxS.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/19/vk3nHK9jbgY1JxS.png" width="400px" alt="外业测量" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/19/vk3nHK9jbgY1JxS.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="外业测量.png" src="https://s2.loli.net/2025/04/19/vk3nHK9jbgY1JxS.png" /></a> -->
 </div>
-<div class="arithmatex">\[ 
-h_{AB} = \sum a_i + \sum b_i \\
-H_B = H_A +\sum h_i
-\]</div>
+<ul>
+<li>如图，首先选前进的方向。假如 A 点是已知点，B 点是待求点，如果 AB 两点相距很远，或者 AB 两点不能通视，那么就需要将 AB 分成多段，按水准测量原理，测出各段高差。例如先测出A 和 TP<sub>1</sub> 之间的高差，然后再测出各点之间的高差最后将这些高差累加起来就可以得到 AB 之间的高差。由 A 点的已知高程，即可求得 B 点高程。分段点，起着传递高程的作用，称为转点。转点用 TP 或 ZD 表示，在转点上（一般依照具体的地面情况）放置尺垫，再把水准尺立在尺垫上面。安置仪器的位置称为测站。</li>
+<li>若要测 AB 两点间的高差，先在 A 点立水准尺，然后选择一个点作为转点，在转点上安放尺垫，尺垫上立水准尺。A 点与转点之间距离一般不超过100m。然后在 A 点和转点之间大致中点的位置（为了抵消地球曲率的影响），安置水准仪，读取后、前视读数。将观测的数据填写到相关的表格中。这就是在第一测站上的工作。然后前视尺不动（所谓前视尺，就是我们面向前进的方向所看见的水准尺，背对着的就是后视尺），后视尺移到第2个转点上，然后水准仪搬到TP<sub>1</sub>、TP<sub>2</sub>转点之间（也叫做搬站）。接着读数，记录。依次前进直到 B 点）</li>
+<li>通过以上步骤可得：<ul>
+<li><span class="arithmatex">\(h_{AB} = \sum a_i + \sum b_i\)</span></li>
+<li><span class="arithmatex">\(H_B = H_A +\sum h_i\)</span></li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <p><mark class="critic">水准测量的校核方法</mark></p>
 <ul>
-<li>计算校核：在实际工作中，我们是把水准测量的数据记录在表格中，然后再计算高差。计算过程中总是难免出错的，为了能够检查高差是否计算正确，就要进行计算检核。<span class="arithmatex">\(h_{AB} = \sum a_i + \sum b_i\)</span>，比较两种结果：相等——高差计算正确。</li>
-<li>测站检核：计算检核只能检核高差计算的正确性，但如果某一站的高差由于某种原因测错了，那计算检核就无能为力了。因此，我们对每一站的高差都要进行检核，这种检核就称为测站检核，常见的检核方法有双仪高法和双面尺法。</li>
+<li>计算校核：在实际工作中，我们是把水准测量的数据记录在表格中，然后再计算高差。计算过程中总是难免出错的，为了能够检查高差是否计算正确，就要进行计算检核。通过公式<span class="arithmatex">\(h_{AB} = \sum a_i + \sum b_i\)</span> 计算高差，比较两种结果：如果相等，则高差计算正确。</li>
+<li>测站检核：计算检核只能检核高差计算的正确性，但如果某一站的高差由于某种原因测错了，那计算检核就无能为力了。因此，我们对每一站的高差都要进行检核，这种检核就称为测站检核，常见的检核方法有两次仪器法和双面尺法。</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="两次仪器高法" name="__tabbed_1" type="radio" /><input id="双面尺法" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="两次仪器高法">两次仪器高法</label><label for="双面尺法">双面尺法</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
 <li>每站观测两次高差，以检核观测数据的正确性，通过两次不同仪器高度的水平视线, 对后视和前视水准尺读数(改变仪器高度应在10cm以上)</li>
-<li>两次高差之差应小于5mm，否则应重测；观测成果合格，则取两次高差之平均数。</li>
-<li>观测步骤（顺序）：<mark class="critic">后视-前视-改变仪器高-前视-后视，上述观测顺序简称为“后—前—前—后”</mark></li>
+<li>两次高差之差应小于5mm，否则应重测；观测成果合格，则取两次高差的平均数</li>
+<li>观测步骤：<mark class="critic">后视-前视-改变仪器高-前视-后视，上述观测顺序简称为“后—前—前—后”</mark></li>
 </ul>
 <details class="example" open="open">
 <summary>举例说明</summary>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/DI8jNxrLlmHuivT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/20/DI8jNxrLlmHuivT.png" width="400px" alt="两次仪器高"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/DI8jNxrLlmHuivT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/20/DI8jNxrLlmHuivT.png" width="400px" alt="两次仪器高" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/20/DI8jNxrLlmHuivT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="两次仪器高法图示.png" src="https://s2.loli.net/2025/04/20/DI8jNxrLlmHuivT.png" /></a> -->
 </div>
-<p>两次仪器高法 (安置两次仪器，高差 &gt; 10cm)已知 HA，HB，两次测得高差：
-$$
-h_1 = a_1 - b_1
-$$
-$$
-h_2 = a_2 - b_2
-$$</p>
+<p>两次仪器高法 (安置两次仪器，高差 &gt; 10cm)</p>
+<p>已知 H<sub>A</sub>，H<sub>B</sub>，两次测得高差：</p>
+<ul>
+<li><span class="arithmatex">\(h_1 = a_1 - b_1\)</span></li>
+<li><span class="arithmatex">\(h_2 = a_2 - b_2\)</span></li>
+</ul>
 <p>容许高差之差：<span class="arithmatex">\(h_1- h_2 = f ≤ ±5 mm\)</span></p>
 <p>两次高差取平均 <span class="arithmatex">\(h = \frac{(h_1 + h_2)}{2}\)</span></p>
 <p>得 <span class="arithmatex">\(H_B = H_A + h\)</span></p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/tLjTBiOVbfu23AK.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="两次仪器高法.png" src="https://s2.loli.net/2025/04/20/tLjTBiOVbfu23AK.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/tLjTBiOVbfu23AK.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="两次仪器高法.png" loading="lazy" src="https://s2.loli.net/2025/04/20/tLjTBiOVbfu23AK.png" /></a></p>
 </details>
 </div>
 <div class="tabbed-block">
@@ -2754,6 +2751,7 @@ $$</p>
 </div>
 </div>
 </div>
+<hr />
 <p><mark class="critic">成果检验</mark></p>
 <p>在水准测量的观测、记录等外业工作完成后，就要转入到内业计算阶段。由于在外业阶段受到各种误差的影响，会使测量成果的精度降低。这些影响在某一个测站上反映可能不明显，在测站上进行检核可能符合要求，但随着测站数的增多，会使误差积累起来，这种积累可能导致测量成果超出限差要求。因此还需要
 进行水准测量路线成果检核。</p>
