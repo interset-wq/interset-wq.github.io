@@ -1543,7 +1543,7 @@
           <li class="md-nav__item">
   <a href="#25" class="md-nav__link">
     <span class="md-ellipsis">
-      2.5 三、四等水准测量（实验、重难点）
+      2.5 三、四等水准测量（实验）
     </span>
   </a>
   
@@ -1585,7 +1585,7 @@
           <li class="md-nav__item">
   <a href="#33" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 水平角和垂直角观测（重点）
+      3.3 水平角和垂直角观测（计算）
     </span>
   </a>
   
@@ -1609,7 +1609,7 @@
           <li class="md-nav__item">
   <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1 钢尺量距（重难点）
+      4.1 钢尺量距（计算）
     </span>
   </a>
   
@@ -1618,7 +1618,7 @@
           <li class="md-nav__item">
   <a href="#42" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2 视距测量（重点）
+      4.2 视距测量（计算）
     </span>
   </a>
   
@@ -2009,7 +2009,7 @@
           <li class="md-nav__item">
   <a href="#25" class="md-nav__link">
     <span class="md-ellipsis">
-      2.5 三、四等水准测量（实验、重难点）
+      2.5 三、四等水准测量（实验）
     </span>
   </a>
   
@@ -2051,7 +2051,7 @@
           <li class="md-nav__item">
   <a href="#33" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 水平角和垂直角观测（重点）
+      3.3 水平角和垂直角观测（计算）
     </span>
   </a>
   
@@ -2075,7 +2075,7 @@
           <li class="md-nav__item">
   <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1 钢尺量距（重难点）
+      4.1 钢尺量距（计算）
     </span>
   </a>
   
@@ -2084,7 +2084,7 @@
           <li class="md-nav__item">
   <a href="#42" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2 视距测量（重点）
+      4.2 视距测量（计算）
     </span>
   </a>
   
@@ -2730,32 +2730,29 @@
 </div>
 <div class="tabbed-block">
 <p>读取每一支水准尺的黑面和红面分划读数，通过前、后视尺的黑面读数计算出黑面高差；通过前、后视尺的红面读数计算出红面高差，两次高差之差应小于±5mm；同一尺的红黑面读数之差应小于尺常数±3mm；否则，该测站读数应重测。若观测成果合格，则取红、黑面高差的平均数。</p>
-<p>观测步骤（“后—前—前—后”）：</p>
+<p>观测步骤：后—前—前—后</p>
 <ol>
-<li>瞄准后视点水准尺黑面分划→精平→读数；</li>
-<li>瞄准前视点水准尺黑面分划→精平→读数；</li>
-<li>瞄准前视点水准尺红面分划→精平→读数。</li>
-<li>瞄准后视点水准尺红面分划→精平→读数；</li>
+<li>瞄准后视点水准尺黑面分划→精平→读数</li>
+<li>瞄准前视点水准尺黑面分划→精平→读数</li>
+<li>瞄准前视点水准尺红面分划→精平→读数</li>
+<li>瞄准后视点水准尺红面分划→精平→读数</li>
 </ol>
 <details class="example" open="open">
 <summary>举例说明</summary>
-<p>用黑红双面水准尺，在尺子两面读数。已知HA，求HB，计算和两次仪器高法类似。但是必须保证：
-$$
-a2- a1 ≤ 尺常数±3mm
-$$
-$$
-b2- b1 ≤ 尺常数±3m
-$$</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/pT6JQrle8g4NGCR.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="双面尺法.png" src="https://s2.loli.net/2025/04/20/pT6JQrle8g4NGCR.png" /></a></p>
+<p>用黑红双面水准尺，在尺子两面读数。<mark class="critic">红面的分划和注记，一把尺由4.687m开始分划和注记，另一把尺由4.787m开始分划和注记，上面这两个数就是尺常数，两把尺红面注记的零点差为0.1m</mark>。已知HA，求HB，计算和两次仪器高法类似。但是必须保证：</p>
+<ul>
+<li><span class="arithmatex">\(a_2- a_1 ≤ 尺常数±3mm\)</span></li>
+<li><span class="arithmatex">\(b_2- b_1 ≤ 尺常数±3mm\)</span></li>
+</ul>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/pT6JQrle8g4NGCR.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="双面尺法.png" loading="lazy" src="https://s2.loli.net/2025/04/20/pT6JQrle8g4NGCR.png" /></a></p>
 </details>
 </div>
 </div>
 </div>
 <hr />
 <p><mark class="critic">成果检验</mark></p>
-<p>在水准测量的观测、记录等外业工作完成后，就要转入到内业计算阶段。由于在外业阶段受到各种误差的影响，会使测量成果的精度降低。这些影响在某一个测站上反映可能不明显，在测站上进行检核可能符合要求，但随着测站数的增多，会使误差积累起来，这种积累可能导致测量成果超出限差要求。因此还需要
-进行水准测量路线成果检核。</p>
-<p>高差闭合差 f<sub>h</sub> ：一条水准路线高差测量值之和与高差理论值之和的差值，以毫米为单位，保留整数，即 
+<p>在水准测量的观测、记录等外业工作完成后，就要转入到内业计算阶段。由于在外业阶段受到各种误差的影响，会使测量成果的精度降低。这些影响在某一个测站上反映可能不明显，在测站上进行检核可能符合要求，但随着测站数的增多，会使误差积累起来，这种积累可能导致测量成果超出限差要求。因此还需要进行水准测量路线成果检核。</p>
+<p>高差闭合差 <span class="arithmatex">\(f_h\)</span> ：一条水准路线高差测量值之和与高差理论值之和的差值，以毫米为单位，保留整数，即 
 $$
 f_h = \sum h_i - \sum h_理
 $$</p>
@@ -2763,10 +2760,10 @@ $$</p>
 <li>三等水准测量：平坦地区<span class="arithmatex">\(f_{h允} = ±12 \sqrt{L}\)</span>； 山地<span class="arithmatex">\(f_{h允} = ±4 \sqrt{n}\)</span></li>
 <li>四等水准测量：平坦地区<span class="arithmatex">\(f_{h允} = ±20 \sqrt{L}\)</span>； 山地<span class="arithmatex">\(f_{h允} = ±6 \sqrt{n}\)</span></li>
 <li>图根水准测量：平坦地区<span class="arithmatex">\(f_{h允} = ±40 \sqrt{L}\)</span>； 山地<span class="arithmatex">\(f_{h允} = ±12 \sqrt{n}\)</span></li>
-<li>当<span class="arithmatex">\(f_h &lt; f_{h允}\)</span>，成果合格。否则成果不合格，需重测。计算<span class="arithmatex">\(f_{h允}\)</span>时，L的单位必须为km（保留以为小数），计算时不需要带单位计算，计算结果直接以mm为单位（保留整数位）</li>
 </ul>
+<p>当<span class="arithmatex">\(f_h &lt; f_{h允}\)</span>，成果合格。否则成果不合格，需重测。计算<span class="arithmatex">\(f_{h允}\)</span>时，L的单位必须为km（保留一位小数），计算时不需要带单位计算，计算结果直接以mm为单位（保留整数位）</p>
 <p><mark class="critic">水准测量成果整理</mark></p>
-<p>根据已知水准点的高程，水准路线高差观测值，分配高差闭合差，计算出未知点的高程。</p>
+<p>根据已知水准点的高程，水准路线高差观测值，分配高差闭合差，计算出未知点的高程。计算过程保留正负号。</p>
 <ol>
 <li>第一步：高差闭合差的计算（高差闭合差以毫米为单位保留整数）<span class="arithmatex">\(f_h = \sum h_i - \sum h_理\)</span><ul>
 <li>附合水准路线<span class="arithmatex">\(f_h = \sum h_i - (H_终 - H_起)\)</span></li>
@@ -2776,14 +2773,12 @@ $$</p>
 </ul>
 </li>
 <li>第二步：高差改正<ul>
-<li>原则：取高差闭合差的相反数，按路线长 L<sub>i</sub> (平坦)或测站数 n<sub>i</sub> (山地)比例分配</li>
-<li>高差改正数 V<sub>i</sub> 公式：
-$$ 
-V_i = - \frac{L_i}{L} f_h \tag{平坦}
-$$
-$$ 
-V_i = - \frac{n_i}{n} f_h \tag{山地}
-$$</li>
+<li>原则：取高差闭合差的相反数，按路线长 <span class="arithmatex">\(L_i\)</span> (平坦)或测站数 <span class="arithmatex">\(n_i\)</span> (山地)比例分配</li>
+<li>高差改正数 <span class="arithmatex">\(V_i\)</span> 公式：<ul>
+<li>平坦<span class="arithmatex">\(V_i = - \frac{L_i}{L} f_h\)</span></li>
+<li>山地<span class="arithmatex">\(V_i = - \frac{n_i}{n} f_h\)</span></li>
+</ul>
+</li>
 <li>核验<span class="arithmatex">\(\sum V_i = - f_h\)</span></li>
 </ul>
 </li>
@@ -2794,57 +2789,65 @@ $$</li>
 </ol>
 <details class="question" open="open">
 <summary>例题</summary>
-<p>按图根水准测量要求施测某附合水准路线观测成果，BM－A和BM－B为已知高程水准点，箭头为水准测量前进方向，路线上方的数字为测得的两点间的高差，路线下方数字为该段路线的长度，试计算待定点1，2，3点的高程。</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/Fxteio2YqUTs8Dw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="求待定点高程.png" src="https://s2.loli.net/2025/04/20/Fxteio2YqUTs8Dw.png" /></a></p>
+<p><strong>（附和水准路线、图根水准测量）</strong>按图根水准测量要求施测某附合水准路线观测成果，BM－A和BM－B为已知高程水准点，箭头为水准测量前进方向，路线上方的数字为测得的两点间的高差，路线下方数字为该段路线的长度，试计算待定点1，2，3点的高程。</p>
+<details class="note">
+<summary>图根水准测量、附和水准路线计算公式</summary>
+<ul>
+<li>图根水准测量高差闭合差允许值：平坦地区<span class="arithmatex">\(f_{h允} = ±40 \sqrt{L}\)</span>， 山地<span class="arithmatex">\(f_{h允} = ±12 \sqrt{n}\)</span></li>
+<li>附合水准路线高差闭合差<span class="arithmatex">\(f_h = \sum h_i - (H_终 - H_起)\)</span></li>
+</ul>
+</details>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/Fxteio2YqUTs8Dw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="求待定点高程.png" loading="lazy" src="https://s2.loli.net/2025/04/20/Fxteio2YqUTs8Dw.png" /></a></p>
 <p><strong>解：</strong> 使用表格法整理数据</p>
 <ul>
 <li>高差理论值 <span class="arithmatex">\(\sum h_理 = H_B - H_A = 49.579 - 45.286 = +4.293 m\)</span></li>
 <li>高差闭合差 <span class="arithmatex">\(f_h = \sum h_i - (H_B - H_A) = (2.331 + 2.813 -2.244 + 1.430) - 4.293 = +4.330 - 4.293 = +0.037 m = +37 mm\)</span></li>
-<li>高差闭合差允许值 $f_{h允} = \pm 40 \sqrt{L} = \pm 40 \sqrt{7.4} = \pm 109 mm $</li>
+<li>高差闭合差允许值 <span class="arithmatex">\(f_{h允} = \pm 40 \sqrt{L} = \pm 40 \sqrt{7.4} = \pm 109 mm\)</span></li>
+<li><span class="arithmatex">\(\therefore f_h &lt; f_{h允}\)</span>，可进行高差改正</li>
 <li>每千米路线高差改正值$ = \frac{f_h}{L} = \frac{-37}{7.4} = -5 mm/km$</li>
 </ul>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/eab8mkyTHxOusFS.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="水准测量成果整理.png" src="https://s2.loli.net/2025/04/20/eab8mkyTHxOusFS.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/eab8mkyTHxOusFS.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="水准测量成果整理.png" loading="lazy" src="https://s2.loli.net/2025/04/20/eab8mkyTHxOusFS.png" /></a></p>
 </details>
 <h3 id="24">2.4 水准测量的误差分析</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="仪器误差" name="__tabbed_2" type="radio" /><input id="观测误差" name="__tabbed_2" type="radio" /><input id="外界环境影响" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="仪器误差"><strong>仪器误差</strong></label><label for="观测误差">观测误差</label><label for="外界环境影响">外界环境影响</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li>校正残余误差 原因： i 角误差检校后的残余值。方法：观测时注意使前、后视距相等，可消除或减弱其影响。</li>
-<li>水准尺误差 原因：水准尺分划不准确、尺长变化、尺弯曲等。方法：检验水准尺上真长与名义长度，加尺长改正数</li>
-<li>水准尺的零点误差：一测段中采用偶数站到达方式予以消除。</li>
-<li>水准尺倾斜 读数时，水准尺应竖直。水准尺前后倾斜，在水准仪望远镜中不会察觉，由此引起的水准尺读数总是偏大。视线高度愈大，误差就愈大。在水准尺上安装圆水准器，保证尺子竖直。</li>
-<li>视差 水准尺像没有准确成在十字丝分划板上，造成眼睛的观察位置不同时，读出的标尺读数也不同，由此产生读数误差。 按操作视定进行目镜对光，物镜对光。</li>
+<li><strong>校正残余误差</strong> 原因：<span class="arithmatex">\(i\)</span> 角误差检校后的残余值。方法：观测时注意使前、后视距相等，可消除或减弱其影响。</li>
+<li><strong>水准尺误差</strong> 原因：水准尺分划不准确、尺长变化、尺弯曲等。方法：检验水准尺上真长与名义长度，加尺长改正数</li>
+<li><strong>水准尺的零点误差</strong> 一测段中采用偶数站到达方式予以消除。</li>
+<li><strong>水准尺倾斜</strong> 读数时，水准尺应竖直。水准尺前后倾斜，在水准仪望远镜中不会察觉，由此引起的水准尺读数总是偏大。视线高度愈大，误差就愈大。在水准尺上安装圆水准器，保证尺子竖直。</li>
+<li><strong>视差</strong> 水准尺像没有准确成在十字丝分划板上，造成眼睛的观察位置不同时，读出的标尺读数也不同，由此产生读数误差。按操作视定进行目镜对光，物镜对光。</li>
 </ul>
 </div>
 <div class="tabbed-block">
 <ul>
-<li>管水准气泡居中误差 每次读尺前应严格居中管水准气泡。</li>
-<li>读数误差 读数误差与望远镜的放大倍数及视线长有关，视线愈长，读数误差愈大，视范视定，使用DS3型水准仪进行三等水准测量时，视线长≤80m。进行四等水准测量时，视线长≤100m 。</li>
+<li><strong>管水准气泡居中误差</strong> 每次读尺前应严格居中管水准气泡。</li>
+<li><strong>读数误差</strong> 读数误差与望远镜的放大倍数及视线长有关，视线愈长，读数误差愈大。规定使用DS3型水准仪进行三等水准测量时，视线长≤80m；进行四等水准测量时，视线长≤100m</li>
 </ul>
 </div>
 <div class="tabbed-block">
 <ul>
-<li>仪器下沉和尺垫下沉 仪器或水准尺安置在软土或植被上→产生下沉。采用“后—前—前—后”的观测顺序，削弱仪器下沉的影响，往返观测取观测高差的平均值，削弱尺垫下沉的影响。</li>
-<li>大气折光影响<ul>
-<li>地球曲率影响，前后视距相等来消除，即地球曲
+<li><strong>仪器下沉和尺垫下沉</strong> 仪器或水准尺安置在软土或植被上会产生下沉。采用“后—前—前—后”的观测顺序，削弱仪器下沉的影响，往返观测取观测高差的平均值，削弱尺垫下沉的影响。</li>
+<li><strong>大气折光影响</strong><ul>
+<li>地球曲率影响：前后视距相等来消除，即地球曲
 率对前后尺读数影响相同</li>
 <li>大气折光影响：由于大气折光，视线会发生弯曲。越靠近地面，光线折射的影响也就越大。因此要求视线要高于地面0.2m以上，前后视距相等也可消减该影响</li>
 </ul>
 </li>
-<li>温度影响 日光照射水准仪，仪器各构件受热不匀引起不视则膨胀，影响仪器轴线间的正常关系→观测产生误差。观测时注意撑伞遮阳，夏天中午一般不做水准测量。在沙地，水泥地，一般只在上午10点之前作水准测量。高精  度的水准测量也只在上午10点之前进行</li>
+<li><strong>温度影响</strong> 日光照射水准仪，仪器各构件受热不匀引起不视则膨胀，影响仪器轴线间的正常关系→观测产生误差。观测时注意撑伞遮阳，夏天中午一般不做水准测量。在沙地、水泥地，一般只在上午10点之前作水准测量。高精 度的水准测量也只在上午10点之前进行</li>
 </ul>
 </div>
 </div>
 </div>
-<h3 id="25">2.5 三、四等水准测量（实验、重难点）</h3>
+<h3 id="25">2.5 三、四等水准测量（实验）</h3>
 <p><mark class="critic">三、四等水准测量的技术要求</mark></p>
 <p>国家一、二等水准控制点比较稀疏，水准点之间的距离较大，因此为满足工程建设的需要，还要在国家一、二等高程控制网的基础上进行三、四等水准测量，增加国家高程控制网的密度，也可作为小地区首级高程控制。</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/OlW21LegKPYs7CG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="三四等水准测量.png" src="https://s2.loli.net/2025/04/20/OlW21LegKPYs7CG.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/20/OlW21LegKPYs7CG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="三四等水准测量.png" loading="lazy" src="https://s2.loli.net/2025/04/20/OlW21LegKPYs7CG.png" /></a></p>
 <p><mark class="critic">三、四等水准测量的观测方法</mark></p>
 <ol>
 <li>
-<p>测站观测程序 (采用双面尺法时，后—前—前—后) </p>
+<p>测站观测程序 （采用双面尺法时，后—前—前—后）</p>
 <p>先安置好仪器：</p>
 <ul>
 <li>后视水准尺黑面，精平，读上、下、中丝读数</li>
@@ -2905,7 +2908,7 @@ $$</li>
 <p>四等水准测量高差闭合差的限差：</p>
 <ul>
 <li><span class="arithmatex">\(\pm 20 \sqrt{L}mm\)</span>（L为路线长，以km计）</li>
-<li>±<span class="arithmatex">\(\pm 6 \sqrt{N}mm\)</span>（N为测站数）</li>
+<li><span class="arithmatex">\(\pm 6 \sqrt{N}mm\)</span>（N为测站数）</li>
 </ul>
 <h2 id="_3">第三章 角度测量和经纬仪</h2>
 <h3 id="31">3.1 角度测量原理</h3>
@@ -2915,7 +2918,7 @@ $$</li>
 <p>地面一点与两个目标点的连线在水平面投影的夹角β即为水平角。</p>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/bhnXJvoH9wKV7NT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/bhnXJvoH9wKV7NT.png" width="200px" alt="水平角"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/bhnXJvoH9wKV7NT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/bhnXJvoH9wKV7NT.png" height="100px" alt="水平角" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/21/bhnXJvoH9wKV7NT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="水平角.png" src="https://s2.loli.net/2025/04/21/bhnXJvoH9wKV7NT.png" /></a> -->
 </div>
 <p>在 B 点的正上方水平安置一个有分划的圆盘，圆盘的中心刚好在过 B 点的铅垂线上。然后在圆盘的上方安装一个望远镜，望远镜能够在水平面内和铅垂面内旋转，这样就可以瞄准不同方向和不同高度的目标。另外为了测出水平角的大小，因此还要有一个用于读数的指标，当望远镜转动的时候指标也一起转动。当望远镜瞄准 A 点的时候，指标就指向水平圆盘上的分划 a，当望远镜瞄准 C 点的时候，指标就指向水平圆盘上的分划 c，假如圆盘的分划是顺时针的，则水平角 $β = c-a $</p>
@@ -2935,12 +2938,13 @@ $$</li>
 </div>
 </div>
 </div>
+<hr />
 <p>根据水平角和垂直角观测原理，要制造一台既能够观测水平角又能观测垂直角的仪器，它必须要满足几个必要条件：</p>
 <ol>
-<li>仪器的中心必须位于过测站点的铅垂线上。</li>
-<li>照准部设备（望远镜）要能上下、左右转动，上下转动时所形成的是竖直面。</li>
-<li>要具有能安置成水平位置和竖直位置并有刻划的圆盘。</li>
-<li>要有能指示度盘上读数的指标。</li>
+<li>仪器的中心必须位于过测站点的铅垂线上</li>
+<li>照准部设备（望远镜）要能上下、左右转动，上下转动时所形成的是竖直面</li>
+<li>要具有能安置成水平位置和竖直位置并有刻划的圆盘</li>
+<li>要有能指示度盘上读数的指标</li>
 </ol>
 <p>经纬仪就是能同时满足这几个必要条件的用于角度测量的仪器。</p>
 <h3 id="32">3.2 光学经纬仪的构造及度盘读数</h3>
@@ -2948,9 +2952,9 @@ $$</li>
 <summary>常见经纬仪型号</summary>
 <p>国产光学经纬仪型号</p>
 <ul>
-<li>DJ07，DJ1，DJ2，DJ6，DJ30，</li>
+<li>DJ07，DJ1，DJ2，DJ6，DJ30</li>
 <li>D，J代表 “大地测量”和“经纬仪”，07，1，2，6，30分别为一测回水平方向观测中误差秒数</li>
-<li>工程测量常用DJ6 级。</li>
+<li>工程测量常用DJ6 级</li>
 </ul>
 <p>徕卡光学经纬仪型号T4(0.5″)，T3 (1″) ，T2 (2″) ，T1 (6″)</p>
 </details>
@@ -2965,7 +2969,7 @@ $$</li>
 </ul>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/lxWn1fXgCei7Rku.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/lxWn1fXgCei7Rku.png" width="200px" alt="分微尺"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/lxWn1fXgCei7Rku.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/lxWn1fXgCei7Rku.png" width="200px" alt="分微尺" loading="lazy"></a></p>
 <p><!-- <a class="glightbox" href="https://s2.loli.net/2025/04/21/lxWn1fXgCei7Rku.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="分微尺.png" src="https://s2.loli.net/2025/04/21/lxWn1fXgCei7Rku.png" /></a> -->   </p>
 </div>
 <p>读数方法：如图，首先看度盘的哪一条分划线落在分微尺的0到6的注记之间，那么度数就由该分划线的注记读出（在水平度盘上读 214°），分数就是这条分划线所指向的分微尺上的读数（在分微尺上精确读54'），还需要估读一位小数，再将估读的值换算成秒（在分微尺上估读0.7′，换算为42″）</p>
@@ -2994,40 +2998,34 @@ $$</li>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/21/b9Xe4uVwAqNCjF3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="读数.png" src="https://s2.loli.net/2025/04/21/b9Xe4uVwAqNCjF3.png" /></a> -->
 </div>
 <p>读数方法：最初从读数显微镜中看到的影像，度盘的对径分划是错开的。首先转动测微轮对齐上、下分划。然后从左至右找一对注记，使这一对注记正好相差180°。这里要注意，正像的分划线在左边，倒像的分划线应该在右边。所以找到的应该是134°和314°，135°和315°这两对分划，（且要求这一对注记为相距最近的一对），所以选135°。从135°开始从左至右数格子，每一格为10′，一共0格，所以度盘窗口的读数为135°0′。然后从测微尺窗口中读出分数和秒数。测微尺窗口有两部分注记，左边的代表“分”，右边的代表“十秒”，所以测微尺窗口左边的读数为2′，右边为读数为2″，然后再估读一位，那么右边的读数为 2.3″。最后其读数为135°02′02.3″，采用对径分划重合法读数，实质上是取度盘直径两端读数的平均值，这样可以消除度盘偏心误差的影响。</p>
-<details>
+<!-- ??? "改进后的读数" -->
+<details class="success inline end">
 <summary>改进后的读数</summary>
-<div class="admonition success inline end">
-<p class="admonition-title">Success</p>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/21/J82BfFit4N5OSlY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/J82BfFit4N5OSlY.png" width="200px" alt="读数"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/21/J82BfFit4N5OSlY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="1.png" src="https://s2.loli.net/2025/04/21/J82BfFit4N5OSlY.png" /></a> -->
-</div>
-<div class="admonition success inline">
-<p class="admonition-title">Success</p>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/21/OxomCFlYrP5KhUJ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/OxomCFlYrP5KhUJ.png" width="200px" alt="读数"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/21/OxomCFlYrP5KhUJ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="2.png" src="https://s2.loli.net/2025/04/21/OxomCFlYrP5KhUJ.png" /></a> -->
-</div>
 </details>
-<h3 id="33">3.3 水平角和垂直角观测（重点）</h3>
+<h3 id="33">3.3 水平角和垂直角观测（计算）</h3>
 <p><strong>经纬仪的使用</strong></p>
 <ol>
 <li>
 <p>经纬仪的安置——对中，整平</p>
-<p>要求：对中 小于 ±2mm； 整平 小于 1 格</p>
-<p>对中： 使仪器中心不测站点位于同一铅垂线上。</p>
-<p>打开三脚架腿，调整长度使脚架高度适合于观测者高度；张开三角架，安置在测站上，架头大致水平；取出经纬仪放置在三角架头上，使仪器基座中心基本对齐三角架头的中心，旋入连接螺旋，用垂球或经纬仪的光学对中器对中。</p>
-<p>对中方法如下：</p>
+<p>要求：对中小于 ±2mm; 整平小于 1 格</p>
+<p>对中： 使仪器中心与测站点位于同一铅垂线上</p>
+<p>打开三脚架腿，调整长度使脚架高度适合于观测者高度；张开三角架，安置在测站上，架头大致水平；取出经纬仪放置在三角架头上，使仪器基座中心基本对齐三角架头的中心，旋入连接螺旋，用垂球或经纬仪的光学对中器对中。对中方法如下：</p>
 <ul>
 <li>
-<p>垂球对中</p>
+<p>垂球对中（不常用）</p>
 <details class="info">
 <summary>垂球对中</summary>
 <ul>
-<li>将垂球悬挂于连接螺旋中心的挂钩上，调整垂球线长度使垂球尖略高于测站点5mm。</li>
-<li>粗对中：如果偏差较大，可平移三脚架，使垂球尖大致对准测站点中心，将三脚架的脚尖踩入土中。</li>
-<li>精对中：稍微旋松连接螺旋，双手扶住仪器基座，在架头上移动仪器，使垂球尖准确对准测站点，旋紧连接螺旋。</li>
+<li>将垂球悬挂于连接螺旋中心的挂钩上，调整垂球线长度使垂球尖略高于测站点5mm</li>
+<li>粗对中：如果偏差较大，可平移三脚架，使垂球尖大致对准测站点中心，将三脚架的脚尖踩入土中</li>
+<li>精对中：稍微旋松连接螺旋，双手扶住仪器基座，在架头上移动仪器，使垂球尖准确对准测站点，旋紧连接螺旋</li>
 <li>垂球对中误差应小于±2mm</li>
-<li>整平：旋转脚螺旋，在相互垂直的两个方向使照准部管水准气泡居中。</li>
-<li>缺点：受风力的影响，而且必须两人操作。不经常采用。</li>
+<li>整平：旋转脚螺旋，在相互垂直的两个方向使照准部管水准气泡居中</li>
+<li>缺点：受风力的影响，而且必须两人操作。</li>
 </ul>
 </details>
 </li>
@@ -3036,22 +3034,22 @@ $$</li>
 <details class="info" open="open">
 <summary>光学对中</summary>
 <ul>
-<li>粗对中：手握三角架，眼睛观察光学对中器，移动三脚架2个脚，并保持“ 架头 ” 大致水平。使对中标志基本对准测站点中心，脚尖踩入土中。</li>
-<li>伸缩脚架粗平：根据气泡位置，伸缩三脚架 2 个脚，使圆水准气泡居中。</li>
+<li>粗对中：手握三角架，眼睛观察光学对中器，移动三脚架2个脚，并保持架头大致水平。使对中标志基本对准测站点中心，脚尖踩入土中。</li>
+<li>伸缩脚架粗平：根据气泡位置，伸缩三脚架 2 个脚，使圆水准气泡居中</li>
 <li>
+<p>旋转三个脚螺旋精平：转动照准部，按“左手大拇指法则”旋转脚螺旋，使管水准气泡在相互垂直的两个方向居中</p>
 <ul>
-<li>转动仪器，使水准管与 1 、2 脚螺旋连线平行。</li>
-<li>根据气泡位置运用法则，对向旋转 1 、2 脚螺旋。</li>
-<li>转动仪器 90°，运用法则，旋转 3 脚螺旋。</li>
+<li>转动仪器，使水准管与 1 、2 脚螺旋连线平行</li>
+<li>根据气泡位置运用法则，对向旋转 1 、2 脚螺旋</li>
+<li>转动仪器 90°，运用法则，旋转 3 脚螺旋</li>
 </ul>
-<p>旋转三个脚螺旋精平：转动照准部，按“左手大拇指法则”旋转脚螺旋，使管水准气泡在相互垂直的两个方向居中。</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/CTIcP8BfvRo6lyp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="对中.png" src="https://s2.loli.net/2025/04/21/CTIcP8BfvRo6lyp.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/CTIcP8BfvRo6lyp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="对中.png" loading="lazy" src="https://s2.loli.net/2025/04/21/CTIcP8BfvRo6lyp.png" /></a></p>
 </li>
 <li>
 <p>精平操作会略微破坏已完成的对中关系</p>
 </li>
-<li>再次精对中：旋松连接螺旋，眼睛观察光学对中器，平移仪器基座(注意，不要有旋转运动)，使对中标志准确对准测站点中心，拧紧连接螺旋。</li>
-<li>脚螺旋精平：旋转照准部，在相互垂直两方向检查管水准气泡居中情况，否则从再次精对中开始重复操作。一测回观测过程中，不得再调气泡。</li>
+<li>再次精对中：旋松连接螺旋，眼睛观察光学对中器，平移仪器基座（注意，不要有旋转运动），使对中标志准确对准测站点中心，拧紧连接螺旋</li>
+<li>脚螺旋精平：旋转照准部，在相互垂直两方向检查管水准气泡居中情况，否则从再次精对中开始重复操作。一测回观测过程中，不得再调气泡</li>
 </ul>
 </details>
 </li>
@@ -3059,17 +3057,19 @@ $$</li>
 </li>
 <li>
 <p>瞄准和读数</p>
+<p>测角照准标志：竖立于测点的标杆、测钎、用三根竹杆悬吊垂球线或觇牌</p>
+<ul>
+<li>瞄准：水平角测量，望远镜十字丝竖丝瞄准照准标志。竖直角测量，则用横丝与目标顶部相切。步骤： 粗瞄—制动—调焦—微动精瞄<ul>
+<li>目镜对光——望远镜对向明亮背景，转动目镜调焦螺旋使十字丝清晰</li>
+<li>粗瞄目标——望远镜上的粗瞄器瞄准目标 ，水平、垂直制动</li>
+<li>物镜对光——转动物镜调焦螺旋使目标的像最清晰 ，旋转水平或垂直微动螺旋，使目标像靠近十字</li>
+<li>精瞄目标——从望远镜观察，旋转水平、垂直微动螺旋，使十字丝精确对准目标。尽量瞄准目标下部，减少由于目标不垂直引起的方向误差</li>
+</ul>
+</li>
+<li>读数：读数光路由反光镜采光，经过一系列棱镜反射，穿越垂直度盘、水平度盘和光学分微尺，最终到达读数显微镜成像，进行度盘读数</li>
+</ul>
 </li>
 </ol>
-<p>测角照准标志：竖立于测点的标杆、测钎、用三根竹杆悬吊垂球线或觇牌。</p>
-<ul>
-<li>瞄准：水平角测量，望远镜十字丝竖丝瞄准照准标志。竖直角测量，则用横丝不目标顶部相切。<ul>
-<li>步骤： 粗瞄—制动—调焦—微动精瞄。</li>
-<li>目镜对光——望远镜对向明亮背景，转动目镜调焦螺旋使十字丝清晰 ；粗瞄目标——望远镜上的粗瞄器瞄准目标 ，水平、垂直制动；物镜对光——转动物镜调焦螺旋使目标的像最清晰 ，旋转水平或垂直微动螺旋，使目标像靠近十字丝；精瞄目标——从望远镜观察，旋转水平、垂直微动螺旋，使十字丝精确对准目标。尽量瞄准目标下部，减少由于目标不垂直引起的方向误差。</li>
-</ul>
-</li>
-<li>读数：读数光路：由反光镜采光，经过一系列棱镜反射，穿越垂直度盘、水平度盘和光学分微尺，最终到达读数显微镜成像，进行度盘读数</li>
-</ul>
 <p><mark class="critic">水平角测量方法</mark></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="测回法" name="__tabbed_5" type="radio" /><input id="方向观测法全圆方向法" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="测回法">测回法</label><label for="方向观测法全圆方向法">方向观测法（全圆方向法）</label></div>
 <div class="tabbed-content">
@@ -3081,11 +3081,11 @@ $$</li>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/21/B6f9zGnXHbKcLgp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="测回法.png" src="https://s2.loli.net/2025/04/21/B6f9zGnXHbKcLgp.png" /></a> -->
 </div>
 <ul>
-<li>盘左瞄准左边 A ，调整度盘至 0°0X ′，读取 a<sub>1</sub></li>
+<li>盘左（即观测员用望远镜瞄准目标时，竖盘在望远镜的左边，也称正镜位置）瞄准左边 A ，调整度盘至 0°0X ′，读取 a<sub>1</sub></li>
 <li>松开制动螺旋，顺时针旋转瞄准右边 B ，读取 b<sub>1</sub>，则上半测回角值<span class="arithmatex">\(β_1 = b_1 - a_1\)</span></li>
-<li>倒镜成盘右，瞄准右边 B ，读取 b<sub>2</sub></li>
+<li>倒镜成盘右（即观测员用望远镜瞄准目标时，竖盘在望远镜的右边，也称倒镜位置），瞄准右边 B ，读取 b<sub>2</sub></li>
 <li>逆时针旋转瞄准左边 A ，读取 a<sub>2</sub>， 则下半测回角值<span class="arithmatex">\(β_2 = b_2 - a_2\)</span></li>
-<li>计算角值。若 <span class="arithmatex">\(β_1 - β_2 ≤ ± 40"\)</span> （图根级）则有<span class="arithmatex">\(β = \frac{β_1 + β_2}{2}\)</span></li>
+<li>计算角值。若 <span class="arithmatex">\(β_1 - β_2 \le \pm 40''\)</span> （图根级）则有<span class="arithmatex">\(β = \frac{β_1 + β_2}{2}\)</span></li>
 </ul>
 <details class="example" open="open">
 <summary>用法举例</summary>
@@ -3094,8 +3094,8 @@ $$</li>
 <p>举例一：</p>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/21/TAIyfMCx1lO4G2N.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="eaxmple1.png" src="https://s2.loli.net/2025/04/21/TAIyfMCx1lO4G2N.png" /></a></p>
 <ul>
-<li>第一个方向读数应设置在 0°、180° 附近；分数和秒数的整数应写足二位，例如 04′、06″等。</li>
-<li>计算水平角，第二方向减第一方向，如果不够减则加 360°。</li>
+<li>第一个方向读数应设置在 0°、180° 附近；<mark class="critic">分数和秒数的整数应写足<strong>两位</strong>，例如 04′、06″等</mark></li>
+<li><mark class="critic">计算水平角，第二方向减第一方向，如果不够减则加 360°</mark></li>
 </ul>
 </li>
 <li>
@@ -3103,26 +3103,26 @@ $$</li>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/21/6unZUY9hNDcX8bF.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="example2.png" src="https://s2.loli.net/2025/04/21/6unZUY9hNDcX8bF.png" /></a></p>
 <ul>
 <li>表中盘右 C 读数小于 A 读数，不够减，则C读数应加360°后再减 A读数，而得盘右角值</li>
-<li>盘左、盘右测得角值之差不大于40″，则取其平均值</li>
+<li><mark class="critic">盘左、盘右测得角值之差不大于40″，则取其平均值</mark></li>
 </ul>
 </li>
 </ol>
 </details>
-<details class="warning">
+<details class="warning" open="open">
 <summary>注意事项</summary>
 <ul>
-<li>多测回观测时，测回间间按<span class="arithmatex">\(\frac{180°}{n}\)</span>变换水平度盘起始位置（n 为测回数）。这是为了减小度盘分划不均匀的误差。</li>
-<li>瞄准目标时，尽量瞄准目标底部。</li>
-<li>在表格当中，分和秒的记录应为两位数。度、分、秒之间应该适当隔开。</li>
-<li>注意水平角的取值范围（0° ~ 360°），计算时用（面向待测角）右边目标读数减去左边目标读数。如果右边目标的读数小于左边目标的读数，则加上360°再减左边读数。一测回过程中，不得再调整水准管气泡或改变度盘位置。</li>
+<li>多测回观测时，测回间间按<span class="arithmatex">\(\frac{180°}{n}\)</span>变换水平度盘起始位置（n 为测回数）。这是为了减小度盘分划不均匀的误差</li>
+<li>瞄准目标时，尽量瞄准目标底部</li>
+<li>在表格当中，<mark class="critic">分和秒的记录应为两位数</mark>。度、分、秒之间应该适当隔开</li>
+<li>注意水平角的取值范围（0° ~ 360°），计算时用右边目标读数减去左边目标读数（方向2减方向1）。如果右边目标的读数小于左边目标的读数，则加上360°再减左边读数。一测回过程中，不得再调整水准管气泡或改变度盘位置</li>
 </ul>
 </details>
 </div>
 <div class="tabbed-block">
-<p>一个测站观测 3 个或 3 个以上方向时，采用方向观测法。观测从零方向开始，最后再回到零方向(水平方向旋转一圆周)。</p>
+<p>一个测站观测 3 个或 3 个以上方向时，采用方向观测法。观测从零方向开始，最后再回到零方向(水平方向旋转一圆周)</p>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/sQ1bBoH9PMLUh4x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/sQ1bBoH9PMLUh4x.png" width="200px" alt="方向法"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/21/sQ1bBoH9PMLUh4x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/21/sQ1bBoH9PMLUh4x.png" width="200px" alt="方向法" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/21/sQ1bBoH9PMLUh4x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="方向法.png" src="https://s2.loli.net/2025/04/21/sQ1bBoH9PMLUh4x.png" /></a> -->
 </div>
 <ol>
@@ -3130,25 +3130,25 @@ $$</li>
 <p>操作方法</p>
 <p>例：观测A，B，D，E 四方向，瞄准读数次序：</p>
 <ul>
-<li>盘左(顺时针方向)A – B – D – E – A</li>
-<li>盘右(逆时针方向)A – E – D – B – A</li>
+<li>盘左（顺时针方向）A – B – D – E – A</li>
+<li>盘右（逆时针方向）A – E – D – B – A</li>
 </ul>
 <p>以上称为一个测回的观测。</p>
-<p>记录表栺：盘左：从上到下；盘右：从下到上。如果观测多个测回，测回间仍按 <span class="arithmatex">\(\frac{180°}{n}\)</span> 变换起始方向的度盘读数。</p>
+<p>记录表格：盘左记录数据从上到下；盘右记录数据从下到上。如果观测多个测回，测回间仍按 <span class="arithmatex">\(\frac{180°}{n}\)</span> 变换起始方向的度盘读数。</p>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/21/MNVO4SqpHrno5yk.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="记录表.png" src="https://s2.loli.net/2025/04/21/MNVO4SqpHrno5yk.png" /></a></p>
 </li>
 <li>
-<p>计算和限差 (难点)</p>
+<p>计算和限差</p>
 <ul>
 <li>半测回归零差：盘左或盘右半测回中，两次瞄准 A 的读数之差，称为半测回归零差。要求对于J2级应 ≤ 8″，J6级应 ≤ 18″</li>
-<li>两倍视准差( 2C )  <ul>
+<li>两倍视准差 2C<ul>
 <li>原因：视准差指望进镜的视准轴与横轴不垂直而相差一个小角C，致使盘左、盘右瞄准同一目标时读数相差不是180°</li>
 <li>一测回中，同一方向盘左、盘右两次瞄准读数差不180°之差称为 2C。2C 属于仪器误差，应为一个常数；要求：J2级应 ≤ 13″</li>
 <li>2C 计算公式 <span class="arithmatex">\(2C = 左 - (右 ± 180°)\)</span></li>
 </ul>
 </li>
 <li>盘左盘右平均值<ul>
-<li><span class="arithmatex">\(平均值 = \frac{左+(右±180°)}{2}\)</span></li>
+<li>平均值 <span class="arithmatex">\(= \frac{左+(右±180°)}{2}\)</span>，以盘左为基准</li>
 <li>由于 A 方向瞄准了两次，因此 A 方向有两个平均读数。因此，应将 A 方向的平均读数再取均值，作为起始方向的方向值。写在第一行，并用括号括起。</li>
 </ul>
 </li>
@@ -3160,6 +3160,7 @@ $$</li>
 </div>
 </div>
 </div>
+<hr />
 <details class="warning">
 <summary>水平角观测的注意事项</summary>
 <ul>
@@ -3172,7 +3173,7 @@ $$</li>
 <li>观测目标间高低相差较大时，更应注意整平仪器</li>
 <li>照准标志应竖直，用十字丝交点瞄准标杆或测钎底部</li>
 <li>记录要清楚，应当场计算，发现错误，立即重测</li>
-<li>一测回水平角观测中，不得再调照准部管水准气泡，气泡偏离中央 &gt; 2格，应重新整平与对中仪器，重新观测。</li>
+<li>一测回水平角观测中，不得再调照准部管水准气泡，气泡偏离中央 &gt; 2格，应重新整平与对中仪器，重新观测</li>
 </ul>
 </details>
 <p><mark class="critic">垂直角测量方法</mark></p>
@@ -3180,19 +3181,19 @@ $$</li>
 <ul>
 <li>角值范围：0° ～ ±90°</li>
 <li>视线在水平线之上称仰角，取“＋”号。视线在水平线之下称俯角，取“－”号。</li>
-<li>计算公式 ：垂直角 = 照准目标时的读数不规线水平时读数(常数)之差。</li>
+<li>计算公式 ：垂直角 = 照准目标时的读数与视线水平时读数（常数）之差。</li>
 </ul>
 <div class="admonition success inline end">
-<p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/SjzdxnQuH6vVqBs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/22/SjzdxnQuH6vVqBs.png" width="200px" alt="垂直角用途"></a></p>
+<p class="admonition-title">垂直角的用途</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/SjzdxnQuH6vVqBs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/22/SjzdxnQuH6vVqBs.png" width="200px" alt="垂直角用途" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/22/SjzdxnQuH6vVqBs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="垂直角用途.png" src="https://s2.loli.net/2025/04/22/SjzdxnQuH6vVqBs.png" /></a> -->
 </div>
 <p><strong>垂直角的用途</strong></p>
 <p>斜距化为平距：已知斜距 S、垂直角 α，则平距 <span class="arithmatex">\(D = S cos α\)</span></p>
 <p>三角高程测量：已知平距 D、垂直角 α，则 A、B 两点间高差 <span class="arithmatex">\(h_{AB} = h' + i - l\)</span>，其中 <span class="arithmatex">\(h' = D tan α\)</span></p>
-<p>竖盘构造（未完待续）</p>
+<p>（未完待续）</p>
 <h2 id="_4">第四章 距离测量和直线定向</h2>
-<h3 id="41">4.1 钢尺量距（重难点）</h3>
+<h3 id="41">4.1 钢尺量距（计算）</h3>
 <p><strong>直线定线</strong></p>
 <p>由于测量两点间的水平距离要分段进行，即一段一段地量取两点间距离。为了保证各量距都处在同一条直线上，要进行直线定线。在分段量距中，在待测直线上标定若干分段点的工作称为直线定线。直线定线的方法包括目估定线和经纬仪定线。</p>
 <ul>
@@ -3204,19 +3205,19 @@ $$</li>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition success inline end">
-<p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/ArVsLSmxY9Nlhq8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/22/ArVsLSmxY9Nlhq8.png" width="200px" alt="平坦"></a></p>
+<p class="admonition-title">平坦地面的距离丈量</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/ArVsLSmxY9Nlhq8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/22/ArVsLSmxY9Nlhq8.png" width="200px" alt="平坦" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/22/ArVsLSmxY9Nlhq8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="平坦.png" src="https://s2.loli.net/2025/04/22/ArVsLSmxY9Nlhq8.png" /></a> -->
 </div>
 <ul>
-<li>先量整尺段长，最后量余长。 <span class="arithmatex">\(D_{AB} = n×尺段长+余长\)</span></li>
+<li>先量整尺段长，最后量余长。 <span class="arithmatex">\(D_{AB} = n \times 尺段长+余长\)</span></li>
 <li>需往、返丈量，返测时应重新定线。</li>
-<li>往、返丈量距离的相对误差 <span class="arithmatex">\(K= |D_{AB} - D_{BA}| / D ≤ \frac{1}{3000}\)</span></li>
+<li>往、返丈量距离的相对误差 <span class="arithmatex">\(K= \frac{|D_{AB} - D_{BA}|}{D} \le \frac{1}{3000}\)</span></li>
 <li>例如， <span class="arithmatex">\(D_{AB}=162.73m\)</span>， <span class="arithmatex">\(D_{BA}=162.78m\)</span>，相对误差 <span class="arithmatex">\(K = \frac{|162.73－162.78|}{162.755} = \frac{1}{3255} &lt; \frac{1}{3000}\)</span></li>
 </ul>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/AyhZ41jnCv8pSeW.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="倾斜.png" src="https://s2.loli.net/2025/04/22/AyhZ41jnCv8pSeW.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/AyhZ41jnCv8pSeW.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="倾斜.png" loading="lazy" src="https://s2.loli.net/2025/04/22/AyhZ41jnCv8pSeW.png" /></a></p>
 <ul>
 <li>平量法——吊垂球线投影。当地势起伏不大时可采用平量法。丈量由 A 点向 B 点进行，甲立于 A 点，指挥乙将尺拉在 AB 方向线上。甲将尺的零端对准 A 点，乙将钢尺抬高，并且目估使钢尺水平，然后用垂球尖将尺段的末端投影到地面上，插上测钎。若地面倾斜较大，将钢尺抬平有困难时，可将一个尺段分成几个小段来平量。</li>
 <li>斜量法——量斜距，测高差或垂直角换算为平距<span class="arithmatex">\(D = S cosα = \sqrt{S^2 - h^2}\)</span></li>
@@ -3224,19 +3225,24 @@ $$</li>
 </div>
 </div>
 </div>
-<p><strong>钢尺量距的精密方法</strong></p>
+<hr />
+<details class="note">
+<summary>钢尺量距的精密方法</summary>
 <ul>
-<li>一般方法量距，相对误差为<span class="arithmatex">\(\frac{1}{1000}- \frac{1}{5000}\)</span>，精密方法量距，相对误差为<span class="arithmatex">\(\frac{1}{10000}- \frac{1}{40000}\)</span>，</li>
+<li>一般方法量距，相对误差为<span class="arithmatex">\(\frac{1}{1000}\)</span> ~ <span class="arithmatex">\(\frac{1}{5000}\)</span>，精密方法量距，相对误差为<span class="arithmatex">\(\frac{1}{10000}\)</span> ~ <span class="arithmatex">\(\frac{1}{40000}\)</span>，</li>
 <li>主要工具：钢尺、弹簧秤、温度计、尺夹等。其中钢尺必须经过检验，并得到其检定的尺长方程式。量距时应使用弹簧秤施加鉴定时的拉力(15kg)。距离应进行温度与尺长改正。</li>
 </ul>
+</details>
 <p><mark class="critic">精密量距步骤</mark></p>
 <ol>
 <li>经纬仪定线。在桩顶画出十字线</li>
 <li>
 <p>尺段丈量</p>
+<details class="info">
+<summary>尺段丈量</summary>
 <div class="admonition success inline end">
 <p class="admonition-title">Success</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/EDrHd5lAjJqV7CW.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/22/EDrHd5lAjJqV7CW.png" width="200px" alt="示意图"></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/EDrHd5lAjJqV7CW.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/22/EDrHd5lAjJqV7CW.png" width="200px" alt="示意图" loading="lazy"></a></p>
 <!-- <a class="glightbox" href="https://s2.loli.net/2025/04/22/EDrHd5lAjJqV7CW.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="示意图.png" src="https://s2.loli.net/2025/04/22/EDrHd5lAjJqV7CW.png" /></a> -->
 </div>
 <ul>
@@ -3245,6 +3251,7 @@ $$</li>
 <li>移动后尺整厘米刻划，按上述方法再测二次，三次差不超限时(一般不得超过2~3mm)， 取平均值作为尺段结果。每测完一尺段，用温度计读取一次温度。</li>
 <li>要进行往返测量</li>
 </ul>
+</details>
 </li>
 <li>
 <p>尺段高差测定</p>
@@ -3253,24 +3260,21 @@ $$</li>
 <p><mark class="critic">尺段改正计算</mark></p>
 <details class="tip" open="open">
 <summary>尺段改正计算</summary>
-<p>某钢尺的尺长方程式： 
-$$
-l = l_0 + \Delta k + \alpha l_0 (t-t_0)
-$$
-各参数含义：</p>
+<p>某钢尺的尺长方程式 <span class="arithmatex">\(l = l_0 + \Delta k + \alpha l_0 (t-t_0)\)</span></p>
+<p>各参数含义：</p>
 <ul>
-<li>l——钢尺改正后的长度(m)</li>
-<li>l<sub>0</sub>——钢尺的名义长度(m)</li>
-<li>Δk ——尺长改正数(mm)</li>
-<li>α——钢的膨胀系数，值为 <span class="arithmatex">\(0.0115 - 0.0125 mm/(m \cdot ℃)\)</span></li>
-<li>t——丈量时温度(℃) </li>
-<li>t<sub>0</sub>——标准温度，一般取20℃</li>
+<li><span class="arithmatex">\(l\)</span>——钢尺改正后的长度(m)</li>
+<li><span class="arithmatex">\(l_0\)</span>——钢尺的名义长度(m)</li>
+<li><span class="arithmatex">\(\Delta k\)</span> ——尺长改正数(mm)</li>
+<li><span class="arithmatex">\(\alpha\)</span>——钢的膨胀系数，值为 <span class="arithmatex">\(0.0115 - 0.0125 mm/(m \cdot ℃)\)</span></li>
+<li><span class="arithmatex">\(t\)</span>——丈量时温度(℃) </li>
+<li><span class="arithmatex">\(t_0\)</span>——标准温度，一般取20℃</li>
 </ul>
 <p>各项改正计算：</p>
 <ul>
-<li>尺长改正 <span class="arithmatex">\(\Delta D_k = D' \frac{\Delta k}{l_0}\)</span>，其中D′ 为量得的长度； </li>
+<li>尺长改正 <span class="arithmatex">\(\Delta D_k = D' \frac{\Delta k}{l_0}\)</span>，其中D′ 为量得的长度</li>
 <li>温度改正 <span class="arithmatex">\(\Delta D_t = D' \alpha (t - t_0)\)</span></li>
-<li>高差改正 <span class="arithmatex">\(\Delta D_h = D - S\)</span>，其中<span class="arithmatex">\(D = \sqrt{S^2 - h^2}\)</span></li>
+<li>高差改正 <span class="arithmatex">\(\Delta D_h = D - S\)</span>，其中<span class="arithmatex">\(D = \sqrt{S^2 - h^2}\)</span>，<span class="arithmatex">\(S\)</span>为斜距，<span class="arithmatex">\(h\)</span>为高差</li>
 </ul>
 <p>改正后水平距离 <span class="arithmatex">\(D = D' + \Delta D_k + \Delta D_t + \Delta D_h\)</span></p>
 </details>
@@ -3279,6 +3283,16 @@ $$
 <details class="question">
 <summary>例题</summary>
 <p>使用一支 30 m 的钢尺，用标准的 100 N 拉力，沿倾斜地面往返丈量 AB 边的距离，用水准仪测得两端点的高差 <span class="arithmatex">\(h = 2.54m\)</span>，往测时的平均温度为 32.4 ℃，返测时为33.0℃，钢尺的尺长方程式为 <span class="arithmatex">\(l = 30m - 1.8mm + 0.36(t- 20℃)\)</span></p>
+<details class="note">
+<summary>尺长方程式</summary>
+<ul>
+<li>钢尺的尺长方程式 <span class="arithmatex">\(l = l_0 + \Delta k + \alpha l_0 (t-t_0)\)</span>，其中<span class="arithmatex">\(l_0\)</span>为名义长度，<span class="arithmatex">\(\Delta k\)</span>为尺长改正数，<span class="arithmatex">\(\alpha\)</span>为膨胀系数，<span class="arithmatex">\(t\)</span>为丈量时的温度，<span class="arithmatex">\(t_0\)</span>为标准温度</li>
+<li>尺长改正 <span class="arithmatex">\(\Delta D_k = D' \frac{\Delta k}{l_0}\)</span>，其中D′ 为量得的长度</li>
+<li>温度改正 <span class="arithmatex">\(\Delta D_t = D' \alpha (t - t_0)\)</span></li>
+<li>高差改正 <span class="arithmatex">\(\Delta D_h = D - S\)</span>，其中<span class="arithmatex">\(D = \sqrt{S^2 - h^2}\)</span>，<span class="arithmatex">\(S\)</span>为斜距，<span class="arithmatex">\(h\)</span>为高差</li>
+<li>改正后水平距离 <span class="arithmatex">\(D = D' + \Delta D_k + \Delta D_t + \Delta D_h\)</span></li>
+</ul>
+</details>
 <p><strong>解</strong>：以下过程只计算A-B，B-A方法相同。</p>
 <ul>
 <li>钢尺名义长度为 <span class="arithmatex">\(l_0 = 30m\)</span></li>
@@ -3286,16 +3300,16 @@ $$
 <li>膨胀系数 <span class="arithmatex">\(\alpha = \frac{\alpha l_0}{l_0} = \frac{0.36}{30} = 0.0120 mm/(m \cdot ℃)\)</span></li>
 <li>标准温度 <span class="arithmatex">\(t_0 = 20 ℃\)</span></li>
 <li>尺长改正 <span class="arithmatex">\(\Delta D_k = D' \frac{\Delta k}{l_0} = 234.943m \times \frac{-1.8mm}{30m} = -14.097mm = -0.0141m\)</span></li>
-<li>温度改正 <span class="arithmatex">\(\Delta D_t = D' \alpha (t - t_0) = 234.943m \times 0.0120 mm/(m \cdot ℃) (32.4 - 20)℃ = 34.960mm = 0.0350m\)</span></li>
+<li>温度改正 <span class="arithmatex">\(\Delta D_t = D' \alpha (t - t_0) = 234.943m \times 0.0120 mm/(m \cdot ℃) (32.4 - 20)℃ = 34.960mm = + 0.0350m\)</span></li>
 <li>高差改正 $\Delta D_h = D - S= \sqrt{S^2 - h^2} - S = \sqrt{D'^2 - h^2} - D'  = \sqrt{234.943^2 - 2.54^2} - 234.943 = -0.0137m $</li>
 <li>改正后平距 <span class="arithmatex">\(D = D' + \Delta D_k + \Delta D_t + \Delta D_h = 234.943 -0.0141+0.0350-0.0137 = 234.950m\)</span>
 $$
 往返丈量的相对精度 = \frac{往测距离-返测距离}{距离概值(四舍五入取整数)} = \frac{234.950-234.941}{235} = \frac{1}{26100}
 $$</li>
 </ul>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/NTSGFRoUVZWXL3H.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="成果整理.png" src="https://s2.loli.net/2025/04/22/NTSGFRoUVZWXL3H.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/NTSGFRoUVZWXL3H.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="成果整理.png" loading="lazy" src="https://s2.loli.net/2025/04/22/NTSGFRoUVZWXL3H.png" /></a></p>
 </details>
-<details class="info" open="open">
+<details class="info">
 <summary>钢尺量距的误差分析</summary>
 <ol>
 <li>钢尺量距误差<ul>
@@ -3312,23 +3326,27 @@ $$</li>
 </li>
 </ol>
 </details>
-<h3 id="42">4.2 视距测量（重点）</h3>
-<p><strong>视距测量的原理</strong></p>
+<h3 id="42">4.2 视距测量（计算）</h3>
+<details class="info">
+<summary>视距测量的原理</summary>
 <ul>
 <li>望远镜十字丝分划板上下视距丝在视距标尺上的读数。</li>
 <li>根据光学原理测定两点间的距离和高差</li>
 <li>视距测量的相对误差约为<span class="arithmatex">\(\frac{1}{300}\)</span>，低于钢尺量距</li>
-<li>测定高差的精度低于水准测量，主要用于地形测量的碎部测量中。</li>
+<li>测定高差的精度低于水准测量，主要用于地形测量的碎部测量中</li>
 </ul>
-<p><mark class="critic">视准轴水平时的视距计算公式</mark></p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/Da25xfpmtFArhPu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="视距测量.png" src="https://s2.loli.net/2025/04/22/Da25xfpmtFArhPu.png" /></a></p>
+</details>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="视准轴水平时的视距计算公式" name="__tabbed_7" type="radio" /><input id="视准轴倾斜时的视距计算公式" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="视准轴水平时的视距计算公式">视准轴水平时的视距计算公式</label><label for="视准轴倾斜时的视距计算公式"><mark class="critic">视准轴倾斜时的视距计算公式</mark></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/Da25xfpmtFArhPu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="视距测量.png" loading="lazy" src="https://s2.loli.net/2025/04/22/Da25xfpmtFArhPu.png" /></a></p>
 <ul>
 <li>图中<span class="arithmatex">\(l\)</span> 表示视距间隔，根据相似三角形原理可知<span class="arithmatex">\(\frac{d}{f} = \frac{l}{p} \Rightarrow d = \frac{lf}{p} = Kl\)</span>，其中<span class="arithmatex">\(K = 100\)</span></li>
-<li><span class="arithmatex">\(D = d + f + \delta = Kl + C\)</span>，其中<span class="arithmatex">\(C = f + \delta\)</span>，f 为物镜焦距，δ 为物镜至仪器中心的距离，K
-为视距乘常数， C 为视距加常数</li>
-<li>C 一般很小，可以忽略不计，则<span class="arithmatex">\(D \approx Kl\)</span>，其中K = 100，<span class="arithmatex">\(l\)</span>为度盘上丝和下丝读数之差</li>
+<li><span class="arithmatex">\(D = d + f + \delta = Kl + C\)</span>，其中<span class="arithmatex">\(C = f + \delta\)</span>，<span class="arithmatex">\(f\)</span> 为物镜焦距，<span class="arithmatex">\(\delta\)</span>为物镜至仪器中心的距离，<span class="arithmatex">\(K\)</span>为视距乘常数， <span class="arithmatex">\(C\)</span> 为视距加常数</li>
+<li>C 一般很小，可以忽略不计，则<span class="arithmatex">\(D \approx Kl\)</span>，其中<span class="arithmatex">\(K = 100\)</span>，<span class="arithmatex">\(l\)</span>为度盘上丝和下丝读数之差</li>
 </ul>
-<p><mark class="critic">视准轴倾斜时的视距计算公式</mark></p>
+</div>
+<div class="tabbed-block">
 <p>当地形的起伏比较大时，望远镜要倾斜才能看见视距尺。此时视线不再垂直于视距尺，所以不能套用视线水平时的视距公式。如图，望远镜的中丝对准视距尺上的 O′ 点，望远镜的竖直角为 α 。将水准尺绕O′ 点旋转 α 角，此时视线就与旋转后的视距尺垂直了，我们只要求出视距尺旋转后的视距间隔（即 MN′ 之间的读数差 <span class="arithmatex">\(l'\)</span> ），就可以按照视线水平时的公式求出视线长度（即 OO′ 这一段斜距）。由于十字丝上下丝的距离很短，所以 <span class="arithmatex">\(\varphi\)</span> 很小，经过近似处理（省略推导过程）可以得到：</p>
 <ul>
 <li><span class="arithmatex">\(l' = l cos \alpha \Rightarrow S = Kl' = Kl cos \alpha\)</span>，其中S为OO'的直线距离，α为视线倾角</li>
@@ -3349,6 +3367,10 @@ $$</li>
 <li>B 点高程 <span class="arithmatex">\(H_B = 35.32 + 13.61 = 48.93m\)</span></li>
 </ul>
 </details>
+</div>
+</div>
+</div>
+<hr />
 <details class="tip" open="open">
 <summary>视距测量的观测和计算</summary>
 <ol>
@@ -3409,7 +3431,7 @@ $$</li>
 </ul>
 </details>
 <p><mark class="critic">三种方位角之间的关系</mark></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="真方位角与磁方位角" name="__tabbed_7" type="radio" /><input id="真方位角与坐标方位角" name="__tabbed_7" type="radio" /><input id="磁方位角与坐标方位角" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="真方位角与磁方位角">真方位角与磁方位角</label><label for="真方位角与坐标方位角">真方位角与坐标方位角</label><label for="磁方位角与坐标方位角">磁方位角与坐标方位角</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="真方位角与磁方位角" name="__tabbed_8" type="radio" /><input id="真方位角与坐标方位角" name="__tabbed_8" type="radio" /><input id="磁方位角与坐标方位角" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="真方位角与磁方位角">真方位角与磁方位角</label><label for="真方位角与坐标方位角">真方位角与坐标方位角</label><label for="磁方位角与坐标方位角">磁方位角与坐标方位角</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>由于地球的磁极与地球旋转轴的南北极不重合，因此过地面上某点的真北方向与磁北方向不重合，两者之间的夹角为磁偏角，记为:<span class="arithmatex">\(\delta\)</span>，并且规定如果磁北方向在真北方向以东称东偏，则<span class="arithmatex">\(\delta &gt; 0\)</span>，反之称西偏，<span class="arithmatex">\(\delta &lt; 0\)</span>。根据磁偏角的定义，我们可以推出真方位角和磁方位角的换算公式：
@@ -3460,7 +3482,7 @@ $$</p>
 </details>
 <h3 id="44">4.4 方位角应用（重点）</h3>
 <p><mark class="critic">坐标计算</mark></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="坐标正算" name="__tabbed_8" type="radio" /><input id="坐标反算" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="坐标正算">坐标正算</label><label for="坐标反算">坐标反算</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="坐标正算" name="__tabbed_9" type="radio" /><input id="坐标反算" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="坐标正算">坐标正算</label><label for="坐标反算">坐标反算</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>如图（没有图），有两个地面点 A、B，已知 A 点的坐标<span class="arithmatex">\((X_A, Y_A)\)</span>，方位角和 AB 间的水平距离 <span class="arithmatex">\(D_{AB}\)</span>，现在要求 B 点的坐标，这一过程称为坐标正算。</p>
@@ -3776,7 +3798,7 @@ $$</p>
 <li>要求出控制点的平面坐标，关键是要知道一个已知点的坐标、导线边的方位角以及两个控制点之间的水平距离。通常我们会有一些起算数据，例如 AB 是更高一级的平面控制网的控制点，A、B 的坐标是已知的（通常用双线表示已知数据），然后我们将导线与 AB 进行联测。由于 A、B 的坐标已知，A、B 的方位角则已知，然后只要测量每条导线边的转折角，根据方位角的推算公式就可以把每条导线边的方位角求出来。而导线边的距离可以用距离测量的方法测出来。</li>
 </ul>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="导线.png" src="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" /></a></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="闭合导线" name="__tabbed_9" type="radio" /><input id="附合导线" name="__tabbed_9" type="radio" /><input id="支导线" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="闭合导线">闭合导线</label><label for="附合导线">附合导线</label><label for="支导线">支导线</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="闭合导线" name="__tabbed_10" type="radio" /><input id="附合导线" name="__tabbed_10" type="radio" /><input id="支导线" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="闭合导线">闭合导线</label><label for="附合导线">附合导线</label><label for="支导线">支导线</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -3915,7 +3937,7 @@ $$
 <p>（未完待续……）</p>
 <h3 id="64">6.4 交会定点的计算</h3>
 <p>测量交会点与周边已知坐标点构成三角形的水平角，计算交会点的平面坐标，是加密平面控制点的方法之一。前方交会、侧方交会、后方交会。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="前方交会测角交会" name="__tabbed_10" type="radio" /><input id="侧方交会" name="__tabbed_10" type="radio" /><input id="后方交会" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="前方交会测角交会">前方交会(测角交会)</label><label for="侧方交会">侧方交会</label><label for="后方交会">后方交会</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="前方交会测角交会" name="__tabbed_11" type="radio" /><input id="侧方交会" name="__tabbed_11" type="radio" /><input id="后方交会" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="前方交会测角交会">前方交会(测角交会)</label><label for="侧方交会">侧方交会</label><label for="后方交会">后方交会</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>在已知坐标点A 、B 安置经纬仪向待定点 P 观测水平角 α、β，交会角 γ 为30°~120°之间，最好近于90°</p>
@@ -4023,7 +4045,7 @@ $$</p>
 <h3 id="71">7.1 地形图的比例尺</h3>
 <p><mark class="critic">比例尺的表示方法</mark></p>
 <p>比例尺：图上一段直线长度与地面上相应线段实际长度之比。可分为数字比例尺，图示比例尺。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="数字比例尺" name="__tabbed_11" type="radio" /><input id="图示比例尺直线比例尺" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="数字比例尺">数字比例尺</label><label for="图示比例尺直线比例尺">图示比例尺（直线比例尺）</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="数字比例尺" name="__tabbed_12" type="radio" /><input id="图示比例尺直线比例尺" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="数字比例尺">数字比例尺</label><label for="图示比例尺直线比例尺">图示比例尺（直线比例尺）</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(\frac{d}{D} = \frac{1}{D/d} = \frac{1}{M} = 1: M\)</span></p>
@@ -4059,7 +4081,7 @@ $$</p>
 <p>地形图图示: 表示地物和地貌的符号和方法。</p>
 <p>一个国家的地形图图式统一，属于国家标准。我国当前使用的、最新的大比例尺地形图图式由国家质量监督检验检疫总局与国家标准化管理委员会发布的、2007年12月1日开始实施的《国家基本比例尺地图图示 第1部分：1：5001：1000 1：2000地形图图式》(GB/T20257.1-2017)</p>
 <p>图示符号有三类：地物符号、地貌符号、注记符号</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="地物符号重点" name="__tabbed_12" type="radio" /><input id="地貌符号" name="__tabbed_12" type="radio" /><input id="注记符号" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="地物符号重点">地物符号(重点)</label><label for="地貌符号">地貌符号</label><label for="注记符号">注记符号</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="地物符号重点" name="__tabbed_13" type="radio" /><input id="地貌符号" name="__tabbed_13" type="radio" /><input id="注记符号" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="地物符号重点">地物符号(重点)</label><label for="地貌符号">地貌符号</label><label for="注记符号">注记符号</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>根据地物的大小及描绘方法的不同，地物符号分为比例符号、非比例符号、半比例符号。<code>图示详见课本</code></p>
@@ -4135,7 +4157,7 @@ $$</p>
 <p>首曲线与计曲线是地形图中表示地貌必须描绘的曲线，而间曲线、助曲线根据需要来确定是否描绘。在谷地、鞍部、山头及斜坡方向不易判读的地方和凹地的最高、最低一条等高线上，绘制与等高线垂直的短线，称为示坡线，用以指示斜坡降落方向。<code>图示详见课本</code></p>
 <p><strong>典型地貌的等高线</strong></p>
 <p>山头和洼地、山脊和山谷、鞍部、陡崖和悬崖。<code>图示详见课本</code></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:4"><input checked="checked" id="山头和洼地" name="__tabbed_13" type="radio" /><input id="山脊和山谷" name="__tabbed_13" type="radio" /><input id="鞍部" name="__tabbed_13" type="radio" /><input id="陡崖和悬崖" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="山头和洼地">山头和洼地</label><label for="山脊和山谷">山脊和山谷</label><label for="鞍部">鞍部</label><label for="陡崖和悬崖">陡崖和悬崖</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:4"><input checked="checked" id="山头和洼地" name="__tabbed_14" type="radio" /><input id="山脊和山谷" name="__tabbed_14" type="radio" /><input id="鞍部" name="__tabbed_14" type="radio" /><input id="陡崖和悬崖" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="山头和洼地">山头和洼地</label><label for="山脊和山谷">山脊和山谷</label><label for="鞍部">鞍部</label><label for="陡崖和悬崖">陡崖和悬崖</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>一组闭合曲线，山头等高线由外圈向内圈高程逐渐增加，洼地等高线由外圈向内圈高程逐渐减小，根据高程注记区分，也可用示坡线指示斜坡向下方向。</p>
@@ -4272,7 +4294,7 @@ $$</p>
 </details>
 <p><mark class="critic">地物地貌的描绘</mark></p>
 <p>展绘碎部点后，应对照实地随时描绘地物和等高线。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="地物描绘" name="__tabbed_14" type="radio" /><input id="等高线的勾绘" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="地物描绘">地物描绘</label><label for="等高线的勾绘">等高线的勾绘</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="地物描绘" name="__tabbed_15" type="radio" /><input id="等高线的勾绘" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="地物描绘">地物描绘</label><label for="等高线的勾绘">等高线的勾绘</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4326,7 +4348,7 @@ $$</p>
 <h3 id="81">8.1 地形图的分幅和编号（重点）</h3>
 <p>由于图纸的尺寸有限，不可能将测区内的所有地形都绘制在一幅图内，因此，需要分幅测绘地形图。</p>
 <p>地形图的分幅可以分为两大类：一种是按经纬线分幅的梯形分幅法，另一种是按坐标格网划分的矩形分幅法。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="梯形分幅和编号重点" name="__tabbed_15" type="radio" /><input id="矩形分幅和编号重点" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="梯形分幅和编号重点">梯形分幅和编号(重点)</label><label for="矩形分幅和编号重点">矩形分幅和编号(重点)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="梯形分幅和编号重点" name="__tabbed_16" type="radio" /><input id="矩形分幅和编号重点" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="梯形分幅和编号重点">梯形分幅和编号(重点)</label><label for="矩形分幅和编号重点">矩形分幅和编号(重点)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>1:5000~1:100万 比例尺地图的梯形分幅和编号</p>
@@ -4360,7 +4382,7 @@ $$</p>
 <h3 id="82">8.2 地形图的阅读</h3>
 <p><strong>地形图的图廓外注记</strong></p>
 <p>图号、图名、接图表，比例尺，坐标系、使用图式、等高距、测图日期、测绘单位、图廓线、坐标格网、三北方向线和坡度尺等，分布在东、南、西、北四面图廓线外。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:3"><input checked="checked" id="图号图名和接图表" name="__tabbed_16" type="radio" /><input id="比例尺" name="__tabbed_16" type="radio" /><input id="经纬度与坐标格网" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="图号图名和接图表">图号、图名和接图表</label><label for="比例尺">比例尺</label><label for="经纬度与坐标格网">经纬度与坐标格网</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:3"><input checked="checked" id="图号图名和接图表" name="__tabbed_17" type="radio" /><input id="比例尺" name="__tabbed_17" type="radio" /><input id="经纬度与坐标格网" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="图号图名和接图表">图号、图名和接图表</label><label for="比例尺">比例尺</label><label for="经纬度与坐标格网">经纬度与坐标格网</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4387,7 +4409,7 @@ $$</p>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/26/OTZHYQMh6Rf8pCD.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="三北方向.png" src="https://s2.loli.net/2025/04/26/OTZHYQMh6Rf8pCD.png" /></a></p>
 </details>
 <p><strong>地形图平面直角坐标系统和高程系统</strong></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="平面直角坐标系统" name="__tabbed_17" type="radio" /><input id="高程系统" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="平面直角坐标系统">平面直角坐标系统</label><label for="高程系统">高程系统</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="平面直角坐标系统" name="__tabbed_18" type="radio" /><input id="高程系统" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="平面直角坐标系统">平面直角坐标系统</label><label for="高程系统">高程系统</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>统一的高斯平面直角坐标系(比例尺为1:10000 或比例尺更小的地形图) ；城市独立坐标系(城市地形图) ；工程独立坐标系(工程建设范围比城市更小时，如建筑坐标系)。</p>
