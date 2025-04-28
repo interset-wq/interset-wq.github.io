@@ -1720,7 +1720,7 @@
           <li class="md-nav__item">
   <a href="#63" class="md-nav__link">
     <span class="md-ellipsis">
-      6.3 导线计算（重难点）
+      6.3 导线计算（计算）
     </span>
   </a>
   
@@ -2186,7 +2186,7 @@
           <li class="md-nav__item">
   <a href="#63" class="md-nav__link">
     <span class="md-ellipsis">
-      6.3 导线计算（重难点）
+      6.3 导线计算（计算）
     </span>
   </a>
   
@@ -2346,10 +2346,13 @@
 
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-17</code></p>
 <h2 id="_1">第一章 测量学概述</h2>
-<h3 id="11">1.1 测量学的任务</h3>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
 <p>测量学是研究地面上点与点之间相对位置关系（包括地面、地下、空间）以及确定地球形状和大小的科学。</p>
 <p>测量学利用测量仪器和工具，用测量的方法和手段，来确定点与点之间的相对关系，主要是指地面点之间的角度与距离关系。</p>
 <p>通过计算，得到地面点的平面位置和高程数据，并将地面点所表达的地球表面的地形及其它信息测绘成图。根据工程需要，可以形成地形图、断面图等。</p>
+</details>
+<h3 id="11">1.1 测量学的任务</h3>
 <details class="note">
 <summary>地物和地貌</summary>
 <ul>
@@ -2459,7 +2462,7 @@
 </ul>
 </details>
 </details>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/17/ItZaurzkgPWypdm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="高斯平面直角坐标系.png" src="https://s2.loli.net/2025/04/17/ItZaurzkgPWypdm.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/17/ItZaurzkgPWypdm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="高斯平面直角坐标系.png" loading="lazy" src="https://s2.loli.net/2025/04/17/ItZaurzkgPWypdm.png" /></a></p>
 <p><strong>我国统一坐标</strong></p>
 <p>我国位于北半球，x 坐标值恒为正，y 坐标值则有正有负，最大 y 坐标负值约为-334km，为保证 y 坐标恒为正，<mark class="critic">我国高斯平面直角坐标的表示统一视定将每带的坐标原点向西移500km，即给每个点的 y 坐标值加500km，为确定投影带位置，y 坐标前冠带号（y坐标前两位表示带号），带号后数值为该点距本带号纵轴的距离</mark></p>
 <p>高斯投影长度变形：离中央子午线越远，长度变形越大。减小长度变形的方法之一是缩小投影带宽，减小经差。因此6°带可以满足中、小比例尺测图精度的要求（1：25000以上），对于更大比例尺的地图，则要用3°带。  </p>
@@ -2515,9 +2518,9 @@
 <h3 id="14">1.4 水准面曲率对测量量的影响（重点）</h3>
 <p>在小测区内，用水平面代替水准面，讨论由此对距离、角度和高程测量的影响：</p>
 <ul>
-<li>对水平距离的影响：半径 10km 圆内范围，可用切平面代替大地水准面</li>
-<li>对水平角的影响：对于在面积 100km<sup>2</sup> 区域内的多边形，水平面与水准面间的误差对水平角的影响只在最精密的角度测量中考虑，一般测量工作是不必考虑的。</li>
-<li>对高程的影响： 普通 DS3 型水准仪测量高差误差为 ±3mm/km，高程的起算面不能用切平面代替。即使距离很近，也必须考虑地球曲率的影响。</li>
+<li><strong>对水平距离的影响</strong>：半径 10km 圆内范围，可用切平面代替大地水准面</li>
+<li><strong>对水平角的影响</strong>：对于在面积 100km<sup>2</sup> 区域内的多边形，水平面与水准面间的误差对水平角的影响只在最精密的角度测量中考虑，一般测量工作是不必考虑的</li>
+<li><strong>对高程的影响（影响最大）</strong>： 普通 DS3 型水准仪测量高差误差为 ±3mm/km，高程的起算面不能用切平面代替。即使距离很近，也必须考虑地球曲率的影响</li>
 </ul>
 <h3 id="15">1.5 测量的度量单位</h3>
 <details class="info" open="open">
@@ -2548,7 +2551,7 @@
 <p>高差法</p>
 <details class="note" open="open">
 <summary>高差法</summary>
-<p>高差即两点间高程之差。A 点到 B 点的高差为 B 点的高程减去 A 点的高程，即<span class="arithmatex">\(h_{AB} = H_B-H_A\)</span></p>
+<p>高差即两点间高程之差。A 点到 B 点的高差为 B 点的高程减去 A 点的高程，即 <span class="arithmatex">\(h_{AB} = H_B-H_A\)</span></p>
 <p>假如 A 点的高程是已知的，那么要求出 B 点的高程，关键是要知道 h<sub>AB</sub> 多少，而求 h<sub>AB</sub> 可以通过水准测量来得到。</p>
 <ul>
 <li>水准仪水平视线，读取水平视线在标尺上的读数，水准测量方向A → B</li>
@@ -2689,7 +2692,7 @@
 <li>如图，首先选前进的方向。假如 A 点是已知点，B 点是待求点，如果 AB 两点相距很远，或者 AB 两点不能通视，那么就需要将 AB 分成多段，按水准测量原理，测出各段高差。例如先测出A 和 TP<sub>1</sub> 之间的高差，然后再测出各点之间的高差最后将这些高差累加起来就可以得到 AB 之间的高差。由 A 点的已知高程，即可求得 B 点高程。分段点，起着传递高程的作用，称为转点。转点用 TP 或 ZD 表示，在转点上（一般依照具体的地面情况）放置尺垫，再把水准尺立在尺垫上面。安置仪器的位置称为测站。</li>
 <li>若要测 AB 两点间的高差，先在 A 点立水准尺，然后选择一个点作为转点，在转点上安放尺垫，尺垫上立水准尺。A 点与转点之间距离一般不超过100m。然后在 A 点和转点之间大致中点的位置（为了抵消地球曲率的影响），安置水准仪，读取后、前视读数。将观测的数据填写到相关的表格中。这就是在第一测站上的工作。然后前视尺不动（所谓前视尺，就是我们面向前进的方向所看见的水准尺，背对着的就是后视尺），后视尺移到第2个转点上，然后水准仪搬到TP<sub>1</sub>、TP<sub>2</sub>转点之间（也叫做搬站）。接着读数，记录。依次前进直到 B 点）</li>
 <li>通过以上步骤可得：<ul>
-<li><span class="arithmatex">\(h_{AB} = \sum a_i + \sum b_i\)</span></li>
+<li><span class="arithmatex">\(h_{AB} = \sum a_i - \sum b_i\)</span></li>
 <li><span class="arithmatex">\(H_B = H_A +\sum h_i\)</span></li>
 </ul>
 </li>
@@ -2698,7 +2701,7 @@
 </ul>
 <p><mark class="critic">水准测量的校核方法</mark></p>
 <ul>
-<li>计算校核：在实际工作中，我们是把水准测量的数据记录在表格中，然后再计算高差。计算过程中总是难免出错的，为了能够检查高差是否计算正确，就要进行计算检核。通过公式<span class="arithmatex">\(h_{AB} = \sum a_i + \sum b_i\)</span> 计算高差，比较两种结果：如果相等，则高差计算正确。</li>
+<li>计算校核：在实际工作中，我们是把水准测量的数据记录在表格中，然后再计算高差。计算过程中总是难免出错的，为了能够检查高差是否计算正确，就要进行计算检核。通过公式<span class="arithmatex">\(h_{AB} = \sum a_i - \sum b_i\)</span> 计算高差，比较两种结果：如果相等，则高差计算正确。</li>
 <li>测站检核：计算检核只能检核高差计算的正确性，但如果某一站的高差由于某种原因测错了，那计算检核就无能为力了。因此，我们对每一站的高差都要进行检核，这种检核就称为测站检核，常见的检核方法有两次仪器法和双面尺法。</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="两次仪器高法" name="__tabbed_1" type="radio" /><input id="双面尺法" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="两次仪器高法">两次仪器高法</label><label for="双面尺法">双面尺法</label></div>
@@ -2739,7 +2742,7 @@
 </ol>
 <details class="example" open="open">
 <summary>举例说明</summary>
-<p>用黑红双面水准尺，在尺子两面读数。<mark class="critic">红面的分划和注记，一把尺由4.687m开始分划和注记，另一把尺由4.787m开始分划和注记，上面这两个数就是尺常数，两把尺红面注记的零点差为0.1m</mark>。已知HA，求HB，计算和两次仪器高法类似。但是必须保证：</p>
+<p>用黑红双面水准尺，在尺子两面读数。<mark class="critic">红面的分划和注记，一把尺由4.687m开始分划和注记，另一把尺由4.787m开始分划和注记，上面这两个数就是尺常数，两把尺红面注记的零点差为0.1m</mark>。已知H<sub>A</sub>，求H<sub>B</sub>，计算和两次仪器高法类似。但是必须保证：</p>
 <ul>
 <li><span class="arithmatex">\(a_2- a_1 ≤ 尺常数±3mm\)</span></li>
 <li><span class="arithmatex">\(b_2- b_1 ≤ 尺常数±3mm\)</span></li>
@@ -3347,17 +3350,17 @@ $$</li>
 </ul>
 </div>
 <div class="tabbed-block">
-<p>当地形的起伏比较大时，望远镜要倾斜才能看见视距尺。此时视线不再垂直于视距尺，所以不能套用视线水平时的视距公式。如图，望远镜的中丝对准视距尺上的 O′ 点，望远镜的竖直角为 α 。将水准尺绕O′ 点旋转 α 角，此时视线就与旋转后的视距尺垂直了，我们只要求出视距尺旋转后的视距间隔（即 MN′ 之间的读数差 <span class="arithmatex">\(l'\)</span> ），就可以按照视线水平时的公式求出视线长度（即 OO′ 这一段斜距）。由于十字丝上下丝的距离很短，所以 <span class="arithmatex">\(\varphi\)</span> 很小，经过近似处理（省略推导过程）可以得到：</p>
+<p>当地形的起伏比较大时，望远镜要倾斜才能看见视距尺。此时视线不再垂直于视距尺，所以不能套用视线水平时的视距公式。如图，望远镜的中丝对准视距尺上的 O′ 点，望远镜的竖直角为 <span class="arithmatex">\(\alpha\)</span>，将水准尺绕O′ 点旋转 <span class="arithmatex">\(\alpha\)</span> 角，此时视线就与旋转后的视距尺垂直了，我们只要求出视距尺旋转后的视距间隔（即 MN′ 之间的读数差 <span class="arithmatex">\(l'\)</span> ），就可以按照视线水平时的公式求出视线长度（即 OO′ 这一段斜距）。由于十字丝上下丝的距离很短，所以 <span class="arithmatex">\(\varphi\)</span> 很小，经过近似处理（省略推导过程）可以得到：</p>
 <ul>
 <li><span class="arithmatex">\(l' = l cos \alpha \Rightarrow S = Kl' = Kl cos \alpha\)</span>，其中S为OO'的直线距离，α为视线倾角</li>
 <li><span class="arithmatex">\(D = S cos \alpha = Kl cos^2 \alpha\)</span>，其中D为OO'的水平距离</li>
 <li><span class="arithmatex">\(h' = S sin \alpha = Kl cos \alpha sin \alpha = \frac{1}{2} Kl sin 2 \alpha = D tan \alpha\)</span>，其中h'为OO'的垂直距离</li>
 <li><span class="arithmatex">\(h + v = h' + i \Rightarrow h = h' + i - v = D tan \alpha + i - v\)</span></li>
 </ul>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/I7X6KZHTndq3QmA.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="视距测量.png" src="https://s2.loli.net/2025/04/22/I7X6KZHTndq3QmA.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/22/I7X6KZHTndq3QmA.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="视距测量.png" loading="lazy" src="https://s2.loli.net/2025/04/22/I7X6KZHTndq3QmA.png" /></a></p>
 <details class="question">
 <summary>例题</summary>
-<p>如上图所示，<span class="arithmatex">\(H_A=35.32m, i=1.39m\)</span>，上、下丝读数为 1.264m，2.336m，盘左竖盘读数 <span class="arithmatex">\(L=82°26'00″\)</span>(盘左顺时针注记)，竖盘指标差 <span class="arithmatex">\(x=1'\)</span>，求两点间的平距和高差。</p>
+<p>如上图所示，<span class="arithmatex">\(H_A=35.32m, i=1.39m\)</span>，上、下丝读数为 1.264m，2.336m，盘左竖盘读数 <span class="arithmatex">\(L=82°26'00''\)</span>(盘左顺时针注记)，竖盘指标差 <span class="arithmatex">\(x=1'\)</span>，求两点间的平距和高差。</p>
 <p><strong>解</strong>：视距间隔 <span class="arithmatex">\(l = 2.336-1.264 = 1.072m\)</span></p>
 <ul>
 <li>中丝读数 <span class="arithmatex">\(v = \frac{上丝+下丝}{2} = 1.8m\)</span></li>
@@ -3464,7 +3467,10 @@ $$</p>
 </details>
 <p><mark class="critic">正、反坐标方位角</mark></p>
 <p>测量中任何直线都有一定的方向。直线 AB，A 为起点，B 为终点。过起点 A的坐标北方向与直线 AB 的夹角 <span class="arithmatex">\(\alpha _{AB}\)</span> 称为直线 AB 的正方位角。过终点B的坐标北方向，与直线 BA 的夹角 <span class="arithmatex">\(\alpha _{BA}\)</span> 称为直线 AB 的反方位角。由于 A、B 两点的坐标北方向是平行的，所以正、反方位角相差180°</p>
+<details class="success inline end" open="open">
+<summary>方位角</summary>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/23/EDtqa9WGiMT47ZY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="方位角.png" src="https://s2.loli.net/2025/04/23/EDtqa9WGiMT47ZY.png" /></a></p>
+</details>
 <p>计算公式：<span class="arithmatex">\(\alpha _正 = \alpha _反 ± 180°\)</span>，或<span class="arithmatex">\(\alpha _{AB} = \alpha _{BA} ± 180°\)</span></p>
 <details class="quote">
 <summary>说明</summary>
@@ -3477,7 +3483,7 @@ $$</p>
 <details class="question" open="open">
 <summary>推算各导线边的坐标方位角</summary>
 <p>假设导线边12的方位角是已知的，并且我们用经纬仪采用测回法测量出来每个转折角的大小。如何推算各导线边的坐标方位角？</p>
-<p><span class="arithmatex">\(\alpha _前 = \alpha _后 + \beta _左 - 180 \degree\)</span>，或 <span class="arithmatex">\(\alpha _前 = \alpha _后 - \beta _左 + 180 \degree\)</span></p>
+<p><span class="arithmatex">\(\alpha _前 = \alpha _后 + \beta _左 - 180 \degree\)</span>，或 <span class="arithmatex">\(\alpha _前 = \alpha _后 - \beta _右 + 180 \degree\)</span></p>
 <p>推广到 n 条（未知方位角的导线）边的情况：<span class="arithmatex">\(\alpha _n = \alpha _0 + \sum \beta_{i左} - n \times 180 \degree\)</span>，或<span class="arithmatex">\(\alpha _n = \alpha _0 - \sum \beta_{i左} + n \times 180 \degree\)</span>，其中<span class="arithmatex">\(\beta _i\)</span>为转折角，n 为转折角的个数，<span class="arithmatex">\(\alpha\)</span>为方位角</p>
 </details>
 <h3 id="44">4.4 方位角应用（重点）</h3>
@@ -3492,7 +3498,10 @@ $$</p>
 </div>
 <div class="tabbed-block">
 <p>假如已知的 A、B 两点的坐标，现在要求两点间水平距离和方位角直线 AB 的方位角，应根据<span class="arithmatex">\(\Delta X\)</span>和 <span class="arithmatex">\(\Delta Y\)</span> 的符号来确定。</p>
-<p><span class="arithmatex">\(\alpha _{AB} = arctan \frac{\Delta Y}{\Delta X}\)</span>，<span class="arithmatex">\(D_{AB} = \sqrt{\Delta X_{AB} ^ 2 + \Delta Y_{AB} ^ 2}\)</span></p>
+<ul>
+<li><span class="arithmatex">\(\alpha _{AB} = arctan \frac{\Delta Y}{\Delta X}\)</span></li>
+<li><span class="arithmatex">\(D_{AB} = \sqrt{\Delta X_{AB} ^ 2 + \Delta Y_{AB} ^ 2}\)</span></li>
+</ul>
 </div>
 </div>
 </div>
@@ -3502,7 +3511,7 @@ $$</p>
 某直线的锐角，称为直线的象限角 R</li>
 <li>
 <p>表示方法：角度值后面注明象限。</p>
-<details class="example" open="open">
+<details class="example">
 <summary>象限角举例</summary>
 <ul>
 <li><span class="arithmatex">\(R_{O1} = 35 \degree NE\)</span>，北东，表示象限角在第一象限</li>
@@ -3624,9 +3633,9 @@ $$</p>
 <summary>用真误差确定中误差</summary>
 <p>设在相同的观测条件下，对未知量进行 n 次重复独立观测，观测值为<span class="arithmatex">\(l_1, l_2,..., l_n\)</span>，其真误差为<span class="arithmatex">\(\Delta _1, \Delta _2,...,\Delta _n\)</span>，则真误差的方差：
 $$
-D(\Delta) = \sigma ^2 = E[\Delta - D(\Delta)]^2 = E(\Delta ^2) = \lim _{n \to \infty} \frac{[\Delta ^2]}{n}
+D(\Delta) = \sigma ^2 = E[\Delta - D(\Delta)]^2 \newline = E(\Delta ^2) = \lim _{n \to \infty} \frac{[\Delta ^2]}{n}
 $$</p>
-<p>式中当 <span class="arithmatex">\(n \to \infty, E(\Delta) = 0\)</span>，根据数学期望 <span class="arithmatex">\(E(\Delta ^2)\)</span> 的定义就是<span class="arithmatex">\(\Delta ^2\)</span>的算术平均值，<span class="arithmatex">\([ ]\)</span>为累加符号，相当于<span class="arithmatex">\(\sum\)</span></p>
+<p>式中当 <span class="arithmatex">\(n \to \infty, E(\Delta) = 0\)</span>，根据数学期望 <span class="arithmatex">\(E(\Delta ^2)\)</span> 的定义就是<span class="arithmatex">\(\Delta ^2\)</span>的算术平均值，<code>[ ]</code>为累加符号，相当于<span class="arithmatex">\(\sum\)</span></p>
 <p>真误差的标准差
 $$
 \sigma = \pm \lim _{n \to \infty} \sqrt{\frac{[\Delta ^2]}{n}}
@@ -3649,8 +3658,8 @@ $$</p>
 <summary>例题</summary>
 <p>设甲乙两组观测，真误差为：</p>
 <ul>
-<li>甲：<span class="arithmatex">\(+4”，+3”，0”，-2”，-4"\)</span></li>
-<li>乙：<span class="arithmatex">\(+6”，+1”，0”，-1”，-5"\)</span></li>
+<li>甲：<span class="arithmatex">\(+4''，+3''，0''，-2''，-4''\)</span></li>
+<li>乙：<span class="arithmatex">\(+6''，+1''，0''，-1''，-5''\)</span></li>
 </ul>
 <p>试比较两组的精度。</p>
 <p><strong>解：</strong> 分别计算甲乙的中误差：</p>
@@ -3684,6 +3693,8 @@ $$</p>
 </ol>
 <p>根据正态分布的概率，对于真误差来说，它的值落在区间 <span class="arithmatex">\([-3 \sigma,+3 \sigma]\)</span> 几乎是肯定的事。因此在测量工作中，我们常常取三倍中误差作为偶然误差的容许值（或限差），如果精度要求较高时，就可以取两倍中误差作为限差，即 <span class="arithmatex">\(\Delta _允 = 3 m\)</span>，或 <span class="arithmatex">\(\Delta _允 = 2 m\)</span></p>
 <h3 id="53">5.3 误差传播定律（重难点）</h3>
+<details class="tip" open="open">
+<summary>误差传播定律公式</summary>
 <p>误差传播定律：是指描述观测值与其函数之间误差关系的定律，观测值函数中误差汇总如下：</p>
 <ul>
 <li>一般函数<span class="arithmatex">\(F(x_1, x_2, ..., x_n)\)</span>，中误差<span class="arithmatex">\(m_Z = \pm \sqrt{(\frac{\partial F}{\partial x_1}) ^ 2 m_1 ^ 2 + (\frac{\partial F}{\partial x_2}) ^ 2 m_2 ^ 2 + ... + (\frac{\partial F}{\partial x_n}) ^ 2 m_n ^ 2}\)</span></li>
@@ -3692,20 +3703,26 @@ $$</p>
 <li>线性函数<span class="arithmatex">\(Z= k_1 x_1 \pm k_2 x_2 \pm ... \pm k_n x_n\)</span>，中误差<span class="arithmatex">\(m_Z = \pm \sqrt{k_1 ^2 m_1 ^2 + k_2 ^2 m_2 ^2 + ... + k_n ^2 m_n ^2 }\)</span></li>
 <li>算术平均值<span class="arithmatex">\(x = \frac{[l]}{n} = \frac{l_1}{n} + \frac{l_2}{n} + ... + \frac{l_n}{n}\)</span>，中误差<span class="arithmatex">\(m_x = \pm \frac{m}{\sqrt{n}}\)</span></li>
 </ul>
+</details>
 <details class="question">
 <summary>例题</summary>
 <ol>
 <li>
 <p>（一般函数）三角高程测量，测得斜距 <span class="arithmatex">\(S =163.563m\)</span>，其中误差为 <span class="arithmatex">\(m_s = \pm 0.006m\)</span>，测得竖直角为<span class="arithmatex">\(\alpha = 32 \degree 15'26"\)</span>，其中误差为 <span class="arithmatex">\(m_ \alpha = \pm 6"\)</span>，测距和测角的观测值是独立的，求高差计算值 h 的中误差 <span class="arithmatex">\(m_h\)</span></p>
+<details class="note">
+<summary>一般函数误差传播定律公式</summary>
+<p>一般函数<span class="arithmatex">\(F(x_1, x_2, ..., x_n)\)</span>，中误差<span class="arithmatex">\(m_Z = \pm \sqrt{(\frac{\partial F}{\partial x_1}) ^ 2 m_1 ^ 2 + (\frac{\partial F}{\partial x_2}) ^ 2 m_2 ^ 2 + ... + (\frac{\partial F}{\partial x_n}) ^ 2 m_n ^ 2}\)</span></p>
+</details>
 <p><strong>解</strong>：<span class="arithmatex">\(h = S sin \alpha\)</span></p>
-<p><span class="arithmatex">\(\because \frac{\partial h}{\partial S} = sin \alpha = 0.5337, \frac{\partial h}{\partial \alpha} = \frac{S cos \alpha}{\rho "}  = 0.000671\)</span></p>
-<p>根据误差传播定律 <span class="arithmatex">\(m_h = \pm \sqrt{(\frac{\partial h}{\partial S}) ^ 2 m_S ^ 2 + (\frac{\partial h}{\partial \alpha}) ^ 2 m_ \alpha ^ 2} = \pm 3.2 mm\)</span></p>
+<p><span class="arithmatex">\(\because \frac{\partial h}{\partial S} = sin \alpha = 0.5337, \frac{\partial h}{\partial \alpha} = S cos \alpha  = 87.297\)</span></p>
+<p><span class="arithmatex">\(m_ \alpha = 6 '' = \frac{6''}{\rho ''} = 2.91 \times 10^{-5}\)</span></p>
+<p>根据误差传播定律 <span class="arithmatex">\(m_h = \pm \sqrt{(\frac{\partial h}{\partial S}) ^ 2 m_S ^ 2 + (\frac{\partial h}{\partial \alpha}) ^ 2 m_ \alpha ^ 2} = \pm 5.1 mm\)</span></p>
 </li>
 <li>
 <p>（倍数函数、和差函数）一个边长为 <span class="arithmatex">\(l\)</span> 的正方形，若测量一边中误差为 <span class="arithmatex">\(m_l = ±1cm\)</span>，求周长的中误差？若四边都测量，且测量精度相同，均为 <span class="arithmatex">\(m_l\)</span>，则周长中误差是多少？</p>
-<p><strong>解：</strong> 这两种方法测得周长的中误差并不相同，关键是要正确列出函数式。</p>
+<p><strong>解：</strong> 这两种方法测得周长的中误差并不相同，关键是要正确列出函数式。建议使用方法2，因为方法1可以认为只测量了一次，明显与实际不符。</p>
 <ul>
-<li><em>方法1（倍数函数）：</em> <span class="arithmatex">\(S = 4_l\)</span>（倍函数）故<span class="arithmatex">\(m_S = \pm \sqrt{4^2 m_l ^2} = \pm 4cm\)</span></li>
+<li><em>方法1（倍数函数）：</em> <span class="arithmatex">\(S = 4l\)</span>（倍函数）故<span class="arithmatex">\(m_S = \pm \sqrt{4^2 m_l ^2} = \pm 4cm\)</span></li>
 <li><em>方法2（和差函数）：</em> <span class="arithmatex">\(S = l_1 + l_2 + l_3 + l_4\)</span> 故<span class="arithmatex">\(m_S = \pm \sqrt{4} m_l = \pm 2 cm\)</span></li>
 </ul>
 </li>
@@ -3797,7 +3814,7 @@ $$</p>
 <li>适用范围较广：地物分布复杂的建筑区，视线障碍多的隐蔽区和带状区，布设形式有闭合导线、附合导线和支导线。</li>
 <li>要求出控制点的平面坐标，关键是要知道一个已知点的坐标、导线边的方位角以及两个控制点之间的水平距离。通常我们会有一些起算数据，例如 AB 是更高一级的平面控制网的控制点，A、B 的坐标是已知的（通常用双线表示已知数据），然后我们将导线与 AB 进行联测。由于 A、B 的坐标已知，A、B 的方位角则已知，然后只要测量每条导线边的转折角，根据方位角的推算公式就可以把每条导线边的方位角求出来。而导线边的距离可以用距离测量的方法测出来。</li>
 </ul>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="导线.png" src="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="导线.png" load="lazy" src="https://s2.loli.net/2025/04/24/cHYz26GLqQxTJw7.png" /></a></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="闭合导线" name="__tabbed_10" type="radio" /><input id="附合导线" name="__tabbed_10" type="radio" /><input id="支导线" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="闭合导线">闭合导线</label><label for="附合导线">附合导线</label><label for="支导线">支导线</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3813,7 +3830,7 @@ $$</p>
 $$
 \alpha _终 = \alpha _始 + \sum \beta _i - n \times 180 \degree
 $$
-其中<span class="arithmatex">\(\alpha _始\)</span>为起始边的方位角，也就是 AB 边的方位角，<span class="arithmatex">\(\alpha _终\)</span>为终止边的方位角，也就是 CD 这条边的方位角，它们在理论上应该有公式描述的这种关系，但是由于测转折角（即 <span class="arithmatex">\(\beta\)</span> 角）的时候有误差存在，所以实际推算出来的并不会等于已知的 CD 边的方位角。所以可以采用这个公式作为一个检核条件，表明误差的大小，如果超出了一定限度就要重测转折角。对于坐标增量的和，有<span class="arithmatex">\(\sum \Delta x_理 = x_终 - x_始\)</span>，<span class="arithmatex">\(\sum \Delta y_理 = y_终 - y_始\)</span>，这两个检核条件也应该是显而易见的。</li>
+其中<span class="arithmatex">\(\alpha _始\)</span>为起始边的方位角，也就是 AB 边的方位角<span class="arithmatex">\(\alpha _{AB}\)</span>，<span class="arithmatex">\(\alpha _终\)</span>为终止边的方位角，也就是 CD 这条边的方位角<span class="arithmatex">\(\alpha _{CD}\)</span>，它们在理论上应该有公式描述的这种关系，但是由于测转折角（即 <span class="arithmatex">\(\beta\)</span> 角）的时候有误差存在，所以实际推算出来的并不会等于已知的 CD 边的方位角。所以可以采用这个公式作为一个检核条件，表明误差的大小，如果超出了一定限度就要重测转折角。对于坐标增量的和，有<span class="arithmatex">\(\sum \Delta x_理 = x_终 - x_始\)</span>，<span class="arithmatex">\(\sum \Delta y_理 = y_终 - y_始\)</span>，这两个检核条件也应该是显而易见的。</li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -3821,6 +3838,7 @@ $$
 </div>
 </div>
 </div>
+<hr />
 <p><strong>导线测量外业：踏勘选点、建立标志、测角与量边</strong></p>
 <ol>
 <li>
@@ -3855,14 +3873,22 @@ $$
 <p>导线转折角——在导线点上由相邻导线边构成的水平角；导线转折角分为左角和右角，导线前进方向左侧的水平角称为左角，右侧的水平角称为右角；若观测无误差，在同一个导线点测得的左角与右角之和应等于360°；图根导线的转折角用DJ6级经纬仪测回法观测一测回。</p>
 </li>
 </ol>
-<h3 id="63">6.3 导线计算（重难点）</h3>
+<h3 id="63">6.3 导线计算（计算）</h3>
 <p>导线测量内业计算：计算各导线点的坐标。计算前，应检查导线测量的外业记录：数据是否齐全，有无遗漏、记错或算错，成果是否符合规范要求。检查无误后，绘制导线略图，将已知数据和观测成果标注于图上。</p>
 <p><strong>基本公式</strong></p>
 <ol>
 <li>坐标方位角的推算<span class="arithmatex">\(\alpha _前 = \alpha _后 - \beta _右 + 180 \degree\)</span>，或者<span class="arithmatex">\(\alpha _前 = \alpha _后 + \beta _左 - 180 \degree\)</span></li>
 <li>
 <p>坐标正算公式</p>
-<p>已知 A 点的坐标<span class="arithmatex">\((x_A，y_A)\)</span>，方位角 <span class="arithmatex">\(\alpha\)</span> 和 AB 间的水平距离 <span class="arithmatex">\(D_{AB}\)</span>，现在要求 B 点的坐标 <span class="arithmatex">\((x_B，y_B)\)</span></p>
+<details class="info">
+<summary>方位角</summary>
+<p>由标准方向的北端起，顺时针方向到某直线的水平夹角，称为该直线的方位角。方位角的取值范围为0~360°</p>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>纵轴为X轴，横轴为Y轴</p>
+</details>
+<p>已知 A 点的坐标<span class="arithmatex">\((x_A，y_A)\)</span>，方位角 <span class="arithmatex">\(\alpha\)</span> 和 AB 间的水平距离 <span class="arithmatex">\(D_{AB}\)</span>，现在要求 B 点的坐标 <span class="arithmatex">\((x_B，y_B)\)</span>，则</p>
 <p><span class="arithmatex">\(\Delta x_{AB} = D_{AB} \cdot cos \alpha, x_B = x_A + D_{AB} \cdot cos \alpha\)</span></p>
 <p><span class="arithmatex">\(\Delta y_{AB} = D_{AB} \cdot sin \alpha, y_B = y_A + D_{AB} \cdot cos \alpha\)</span></p>
 </li>
@@ -3875,7 +3901,11 @@ $$
 <p><mark class="critic">坐标计算的步骤</mark></p>
 <details class="example" open="open">
 <summary>举例分析</summary>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="图示.png" src="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" /></a></p>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<!-- <a class="glightbox" href="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="图示.png" src="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" /></a> -->
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/24/Jde4KNsfxZFVuCy.png" height="200px" loading="lazy"></a></p>
+</details>
 <p><mark class="critic">第一步（已知坐标 -&gt; 水平距离和方位角）：已知 A、B 两点的坐标，计算 A→B 的水平距离和坐标方位角已知A 坐标(1228.568, 1337.337)， B 坐标(1188.043, 1377.210)</mark></p>
 <details class="info">
 <summary>解题步骤</summary>
@@ -3895,7 +3925,7 @@ $$
 </li>
 </ol>
 <p><span class="arithmatex">\(\because \Delta x_{AB} &lt; 0, \Delta y_{AB} &gt; 0\)</span></p>
-<p><span class="arithmatex">\(\therefore\)</span> AB边方向位于第Ⅱ象限，坐标方位角 <span class="arithmatex">\(R_{AB} = 180 \degree - R_{AB} = 180 \degree + (-44 \degree 32' 07") = 135 \degree 27' 53"\)</span></p>
+<p><span class="arithmatex">\(\therefore\)</span> AB边方向位于第Ⅱ象限，坐标方位角 <span class="arithmatex">\(\alpha _{AB} = 180 \degree - R_{AB} = 180 \degree + (-44 \degree 32' 07") = 135 \degree 27' 53"\)</span></p>
 </details>
 <p><mark class="critic">第二步：根据已知坐标方位角 <span class="arithmatex">\(\alpha _{AB} = 135 \degree 27' 53"\)</span>推算未知边的坐标方位角 <span class="arithmatex">\(\alpha _{BC}\)</span>，坐标方位角推算方向 A -&gt; B -&gt; C，B 点安置经纬仪观测水平角 <span class="arithmatex">\(\beta _左 = 100 \degree 47' 53"\)</span></mark></p>
 <p>由角度方程<span class="arithmatex">\(\alpha _{AB} - \alpha _{BC} = 180 \degree - \beta _左\)</span>，求得<span class="arithmatex">\(\alpha _{BC} = \alpha _{AB} + \beta _左 - 180 \degree = 135 \degree 27' 53" + 100 \degree 47' 53" - 180 \degree = 56 \degree 15' 46"\)</span></p>
@@ -3921,9 +3951,8 @@ $$
 <p><span class="arithmatex">\(y_C = y_B + D_{BC} \cdot sin \alpha _{BC} = 1377.210 + 66.085 \cdot sin 56 \degree 15' 46" = 1432.166m\)</span></p>
 </details>
 <p><mark class="critic">闭合导线测量内业计算</mark></p>
-<details class="example" open="open">
+<details class="example">
 <summary>举例分析</summary>
-</details>
 <p><a class="glightbox" href="https://s2.loli.net/2025/04/25/PtmHvwkTUVRpoIr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="闭合导线.png" src="https://s2.loli.net/2025/04/25/PtmHvwkTUVRpoIr.png" /></a></p>
 <p><mark class="critic">第一步：角度闭合差的计算与调整</mark></p>
 <p>n 边形的内角和应为<span class="arithmatex">\((n-2) \times 180 \degree\)</span></p>
@@ -3934,6 +3963,7 @@ $$
 <li>观测误差使得内角和实际值<span class="arithmatex">\(\sum \beta _测 \ne \sum \beta _理\)</span>，则角度闭合差<span class="arithmatex">\(f_ \beta = \sum \beta _测 - \sum \beta _理\)</span></li>
 <li>图根光电测距导线的角度闭合差允许值<span class="arithmatex">\(f_ {\beta 允} = \pm 40" \sqrt{n}\)</span>，取相反数平均分配角度闭合差<span class="arithmatex">\(\nu _ \beta = - \frac{f_ \beta}{n}\)</span>，改正后的角度值<span class="arithmatex">\(\hat{\beta} _i = \beta _i + \nu _ \beta\)</span></li>
 </ul>
+</details>
 <p>（未完待续……）</p>
 <h3 id="64">6.4 交会定点的计算</h3>
 <p>测量交会点与周边已知坐标点构成三角形的水平角，计算交会点的平面坐标，是加密平面控制点的方法之一。前方交会、侧方交会、后方交会。</p>
@@ -3941,7 +3971,11 @@ $$
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>在已知坐标点A 、B 安置经纬仪向待定点 P 观测水平角 α、β，交会角 γ 为30°~120°之间，最好近于90°</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="前方交会.png" src="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" /></a></p>
+<details class="success inline end" open="open">
+<summary>前方交会</summary>
+<!-- <a class="glightbox" href="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="前方交会.png" src="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" /></a> -->
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/25/2Z9sx1ERI7DgJbY.png" height="200px" loading="lazy"></a></p>
+</details>
 <p>P 点坐标计算公式（余切公式）
 $$
 x_P = \frac{x_A \cdot cot \beta + x_B \cdot cot \alpha + (y_B - y_A)}{cot \alpha + cot \beta}
@@ -3951,11 +3985,19 @@ y_P = \frac{y_A \cdot cot \beta + y_B \cdot cot \alpha + (x_A - x_B)}{cot \alpha
 $$</p>
 </div>
 <div class="tabbed-block">
+<details class="success inline end" open="open">
+<summary>侧方交会</summary>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" height="200px" loading="lazy"></a></p>
+<!-- <a class="glightbox" href="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="侧方交会.png" src="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" /></a> -->
+</details>
 <p>在已知 A 点，待定点 P 安置经纬仪，观测水平角 α, γ, 检查角 θ，先算出 <span class="arithmatex">\(\beta = 180 \degree - (\alpha + \gamma)\)</span>，按余切公式计算点坐标。</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="侧方交会.png" src="https://s2.loli.net/2025/04/25/9se4ZzqdmSRjFow.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="后方交会.png" src="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" /></a></p>
+<details class="success inline end" open="open">
+<summary>侧方交会</summary>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" height="200px" loading="lazy"></a></p>
+<!-- <a class="glightbox" href="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="后方交会.png" src="https://s2.loli.net/2025/04/25/fIbLcTx3vlCudgM.png" /></a> -->
+</details>
 <p>在待定点 P 安置经纬仪，观测水平角 α, β, γ 和检查角 θ</p>
 <p>危险圆——不在一直线上3个已知点 A，B，C 构成的圆</p>
 <p>P 点位于危险圆上时，无法确定。选 P 点时，应避免使 P 点位于危险圆上。</p>
@@ -4048,13 +4090,12 @@ $$</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="数字比例尺" name="__tabbed_12" type="radio" /><input id="图示比例尺直线比例尺" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="数字比例尺">数字比例尺</label><label for="图示比例尺直线比例尺">图示比例尺（直线比例尺）</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><span class="arithmatex">\(\frac{d}{D} = \frac{1}{D/d} = \frac{1}{M} = 1: M\)</span></p>
 <ul>
-<li>数字比例尺分子化为1，分母为一个较大整数</li>
+<li>数字比例尺 <span class="arithmatex">\(\frac{d}{D} = \frac{1}{D/d} = \frac{1}{M} = 1: M\)</span>，数字比例尺分子化为1，分母为一个较大整数</li>
 <li>M 越大，比例尺越小； M 越小，比例尺越大<ul>
 <li>1：500、1：1000、1：2000、1：5000 地形图——大比例尺地形图</li>
 <li>1：1万、1：2.5万、1：5万、1：10万 地形图——中比例尺地形图</li>
-<li>1：25万、1：50万、1：100万 地形图——小比例尺地形图。</li>
+<li>1：25万、1：50万、1：100万 地形图——小比例尺地形图</li>
 </ul>
 </li>
 <li>我国规定 1：1万、1：2.5万、1：5万、1：10万、1：25万、1：50万、1：100万 七种比例尺地形图——国家基本比例尺地形图，数字比例尺注记在南面图廓外的正中央</li>
@@ -4069,14 +4110,15 @@ $$</p>
 </div>
 </div>
 </div>
+<hr />
 <p><strong>比例尺的精度</strong></p>
 <ul>
 <li>地物、地貌在图上表示的精确与详尽程度同比例尺有关。比例尺越大，越精确和详细。人肉眼能分辨的图上最小距离是0.1mm，地形图比例尺为1:M，图上0.1mm所表示的实地水平距离 0.1M(mm) ——比例尺的精度，可确定测绘地形图的距离测量精度。</li>
-<li>测绘1：1000比例尺的地形图，比例尺的精度为0.1m，量距精度为0.1m，小于0.1m的距离在图上表示不出来。</li>
+<li>测绘1：1000比例尺的地形图，则比例尺的精度为0.1m，量距精度为0.1m，小于0.1m的距离在图上表示不出来。</li>
 <li>当设计规定需要在图上能量出的实地最短长度时，可反算出测图比例尺1：M</li>
 <li>图上能量出的实地最短线段长度——0.05m，图纸比例尺不应小于<span class="arithmatex">\(\frac{0.1mm}{0.05m} = \frac{1}{500}\)</span></li>
 </ul>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/8drgp6nBKwSDNhm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="比例尺精度.png" src="https://s2.loli.net/2025/04/26/8drgp6nBKwSDNhm.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/8drgp6nBKwSDNhm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="比例尺精度.png" load="lazy" src="https://s2.loli.net/2025/04/26/8drgp6nBKwSDNhm.png" /></a></p>
 <h3 id="72">7.2 地形图图示（重点）</h3>
 <p>地形图图示: 表示地物和地貌的符号和方法。</p>
 <p>一个国家的地形图图式统一，属于国家标准。我国当前使用的、最新的大比例尺地形图图式由国家质量监督检验检疫总局与国家标准化管理委员会发布的、2007年12月1日开始实施的《国家基本比例尺地图图示 第1部分：1：5001：1000 1：2000地形图图式》(GB/T20257.1-2017)</p>
@@ -4101,6 +4143,7 @@ $$</p>
 </div>
 </div>
 </div>
+<hr />
 <h3 id="73">7.3 等高线（重点）</h3>
 <p><strong>等高线的基本概念</strong></p>
 <p>等高线：地面高程相等的相邻各点连成的闭合曲线。</p>
@@ -4141,12 +4184,15 @@ $$</p>
     </tbody>
 </table>
 
+<details class="success inline end" open="open">
+<summary>等高线平距和地面坡度</summary>
+<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/xNMz2coEywSLbhQ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="等高线.png" load="lazy" src="https://s2.loli.net/2025/04/26/xNMz2coEywSLbhQ.png" /></a></p>
+</details>
 <ul>
 <li>相邻等高线间的水平距离：等高线平距 d</li>
-<li>相邻等高线间的地面坡度<span class="arithmatex">\(i = \frac{h}{d \cdot M}\)</span></li>
+<li>地面坡度<span class="arithmatex">\(i = \frac{h}{d}\)</span></li>
 <li>同一幅地形图，等高线平距大，地貌坡度小；反之，坡度愈大</li>
 </ul>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/26/xNMz2coEywSLbhQ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="等高线.png" src="https://s2.loli.net/2025/04/26/xNMz2coEywSLbhQ.png" /></a></p>
 <p><strong>其他概念</strong></p>
 <ul>
 <li>首曲线——基本等高距测绘的等高线，0.15mm细实线；</li>
@@ -4180,14 +4226,15 @@ $$</p>
 </div>
 </div>
 </div>
+<hr />
 <p><strong>等高线的特征</strong></p>
 <ul>
-<li>等高性：同一条等高线上各点高程相等</li>
-<li>闭合性: 闭合曲线，不能中断，不在同一幅图内闭合，就在相邻的其它图幅内闭合</li>
-<li>非交性：等高线只有在陡崖或悬崖处才重合或相交</li>
-<li>正交性：等高线和山脊线或山谷线垂直相交</li>
+<li><strong>等高性</strong>：同一条等高线上各点高程相等</li>
+<li><strong>闭合性</strong>: 闭合曲线，不能中断，不在同一幅图内闭合，就在相邻的其它图幅内闭合</li>
+<li><strong>非交性</strong>：等高线只有在陡崖或悬崖处才重合或相交</li>
+<li><strong>正交性</strong>：等高线和山脊线或山谷线垂直相交</li>
 <li>同一幅图内，基本等高距相同，等高线平距大表示地面坡度小；等高线平距小表示地面坡度大</li>
-<li>不能中断(间曲线除外)，但遇道路、房屋、河流等地物符号和注记处可以局部中断</li>
+<li><strong>不能中断</strong>(间曲线除外)，但遇道路、房屋、河流等地物符号和注记处可以局部中断</li>
 </ul>
 <h3 id="74">7.4 测图前的准备工作</h3>
 <p><code>图示详见课本</code></p>
