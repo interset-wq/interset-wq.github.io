@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tour.d111kc.top/h5/web-api/">
+        <link rel="canonical" href="https://tour.d111kc.top/python/pdf/">
       
       
-        <link rel="prev" href="../js/">
+        <link rel="prev" href="../drissionpage/">
       
       
-        <link rel="next" href="../../mynote/surveying/">
+        <link rel="next" href="../../GUI/tkinter0/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Web API - Tour</title>
+        <title>处理PDF文档 pdfplumber - Tour</title>
       
     
     
@@ -112,7 +112,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-api" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Web API
+              处理PDF文档 pdfplumber
             
           </span>
         </div>
@@ -299,11 +299,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../python/syntax/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../syntax/" class="md-tabs__link">
           
   
     
@@ -339,13 +341,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../h4c2/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../h5/h4c2/" class="md-tabs__link">
           
   
     
@@ -453,6 +453,8 @@
       
         
       
+        
+      
     
     
       
@@ -499,20 +501,12 @@
       <a href="../../reference/markdown/" class="md-nav__link">
         
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.56 18H3.44C2.65 18 2 17.37 2 16.59V7.41C2 6.63 2.65 6 3.44 6h17.12c.79 0 1.44.63 1.44 1.41v9.18c0 .78-.65 1.41-1.44 1.41M6.81 15.19v-3.66l1.92 2.35 1.92-2.35v3.66h1.93V8.81h-1.93l-1.92 2.35-1.92-2.35H4.89v6.38zM19.69 12h-1.92V8.81h-1.92V12h-1.93l2.89 3.28z"/></svg>
   
   <span class="md-ellipsis">
     Markdown语法
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--new" title="最近更新">
-    </span>
-  
-
   
 
       </a>
@@ -531,7 +525,7 @@
       <a href="../../reference/extended-markdown/" class="md-nav__link">
         
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.56 18H3.44C2.65 18 2 17.37 2 16.59V7.41C2 6.63 2.65 6 3.44 6h17.12c.79 0 1.44.63 1.44 1.41v9.18c0 .78-.65 1.41-1.44 1.41M6.81 15.19v-3.66l1.92 2.35 1.92-2.35v3.66h1.93V8.81h-1.93l-1.92 2.35-1.92-2.35H4.89v6.38zM19.69 12h-1.92V8.81h-1.92V12h-1.93l2.89 3.28z"/></svg>
   
   <span class="md-ellipsis">
     Markdown 扩展语法
@@ -558,10 +552,34 @@
       <a href="../../reference/shortcut-keys/" class="md-nav__link">
         
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"/></svg>
   
   <span class="md-ellipsis">
     快捷键
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/katex/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19.88V22l-1.8-1.17-4.79-9c.66-.21 1.26-.55 1.78-1zM15 7a3 3 0 0 1-3 3h-.44L5.8 20.83 4 22v-2.12L9.79 9c-1.1-1.23-1-3.13.24-4.24C10.57 4.28 11.27 4 12 4V2a1 1 0 0 1 1 1v1.18c1.2.42 2 1.55 2 2.82m-2 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1"/></svg>
+  
+  <span class="md-ellipsis">
+    KaTex数学公式
     
   </span>
   
@@ -871,8 +889,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -882,28 +902,25 @@
       
         
       
+    
+    
+      
         
+        
+      
       
         
       
     
     
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -915,7 +932,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -929,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/syntax/" class="md-nav__link">
+      <a href="../syntax/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
@@ -952,15 +969,64 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    标准库
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            标准库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../python/bs4/" class="md-nav__link">
+      <a href="../threading/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    第三方库 bs4
-    
-      <br>
-      <small>解析网页</small>
+    多线程 threading
     
   </span>
   
@@ -978,14 +1044,95 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/threading/" class="md-nav__link">
+      <a href="../path/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    标准库 threading
+    文件操作 pathlib 和 os.path
     
-      <br>
-      <small>多线程</small>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    第三方库
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            第三方库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bs4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析网页 bs4
     
   </span>
   
@@ -1003,14 +1150,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/path/" class="md-nav__link">
+      <a href="../drissionpage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    标准库 pathlib 和 os.path
-    
-      <br>
-      <small>文件操作</small>
+    浏览器自动化操作 DrissionPage
     
   </span>
   
@@ -1025,22 +1169,107 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../python/drissionpage/" class="md-nav__link">
-        
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    第三方库 DrissionPage
-    
-      <br>
-      <small>浏览器自动化操作</small>
+    处理PDF文档 pdfplumber
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    处理PDF文档 pdfplumber
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、导入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdfpdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、打开pdf文件，并创建一个pdf对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、创建Page对象
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1133,10 +1362,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1153,22 +1380,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1180,7 +1406,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             前端
@@ -1194,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h4c2/" class="md-nav__link">
+      <a href="../../h5/h4c2/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13 18-4-4v3H4v-3H2v8h2v-3h5v3zm6-15h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v7h2V9h14v10h-4.2l-2 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M5 7V5h14v2z"/></svg>
@@ -1221,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classic-box/" class="md-nav__link">
+      <a href="../../h5/classic-box/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"/></svg>
@@ -1248,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h5c3/" class="md-nav__link">
+      <a href="../../h5/h5c3/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M14.064 0h.186C15.216 0 16 .784 16 1.75v.186a8.75 8.75 0 0 1-2.564 6.186l-.458.459q-.472.471-.979.904v3.207c0 .608-.315 1.172-.833 1.49l-2.774 1.707a.75.75 0 0 1-1.11-.418l-.954-3.102a1 1 0 0 1-.145-.125L3.754 9.816a1 1 0 0 1-.124-.145L.528 8.717a.75.75 0 0 1-.418-1.11l1.71-2.774A1.75 1.75 0 0 1 3.31 4h3.204q.433-.508.904-.979l.459-.458A8.75 8.75 0 0 1 14.064 0M8.938 3.623h-.002l-.458.458c-.76.76-1.437 1.598-2.02 2.5l-1.5 2.317 2.143 2.143 2.317-1.5c.902-.583 1.74-1.26 2.499-2.02l.459-.458a7.25 7.25 0 0 0 2.123-5.127V1.75a.25.25 0 0 0-.25-.25h-.186a7.25 7.25 0 0 0-5.125 2.123M3.56 14.56c-.732.732-2.334 1.045-3.005 1.148a.23.23 0 0 1-.201-.064.23.23 0 0 1-.064-.201c.103-.671.416-2.273 1.15-3.003a1.502 1.502 0 1 1 2.12 2.12m6.94-3.935q-.132.09-.266.175l-2.35 1.521.548 1.783 1.949-1.2a.25.25 0 0 0 .119-.213ZM3.678 8.116 5.2 5.766q.087-.135.176-.266H3.309a.25.25 0 0 0-.213.119l-1.2 1.95ZM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>
@@ -1272,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../js/" class="md-nav__link">
+      <a href="../../h5/js/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></svg>
@@ -1293,40 +1519,16 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
-  
-  <span class="md-ellipsis">
-    Web API
-    
-      <br>
-      <small>JavaScript进阶语法</small>
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../h5/web-apis/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
   
   <span class="md-ellipsis">
-    Web API
+    Web APIs
     
       <br>
       <small>JavaScript进阶语法</small>
@@ -1335,66 +1537,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#web-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      一、Web API 简介
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="一、Web API 简介">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-dom" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 DOM简介
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-cssdom" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 使用CSS选择器获取DOM元素
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.3 操作元素文本内容
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1516,44 +1658,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#web-api" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      一、Web API 简介
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="一、Web API 简介">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-dom" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 DOM简介
+      一、导入
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#12-cssdom" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#pdfpdf" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2 使用CSS选择器获取DOM元素
+      二、打开pdf文件，并创建一个pdf对象
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
     <span class="md-ellipsis">
-      1.3 操作元素文本内容
+      三、创建Page对象
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1573,58 +1700,58 @@
 
 
 
-  <h1>Web API</h1>
+  <h1>处理PDF文档 pdfplumber</h1>
 
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-18</code></p>
-<h2 id="web-api">一、Web API 简介</h2>
-<details class="note" open="open">
-<summary>变量声明</summary>
-<p>常用 <code>const</code> 和 <code>let</code> 关键字进行变量声明，在两者都可以使用的情况下，优先使用 <code>const</code> 进行变量声明。因为js中很多变量声明之后就不会再更改了，使用 <code>const</code> 声明变量语义化更好。</p>
-<details class="tip" open="open">
-<summary>Tip</summary>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-30</code></p>
+<p><a class="md-button md-button--primary" href="https://github.com/jsvine/pdfplumber"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> README.md</a></p>
+<h2 id="_1">一、导入</h2>
+<div class="language-text highlight"><pre><span></span><code>import pdfplumber
+</code></pre></div>
+<h2 id="pdfpdf">二、打开pdf文件，并创建一个pdf对象</h2>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">with</span> <span class="n">pdfplumber</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">pdf</span><span class="p">:</span>
+</span></code></pre></div>
+<p>因为是对pdf文件的内容进行操作，所以通过<code>with open</code>语句可以避免忘记关闭文件</p>
+<p><code>pdfplumber.open()</code> 返回一个PDF对象，函数的参数如下：</p>
 <ul>
-<li>数组和对象建议使用 <code>const</code> 进行声明，虽然数组和对象可以使用方法进行修改，但是修改时并不会改变他们的地址，因此可以使用const声明</li>
-<li>for循环条件中的变量需要使用let声明</li>
+<li>第一个位置参数 文件路径或文件对象</li>
+<li><code>password</code> 参数 用于打开加密的 PDF 文件，传入密码即可</li>
 </ul>
-</details>
-</details>
-<pre class="mermaid"><code>flowchart TD
-    A[JavaScript] --&gt;  B[JS语言基础ECMAScript]
-    A --&gt; C[Web APIs]
-    C --&gt; D[页面文档对象模型DOM]
-    C --&gt; E[浏览器对象模型BOM]</code></pre>
-<h3 id="11-dom">1.1 DOM简介</h3>
-<p>DOM（Document Object Model——文档对象模型）是用来呈现以及与任意 HTML 或 XML文档交互的API，即DOM是浏览器提供的一套专门用来 操作网页内容 的功能，用来开发网页内容特效和实现用户交互</p>
-<p><strong>DOM树</strong></p>
-<p>将 HTML 文档以树状结构直观的表现出来，我们称之为文档树或 DOM 树，用来描述网页内容关系的名词，文档树直观的体现了标签与标签之间的关系</p>
-<p><a class="glightbox" href="https://s2.loli.net/2025/04/18/4qhLksDPcYM3BXJ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dom.png" src="https://s2.loli.net/2025/04/18/4qhLksDPcYM3BXJ.png" /></a></p>
-<p><strong>DOM对象</strong></p>
-<p>DOM对象：浏览器根据html标签生成的 JS对象，所有的html标签都视为DOM对象，html标签属性都可以在这个对象上面找到，修改这个对象的属性会自动映射到标签身上</p>
-<p>DOM的核心思想 把网页内容当做对象来处理</p>
-<p>document 对象 是 DOM 里提供的一个对象，所以它提供的属性和方法都是用来访问和操作网页内容的 例如：document.write()</p>
-<p>网页所有内容都在document里面，document代表整个html文件</p>
-<h3 id="12-cssdom">1.2 使用CSS选择器获取DOM元素</h3>
+<p>PDF对象的属性和方法：</p>
 <ul>
-<li><code>document.querySelector('css选择器')</code> 传入css选择器，返回CSS选择器匹配到的第一个HTMLelement对象</li>
-<li><code>document.querySelectorAll('css选择器')</code> 同上，返回所有匹配元素的NodeList对象，相当于是返回一个数组<ul>
-<li>这个数组并不是真正的数组，只是和数组类似</li>
-<li>可以使用数组的下标访问元素</li>
-<li>但是不能使用pop()、push()等数组方法</li>
+<li><code>metadata</code> 属性 用于获取 PDF 文件的元数据信息，返回一个字典</li>
+<li><code>pages</code> 属性 用于获取 PDF 文件的所有页面，返回一个Page对象列表</li>
+</ul>
+<h2 id="page">三、创建Page对象</h2>
+<p>PDF文档的每一页都是一个Page对象</p>
+<p>Page对象的属性和方法：</p>
+<ul>
+<li><code>close()</code> 方法 用于关闭某页PDF</li>
+<li><code>page_number</code> 属性 用于获取这个Page对象在PDF文档中的页码，Page对象在<code>pdf.pages</code>属性中的下标从0开始，但是页码从1开始</li>
+<li><code>width</code> 属性 用于获取这个Page对象的页面宽度</li>
+<li><code>height</code> 属性 用于获取这个Page对象的高度</li>
+<li><code>.objects / .chars / .lines / .rects / .curves / .images</code> 这些属性都返回的是列表</li>
+<li><code>crop(bounding_box, relative=False, strict=True)</code> 方法 用于裁剪页面，返回裁剪后的Page对象。参数说明：<ul>
+<li><code>bounding_box</code> 矩形裁剪框，传入4元素元组 <code>(x0, top, x1, bottom)</code>。裁剪的页面保留至少部分位于边界框内的对象。<mark class="critic">元组四个元素分别是左上角角点和右下角角点的坐标，坐标的范围不能超出页面。</mark>如果对象仅部分落在裁剪框中，则将剖切其被边界框包含的部分。</li>
+<li>如果relative=True，则边界框计算为距页面左上角的偏移量，而不是绝对位置。</li>
+<li>当strict=True (默认值), 裁剪框必须在页面边界内部</li>
 </ul>
 </li>
+<li><code>within_bbox(bounding_box, relative=False)</code> 方法 类似<code>crop()</code>方法，但仅保留完全落在裁剪框内的对象</li>
+<li><code>outside_crop(bounding_box, relative=False)</code> 方法 类似<code>crop()</code> ，仅保留裁剪框外部的对象</li>
+<li><code>filter()</code> 方法 过滤页面，返回一个新的Page对象。返回页面内容，仅保留满足条件的对象。</li>
 </ul>
-<details class="info">
-<summary>其他获取DOM元素的方法（不推荐使用）</summary>
-<ul>
-<li><code>document.getElementById()</code> 传入元素id值，通过id获取匹配到的第一个元素</li>
-<li><code>document.getElementByTagName()</code> 传入html标签名，通过元素选择器获取匹配到的所有元素</li>
-<li><code>document.getElementByClassName()</code> 传入类名，通过类选择器获取匹配到的所有元素</li>
-</ul>
+<details class="note">
+<summary>Page对象和PDF对象共有的属性和方法</summary>
 </details>
-<h3 id="13">1.3 操作元素文本内容</h3>
+<p>以下属性全都返回字典：</p>
 <ul>
-<li><code>对象.innerText</code> 属性 修改html标签的文本内容，显示纯文本，不解析html标签</li>
-<li><code>对象.innerHTML</code> 属性 修改html标签的文本内容，显示纯文本，解析html标签</li>
+<li>.chars , 代表单个文本字符.</li>
+<li>.lines , 代表一条一维线.</li>
+<li>.rects , 代表单个二维矩形.</li>
+<li>.curves , 代表一序列 pdfminer.six 无法识别成线或矩形的连接点,.</li>
+<li>.images , 代表图像.</li>
+<li>.annots , 代表一个 PDF 批注 (详见第 8.4 节 官方 PDF 规范)</li>
+<li>.hyperlinks , 代表链接注释 Link 包含 URI 属性</li>
 </ul>
 
 
@@ -1725,7 +1852,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../js/" class="md-footer__link md-footer__link--prev" aria-label="上一页: JavaScript基础语法">
+          <a href="../drissionpage/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 浏览器自动化操作 DrissionPage">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1735,20 +1862,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                JavaScript基础语法
+                浏览器自动化操作 DrissionPage
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../mynote/surveying/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工程测量">
+          <a href="../../GUI/tkinter0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 预备节：面向对象">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                工程测量
+                预备节：面向对象
               </div>
             </div>
             <div class="md-footer__button md-icon">
