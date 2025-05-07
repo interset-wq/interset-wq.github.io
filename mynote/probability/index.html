@@ -1,0 +1,6792 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tour.d111kc.top/mynote/probability/">
+      
+      
+        <link rel="prev" href="../../h5/web-apis/">
+      
+      
+        <link rel="next" href="../surveying/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>概率统计 - Tour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--html{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m0 32 34.9 395.8L191.5 480l157.6-52.2L384 32zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1z"/></svg>');}.md-tag.md-tag--js{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 32v448h448V32zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6"/></svg>');}.md-tag.md-tag--css{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m480 32-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="eb4aa2bc-3afd-4efe-9336-5f8dc9c2addb"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.42/dist/twikoo.all.min.js"></script> -->
+    
+
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Tour" class="md-header__button md-logo" aria-label="Tour" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              概率统计
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/markdown/" class="md-tabs__link">
+          
+  
+    
+  
+  速查表
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python/syntax/" class="md-tabs__link">
+          
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GUI/tkinter0/" class="md-tabs__link">
+          
+  
+    
+  
+  GUI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../h5/h4c2/" class="md-tabs__link">
+          
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tour" class="md-nav__button md-logo" aria-label="Tour" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    速查表
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            速查表
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/markdown/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.56 18H3.44C2.65 18 2 17.37 2 16.59V7.41C2 6.63 2.65 6 3.44 6h17.12c.79 0 1.44.63 1.44 1.41v9.18c0 .78-.65 1.41-1.44 1.41M6.81 15.19v-3.66l1.92 2.35 1.92-2.35v3.66h1.93V8.81h-1.93l-1.92 2.35-1.92-2.35H4.89v6.38zM19.69 12h-1.92V8.81h-1.92V12h-1.93l2.89 3.28z"/></svg>
+  
+  <span class="md-ellipsis">
+    Markdown语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/extended-markdown/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.56 18H3.44C2.65 18 2 17.37 2 16.59V7.41C2 6.63 2.65 6 3.44 6h17.12c.79 0 1.44.63 1.44 1.41v9.18c0 .78-.65 1.41-1.44 1.41M6.81 15.19v-3.66l1.92 2.35 1.92-2.35v3.66h1.93V8.81h-1.93l-1.92 2.35-1.92-2.35H4.89v6.38zM19.69 12h-1.92V8.81h-1.92V12h-1.93l2.89 3.28z"/></svg>
+  
+  <span class="md-ellipsis">
+    Markdown 扩展语法
+    
+      <br>
+      <small>Markdown 语法</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/shortcut-keys/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"/></svg>
+  
+  <span class="md-ellipsis">
+    快捷键
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/katex/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19.88V22l-1.8-1.17-4.79-9c.66-.21 1.26-.55 1.78-1zM15 7a3 3 0 0 1-3 3h-.44L5.8 20.83 4 22v-2.12L9.79 9c-1.1-1.23-1-3.13.24-4.24C10.57 4.28 11.27 4 12 4V2a1 1 0 0 1 1 1v1.18c1.2.42 2 1.55 2 2.82m-2 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1"/></svg>
+  
+  <span class="md-ellipsis">
+    KaTex数学公式
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    博客
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            归档
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    分类
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            分类
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/%E9%9A%8F%E6%83%B3%E9%9A%8F%E8%AF%B4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随想随说
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/%E9%9A%8F%E7%AC%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随笔
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/syntax/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+  
+  <span class="md-ellipsis">
+    Python基础语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    标准库
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            标准库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/threading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    threading
+    
+      <br>
+      <small>多线程</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/path/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pathlib 和 os.path
+    
+      <br>
+      <small>文件操作</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    re
+    
+      <br>
+      <small>正则表达式</small>
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第三方库
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            第三方库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/bs4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    bs4
+    
+      <br>
+      <small>解析网页</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/drissionpage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DrissionPage
+    
+      <br>
+      <small>浏览器自动化操作</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pdfplumber
+    
+      <br>
+      <small>处理PDF文档</small>
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GUI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GUI/tkinter0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    预备节：面向对象
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    前端
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../h5/h4c2/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13 18-4-4v3H4v-3H2v8h2v-3h5v3zm6-15h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v7h2V9h14v10h-4.2l-2 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M5 7V5h14v2z"/></svg>
+  
+  <span class="md-ellipsis">
+    HTML4和CSS2常用语法
+    
+      <br>
+      <small>为HTML5和CSS3打下基础</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../h5/classic-box/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"/></svg>
+  
+  <span class="md-ellipsis">
+    盒子模型和经典布局
+    
+      <br>
+      <small>传统网页布局法</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../h5/h5c3/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M14.064 0h.186C15.216 0 16 .784 16 1.75v.186a8.75 8.75 0 0 1-2.564 6.186l-.458.459q-.472.471-.979.904v3.207c0 .608-.315 1.172-.833 1.49l-2.774 1.707a.75.75 0 0 1-1.11-.418l-.954-3.102a1 1 0 0 1-.145-.125L3.754 9.816a1 1 0 0 1-.124-.145L.528 8.717a.75.75 0 0 1-.418-1.11l1.71-2.774A1.75 1.75 0 0 1 3.31 4h3.204q.433-.508.904-.979l.459-.458A8.75 8.75 0 0 1 14.064 0M8.938 3.623h-.002l-.458.458c-.76.76-1.437 1.598-2.02 2.5l-1.5 2.317 2.143 2.143 2.317-1.5c.902-.583 1.74-1.26 2.499-2.02l.459-.458a7.25 7.25 0 0 0 2.123-5.127V1.75a.25.25 0 0 0-.25-.25h-.186a7.25 7.25 0 0 0-5.125 2.123M3.56 14.56c-.732.732-2.334 1.045-3.005 1.148a.23.23 0 0 1-.201-.064.23.23 0 0 1-.064-.201c.103-.671.416-2.273 1.15-3.003a1.502 1.502 0 1 1 2.12 2.12m6.94-3.935q-.132.09-.266.175l-2.35 1.521.548 1.783 1.949-1.2a.25.25 0 0 0 .119-.213ZM3.678 8.116 5.2 5.766q.087-.135.176-.266H3.309a.25.25 0 0 0-.213.119l-1.2 1.95ZM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>
+  
+  <span class="md-ellipsis">
+    HTML5和CSS3新特性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../h5/js/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></svg>
+  
+  <span class="md-ellipsis">
+    JavaScript基础语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../h5/web-apis/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Web APIs
+    
+      <br>
+      <small>JavaScript进阶语法</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    概率统计
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    概率统计
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一章 随机事件与概率
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一章 随机事件与概率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 随机事件及其运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 随机事件的概率
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 条件概率与事件的相互独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二章 随机变量及其概率分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二章 随机变量及其概率分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 随机变量的概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 随机变量的概率分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 随机变量函数的分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 二维随机变量及其分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 随机变量的相互独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三章 随机变量的数字特征
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三章 随机变量的数字特征">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 数学期望
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 方差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 协方差与相关系数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四章 几类重要的概率分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四章 几类重要的概率分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 二项分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 泊松分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 正态分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 其他重要的概率分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 二维正态及二维均匀分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五章 基本极限定理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五章 基本极限定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 切比雪夫不等式与
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 中心极限定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六章 样本及抽样分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六章 样本及抽样分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 随机样本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 分布函数与概率密度函
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 样本的数字特征
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 抽样分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七章 参数估计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第七章 参数估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 参数估计的概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 点估计量的求法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 估计量的评选标准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 区间估计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八章 假设检验
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第八章 假设检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 假设检验的基本思想
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 单个正态总体参数的
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../surveying/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工程测量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一章 随机事件与概率
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一章 随机事件与概率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 随机事件及其运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 随机事件的概率
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 条件概率与事件的相互独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二章 随机变量及其概率分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二章 随机变量及其概率分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 随机变量的概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 随机变量的概率分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 随机变量函数的分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 二维随机变量及其分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 随机变量的相互独立性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三章 随机变量的数字特征
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三章 随机变量的数字特征">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 数学期望
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 方差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 协方差与相关系数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四章 几类重要的概率分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四章 几类重要的概率分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 二项分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 泊松分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 正态分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 其他重要的概率分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 二维正态及二维均匀分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五章 基本极限定理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五章 基本极限定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 切比雪夫不等式与
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 中心极限定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六章 样本及抽样分布
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六章 样本及抽样分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 随机样本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 分布函数与概率密度函
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 样本的数字特征
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 抽样分布
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七章 参数估计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第七章 参数估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 参数估计的概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 点估计量的求法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 估计量的评选标准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 区间估计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八章 假设检验
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第八章 假设检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 假设检验的基本思想
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 单个正态总体参数的
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>概率统计</h1>
+
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-5-1</code></p>
+<h2 id="_1">第一章 随机事件与概率</h2>
+<details class="info">
+<summary>预备知识</summary>
+<ul>
+<li><strong>加法原理</strong> 如果完成某件事有 <span class="arithmatex">\(m\)</span> 种途径，每种途径有 <span class="arithmatex">\(n_i (i=1, 2, ..., m)\)</span> 种不同的方法，那么完成该件事共有 <span class="arithmatex">\(n_1 + n_2 + ... + n_m\)</span> 种不同的方法．</li>
+<li><strong>乘法原理</strong> 如果完成某件事须经过 <span class="arithmatex">\(m\)</span> 个步骤，而完成每个步骤分别有 <span class="arithmatex">\(n_i\)</span> 种不同的方法，那么完成该件事共有 <span class="arithmatex">\(n_1 \times n_2 \times ... \times n_m\)</span> 种不同的方法．</li>
+<li><strong>重复排列</strong> 从 <span class="arithmatex">\(n\)</span> 个不同的元素中任意取出 <span class="arithmatex">\(r\)</span> 个元素<span class="arithmatex">\((1 ≤ r ≤ n)\)</span>，按照一定顺序允许重复出现排成一列，称为从 <span class="arithmatex">\(n\)</span> 个元素取出 <span class="arithmatex">\(r\)</span> 个元素的重复排列，排列总数为 <span class="arithmatex">\(n^r\)</span>． 
+<strong>选排列</strong> 从 <span class="arithmatex">\(n\)</span> 个不同的元素中任取出 <span class="arithmatex">\(r\)</span> 个<span class="arithmatex">\((1 ≤ r ≤ n)\)</span>元素按照一定顺序不重复地排成一列，称为从 <span class="arithmatex">\(n\)</span> 个元素中取出 <span class="arithmatex">\(r\)</span> 个元素的选排列，记为 <span class="arithmatex">\(A_n ^r\)</span>，且有 <span class="arithmatex">\(A_n ^r = \frac{n!}{(n-r)!}\)</span>．</li>
+<li><strong>全排列</strong> <span class="arithmatex">\(r = n\)</span> 的选排列称为全排列，记为 <span class="arithmatex">\(P_n\)</span> ,且有 <span class="arithmatex">\(P_n = n!\)</span>.</li>
+<li><strong>组合</strong> 从 <span class="arithmatex">\(n\)</span> 个不同的元素中任意取出 <span class="arithmatex">\(r\)</span> 个<span class="arithmatex">\((0 ≤ r ≤ n)\)</span>元素组成一组(不考虑次序)，称为从 <span class="arithmatex">\(n\)</span> 个元素中取出 <span class="arithmatex">\(r\)</span> 个元素的一个组合，记为 <span class="arithmatex">\(C_n ^r\)</span> ,且有 <span class="arithmatex">\(C_n ^r = \frac{A_n ^r}{P_r}= \frac{n!}{(n-r)! \cdot r!}\)</span>.</li>
+</ul>
+</details>
+<h3 id="11">1.1  随机事件及其运算</h3>
+<p><strong>确定性现象与不确定性现象</strong></p>
+<ul>
+<li>确定性现象 例如：每天早晨太阳从东方升起；水在标准大气压下加温到100oC沸腾</li>
+<li>不确定性现象(随机现象) 例如：掷一枚硬币，正面朝上还是反面朝上，一天内进入某超市的顾客数</li>
+</ul>
+<p>随机现象的统计规律性 随机现象的各种结果会表现出一定的规律性，这种规律性称之为统计规律性． </p>
+<p><strong>随机试验</strong><span class="arithmatex">\(E\)</span> 对随机现象进行观察或试验．</p>
+<ul>
+<li>可重复进行；</li>
+<li>结果有多个；</li>
+<li>每一次试验的结果是不可预言的，但所有可能结果试验前已知．</li>
+</ul>
+<p><strong>样本空间</strong><span class="arithmatex">\(\varOmega\)</span> 由随机试验的一切可能结果组成的一个集合<span class="arithmatex">\(\varOmega\)</span>．其每个元素称为样本点<span class="arithmatex">\(\omega\)</span>．</p>
+<details class="question">
+<summary>例题——样本空间</summary>
+<p>写出下列试验的样本空间．</p>
+<ul>
+<li><span class="arithmatex">\(E_1\)</span> ：将一枚硬币连抛两次，考虑正反面出现的情况；<span class="arithmatex">\(\varOmega = \{(正,正) ，(正,反) ，(反,正) ，(反,反)\}\)</span></li>
+<li><span class="arithmatex">\(E_2\)</span> ：掷一颗均匀骰子，考虑可能出现的点数；<span class="arithmatex">\(\varOmega = \{ 1，2，3，4，5，6 \}\)</span></li>
+<li><span class="arithmatex">\(E_3\)</span> ：记录某网站一分钟内受到的点击次数；<span class="arithmatex">\(\varOmega = \{ 1，2，... \}\)</span></li>
+<li><span class="arithmatex">\(E_4\)</span> ：任选一人，记录他的身高(m)和体重(kg)．<span class="arithmatex">\(\varOmega = \{ (h,g) | 0 &lt; h &lt; 3, 0 &lt; g &lt; 400 \}\)</span></li>
+</ul>
+</details>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<ul>
+<li>样本空间是一个集合</li>
+<li>对于一个随机试验而言，样本空间并不唯一</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>掷两枚均匀的骰子一次</p>
+<ul>
+<li>若实验的目的是观察所有可能出现的结果 
+<span class="arithmatex">\(\varOmega _1 = \{ (1，1)，...，(1，6)，...，(6，1)，...，(6，6) \}\)</span></li>
+<li>若试验目的是观察出现的点数和 <span class="arithmatex">\(\varOmega _2 = \{ 2, 3, 4, ..., 12 \}\)</span></li>
+</ul>
+</details>
+</details>
+<p><strong>随机事件</strong> 样本空间 <span class="arithmatex">\(\varOmega\)</span> 的某个子集．用A，B，C等字母表示</p>
+<details class="example">
+<summary>Example</summary>
+<p>在掷骰子试验中，事件A：出现偶数点，则<span class="arithmatex">\(A = \{ 2，4，6 \}\)</span></p>
+</details>
+<ul>
+<li>基本事件：由一个样本点构成的集合</li>
+<li>复合事件：由多个样本点构成的集合</li>
+</ul>
+<p><strong>事件的发生</strong>  <span class="arithmatex">\(A\)</span> 发生 <span class="arithmatex">\(\Longleftrightarrow\)</span> A 所包含的某一个样本点出现</p>
+<p><strong>必然事件</strong> <span class="arithmatex">\(\varOmega\)</span> 与 <strong>不可能事件</strong> <span class="arithmatex">\(\varnothing\)</span></p>
+<p><mark class="critic">事件之间的关系</mark></p>
+<ul>
+<li><strong>事件的包含</strong> A 发生必然导致B发生，则称 A 包含于 B ，记为 <span class="arithmatex">\(A \subset B\)</span></li>
+<li><strong>事件的相等</strong> <span class="arithmatex">\(A = B\)</span></li>
+<li>
+<p><strong>事件的互斥 (互不相容)</strong> A 与 B 不能同时发生，则称 A 与 B互斥．即 <span class="arithmatex">\(AB = \varnothing\)</span></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<ul>
+<li>基本事件之间是互斥的</li>
+<li><span class="arithmatex">\(\varnothing\)</span>与任何事件互斥 </li>
+</ul>
+</details>
+</li>
+</ul>
+<p><mark class="critic">事件的运算</mark></p>
+<ul>
+<li><strong>并 (和)</strong> A，B中至少有一个发生的事件．即<span class="arithmatex">\(A \cup B = \{ \omega | \omega \in A 或 \omega \in B \}\)</span></li>
+<li>
+<p><strong>交 (积)</strong> A ，B 同时发生的事件．即<span class="arithmatex">\(A \cap B = \{ \omega | \omega \in A 且 \omega \in B \}\)</span></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>和、积运算可推广到有限个和可列无穷多个的情形． </p>
+</details>
+</li>
+<li>
+<p><strong>差</strong> A发生而B不发生的事件，称为A与B的差．即<span class="arithmatex">\(A - B = \{ \omega | \omega \in A 且 \omega \notin B \}\)</span></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<ul>
+<li><span class="arithmatex">\(A - B = A - AB\)</span></li>
+<li>若A，B互斥，则<span class="arithmatex">\(A - B = A，B- A = B\)</span></li>
+<li><span class="arithmatex">\(A - (B-C) \not ={A - B + C}\)</span></li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>逆 (对立事件)</strong> 若A与B满足 <span class="arithmatex">\(A \cup B = \varOmega\)</span>，且 <span class="arithmatex">\(AB = \varnothing\)</span>，称 A与B互逆．</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<ul>
+<li>事件互斥与互逆的区别</li>
+<li><span class="arithmatex">\(A - B = A \overline{B}\)</span></li>
+</ul>
+</details>
+</li>
+</ul>
+<p><mark class="critic">事件的运算律</mark></p>
+<ul>
+<li>交换律、结合律</li>
+<li>分配律<ul>
+<li><span class="arithmatex">\(A \cup (B \cap C) = (A \cup B)(A \cup C)\)</span></li>
+<li><span class="arithmatex">\(A \cap (B \cup C) = AB \cup AC\)</span></li>
+</ul>
+</li>
+<li>对偶律<ul>
+<li><span class="arithmatex">\(\overline{ A \cup B } = \overline{A} \cap \overline{B}\)</span> (和的逆=逆的积)</li>
+<li><span class="arithmatex">\(\overline{ A \cap B } = \overline{A} \cup \overline{B}\)</span> (积的逆=逆的和) </li>
+</ul>
+</li>
+</ul>
+<details class="question">
+<summary>事件的运算</summary>
+<p>用A、B、C的运算关系表示下列各事件：</p>
+<ul>
+<li>三个事件中至少一个发生： <span class="arithmatex">\(A \cup B \cup C\)</span></li>
+<li>没有一个事件发生： <span class="arithmatex">\(\bar{A} \bar{B} \bar{C} = \overline{A \cup B \cup C}\)</span></li>
+<li>恰有一个事件发生： <span class="arithmatex">\(A \bar{B} \bar{C} \cup \bar{A} B \bar{C} \cup \bar{A} \bar{B} C\)</span></li>
+<li>至多有两个事件发生：<span class="arithmatex">\(\overline{ ABC } = \bar{A} \cup \bar{B} \cup \bar{C}\)</span>(考虑其对立事件)</li>
+<li>至少有两个事件发生： (由对偶律)<span class="arithmatex">\(AB \bar{C} \cup A \bar{B} C \cup \bar{A} BC \cup ABC = AB \cup BC \cup CA\)</span></li>
+</ul>
+</details>
+<h3 id="12">1.2  随机事件的概率</h3>
+<p><strong>频率</strong> 在相同的条件下重复进行了 <span class="arithmatex">\(N\)</span> 次试验，若 <span class="arithmatex">\(A\)</span> 发生了 <span class="arithmatex">\(\mu\)</span> 次，则称 <span class="arithmatex">\(F_N(A) = \frac{\mu}{N}\)</span> 为 <span class="arithmatex">\(A\)</span> 在 <span class="arithmatex">\(N\)</span> 次试验中出现的频率．</p>
+<p><strong>概率的统计定义</strong> 独立重复地做 <span class="arithmatex">\(N\)</span> 次试验，当 <span class="arithmatex">\(N\)</span> 很大时，若事件 <span class="arithmatex">\(A\)</span> 发生的频率稳定地在某一数值 <span class="arithmatex">\(p\)</span> 附近摆动，则称 <span class="arithmatex">\(p\)</span> 为 <span class="arithmatex">\(A\)</span> 发生的概率．</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>概率是确定的，而频率与试验次数有关． </p>
+</details>
+<p><mark class="critic">概率的统计定义</mark></p>
+<p><strong>古典型随机试验</strong></p>
+<ul>
+<li>有限性</li>
+<li>等可能性</li>
+</ul>
+<p>古典概率的定义：古典型试验的样本空间为 <span class="arithmatex">\(\varOmega = \{ \omega _1, \omega _2, ..., \omega _n \}\)</span>，若事件A中含有 <span class="arithmatex">\(k(k \le n)\)</span>个样本点，则称 <span class="arithmatex">\(\frac{k}{n}\)</span>为 A发生的概率，记为
+$$
+P(A) = \frac{k}{n} = \frac{A中的样本点个数}{\varOmega 中的样本点个数}
+$$</p>
+<!-- 例1 从编号为1 \sim 10 的10个同样的球中任取一个，求
+A={抽到2号球}，B={抽到奇数号球}的概率．
+解 由题意知，问题归结为古典概率的计算，
+Ω 包含的样本点个数： C1 =10
+10
+A包含的样本点个数： 1 则 P(A) = 1/10
+B包含的样本点个数： 5 则 P(B) = 5/10 =1/ 2 
+
+例2 掷两枚均匀的骰子一次，求出现点数和为8的概率．
+解 设 A={出现点数和为8}，
+$\varOmega$= \{ (1，1)，...，(1，6)，...，(6，1)，...，(6，6)\} 
+Ω 包含的样本点个数：62 = 36 A = \{ (2，6)，(3，5)，(4，4)，(5，3)，(6，2)\} 
+A 包含的样本点个数：5 则 P(A) = 5/36
+思考 能否取 $\varOmega$= \{ 2，3，4，...，12\} ，为什么?
+(不能，因为基本事件不是等可能的) 
+
+例3 从 6 双不同的鞋子中任取 4 只，求： 其中恰有一双配对的概率；
+至少有一双配对的概率．
+解 设 A={恰有一双配对}， 则
+16
+P(A) = C1C2C1C1 / C4 = ．
+6 5 2 2 12
+33
+设B={至少有两只鞋子配成一双}，则
+17
+P(B) = 1- P(B) = 1- C4C1C1C1C1 / C4 = ．
+6 2 2 2 2 12
+33
+17
+或 P(B) = (C1C2C1C1 C2) / C4 = ．
+6 5 2 2 6 12
+33 
+
+思考 B包含的样本点个数能否为 C1C2C2 ，为什么?
+6 2 10
+不能，因为取到两双部分重复了一次，
+1 2 2 2 2 2
+B包含的样本点个数应为 C C C - C C C ．
+6 2 10 6 2 2 -->
+
+<p><strong>古典概率的性质</strong></p>
+<ul>
+<li>非负性：对任意A，<span class="arithmatex">\(P(A) \ge 0\)</span></li>
+<li>规范性：<span class="arithmatex">\(P(\varOmega) = 1\)</span></li>
+<li>可加性：若A和B互斥，则 <span class="arithmatex">\(P(A \cup B) = P(A) + P(B)\)</span></li>
+<li><span class="arithmatex">\(P(\varnothing)= 0\)</span></li>
+<li><span class="arithmatex">\(P(\bar{A}) = 1 - P(A)\)</span></li>
+</ul>
+<p><mark class="critic">几何概率</mark></p>
+<p><strong>几何型随机试验：</strong></p>
+<ul>
+<li>无限性</li>
+<li>等可能性</li>
+<li>几何概率的定义：在几何型随机试验中，定义事件<span class="arithmatex">\(A\)</span>发生的概率为<br />
+$$
+P(A) = \frac{A的测度(长度，面积，体积)}{\varOmega 的测度(长度，面积，体积) }
+$$</li>
+</ul>
+<!-- 例4 在一个5万平方公里的海域里有表面积达40平方公里的大陆架贮
+藏着石油，若在海域里随意选取一点钻探，问钻到石油的概率是多少？
+解 由题意知，问题归结为几何概率的计算，
+40
+设 A={钻到石油}，则 P(A) = ．
+50000  -->
+
+<!-- 例5 (会面问题) 两人相约7点到8点在某地会面，
+先到者等候另一人20分钟后就可离去，试求这两人
+能会面的概率．
+解 以 x，y分别表示两人到达时刻 (7点设为零时刻)，
+y
+则会面的充要条件 为 x - y \leq 20，这是一几何概率问题， 60
+可能的结果全体是边长为60的正方形里的点，能会面的
+20
+x
+o
+602 - 402 5 20 60
+点为图中阴影部分，所求概率 P = =
+602 9  -->
+
+<p><mark class="critic">概率的性质</mark></p>
+<ul>
+<li><strong>有限可加性</strong> (可推广到可列可加性) 设 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 是 <span class="arithmatex">\(n\)</span> 个两两互不相容的事件，即 <span class="arithmatex">\(A_i A_j = \varnothing (i \not ={j} ),i,j = 1, 2, ..., n\)</span>，则有<span class="arithmatex">\(P(A_1 \cup A_2 \cup ... \cup A_n) = P(A_1) + P(A_2) + ... + P(A_n)\)</span></li>
+<li><strong>事件差</strong> A，B 是两个事件，则 <span class="arithmatex">\(P(A - B) = P(A) - P(AB)\)</span></li>
+<li><strong>单调性</strong> 若事件<span class="arithmatex">\(A \supset B\)</span> ，则 <span class="arithmatex">\(P(A) \ge P(B)\)</span></li>
+<li><strong>加法公式</strong> 对任意两事件A，B，有 <span class="arithmatex">\(P(A \cup B) = P(A) + P(B) - P(AB)\)</span>，该公式可推广到任意 n 个事件 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 的情形．<span class="arithmatex">\(P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(AB) - P(BC) - P(AC) + P(ABC)\)</span></li>
+<li><strong>互补性</strong> <span class="arithmatex">\(P(\bar{A}) = 1 - P(A)\)</span></li>
+<li><strong>可分性</strong> 对任意两事件 A，B，有 <span class="arithmatex">\(P(A) = P(AB) + P(A \bar{B})\)</span></li>
+</ul>
+<!-- 例6 求任意50人中存在某两人生日相同的概率 (不考虑闰年)．
+解 设 A ={任意50人中存在某两人生日相同}，
+A={任意50人生日均不相同}，
+365364...316
+则 n = 36550，n = 365364...316， P(A) = = p
+A 36550
+取对数 ln p = ln 365  ln 364 ... ln 316 - 50ln 365 = -3.51909，
+P(A) = p = e-3.51909= 0.029626， P(A) =1- 0.029626 = 0.970374．  -->
+
+<!-- 例7 在110这10个自然数中任取一数，求
+(1)取到的数能被2或3整除的概率；
+(2)取到的数既不能被2也不能被3整除的概率；
+(3)取到的数能被2整除而不能被3整除的概率．
+解 设 A={取到的数能被2整除}，B={能被3整除}，
+则 P(A) =1/ 2，P(B) = 3 /10，P(AB) =1/10，
+故 P(A \cup B) = P(A)  P(B) - P(AB) = 7 /10，
+P(A  B) = P(A \cup B) =1- P(A \cup B) = 3 /10，
+P(A - B) = P(A) - P(AB) = 2 / 5． 
+
+例8 从1-9九个数字中有放回的取出 n 个数字，求这 n 个数字之积能被
+10整除的概率?
+解 设 A={取出的这 n 个数字中含有数字5}，
+B={取出的这 n 个数字中含有偶数}，
+则 P(AB) = 1- P(AB) = 1- P(A \cup B) = 1-[P(A)  P(B) - P(AB)]
+8n 5n 4n
+= 1- -  ．
+9n 9n 9n  -->
+
+<h3 id="13">1.3  条件概率与事件的相互独立性</h3>
+<!-- 引例 箱中有100件同型产品，70件 (50件正品，20件次品)来自甲厂，
+30件 (25件正品，5件次品)来自乙厂，现从中任取一件产品：
+求取得次品的概率；求取得甲厂产品的概率；取得甲厂次品
+的概率；已知取得甲厂产品，求取得的是次品的概率．
+解 设 A 表示抽到次品，B表示抽到甲厂产品，AB表示抽到甲厂次品，
+A B 表示已知抽到甲厂产品的条件下，抽到次品．
+25 1 70 7 20 1 20 2
+P(A) = = ，P(B) = = ，P(AB) = = ，P(A | B) = = ．
+100 4 100 10 100 5 70 7  -->
+
+<p><mark class="critic">条件概率</mark></p>
+<p><strong>定义</strong> 对于事件 A，B， 且 <span class="arithmatex">\(P(B) \ge 0\)</span>，称 <span class="arithmatex">\(P(A | B) = \frac{P(AB)}{P(B)}\)</span> 为在 B 发生的条件下 A 发生的条件概率．</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<ul>
+<li><span class="arithmatex">\(P(B) = 0\)</span> 时，<span class="arithmatex">\(P(A | B)\)</span> 无意义．</li>
+<li><span class="arithmatex">\(P(A | \varOmega) = \frac{P(A \varOmega)}{P(\varOmega)} = P(A)\)</span> </li>
+</ul>
+</details>
+<p><strong>性质</strong></p>
+<ul>
+<li><span class="arithmatex">\(P(\varnothing | B) = 0\)</span></li>
+<li><span class="arithmatex">\(P(\bar{A} | B) = 1 - P(A | B)\)</span></li>
+<li><span class="arithmatex">\(P(A_1 \cup A_2 | B) = P(A_1 | B) + P(A_2 | B) - P(A_1 A_2 | B)\)</span></li>
+</ul>
+<!-- 例1 设10件产品中有3件次品，现无放回的抽取2件，求在第一次抽到
+次品的条件下，第二次抽到次品的概率．
+P(A A ) C2 C2 2
+解法1 A ={第 i 次抽到次品}，则 P(A | A ) = 1 2 = 3 10 =
+i 2 1
+P(A ) 3 9
+1 10
+2
+解法2 A ={第 i 次抽到次品}，则 P(A | A ) = 缩小样本空间
+i 2 1
+9
+注 区分条件概率与两事件同时发生概率的不同．  -->
+
+<p>设 <span class="arithmatex">\(A，B \subset \varOmega\)</span>，若 <span class="arithmatex">\(P(B) &gt; 0\)</span>，则<span class="arithmatex">\(P(AB) = P(B) \cdot P(A | B)\)</span>．若 <span class="arithmatex">\(P(A) &gt; 0\)</span>，则 <span class="arithmatex">\(P(AB) = P(A) \cdot P(B | A)\)</span>．</p>
+<p>一般地，设<span class="arithmatex">\(A_1 ，A_2 ，...，A_n \subset \varOmega\)</span>， 若 <span class="arithmatex">\(P(A_1 A_2 ...  A_{n-1} ) &gt; 0\)</span>，则 <span class="arithmatex">\(P(A_1 A_2 ...  A_n ) = P(A_1 )P(A_2 | A_1 )P(A_3 | A_1 A_2 ) ... P(A_n | A_1 ... A_n )\)</span>．</p>
+<!-- 例2 (验证抓阄的科学性)
+设口袋中有a只白球、b只黑球，无放回取球，求第二次取出白球的概率．
+解 A = {第 i 次取到白球}，i = 1，2，则 A = {第1次取到黑球}，
+i 1
+P(A ) = P(A $\varOmega$)= P(A  (A \cup A )) = P(A A \cup A A )
+2 2 2 1 1 1 2 1 2
+= P(A A )  P(A A ) = P(A )P(A | A )  P(A )P(A | A )
+1 2 1 2 1 2 1 1 2 1
+a a -1 b a a
+=    = = P(A )．
+1
+a  b a  b -1 a  b a  b -1 a  b
+a
+类似地，P(A ) = k = 1，2，...，a  b
+k
+a  b 
+
+例3 (摸奖问题) 盒子里有 n 个球，其中n -1个白球，1个黑球．n 个人
+依次取一个球，不放回．问第 i 个人取到黑球的概率．
+解 A = {第 i 个人摸到黑球}， i = 1，2，...，n
+i
+1
+P(A ) =
+1
+n
+n -1 1 1
+P(A ) = P(A A ) = P(A )P(A | A ) =  =
+2 1 2 1 2 1
+n n -1 n
+P(A ) = P(A A ... A A ) = P(A )P(A | A )P(A | A A )...P(A | A ... A )
+n 1 2 n-1 n 1 2 1 3 1 2 n 1 n-1
+n -1 n - 2 n - 3 1 1
+=   ... =
+n n -1 n - 2 n - (n -1) n  -->
+<p><mark class="critic">全概率公式</mark></p>
+<p>完备事件组 事件组 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span>，若满足：
+$$
+\bigcup_{i=1}^n A_i = \varOmega \newline
+A_i A_j = \varnothing (i \not ={j} ),i,j = 1, 2,..., n
+$$
+则称 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 为 <span class="arithmatex">\(\varOmega\)</span> 的一个分割或完备事件组．</p>
+<p>全概率公式 设 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 是 <span class="arithmatex">\(\varOmega\)</span> 的一个分割，且 <span class="arithmatex">\(P(A ) &gt; 0 (i =  1，2，...，n)\)</span>．则对<span class="arithmatex">\(\forall B\)</span>，有
+$$
+P(B) = \sum <em i="1">{i=1} ^n P(A_i B) =  \sum </em> ^n P(A_i )P(B | A_i )
+$$
+称为全概率公式．</p>
+<!-- 例4 设某工厂有三个车间，生产同一种产品，
+一 二 三
+次品率：
+0.05 0.03 0.01
+产量：
+2500 2000 1500
+混合后从中任取一件，求该产品为次品的概率．
+解 设B表示取到得产品为次品；A 表示取到第 i 个车间的产品．i = 1，2，3
+i
+P(B) = P(A B)  P(A B)  P(A B)
+1 2 3
+= P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )
+1 1 2 2 3 3
+2500 2000 1500
+=  0.05   0.03   0.01  3.3
+6000 6000 6000 
+
+例5 已知一个袋子中有12个乒乓球，其中9个新球，
+3个旧球，现从中任取3个球进行比赛，比赛结束后，
+将3个球放回袋中．第二天，再任取3球进行比赛，求
+第二次抽出的3个球全是新球的概率是多少？
+解 设 A 表示第一次取出 i 个新球 i = 0，1，2，3，
+i
+B表示第二次取出3个新球
+P(B) = P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )
+0 0 1 1 2 2 3 3
+C3C0 C3 C2C1 C3 C1C2 C3 C0C3 C3
+= 3 9  9  3 9  8  3 9  7  3 9  6 = 0.146
+C3 C3 C3 C3 C3 C3 C3 C3
+12 12 12 12 12 12 12 12  -->
+
+<p><mark class="critic">贝叶斯公式</mark></p>
+<p>贝叶斯公式 设 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 是 <span class="arithmatex">\(\varOmega\)</span> 的一个分割，且<span class="arithmatex">\(P(A ) &gt; 0 (i =1，2，...，n)\)</span>.则对<span class="arithmatex">\(\forall B\)</span>， 若<span class="arithmatex">\(P(B) &gt; 0\)</span>，有
+$$
+P(A_j | B) = \frac{P(A_j B)}{P(B)} = \frac{P(A_j ) P(B | A_j )}{\sum _{i=1} ^n P(A_i ) P(B | A_i )}
+$$</p>
+<p>称为贝叶斯公式 (或逆全概率公式)． </p>
+<!-- 例6 某传染病临床上统计发生下述症状的易感者患病概率为：
+“仅发热”— 0.03，“仅干咳”— 0.01，
+“既发热又干咳”— 0.05， “无上述现象”— 0.0001
+现对某疫区25000人检查发现：“仅发热”—500人，
+“仅干咳”—1000人， “既发热又干咳”—250人，求
+①疫区中任取一人，他为该传染病患者的概率；
+②某人为该传染病患者，计算他临床表现为“仅发热”的概率． 
+
+解 设 A={仅发热病人}，B={仅干咳病人}，C={既发热又干咳病人}，
+D={无明显症状的病人}，E={得了该传染病}
+①由全概率公式得：
+P(E) = P(A)P(E | A)  P(B)P(E | B)P(C)P(E | C)  P(D)P(E | D)
+500
+=  0.03 ... = 0.001593
+25000
+②由贝叶斯公式得：
+500
+ 0.03
+P(A)P(E | A)
+25000
+P(A | E) = = = 0.376648
+P(E) 0.001593 
+
+例7 商店论箱出售玻璃杯，每箱20只，其中每箱含有 0，1，2 只
+次品的概率分别为0.8，0.1，0.1，某顾客选中一箱，从中任选
+4只检查，结果都是好的， 便买下了这一箱．问这一箱含有一
+个次品的概率是多少？
+解 设 A表示从一箱中任取4只检查，结果都是好的．
+B ，B ，B 分别表示事件每箱含 0，1，2只次品，
+0 1 2
+已知 P(B ) = 0.8，P(B ) = 0.1，P(B ) = 0.1，
+0 1 2 
+
+例7 商店论箱出售玻璃杯，每箱20只，其中每箱含有 0，1，2 只
+次品的概率分别为0.8，0.1，0.1，某顾客选中一箱，从中任选
+4只检查，结果都是好的， 便买下了这一箱．问这一箱含有一
+个次品的概率是多少？
+C4 4 C4 12
+P(A | B ) = 1 P(A | B ) = 19 =
+P(A | B ) = 18 =
+0 1 C4 5 2 C4 19
+20
+20
+P(B )P(A | B )
+由贝叶斯公式 P(B | A) = 1 1 = 0.0848．
+1 2
+
+P(B )P(A | B )
+i i
+i=0 
+
+例8 三个盒子分别装着2个红球，2个蓝球，1红1蓝，
+现从中抽取一个盒子，再从盒子中抽出一个球，发现是
+红球，问另一个球也是红球的概率?
+解 设 A ，A ，A 分别表示抽到第1，2，3 个盒子，B 表示第一个球是红球
+1 2 3
+P(B) = P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )
+1 1 2 2 3 3
+1 1 1 1 1
+= 1   0 =
+3 3 2 3 2
+P(A )P(B | A )
+1/ 3 2
+P(A | B)= 1 1 = =
+1
+P(B) 1/ 2 3 
+
+例8 三个盒子分别装着2个红球，2个蓝球，1红1蓝，
+现从中抽取一个盒子，再从盒子中抽出一个球，发现是
+红球，问另一个球也是红球的概率?
+解法2 缩小样本空间法， 不考虑盒子，只考虑6个球，抽走一个红球，
+2
+淘汰两个蓝球，只剩下2红1蓝， 则第二次抽到红球的概率为 ．
+3  -->
+
+<p><strong>全概率公式与贝叶斯公式说明</strong></p>
+<p>令 <span class="arithmatex">\(A_i\)</span> 表示“原因”， <span class="arithmatex">\(B\)</span> 表示“结果”，则<span class="arithmatex">\(P(A_i)\)</span>表示第 <span class="arithmatex">\(i\)</span> 种原因发生的概率．$P(B | A_i) $表示原因 <span class="arithmatex">\(A_i\)</span>引起结果 <span class="arithmatex">\(B\)</span> 发生的可能性大小．</p>
+<p><strong>全概率公式</strong> 综合引起结果的各种原因，导致该结果出现的可能性大小．</p>
+<p><strong>贝叶斯公式</strong> 当结果出现时，它是由某原因引起的可能性大小． </p>
+<p><mark class="critic">事件的相互独立性</mark></p>
+<p><strong>两事件独立</strong> 若<span class="arithmatex">\(A，B\)</span>两个事件满足 <span class="arithmatex">\(P(AB) = P(A) P(B)\)</span>，则称事件A与B相互独立．</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<ul>
+<li><span class="arithmatex">\(\varOmega, \varnothing\)</span> 与任何事件相互独立</li>
+<li>事件的独立与事件的互斥的区别；(无联系)</li>
+<li>定义验证；判别独立的方法；对实际问题，由经验验证． </li>
+</ul>
+</details>
+<!-- 例9 掷两枚均匀的骰子一次，求出现双6点的概率．
+解 设 A ={第 i 枚骰子出现6点}，i = 1，2，易知 A ，A 独立，
+i 1 2
+1 1 1
+因此 P(A A )= P(A )  P(A ) =  =
+1 2 1 2
+6 6 36
+例10 从一付52张(去掉王)的扑克牌中任意抽取一张，令 A={抽出一张 K }，
+B={抽出一张黑桃}，问 A 与 B 是否独立?
+C1 C1
+1
+解
+P(A) = 4 ， P(B) = 13 ， P(AB) = ，
+C1 C1 C1
+52 52 加上大小
+52
+由 P(AB) = P(A)P(B) 得A，B 是相互独立的． 王如何？  -->
+
+<p><span class="arithmatex">\(A，B\)</span> 相互独立 <span class="arithmatex">\(\iff P(A | B) = P(A),P(B) &gt; 0 \iff P(B | A) = P(B) ,P(A) &gt; 0\)</span></p>
+<p>若事件<span class="arithmatex">\(A\)</span>与<span class="arithmatex">\(B\)</span>独立，则<span class="arithmatex">\(A\)</span>与<span class="arithmatex">\(\bar{B}\)</span>、<span class="arithmatex">\(\bar{A}\)</span>与<span class="arithmatex">\(B\)</span>、<span class="arithmatex">\(\bar{A}\)</span>与<span class="arithmatex">\(\bar{B}\)</span> 也相互独立．</p>
+<!-- 例11 两射手同时向同一目标射击一次，其命中率分别为 0.8 和 0.6 ，
+求在一次射击中目标被击中的概率．
+解 设 A ={甲中}， B= {乙中}， C= {目标被击中}，
+解法1 P(C) = P(A \cup B) = P(A)  P(B) - P(AB)
+= 0.8 + 0.6 - 0.8  0.6 = 0.92．
+解法2 用对立事件公式
+P(C) = 1- P(AB)
+= 1- P(A)P(B) = 1- 0.2 0.4 = 0.92．  -->
+
+<p><strong>多个事件的独立</strong> 若三个事件 <span class="arithmatex">\(A，B，C\)</span> 满足 <span class="arithmatex">\(P(AB) = P(A) P(B) , P(AC) = P(A) P(C) , P(BC) = P(B) P(C)\)</span> 则称事件 <span class="arithmatex">\(A，B，C\)</span> 两两独立．若在此基础上还满足 <span class="arithmatex">\(P(ABC) = P(A) P(B) P(C)\)</span> 则称事件 <span class="arithmatex">\(A，B，C\)</span> 相互独立． </p>
+<!-- 注 两两独立 相互独立
+例如 有4张同样大小的卡片，上面标有数字，每张被抽到的概率相同，
+1,2,3 1    2    3   
+令 A = {抽到的卡片上有数字 i }，i = 1，2，3
+i
+1
+则 P(A ) = P(A ) = P(A ) = ，
+1 2 3
+2 
+
+1
+P(A A ) = = P(A )P(A )
+1 2 1 2
+4
+1
+P(A A ) = = P(A )P(A )
+两两独立
+2 3 2 3
+4
+1
+P(A A ) = = P(A )P(A )
+1 3 1 3
+4
+1 1
+但 P(A A A ) =  P(A )P(A )P(A ) =
+1 2 3 1 2 3
+4 8
+即三个事件不相互独立． 1,2,3 1    2    3    
+
+一般地，设 A ，A ，...，A 是 n 个事件，若以下等式成立
+1 2 n
+P(A A ) = P(A )P(A ) 1 \leq i < j \leq n，
+i j i j
+P(A A A ) = P(A )P(A )P(A ) 1 \leq i < j < k \leq n，
+i j k i j k
+......
+P(A A ... A ) = P(A )P(A )...P(A )
+1 2 n 1 2 n
+则称 n 个事件 A ，A ，...，A 相互独立．
+1 2 n  -->
+
+<p><strong>事件独立性的应用</strong></p>
+<p>加法公式的简化 若事件 <span class="arithmatex">\(A_1, A_2, ..., A_n\)</span> 相互独立， 则 <span class="arithmatex">\(P(A_1 \cup A_2 \cup ... \cup A_n ) =1 - P(\bar{A_1} \bar{A_2} ... \bar{A_n}) =1- P(\bar{A_1}) ... P(\bar{A_n})\)</span></p>
+<!-- 例12 用步枪射击飞机，每支步枪的命中率为0.004，
+求：① 现用250支步枪同时射击飞机一次，飞机被击中
+的概率．
+② 假如想以99%的概率击中飞机，至少需要多少支步枪同时射击．
+解 设 A ={第 i 支步枪击中飞机}，
+i
+① P(A \cup A \cup...\cup A ) = 1- P(A )...P(A ) = 1- 0.996250  0.63，
+1 250
+1 2 250
+② 由 1- 0.996n  0.99  n 1150． 
+
+例13 如图，1、2、3、4、5表示继电器触点， 假设
+1 4
+3
+L R
+每个触点闭合的概率为p， 且各继电器接点闭合与否相
+2 5
+互独立，求 L 至 R 是通路的概率．
+解 设 A={L至R为通路}，A ={第 i 个继电器通}，i = 1，2，3，4，5
+i
+易知，A 与A 构成了一完备事件组， 1 4
+3 3
+L R
+从而有 P(A | A ) = P(A A \cup A A ) = 2 p2 - p4 ， 2 5
+3
+1 4 2 5 
+
+例13 如图，1、2、3、4、5表示继电器触点， 假设
+1 4
+3
+L R
+每个触点闭合的概率为p， 且各继电器接点闭合与否相
+2 5
+互独立，求 L 至 R 是通路的概率．
+P(A | A ) = P((A \cup A )  (A \cup A ))= P(A \cup A )P(A \cup A ) = (2 p - p2)2 ，
+3 1 2 4 5 1 2 4 5
+由全概率公式
+1 4
+P(A) = P(A )P(A | A )  P(A )P(A | A ) L R
+3 3
+3 3
+2 5
+= 2 p2  2 p3 - 5 p4  2 p5 ． 
+
+六个概念：随机试验、样本空间、事件、概率、条件概率、独立性
+四个公式：加法公式、乘法公式、全概率公式、贝叶斯公式
+两个概型：古典概型、几何概型  -->
+
+<h2 id="_2">第二章 随机变量及其概率分布</h2>
+<h3 id="21">2.1  随机变量的概念</h3>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>有些随机试验的结果是一个数值．例如：掷骰子试验、产品的次品率检验等．有些试验的结果不是数值，但可转化为数值表示．例如：掷硬币试验，可以用1表示正面，0表示反面．综上所述，<mark class="critic">所有随机试验的结果均可用数值表示</mark>．因此，可以引入一个变量来表示随机试验的结果． </p>
+</details>
+<p><strong>定义</strong> 设试验 <span class="arithmatex">\(E\)</span> 的样本空间为 <span class="arithmatex">\(\varOmega\)</span>，若对于每个样本点 <span class="arithmatex">\(\omega \in \varOmega\)</span> 均有一个实数 <span class="arithmatex">\(X (\omega)\)</span> 与之对应，这样就得到一个定义在 <span class="arithmatex">\(\varOmega\)</span>上的单值函数 <span class="arithmatex">\(X = X (\omega)\)</span>，称 <span class="arithmatex">\(X\)</span> 为随机变量．</p>
+<details class="warning">
+<summary>Warning</summary>
+<ul>
+<li>随机变量是一个定义在样本空间上的实函数，它取值的随机性是由样本点的随机性引起的</li>
+<li>引入随机变量是为了将随机试验数量化，这样就可以用微积分的理论对随机现象的规律性进行研究． </li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>若用 X 表示掷一枚骰子的试验中出现的点数，则 <span class="arithmatex">\(\{X &lt; 5 \}\)</span> 表示掷出点数小于 5 这一事件，<span class="arithmatex">\(\{X = 3 \}\)</span> 表示掷出的点数为 3 点这一事件． </p>
+</details>
+<h3 id="22">2.2  随机变量的概率分布</h3>
+<p><mark class="critic">随机变量的分布函数</mark></p>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X\)</span> 为一随机变量， <span class="arithmatex">\(x\)</span> 为任意实数，称函数 <span class="arithmatex">\(F(x) = P \{X \leq x \}\)</span> 为 X 的分布函数．</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+</details>
+<ul>
+<li><span class="arithmatex">\(F(x)\)</span> 是一普通函数，其定义域为 <span class="arithmatex">\((- \infty，+ \infty)\)</span></li>
+<li><span class="arithmatex">\(F(x)\)</span> 的值为事件 <span class="arithmatex">\(\{ X \leq x \}\)</span> 的概率</li>
+<li><span class="arithmatex">\(F(x)\)</span> 可以完全地描述随机变量取值的规律性．</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<p><span class="arithmatex">\(P\{x_1 &lt; X \leq x_2 \} = P \{X \leq x_2 \}  - P \{X \leq x_1 \}  = F(x_2 ) - F(x_1 )\)</span>．</p>
+</details>
+<p><strong>性质</strong></p>
+<ul>
+<li><strong>单调不减性</strong> 若 <span class="arithmatex">\(x_1 &lt; x_2\)</span> ，则 <span class="arithmatex">\(F(x_1 ) \leq F(x_2 )\)</span></li>
+<li>
+<p><strong>规范性</strong> </p>
+<div class="arithmatex">\[
+F(- \infty) = \lim _{x \to - \infty} F(x) = 0 \newline
+F(+ \infty) = \lim _{x \to + \infty} F(x) = 1
+\]</div>
+</li>
+<li>
+<p><strong>右连续性</strong> <span class="arithmatex">\(\forall x \in \R\)</span>，有 
+$$
+\lim _{x \to x_0 ^+} F(x) = F(x_0 )
+$$</p>
+</li>
+</ul>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>任一满足以上三个性质的函数，都可以作为某随机变量的分布函数． </p>
+</details>
+<!-- 例2 设随机变量 X 的分布函数为
+F(x) = A  overlinectan x -  < x < ，
+求 A 和 B 的值．
+π
+解 由规范性知 F(-) = \lim F(x) = A -  B = 0
+2
+x-
+π
+F() = \lim F(x) = A   B = 1
+2
+x
+1 1
+解得 A = ， B = ．
+2 π 
+
+ 0， x \leq 0，
+
+例3 设某随机变量的分布函数为 F(x) = Ax2， 0 < x \leq 1，
+
+1， x  1，
+
+求 A 及 P{0.3 < X \leq 0.7}．
+解 利用右连续性知
+\lim F(x) = F(1)，即 1 = A12，则 A = 1．
+
+x1
+P\{0.3 < X \leq 0.7\}  = F(0.7) - F(0.3) = 0.72 - 0.32 = 0.4． 
+ -->
+
+<details class="note" open="open">
+<summary>Note</summary>
+</details>
+<p>设 <span class="arithmatex">\(X \sim F(x)，\forall a，b \in \R\)</span>，且 <span class="arithmatex">\(a &lt; b\)</span>， 则有</p>
+<div class="arithmatex">\[
+P \{ X &lt; b \} = \lim _{x \to b^-} F(x) = F(b ^-) \newline
+P \{ X = b \} = P \{ X \le b \} - P \{ X &lt; b \} = F(b) - F(b ^-) \newline
+P \{X &gt; a \} = 1 - P \{X \leq a \} = 1 - F(a) \newline
+P \{X \geq a \} = 1 - P \{X &lt; a \} = 1 - F(a ^-) \newline
+P \{a &lt; X &lt; b \} = P \{X &lt; b \} - P \{X \leq a \} = F(b) - F(a) \newline
+\]</div>
+<!-- 例4 设 X \sim F(x) = 2 / 3， 1 \leq x < 2
+ 求 P\{X =1\} ， P\{X \leq 3\} ，
+
+11/12， 2 \leq x < 3
+
+ 1， x  3
+
+P{X  1/ 2}，P\{2 < X < 4\} ．
+2 1 1
+解 P\{X = 1\}  = F- F(1-) = - = ； P\{X \leq 3\}  = F= 1；
+3 2 6
+ 1   1  1 3 11 1
+P X   = 1- F  = 1- = ；P\{2 < X < 4\}  = F(4-) - F= 1- = ．
+ 2  2  4 4 12 12  -->
+
+<p><strong>随机变量的分类</strong></p>
+<ul>
+<li><strong>离散型随机变量</strong> 取值为有限个或可列个．例如：一批产品中的次品数．</li>
+<li><strong>连续型随机变量</strong> 取值为某一区间上的值．例如：零件尺寸与规定尺寸的偏差． </li>
+</ul>
+<p><mark class="critic">离散型随机变量的分布律</mark></p>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(x_i (i = 1，2，...)\)</span>为离散型随机变量 <span class="arithmatex">\(X\)</span> 的所有可能取值，事件 <span class="arithmatex">\(\{X = x \}\)</span>  的概率 <span class="arithmatex">\(P\{X = x_i \}  = p_i ，i = 1，2，...\)</span> 称为 <span class="arithmatex">\(X\)</span> 的分布律 (列)，常写成表格形式：</p>
+<div class="arithmatex">\[
+\begin{array}{c|cccc}
+X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \cdots \\
+\hline
+P &amp; p_1 &amp; p_2 &amp; \cdots &amp; p_n \cdots
+\end{array}
+\]</div>
+<p><strong>分布律的性质</strong></p>
+<ul>
+<li><strong>非负性</strong> <span class="arithmatex">\(p_i \geq 0\)</span>， <span class="arithmatex">\(i = 1，2，...\)</span></li>
+<li><strong>规范性</strong> <span class="arithmatex">\(\sum p_i = 1\)</span></li>
+</ul>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>任一满足这两条性质的数列，都可作为某离散型随机变量的分布律．</p>
+</details>
+<!-- 例5 袋中有编号为1-5的5个球，从中任取3个球，求取出球的
+最大号 X 的分布律和分布函数．
+解 X 的可能取值为3，4，5，
+1 1 C2 3 C2 6
+P\{X = 3\}  = = ； P\{X = 4\}  = 3 = ； P\{X = 5\}  = 4 = ．
+C3 10 C3 10 C3 10
+5 5 5
+3 4 5
+X
+所以 X 的分布律为
+1 3 6
+p
+10 10 10 
+
+3 4 5
+X
+X 的分布律
+1 3 6
+p
+10 10 10
+则 X 的分布函数为
+x < 3
+ 0，
+
+1/10， 3 \leq x < 4
+
+F(x) = P\{X \leq x\}  =  p =
+
+i
+1/10  3 /10， 4 \leq x < 5
+i:x \leqx 
+i
+1/10  3 /10  6 /10， x  5
+ 
+
+3 4 5
+X
+X 的分布律
+1 3 6
+p
+10 10 10
+则 X 的分布函数为
+F(x)
+ 0， x < 3
+1
+
+1/10，3 \leq x < 4
+\{ \} 
+F(x) = P X \leq x =
+ 4/10
+4 /10，
+4 \leq x < 5
+
+1/10
+
+ 1， x  5
+O 3 4 5 x 
+
+例6 已知 X 的分布函数如下，求 X 的分布律．
+0，      x < 0，
+
+0.4，   0 \leq x <1，
+
+F(x) =
+
+0.5，   1 \leq x < 2，
+
+1，     x  2
+
+X 0        1        2
+解
+P 0.4    0.1     0.5
+注 分布律 分布函数  -->
+
+<p><mark class="critic">连续型随机变量的概率密度函数</mark></p>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X \sim F(x)\)</span>，若存在一个非负可积的函数 <span class="arithmatex">\(f (x)\)</span>，使 <span class="arithmatex">\(\forall x \in \R\)</span>，有</p>
+<div class="arithmatex">\[
+F(x) = P \{ X \le x \} = \int _ {-\infty} ^x f (t) dt
+\]</div>
+<p>则称 X 为连续型随机变量，<span class="arithmatex">\(f (x)\)</span>称为 X 的概率密度函数或分布密度函数．连续型随机变量的分布函数 <span class="arithmatex">\(F(x)\)</span> 是连续函数．</p>
+<p>几何意义：</p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/05/07/GazSHucAJnjsomF.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="概率密度函数.png" src="https://s2.loli.net/2025/05/07/GazSHucAJnjsomF.png" /></a></p>
+<p>概率密度函数 <span class="arithmatex">\(f (x)\)</span> 的性质：</p>
+<ul>
+<li><strong>非负性</strong> <span class="arithmatex">\(f (x) \geq 0\)</span></li>
+<li>
+<p><strong>规范性</strong> <span class="arithmatex">\(\int _ {-\infty} ^ {+\infty} f (x) dx = 1\)</span></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>任一满足以上两条性质的函数，都可以作为某连续型随机变量的概率密度函数．</p>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(P\{a &lt; X \leq b\}  = F(b) - F(a) = \int _a ^b f(x) dx\)</span></p>
+</li>
+<li>若 <span class="arithmatex">\(f (x)\)</span> 在 <span class="arithmatex">\(x\)</span> 处连续，则 <span class="arithmatex">\(F' (x) = f (x)\)</span>． </li>
+</ul>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>设 X 为一连续型随机变量，a为任意常数，则有 <span class="arithmatex">\(P\{X = a\}  = 0\)</span> .</p>
+</details>
+<!-- 证明 \{ \}  \{ \}  \{ \} 
+P X = a = P X \leq a - P X < a
+概率为0的事件未必
+= F(a) - F(a-) = F(a) - F(a) = 0 是不可能事件！
+F(x) 是连续的
+\{ \}  \{ \}  \{ \}  \{ \} 
+从而，P a < X \leq b = P a \leq X \leq b = P a < X < b = P a \leq X < b
+b
+=  f (x)dx
+a 
+
+例7 已知 P(A \cup B) = 0.8 ，P(A) = 0.3，P(B) = 0.5，则事件 A 与B 的关系
+为 (     D        )．
+(A) 事件 A 与B 相互独立； (B) 事件 A与 B 互不相容；
+(C) 事件 A与 B 对立； (D) 事件 A 与B 有可能同时发生．
+解析 由 P(A \cup B) = P(A)  P(B) - P(AB)，易得 P(AB) = 0，排除 (A)；
+由于概率为 0 的事件是有可能发生的事件，因此本题答案为 (D)． 
+
+kx(1- x)， 0 < x < 1，
+例8 设连续型随机变量 X 的概率密度函数为 f (x) =
+
+0， 其他，
+
+求 k 的值，P\{X  0.3\} 及分布函数 F(x)．
+解 利用规范性得
++ 0 1 
+1 =  f (x)dx =  f (x)dx   f (x)dx   f (x)dx ，
+- - 0 1
+1
+即  kx(1- x)dx = 1 k = 6，
+0
+\{ \}   1
+P X  0.3 =  f (x)dx =  6x(1- x)dx = 0.784．
+0.3 0.3 
+
+kx(1- x)， 0 < x < 1，
+例8 设连续型随机变量 X 的概率密度函数为 f (x) =
+
+0， 其他，
+
+求 k 的值，P\{X  0.3\} 及分布函数 F(x)．
+x
+x \leq 0
+  0dt ，
+-
+
+x 0 x
+F(x) =  f (t)dt =   0dt  6t(1- t)dt ， 0 < x < 1
+- - 0
+
+0 1 x
+  0dt  6t(1- t)dt  0dt ， x 1
+- 0 1 
+
+kx(1- x)， 0 < x < 1，
+例8 设连续型随机变量 X 的概率密度函数为 f (x) =
+
+0， 其他，
+
+求 k 的值，P\{X  0.3\} 及分布函数 F(x)．
+0， x \leq 0
+
+
+x
+3x2 - 2x3 ， 0 < x < 1
+F(x) =  f (t)dt = 
+-
+
+ 1， x 1
+注 概率密度函数 分布函数 
+ -->
+
+<h3 id="23">2.3  随机变量函数的分布</h3>
+<!-- 例1 设离散型随机变量 X 的分布律为：
+X
+-1 0 1 2
+p
+0.2 0.3 0.1 0.4
+1 2 5
+Y
+则 2 的分布律为：
+Y = X 1
+p
+0.3 0.3 0.4 
+
+引例 设连续型随机变量 X 的概率密度函数为 f (x)，试求 Y = aX  b
+X
+(a  0) 的概率密度函数 f (y)．
+Y
+解 先求 Y 分布函数F (y)，
+Y
+F (y) = P\{Y \leq y\}  = P\{aX  b \leq y\}  = P\{aX \leq y - b\} ，
+Y
+ y - b  y-b
+当a  0时，F (y) = P X \leq  =  a f (x)dx ，
+Y  a  - X
+1  y - b 
+因此 f ( y) = F(y) = f ，
+ 
+Y Y X
+a  a  
+
+引例 设连续型随机变量 X 的概率密度函数为 f (x)，试求 Y = aX  b
+X
+(a  0) 的概率密度函数 f (y)．
+Y
+ y - b   y - b  y-b
+当 a < 0 时，F (y) = P X   =1- P X < = 1-  a f (x)dx ，
+Y  a   a  - X
+1  y - b  1  y - b 
+因此 f (y) = F(y) = - f ， 当 a  0时，f (y) = f ，
+   
+Y Y X Y X
+a  a  a  a 
+1  y - b 
+将两个结果合起来可得： f (y) = f ．
+ 
+Y X
+a  a   -->
+
+<p>定理 设连续型随机变量 X 的概率密度函数为 f (x)，又设 y = g(x)
+X
+是处处可导的单调函数，则 Y = g(X ) 是连续型随机变量，且 Y 的概
+率密度函数为：
+ f h(y) h(y) ， α &lt; y &lt; β
+f (y) = X
+
+Y
+0， 其它
+
+其中 x = h(y) 是 y = g(x) 的反函数，α 是 y = g(x) 的最小值，
+β 是 y = g(x) 的最大值．(证明略) </p>
+<p>λe-λx， x  0
+例2 设 X \sim f (x) = (λ  0)，求 Y = eX 的概率密度函数 f (y)．
+
+X Y
+0， x &lt; 0
+
+解法一 y = ex 的反函数是 x = ln y ，
+1
+反函数 x 对 y 的导数为 ，又由 x  0  y = ex  1，
+y
+ 1
+ λe-λln y ， y  1， λy-(1λ) ， y  1，
+因此 f (y) = y 则 f ( y) =
+ 
+Y Y
+0， y &lt; 1．
+ 
+0， y &lt; 1，
+ </p>
+<p>λe-λx， x  0
+例2 设 X \sim f (x) = (λ  0)，求 Y = eX 的概率密度函数 f (y)．
+
+X Y
+0， x &lt; 0
+
+解法二 先求 Y 分布函数F (y)，
+Y
+{ } 
+F (y) = P{Y \leq y}  = P eX \leq y ， 由 X  0得，Y = eX 1，
+Y
+{ } 
+当 y &lt; 1 时，F (y) = P eX \leq y = 0，
+Y
+ln y
+{ } 
+当 y  1 时， F (y) = P eX \leq y = P{X \leq ln y}  =  λe-λxdx = 1- y-λ ，
+Y
+0
+λy-(1λ) ， y 1，
+则 f ( y) =
+
+Y
+0， y &lt; 1．
+ </p>
+<p>1- | x |， -1 &lt; x &lt; 1，
+例3 设 X\sim f (x) = 求随机变量Y = X 2 1 的分布
+
+X 0， 其它，
+
+函数与概率密度函数．
+解 X 的取值范围为 (-1，1) ，则 Y 的取值范围为 [1，2) ，
+当 y &lt; 1 时，F (y) = P{Y \leq y}  = 0； 当 y  2 时，F ( y) = P{Y \leq y}  = 1；
+Y Y
+{ }  { } 
+当1 \leq y &lt; 2 时，F (y) = P{Y \leq y}  = P X 2 1 \leq y = P - y -1 \leq X \leq y -1
+Y
+y-1  2
+=  (1- | x |)dx = 1- 1- y -1 ．
+- y-1 </p>
+<p>1- | x |， -1 &lt; x &lt; 1，
+例3 设 X\sim f (x) = 求随机变量Y = X 2 1 的分布
+
+X 0， 其它，
+
+函数与概率密度函数．
+ 0， y &lt;1
+
+  2
+综上知，Y 的分布函数 F (y) = 1- 1- y -1 ， 1\leq y &lt; 2
+Y
+
+分段点处的导
+1， y  2
+
+
+数按定义求！
+ 1
+-1， 1&lt; y &lt; 2，
+
+所以Y 的密度函数为 f (y) =  y -1
+Y
+
+0， 其它．
+ </p>
+<h3 id="24">2.4 二维随机变量及其分布</h3>
+<p>本节主要内容
+一、二维随机变量的概念
+二、二维离散型随机变量
+三、二维连续型随机变量 </p>
+<p>定义 设 X ，Y 是两个随机变量，则由它们构成的二维向量 (X ，Y ) 称
+为二维随机变量． y
+(x，y)
+联合分布函数
+O x
+1) 定义 设 (X ，Y )是二维随机变量，\forall x ，y \in \R，称二元函数
+F(x，y) = P{X \leq x，Y \leq y} 为(X ，Y ) 的联合分布函数．
+注 ①几何意义：(X ，Y )落在点 (x，y) 的左下方无穷矩形域内的概率．
+② P{x &lt; X \leq x ，y &lt; Y \leq y } = F(x ，y ) - F(x ，y ) - F(x ，y )  F(x ，y )．
+1 2 1 2 2 2 1 2 2 1 1 1 </p>
+<p>2) 性质 F(x ，y) = P{X \leq x ，Y \leq y} 
+① F(x，y) 关于 x，y 具有单调非降性；
+② F(， ) = 1，F(-，- ) = 0，F(x，- ) = 0，F(-，y) = 0；
+③ F(x，y) 关于 x，y 具有右连续性；
+x &lt; x ，y &lt; y
+④ 对任意 均有
+1 2 1 2
+F(x ，y ) - F(x ，y ) - F(x ，y )  F(x ，y )  0．
+2 2 1 2 2 1 1 1
+3) 边缘分布函数
+F (x) = P{X \leq x} = F(x， )；F (y) = F(，y)．
+X Y </p>
+<p>定义 若 (X ，Y ) 的全部可能取值只有有限多对或可列多对，则称
+(X ，Y ) 是二维离散型随机变量，而称
+{ } 
+P X = x ，Y = y = p (i，j = 1，2，...)
+i j ij
+为二维离散型随机变量 (X ，Y ) 的联合分布律．
+性质 p  0， i，j = 1，2，...；  p = 1．
+ij ij
+i j
+边缘分布律
+P{X = x }  =  p = p ； P{Y = y }  =  p = p ；
+i ij i j ij  j
+j i </p>
+<p>(X ，Y )的联合分布律通常用如下表格给出：
+Y
+y
+y ... y ...
+1
+X 2 j
+x p p ... p ...
+1 11 12 1j
+x p p ... p ...
+2 21 22 2 j
+ ... ... ... ... ...
+p p p ...
+x ...
+i1 i2 ij
+i
+... ... ... ... ...
+ </p>
+<p>联合分布律的行或列相加即得边缘分布律
+Y
+{ } 
+P X = x = p
+y
+y ... y ... i i
+1
+X 2 j
+x p p ... p ... p
+1 11 12 1j 1
+x p p ... p ... p
+2 21 22 2 j 2
+ ... ... ... ... ... 
+p p p ... p
+x ...
+i1 i2 ij i
+i
+... ... ... ... ...
+
+
+P{Y = y }  = p p p ... p ... =1
+1 2  j
+j  j </p>
+<p>例1 设 X 在 1，2，3，4 中等可能取一值，Y 在1 \sim X 中等可能取一整数值，
+求 (X ，Y )的联合分布律及 X ，Y 的边缘分布律．
+Y p
+1 2 3 4 i
+X
+解
+1 1
+1 1 0 0 0
+P{X =1，Y =1} =
+4 4
+1 1 1 1 1 P{X =1}P{Y =1| X =1}
+2   0 0
+4 2 4 2 4
+1 1 1 1 1 1 1
+3    0
+4 3 4 3 4 3 4
+1 1 1 1 1 1 1 1 1
+4    
+4 4 4 4 4 4 4 4 4
+p 25 13 7 3 
+=1
+ j
+48 48 48 48 </p>
+<p>定义 设 (X ，Y ) \sim F(x，y)，若存在一个非负可积的函数 f (x，y)，
+使 \forall (x，y)\in \R2，有
+x y
+F(x，y) =   f (u，v)dvdu
+- -
+则称 (X ，Y )为二维连续型随机变量， f (x，y) 称为 (X ，Y ) 的联合概率
+密度函数． </p>
+<p>x y
+ f (x，y) 的性质 F(x，y) =   f (u，v)dvdu
+- -
+ 
+非负性：f (x，y)  0； (2)规范性：   f (x，y)dxdy = 1；
+- -
+2F(x，y)
+若 f (x，y)在点 (x，y) 连续，则 = f (x，y)；
+xy
+P{(X ，Y )\in D}  =  f (x，y)dxdy ．
+求和
+D
+边缘密度函数 
+x   
+由 F (x) = F(x， ) =   f (u，v)dv du，
+X  
+- -
+
+ 
+f (x) =  f (x，v)dv =  f (x，y)dy；
+求导得
+X
+- -
+
+同理 f (y) =  f (x，y)dx ．
+Y
+- </p>
+<p>Ce-2(xy)， x  0，y  0，
+例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它,
+
+求：①常数C，F(x，y)，f (x)，f (y)；
+X Y
+② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
+解 ① 由规范性
+C
+   
+1=   f (x，y)dxdy =   Ce-2(xy)dxdy = ．
+4
+- - 0 0
+所以 C = 4． </p>
+<p>Ce-2(xy)， x  0，y  0，
+例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它,
+
+求：①常数C，F(x，y)，f (x)，f (y)；
+X Y
+② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
+ x y
+x y   4e-2(uv)dvdu， x  0，y  0
+F(x，y) =   f (u，v)dvdu =
+ 0 0
+- -
+ 0， 其它
+
+(1- e-2x)(1- e-2y)， x  0，y  0，
+因此 F(x，y) =
+
+0， 其它，
+ </p>
+<p>Ce-2(xy)， x  0，y  0，
+例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它,
+
+求：①常数C，F(x，y)，f (x)，f (y)；
+X Y
+② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
+ 
+  4e-2(xy)dy， x  0，
+f (x) =  f (x，y)dy
+=
+ 0
+X
+-
+ 0， 其它，
+
+2e-2x， x  0， 2e-2y， y  0，
+因此 f (x) =  同理 f (y) = 
+X Y
+0， 其它， 0， 其它 ．
+  </p>
+<p>Ce-2(xy)， x  0，y  0，
+例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它,
+
+求：①常数C，F(x，y)，f (x)，f (y)；
+X Y
+② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
+② P{(X ，Y )\in D}  =  f (x，y)dxdy y
+D
+x  y =1
+1 1-x
+=  dx 4e-2(xy)dy = 1- 3e-2．
+0 0
+O x </p>
+<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它，
+
+ 1 1 
+求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+ 
+ 2 4 
+②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+ 1 1  1 1 15
+1 1
+解 ① P 0 &lt; X &lt; ， &lt; Y &lt; 1 =  2  4xy dydx =  2 2xdx 2y dy = ，
+1 1
+ 2 4  0 0 64
+4 4
+y
+1
+1 y
+{ } 
+P X &lt; Y =  4xy dxdy =  2ydy 2xdx = ， 1
+0 0 2
+D
+x
+O 1 </p>
+<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它，
+
+ 1 1 
+求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+ 
+ 2 4 
+②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+
+② f (x) =  f (x，y)dy，当 x \leq 0 或 x 1 时，由于 f (x，y) = 0，得 f (x) = 0
+X X
+-
+1
+当 0 &lt; x &lt; 1 时， f (x) =  4xy dy = 2x，
+X
+0
+2x， 0 &lt; x &lt;1， 2y， 0 &lt; y &lt; 1，
+综上 f (x) =  同理 f (y) =
+
+X  0， 其它， Y 0， 其它，
+ </p>
+<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它，
+
+ 1 1 
+求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+ 
+ 2 4 
+②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+当 x \leq 0 或 y \leq 0 时， 有 F(x，y) = 0， x y
+F(x，y) =   f (u，v)dvdu
+- -
+当0 &lt; x &lt; 1且 0 &lt; y &lt; 1时，
+x y x y
+F(x，y) =   f (u，v)dvdu =   4uvdvdu = x2 y2，
+- - 0 0 </p>
+<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它，
+
+ 1 1 
+求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+ 
+ 2 4 
+②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+x y x 1
+当0 &lt; x &lt; 1且 y  1 时，F(x，y) =   f (u，v)dvdu =   4uvdvdu = x2，
+- - 0 0
+x y 1 y
+当 x  1 且 0 &lt; y &lt; 1 时，F(x，y) =   f (u，v)dvdu =   4uvdvdu = y2，
+- - 0 0
+x y 1 1
+当 x  1 且 y  1 时， F(x，y) =   f (u，v)dvdu =   4uvdvdu = 1，
+- - 0 0 </p>
+<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
+0， 其它，
+
+ 1 1 
+求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+ 
+ 2 4 
+②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+ 0， x \leq 0 或 y \leq 0，
+
+x2 y2， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+
+
+综上 F(x，y) = x2， 0 &lt; x &lt; 1，y  1，
+
+
+y2， x  1，0 &lt; y &lt; 1，
+
+ 1， x  1，y  1．
+ </p>
+<h3 id="25">2.5 随机变量的相互独立性</h3>
+<p>本节主要内容
+一、随机变量的相互独立性
+二、两个随机变量函数的分布
+三、条件分布 </p>
+<p>定义 设 (X ，Y ) 是二维随机变量，若 \forall (x，y)\in \R2，有
+P{X \leq x，Y \leq y}  = P{X \leq x} P{Y \leq y} ，
+即 F(x，y) = F (x)F ( y)，则称 X 与 Y 相互独立．
+X Y
+特别地，
+对离散型随机变量：X 与Y 相互独立 p = p p \forall i，j
+ij i  j
+对连续型随机变量：X 与Y 相互独立 f (x，y) = f (x) f ( y)．
+X Y </p>
+<p>2e-(2xy) x  0，y  0
+例1 (X ，Y ) \sim f (x，y) =  判断 X 与 Y 是否相互独立．
+0 其它
+
+ 
+  2e-(2xy)dy = 2e-2x， x  0，
+解 f (x) =  f (x，y)dy =
+ 0
+X
+-
+ 0， 其它，
+
+ 
+ 2e-(2xy)dx = e-y， y  0，
+
+f (y) =  f (x，y)dx =
+ 0
+Y
+-
+ 0， 其它，
+
+因为 f (x，y) = f (x) f ( y)，所以 X 与 Y 相互独立．
+X Y </p>
+<p>Y 1 2 3
+X
+例2 设 (X ，Y ) \sim
+1 1/8 a 1/24
+2 b 1/4 1/8
+求 ① a,ab，b 满足的条件；② 若 X 与 Y 独立，求 a，b 的值．
+{ a  0
+解 ①由分布律的非负性和规范性知 b  0
+11
+a  b =
+24 </p>
+<p>Y 1 2 3
+X
+例2 设 (X ，Y ) \sim
+1 1/8 a 1/24
+2 b 1/4 1/8
+求 ① a,ab，b 满足的条件；② 若 X 与 Y 独立，求 a，b 的值．
+② 由 X 与 Y 独立，得 p = p p ， \forall i，j，从而有
+ij i  j
+ 11  1
+a  b = a =
+ 
+ 24  12
+
+ 
+1  3  1 3
+  b =  b =
+ 
+
+6  8  8  8 </p>
+<p>注 ① 独立性的概念可推广到n个随机变量的情形，且若 X ，X ，...，X
+1 2 n
+是相互独立的随机变量，则随机变量的函数 f (X )，f (X )，...，f (X )
+1 1 2 2 n n
+也是相互独立的；
+② 随机变量的相互独立性是事件独立性的扩充，常可由试验的
+独立性来判定随机变量的独立性． </p>
+<p>离散型
+ -1 1 
+例3 设 X ，Y 的分布律均为 ，且 X 与 Y 相互独立，
+ 
+1/ 2 1/ 2
+ 
+求：① (X ，Y ) 的联合分布律；
+② Z = X  Y 的分布律；
+③ P{X = Y} ． </p>
+<p>解 ① 由 X 与 Y 相互独立，p = p p ， 则 (X ，Y )的联合分布律为
+ij i  j
+Y
+-1 1
+X
+1 1 1 1
+-1  
+2 2 2 2
+1 1 1 1 1
+ 
+2 2 2 2
+② 的分布律为
+Z = X  Y
+Z -2 0 2
+p 1/ 4 1/ 2 1/ 4
+1
+③ P{X = Y}  = P{X = -1，Y = -1}   P{X = 1，Y =1}  = ．
+2 </p>
+<p>连续型 引例 设二维连续型随机变量(X ，Y ) 的联合概率密度为
+f (x，y)，求 Z = X  Y 的概率密度函数 f (z)．
+Z
+解 F (z) = P{Z \leq z}  = P{X  Y \leq z}  =  f (x，y)dxdy
+Z
+xy\leqz
+ z-x  z
+=  dx f (x，y)dy =  dx f (x，t - x)dt t = y  x
+- - - -
+z  y
+=  [ f (x，t - x)dx] dt 交换积分顺序
+- -
+x  y = z
+
+两边对 z 求导得 f (z) =  f (x，z - x)dx；
+Z
+-
+
+同理可得 f (z) =  f (z - y，y)dy ． o x
+Z
+- </p>
+<p>特别地，当 X 与 Y 相互独立时，有
+ 
+f (z) =  f (x，z - x)dx =  f (x) f (z - x)dx
+Z X Y
+- -
+ 
+=  f (z - y，y)dy =  f (z - y) f (y)dy
+X Y
+- -
+这两个积分即是函数 f (x) 与 f (y) 的卷积．
+X Y </p>
+<p>例4 已知 X 与 Y 相互独立，它们概率密度函数分别为
+2x， 0 \leq x \leq 1， e-y， y  0，
+f (x) = f (y) =
+ 
+X 0， 其它， Y 0， y &lt; 0，
+ 
+求 Z = X + Y 的概率密度函数．
+ 
+解1 (卷积公式) f (z) =  f (z - y) f (y)dy =  e-y f (z - y)dy
+Z X Y X
+- 0
+2(z - y)， 0 \leq z - y \leq1， 2(z - y)， z -1\leq y \leq z，
+f (z - y) =  即 f (z - y) = 
+X 0， 其它， X 0， 其它．
+  </p>
+<p> y \in[0， ) 2(z - y)， z -1\leq y \leq z ，
+f (z - y) =
+
+ 取公共部分， X 0， 其它，
+
+y \in[z -1，z]
+
+e-y ， y  0，
+f (y) =
+
+Y
+0， y &lt; 0．
+ 
+f (z) =  e-y f (z - y)dy
+则
+Z X
+0
+0， z &lt; 0，
+z
+ 2(z - y)e-ydy = 2(e-z  z -1)， 0 \leq z \leq 1，
+=
+0
+z
+ 2(z - y)e-ydy = 2e-z， z  1．
+z-1 </p>
+<p> 1
+解2 (卷积公式) f (z) =  f (x) f (z - x)dx =  2xf (z - x)dx
+Z X Y Y
+- 0
+2x， 0 \leq x \leq 1， ex-z， x \leq z，
+f (x) = f (z - x) =
+ 
+X 0， 其它， Y 0， x  z，
+ 
+0， z &lt; 0，
+x \in(-，z]
+
+z
+f (z) =  2xex-zdx = 2(e-z  z -1)， 0 \leq z \leq 1，  x \in[0，1]
+Z
+0
+1
+ 2xex-zdx = 2e-z， z  1．
+0 </p>
+<p>3．M = max(X ，Y ) 及 N = min(X ，Y )的分布
+设 X \sim F (x)，Y \sim F (y)，且 X 与 Y 相互独立，则
+X Y
+F (z) = P{M \leq z} = P{X \leq z，Y \leq z}= P{X \leq z}P{Y \leq z}= F (z)F (z)
+max X Y
+F (z) = P{N \leq z} = 1- P{N  z}= 1- P{X  z，Y  z}
+min
+= 1- P{X  z}P{Y  z}= 1- (1- P{X \leq z})(1- P{Y \leq z})
+= 1- (1- F (z))(1- F (z))．
+X Y </p>
+<p>3 4
+例5 设 P{X  0，Y  0} = ，P{X  0} = P{Y  0} = ，求 P{max(X ，Y )  0}.
+7 7
+解 P{max(X ，Y )  0} = P{(X  0) \cup (Y  0)}
+= P{X  0} P{Y  0}- P{X  0，Y  0}
+4 4 3 5
+加法公式！
+=  - = ．
+7 7 7 7 </p>
+<p>1．随机变量的概念；
+2．分布函数的概念与性质；
+3．离散型随机变量的分布列及函数的分布；
+4．连续型随机变量的密度函数及函数的分布；
+5．二维离散型随机变量的联合、边缘分布律；
+6．二维连续型随机变量的联合、边缘密度函数；
+7．随机变量的相互独立性． </p>
+<h2 id="_3">第三章 随机变量的数字特征</h2>
+<p>数学期望
+方差
+协方差与相关系数 </p>
+<p>引 言
+通常把刻划随机变量的某些特征的确定的数值称为数字特征．
+反映随机变量取值的集中位置——数学期望；
+反映随机变量取值的分散程度——方差；
+反映两个随机变量的线性关联程度——相关系数． </p>
+<h3 id="31">3.1  数学期望</h3>
+<p>本节主要内容
+一、随机变量的数学期望
+二、随机变量函数的期望
+三、数学期望的性质 </p>
+<p>引例 两射手的射击技术如下，问哪个射手技术较高?
+X 8 9 10 Y 8 9 10
+甲： 乙：
+p 0.3 0.1 0.6 p 0.1 0.6 0.3
+解 若让他们各射击 N 次，则打中的总环数分别为
+甲：8 0.3N  9 0.1N 10 0.6N = 9.3N
+乙：8 0.1N  9 0.6N 10 0.3N = 9.2N
+平均起来，甲每次射中 9.3 环，乙每次射中 9.2 环，
+故甲的射击水平略胜于乙． </p>
+<p>离散型随机变量的数学期望
+定义1 设离散型随机变量 X 的分布律为 P{X = x } = p ，若级数  x p
+i i
+i i
+i
+绝对收敛，则称该级数和为 X 的数学期望， 记为
+改变各项的顺序 E(X ) =  x p ．
+后级数的和不变 i i
+i
+连续型随机变量的数学期望
+定义2 设连续型随机变量 X 的概率密度函数为 f (x)，若积分
+
+ xf (x)dx 绝对收敛，则称积分值为 X 的数学期望，记为
+-
+
+E(X ) =  xf (x)dx ． 求和  
+- </p>
+<p>例1 设用一均匀的骰子赌博．在一次游戏中，若出现2点，
+则该人可赢20元，出现4点赢40元，出现6点则输30元，若
+出现其它点不输不赢，求玩游戏的人赢得钱数的期望．
+解 令 X 表示在一次抛掷中赢得的钱数，则 X 的分布律为
+X
+-30 0 20 40
+p
+1/6 1/2 1/6 1/6
+1 1 1 1
+E(X ) = -30 0 20 40 = 5．
+6 2 6 6
+因此若游戏是公正的，则玩者为参加游戏应付 5 元底金． </p>
+<p>ak
+例2 设随机变量 X 的取值为全体自然数，分布律为P{X = k}  = ，
+(1 a)k1
+其中a  0 ，求 E(X )．
+ ak 1  b  a
+解 E(X )= k  = k bk = k bk-1 令 b =
+(1 a)k1 1 a 1 a 1 a
+k=0 k=0 k=1
+ 
+b  b    b  1  b 1
+= (bk ) = bk = -1 =  = a
+ 
+1 a 1 a   1 a 1- b  1 a (1- b)2
+ 
+k=1
+k=1 </p>
+<p>x ， 0 \leq x \leq 1，
+
+例3 设随机变量 X 的概率密度函数为 f (x) = 2 - x ， 1 &lt; x \leq 2，
+
+0， 其它，
+
+求 X 的数学期望E(X )．
+解 由定义可知
++ 1 2
+E(X ) =  xf (x)dx =  x2dx   x(2 - x)dx
+- 0 1
+1 2
+1  1 
+= x3  x2 - x3 = 1．
+ 
+3  3 
+0 1 </p>
+<p>1  x - μ 
+例4 设随机变量 X 的概率密度函数为 f (x) = exp- ，
+2λ λ
+ 
+求 X 的数学期望E(X )．
+x-μ x-μ x-μ
+1 1 1
+ - μ  -
+解 E(X ) =  x  e λ dx =  x e λ dx   x e λ dx
+- 2λ 2λ - 2λ μ
+μ x μ x
+1 1 μ λ μ λ
+- μ  -
+= e λ  x eλdx  e λ  x e λdx = -   = μ ．
+2λ - 2λ μ 2 2 2 2 </p>
+<p>定理 设 Y = g(X ) (g为连续函数)，
+① 若 X \sim P{X = x }  = p ，i = 1，2，...
+i i
+则 E(Y ) = E[g(X )] =  g(x ) p ；
+i i
+i
+② 若 X \sim f (x)，
+
+则 E(Y ) = E[g(X )] =  g(x) f (x)dx ．
+- </p>
+<p>例5 设 X 的分布律为
+X
+-2 0 2
+p
+0.4 0.3 0.3
+ 
+求 E(X 2  2)，E X ．
+解 E(X 2  2)= [(-2)2  2] 0.4  (02  2) 0.3  (22  2) 0.3 = 4.8；
+E  X  = -2  0.4  0 0.3  2 0.3 = 1.4． </p>
+<p>例6 对圆的半径作近似测量，假设其值 X 均匀的分布在 [a，b]内，即
+ 1
+， a \leq x \leq b ，
+
+X \sim f (x) = b - a
+
+0， 其它，
+
+求圆的面积的数学期望．
+解 设Y 表示圆的面积，则 Y = πX 2 ，
+1 π(a2  ab  b2)
+ b
+E(Y ) = E(πX 2) =  πx2 f (x)dx =  πx2 dx =
+- a b - a 3 </p>
+<p>注 定理的意义在于不用求Y的分布，只需用 X 的分布，就可算出E(Y)；
+(2)定理可推广到二维随机变量函数的情形：
+设 Z = g(X ，Y ) (g为连续函数)，
+① 若 (X ，Y ) \sim P{X = x ，Y = y } = p (i ，j = 1，2，...)，
+i j ij
+则 E(Z) = E[g(X ，Y )] =  g(x ，y ) p ；
+i j ij
+i j
+②若 (X ，Y ) \sim f (x，y)，
+ 
+则 E(Z) = E[g(X ，Y )] =   g(x，y) f (x，y)dxdy ．
+- - </p>
+<p>Y
+-1 0 1
+X
+例7 设 (X ，Y ) \sim 求 E(XY )．
+-1 1/6 1/12 0
+0 1/4 0 0
+2 1/12 1/4 1/6
+1 1 1 1
+解 E(XY ) = (-1) (-1)  2 (-1)  21 = ．
+6 12 6 3 </p>
+<p>x  y ， 0 \leq x \leq 1，0 \leq y \leq 1，
+例8 设 (X ，Y ) \sim f (x，y) =  求 E(X  Y )．
+0， 其它，
+
+ +
+解 E(X  Y ) =  (x  y) f (x，y)dxdy
+- -
+7
+1 1
+=   (x  y)2dxdy = ．
+0 0 6 </p>
+<p>1．若 a \leq X \leq b ，则 a \leq E(X ) \leq b．特别 E(c) = c．
+2．线性性质：E(aX  bY  c)= aE(X )  bE(Y )  c．
+3．若 X 与 Y 相互独立，则 E(XY )= E(X )E(Y )．(反之不成立)
+注 性质2，3可推广到 n 个随机变量的情形． </p>
+<p>例9 设二维离散型随机变量 (X ，Y ) 的联合分布律如下，验证 E(XY )
+= E(X )E(Y )，但 X 与Y 不是相互独立．
+1 1 Y
+解
+E(XY ) = (-1) (-1)   (-1) 1 -1 0 1
+X
+8 8
+1 1 -1 1/8 1/8 1/8 3/8
+1(-1)  11 = 0
+8 8 0 1/8 0 1/8 2/8
+3 2 3
+E(X ) = E(Y ) = (-1)   0 1 = 0 1 1/8 1/8 1/8 3/8
+8 8 8
+因此 E(XY ) = E(X )E(Y ) 3/8 2/8 3/8 </p>
+<p>例9 设二维离散型随机变量 (X ，Y ) 的联合分布律如下，验证 E(XY )
+= E(X )E(Y )，但 X 与Y 不是相互独立．
+Y
+解 另一方面
+-1 0 1
+X
+3 3 1
+-1 1/8 1/8 1/8 3/8
+ 
+8 8 8
+0 1/8 0 1/8 2/8
+1 1/8 1/8 1/8 3/8
+因此，X与 Y 不是相互独立．
+3/8 2/8 3/8 </p>
+<h3 id="32">3.2  方差</h3>
+<p>本节主要内容
+一、方差的概念
+二、方差的计算
+三、方差的性质 </p>
+<p>方差反映的是 X 的取值与其期望值的偏离程度．
+X - E(X )  [X - E(X )]2  E[X - E(X )]2
+定义 设 X 是一随机变量，若 E[X - E(X )]2 存在，则称其为 X 的方差，
+记为 Var(X ) = D(X ) = E[X - E(X )] ．
+而称 σ(X ) = D(X ) 为 X 的标准差(或均方差)． </p>
+<p>1．方差是随机变量函数 g(X ) = [X - E(X )]2 的期望
+设 X \sim P{X = x } = p ，i =1，2，...
+i i
+则 D(X ) = [x - E(X )]2 p ；
+i i
+i
+设 X \sim f (x)，
+
+则 D(X ) =  [x - E(X )]2 f (x)dx ．
+- </p>
+<p>2．D(X ) = E(X 2) - E2(X )．
+证 D(X ) = E[X - E(X )]2
+= E[X 2 - 2XE(X )  E2(X )]
+= E(X 2) - 2E(X )E(X )  E2(X )
+= E(X 2) - E2(X )． </p>
+<p>X
+-1 0 1/2 1 2
+例1 设 X 的分布律为
+求 X 的方差D(X)．
+p
+1/3 1/6 1/6 1/12 1/4
+解 由方差的计算公式可得
+1 1 1 1 1 1 1
+E(X ) = (-1)  0   1  2 = ，
+3 6 2 6 12 4 3
+2
+1 1  1  1 1 1 35
+E(X 2) = (-1)2   02    12   22  = ，
+ 
+3 6  2  6 12 4 24
+2
+35  1  97
+D(X ) = E(X 2) - E2(X ) = - = ．
+ 
+24  3  72 </p>
+<p>例2 两厂家生产的手表日走时误差 X ，Y 服从下列分布：
+ 1  1
+ ， -10 &lt; x &lt; 10，  ， -20 &lt; y &lt; 20，
+X \sim f (x) = 20 Y \sim g(y) = 40
+ 
+0， 其它； 0， 其它．
+ 
+判断哪个厂家的手表精度更高?
+1 1
+10 20
+解 由于 E(X ) =  x dx = 0， E(Y ) =  y dy = 0，
+-10 20 -20 40
+可见，平均下来两个厂家生产的手表日走时误差均为0； </p>
+<p>例2 两厂家生产的手表日走时误差 X ，Y 服从下列分布：
+ 1  1
+ ， -10 &lt; x &lt; 10，  ， -20 &lt; y &lt; 20，
+X \sim f (x) = 20 Y \sim g(y) = 40
+ 
+0， 其它； 0， 其它．
+ 
+判断哪个厂家的手表精度更高?
+1 100
+10
+而 D(X ) = E(X 2) - E2(X ) =  x2 dx = ，
+-10 20 3
+20 1 400
+D(Y ) = E(Y 2) - E2(Y ) =  y2 dy = ，
+-20 40 3
+因此，第一个厂家生产的手表精度更高一些． </p>
+<p>1．D(c) = 0；
+2．D(aX  b) = a2D(X )；
+事实上，D(aX  b) = E[(aX  b) - E(aX  b)]2
+= E[aX  b - aE(X ) - b]2
+= E[a(X - E(X ))]2
+= a2E[X - E(X )]2= a2D(X )． </p>
+<p>3．若 X ，Y 相互独立，则 D(X  Y ) = D(X )  D(Y )．
+证 D(X  Y ) = E(X  Y )2 - E2(X  Y )
+= E(X 2  Y 2  2XY ) -[E(X )  E(Y )]2
+= E(X 2)  E(Y 2)  2E(XY ) - [E2(X )  E2(Y )  2E(X )E(Y )]
+由于 X ，Y 相互独立， 则有 E(XY ) = E(X )E(Y )，
+所以 D(X  Y ) = E(X 2)  E(Y 2) -[E2(X )  E2(Y )] = D(X )  D(Y )．
+ n  n
+推论 设 X ，X ，...，X 相互独立，则 D  X =  D(X )．
+1 2 n  
+i i
+ 
+i=1 i=1 </p>
+<p>例3 设 X 的期望 E(X ) = μ ，方差 D(X ) = σ2  0，求标准化随机变量
+X - μ
+X * = 期望与方差．
+σ
+ X - μ  1 1
+解 E(X <em>) = E = E(X - μ) = [E(X ) - μ] = 0，
+ 
+ σ  σ σ
+2
+ X - μ  1
+D(X </em>) = E (X <em>)2  - E2(X </em>) = E = E(X - μ)2 = 1．
+ 
+ 
+ σ  σ2 </p>
+<h3 id="33">3.3 协方差与相关系数</h3>
+<p>本节主要内容
+一、相关系数的定义与计算
+二、协方差与相关系数的性质 </p>
+<p>定义 称 Cov(X ，Y ) = E[(X - E(X )) (Y - E(Y ))]为 X 与Y 的协方差，
+称标准化随机变量的协方差 其大小受到 X 和
+Y 取值的影响！
+ X - E(X ) Y - E(Y )  Cov(X ，Y )
+ρ = Cov ， =
+ 
+XY
+D(X ) D(Y ) D(X ) D(Y )
+ 
+为 X 与 Y 的相关系数．
+ 
+注 ① ρ ρ \leq 1 是随机变量间线性关系的量度；
+XY XY
+② 当 ρ = 0 时，称 X 与 Y 不相关．
+XY </p>
+<p>性质
+① Cov(X ，Y ) = E(XY ) - E(X )E(Y )，特别的，Cov(X ，X ) = D(X )；
+证 Cov(X ，Y ) = E[(X - E(X )) (Y - E(Y ))]
+= E[XY - XE(Y ) -YE(X )  E(X )E(Y )]
+= E(XY ) -E(Y )E(X ) -E(X )E(Y ) E(X )E(Y )
+= E(XY ) -E(Y )E(X )
+② Cov(aX ，bY ) = abCov(X ，Y )；
+③ Cov(X  X ，Y ) = Cov(X ，Y )  Cov(X ，Y )；
+1 2 1 2
+④ D(X  Y ) = D(X )  D(Y )  2Cov(X ，Y )． (自证) </p>
+<p>例1 设 D(X ) = 36，D(Y ) = 25，ρ = 0.4，求 D(X  Y )．
+XY
+Cov(X ，Y ) Cov(X ，Y )
+解
+ρ = = = 0.4  Cov(X ，Y ) = 12，
+XY
+D(X ) D(Y ) 65
+D(X  Y ) = D(X )  D(Y )  2Cov(X ，Y ) = 36  25  24 = 85，
+D(X -Y ) = D(X )  D(Y ) - 2Cov(X ，Y )= 36  25 - 24 = 37． </p>
+<p>定理 对于随机变量 X 与 Y ，下列命题等价：
+① E(XY ) = E(X )E(Y )； } 
+② D(X  Y ) = D(X )  D(Y )；
+X 与Y 独立
+③ Cov(X ，Y ) = 0；
+④ ρ = 0．
+XY
+注 ① 独立性表示不存在任何直接关系，而不相关表示不存在线性关系，
+但不排除有其它的关系；
+② 所有数字特征的计算都归结为期望的计算． </p>
+<p>1
+， x2  y2 \leq1，
+
+例2 设 (X ，Y ) 的联合概率密度函数为 f (x，y) = π
+
+0， 其它，
+
+试求 E(X )，E(Y )，E(XY )，D(X )，D(Y )，Cov(X ，Y )，ρ .
+XY
+1
+解 记 D：x2  y2 \leq1，E(X ) =  x  dxdy = 0，同理：E(Y ) = 0，
+π
+D
+1 1 1
+E(XY ) =  xy  dxdy = 0， D(X ) = E(X 2) =  x2  dxdy = ，
+π π 4
+D D
+1
+同理 D(Y ) = ，Cov(XY ) = E(XY ) - E(X )E(Y ) = 0，ρ = 0．
+XY
+4 </p>
+<p>数学期望的概念 (离散型、连续型) ；
+数学期望的性质与计算；
+随机变量函数的数学期望；
+方差的概念与性质；
+方差的计算；
+协方差、相关系数的概念与性质；
+协方差、相关系数的计算；
+数字特征之间的关系． </p>
+<h2 id="_4">第四章 几类重要的概率分布</h2>
+<p>二项分布
+泊松分布
+正态分布
+其他重要的概率分布
+二维正态及二维均匀分布 </p>
+<h3 id="41">4.1  二项分布</h3>
+<p>本节主要内容
+一、伯努利分布
+二、二项分布
+三、二项分布的数字特征 </p>
+<p>伯努利试验
+只有两种可能结果的试验称为伯努利试验．通常把这两个
+结果 A 和 A 称为“成功”和“失败”．
+注 任一试验均可视为只有结果 A 和 A的伯努利试验．
+定义1 在一次伯努利试验中，设 P(A) = p (0 &lt; p &lt; 1)，
+伯努利
+记 X 为 A 发生的次数，则 X 的分布律为
+X
+0 1
+p 1- p p
+称 X 服从伯努利分布(Bernoulli Distribution)或两点分布，记为X \sim B(1，p)． </p>
+<p>n重伯努利试验 将伯努利试验独立重复地进行 n 次．
+例如，连续抛掷两枚均匀的硬币100次，令 X 表示双正面出现的次数，则
+P{X = 30} = C30 (1/ 4)30(1-1/ 4)100-30 ．
+100
+定义2 在 n 重伯努利试验中，设 P(A) = p (0 &lt; p &lt; )，则事件 A 恰好发
+生 k 次的概率为 P{X = k} = P (k) = Ck pk (1- p)n-k ，k = 0，1，2，...，n
+n n
+称 X 服从参数为 n，p 的二项分布，记为X \sim B(n，p)．
+二项分布的数字特征
+设 X \sim B(n，p)．则 E(X ) = np ，D(X ) = np(1- p)．(自证) </p>
+<p>例1 若在 M 件产品中有 N 件次品，现进行有放回的 n 次抽样检查，问
+共取得 k 件次品的概率．
+解 由于是有放回的抽样，因此过程是 n 重伯努利试验．
+N
+记 A 为“抽到次品”，则 P(A) = ， 令 X 为 n 次抽样检查中抽到的
+M
+ N 
+次品数，则 X \sim B n， ， 由二项分布得
+ 
+ M 
+k n-k
+ N   N 
+P{X = k} = Ck 1- ．
+   
+n
+ M   M  </p>
+<p>例2 设一张考卷上有5道选择题，每道题列出4个可能答案，其中只有
+一个答案是正确的，某学生靠猜测至少能答对4道题的概率是多少?
+解 记 A＝{答对一道题}，则 P(A) = 1/ 4，解答5道题相当于做5重伯努
+ 1 
+利试验．令 X 表示该学生靠猜测能答对的题目数，则 X \sim B 5， ，
+ 
+ 4 
+4 5
+ 1  3  1  1
+从而可得
+P{X  4} = P{X = 4} P{X = 5}= C4   = ．
+   
+5
+ 4  4  4  64 </p>
+<p>例3 (几何分布) 设某批产品的次品率为p，对该批产品做有放回的
+抽样检查，直到第一次抽到一只次品为止 (在此之前抽到的全是正品)，
+求所抽到的产品数 X 的分布律．
+解 X 的所有可能取值为1，2，...，设 A = {抽到的第 i 个产品是正品}，
+i
+则
+P{X = k} = P(A A ... A A ) = P(A )  P(A ) ...  P(A )  P(A )
+1 2 k-1 k 1 2 k-1 k
+= (1- p)(1- p) ... (1- p)  p = (1- p)k-1 p ．
+(k = 1，2，...)
+
+(k-1)个
+注 几何分布用来描述某试验“首次成功”的概率模型． </p>
+<h3 id="42">4.2  泊松分布</h3>
+<p>本节主要内容
+一、泊松分布
+二、泊松分布的数字特征
+三、泊松分布的应用
+四、二项分布的泊松逼近 </p>
+<p>定义 设离散型随机变量 X 的分布律为
+λk
+P{X = k} = e-λ ， λ  0，k = 0，1，2，...，
+k!
+则称 X 服从参数为 λ 的泊松分布(Poisson Distribution)，
+泊松
+记为 X \sim P(λ) ． </p>
+<p>λk
+设 X \sim P(λ)， 即P{X = k} = e-λ ， λ  0，k = 0，1，2，...，
+k!
+则 E(X ) = λ ，
+ λk  λk  λk-1  λk
+E(X ) = k  e-λ = e-λk  = λe-λ = λe-λ
+k! k! (k -1)! k!
+k=0 k=1 k=1 k=0
+= λe-λeλ = λ ． </p>
+<p>λk
+设 X \sim P(λ)， 即P{X = k} = e-λ ， λ  0，k = 0，1，2，...，
+k!
+则 E(X ) = λ ，D(X ) = λ ．
+ λk  λk  λk
+E(X 2) = k2  e-λ = e-λk2  = e-λk 
+k! k! (k -1)!
+k=0 k=1 k=1
+  λk  λk    λk-2  λk-1 
+= e-λ (k -1)    = e-λ λ2  λ
+   
+(k -1)! (k -1)! (k - 2)! (k -1)!
+   
+k=1 k=1 k=2 k=1
+= λ2  λ ， 因此 D(X ) = E(X 2) - E2(X ) = λ ． </p>
+<p>① “流量”问题 (电话接到的呼叫次数，车站来到的乘客数，热电子
+辐射数等) 大都服从泊松分布；
+② 作为大量试验中稀有事件 (不幸事件，意外事故，非常见病，自然
+灾害等) 发生的概率模型． </p>
+<p>定理 设 X \sim B(n，p)，则当n   时，X 近似服从 P(λ)， 即有
+λk
+Ck pk (1- p)n-k  e-λ ， 其中 λ = np ．
+n
+k!
+注 当 n 很大且 p 很小时， 才能使近似计算的误差较小． </p>
+<p>例1 假设儿童在注射某疫苗产生不良反应的概率为0.001，试确定
+2000个儿童中有3个以及2个以上产生不良反应的概率．
+解 设 X 表示注射疫苗的儿童中产生不良反应的个数，
+则 X \sim B(2000，0.001)，因 n 很大且 p 很小，所以由二项分布
+2k
+的泊松逼近得 P{X = k} = e-2 (λ = np = 2) ，k = 0，1，...
+k!
+23
+故 P{X = 3} = e-2 = 0.18045，
+3!
+ 2k
+P{X  2}= P{X  3}   e-2 = 0.32332．
+k!
+k=3 </p>
+<p>例2 设某保险公司为社会提供一项人寿保险，已知参保人死亡概率
+为0.0020，每年需交120元保险金，死亡时家属可领取 2 万元保险金，
+现有2500人参保，求该保险公司亏本以及年赢利不少于10万元的概率?
+解 设 X 为参保人员死亡的人数，则 X \sim B(2500，0.002) ，
+由二项分布的泊松逼近 (此时 λ = np = 5 )可得：
+ 5k
+P{公司亏本} = P{X 15} =  e-5 = 0.00007 ，
+k!
+k=16
+ 5k
+P{赢利不少于10万}= P{X \leq 10} = 1-  e-5 = 0.9863．
+k!
+k=11 </p>
+<h3 id="43">4.3  正态分布</h3>
+<p>本节主要内容
+一、正态分布
+二、正态分布的数字特征
+三、正态分布的计算与应用
+四、有关正态分布的结论 </p>
+<p>定义 若随机变量 X 的概率密度函数为
+2
+1 (x-μ)
+-
+f (x) = e 2 (- &lt; x &lt; )
+2σ
+2πσ
+其中 μ，σ(σ  0) 是常数，则称 X 服从参数为 μ，σ 2 的正态分布
+高斯
+(Normal Distribution)或Gauss分布， 记为 X \sim N(μ，σ2)．
+特别地，当 μ = 0，σ =1 时，称 X 服从标准正态分布，记为 X \sim N(0，1)，
+其概率密度函数、分布函数记为 φ(x) 和(x)． </p>
+<p>2． 概率密度函数 f (x) 的性质：
+2
+1 (x-μ)
+-
+① f (x) 的各阶导数均存在；
+f (x) = e 2
+2σ
+2πσ
+②密度曲线以 x 轴为渐近线；
+③ f (x)关于 x = μ 对称； y
+1
+④ f (x)在 x = μ 取得最大值 ．
+2πσ
+O μ x </p>
+<p>设 X \sim N(μ，σ2)，则 E(X ) = μ ，
+2
+1 (x-μ)
+ -
+E(X ) =  xe 2 dx
+2σ
+2πσ -
+x - μ
+令 = t，则 x = 2σt  μ，dx = 2σdt，
+2σ
+1 μ
+ 
+2 2
+E(X ) =  ( 2σt  μ)e-t dt =  e-t dt = μ ．
+π - π - </p>
+<p>设 X \sim N(μ，σ2)，则 E(X ) = μ ，D(X ) = σ2 ．
+2 x - μ
+1 (x-μ)
+ -
+E(X 2) =  x2e 2 dx 令 = t， 则x = 2σt  μ，dx = 2σdt
+2σ
+2σ
+2πσ -
+1 1 2σ2
+  
+=  ( 2σt  μ)2e-t2dt =  (2σ2t2  μ2)e-t2dt =  t2e-t2dt  μ2
+π - π - π -
+
+σ2 σ2 σ2 σ2
+= te-t2dt2  μ2 = - tde-t2  μ2 = - te-t2  e-t2dt  μ2
+π - π - π π -
+-
+= σ2  μ2 ， 则 D(X ) = E(X 2) - E2(X ) = σ2 ． </p>
+<p>标准正态分布的计算
+y
+\forall x  0，(-x) = 1-(x)．
+为计算方便，书末附表供查阅(x)．
+x
+-x o x
+例如 设 X \sim N(0，1)，则有
+P{X \leq 2.38}  =(2.38)= 0.991344，
+P{X &lt; -2.38}  =(-2.38) = 1-(2.38) = 0.008656，
+P{-2 &lt; X &lt; 0}  =-(-2) = 0.5 -[1-(2)] = 0.47725． </p>
+<p>非标准正态分布的计算 正态分布的计算
+X - μ 都归结为标准正
+若 X \sim N(μ，σ2)，则有Y = \sim N(0，1)，从而可得
+态分布的计算！
+σ
+ X - μ x - μ   x - μ 
+{ } 
+P X \leq x = P \leq = ．
+   
+ σ σ   σ 
+例如 设 X \sim N(2，9)，则有
+1- 2 X - 2 5 - 2
+P{1 \leq X &lt; 5} = P  \leq &lt;  =-(-1/ 3) = 0.47064．
+ 3 3 3 
+正态分布的应用
+零件的尺寸、物种的生理特征、测量误差、某地区
+年降雨量等绝大多数随机现象都服从正态分布． </p>
+<p>{A：短，挤 N(50，102)
+例1 学校 火车站
+B：长，畅 N(60，42)
+若有 70 分钟可用，应走那条路? 65 分钟又如何?
+解 设 X 为行车时间，则有
+ X -50 70 -50
+①A：P{X \leq 70}  = P \leq  == 0.9772；
+ 10 10 
+ X - 60 70 - 60
+B：P{X \leq 70} = P \leq =(2.5) = 0.9938； 此时应该走路线B．
+ 4 4 
+ X -50 65-50
+②A：P{X \leq 65}  = P \leq =(1.5)= 0.9332；
+ 
+ 10 10 
+ X - 60 65- 60
+B：P{X \leq 65}  = P \leq =(1.25) = 0.8944；此时应该走路线A．
+ 
+ 4 4  </p>
+<p>若 X \sim N(μ ，σ2)，则对任意常数a ，b 有
+aX  b \sim N(aμ  b ，a2σ2)
+若 X \sim N(μ ，σ2)，Y \sim N(μ ，σ2)，且 X 与 Y 独立，则
+1 1 2 2
+X  Y \sim N(μ  μ ，σ2  σ2)．
+1 2 1 2
+一般地，n 个相互独立且服从正态分布的随机变量的线性组合仍服从
+正态分布． </p>
+<p>3σ 法则
+若 X \sim N(μ ，σ2)，则
+ X - μ 
+{ } 
+P μ - σ \leq X \leq μ  σ = P -1 \leq \leq 1 = 2-1= 0.6826
+ 
+ σ 
+ X - μ 
+P{μ - 2σ \leq X \leq μ  2σ} = P -2 \leq \leq 2 = 2-1= 0.9545
+ 
+ σ 
+ X - μ 
+P{μ - 3σ \leq X \leq μ  3σ}  = P -3 \leq \leq 3 = 2-1= 0.9973
+ 
+ σ  </p>
+<p>X ,Y
+例2 设 X \sim N(0，1)，Y \sim N(1，2)，且它们相互独立，试求 Z = 2X  Y -1
+的概率密度函数．
+解 因 Z 也服从正态分布，故只需确定 Z 的期望和方差即可求出 Z 的
+概率密度函数．
+E(Z) = 2E(X )  E(Y ) -1 = 2 0 1-1 = 0，
+D(Z) = 22 D(X )  D(Y ) = 22 1 2 = 6，
+2
+z
+1
+-
+所以 Z 的概率密度函数为 f (z) = e 12 ， z \in \R ．
+2π 6 </p>
+<p>例3 公共汽车车门高度是按男子与车门顶碰头机率在0.01以下设计，
+设男子身高 X \sim N(170，62) (单位cm)，试确定车门高度．
+解 设车门高度为 x cm，则
+P{X  x}  &lt; 0.01 即 P{X \leq x}   0.99
+ X -170 x -170  x -170 
+{ } 
+P X \leq x = P \leq =  0.99
+   
+ 6 6   6 
+x -170
+查表得 (2.33) = 0.9901  0.99 则 = 2.33
+6
+解得 x =183.98cm </p>
+<h3 id="44">4.4  其他重要的概率分布</h3>
+<p>本节主要内容
+一、指数分布
+二、均匀分布 </p>
+<p>定义 若随机变量 X 的概率密度函数为
+λe-λx ， x  0，
+f (x) = (λ  0)
+
+0 ， x &lt; 0，
+
+则称 X 为服从参数为 λ 的指数分布，记为 X \sim E(λ)．
+x
+分布函数 F(x) =  f (t)dt， 当x &lt; 0 时， F(x) = 0，
+-
+1- e-λx x  0
+x x
+当x  0 时，F(x) =  f (t)dt =  λe-λt dt 因此 F(x) =
+
+- 0 0 x &lt; 0
+
+x
+= -e-λt = 1- e-λx
+0 </p>
+<p>1 1
+数字特征 设 X \sim E(λ)，则 E(X ) = ，D(X ) = ．
+λ λ2
+    
+E(X ) =  xf (x)dx =  x  λe-λx dx = - xde-λx = -xe-λx   e-λx dx
+- 0 0 0 0
+
+1 1
+
+= -xe-λx - e-λx =
+0 λ λ
+0
+2
+   
+E(X 2) =  x2  λe-λx dx = - x2 de-λx = -x2e-λx   2xe-λx dx =
+0 0 0 0 λ2
+2 1 1
+D(X ) = E(X 2) - E2(X ) = - =
+λ2 λ2 λ2
+应用 电子元件的寿命，随机服务系统中的服务时间等． </p>
+<p>无记忆性 (永葆青春的分布)
+设 X \sim E(λ)，则 \forall t  0，s  0，有
+{ }  { } 
+P X  s  t 1- P X \leq s  t
+{ } 
+P X  s  t X t = =
+{ }  { } 
+P X  t 1- P X \leq t
+1- 1- e-λ(st) 
+ 
+= = e-λs ．
+1- (1- e-λt )
+结果与 t 没有关系，即再活多少年的概率是一样的． </p>
+<p>例1 设打电话所用的时间 X 服从参数为 λ 的指数分布，且打一次电话
+平均用时为5分钟，求一次通话用时在5-10分钟的概率．
+1  1 
+解 因为 X \sim E(λ)，而 E(X ) = = 5，所以 X \sim E ，
+ 
+λ  5 
+1 x
+-
+ e 5 ， x  0，
+则 X 的密度函数为 f (x) = 5
+
+0， x &lt; 0，
+
+x
+1
+10 -
+P{5 \leq X \leq 10} =  e 5dx = 0.2326．
+5 5 </p>
+<p>例2 假设一电路装有三个同种电气元件，其工作状态相互独立且无故
+障，工作时间服从参数为 λ  0 的指数分布．当三个元件都无故障时，
+电路正常工作，否则整个电路不能正常工作，试求电路正常工作的
+时间 T 的分布函数．
+解 X ，X ，X 分别表示三个电气元件无故障工作时间，相互独立且
+1 2 3
+同分布，分布函数为：
+1- e-λx， x  0，
+F(x) =
+
+0， x &lt; 0，
+
+G(t) 表示T 的分布函数，当t &lt; 0 时，G(t) = P{T \leq t}  = 0， </p>
+<p>当t  0 时，G(t) = P{T \leq t}  = P{min(X ，X ，X ) \leq t} 
+1 2 3
+= 1- P{min(X ，X ，X )  t} = 1- P{X  t，X  t，X  t} 
+1 2 3 1 2 3
+{ }  { }  { } 
+= 1- P X  t P X  t P X  t
+1 2 3
+ { }  { }  { } 
+= 1- 1- P X \leq t 1- P X  t 1- P X  t
+1 2 3
+3
+= 1-1- F(t)1- F(t)1- F(t) = 1- 1- 1- e-λt  = 1- e-3λt
+ 
+1- e-3λt ， t  0，
+则T 的分布函数为：G(t) =
+
+0， t &lt; 0．
+
+因此T 服从参数为 3λ 的指数分布． </p>
+<p>定义 若随机变量 X 的概率密度函数为
+ 1
+，a \leq x \leq b，
+
+f (x) = b - a (a &lt; b)
+
+0， 其它，
+
+则称 X 在区间 [a，b] 上服从均匀分布， 记为 X \sim U[a，b]．
+数字特征
+a  b (b - a)2
+设 X \sim U[a，b]．则 E(X ) = ，D(X ) = ．(自证)
+2 12
+应用
+四舍五入造成的误差，计算机产生的随机数等． </p>
+<p>例3 设公交车每 6 分钟发车一次，X 表示乘客候车时间，则 X \sim U 0，6，
+求乘客候车时间超过 5 分钟的概率，以及 4 位乘客中有 2 位候车时间超过
+5分钟的概率．
+1 1
+ 6
+解 ① P{X  5} =  f (x)dx =  dx = ，
+5 5 6 6
+②令Y表示 4 位乘客中候车时间超过 5 分钟的人数，
+2 4-2
+ 1   1   1  25
+则 Y \sim B 4， ，因此有 P{Y = 2} = C2 1- = ．
+     
+ 6  4  6   6  216 </p>
+<p>例4 设随机变量 X 服从参数为 λ = 2 的指数分布，证明随机变量
+Y = 1- e-2X 在区间 [0，1] 上服从均匀分布．
+解 X 的概率密度函数为
+2e-2x， x  0，
+f (x) =
+
+X
+0， x &lt; 0，
+
+Y 的分布函数为 F (y)，
+Y
+F ( y) = P{Y \leq y} = P{1- e-2X \leq y}．
+(下略)
+Y </p>
+<h3 id="45">4.5  二维正态及二维均匀分布</h3>
+<p>本节主要内容
+一、二维正态分布
+二、二维均匀分布 </p>
+<p>定义 若二维随机变量 (X ，Y )的联合概率密度函数为
+1  1 (x - μ )2
+f (x，y) = exp - 1
+ 
+2πσ σ 1- ρ2  2(1- ρ2)  σ 2
+1
+1 2
+(x - μ )(y - μ ) (y - μ )2 
+-2ρ 1 2  2
+
+σ σ σ2
+
+1 2 2
+其中 μ ，μ ，σ ，σ ，ρ 为常数，并且有 σ  0，σ  0，| ρ |&lt;1，
+1 2 1 2
+1 2
+则称 (X ，Y ) 服从二维正态分布， 记为
+(X ，Y ) \sim N(μ ，μ ；σ2，σ2；ρ)．
+1 2 1 2 </p>
+<p>定理 若 (X ，Y ) \sim N(μ ，μ ；σ2，σ2；ρ)，则有
+1 2 1 2
+E(X ) = μ ，D(X ) = σ2，E(Y ) = μ ，D(Y ) = σ2，
+1 1 2 2
+Cov(X ，Y ) = ρσ σ ，ρ = ρ；
+1 2 XY
+X \sim N(μ ，σ2)，Y \sim N(μ ，σ2)；
+1 1 2 2
+X 与 Y 相互独立  ρ = 0．
+XY
+注 (X ，Y )服从二维正态分布的充要条件是 X 与 Y 的任一
+线性组合服从一维正态分布． </p>
+<p>例1 已知随机变量 X 和 Y 分别服从正态分布 N(1，32)和N(0，42)，
+1
+1 1
+且 X 与Y 的相关系数 ρ = - ，设 Z = X  Y，求：
+XY
+2
+3 2
+Z 的数学期望 E(Z) 和方差 D(Z) ；
+ρ ．
+X 与 Z 的相关系数
+XZ
+解 由已知得 E(X ) = 1，D(X ) = 32 ，E(Y ) = 0 ，D(Y ) = 42 ，
+1
+Cov(X ，Y ) = ρ D(X ) D(Y ) = - 3 4 = -6，
+XY
+2
+ 1 1  1 1 1 1 1
+E(Z) = E X  Y = E(X )  E(Y ) = 1 0 = ，
+ 
+ 3 2  3 2 3 2 3 </p>
+<p>已知 E(X ) = 1，D(X ) = 32，E(Y ) = 0 ，D(Y ) = 42 ，Cov(X ，Y ) = -6，
+ 1 1   1   1   1 1 
+D(Z) = D X  Y = D X  D Y  2Cov X ， Y
+       
+ 3 2   3   2   3 2 
+1 1 1 1 1 1 1 1
+= D(X )  D(Y )  2  Cov(X ，Y ) = 9  16 - 2  6 = 3，
+9 4 3 2 9 4 3 2
+ 1 1  1 1
+Cov(X ，Z) = Cov X ， X  Y = Cov(X ，X )  Cov(X ，Y )
+ 
+ 3 2  3 2
+1 1 Cov(X ，Z)
+= D(X )  Cov(X ，Y ) = 0， ρ = = 0．
+XZ
+3 2 D(X ) D(Z) </p>
+<p>2 2
+x y
+1
+-
+例2 设随机变量(X ，Y ) 服从二维正态分布 f (x，y) = e 2 ，
+2π
+1
+求随机变量 Z = (X 2 Y 2) 的概率密度函数．
+3
+解 先求 Z 的分布函数
+1 
+F (z) = P{Z \leq z}= P (X 2 Y 2) \leq z ，显然当 z &lt; 0 时，F (z) = 0，
+ 
+Z Z
+3 
+2 2
+x y
+1
+{ }  -
+当 z  0 时，F (z) = P X 2 Y 2 \leq 3z =  e 2 dxdy 其中D：x2  y2 \leq 3z ，
+Z
+2π
+D
+1 ρ2 3  3
+2π 3z - - z  - z
+=  dθ e 2 ρdρ =1- e 2 ， 1- e 2 ， z  0，
+则 F (z) =
+
+2π 0 0 Z
+ 0， z &lt; 0，
+ </p>
+<p>2 2
+x y
+1
+-
+例2 设随机变量(X ，Y ) 服从二维正态分布 f (x，y) = e 2 ，
+2π
+1
+求随机变量 Z = (X 2 Y 2) 的概率密度函数．
+3
+ 3
+- z
+
+1- e 2 ， z  0，
+F (z) =
+
+Z
+ 0， z &lt; 0，
+
+则Z 的概率密度函数为
+3 3
+- z
+ e 2 ， z  0，
+f (z) =
+2
+Z
+
+0， z &lt; 0．
+ </p>
+<p>定义 设D是平面上的一个有界区域，其面积为A，若二维随机变量
+(X ，Y ) 的联合概率密度函数为
+ 1
+ ， (x，y)\in D，
+f (x，y) =  A
+ 0， (x，y) D，
+
+则称 (X ，Y )在 D 上服从二维均匀分布．
+例如，矩形区域上的均匀分布，其概率密度函数为
+ 1
+， a \leq x \leq b，c \leq y \leq d，
+
+f (x，y) = (b - a)(d - c)
+
+
+0 ， 其它．
+ </p>
+<p>例3 设二维随机变量 (X ，Y ) 在圆域 x2  y2 \leq r2 上服从二维均匀分布，
+求 X 与Y 的相关系数 ρ ；问 X 与Y 是否相互独立．
+XY
+解 (X ，Y )的联合概率密度函数为
+ 1
+， x2  y2 \leq r2，
+
+f (x，y) = πr2 记 D：x2  y2 \leq r2，
+
+0， 其他，
+
+1 1
+E(X ) =  x  dxdy = 0， E(Y ) =  y  dxdy = 0，
+πr2 πr2
+D D
+1
+E(XY ) =  xy  dxdy = 0， 则 Cov(X ，Y ) = E(XY ) - E(X )E(Y ) = 0，
+πr2
+D </p>
+<p>例3 设二维随机变量 (X ，Y ) 在圆域 x2  y2 \leq r2 上服从二维均匀分布，
+求 X 与Y 的相关系数 ρ ；问 X 与Y 是否相互独立．
+XY
+
+f (x) =  f (x，y)dy 当 x  r 时，f (x) = 0，
+X X
+-
+2 2 1 2
+r -x
+当 x \leq r 时， f (x) =  dy = r2 - x2 ，
+X - r2-x2 πr2 πr2
+2 2
+ r2 - x2 ， x \leq r，  r2 - y2 ， y \leq r，
+πr2  πr2
+则 f (x) = 同理 f (y) =
+ 
+X Y
+ 
+x  r， y  r，
+ 0，  0， </p>
+<p>例3 设二维随机变量 (X ，Y ) 在圆域 x2  y2 \leq r2 上服从二维均匀分布，
+求 X 与Y 的相关系数 ρ ； 问 X 与Y 是否相互独立．
+XY
+2 2
+ r2 - x2 ， x \leq r，  r2 - y2 ， y \leq r，
+πr2  πr2
+f (x) = f (y) =
+ 
+X Y
+ 
+x  r， y  r，
+ 0，  0，
+ 1
+， x2  y2 \leq r2， f (x，y)  f (x) f ( y)，
+
+f (x，y) = πr2 X Y
+
+ 0， 其他． X 与Y 不相互独立． </p>
+<p>伯努利
+(1654 – 1705) ( 雅各布ꞏ 伯努利 )
+瑞士数学家，他家祖孙三代出过八位数学家．1694年
+他首次给出了直角坐标和极坐标下的曲率半径公式，
+1695
+年提出了著名的伯努利方程， 1713年出版了他的巨著
+《猜度术》，这是组合数学与概率论史上的一件大事，书中给出的
+伯努利数在很多地方有用，而伯努利定理则是大数定律的最早形式．
+此外，他对双纽线，悬链线和对数螺线都有深入的研究． </p>
+<p>泊松
+(1781 – 1840)
+泊松(Poisson，Simeon-Denis)，法国数学家、物理学家
+和力学家．1781年6月生于皮蒂维耶，1840年4月卒于巴黎
+泊松的科学生涯开始于研究微分方程及其在
+附近的索镇．
+摆的运动和声学理论中的应用．他工作的特色是应用数学方法研究各类
+力学和物理问题，并由此得到数学上的发现．他对积分理论、行星运动
+理论、热物理、弹性理论、电磁理论、位势理论和概率论都有重要贡献． </p>
+<p>高斯
+(1777 – 1855)
+德国数学家、天文学家和物理学家，是与阿基米德，牛顿
+并列的伟大数学家，他的数学成就遍及各个领域，在数论、
+代数、非欧几何、 微分几何、 超几何级数、复变函数及
+椭圆函数论等方面均有一系列开创性的贡献，他还十分重视数学的应用，
+在对天文学、大地测量学和磁学的研究中发明和发展了最小二乘法、
+曲面论和位势论等．他在学术上十分谨慎，恪守这样的原则：“问题在
+思想上没有弄通之前决不动笔”． </p>
+<h2 id="_5">第五章 基本极限定理</h2>
+<p>切比雪夫不等式与大数定律
+中心极限定理 </p>
+<h3 id="51">5.1 切比雪夫不等式与</h3>
+<p>大数定律 </p>
+<p>本节主要内容
+一、切比雪夫不等式
+二、大数定律 </p>
+<p>引 言
+背景 频率的稳定性，用频率代替概率的科学性．
+内容 用来阐明大量随机现象平均结果的稳定性的一系列定理
+称为大数定律．
+u ×
+刻划 ① \lim n = p；
+n
+n
+ u  u
+② \lim P  n - p &lt; ε = 1，即 n p p (n  )．
+n  n  n </p>
+<p>一、切比雪夫不等式
+定理1 设 X 的数学期望 E(X ) = μ ，方差 D(X ) = σ2 &lt;  ，
+则 \forall ε  0 ，有
+σ2
+切比雪夫
+{ } 
+P X - μ  ε \leq
+ε2
+σ2
+{ } 
+或 P X - μ &lt; ε  1- ，
+ε2
+注 切比雪夫不等式常用来在 E(X ) 和 D(X ) 已知时， 对事件
+{ } 
+X - E(X ) &lt; ε 发生的概率进行估计． </p>
+<p>例1  已知我校有1万盏电灯，夜晚每一盏灯开灯的概率均为0.8，
+且它们开关与否相互独立，试用切比雪夫不等式估计夜晚同时开
+灯 7800-8200 盏之间的概率．
+解 设 X 表示夜晚开灯数，则 X \sim B(10000，0.8)，又因为 E(X ) = 8000，
+D(X ) = 1600，则由切比雪夫不等式知
+1600
+{ } 
+P{7800 &lt; X &lt; 8200}= P X - 8000 &lt; 200  1- = 0.96，
+2002
+这说明只需供应8200盏灯的电力就能以相当大的概率保证这1万盏灯
+的正常使用． </p>
+<p>切比雪夫大数定律
+定理2 设相互独立的随机变量 X ，X ，...，X ，... 具有有限的期望
+1 2 n
+和方差，若存在常数 C 使 D(X ) \leq C ，则 \forall ε  0，
+i
+ 1 n  1 n  
+有 \lim P   X - E  X &lt; ε =1，
+ 
+i i
+n n
+n  
+ 
+i=1 i=1
+1 n  1 n 
+即  X p E  X (n  )．
+ 
+i i
+n n
+ 
+i=1 i=1 </p>
+<p>推论 设相互独立的随机变量 X ，X ，...，X ，... 服从相同的分布，
+1 2 n
+且 E(X ) = μ ，D(X ) = σ2，i = 1，2，...，则有
+i i
+1 n
+ X p μ (n  )．
+i
+n
+i=1
+注 该结论的实际意义在于，为了减少测量的随机误差，常常用测量
+的平均值来代替真实值，即
+X  X ... X
+1 2 n  μ．
+n </p>
+<p>伯努利大数定律 (切比雪夫大数定律推论的特殊形式)
+定理3 设 u 是 n 重伯努利试验中事件A发生的次数，且 P(A) = p ，
+n
+则有 u X ... X
+n = 1 n ，X \sim B(1，p)
+i
+n n
+u
+n p p (n  )
+n
+注 该结论的实际意义在于，当试验次数很大时，便可以用事件发生
+的频率来代替其概率． </p>
+<p>辛钦大数定律
+定理4 设相互独立的随机变量 X ，...，X ，... 服从相同的分布，
+1 n
+辛钦
+且 E(X ) = μ，i = 1，2，...，则有
+i
+1 n
+ X p μ (n  )．
+i
+n
+i=1
+注 辛钦大数定律要求同分布但并不要求方差存在． </p>
+<h3 id="52">5.2 中心极限定理</h3>
+<p>本节主要内容
+一、独立同分布中心极限定理
+二、棣莫弗-拉普拉斯中心极限定理 </p>
+<p>引 言
+背景 若一个量受到大量独立的随机因素综合影响，而每一因素在
+总影响中所起的作用并不大，则这个量通常近似服从正态分布．
+内容 设独立随机变量序列 X ，X ，...，X ，... 的期望和方差都存在，
+1 2 n
+n   n   n 
+则当n很大时， X \sim N  E   X ，D  X ．
+i i i
+    
+i=1 i=1 i=1
+ 
+ n  n   n  
+刻划 \lim P  X - E   X  D  X  \leq x =(x)．
+i i i
+n      
+ i=1 i=1 i=1  </p>
+<p>定理1 设相互独立的随机变量 X ，X ，...，X ，... 服从相同的分布，
+1 2 n
+且 E(X ) = μ ，D(X ) = σ2 (σ  0)，则\forall x \in \R，
+i i
+ n  
+有 \lim P   X - nμ nσ \leq x=(x)，
+ 
+i
+n   
+i=1
+ n 
+即  X - nμ nσ \sim N(0，1) (n  )．
+ 
+i
+ 
+i=1
+(Levy-Lindeberg中心极限定理) </p>
+<p>例2 设某食品用机器装袋，每袋净重的期望为100g，标准差为4g，
+一箱装100袋，求一箱净重大于10100g的概率．
+解 设 X 表示第 i 袋食品的净重，则 X ，X ，...，X 独立
+i 1 2 100
+100
+同分布，且 E(X ) = 100，D(X ) = 16，而一箱净重 X =  X ，
+i i i
+i=1
+由独立同分布的中心极限定理可知：X \sim N(10000，402)，
+ X -10000 10100 -10000
+所以 P{X  10100}  = 1- P{X \leq 10100}  = 1- P \leq
+ 
+ 40 40 
+ 1-(2.5) = 0.0062． </p>
+<p>独立同分布的中心极限定理的特殊形式
+定理2 设 u 是n重伯努利试验中事件A发生的次数，且 P(A) = p，
+n
+u = X ... X ，X \sim B(1，p)
+则有 n 1 n i
+拉普拉斯
+u - np
+n \sim N(0，1) (n  )．
+np(1- p)
+注 设 X \sim B(n，p)，当n比较大时，对任意的 a &lt; b 有
+   
+b - np a - np
+P{a &lt; X \leq b}   - ．
+   
+np(1- p) np(1- p)
+    </p>
+<p>例3 保险公司多年统计资料表明，因被盗理赔的用户占20%，
+以 X 表示100个理赔用户中因被盗理赔的个数，试写出X 的概率
+分布，并利用拉普拉斯中心极限定理，求被盗理赔用户大于14
+且不多于30户的概率近似值．
+解 (1)易知 X \sim B(100，0.2)， 则 X 的分布律为
+P{X = k}  = Ck 0.2k0.8100-k ， k = 0，1，...，100
+100
+已知 n = 100，p = 0.2，由拉普拉斯中心极限定理得
+ 30 -100 0.2   14 -100 0.2 
+{ } 
+P 14 &lt; X \leq 30  -
+   
+ 100 0.2 0.8   100 0.2 0.8 
+=(2.5) -(-1.5) = 0.927． </p>
+<p>例4 已知甲乙两地有A、B两种交通工具，每天有1000人要从甲地
+去往乙地，这1000人等概率的随机选择 A、B 两种工具中的其中一个，
+问A、B两种交通工具上至少各准备多少个座位，才能有99%的可能
+不会出现座位不够．
+解 设每种交通工具需准备 x个座位，每天有 X 个人乘坐A交通工具
+易知X \sim B(1000，0.5)，
+ X - 500 x - 500  x - 500 
+P{X \leq x}  = P \leq =  0.99，
+ 
+ 
+ 250 250   250 
+x - 500
+则  2.33，x  536.8，每种交通工具需准备537个座位．
+250 </p>
+<p>利用切比雪夫不等式进行近似计算；
+切比雪夫大数定律；
+伯努利大数定律；
+辛钦大数定律；
+利用中心极限定理进行近似计算；
+独立同分布的中心极限定理；
+德莫夫-拉普拉斯中心极限定理． </p>
+<p>切比雪夫
+(1821 – 1894)
+切比雪夫，俄罗斯数学家．1821年5月生于俄国卡卢加，
+1894年12月卒于彼得堡．
+他出身于贵族家庭，左脚生来有残疾，因而童年时代
+的他经常独坐家中，养成了在孤寂中思索的习惯．6岁进
+莫斯科大学， 1841年因《方程根的计算》一文获银质奖章．1847年进
+彼得堡大学，两年后获博士学位，1859年当选为彼得堡科学院院士．
+切比雪夫一生发表了70多篇科学论文，内容涉及数论、概率论、
+函数逼近论、积分学等方面． </p>
+<p>辛钦
+(1894 – 1959)
+辛钦，苏联数学家，现代概率论的奠基者之一，1894年
+7月生于莫斯科，1959年11月去世．1916年毕业于莫斯科大
+学，先后在莫斯科大学和苏联科学院斯捷克洛夫数学研究
+所等处工作．1939年当选为苏联科学院通讯院士，他还是俄罗斯教育科学
+院院士．
+辛钦在函数的度量理论、数论、概率论、信息论等方面都有重要的
+研究成果．在分析学、数论及概率论对统计力学应用方面也有重要贡献． </p>
+<p>拉普拉斯
+(1749 – 1827)
+拉普拉斯，法国数学家和天文学家，1749年3月生于
+博蒙昂诺日，1827年3月卒于巴黎．他一生在科学上的贡
+献仅次于牛顿而居第二．
+拉普拉斯是天体力学的主要奠基人，是天体演化学的
+创立者之一，是分析概率论的创始人，是应用数学的先躯．他发表的天
+文学、数学和物理学的论文有270多篇，专著合计有4000多页，创造和
+发展了许多数学方法，以他的名字命名的拉普拉斯变换、拉普拉斯定理
+和拉普拉斯方程，在科学技术的各个领域有着广泛的应用． </p>
+<h2 id="_6">第六章 样本及抽样分布</h2>
+<p>随机样本
+分布与密度函数的近似解
+样本的数字特征
+抽样分布 </p>
+<p>引 言
+数理统计 研究如何合理的获得随机现象的数据资料，建立有效
+的数学方法，对所考察的问题作出推断或预测．
+研究方法 部分 总体
+{
+参数估计
+{
+估计理论
+非参数估计
+主要内容 统计推断
+假设检验 </p>
+<h3 id="61">6.1 随机样本</h3>
+<p>本节主要内容
+一、总体与个体
+二、样本与统计量
+三、样本的联合分布 </p>
+<p>总体 研究对象(数量指标)的全体．
+个体 总体中的每个元素．
+例如，某工厂生产的灯泡的寿命 X 是一个总体，每个灯泡
+的寿命是一个个体；
+全校所有同学的身高和体重 (X ，Y ) 是一个二维总体，
+每个同学的身高和体重是一个个体． </p>
+<p>样本 从某一总体 X 中随机地、独立地抽取的 n 个个体 X ，X ，...，X
+1 2 n
+x ，x ，...，x
+称为X 的一个样本容量为 n 的样本，其对应的观测值
+1 2 n
+独立同分布
+称为样本值．
+统计量 不含任何未知参数的样本的函数 φ(X ，X ，...，X ) 称为统计量．
+1 2 n
+例如，设总体 X \sim N(μ，σ2)，其中 μ 已知，σ2 未知，则 X  X  μ
+1 2
+3 X 2
+是统计量， i 不是统计量．
+σ2
+i=1 </p>
+<p>设总体 X 的分布函数为F (x)，X ，X ，...，X 是来自总体的一个样本，
+1 2 n
+则 X ，X ，...，X 的联合分布函数为
+1 2 n
+n
+独立同分布
+F<em>(x ，x ，...，x ) =  F(x )．
+1 2 n i
+i=1
+若 X 的密度函数为 f (x)，则样本的联合概率密度函数为
+n
+f </em>(x ，x ，...，x ) =  f (x )．
+1 2 n i
+i=1
+若 X 的分布律为 p(x)，则样本的联合分布律为
+n
+p*(x ，x ，...，x ) =  p(x )．
+1 2 n i
+i=1 </p>
+<p>例1 设总体 X  N(12，4) ，从中抽取容量为5的样本 (X ，X ，X ，X ，X )，
+1 2 3 4 5
+求 P{max(X ，X ，X ，X ，X ) 15} ．
+1 2 3 4 5
+解 P{max(X ，X ，X ，X ，X )  15} 
+1 2 3 4 5
+= 1- P{max(X ，X ，X ，X ，X ) \leq 15} 
+1 2 3 4 5
+= 1- P{X \leq 15，X \leq 15，...，X \leq 15} 
+1 2 5
+{ }  { }  { } 
+= 1- P X \leq 15 P X \leq15 ...P X \leq15
+1 2 5
+5
+ 15 -12 
+= 1-  = 1-(1.5)5  0.2923．
+  
+  2  </p>
+<h3 id="62">6.2 分布函数与概率密度函</h3>
+<p>数的近似解 </p>
+<p>本节主要内容
+一、分布函数的近似解
+二、概率密度函数的近似解 </p>
+<p>定义 设 x ，x ，...，x 是总体 X 的一样本观测值，将它们按由小
+1 2 n
+到大的顺序排列为 x<em> \leq x</em> \leq ... \leq x<em> ，定义样本的经验分布为
+1 2 n
+0， x &lt; x</em>，
+1
+1/ n ， x<em> \leq x &lt; x</em>，
+1 2
+F (x) =
+n 2 / n， x<em> \leq x &lt; x</em> ，
+2 3
+
+1 ， x  x*，
+n
+Gilvenko定理
+设总体X \sim F(x)，则 F (x) a.s.F(x) (n  )．
+n 一致
+注 该定理是用样本来推断总体的基本的理论依据． </p>
+<p>直方图是频率分布的图形表示，其一般做法为：
+1) 分组 设x ，x ，...，x 是来自总体 X 的一样本观测值，将它分成
+1 2 n
+l 组(各组组距可以不相等)
+a ，a ，a ，a ，...，a ，a ；
+0 1 1 2 l-1 l
+2) 求频率 令观测值落在各组的频数分别为
+m ，m ，...，m ，
+1 2 l
+m m m
+则对应频率为 1 ， 2 ，...， l ；
+n n n </p>
+<p>3) 作图 以各组为底边，相应组的频率除以组距为高，建立 l 个小矩形，
+即得总体的直方图，每一矩形的面积等于相应组的频率．
+y
+f (x)
+m
+k
+矩形面积近似曲边梯形面积
+m n m
+m 2 l
+1
+n n x
+n
+O a a a a a
+0 1 k-1 k l
+注 由大数定律可知，样本观测值落在区间 a ，a  上的频率收敛
+k-1 k
+m
+a
+到其概率，即 k p k f (x)dx ，所以当n无限增大时，分组组距越
+n a
+k-1
+来越小，直方图就越接近密度曲线． </p>
+<h3 id="63">6.3 样本的数字特征</h3>
+<p>本节主要内容
+一、总体矩
+二、样本矩 </p>
+<p>称 m = E(X k ) (假设存在)为总体 X 的 k 阶原点矩；
+k
+称 μ = E[X - E(X )]k 为 X 的 k 阶中心矩．
+k
+特别地，m = E(X )，μ = D(X )．
+1 2
+注意 总体矩是一个常数． </p>
+<p>1 n
+设 X ，X ，...，X 是总体 X 的一样本，称 X =  X 为样本均值，
+1 2 n
+i
+n
+i=1
+1 n
+1 n
+S2 = (X - X )2 为样本方差．而称A =  X k 为样本 k 阶原点矩，
+i
+n -1 k i
+n
+i=1
+i=1
+1 n
+B = (X - X )k 为样本 k 阶中心矩．
+k i
+n
+i=1
+n -1
+
+特别地，A = X，B = S2 ， B 由于和 S2 很接近，经常记为 S2 ．
+1 2 2
+n </p>
+<p>例1 从某班数学期末考试成绩中，随机抽取10名同学的成绩分别为
+100，85，70，65，90，95，63，50，77，86．
+试写出总体，样本，样本容量，样本值；
+写出样本的经验分布函数；
+求样本均值，样本方差及样本二阶中心矩的观测值．
+解 总体：该班数学期末考试成绩 X ；
+样本：X ，X ，...，X ；样本容量：n = 10；
+1 2 10
+样本值：100，85，70，65，90，95，63，50，77，86． </p>
+<p>将样本观测值 x ，x ，...，x 按照从小到大的顺序排列为
+1 2 10
+50，63，65，70，77，85，86，90，95，100
+则样本的经验分布函数为
+0， x &lt; 50，
+1/10， 50 \leq x &lt; 63，
+F (x) =
+10 2 /10， 63 \leq x &lt; 65，
+
+1， x 100． </p>
+<p>1 n 1
+样本均值 x =  x = (50  63 ...100) = 78.1，
+i
+n 10
+i=1
+1 n 1
+样本方差 S2 = (x - x)2= (-28.1)2 ... 21.92  = 252.54，
+ 
+i
+n -1 9
+i=1
+1 n 1
+样本二阶中心矩 b = (x - x)2= (-28.1)2 ... = 227.29．
+ 
+2 i
+n 10
+i=1 </p>
+<h3 id="64">6.4 抽样分布</h3>
+<p>本节主要内容
+一、抽样分布
+二、分位数 </p>
+<p>正态分布
+y
+2 f (x)
+1 (x-μ)
+-
+1) 定义 f (x) = e 2σ2 ， x \in \R
+2πσ
+2) 性质 (略)
+O μ x
+3) 结论
+1 n
+① 设 X ，X ，...，X 是来自总体 N(μ，σ2) 的一个样本， 
+X = X
+1 2 n
+i
+n
+ σ2  i=1
+为样本均值，则 X \sim N μ， ，从而可得统计量
+ 
+n
+ 
+X - μ
+U = n \sim N(0，1)；
+σ </p>
+<p>②设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(μ ，σ2) 和
+1 2 m 1 2 n 1 1
+N(μ ，σ2) 的两个样本，且总体 X，Y 相互独立，则
+2 2
+(X -Y ) - (μ - μ )
+U = 1 2 \sim N(0，1)
+σ2 m  σ2 n
+1 2
+1 m 1 n
+其中 X =  X ，Y = Y ．
+m i n j
+i=1 j=1 </p>
+<p>   2 分布
+1) 定义 设 X ，X ，...，X 相互独立且均服从 N(0，1)，则称统计量
+1 2 n
+χ2 = X 2 ... X 2 服从自由度为 n 的 χ2 分布，记作 χ2 \sim χ2(n)．
+1 n
+2) 性质
+① 若 χ2 \sim χ2(n)，则 E( χ2) = n， D( χ2) = 2n；(自证) y
+f (x)
+2
+② 设 χ2 \sim χ2(n )， χ2 \sim χ2(n )，且 χ2，χ2 相互独立，
+1 1 2 2 1 2
+O x
+则有 χ2  χ2 \sim χ2(n  n )． (可加性)
+1 2 1 2 </p>
+<p>3) 结论
+① 设 X ，X ，...，X 是来自总体 N(μ，σ2)的一个样本，则统计量
+1 2 n
+1 n
+χ2 = (X - μ)2 \sim χ2(n)；
+σ2 i
+i=1
+② 设 X ，X ，...，X 是来自总体 N(μ，σ2) 的一个样本，则样本均值
+1 2 n
+与样本方差 S2 相互独立，且统计量
+X
+(n -1)S2 1 n
+= (X - X )2 \sim χ2(n -1)．
+σ2 σ2 i
+i=1 </p>
+<p>t 分布 (学生 t 分布)
+1) 定义 设 X \sim N(0，1)，Y \sim χ2(n)，且 X 与 Y 相互独立，则
+称统计量 T = X Y n 服从自由度为 n 的 t 分布，记作 T \sim t(n)．
+威廉ꞏ戈塞
+2) 性质
+y
+① f (x) 关于 y 轴对称； f (x)
+t
+t
+② 当n   时，t 分布 N(0，1)．
+x
+3) 结论 O
+① 设 X ，X ，...，X 是来自总体 N(μ，σ2) 的一个样本，则统计量
+1 2 n
+X -
+X - μ
+T = n \sim t(n -1)；U = n \sim N(0，1)
+S σ </p>
+<p>② 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(μ ，σ2)
+1 2 m 1 2 n 1
+和 N(μ ，σ2) 的两个样本，且总体 X，Y 相互独立，
+2
+(X -Y ) - (μ - μ ) (X -Y ) - (μ - μ )
+则 T = 1 2 \sim t(m  n - 2)．U = 1 2 \sim N(0，1)
+S2 m  S2 n σ2 m  σ2 n
+w w 1 1
+(m -1)S2  (n -1)S2
+其中 S2 = 1 2 称为复合样本方差，
+w
+m  n - 2
+1 m
+S2 = (X - X )2 ， 1 n
+S2 = (Y -Y )2 ．
+1 i
+m -1
+2 j
+n -1
+i=1
+j=1 </p>
+<p>F 分布
+1) 定义 设 X \sim 2(m)，Y \sim 2(n)，且 X ，Y 相互独立，则称统计量
+X m
+F = 服从第一自由度为m，第二自由度为 n 的 F 分布，记作F \sim F(m，n)．
+Y n
+2) 性质 y
+f (x)
+1
+F
+① 若 F \sim F(m，n)，则 \sim F(n，m)；
+F
+O x
+② 若 T \sim t(n)，则 T 2 \sim F(1，n)．
+[提示：X \sim N(0，1)  X 2 \sim 2] </p>
+<p>3) 结论
+① 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(μ ，σ2) 和
+1 2 m 1 2 n 1 1
+N(μ ，σ2) 的两个样本，且总体 X ，Y 相互独立，则
+2 2
+S2 S2
+F = 1 2 \sim F(m -1，n -1)．
+σ2 σ2
+1 2
+S 2 S 2
+② 统计量 F = 1 2 \sim F(m，n)．
+σ2 σ2
+1 2
+1 m 1 n
+其中 S 2 = (X - μ )2， S 2 = (Y - μ )2 ．
+2 j 2
+1 i 1 n
+m
+j=1
+i=1 </p>
+<p>引例 设 X \sim N(0，1)，且有 P{X \leq x} = 0.8，则 x = ?
+当 P{X \leq x} = 0.2 时，x 的值又是多少? (查附表3)
+定义 设 X \sim F(x)，α \in(0，1) 为一常数，若对于某一 实数 x 满足
+
+P{X \leq x }  = F(x ) = α ，则称 x 为 X 的下侧 α 分位数．
+α
+α α
+常用分布的分位数
+y
+1) N (0，1)的下侧 α 分位数 u 满足： φ(x)
+α
+α α
+u
+P{U \leq u } =  α φ(x)dx = α ，
+α
+- x
+u u
+O
+由对称性 -u = u ． α 1-α
+α 1-α </p>
+<p>2) χ2(n) 的下侧 α 分位数 χ2(n) 满足： y
+α
+f (x)
+2 α
+P{χ2 \leq χ2(n)} = α； α
+α
+x
+O
+2(n) 2 (n)
+3) t(n) 的下侧 α 分位数 t (n) 满足：  1-
+α
+y
+f (x)
+P{T \leq t (n)} = α； t
+α α α
+-t (n) = t (n)；
+α 1-α x
+t (n) Ot (n)
+ 1-
+4) F(m，n)的下侧α分位数 F (m，n) 满足：
+α
+y
+P{F \leq F (m，n)} = α； f (x)
+α α F α
+F (m，n) = 1 F (n，m)．(自证)
+x
+α 1-α O F (m，n) F (m，n)
+α 1-α </p>
+<p> 10 
+例1 设 X ，X ，...，X 是来自总体 N(0，0.32)的样本，求 P  X 2  1.44 ．
+ 
+1 2 10 i
+ 
+i=1
+2
+10  X - μ  10 X 2
+解 因为  i =  i \sim χ2(10)，所以
+ 
+ σ  0.32
+i=1 i=1
+ 10   10 X 2 1.44
+P  X 2  1.44 = P  i   = P{χ2(10)  16}
+i 0.32 0.32
+   
+i=1 i=1
+= 1- P{χ2(10) \leq 16} (附表6)
+= 1- 0.9 = 0.1． </p>
+<p>总体与个体的概念；
+样本与统计量的定义；
+总体矩与样本矩的定义；
+总体分布函数和密度函数的近似解；
+几种常用的样本分布 (四大分布)；
+分位数的定义与计算． </p>
+<p>威廉ꞏ戈塞(1876 – 1937)
+威廉ꞏ戈塞，英国化学家、数学家与统计学家，1876年6月
+生于英堪特伯雷，1937年10月去世．
+威廉ꞏ戈塞是英国现代统计方法发展的先驱． 1899年，他
+进入都柏林的吉尼斯父子酿酒厂工作，为提高大麦质量的
+重要性促使他于1904年写成一篇报告《误差法则应用》．因酿酒厂禁止
+他发表关于酿酒过程变化性的研究成果， 他不得不于1908年以笔名
+“学生(Student)”发表他的论文，这正是“学生t-分布”名字的由来． </p>
+<h2 id="_7">第七章 参数估计</h2>
+<p>参数估计的概念
+点估计量的求法
+估计量的评选标准
+区间估计 </p>
+<h3 id="71">7.1  参数估计的概念</h3>
+<p>本节主要内容
+一、参数估计的概念
+二、参数估计的分类 </p>
+<p>一、参数估计的概念
+总体的具体分布 (比较困难)
+统计推断的目的
+总体的某些参数(数字特征)
+参数估计
+二、参数估计的分类
+点 估 计：给出未知参数的估计值
+区间估计：给出未知参数的取值范围 </p>
+<h3 id="72">7.2  点估计量的求法</h3>
+<p>本节主要内容
+一、点估计的概念
+二、矩估计
+三、最大似然估计 </p>
+<p>设总体 X 中含有未知参数θ，X ，X ，...，X 为 X 的一样本．
+1 2 n
+ˆ
+点估计就是要构造适当的统计量(X ，X ，...，X )，用其观测值
+1 2 n
+ˆ
+(x ，x ，...，x )作为 θ 的估计值．
+1 2 n
+矩估计
+点估计方法
+最大似然估计 (极大似然估计) </p>
+<p>假设 θ = (θ ，θ ，...，θ ) 为总体 X 的待估参数， 原理：A pm
+1 2 l
+k k
+ A = m
+1 1 1 n
+ A =  X k
+A = m
+
+k i
+2 2 n
+令样本矩等于总体矩：
+ i=1
+
+ m = E(X k )
+k
+ A = m
+
+l l
+ˆ ˆ ˆ
+用方程组的解 θ ，θ ，...，θ 分别作为θ ，θ ，...，θ 的估计量，则称该估计
+1 2 l 1 2 l
+量为矩估计量，相应的观察值称为矩估计值．
+注 具体求解中只需掌握 l = 1，2的情形． </p>
+<p>例1 设 X ，X ，...，X 为总体 X 的一样本，而 X 的期望 μ 和方差 σ2
+1 2 n
+都存在但未知，试求 μ 和 σ2 的矩估计量．
+ A = m ， 1 n 1 n
+解 令 1 1 而 A =  X = X ，A =  X 2，
+
+1 i 2 i
+A = m ， n n
+
+2 2 i=1 i=1
+m = E(X ) = μ， m = E(X 2) = D(X )  E2(X ) = σ2  μ2，
+1 2
+μˆ = X = A ， 倒推可证
+1
+所以得
+1 n 1 n
+σˆ2 =  X 2 - X 2 = (X - X )2 = S2 ．
+i i
+n n
+i=1 i=1
+注 上述结果表明，总体期望的矩估计量为样本的均值，总体方差的矩
+估计量为样本的二阶中心矩． </p>
+<p>例2 设总体 X \sim P(λ)，λ 未知，X ，X ，...，X 是 X 的一个样本，
+1 2 n
+求 λ 的矩估计量．
+解 因为 E(X ) = λ ，D(X ) = λ ，由例1的结论：
+总体期望的矩估计量为样本的均值，从而可得
+ˆ
+λ = X ，
+总体方差的矩估计量为样本的二阶中心矩，从而可得
+1 n
+ˆ 
+λ = (X - X )2 = S2 ，
+i
+n
+i=1
+即该待估参数有两个不同的矩估计量． </p>
+<p>例3 设总体 X \sim U[a，b]，其中a，b 为未知参数，试求 a，b 的矩估计量．
+ˆ
+aˆ  b
+= X ，
+
+ 2
+解 由例1的结论得 
+ˆ
+(b - aˆ)2
+
+
+= S2，
+
+ 12
+ˆ 
+aˆ  b = 2X ， aˆ = X - 3S，
+ 
+ 
+ 
+ˆ  ˆ 
+b - aˆ = 2 3S， b = X  3S．
+  </p>
+<p>平均体重θ：
+原理：大概率事件易发生
+45， 65， 85
+设总体X 的密度函数为 f (x；) (或分布律为p(x；))，= (， ，...，)
+1 2 l
+为待估参数，称样本 X ，X ，...，X 的联合密度函数(或联合分布律)
+1 2 n
+为似然函数，记为 L()， 即
+n
+L() = f (x ，x ，...，x ；) =  f (x ；)，(\in)
+1 2 n i
+i=1
+反映了概率的大小
+n
+(或 L() = p(x ，x ，...，x ；))=  p(x ；)，(\in)
+1 2 n i
+i=1
+求出L() 的最大值点θˆ，则称ˆ 为θ 的最大似然估计值． </p>
+<p>例4 设总体 X \sim B(1，p)，p未知，求 p 的最大似然估计量．
+解 因 X \sim P{X = x} = px(1- p)1-x，x = 0，1，则似然函数
+n n
+n n  
+x n- x
+L( p) =  p(x ；p) =  pxi (1- p)1-xi = p i (1- p) i ，
+i=1 i=1
+i
+i=1 i=1
+ n   n 
+取对数 ln L( p) =  x ln p  n -  x ln(1- p)，
+   
+i i
+   
+i=1 i=1
+dln L( p) 1 n
+令 = 0  p =  x ，
+i
+dp n
+i=1
+1 n
+所以 p 的最大似然估计量为 pˆ =  X = X ．
+i
+n
+i=1 </p>
+<p>例5 设总体X \sim P(λ)，λ未知，求 λ 的最大似然估计量．
+λx
+解 因 X \sim P{X = x} = e-λ，x = 0，1，2，...， 则似然函数
+x!
+n
+
+x
+i
+n n λxi λi=1
+L(λ) =  p(x ；λ) =  e-λ= e-nλ，
+i
+x ! x ! x !...x !
+i=1 i=1 i 1 2 n
+ n  n
+取对数 ln L(λ) =  x ln λ - nλ - ln(x !)，
+ 
+i i
+ 
+i=1 i=1
+dln L(λ) 1 n 1 n
+令 =  x - n = 0  λ =  x ，
+dλ λ i n i
+i=1 i=1
+1 n
+ˆ
+所以 λ 的最大似然估计量为 λ =  X = X ．
+i
+n
+i=1 </p>
+<p>离散型随机变量的最大似然估计的难点主要是似然函数的构造，
+假如样本值已知，似然函数有一个非常简单的构造法．
+x x ... x
+设总体 的分布律为： X
+X
+1 2 k
+P p () p () ... p ()
+1 2 k
+X ，X ，...，X 是 X 的一个样本，且样本值已知，
+1 2 n
+已知样本值中 x ，x ，...，x 分别出现了n ，n ，...，n 次，则似然函数为：
+1 2 k 1 2 k
+ n  n  n
+L() = p () 1 p () 2 ... p () k
+1 2 k </p>
+<p>X 1 2 3
+例6 设总体 X 的分布律为
+P 2 2(1-) (1-)2
+(1，2，1) 为来自总体的一个样本，求 θ 的最大似然估计．
+解 样本中出现了2个1，1个2，0个3，即 n = 2，n = 1，n = 0
+1 2 3
+L() = 2 2 2(1-)1  (1-)2 0 = 25 - 26
+   
+5
+L() = 104 -125 = 0 解得 ˆ = 0 (舍) 或 ˆ = ．
+6 </p>
+<p>X 0 1 2 3  1 
+例7 设总体 X 的分布律为 0 &lt; p &lt;
+ 
+P p2 2p(1- p) p2 1- 2p  2 
+(1，3，0，2，3，3，1，3) 为来自总体的一个样本，求 p 的最大似然估计．
+解 n = 1，n = 2，n = 1，n = 4
+0 1 2 3
+L( p) =  p2 1 2 p(1- p)2   p2 1 1- 2 p4= 4 p6(1- p)2(1- 2 p)4
+   
+ln L( p) = ln 4  6ln p  2ln(1- p)  4ln(1- 2 p)
+dln L( p) 6 2 8 7 - 13
+= - - = 0，得 12 p2 -14 p  3 = 0，pˆ =  0.2829
+dp p 1- p 1- 2 p 12 </p>
+<p>例8 设总体X \sim E(λ)，λ未知，求 λ 的最大似然估计量．
+λe-λx， x  0，
+解 因 X \sim f (x；λ) =  则似然函数
+0， x &lt; 0，
+
+  n 
+n λn exp -λ x ， x ，...，x  0，
+  
+L(λ) =  f (x ；λ) = i 1 n
+  
+i i=1
+i=1 
+0， 其它，
+
+dln L(λ) n 1
+两边取对数并令 = 0  λ = n  x = ，
+i
+dλ x
+i=1
+n 1
+ˆ
+所以λ 的最大似然估计量为 λ = n  X = ．
+i
+X
+i=1 </p>
+<p>例9 设总体X \sim N(μ，σ2)，μ，σ2 未知，求 μ，σ2的最大似然估计量．
+2
+1 (x-μ)
+-
+解 因 X \sim f (x; μ，σ2) = e 2 ， x \in \R，
+2σ
+2πσ
+n  1 n 
+则似然函数 L(μ，σ2) =  f (x ; μ，σ2) = (2πσ2)-n exp - (x - μ)2 ，
+2  
+i 2σ2 i
+ 
+i=1 i=1
+n 1 n
+取对数 ln L(μ，σ2) = - (ln 2π  ln σ2) - (x - μ)2，
+2 2σ2 i
+i=1 </p>
+<p>例9 设总体X \sim N(μ，σ2)，μ，σ2 未知，求 μ，σ2的最大似然估计量．
+  1 n
+[ln L(μ，σ2)] = (x - μ) = 0， (1)
+
+2 i
+μ σ
+
+i=1
+令 
+ n 1 n
+
+[ln L(μ，σ2)] = -  (x - μ)2 = 0，
+(2)
+ σ2 2σ2 2σ4 i
+
+i=1
+1 n 1 n
+由(1)式得 μ =  x = x，代入(2)得 σ2 = (x - x)2，
+i
+n i
+n
+i=1
+i=1
+1 n 1 n
+
+μˆ =  X = X ， σˆ2 = (X - X )2 = S2 ．
+所以
+i i
+n n
+i=1 i=1 </p>
+<p>e-(x-)， x ，
+例10 设总体 X \sim f (x;) = θ 未知，求 θ 的最大似然
+
+0， x &lt;，
+
+估计量．
+ n
+
+n  n- xi
+解 似然函数 L(θ) =  f (x ;θ) = e i=1 ， x ，...，x ，
+
+1 n
+i
+
+i=1 0， 其它，
+
+ n
+
+n- x
+n i
+
+e ， \leq min{x }，
+L(θ) =  f (x ;θ) = i=1
+ i
+i 1\leqi\leqn
+
+i=1
+0， 其它，
+
+要使 L() 达到最大，只需取= min{x ，x ，...，x }，所以 θ 的最大似然
+1 2 n
+ˆ
+估计量为= min{X ，X ，...，X }．
+1 2 n </p>
+<p>例11 设 X \sim U[a，b]，a，b 未知，求 a，b 的最大似然估计量．
+1 (b - a)， a \leq x \leq b，
+解 因 X \sim f (x；a，b) = 则似然函数
+
+0， 其它，
+
+ 1
+n ， a \leq x ，...，x \leq b，
+
+L(a，b) =  f (x ；a，b) = (b - a)n 1 n
+
+i
+i=1 
+0， 其它，
+ </p>
+<p>例11 设 X \sim U[a，b]，a，b 未知，求 a，b 的最大似然估计量．
+1 (b - a)， a \leq x \leq b，
+解 因 X \sim f (x；a，b) = 则似然函数
+
+0， 其它，
+
+ 1
+n ， a \leq min{x }，b  max{x }，
+
+L(a，b) =  f (x ；a，b) = (b - a)n 1\leqi\leqn i 1\leqi\leqn i
+i
+i=1 
+0， 其它，
+
+记 x = min{x }，x = max{x }，则对满足 a \leq x ，x \leq b 的任意 a，b 有
+i (n) i (n)
+1\leqi\leqn 1\leqi\leqn
+1 1
+L(a，b) = \leq ，
+(b - a)n (x - x )n
+(n) (1)
+ˆ
+a，b 的最大似然估计为 aˆ = min{X }，b = max{X }．
+i i
+1\leqi\leqn 1\leqi\leqn </p>
+<h3 id="73">7.3  估计量的评选标准</h3>
+<p>本节主要内容
+一、无偏性
+二、有效性
+三、相合性 </p>
+<p>一、无偏性
+定义1 设ˆ是参数的估计量，若 E(ˆ) =，则称ˆ 是的无偏估计量．
+二、有效性
+定义2 设ˆ 与ˆ 都是的无偏估计量，若D(ˆ ) &lt; D(ˆ )， 则称ˆ 比ˆ 更
+1 2 1 2 1 2
+有效．
+三、相合性
+定义3 设ˆ是的估计量，若ˆ p (n  )， 则称ˆ 是的相合
+估计量． </p>
+<p>例1 证明：样本均值 X 是总体期望 μ 的无偏估计量，样本方差 S2 是
+总体方差 σ2 的无偏估计量．
+ 1 n  1
+证 因为 E(X ) = E  X =  nμ = μ，所以 X 是 μ 的无偏估计量．
+ 
+n i n
+ 
+i=1
+ 1 n  1  n 
+又 E(S2) = E (X - X )2 = E  X 2 - nX 2 ，
+   
+i i
+n -1 n -1
+   
+i=1 i=1
+而 E(X 2) = D(X )  E2(X ) = σ2  μ2，E(X 2) = D(X )  E2(X ) = σ2 n  μ2，
+i i i
+1
+则 E(S2) = [n(σ2  μ2) - n(σ2 n  μ2)] = σ2，
+n -1
+所以 S2 是 σ2 的无偏估计量． </p>
+<p>n -1
+由于 S2 是 σ2 的无偏估计量， 且 S2 = S2 ，
+n
+n -1 n -1
+因此 E(S2) = E(S2) = σ2 ， 所以 S2 不是 σ2 的无偏估计量．
+n n
+注意 虽然 S2 是 σ2 的无偏估计量， 但是 S 并不是 σ 的无偏估计量．
+事实上，由于 D(S) = E(S2) - E2(S) ，得
+E(S) = E(S2) - D(S) = σ2 - D(S)  σ </p>
+<p>例2 设 (X ，X ，X ) 为来自总体 N(μ，1) 的一个样本， μ 未知，
+1 2 3
+则下列 μ 的无偏估计量中最有效的是 (         )．
+1 1 1 1 1 1
+(A) X  X  X ； (B) X  X  X ；
+1 2 3 1 2 3
+2 3 6 2 4 4
+1 1 1
+(C) X  X  X ； (D) X  X - X ．
+1 2 3 1 2 3
+3 3 3
+ 1 1 1  1 1 1 7  1 1 1  3
+解 D X  X  X =   = ； D X  X  X = ；
+   
+1 2 3 1 2 3
+ 2 3 6  4 9 36 18  2 4 4  8
+ 1 1 1  1
+D X  X  X = ； D X  X - X  = 3．
+ 
+1 2 3 1 2 3
+ 3 3 3  3 </p>
+<h3 id="74">7.4  区间估计</h3>
+<p>本节主要内容
+一、置信区间的概念及求法
+二、单个正态总体的情形
+三、两个正态总体的情形 </p>
+<p>引 言
+ˆ
+点估计的缺陷 未能反映出估计值与真实值 θ 之间的误差及可靠性．
+区间估计的思想 对未知参数θ，构造两统计量与 ， 使得 θ 能以
+1 2
+较大的概率落在随机区间 [， ] 内，由相应的观测值来估计 θ 的
+1 2
+的观测值来估计θ 的取值范围．
+P{ \leq\leq} —可信程度 E( -) —精确程度
+1 2 2 1
+最优区间估计：可信度给定情况下区间尽量短． </p>
+<p>定义 设总体 X 含未知参数θ，对于给定的α \in(0，1)，若存在两个
+统计量 θ (X ，...，X ) 和 θ (X ，...，X )， 使得 P{θ \leq θ \leq θ } = 1- α，
+1 1 n 2 1 n 1 2
+则称[θ ，θ ]为 θ 的置信度为 1- α 的置信区间．
+1 2
+引例 设总体 X \sim N(μ，σ2)，其中 σ = σ 已知， μ 未知，X ，...，X
+0 1 n
+是 X 的样本，求 μ 的置信度为1- α 的置信区间． </p>
+<p>引例 设总体 X \sim N(μ，σ2)，其中 σ = σ 已知，μ 未知，X ，...，X
+0 1 n
+是 X 的样本，求 μ 的置信度为1- α 的置信区间．
+X - μ
+解 因 σ = σ 已知，则由抽样分布知 U = n 只包含未知参数 μ 且
+0
+σ
+服从 N(0，1) ，现需找一尽量短的区间，使得U落在该区间内的概率为1- α．
+y
+由分位数的定义知 P{-u \leq U \leq u } = 1- α，
+φ(x)
+1-α/2 1-α/2
+α / 2 α / 2
+ X - μ 
+即 P -u \leq n \leq u = 1- α，
+ 
+x
+1-α/2 1-α/2
+σ -u O u
+ 
+1-α/2 1-α/2
+ σ σ 
+因此 μ 的置信度为1- α 的置信区间为 X - u ，X  u ．
+ 
+1-α/2 1-α/2
+ n n  </p>
+<p>求解步骤
+① 构造一个只包含待估参数 θ 的样本的函数U，要求它的分布已知；
+(一般由抽样分布可得)
+② 寻求一尽量短的区间 [a，b]，使得 U 落在该区间内的概率为1- α；
+(一般由分位数可得)
+③ 从 a \leq U \leq b 中得到等价不等式 θ \leq θ \leq θ ，则[θ ，θ ] 就是 θ 的置信
+1 2 1 2
+度为 1- α 的置信区间． </p>
+<p>设总体 X \sim N(μ，σ2)，X ，X ，...，X 是 X 的一个样本，对给定置信度
+1 2 n
+1- α ，求 μ 和 σ2 的置信区间．
+ μ的置信区间
+1) 当 σ 2 已知时
+由引例可知， μ 的置信度为1- α 的置信区间为
+ σ σ 
+X - u ，X  u ．
+ 
+1-α/2 1-α/2
+ n n  </p>
+<p>2)当 σ 2 未知时
+因为S 2是σ 2 的无偏估计，所以可以用S 代替 σ，则由抽样分布知
+X - μ X - μ
+T = n \sim t(n -1)， U = n \sim N(0，1)
+S σ
+由分位数 P{-t (n -1) \leq T \leq t (n -1)} =1- α，
+1-α/2 1-α/2
+ X - μ 
+即 P -t (n -1) \leq n \leq t (n -1) = 1- α，
+ 
+1-α/2 1-α/2
+S
+ 
+y
+f (x)
+所以 μ 的置信度为1- α 的置信区间为 t
+α / 2 α / 2
+ S S 
+X - t (n -1)，X  t (n -1) ． O
+x
+ 
+1-α/2 1-α/2
+ n n  -t t (n -1)
+1-α/2
+1-α/2 </p>
+<p>例1 某厂生产的节能灯寿命X \sim N(μ，8)，从生产的一批
+灯中抽取10只作寿命测试，数据如下(小时)：
+1050，1100，1080，1120，1200，1250，1040，1130，1300，1200
+试估计这批节能灯平均寿命的范围 ( α   =   0  . 0  5  )．
+解 这是在方差已知的情况下对期望进行区间估计．
+因为 X = 1147，u = u =1.96，从而可得
+1-α/2 0.975
+σ
+σ
+X - u = 1145.25， X  u = 1148.75，
+1-α/2 1-α/2
+n n
+所以这批节能灯平均寿命 μ在0.95的置信水平下的置信区间为
+1145.25，1148.75．(区间长度为3.5)  σ σ 
+X - u ，X  u
+ 
+1-α/2 1-α/2
+ n n  </p>
+<p>例2 若例1中的方差未知，求这批节能灯平均寿命 μ 的置信水平为0.95的
+ S S 
+置信区间． X - t (n -1)，X  t (n -1)
+ 
+1-α/2 1-α/2
+ n n 
+解 这是在方差未知的情况下对期望进行区间估计．由例1的数据
+S = S2  87.06，类似得置信水平为0.95的置信区间为1084.72，1209.28．
+(长度为124.56)
+注 例2表明，由于对总体的了解少了(方差未知)，因而在相同的置信水
+平下估计的效果也就差很多． </p>
+<p>σ2 的置信区间
+1) 当 μ 已知时
+1 n
+因 μ = μ 已知，则由抽样分布知 χ2 = (X - μ)2 只包含未知参数
+0 σ2 i
+i=1
+σ2 且服从 χ2(n)，现需找一尽量短的区间，使得 χ2落在该区间内的概率
+为1- α．
+非最短区间，但易求!
+由分位数定义 P{χ2 (n) \leq χ2 \leq χ2 (n)} =1- α，
+α/2 1-α/2 y
+f (x)
+所以 σ2 的置信度为 1- α 的置信区间为： 2α / 2
+α / 2
+ n n  x
+(X - μ)2 / χ2 (n)，(X - μ)2 / χ2 (n) ． O χ2 (n) χ2 (n)
+ 
+i 1-α/2 i α/2 α/2 1-α/2
+ 
+i=1 i=1 </p>
+<p>2) 当 μ 未知时
+1 n  n n 
+χ2 = (X - μ)2 \sim χ2(n) (X - μ)2 / χ2 (n)，(X - μ)2 / χ2 (n)
+ 
+σ2 i  i 1-α/2 i α/2 
+i=1 i=1 i=1
+因为 是 μ 的无偏估计，所以可以用 代替 μ ，则由抽样分布知
+X X
+(n -1)S2 1 n
+= (X - X )2 \sim χ2(n -1) ，
+σ2 σ2 i
+i=1
+类似可得 σ2 的置信度为1- α 的置信区间为：
+ n n 
+(X - X )2 / χ2 (n -1)，(X - X )2 / χ2 (n -1) ．
+ 
+i 1-α/2 i α/2
+ 
+i=1 i=1 </p>
+<p>例3 从总体 X \sim N(0 ，σ2) 中抽取一个容量为4的样本：
+1.3   −2.78    0.06    1.98
+试求 σ2 的置信水平为0.95的置信区间．
+解 这是在期望已知的情况下对方差进行区间估计．
+4
+因为 (x - 0)2 =13.34 ， χ2 (n) = 0.484 ，
+i α/2
+i=1
+χ2 (n) = 11.143 ， 所以可得 σ2 置信水平为0.95的置信区间为
+1-α/2
+1.20，27.56．  n n 
+(X - μ)2 / χ2 (n)，(X - μ)2 / χ2 (n)
+ 
+i 1-α/2 i α/2
+ 
+i=1 i=1 </p>
+<p>参数估计的概念；
+点估计的概念；
+矩估计的原理及求法；
+最大似然估计的原理及求法；
+估计量的评选标准；
+置信区间的基本概念；
+单正态总体期望与方差的置信区间；
+两正态总体期望差与方差比的置信区间． </p>
+<h2 id="_8">第八章 假设检验</h2>
+<p>假设检验的基本思想
+单个正态总体参数的假设检验
+两个正态总体参数的假设检验
+总体分布的假设检验 </p>
+<h3 id="81">8.1  假设检验的基本思想</h3>
+<p>本节主要内容
+一、假设检验的基本思想
+二、两类错误
+三、假设检验的步骤 </p>
+<p>一、假设检验的基本思想 (概率性质的反证法)
+为了推断总体，首先对总体的分布或未知参数作出某种假设 H ，
+0
+然后在 H 成立的条件下，若通过抽样分析发现“小概率事件”(矛盾)
+0 
+竟然在一次试验中发生了，则表明 H 很可能不成立，从而拒绝 H ；
+0  0 
+相反，若没有导致上述“不合理”现象的发生，则没有理由拒绝 H ，
+0
+从而接受 H ．
+0 </p>
+<p>二、两类错误
+固定α—显著性检验
+第一类错误(弃真) H 实际正确，但据抽样分析拒绝了H ；
+0 0
+{ } 
+P 拒绝H | H 为真 = α ——显著性水平
+0 0
+第二类错误(纳伪) H 实际错误，但据抽样分析接受了H ．
+0 0
+{ } 
+P 接受H | H 不真 = β
+0 0
+三、假设检验的步骤
+引例 某厂正常情况下生产灯泡寿命X \sim N(1600，802)，现从一批灯泡
+中抽取10个，测得它们的平均寿命 x = 1548， 若灯泡使用寿命的标准差
+不变，在显著性水平 α = 0.05 的条件下，能否认为该厂的生产正常? </p>
+<p>解 由题意，要检验假设 H ：μ = μ = 1600，H ：μ  1600，
+0 0 1
+因 X 是 μ 的无偏估计，所以用 X 来检验 H 是合理的．
+0 
+X - μ
+在H 成立的条件下，统计量U = 0 n \sim N(0，1)，若 H 不真，
+0 0 
+σ
+则 U 一般会很大，于是由 P{U  u }  = α，得拒绝域
+1-α/2
+{ } 
+W = U  u 或U &lt; -u ．
+“小概率事件”
+1-α/2 1-α/2
+1548 -1600
+y
+因 u = 10  -2.06 &lt; -u = -1.96，
+φ(x)
+0.975
+80
+α / 2 α / 2
+观测值落入拒绝域，即“小概率事件”竟发生了，
+x
+-u Ou
+从而拒绝原假设 H ，认为生产过程不正常． 1-α/2 1-α/2
+0 </p>
+<p>假设检验求解过程
+① 由实际问题的要求提出原假设 H 和对立假设 H ；
+0  1 
+② 选择适当的统计量，在 H 成立的条件下确定其分布；
+0 
+③ 对给定的 α，构造“小概率事件”，得到拒绝域；
+④ 据统计量的观测值对是否接受 H 做出判断．
+0  </p>
+<h3 id="82">8.2  单个正态总体参数的</h3>
+<p>假设检验 </p>
+<p>本节主要内容
+一、期望的假设检验
+二、方差的假设检验 </p>
+<p>X - μ
+当σ 2 已知时 —U检验 U = 0 n \sim N(0，1)
+σ
+(a) H ：μ = μ ，H ：μ  μ ； (双侧) y
+0 0 1 0 φ(x)
+α / 2 α / 2
+W = {U  u 或U &lt; -u }．
+1-α/2 1-α/2
+x
+-u O u
+(b) H ：μ \leq μ ，H ：μ  μ ； (单侧) 1-α/2 1-α/2
+0 0 1 0
+W = {U  u }． y
+1-α φ(x)
+α
+(c) H ：μ  μ ，H ：μ &lt; μ ；(单侧)
+0 0 1 0
+x
+W = {U &lt; -u }． O u
+1-α
+1-α </p>
+<p>X - μ
+当σ 2未知时 —T检验 T = 0 n \sim t(n -1)
+S
+(a) H ：μ = μ ，H ：μ  μ ；
+0 0 1 0
+{ } 
+W = T  t (n -1) 或T &lt; -t (n -1) ．
+y
+1-α/2 1-α/2
+f (x)
+t
+(b) H ：μ \leq μ ，H ：μ  μ ； α / 2 α / 2
+0 0 1 0
+W = {T  t (n -1)} ．
+x
+1-α -t O t (n -1)
+1-α/2 1-α/2
+(c) H ：μ  μ ，H ：μ &lt; μ ；
+y
+0 0 1 0 f (x)
+t
+α
+W = {T &lt; -t (n -1)} ．
+1-α
+x
+注 拒绝域中的不等号与 H 的相反． -t (n -1) O
+0  1-α </p>
+<p>例1 厂商称他们的装潢材料抗断强度X \sim N(3.25，1.21)，现从中抽取9件
+进行检验，测得平均抗断强度为3.15，问能否接受该厂商的说法? (α = 0.05)
+解 由题意，要检验假设 H ：μ = μ = 3.25，H ：μ  3.25，
+0 0 1
+因为是在方差已知的情况下对期望进行假设检验， 所以使用 U 检验，
+X - μ
+即 U = 0 n \sim N(0，1)，从而可得拒绝域
+σ
+{ } 
+W = U  u 或U &lt; -u ．
+1-α/2 1-α/2
+3.15 - 3.25
+因 1.96 = u  u = 9  -0.273  -u = -1.96，
+0.975 0.975
+1.1
+所以接受H ，即认为该厂商的说法是正确的．
+0 </p>
+<p>例2 电视台广告部称企业在该台播放广告后的平均利润收益量至少
+为15万元，已知这类企业广告播出后的收益量服从正态分布． 现抽取
+容量为20的样本，得平均收益量为13.2万元，标准差为3.4，试在显著
+性水平 α = 0.05 下，判断该广告部的说法是否正确?
+解 由题意，要检验假设 H ：μ  μ =15，H ：μ &lt;15，
+0 0 1
+因为是在方差未知的情况下对期望进行假设检验， 所以使用 T 检验，
+X - μ
+即 T = 0 n \sim t(n -1)， 拒绝域 W = {T &lt; -t (n -1)}，
+1-α
+S
+13.2 -15
+由于 t = 20  -2.37 &lt; -t (19) = -1.729，
+0.95
+3.4
+所以拒绝 H ，即认为该广告部的说法不正确．
+0 </p>
+<p>1 n
+χ2 = (X - μ)2 \sim χ2(n)
+1.当 μ 已知时 — 2(n) 检验
+σ2 i
+0 i=1
+(a) H ：σ2 = σ2，H ：σ2  σ2；
+0 0 1 0
+{ } 
+W = χ2  χ2 (n) 或 χ2 &lt; χ2 (n) ，
+1-α/2 α/2 y
+f (x)
+χ2
+(b) H ：σ2 \leq σ2，H ：σ2  σ2； α / 2 α / 2
+0 0 1 0
+{ }  x
+W = χ2  χ2 (n) ，
+O χ2 (n) χ2 (n)
+1-α
+α/2 1-α/2
+y
+f (x)
+(c) H ：σ2  σ2，H ：σ2 &lt; σ2； χ2
+α
+0 0 1 0
+{ } 
+W = χ2 &lt; χ2 (n) ． x
+o
+α χ2 (n)
+1-α </p>
+<p>1 n
+2.当 μ 未知时 — 2(n -1)检验 χ2 = (X - X )2 \sim χ2(n -1)
+σ2 i
+0 i=1
+(a) H ：σ2 = σ2，H ：σ2  σ2；
+0 0 1 0
+W = {χ2  χ2 (n -1) 或 χ2 &lt; χ2 (n -1)}，
+1-α/2 α/2
+y
+f (x)
+(b) H ：σ2 \leq σ2，H ：σ2  σ2； 2α / 2
+α / 2
+0 0 1 0
+W = {χ2  χ2 (n -1)}， x
+o χ2
+1-α χ2 (n -1)
+α/2
+1-α/2
+(c) H ：σ2  σ2，H ：σ2 &lt; σ2； y
+f (x)
+0 0 1 0
+2
+α
+W = {χ2 &lt; χ2 (n -1)}．
+α
+x
+o
+χ2(n -1)
+注 双侧检验的接受域即为置信区间．
+α </p>
+<p>例3 某车间生产的金属丝的折断力X \sim N(μ，64)，现从一批产品中抽出
+10根作折断力试验，结果如下：
+578，572，570，568，572，570，572，596，584，570
+问能否认为这批金属丝的折断力方差仍为64? (α = 0.05)
+解 由题意，要检验假设 H ：σ2 = σ2 = 64；H ：σ2  64，因为是在期望
+0 0 1
+未知的情况下对方差进行假设检验，所以使用 χ2(n -1) 检验，即
+1 n
+χ2 = (X - X )2 \sim χ2(n -1)，从而可得
+σ2 i
+0 i=1
+拒绝域 W ={χ2  χ2 (n -1)或 χ2 &lt; χ2 (n -1)}．
+1-α/2 α/2
+由于 2.7 = 2 &lt; 2 10.65 &lt; 2 =19.02，
+0.025 0.975
+所以接受H ，即认为折断力的方差与 64 无显著差异．
+0 </p>
+<p>例4 某车间生产一种保险丝，规定保险丝熔化时间的方差不得超过400．
+今从一批产品中抽出25个， 测得其熔化时间的方差为388.58．已知保险
+丝熔化时间服从正态分布，试根据所给数据，检验这批产品是否符合
+要求? (α = 0.05)
+解 由题意，要检验假设 H ：σ2 \leq σ2 = 400；H ：σ2  400，
+0 0 1
+因为在期望未知的情况下对方差进行假设检验，所以使用2(n -1) 检验，
+1 n
+{ } 
+χ2 = (X - X )2 \sim χ2(n -1)，从而可得拒绝域 W = χ2  χ2 (n -1) ．
+即
+σ2 i 1-α
+0 i=1
+由于 χ2  23.31 &lt; χ2 (24) = 36.42，
+0.95
+所以应该接受H ，即这批保险丝符合要求．
+0 </p>
+<p>假设检验的基本思想 (概率性质的反证法)；
+两类错误的概念；
+假设检验的基本步骤；
+单个正态总体的假设检验(均值、方差)；
+两个正态总体的假设检验；
+总体分布的假设检验 (拟合优度检验)． </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+<!-- 
+   
+-->
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../../h5/web-apis/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Web APIs">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Web APIs
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../surveying/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工程测量">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                工程测量
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - 2025 by <a href="https://github.com/interset-wq" target="_blank">D111KC</a> <br><a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/interset-wq" target="_blank" rel="noopener" title="Follow Me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:d111kc@foxmail.com" target="_blank" rel="noopener" title="通过邮箱联系我" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "social", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"\u003ctag\u003e": "\u003cidentifier\u003e", "CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
