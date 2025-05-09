@@ -1820,7 +1820,7 @@
           <li class="md-nav__item">
   <a href="#44" class="md-nav__link">
     <span class="md-ellipsis">
-      4.4 其他重要的概率分布
+      4.4 指数分布
     </span>
   </a>
   
@@ -1829,7 +1829,25 @@
           <li class="md-nav__item">
   <a href="#45" class="md-nav__link">
     <span class="md-ellipsis">
-      4.5 二维正态及二维均匀分布
+      4.5 均匀分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 二维正态分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 二维均匀分布
     </span>
   </a>
   
@@ -2254,7 +2272,7 @@
           <li class="md-nav__item">
   <a href="#44" class="md-nav__link">
     <span class="md-ellipsis">
-      4.4 其他重要的概率分布
+      4.4 指数分布
     </span>
   </a>
   
@@ -2263,7 +2281,25 @@
           <li class="md-nav__item">
   <a href="#45" class="md-nav__link">
     <span class="md-ellipsis">
-      4.5 二维正态及二维均匀分布
+      4.5 均匀分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 二维正态分布
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 二维均匀分布
     </span>
   </a>
   
@@ -2642,7 +2678,7 @@ P(B) = 1- P(B) = 1- C4C1C1C1C1 / C4 = ．
 6 2 2 2 2 12
 33
 17
-或 P(B) = (C1C2C1C1 C2) / C4 = ．
+或 P(B) = (C1C2C1C1 +C2) / C4 = ．
 6 5 2 2 6 12
 33 
 
@@ -2704,10 +2740,10 @@ o
 <!-- 例6 求任意50人中存在某两人生日相同的概率 (不考虑闰年)．
 解 设 A ={任意50人中存在某两人生日相同}，
 A={任意50人生日均不相同}，
-365364...316
-则 n = 36550，n = 365364...316， P(A) = = p
+365\cdot 364\cdot ...\cdot 316
+则 n = 36550，n = 365\cdot 364\cdot ...\cdot 316， P(A) = = p
 A 36550
-取对数 ln p = ln 365  ln 364 ... ln 316 - 50ln 365 = -3.51909，
+取对数 ln p = ln 365 + ln 364 +...+ ln 316 - 50ln 365 = -3.51909，
 P(A) = p = e-3.51909= 0.029626， P(A) =1- 0.029626 = 0.970374．  -->
 
 <!-- 例7 在110这10个自然数中任取一数，求
@@ -2716,7 +2752,7 @@ P(A) = p = e-3.51909= 0.029626， P(A) =1- 0.029626 = 0.970374．  -->
 (3)取到的数能被2整除而不能被3整除的概率．
 解 设 A={取到的数能被2整除}，B={能被3整除}，
 则 P(A) =1/ 2，P(B) = 3 /10，P(AB) =1/10，
-故 P(A \cup B) = P(A)  P(B) - P(AB) = 7 /10，
+故 P(A \cup B) = P(A) + P(B) - P(AB) = 7 /10，
 P(A  B) = P(A \cup B) =1- P(A \cup B) = 3 /10，
 P(A - B) = P(A) - P(AB) = 2 / 5． 
 
@@ -2724,9 +2760,9 @@ P(A - B) = P(A) - P(AB) = 2 / 5．
 10整除的概率?
 解 设 A={取出的这 n 个数字中含有数字5}，
 B={取出的这 n 个数字中含有偶数}，
-则 P(AB) = 1- P(AB) = 1- P(A \cup B) = 1-[P(A)  P(B) - P(AB)]
+则 P(AB) = 1- P(AB) = 1- P(A \cup B) = 1-[P(A) + P(B) - P(AB)]
 8n 5n 4n
-= 1- -  ．
+= 1- - + ．
 9n 9n 9n  -->
 
 <h3 id="13">1.3  条件概率与事件的相互独立性</h3>
@@ -2776,16 +2812,16 @@ i 2 1
 i 1
 P(A ) = P(A $\varOmega$)= P(A  (A \cup A )) = P(A A \cup A A )
 2 2 2 1 1 1 2 1 2
-= P(A A )  P(A A ) = P(A )P(A | A )  P(A )P(A | A )
+= P(A A ) + P(A A ) = P(A )P(A | A ) + P(A )P(A | A )
 1 2 1 2 1 2 1 1 2 1
 a a -1 b a a
-=    = = P(A )．
+= \cdot  + \cdot  = = P(A )．
 1
-a  b a  b -1 a  b a  b -1 a  b
+a + b a + b -1 a + b a + b -1 a + b
 a
-类似地，P(A ) = k = 1，2，...，a  b
+类似地，P(A ) = k = 1，2，...，a + b
 k
-a  b 
+a + b 
 
 例3 (摸奖问题) 盒子里有 n 个球，其中n -1个白球，1个黑球．n 个人
 依次取一个球，不放回．问第 i 个人取到黑球的概率．
@@ -2796,13 +2832,13 @@ P(A ) =
 1
 n
 n -1 1 1
-P(A ) = P(A A ) = P(A )P(A | A ) =  =
+P(A ) = P(A A ) = P(A )P(A | A ) = \cdot  =
 2 1 2 1 2 1
 n n -1 n
 P(A ) = P(A A ... A A ) = P(A )P(A | A )P(A | A A )...P(A | A ... A )
 n 1 2 n-1 n 1 2 1 3 1 2 n 1 n-1
 n -1 n - 2 n - 3 1 1
-=   ... =
+= \cdot  \cdot  ... =
 n n -1 n - 2 n - (n -1) n  -->
 <p><mark class="critic">全概率公式</mark></p>
 <p>完备事件组 事件组 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span>，若满足：
@@ -2825,12 +2861,12 @@ $$
 混合后从中任取一件，求该产品为次品的概率．
 解 设B表示取到得产品为次品；A 表示取到第 i 个车间的产品．i = 1，2，3
 i
-P(B) = P(A B)  P(A B)  P(A B)
+P(B) = P(A B) + P(A B) + P(A B)
 1 2 3
-= P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )
+= P(A )P(B | A ) + P(A )P(B | A ) + P(A )P(B | A )
 1 1 2 2 3 3
 2500 2000 1500
-=  0.05   0.03   0.01  3.3
+=  0.05 +  0.03 +  0.01  3.3
 6000 6000 6000 
 
 例5 已知一个袋子中有12个乒乓球，其中9个新球，
@@ -2840,10 +2876,10 @@ P(B) = P(A B)  P(A B)  P(A B)
 解 设 A 表示第一次取出 i 个新球 i = 0，1，2，3，
 i
 B表示第二次取出3个新球
-P(B) = P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )
+P(B) = P(A )P(B | A ) + P(A )P(B | A ) + P(A )P(B | A ) + P(A )P(B | A )
 0 0 1 1 2 2 3 3
 C3C0 C3 C2C1 C3 C1C2 C3 C0C3 C3
-= 3 9  9  3 9  8  3 9  7  3 9  6 = 0.146
+= 3 9 \cdot  9 + 3 9 \cdot  8 + 3 9 \cdot  7 + 3 9 \cdot  6 = 0.146
 C3 C3 C3 C3 C3 C3 C3 C3
 12 12 12 12 12 12 12 12  -->
 
@@ -2864,9 +2900,9 @@ $$</p>
 解 设 A={仅发热病人}，B={仅干咳病人}，C={既发热又干咳病人}，
 D={无明显症状的病人}，E={得了该传染病}
 ①由全概率公式得：
-P(E) = P(A)P(E | A)  P(B)P(E | B)P(C)P(E | C)  P(D)P(E | D)
+P(E) = P(A)P(E | A) + P(B)P(E | B)+P(C)P(E | C) + P(D)P(E | D)
 500
-=  0.03 ... = 0.001593
+=  0.03 +... = 0.001593
 25000
 ②由贝叶斯公式得：
 500
@@ -2899,7 +2935,7 @@ P(A | B ) = 18 =
 P(B )P(A | B )
 由贝叶斯公式 P(B | A) = 1 1 = 0.0848．
 1 2
-
+\sum
 P(B )P(A | B )
 i i
 i=0 
@@ -2909,10 +2945,10 @@ i=0
 红球，问另一个球也是红球的概率?
 解 设 A ，A ，A 分别表示抽到第1，2，3 个盒子，B 表示第一个球是红球
 1 2 3
-P(B) = P(A )P(B | A )  P(A )P(B | A )  P(A )P(B | A )
+P(B) = P(A )P(B | A ) + P(A )P(B | A ) + P(A )P(B | A )
 1 1 2 2 3 3
 1 1 1 1 1
-= 1   0 =
+= \cdot 1+ \cdot  + \cdot 0 =
 3 3 2 3 2
 P(A )P(B | A )
 1/ 3 2
@@ -2946,7 +2982,7 @@ P(B) 1/ 2 3
 解 设 A ={第 i 枚骰子出现6点}，i = 1，2，易知 A ，A 独立，
 i 1 2
 1 1 1
-因此 P(A A )= P(A )  P(A ) =  =
+因此 P(A A )= P(A ) \cdot  P(A ) = \cdot  =
 1 2 1 2
 6 6 36
 例10 从一付52张(去掉王)的扑克牌中任意抽取一张，令 A={抽出一张 K }，
@@ -2965,7 +3001,7 @@ C1 C1 C1
 <!-- 例11 两射手同时向同一目标射击一次，其命中率分别为 0.8 和 0.6 ，
 求在一次射击中目标被击中的概率．
 解 设 A ={甲中}， B= {乙中}， C= {目标被击中}，
-解法1 P(C) = P(A \cup B) = P(A)  P(B) - P(AB)
+解法1 P(C) = P(A \cup B) = P(A) + P(B) - P(AB)
 = 0.8 + 0.6 - 0.8  0.6 = 0.92．
 解法2 用对立事件公式
 P(C) = 1- P(AB)
@@ -3024,7 +3060,7 @@ i
 ① P(A \cup A \cup...\cup A ) = 1- P(A )...P(A ) = 1- 0.996250  0.63，
 1 250
 1 2 250
-② 由 1- 0.996n  0.99  n 1150． 
+② 由 1- 0.996n \ge 0.99  n 1150． 
 
 例13 如图，1、2、3、4、5表示继电器触点， 假设
 1 4
@@ -3053,11 +3089,11 @@ P(A | A ) = P((A \cup A )  (A \cup A ))= P(A \cup A )P(A \cup A ) = (2 p - p2
 3 1 2 4 5 1 2 4 5
 由全概率公式
 1 4
-P(A) = P(A )P(A | A )  P(A )P(A | A ) L R
+P(A) = P(A )P(A | A ) + P(A )P(A | A ) L R
 3 3
 3 3
 2 5
-= 2 p2  2 p3 - 5 p4  2 p5 ． 
+= 2 p2 + 2 p3 - 5 p4 + 2 p5 ． 
 
 六个概念：随机试验、样本空间、事件、概率、条件概率、独立性
 四个公式：加法公式、乘法公式、全概率公式、贝叶斯公式
@@ -3118,31 +3154,31 @@ $$</p>
 <p>任一满足以上三个性质的函数，都可以作为某随机变量的分布函数． </p>
 </details>
 <!-- 例2 设随机变量 X 的分布函数为
-F(x) = A  overlinectan x -  < x < ，
+F(x) = A + overlinectan x - \infty < x < +\infty，
 求 A 和 B 的值．
-π
-解 由规范性知 F(-) = \lim F(x) = A -  B = 0
+\pi
+解 由规范性知 F(-\infty) = \lim F(x) = A - \cdot  B = 0
 2
-x-
-π
-F() = \lim F(x) = A   B = 1
+x\to-\infty
+\pi
+F(+\infty) = \lim F(x) = A + \cdot  B = 1
 2
-x
+x\to+\infty
 1 1
 解得 A = ， B = ．
-2 π 
+2 \pi 
 
  0， x \leq 0，
 
 例3 设某随机变量的分布函数为 F(x) = Ax2， 0 < x \leq 1，
 
-1， x  1，
+1， x > 1，
 
 求 A 及 P{0.3 < X \leq 0.7}．
 解 利用右连续性知
-\lim F(x) = F(1)，即 1 = A12，则 A = 1．
-
-x1
+\lim F(x) = F(1)，即 1 = A\cdot 12，则 A = 1．
++
+x\to1
 P\{0.3 < X \leq 0.7\}  = F(0.7) - F(0.3) = 0.72 - 0.32 = 0.4． 
  -->
 
@@ -3162,14 +3198,14 @@ P \{a &lt; X &lt; b \} = P \{X &lt; b \} - P \{X \leq a \} = F(b) - F(a) \newlin
 
 11/12， 2 \leq x < 3
 
- 1， x  3
+ 1， x \ge 3
 
-P{X  1/ 2}，P\{2 < X < 4\} ．
+P{X > 1/ 2}，P\{2 < X < 4\} ．
 2 1 1
 解 P\{X = 1\}  = F- F(1-) = - = ； P\{X \leq 3\}  = F= 1；
 3 2 6
  1   1  1 3 11 1
-P X   = 1- F  = 1- = ；P\{2 < X < 4\}  = F(4-) - F= 1- = ．
+P X >  = 1- F  = 1- = ；P\{2 < X < 4\}  = F(4-) - F= 1- = ．
  2  2  4 4 12 12  -->
 
 <p><strong>随机变量的分类</strong></p>
@@ -3221,13 +3257,13 @@ x < 3
 
 1/10， 3 \leq x < 4
 
-F(x) = P\{X \leq x\}  =  p =
+F(x) = P\{X \leq x\}  = \sum p =
 
 i
-1/10  3 /10， 4 \leq x < 5
+1/10 + 3 /10， 4 \leq x < 5
 i:x \leqx 
 i
-1/10  3 /10  6 /10， x  5
+1/10 + 3 /10 + 6 /10， x \ge 5
  
 
 3 4 5
@@ -3250,7 +3286,7 @@ F(x) = P X \leq x =
 
 1/10
 
- 1， x  5
+ 1， x \ge 5
 O 3 4 5 x 
 
 例6 已知 X 的分布函数如下，求 X 的分布律．
@@ -3262,7 +3298,7 @@ F(x) =
 
 0.5，   1 \leq x < 2，
 
-1，     x  2
+1，     x \ge 2
 
 X 0        1        2
 解
@@ -3304,14 +3340,14 @@ F(x) 是连续的
 \{ \}  \{ \}  \{ \}  \{ \} 
 从而，P a < X \leq b = P a \leq X \leq b = P a < X < b = P a \leq X < b
 b
-=  f (x)dx
+= \int f (x)dx
 a 
 
 例7 已知 P(A \cup B) = 0.8 ，P(A) = 0.3，P(B) = 0.5，则事件 A 与B 的关系
 为 (     D        )．
 (A) 事件 A 与B 相互独立； (B) 事件 A与 B 互不相容；
 (C) 事件 A与 B 对立； (D) 事件 A 与B 有可能同时发生．
-解析 由 P(A \cup B) = P(A)  P(B) - P(AB)，易得 P(AB) = 0，排除 (A)；
+解析 由 P(A \cup B) = P(A) + P(B) - P(AB)，易得 P(AB) = 0，排除 (A)；
 由于概率为 0 的事件是有可能发生的事件，因此本题答案为 (D)． 
 
 kx(1- x)， 0 < x < 1，
@@ -3319,16 +3355,16 @@ a
 
 0， 其他，
 
-求 k 的值，P\{X  0.3\} 及分布函数 F(x)．
+求 k 的值，P\{X > 0.3\} 及分布函数 F(x)．
 解 利用规范性得
-+ 0 1 
-1 =  f (x)dx =  f (x)dx   f (x)dx   f (x)dx ，
-- - 0 1
++\infty 0 1 +\infty
+1 = \int f (x)dx = \int f (x)dx + \int f (x)dx + \int f (x)dx ，
+-\infty -\infty 0 1
 1
-即  kx(1- x)dx = 1 k = 6，
+即 \int kx(1- x)dx = 1 k = 6，
 0
-\{ \}   1
-P X  0.3 =  f (x)dx =  6x(1- x)dx = 0.784．
+\{ \}  +\infty 1
+P X > 0.3 = \int f (x)dx = \int 6x(1- x)dx = 0.784．
 0.3 0.3 
 
 kx(1- x)， 0 < x < 1，
@@ -3336,35 +3372,35 @@ P X  0.3 =  f (x)dx =  6x(1- x)dx = 0.784．
 
 0， 其他，
 
-求 k 的值，P\{X  0.3\} 及分布函数 F(x)．
+求 k 的值，P\{X > 0.3\} 及分布函数 F(x)．
 x
 x \leq 0
-  0dt ，
--
+ \int 0dt ，
+-\infty
 
 x 0 x
-F(x) =  f (t)dt =   0dt  6t(1- t)dt ， 0 < x < 1
-- - 0
+F(x) = \int f (t)dt =  \int 0dt +\int 6t(1- t)dt ， 0 < x < 1
+-\infty -\infty 0
 
 0 1 x
-  0dt  6t(1- t)dt  0dt ， x 1
-- 0 1 
+ \int 0dt +\int 6t(1- t)dt +\int 0dt ， x \ge1
+-\infty 0 1 
 
 kx(1- x)， 0 < x < 1，
 例8 设连续型随机变量 X 的概率密度函数为 f (x) =
 
 0， 其他，
 
-求 k 的值，P\{X  0.3\} 及分布函数 F(x)．
+求 k 的值，P\{X > 0.3\} 及分布函数 F(x)．
 0， x \leq 0
 
 
 x
 3x2 - 2x3 ， 0 < x < 1
-F(x) =  f (t)dt = 
--
+F(x) = \int f (t)dt = 
+-\infty
 
- 1， x 1
+ 1， x \ge1
 注 概率密度函数 分布函数 
  -->
 
@@ -3377,36 +3413,36 @@ p
 1 2 5
 Y
 则 2 的分布律为：
-Y = X 1
+Y = X +1
 p
 0.3 0.3 0.4 
 
-引例 设连续型随机变量 X 的概率密度函数为 f (x)，试求 Y = aX  b
+引例 设连续型随机变量 X 的概率密度函数为 f (x)，试求 Y = aX + b
 X
 (a  0) 的概率密度函数 f (y)．
 Y
 解 先求 Y 分布函数F (y)，
 Y
-F (y) = P\{Y \leq y\}  = P\{aX  b \leq y\}  = P\{aX \leq y - b\} ，
+F (y) = P\{Y \leq y\}  = P\{aX + b \leq y\}  = P\{aX \leq y - b\} ，
 Y
  y - b  y-b
-当a  0时，F (y) = P X \leq  =  a f (x)dx ，
-Y  a  - X
+当a > 0时，F (y) = P X \leq  = \int a f (x)dx ，
+Y  a  -\infty X
 1  y - b 
 因此 f ( y) = F(y) = f ，
  
 Y Y X
 a  a  
 
-引例 设连续型随机变量 X 的概率密度函数为 f (x)，试求 Y = aX  b
+引例 设连续型随机变量 X 的概率密度函数为 f (x)，试求 Y = aX + b
 X
 (a  0) 的概率密度函数 f (y)．
 Y
  y - b   y - b  y-b
-当 a < 0 时，F (y) = P X   =1- P X < = 1-  a f (x)dx ，
-Y  a   a  - X
+当 a < 0 时，F (y) = P X \ge  =1- P X < = 1- \int a f (x)dx ，
+Y  a   a  -\infty X
 1  y - b  1  y - b 
-因此 f (y) = F(y) = - f ， 当 a  0时，f (y) = f ，
+因此 f (y) = F(y) = - f ， 当 a > 0时，f (y) = f ，
    
 Y Y X Y X
 a  a  a  a 
@@ -3416,667 +3452,639 @@ a  a  a  a 
 Y X
 a  a   -->
 
-<p>定理 设连续型随机变量 X 的概率密度函数为 f (x)，又设 y = g(x)
-X
-是处处可导的单调函数，则 Y = g(X ) 是连续型随机变量，且 Y 的概
-率密度函数为：
- f h(y) h(y) ， α &lt; y &lt; β
-f (y) = X
-
-Y
-0， 其它
-
-其中 x = h(y) 是 y = g(x) 的反函数，α 是 y = g(x) 的最小值，
-β 是 y = g(x) 的最大值．(证明略) </p>
-<p>λe-λx， x  0
-例2 设 X \sim f (x) = (λ  0)，求 Y = eX 的概率密度函数 f (y)．
+<p><mark class="critic">连续型随机变量函数的分布</mark></p>
+<p><strong>定理</strong> 设连续型随机变量 <span class="arithmatex">\(X\)</span> 的概率密度函数为 <span class="arithmatex">\(f_X (x)\)</span>，又设 <span class="arithmatex">\(y = g(x)\)</span> 是处处可导的单调函数，则 <span class="arithmatex">\(Y = g(X )\)</span> 是连续型随机变量，且 Y 的概率密度函数为：</p>
+<div class="arithmatex">\[
+f(x) = 
+\begin{cases}
+f_X \large (h(y) \large ) \cdot | h'(y) |, &amp; \alpha &lt; y &lt; \beta \\
+0, &amp; \text{其他 }
+\end{cases}
+\]</div>
+<p>其中 <span class="arithmatex">\(x = h(y)\)</span> 是 <span class="arithmatex">\(y = g(x)\)</span> 的反函数，<span class="arithmatex">\(\alpha\)</span> 是 <span class="arithmatex">\(y = g(x)\)</span> 的最小值，<span class="arithmatex">\(\beta\)</span> 是 <span class="arithmatex">\(y = g(x)\)</span> 的最大值.</p>
+<!-- \lambdae-\lambdax， x \ge 0
+例2 设 X \sim f (x) = (\lambda > 0)，求 Y = eX 的概率密度函数 f (y)．
 
 X Y
-0， x &lt; 0
+0， x < 0
 
 解法一 y = ex 的反函数是 x = ln y ，
 1
-反函数 x 对 y 的导数为 ，又由 x  0  y = ex  1，
+反函数 x 对 y 的导数为 ，又由 x \ge 0  y = ex \ge 1，
 y
  1
- λe-λln y ， y  1， λy-(1λ) ， y  1，
+ \lambdae-\lambdaln y ， y \ge 1， \lambday-(1+\lambda) ， y \ge 1，
 因此 f (y) = y 则 f ( y) =
  
 Y Y
-0， y &lt; 1．
+0， y < 1．
  
-0， y &lt; 1，
- </p>
-<p>λe-λx， x  0
-例2 设 X \sim f (x) = (λ  0)，求 Y = eX 的概率密度函数 f (y)．
+0， y < 1，
+ 
+
+\lambdae-\lambdax， x \ge 0
+例2 设 X \sim f (x) = (\lambda > 0)，求 Y = eX 的概率密度函数 f (y)．
 
 X Y
-0， x &lt; 0
+0， x < 0
 
 解法二 先求 Y 分布函数F (y)，
 Y
-{ } 
-F (y) = P{Y \leq y}  = P eX \leq y ， 由 X  0得，Y = eX 1，
+\{ \} 
+F (y) = P\{Y \leq y\}  = P eX \leq y ， 由 X > 0得，Y = eX >1，
 Y
-{ } 
-当 y &lt; 1 时，F (y) = P eX \leq y = 0，
+\{ \} 
+当 y < 1 时，F (y) = P eX \leq y = 0，
 Y
 ln y
-{ } 
-当 y  1 时， F (y) = P eX \leq y = P{X \leq ln y}  =  λe-λxdx = 1- y-λ ，
+\{ \} 
+当 y \ge 1 时， F (y) = P eX \leq y = P\{X \leq ln y\}  = \int \lambdae-\lambdaxdx = 1- y-\lambda ，
 Y
 0
-λy-(1λ) ， y 1，
+\lambday-(1+\lambda) ， y \ge1，
 则 f ( y) =
 
 Y
-0， y &lt; 1．
- </p>
-<p>1- | x |， -1 &lt; x &lt; 1，
-例3 设 X\sim f (x) = 求随机变量Y = X 2 1 的分布
+0， y < 1．
+ 
+
+1- | x |， -1 < x < 1，
+例3 设 X\sim f (x) = 求随机变量Y = X 2 +1 的分布
 
 X 0， 其它，
 
 函数与概率密度函数．
 解 X 的取值范围为 (-1，1) ，则 Y 的取值范围为 [1，2) ，
-当 y &lt; 1 时，F (y) = P{Y \leq y}  = 0； 当 y  2 时，F ( y) = P{Y \leq y}  = 1；
+当 y < 1 时，F (y) = P\{Y \leq y\}  = 0； 当 y \ge 2 时，F ( y) = P\{Y \leq y\}  = 1；
 Y Y
-{ }  { } 
-当1 \leq y &lt; 2 时，F (y) = P{Y \leq y}  = P X 2 1 \leq y = P - y -1 \leq X \leq y -1
+\{ \}  \{ \} 
+当1 \leq y < 2 时，F (y) = P\{Y \leq y\}  = P X 2 +1 \leq y = P - y -1 \leq X \leq y -1
 Y
 y-1  2
-=  (1- | x |)dx = 1- 1- y -1 ．
-- y-1 </p>
-<p>1- | x |， -1 &lt; x &lt; 1，
-例3 设 X\sim f (x) = 求随机变量Y = X 2 1 的分布
+= \int (1- | x |)dx = 1- 1- y -1 ．
+- y-1 
+
+1- | x |， -1 < x < 1，
+例3 设 X\sim f (x) = 求随机变量Y = X 2 +1 的分布
 
 X 0， 其它，
 
 函数与概率密度函数．
- 0， y &lt;1
+ 0， y <1
 
   2
-综上知，Y 的分布函数 F (y) = 1- 1- y -1 ， 1\leq y &lt; 2
+综上知，Y 的分布函数 F (y) = 1- 1- y -1 ， 1\leq y < 2
 Y
 
 分段点处的导
-1， y  2
+1， y \ge 2
 
 
 数按定义求！
  1
--1， 1&lt; y &lt; 2，
+-1， 1< y < 2，
 
 所以Y 的密度函数为 f (y) =  y -1
 Y
 
 0， 其它．
- </p>
+  -->
+
 <h3 id="24">2.4 二维随机变量及其分布</h3>
-<p>本节主要内容
-一、二维随机变量的概念
-二、二维离散型随机变量
-三、二维连续型随机变量 </p>
-<p>定义 设 X ，Y 是两个随机变量，则由它们构成的二维向量 (X ，Y ) 称
-为二维随机变量． y
-(x，y)
-联合分布函数
-O x
-1) 定义 设 (X ，Y )是二维随机变量，\forall x ，y \in \R，称二元函数
-F(x，y) = P{X \leq x，Y \leq y} 为(X ，Y ) 的联合分布函数．
-注 ①几何意义：(X ，Y )落在点 (x，y) 的左下方无穷矩形域内的概率．
-② P{x &lt; X \leq x ，y &lt; Y \leq y } = F(x ，y ) - F(x ，y ) - F(x ，y )  F(x ，y )．
-1 2 1 2 2 2 1 2 2 1 1 1 </p>
-<p>2) 性质 F(x ，y) = P{X \leq x ，Y \leq y} 
-① F(x，y) 关于 x，y 具有单调非降性；
-② F(， ) = 1，F(-，- ) = 0，F(x，- ) = 0，F(-，y) = 0；
-③ F(x，y) 关于 x，y 具有右连续性；
-x &lt; x ，y &lt; y
-④ 对任意 均有
-1 2 1 2
-F(x ，y ) - F(x ，y ) - F(x ，y )  F(x ，y )  0．
-2 2 1 2 2 1 1 1
-3) 边缘分布函数
-F (x) = P{X \leq x} = F(x， )；F (y) = F(，y)．
-X Y </p>
-<p>定义 若 (X ，Y ) 的全部可能取值只有有限多对或可列多对，则称
-(X ，Y ) 是二维离散型随机变量，而称
-{ } 
-P X = x ，Y = y = p (i，j = 1，2，...)
-i j ij
-为二维离散型随机变量 (X ，Y ) 的联合分布律．
-性质 p  0， i，j = 1，2，...；  p = 1．
-ij ij
-i j
-边缘分布律
-P{X = x }  =  p = p ； P{Y = y }  =  p = p ；
-i ij i j ij  j
-j i </p>
-<p>(X ，Y )的联合分布律通常用如下表格给出：
-Y
-y
-y ... y ...
-1
-X 2 j
-x p p ... p ...
-1 11 12 1j
-x p p ... p ...
-2 21 22 2 j
- ... ... ... ... ...
-p p p ...
-x ...
-i1 i2 ij
-i
-... ... ... ... ...
- </p>
-<p>联合分布律的行或列相加即得边缘分布律
-Y
-{ } 
-P X = x = p
-y
-y ... y ... i i
-1
-X 2 j
-x p p ... p ... p
-1 11 12 1j 1
-x p p ... p ... p
-2 21 22 2 j 2
- ... ... ... ... ... 
-p p p ... p
-x ...
-i1 i2 ij i
-i
-... ... ... ... ...
-
-
-P{Y = y }  = p p p ... p ... =1
-1 2  j
-j  j </p>
-<p>例1 设 X 在 1，2，3，4 中等可能取一值，Y 在1 \sim X 中等可能取一整数值，
+<p><mark class="critic">二维随机变量</mark></p>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X，Y\)</span> 是两个随机变量，则由它们构成的二维向量 <span class="arithmatex">\((X ，Y )\)</span> 称为二维随机变量． </p>
+<p><strong>联合分布函数</strong> 设 <span class="arithmatex">\((X ，Y )\)</span>是二维随机变量，<span class="arithmatex">\(\forall x ，y \in \R\)</span>，称二元函数 <span class="arithmatex">\(F(x，y) = P\{X \leq x，Y \leq y\}\)</span> 为<span class="arithmatex">\((X ，Y )\)</span> 的联合分布函数．</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p><a class="glightbox" href="https://s2.loli.net/2025/05/07/dsQHW8p4kBMDfKZ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="几何意义.png" src="https://s2.loli.net/2025/05/07/dsQHW8p4kBMDfKZ.png" /></a></p>
+<ul>
+<li><strong>几何意义：</strong> <span class="arithmatex">\((X ，Y )\)</span>落在点 <span class="arithmatex">\((x，y)\)</span> 的左下方无穷矩形域内的概率．</li>
+<li><span class="arithmatex">\(P\{x_1 &lt; X \leq x_2 ，y_1 &lt; Y \leq y_2 \} = F(x_2 ，y_2 ) - F(x_1 ，y_2 ) - F(x_2 ，y_1) + F(x_1 ，y_1 )\)</span>．</li>
+</ul>
+</details>
+<p><strong>性质</strong> </p>
+<ul>
+<li><span class="arithmatex">\(F(x，y)\)</span> 关于 <span class="arithmatex">\(x，y\)</span> 具有单调不减性；</li>
+<li><span class="arithmatex">\(F(+ \infty，+ \infty) = 1，F(-\infty，- \infty) = 0，F(x，- \infty) = 0，F(-\infty，y) = 0\)</span></li>
+<li><span class="arithmatex">\(F(x，y)\)</span> 关于 <span class="arithmatex">\(x，y\)</span> 具有右连续性；</li>
+<li>对<span class="arithmatex">\(\forall x_1 &lt; x_2 ，y_1 &lt; y_2\)</span>均有 <span class="arithmatex">\(F(x_2 ，y_2 ) - F(x_1 ，y_2 ) - F(x_2 ，y_1 ) + F(x_1 ，y_1 ) \ge 0\)</span></li>
+</ul>
+<p><strong>边缘分布函数</strong> </p>
+<div class="arithmatex">\[
+F_X (x) = P\{X \leq x\} = F(x，+ \infty) \\
+F_Y (y) = F(+\infty，y)
+\]</div>
+<p><mark class="critic">二维离散型随机变量</mark></p>
+<p><strong>定义</strong> 若 <span class="arithmatex">\((X ，Y )\)</span> 的全部可能取值只有有限多对或可列多对，则称<span class="arithmatex">\((X ，Y )\)</span> 是二维离散型随机变量，而称 <span class="arithmatex">\(P \{X = x_i ，Y = y_j \} = p_{ij} (i，j = 1，2，...)\)</span> 为二维离散型随机变量 <span class="arithmatex">\((X ，Y )\)</span> 的联合分布律．</p>
+<p><strong>性质</strong> </p>
+<ul>
+<li><span class="arithmatex">\(p \ge 0， i，j = 1，2，...\)</span></li>
+<li><span class="arithmatex">\(\sum _i \sum _j p_{ij} = 1\)</span></li>
+</ul>
+<p><strong>边缘分布律</strong></p>
+<ul>
+<li><span class="arithmatex">\(P\{X = x_i \}  = \sum _j p_{ij} = p_i\)</span></li>
+<li><span class="arithmatex">\(P\{Y = y_j \}  = \sum _i p_{ij} = p_j\)</span></li>
+</ul>
+<p><span class="arithmatex">\((X ，Y )\)</span>的联合分布律通常用如下表格给出：</p>
+<div class="arithmatex">\[
+\begin{array}{c|ccccc}
+X \backslash Y &amp; y_1 &amp; y_2 &amp; \cdots &amp; y_j &amp; \cdots \\
+\hline
+x_1 &amp; p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1j} &amp; \cdots \\
+x_2 &amp; p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2j} &amp; \cdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+x_i &amp; p_{31} &amp; p_{32} &amp; \cdots &amp; p_{3j} &amp; \cdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+\end{array}
+\]</div>
+<p>联合分布律的行或列相加即得边缘分布律：</p>
+<div class="arithmatex">\[
+\begin{array}{c|ccccc|c}
+X \backslash Y &amp; y_1 &amp; y_2 &amp; \cdots &amp; y_j &amp; \cdots &amp; P \{X= x_i \} = p_{i \cdot} \\
+\hline
+x_1 &amp; p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1j} &amp; \cdots &amp; p_{1 \cdot} \\
+x_2 &amp; p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2j} &amp; \cdots &amp; p_{2 \cdot} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+x_i &amp; p_{31} &amp; p_{32} &amp; \cdots &amp; p_{3j} &amp; \cdots &amp; p_{i \cdot} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+\hline
+P \{Y= y_j \} = p_j &amp; p_{\cdot 1} &amp; p_{\cdot 2} &amp; \cdots &amp; p_{\cdot j} &amp; \cdots &amp; 1 \\
+\end{array}
+\]</div>
+<!-- 例1 设 X 在 1，2，3，4 中等可能取一值，Y 在1 \sim X 中等可能取一整数值，
 求 (X ，Y )的联合分布律及 X ，Y 的边缘分布律．
 Y p
-1 2 3 4 i
+1 2 3 4 i\cdot 
 X
 解
 1 1
-1 1 0 0 0
+1 \cdot 1 0 0 0
 P{X =1，Y =1} =
 4 4
 1 1 1 1 1 P{X =1}P{Y =1| X =1}
-2   0 0
+2 \cdot  \cdot  0 0
 4 2 4 2 4
 1 1 1 1 1 1 1
-3    0
+3 \cdot  \cdot  \cdot  0
 4 3 4 3 4 3 4
 1 1 1 1 1 1 1 1 1
-4    
+4 \cdot  \cdot  \cdot  \cdot 
 4 4 4 4 4 4 4 4 4
-p 25 13 7 3 
+p 25 13 7 3 \sum
 =1
- j
-48 48 48 48 </p>
-<p>定义 设 (X ，Y ) \sim F(x，y)，若存在一个非负可积的函数 f (x，y)，
-使 \forall (x，y)\in \R2，有
-x y
-F(x，y) =   f (u，v)dvdu
-- -
-则称 (X ，Y )为二维连续型随机变量， f (x，y) 称为 (X ，Y ) 的联合概率
-密度函数． </p>
-<p>x y
- f (x，y) 的性质 F(x，y) =   f (u，v)dvdu
-- -
- 
-非负性：f (x，y)  0； (2)规范性：   f (x，y)dxdy = 1；
-- -
-2F(x，y)
-若 f (x，y)在点 (x，y) 连续，则 = f (x，y)；
-xy
-P{(X ，Y )\in D}  =  f (x，y)dxdy ．
-求和
-D
-边缘密度函数 
-x   
-由 F (x) = F(x， ) =   f (u，v)dv du，
+\cdot  j
+48 48 48 48  -->
+
+<p><mark class="critic">二维连续型随机变量</mark></p>
+<p><strong>定义</strong> 设 <span class="arithmatex">\((X ，Y ) \sim F(x，y)\)</span>，若存在一个非负可积的函数 <span class="arithmatex">\(f (x，y)\)</span>，使 \forall (x，y) \in \R2，有 <span class="arithmatex">\(F(x，y) = \int _{- \infty} ^x \int _{- \infty} ^y f (u，v)dvdu\)</span>，则称 <span class="arithmatex">\((X ，Y )\)</span>为二维连续型随机变量， <span class="arithmatex">\(f (x，y)\)</span> 称为 <span class="arithmatex">\((X ，Y )\)</span> 的联合概率密度函数． </p>
+<p><span class="arithmatex">\(f (x，y)\)</span> 的性质:</p>
+<ul>
+<li>非负性 $f (x，y) \ge 0</li>
+<li>规范性 <span class="arithmatex">\(\int _{- \infty} ^{+ \infty} \int _{- \infty} ^{+ \infty} f (x，y)dxdy = 1\)</span></li>
+<li>若 <span class="arithmatex">\(f (x，y)\)</span>在点 <span class="arithmatex">\((x，y)\)</span> 连续，则 <span class="arithmatex">\(\frac{\partial ^2 F(x,y)}{\partial x \partial y} = f (x，y)\)</span></li>
+<li><span class="arithmatex">\(P \{(X,Y) \in D \} = \iint _D f(x,y) dx dy\)</span></li>
+</ul>
+<p>边缘密度函数:</p>
+<ul>
+<li><span class="arithmatex">\(F_X (x) = \int _{- \infty} ^{+ \infty} f (x,y) dy\)</span></li>
+<li><span class="arithmatex">\(F_Y (y) = \int _{- \infty} ^{+ \infty} f (x,y) dx\)</span></li>
+</ul>
+<!-- x  +\infty 
+由 F (x) = F(x，+ \infty) = \int \int f (u，v)dv du，
 X  
-- -
-
- 
-f (x) =  f (x，v)dv =  f (x，y)dy；
+-\infty -\infty
+\int
++\infty +\infty
+f (x) = \int f (x，v)dv = \int f (x，y)dy；
 求导得
 X
-- -
-
-同理 f (y) =  f (x，y)dx ．
+-\infty -\infty
++\infty
+同理 f (y) = \int f (x，y)dx ．
 Y
-- </p>
-<p>Ce-2(xy)， x  0，y  0，
+-\infty 
+
+Ce-2(x+y)， x > 0，y > 0，
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
 求：①常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
+② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
 解 ① 由规范性
 C
-   
-1=   f (x，y)dxdy =   Ce-2(xy)dxdy = ．
++\infty +\infty +\infty +\infty
+1= \int \int f (x，y)dxdy = \int \int Ce-2(x+y)dxdy = ．
 4
-- - 0 0
-所以 C = 4． </p>
-<p>Ce-2(xy)， x  0，y  0，
+-\infty -\infty 0 0
+所以 C = 4． 
+
+Ce-2(x+y)， x > 0，y > 0，
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
 求：①常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
+② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
  x y
-x y   4e-2(uv)dvdu， x  0，y  0
-F(x，y) =   f (u，v)dvdu =
+x y \int \int 4e-2(u+v)dvdu， x > 0，y > 0
+F(x，y) = \int \int f (u，v)dvdu =
  0 0
-- -
+-\infty -\infty
  0， 其它
 
-(1- e-2x)(1- e-2y)， x  0，y  0，
+(1- e-2x)(1- e-2y)， x > 0，y > 0，
 因此 F(x，y) =
 
 0， 其它，
- </p>
-<p>Ce-2(xy)， x  0，y  0，
+ 
+
+Ce-2(x+y)， x > 0，y > 0，
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
 求：①常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
- 
-  4e-2(xy)dy， x  0，
-f (x) =  f (x，y)dy
+② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
+ +\infty
++\infty \int 4e-2(x+y)dy， x > 0，
+f (x) = \int f (x，y)dy
 =
  0
 X
--
+-\infty
  0， 其它，
 
-2e-2x， x  0， 2e-2y， y  0，
+2e-2x， x > 0， 2e-2y， y > 0，
 因此 f (x) =  同理 f (y) = 
 X Y
 0， 其它， 0， 其它 ．
-  </p>
-<p>Ce-2(xy)， x  0，y  0，
+  
+
+Ce-2(x+y)， x > 0，y > 0，
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
 求：①常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P{(X ，Y )\in D} ，D由 x = 0，y = 0，x  y = 1 围成．
-② P{(X ，Y )\in D}  =  f (x，y)dxdy y
+② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
+② P\{(X ，Y )\in D\}  = \int\int f (x，y)dxdy y
 D
-x  y =1
+x + y =1
 1 1-x
-=  dx 4e-2(xy)dy = 1- 3e-2．
+= \int dx\int 4e-2(x+y)dy = 1- 3e-2．
 0 0
-O x </p>
-<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+O x 
+
+4xy， 0 < x < 1，0 < y < 1，
 例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它，
 
  1 1 
-求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
 ②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
  1 1  1 1 15
 1 1
-解 ① P 0 &lt; X &lt; ， &lt; Y &lt; 1 =  2  4xy dydx =  2 2xdx 2y dy = ，
+解 ① P 0 < X < ， < Y < 1 = \int 2 \int 4xy dydx = \int 2 2xdx\int 2y dy = ，
 1 1
  2 4  0 0 64
 4 4
 y
 1
 1 y
-{ } 
-P X &lt; Y =  4xy dxdy =  2ydy 2xdx = ， 1
+\{ \} 
+P X < Y = \int\int 4xy dxdy = \int 2ydy\int 2xdx = ， 1
 0 0 2
 D
 x
-O 1 </p>
-<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+O 1 
+
+4xy， 0 < x < 1，0 < y < 1，
 例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它，
 
  1 1 
-求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
 ②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
-
-② f (x) =  f (x，y)dy，当 x \leq 0 或 x 1 时，由于 f (x，y) = 0，得 f (x) = 0
++\infty
+② f (x) = \int f (x，y)dy，当 x \leq 0 或 x \ge1 时，由于 f (x，y) = 0，得 f (x) = 0
 X X
--
+-\infty
 1
-当 0 &lt; x &lt; 1 时， f (x) =  4xy dy = 2x，
+当 0 < x < 1 时， f (x) = \int 4xy dy = 2x，
 X
 0
-2x， 0 &lt; x &lt;1， 2y， 0 &lt; y &lt; 1，
+2x， 0 < x <1， 2y， 0 < y < 1，
 综上 f (x) =  同理 f (y) =
 
 X  0， 其它， Y 0， 其它，
- </p>
-<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+ 
+
+4xy， 0 < x < 1，0 < y < 1，
 例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它，
 
  1 1 
-求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
 ②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
 当 x \leq 0 或 y \leq 0 时， 有 F(x，y) = 0， x y
-F(x，y) =   f (u，v)dvdu
-- -
-当0 &lt; x &lt; 1且 0 &lt; y &lt; 1时，
+F(x，y) = \int \int f (u，v)dvdu
+-\infty -\infty
+当0 < x < 1且 0 < y < 1时，
 x y x y
-F(x，y) =   f (u，v)dvdu =   4uvdvdu = x2 y2，
-- - 0 0 </p>
-<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+F(x，y) = \int \int f (u，v)dvdu = \int \int 4uvdvdu = x2 y2，
+-\infty -\infty 0 0 
+
+4xy， 0 < x < 1，0 < y < 1，
 例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它，
 
  1 1 
-求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
 ②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
 x y x 1
-当0 &lt; x &lt; 1且 y  1 时，F(x，y) =   f (u，v)dvdu =   4uvdvdu = x2，
-- - 0 0
+当0 < x < 1且 y \ge 1 时，F(x，y) = \int \int f (u，v)dvdu = \int \int 4uvdvdu = x2，
+-\infty -\infty 0 0
 x y 1 y
-当 x  1 且 0 &lt; y &lt; 1 时，F(x，y) =   f (u，v)dvdu =   4uvdvdu = y2，
-- - 0 0
+当 x \ge 1 且 0 < y < 1 时，F(x，y) = \int \int f (u，v)dvdu = \int \int 4uvdvdu = y2，
+-\infty -\infty 0 0
 x y 1 1
-当 x  1 且 y  1 时， F(x，y) =   f (u，v)dvdu =   4uvdvdu = 1，
-- - 0 0 </p>
-<p>4xy， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+当 x \ge 1 且 y \ge 1 时， F(x，y) = \int \int f (u，v)dvdu = \int \int 4uvdvdu = 1，
+-\infty -\infty 0 0 
+
+4xy， 0 < x < 1，0 < y < 1，
 例3 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它，
 
  1 1 
-求：① 求 P 0 &lt; X &lt; ， &lt; Y &lt; 1 及P{X &lt; Y} ．
+求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
 ②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
  0， x \leq 0 或 y \leq 0，
 
-x2 y2， 0 &lt; x &lt; 1，0 &lt; y &lt; 1，
+x2 y2， 0 < x < 1，0 < y < 1，
 
 
-综上 F(x，y) = x2， 0 &lt; x &lt; 1，y  1，
+综上 F(x，y) = x2， 0 < x < 1，y \ge 1，
 
 
-y2， x  1，0 &lt; y &lt; 1，
+y2， x \ge 1，0 < y < 1，
 
- 1， x  1，y  1．
- </p>
+ 1， x \ge 1，y \ge 1．
+  -->
+
 <h3 id="25">2.5 随机变量的相互独立性</h3>
-<p>本节主要内容
-一、随机变量的相互独立性
-二、两个随机变量函数的分布
-三、条件分布 </p>
-<p>定义 设 (X ，Y ) 是二维随机变量，若 \forall (x，y)\in \R2，有
-P{X \leq x，Y \leq y}  = P{X \leq x} P{Y \leq y} ，
-即 F(x，y) = F (x)F ( y)，则称 X 与 Y 相互独立．
-X Y
-特别地，
-对离散型随机变量：X 与Y 相互独立 p = p p \forall i，j
-ij i  j
-对连续型随机变量：X 与Y 相互独立 f (x，y) = f (x) f ( y)．
-X Y </p>
-<p>2e-(2xy) x  0，y  0
+<p><strong>定义</strong> 设 <span class="arithmatex">\((X ，Y )\)</span> 是二维随机变量，若 <span class="arithmatex">\(\forall (x，y) \in \R ^2\)</span>，有 <span class="arithmatex">\(P\{X \leq x，Y \leq y \}  = P\{X \leq x\} P\{Y \leq y\}\)</span> ，即 <span class="arithmatex">\(F(x，y) = F_X (x)F_Y ( y)\)</span>，则称 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 相互独立．</p>
+<p>特别地，</p>
+<ul>
+<li>对离散型随机变量：<span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 相互独立 <span class="arithmatex">\(\Longleftrightarrow p_{ij} = p_i p_j, \forall i，j\)</span></li>
+<li>对连续型随机变量：<span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 相互独立 <span class="arithmatex">\(\Longleftrightarrow f (x，y) = f_X (x) f_Y ( y)\)</span></li>
+</ul>
+<!-- 2e-(2x+y) x > 0，y > 0
 例1 (X ，Y ) \sim f (x，y) =  判断 X 与 Y 是否相互独立．
 0 其它
 
- 
-  2e-(2xy)dy = 2e-2x， x  0，
-解 f (x) =  f (x，y)dy =
+ +\infty
++\infty \int 2e-(2x+y)dy = 2e-2x， x > 0，
+解 f (x) = \int f (x，y)dy =
  0
 X
--
+-\infty
  0， 其它，
 
- 
- 2e-(2xy)dx = e-y， y  0，
-
-f (y) =  f (x，y)dx =
+ +\infty
+\int 2e-(2x+y)dx = e-y， y > 0，
++\infty
+f (y) = \int f (x，y)dx =
  0
 Y
--
+-\infty
  0， 其它，
 
 因为 f (x，y) = f (x) f ( y)，所以 X 与 Y 相互独立．
-X Y </p>
-<p>Y 1 2 3
+X Y 
+
+Y 1 2 3
 X
 例2 设 (X ，Y ) \sim
 1 1/8 a 1/24
 2 b 1/4 1/8
 求 ① a,ab，b 满足的条件；② 若 X 与 Y 独立，求 a，b 的值．
-{ a  0
-解 ①由分布律的非负性和规范性知 b  0
+\{ a \ge 0
+解 ①由分布律的非负性和规范性知 b \ge 0
 11
-a  b =
-24 </p>
-<p>Y 1 2 3
+a + b =
+24 
+
+Y 1 2 3
 X
 例2 设 (X ，Y ) \sim
 1 1/8 a 1/24
 2 b 1/4 1/8
 求 ① a,ab，b 满足的条件；② 若 X 与 Y 独立，求 a，b 的值．
 ② 由 X 与 Y 独立，得 p = p p ， \forall i，j，从而有
-ij i  j
+ij i\cdot  \cdot  j
  11  1
-a  b = a =
+a + b = a =
  
  24  12
 
  
 1  3  1 3
-  b =  b =
+ + b =  b =
  
 
-6  8  8  8 </p>
-<p>注 ① 独立性的概念可推广到n个随机变量的情形，且若 X ，X ，...，X
-1 2 n
-是相互独立的随机变量，则随机变量的函数 f (X )，f (X )，...，f (X )
-1 1 2 2 n n
-也是相互独立的；
-② 随机变量的相互独立性是事件独立性的扩充，常可由试验的
-独立性来判定随机变量的独立性． </p>
-<p>离散型
+6  8  8  8  -->
+
+<details class="note" open="open">
+<summary>Note</summary>
+<ul>
+<li>独立性的概念可推广到<span class="arithmatex">\(n\)</span>个随机变量的情形，且若 <span class="arithmatex">\(X_1 ，X_2 ，...，X_n\)</span>是相互独立的随机变量，则随机变量的函数 <span class="arithmatex">\(f_1 (X_1 )，f_2 (X_2 )，...，f_n (X_n )\)</span>也是相互独立的</li>
+<li>随机变量的相互独立性是事件独立性的扩充，常可由试验的独立性来判定随机变量的独立性</li>
+</ul>
+</details>
+<p><mark class="critic">两个随机变量的函数分布</mark></p>
+<!-- 离散型
  -1 1 
 例3 设 X ，Y 的分布律均为 ，且 X 与 Y 相互独立，
  
 1/ 2 1/ 2
  
 求：① (X ，Y ) 的联合分布律；
-② Z = X  Y 的分布律；
-③ P{X = Y} ． </p>
-<p>解 ① 由 X 与 Y 相互独立，p = p p ， 则 (X ，Y )的联合分布律为
-ij i  j
+② Z = X + Y 的分布律；
+③ P\{X = Y\} ． 
+
+解 ① 由 X 与 Y 相互独立，p = p p ， 则 (X ，Y )的联合分布律为
+ij i\cdot  \cdot  j
 Y
 -1 1
 X
 1 1 1 1
--1  
+-1 \cdot  \cdot 
 2 2 2 2
 1 1 1 1 1
- 
+\cdot  \cdot 
 2 2 2 2
 ② 的分布律为
-Z = X  Y
+Z = X + Y
 Z -2 0 2
 p 1/ 4 1/ 2 1/ 4
 1
-③ P{X = Y}  = P{X = -1，Y = -1}   P{X = 1，Y =1}  = ．
-2 </p>
-<p>连续型 引例 设二维连续型随机变量(X ，Y ) 的联合概率密度为
-f (x，y)，求 Z = X  Y 的概率密度函数 f (z)．
+③ P\{X = Y\}  = P\{X = -1，Y = -1\}  + P\{X = 1，Y =1\}  = ．
+2 
+
+连续型 引例 设二维连续型随机变量(X ，Y ) 的联合概率密度为
+f (x，y)，求 Z = X + Y 的概率密度函数 f (z)．
 Z
-解 F (z) = P{Z \leq z}  = P{X  Y \leq z}  =  f (x，y)dxdy
+解 F (z) = P\{Z \leq z\}  = P\{X + Y \leq z\}  = \int\int f (x，y)dxdy
 Z
-xy\leqz
- z-x  z
-=  dx f (x，y)dy =  dx f (x，t - x)dt t = y  x
-- - - -
-z  y
-=  [ f (x，t - x)dx] dt 交换积分顺序
-- -
-x  y = z
-
-两边对 z 求导得 f (z) =  f (x，z - x)dx；
+x+y\leqz
++\infty z-x +\infty z
+= \int dx\int f (x，y)dy = \int dx\int f (x，t - x)dt t = y + x
+-\infty -\infty -\infty -\infty
+z +\infty y
+= \int [\int f (x，t - x)dx] dt 交换积分顺序
+-\infty -\infty
+x + y = z
++\infty
+两边对 z 求导得 f (z) = \int f (x，z - x)dx；
 Z
--
-
-同理可得 f (z) =  f (z - y，y)dy ． o x
+-\infty
++\infty
+同理可得 f (z) = \int f (z - y，y)dy ． o x
 Z
-- </p>
-<p>特别地，当 X 与 Y 相互独立时，有
- 
-f (z) =  f (x，z - x)dx =  f (x) f (z - x)dx
+-\infty 
+
+特别地，当 X 与 Y 相互独立时，有
++\infty +\infty
+f (z) = \int f (x，z - x)dx = \int f (x) f (z - x)dx
 Z X Y
-- -
- 
-=  f (z - y，y)dy =  f (z - y) f (y)dy
+-\infty -\infty
++\infty +\infty
+= \int f (z - y，y)dy = \int f (z - y) f (y)dy
 X Y
-- -
+-\infty -\infty
 这两个积分即是函数 f (x) 与 f (y) 的卷积．
-X Y </p>
-<p>例4 已知 X 与 Y 相互独立，它们概率密度函数分别为
-2x， 0 \leq x \leq 1， e-y， y  0，
+X Y 
+
+例4 已知 X 与 Y 相互独立，它们概率密度函数分别为
+2x， 0 \leq x \leq 1， e-y， y \ge 0，
 f (x) = f (y) =
  
-X 0， 其它， Y 0， y &lt; 0，
+X 0， 其它， Y 0， y < 0，
  
 求 Z = X + Y 的概率密度函数．
- 
-解1 (卷积公式) f (z) =  f (z - y) f (y)dy =  e-y f (z - y)dy
++\infty +\infty
+解1 (卷积公式) f (z) = \int f (z - y) f (y)dy = \int e-y f (z - y)dy
 Z X Y X
-- 0
+-\infty 0
 2(z - y)， 0 \leq z - y \leq1， 2(z - y)， z -1\leq y \leq z，
 f (z - y) =  即 f (z - y) = 
 X 0， 其它， X 0， 其它．
-  </p>
-<p> y \in[0， ) 2(z - y)， z -1\leq y \leq z ，
+  
+
+ y \in[0，+ \infty) 2(z - y)， z -1\leq y \leq z ，
 f (z - y) =
 
  取公共部分， X 0， 其它，
 
 y \in[z -1，z]
 
-e-y ， y  0，
+e-y ， y \ge 0，
 f (y) =
 
 Y
-0， y &lt; 0．
- 
-f (z) =  e-y f (z - y)dy
+0， y < 0．
++\infty 
+f (z) = \int e-y f (z - y)dy
 则
 Z X
 0
-0， z &lt; 0，
+0， z < 0，
 z
- 2(z - y)e-ydy = 2(e-z  z -1)， 0 \leq z \leq 1，
+\int 2(z - y)e-ydy = 2(e-z + z -1)， 0 \leq z \leq 1，
 =
 0
 z
- 2(z - y)e-ydy = 2e-z， z  1．
-z-1 </p>
-<p> 1
-解2 (卷积公式) f (z) =  f (x) f (z - x)dx =  2xf (z - x)dx
+\int 2(z - y)e-ydy = 2e-z， z > 1．
+z-1 
+
++\infty 1
+解2 (卷积公式) f (z) = \int f (x) f (z - x)dx = \int 2xf (z - x)dx
 Z X Y Y
-- 0
+-\infty 0
 2x， 0 \leq x \leq 1， ex-z， x \leq z，
 f (x) = f (z - x) =
  
-X 0， 其它， Y 0， x  z，
+X 0， 其它， Y 0， x > z，
  
-0， z &lt; 0，
-x \in(-，z]
+0， z < 0，
+x \in(-\infty，z]
 
 z
-f (z) =  2xex-zdx = 2(e-z  z -1)， 0 \leq z \leq 1，  x \in[0，1]
+f (z) = \int 2xex-zdx = 2(e-z + z -1)， 0 \leq z \leq 1，  x \in[0，1]
 Z
 0
 1
- 2xex-zdx = 2e-z， z  1．
-0 </p>
-<p>3．M = max(X ，Y ) 及 N = min(X ，Y )的分布
+\int 2xex-zdx = 2e-z， z > 1．
+0 
+
+3．M = max(X ，Y ) 及 N = min(X ，Y )的分布
 设 X \sim F (x)，Y \sim F (y)，且 X 与 Y 相互独立，则
 X Y
 F (z) = P{M \leq z} = P{X \leq z，Y \leq z}= P{X \leq z}P{Y \leq z}= F (z)F (z)
 max X Y
-F (z) = P{N \leq z} = 1- P{N  z}= 1- P{X  z，Y  z}
+F (z) = P{N \leq z} = 1- P{N > z}= 1- P{X > z，Y > z}
 min
-= 1- P{X  z}P{Y  z}= 1- (1- P{X \leq z})(1- P{Y \leq z})
+= 1- P{X > z}P{Y > z}= 1- (1- P{X \leq z})(1- P{Y \leq z})
 = 1- (1- F (z))(1- F (z))．
-X Y </p>
-<p>3 4
-例5 设 P{X  0，Y  0} = ，P{X  0} = P{Y  0} = ，求 P{max(X ，Y )  0}.
+X Y 
+
+3 4
+例5 设 P{X \ge 0，Y \ge 0} = ，P{X \ge 0} = P{Y \ge 0} = ，求 P{max(X ，Y ) \ge 0}.
 7 7
-解 P{max(X ，Y )  0} = P{(X  0) \cup (Y  0)}
-= P{X  0} P{Y  0}- P{X  0，Y  0}
+解 P{max(X ，Y ) \ge 0} = P{(X \ge 0) \cup (Y \ge 0)}
+= P{X \ge 0}+ P{Y \ge 0}- P{X \ge 0，Y \ge 0}
 4 4 3 5
 加法公式！
-=  - = ．
-7 7 7 7 </p>
-<p>1．随机变量的概念；
-2．分布函数的概念与性质；
-3．离散型随机变量的分布列及函数的分布；
-4．连续型随机变量的密度函数及函数的分布；
-5．二维离散型随机变量的联合、边缘分布律；
-6．二维连续型随机变量的联合、边缘密度函数；
-7．随机变量的相互独立性． </p>
+= + - = ．
+7 7 7 7  -->
+
 <h2 id="_3">第三章 随机变量的数字特征</h2>
-<p>数学期望
-方差
-协方差与相关系数 </p>
-<p>引 言
-通常把刻划随机变量的某些特征的确定的数值称为数字特征．
-反映随机变量取值的集中位置——数学期望；
-反映随机变量取值的分散程度——方差；
-反映两个随机变量的线性关联程度——相关系数． </p>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>通常把刻划随机变量的某些特征的确定的数值称为数字特征．</p>
+<ul>
+<li>反映随机变量取值的集中位置——数学期望；</li>
+<li>反映随机变量取值的分散程度——方差；</li>
+<li>反映两个随机变量的线性关联程度——相关系数． </li>
+</ul>
+</details>
 <h3 id="31">3.1  数学期望</h3>
-<p>本节主要内容
-一、随机变量的数学期望
-二、随机变量函数的期望
-三、数学期望的性质 </p>
-<p>引例 两射手的射击技术如下，问哪个射手技术较高?
+<!-- 引例 两射手的射击技术如下，问哪个射手技术较高?
 X 8 9 10 Y 8 9 10
 甲： 乙：
 p 0.3 0.1 0.6 p 0.1 0.6 0.3
 解 若让他们各射击 N 次，则打中的总环数分别为
-甲：8 0.3N  9 0.1N 10 0.6N = 9.3N
-乙：8 0.1N  9 0.6N 10 0.3N = 9.2N
+甲：8 0.3N + 9 0.1N +10 0.6N = 9.3N
+乙：8 0.1N + 9 0.6N +10 0.3N = 9.2N
 平均起来，甲每次射中 9.3 环，乙每次射中 9.2 环，
-故甲的射击水平略胜于乙． </p>
-<p>离散型随机变量的数学期望
-定义1 设离散型随机变量 X 的分布律为 P{X = x } = p ，若级数  x p
-i i
-i i
-i
-绝对收敛，则称该级数和为 X 的数学期望， 记为
-改变各项的顺序 E(X ) =  x p ．
-后级数的和不变 i i
-i
-连续型随机变量的数学期望
-定义2 设连续型随机变量 X 的概率密度函数为 f (x)，若积分
-
- xf (x)dx 绝对收敛，则称积分值为 X 的数学期望，记为
--
-
-E(X ) =  xf (x)dx ． 求和  
-- </p>
-<p>例1 设用一均匀的骰子赌博．在一次游戏中，若出现2点，
+故甲的射击水平略胜于乙．  -->
+
+<p><mark class="critic">随机变量的数学期望</mark></p>
+<p><strong>离散型随机变量的数学期望</strong> 设离散型随机变量 <span class="arithmatex">\(X\)</span> 的分布律为 <span class="arithmatex">\(P{X = x_i } = p_i\)</span> ，若级数 <span class="arithmatex">\(\sum _i x_i p\)</span> 绝对收敛，则称该级数和为 <span class="arithmatex">\(X\)</span> 的数学期望， 记为 <span class="arithmatex">\(E(X ) = \sum _i x_i \cdot p_i\)</span></p>
+<p><strong>连续型随机变量的数学期望</strong> 设连续型随机变量 <span class="arithmatex">\(X\)</span> 的概率密度函数为 <span class="arithmatex">\(f(x)\)</span> ，若积分 <span class="arithmatex">\(\int _{- \infty} ^{+ \infty} xf(x)dx\)</span> 绝对收敛，则称积分值为 <span class="arithmatex">\(X\)</span> 的数学期望， 记为 <span class="arithmatex">\(E(X ) = \int _{- \infty} ^{+ \infty} xf(x)dx\)</span></p>
+<!-- 例1 设用一均匀的骰子赌博．在一次游戏中，若出现2点，
 则该人可赢20元，出现4点赢40元，出现6点则输30元，若
 出现其它点不输不赢，求玩游戏的人赢得钱数的期望．
 解 令 X 表示在一次抛掷中赢得的钱数，则 X 的分布律为
@@ -4085,77 +4093,79 @@ X
 p
 1/6 1/2 1/6 1/6
 1 1 1 1
-E(X ) = -30 0 20 40 = 5．
+E(X ) = -30 +0 +20 +40 = 5．
 6 2 6 6
-因此若游戏是公正的，则玩者为参加游戏应付 5 元底金． </p>
-<p>ak
-例2 设随机变量 X 的取值为全体自然数，分布律为P{X = k}  = ，
-(1 a)k1
-其中a  0 ，求 E(X )．
- ak 1  b  a
-解 E(X )= k  = k bk = k bk-1 令 b =
-(1 a)k1 1 a 1 a 1 a
+因此若游戏是公正的，则玩者为参加游戏应付 5 元底金． 
+
+ak
+例2 设随机变量 X 的取值为全体自然数，分布律为P\{X = k\}  = ，
+(1+ a)k+1
+其中a > 0 ，求 E(X )．
++\infty ak 1 +\infty b +\infty a
+解 E(X )= \sumk \cdot  = \sumk \cdot bk = \sumk \cdot bk-1 令 b =
+(1+ a)k+1 1+ a 1+ a 1+ a
 k=0 k=0 k=1
  
-b  b    b  1  b 1
-= (bk ) = bk = -1 =  = a
+b +\infty b  +\infty  b  1  b 1
+= \sum(bk ) = \sumbk = -1 = \cdot  = a
  
-1 a 1 a   1 a 1- b  1 a (1- b)2
+1+ a 1+ a   1+ a 1- b  1+ a (1- b)2
  
 k=1
-k=1 </p>
-<p>x ， 0 \leq x \leq 1，
+k=1 
+
+x ， 0 \leq x \leq 1，
 
-例3 设随机变量 X 的概率密度函数为 f (x) = 2 - x ， 1 &lt; x \leq 2，
+例3 设随机变量 X 的概率密度函数为 f (x) = 2 - x ， 1 < x \leq 2，
 
 0， 其它，
 
 求 X 的数学期望E(X )．
 解 由定义可知
-+ 1 2
-E(X ) =  xf (x)dx =  x2dx   x(2 - x)dx
-- 0 1
++\infty 1 2
+E(X ) = \int xf (x)dx = \int x2dx + \int x(2 - x)dx
+-\infty 0 1
 1 2
 1  1 
-= x3  x2 - x3 = 1．
+= x3 + x2 - x3 = 1．
  
 3  3 
-0 1 </p>
-<p>1  x - μ 
+0 1 
+
+1  x - \mu 
 例4 设随机变量 X 的概率密度函数为 f (x) = exp- ，
-2λ λ
+2\lambda \lambda
  
 求 X 的数学期望E(X )．
-x-μ x-μ x-μ
+x-\mu x-\mu x-\mu
 1 1 1
- - μ  -
-解 E(X ) =  x  e λ dx =  x e λ dx   x e λ dx
-- 2λ 2λ - 2λ μ
-μ x μ x
-1 1 μ λ μ λ
-- μ  -
-= e λ  x eλdx  e λ  x e λdx = -   = μ ．
-2λ - 2λ μ 2 2 2 2 </p>
-<p>定理 设 Y = g(X ) (g为连续函数)，
-① 若 X \sim P{X = x }  = p ，i = 1，2，...
-i i
-则 E(Y ) = E[g(X )] =  g(x ) p ；
-i i
-i
-② 若 X \sim f (x)，
-
-则 E(Y ) = E[g(X )] =  g(x) f (x)dx ．
-- </p>
-<p>例5 设 X 的分布律为
++\infty - \mu +\infty -
+解 E(X ) = \int x \cdot  e \lambda dx = \int x \cdot e \lambda dx + \int x \cdot e \lambda dx
+-\infty 2\lambda 2\lambda -\infty 2\lambda \mu
+\mu x \mu x
+1 1 \mu \lambda \mu \lambda
+- \mu +\infty -
+= e \lambda \int x \cdot e\lambdadx + e \lambda \int x \cdot e \lambdadx = - + + = \mu ．
+2\lambda -\infty 2\lambda \mu 2 2 2 2 
+ -->
+
+<p><mark class="critic">随机变量函数的数学期望</mark></p>
+<p><strong>定理</strong> 设 <span class="arithmatex">\(Y = g(X )\)</span> (<span class="arithmatex">\(g\)</span>为连续函数)，</p>
+<ul>
+<li>若 <span class="arithmatex">\(X \sim P\{X = x_i \}  = p_i ，i = 1，2，...\)</span>，则 <span class="arithmatex">\(E(Y ) = E[g(X )] = \sum _i g(x_i ) p_i\)</span></li>
+<li>若 <span class="arithmatex">\(X \sim f (x)\)</span>，则 <span class="arithmatex">\(E(Y ) = E[g(X )] = \int _{- \infty} ^{+ \infty} g(x) f (x)dx\)</span></li>
+</ul>
+<!-- 例5 设 X 的分布律为
 X
 -2 0 2
 p
 0.4 0.3 0.3
  
-求 E(X 2  2)，E X ．
-解 E(X 2  2)= [(-2)2  2] 0.4  (02  2) 0.3  (22  2) 0.3 = 4.8；
-E  X  = -2  0.4  0 0.3  2 0.3 = 1.4． </p>
-<p>例6 对圆的半径作近似测量，假设其值 X 均匀的分布在 [a，b]内，即
+求 E(X 2 + 2)，E X ．
+解 E(X 2 + 2)= [(-2)2 + 2] 0.4 + (02 + 2) 0.3 + (22 + 2) 0.3 = 4.8；
+E  X  = -2  0.4 + 0 0.3 + 2 0.3 = 1.4． 
+
+例6 对圆的半径作近似测量，假设其值 X 均匀的分布在 [a，b]内，即
  1
 ， a \leq x \leq b ，
 
@@ -4164,63 +4174,70 @@ X \sim f (x) = b - a
 0， 其它，
 
 求圆的面积的数学期望．
-解 设Y 表示圆的面积，则 Y = πX 2 ，
-1 π(a2  ab  b2)
- b
-E(Y ) = E(πX 2) =  πx2 f (x)dx =  πx2 dx =
-- a b - a 3 </p>
-<p>注 定理的意义在于不用求Y的分布，只需用 X 的分布，就可算出E(Y)；
-(2)定理可推广到二维随机变量函数的情形：
-设 Z = g(X ，Y ) (g为连续函数)，
-① 若 (X ，Y ) \sim P{X = x ，Y = y } = p (i ，j = 1，2，...)，
-i j ij
-则 E(Z) = E[g(X ，Y )] =  g(x ，y ) p ；
-i j ij
-i j
-②若 (X ，Y ) \sim f (x，y)，
- 
-则 E(Z) = E[g(X ，Y )] =   g(x，y) f (x，y)dxdy ．
-- - </p>
-<p>Y
--1 0 1
-X
-例7 设 (X ，Y ) \sim 求 E(XY )．
+解 设Y 表示圆的面积，则 Y = \piX 2 ，
+1 \pi(a2 + ab + b2)
++\infty b
+E(Y ) = E(\piX 2) = \int \pix2 f (x)dx = \int \pix2 dx =
+-\infty a b - a 3 
+ -->
+
+<details class="warning" open="open">
+<summary>Warning</summary>
+</details>
+<ul>
+<li>定理的意义在于不用求<span class="arithmatex">\(Y\)</span>的分布，只需用 <span class="arithmatex">\(X\)</span> 的分布，就可算出<span class="arithmatex">\(E(Y)\)</span></li>
+<li>定理可推广到二维随机变量函数的情形：设 <span class="arithmatex">\(Z = g(X ，Y )\)</span> (<span class="arithmatex">\(g\)</span>为连续函数)，<ul>
+<li>若 <span class="arithmatex">\((X ，Y ) \sim P \{X = x_i ，Y = y_i \} = p _{ij}, (i，j = 1，2，...)\)</span>，则 <span class="arithmatex">\(E(Z) = E[g(X ，Y )] = \sum _i \sum _j g(x_i，y_j ) p_{ij}\)</span></li>
+<li>若 <span class="arithmatex">\((X ，Y ) \sim f (x，y)\)</span>，则 <span class="arithmatex">\(E(Z) = E[g(X ，Y )] = \int _{- \infty} ^{+ \infty} \int _{- \infty} ^{+ \infty} g(x，y) f (x，y)dxdy\)</span></li>
+</ul>
+</li>
+</ul>
+<!-- 例7 设 (X ，Y ) \sim 求 E(XY )．
 -1 1/6 1/12 0
 0 1/4 0 0
 2 1/12 1/4 1/6
 1 1 1 1
-解 E(XY ) = (-1) (-1)  2 (-1)  21 = ．
-6 12 6 3 </p>
-<p>x  y ， 0 \leq x \leq 1，0 \leq y \leq 1，
-例8 设 (X ，Y ) \sim f (x，y) =  求 E(X  Y )．
+解 E(XY ) = (-1) (-1) + 2 (-1) + 21 = ．
+6 12 6 3 
+
+x + y ， 0 \leq x \leq 1，0 \leq y \leq 1，
+例8 设 (X ，Y ) \sim f (x，y) =  求 E(X + Y )．
 0， 其它，
 
- +
-解 E(X  Y ) =  (x  y) f (x，y)dxdy
-- -
++\infty +\infty
+解 E(X + Y ) =\int \int (x + y) f (x，y)dxdy
+-\infty -\infty
 7
 1 1
-=   (x  y)2dxdy = ．
-0 0 6 </p>
-<p>1．若 a \leq X \leq b ，则 a \leq E(X ) \leq b．特别 E(c) = c．
-2．线性性质：E(aX  bY  c)= aE(X )  bE(Y )  c．
-3．若 X 与 Y 相互独立，则 E(XY )= E(X )E(Y )．(反之不成立)
-注 性质2，3可推广到 n 个随机变量的情形． </p>
-<p>例9 设二维离散型随机变量 (X ，Y ) 的联合分布律如下，验证 E(XY )
+= \int \int (x + y)2dxdy = ．
+0 0 6  -->
+
+<p><mark class="critic">数学期望的性质</mark></p>
+<ol>
+<li>若 <span class="arithmatex">\(a \leq X \leq b\)</span> ，则 <span class="arithmatex">\(a \leq E(X ) \leq b\)</span>．特别 <span class="arithmatex">\(E(c) = c\)</span>．</li>
+<li><strong>线性性质</strong> <span class="arithmatex">\(E(aX + bY + c)= aE(X ) + bE(Y ) + c\)</span>．</li>
+<li>若 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 相互独立，则 <span class="arithmatex">\(E(XY )= E(X )E(Y )\)</span>．(反之不成立)</li>
+</ol>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>性质2，3可推广到 <span class="arithmatex">\(n\)</span> 个随机变量的情形． </p>
+</details>
+<!-- 例9 设二维离散型随机变量 (X ，Y ) 的联合分布律如下，验证 E(XY )
 = E(X )E(Y )，但 X 与Y 不是相互独立．
 1 1 Y
 解
-E(XY ) = (-1) (-1)   (-1) 1 -1 0 1
+E(XY ) = (-1) \cdot (-1) \cdot  + (-1) \cdot 1\cdot  -1 0 1
 X
 8 8
 1 1 -1 1/8 1/8 1/8 3/8
-1(-1)  11 = 0
++1\cdot (-1) \cdot  +1\cdot 1\cdot  = 0
 8 8 0 1/8 0 1/8 2/8
 3 2 3
-E(X ) = E(Y ) = (-1)   0 1 = 0 1 1/8 1/8 1/8 3/8
+E(X ) = E(Y ) = (-1) \cdot  + 0\cdot  +1\cdot  = 0 1 1/8 1/8 1/8 3/8
 8 8 8
-因此 E(XY ) = E(X )E(Y ) 3/8 2/8 3/8 </p>
-<p>例9 设二维离散型随机变量 (X ，Y ) 的联合分布律如下，验证 E(XY )
+因此 E(XY ) = E(X )E(Y ) 3/8 2/8 3/8 
+
+例9 设二维离散型随机变量 (X ，Y ) 的联合分布律如下，验证 E(XY )
 = E(X )E(Y )，但 X 与Y 不是相互独立．
 Y
 解 另一方面
@@ -4228,38 +4245,31 @@ Y
 X
 3 3 1
 -1 1/8 1/8 1/8 3/8
- 
+\cdot  
 8 8 8
 0 1/8 0 1/8 2/8
 1 1/8 1/8 1/8 3/8
 因此，X与 Y 不是相互独立．
-3/8 2/8 3/8 </p>
+3/8 2/8 3/8  -->
+
 <h3 id="32">3.2  方差</h3>
-<p>本节主要内容
-一、方差的概念
-二、方差的计算
-三、方差的性质 </p>
-<p>方差反映的是 X 的取值与其期望值的偏离程度．
-X - E(X )  [X - E(X )]2  E[X - E(X )]2
-定义 设 X 是一随机变量，若 E[X - E(X )]2 存在，则称其为 X 的方差，
-记为 Var(X ) = D(X ) = E[X - E(X )] ．
-而称 σ(X ) = D(X ) 为 X 的标准差(或均方差)． </p>
-<p>1．方差是随机变量函数 g(X ) = [X - E(X )]2 的期望
-设 X \sim P{X = x } = p ，i =1，2，...
-i i
-则 D(X ) = [x - E(X )]2 p ；
-i i
-i
-设 X \sim f (x)，
-
-则 D(X ) =  [x - E(X )]2 f (x)dx ．
-- </p>
-<p>2．D(X ) = E(X 2) - E2(X )．
-证 D(X ) = E[X - E(X )]2
-= E[X 2 - 2XE(X )  E2(X )]
-= E(X 2) - 2E(X )E(X )  E2(X )
-= E(X 2) - E2(X )． </p>
-<p>X
+<p>方差反映的是 <span class="arithmatex">\(X\)</span> 的取值与其期望值的偏离程度．</p>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X\)</span> 是一随机变量，若 <span class="arithmatex">\(E[X - E(X )]^2\)</span> 存在，则称其为 <span class="arithmatex">\(X\)</span> 的方差，记为 $Var(X ) = D(X ) = E[X - E(X )]^2 $．而称 <span class="arithmatex">\(\sigma (X ) = \sqrt{D(X )}\)</span> 为 <span class="arithmatex">\(X\)</span> 的标准差(或均方差)． </p>
+<p><mark class="critic">方差的计算</mark></p>
+<ul>
+<li>方差是随机变量函数 <span class="arithmatex">\(g(X ) = [X - E(X )]^2\)</span> 的期望<ul>
+<li>设 <span class="arithmatex">\(X \sim P \{X = x _i\} = p_i ，i =1，2，...\)</span>,则 <span class="arithmatex">\(D(X ) = \sum _i [x - E(X )] ^2 p_i\)</span></li>
+<li>设 <span class="arithmatex">\(X \sim f (x)\)</span>，则 <span class="arithmatex">\(D(X ) = \int _{- \infty} ^{+ \infty} [x - E(X )] ^2 f (x)dx\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(D(X ) = E(X ^2) - E^2 (X )\)</span></li>
+</ul>
+<!-- 证 D(X ) = E[X - E(X )]2
+= E[X 2 - 2XE(X ) + E2(X )]
+= E(X 2) - 2E(X )E(X ) + E2(X )
+= E(X 2) - E2(X )．  -->
+
+<!-- X
 -1 0 1/2 1 2
 例1 设 X 的分布律为
 求 X 的方差D(X)．
@@ -4267,21 +4277,22 @@ p
 1/3 1/6 1/6 1/12 1/4
 解 由方差的计算公式可得
 1 1 1 1 1 1 1
-E(X ) = (-1)  0   1  2 = ，
+E(X ) = (-1) + 0 +  +1 + 2 = ，
 3 6 2 6 12 4 3
 2
 1 1  1  1 1 1 35
-E(X 2) = (-1)2   02    12   22  = ，
+E(X 2) = (-1)2  + 02  +  +12  + 22  = ，
  
 3 6  2  6 12 4 24
 2
 35  1  97
 D(X ) = E(X 2) - E2(X ) = - = ．
  
-24  3  72 </p>
-<p>例2 两厂家生产的手表日走时误差 X ，Y 服从下列分布：
+24  3  72 
+
+例2 两厂家生产的手表日走时误差 X ，Y 服从下列分布：
  1  1
- ， -10 &lt; x &lt; 10，  ， -20 &lt; y &lt; 20，
+ ， -10 < x < 10，  ， -20 < y < 20，
 X \sim f (x) = 20 Y \sim g(y) = 40
  
 0， 其它； 0， 其它．
@@ -4289,12 +4300,13 @@ X \sim f (x) = 20 Y \sim g(y) = 40
 判断哪个厂家的手表精度更高?
 1 1
 10 20
-解 由于 E(X ) =  x dx = 0， E(Y ) =  y dy = 0，
+解 由于 E(X ) = \int x dx = 0， E(Y ) = \int y dy = 0，
 -10 20 -20 40
-可见，平均下来两个厂家生产的手表日走时误差均为0； </p>
-<p>例2 两厂家生产的手表日走时误差 X ，Y 服从下列分布：
+可见，平均下来两个厂家生产的手表日走时误差均为0； 
+
+例2 两厂家生产的手表日走时误差 X ，Y 服从下列分布：
  1  1
- ， -10 &lt; x &lt; 10，  ， -20 &lt; y &lt; 20，
+ ， -10 < x < 10，  ， -20 < y < 20，
 X \sim f (x) = 20 Y \sim g(y) = 40
  
 0， 其它； 0， 其它．
@@ -4302,154 +4314,136 @@ X \sim f (x) = 20 Y \sim g(y) = 40
 判断哪个厂家的手表精度更高?
 1 100
 10
-而 D(X ) = E(X 2) - E2(X ) =  x2 dx = ，
+而 D(X ) = E(X 2) - E2(X ) = \int x2 dx = ，
 -10 20 3
 20 1 400
-D(Y ) = E(Y 2) - E2(Y ) =  y2 dy = ，
+D(Y ) = E(Y 2) - E2(Y ) = \int y2 dy = ，
 -20 40 3
-因此，第一个厂家生产的手表精度更高一些． </p>
-<p>1．D(c) = 0；
-2．D(aX  b) = a2D(X )；
-事实上，D(aX  b) = E[(aX  b) - E(aX  b)]2
-= E[aX  b - aE(X ) - b]2
-= E[a(X - E(X ))]2
-= a2E[X - E(X )]2= a2D(X )． </p>
-<p>3．若 X ，Y 相互独立，则 D(X  Y ) = D(X )  D(Y )．
-证 D(X  Y ) = E(X  Y )2 - E2(X  Y )
-= E(X 2  Y 2  2XY ) -[E(X )  E(Y )]2
-= E(X 2)  E(Y 2)  2E(XY ) - [E2(X )  E2(Y )  2E(X )E(Y )]
-由于 X ，Y 相互独立， 则有 E(XY ) = E(X )E(Y )，
-所以 D(X  Y ) = E(X 2)  E(Y 2) -[E2(X )  E2(Y )] = D(X )  D(Y )．
- n  n
-推论 设 X ，X ，...，X 相互独立，则 D  X =  D(X )．
-1 2 n  
-i i
- 
-i=1 i=1 </p>
-<p>例3 设 X 的期望 E(X ) = μ ，方差 D(X ) = σ2  0，求标准化随机变量
-X - μ
+因此，第一个厂家生产的手表精度更高一些．  -->
+
+<p><mark class="critic">方差的性质</mark></p>
+<ul>
+<li><span class="arithmatex">\(D(c) = 0\)</span></li>
+<li><span class="arithmatex">\(D(aX + b) = a ^2 D(X )\)</span></li>
+<li>若 <span class="arithmatex">\(X ，Y\)</span> 相互独立，则 <span class="arithmatex">\(D(X \pm Y ) = D(X ) + D(Y )\)</span><ul>
+<li>
+<p><strong>推论</strong> 设 <span class="arithmatex">\(X_1 ，X_2 ，...，X_n\)</span> 相互独立，则 </p>
+<div class="arithmatex">\[
+D (\sum _{i=0} ^n X_i) = \sum _{i=0} ^n D(X_i )
+\]</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- 例3 设 X 的期望 E(X ) = \mu ，方差 D(X ) = \sigma 2  0，求标准化随机变量
+X - \mu
 X * = 期望与方差．
-σ
- X - μ  1 1
-解 E(X <em>) = E = E(X - μ) = [E(X ) - μ] = 0，
+\sigma 
+ X - \mu  1 1
+解 E(X *) = E = E(X - \mu) = [E(X ) - \mu] = 0，
  
- σ  σ σ
+ \sigma   \sigma  \sigma 
 2
- X - μ  1
-D(X </em>) = E (X <em>)2  - E2(X </em>) = E = E(X - μ)2 = 1．
+ X - \mu  1
+D(X *) = E (X *)2  - E2(X *) = E = E(X - \mu)2 = 1．
  
  
- σ  σ2 </p>
+ \sigma   \sigma 2  -->
+
 <h3 id="33">3.3 协方差与相关系数</h3>
-<p>本节主要内容
-一、相关系数的定义与计算
-二、协方差与相关系数的性质 </p>
-<p>定义 称 Cov(X ，Y ) = E[(X - E(X )) (Y - E(Y ))]为 X 与Y 的协方差，
-称标准化随机变量的协方差 其大小受到 X 和
-Y 取值的影响！
- X - E(X ) Y - E(Y )  Cov(X ，Y )
-ρ = Cov ， =
- 
-XY
-D(X ) D(Y ) D(X ) D(Y )
- 
-为 X 与 Y 的相关系数．
- 
-注 ① ρ ρ \leq 1 是随机变量间线性关系的量度；
-XY XY
-② 当 ρ = 0 时，称 X 与 Y 不相关．
-XY </p>
-<p>性质
-① Cov(X ，Y ) = E(XY ) - E(X )E(Y )，特别的，Cov(X ，X ) = D(X )；
-证 Cov(X ，Y ) = E[(X - E(X )) (Y - E(Y ))]
-= E[XY - XE(Y ) -YE(X )  E(X )E(Y )]
-= E(XY ) -E(Y )E(X ) -E(X )E(Y ) E(X )E(Y )
-= E(XY ) -E(Y )E(X )
-② Cov(aX ，bY ) = abCov(X ，Y )；
-③ Cov(X  X ，Y ) = Cov(X ，Y )  Cov(X ，Y )；
-1 2 1 2
-④ D(X  Y ) = D(X )  D(Y )  2Cov(X ，Y )． (自证) </p>
-<p>例1 设 D(X ) = 36，D(Y ) = 25，ρ = 0.4，求 D(X  Y )．
+<p><mark class="critic">相关系数的定义和计算</mark></p>
+<p><strong>定义</strong> 称 <span class="arithmatex">\(Cov(X ，Y ) = E \Big[ \big(X - E(X ) \big) \cdot \big(Y - E(Y ) \big) \Big]\)</span> 为 X 与Y 的协方差，称标准化随机变量的协方差.</p>
+<div class="arithmatex">\[
+\rho _{\tiny XY} = \frac{Cov(X ，Y )}{\sqrt{D(X )} \sqrt{D(Y )}}
+\]</div>
+<p>为 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 的相关系数．</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<ul>
+<li><span class="arithmatex">\(\rho _{\tiny XY}, | \rho _{\tiny XY} | \leq 1\)</span> 是随机变量间线性关系的量度</li>
+<li>当 <span class="arithmatex">\(\rho = 0\)</span> 时，称 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 不相关．</li>
+</ul>
+</details>
+<p><strong>性质</strong></p>
+<ul>
+<li><span class="arithmatex">\(Cov(X ，Y ) = E(XY ) - E(X )E(Y )\)</span>，特别的，<span class="arithmatex">\(Cov(X ，X ) = D(X )\)</span></li>
+<li><span class="arithmatex">\(Cov(aX ，bY ) = ab \cdot Cov(X ，Y )\)</span></li>
+<li><span class="arithmatex">\(Cov(X_1 + X _2，Y ) = Cov(X_1 ，Y ) + Cov(X_2 ，Y )\)</span></li>
+<li><span class="arithmatex">\(D(X \pm Y ) = D(X ) + D(Y ) \pm 2Cov(X ，Y )\)</span> </li>
+</ul>
+<!-- 例1 设 D(X ) = 36，D(Y ) = 25，\rho = 0.4，求 D(X \pm Y )．
 XY
 Cov(X ，Y ) Cov(X ，Y )
 解
-ρ = = = 0.4  Cov(X ，Y ) = 12，
+\rho = = = 0.4  Cov(X ，Y ) = 12，
 XY
 D(X ) D(Y ) 65
-D(X  Y ) = D(X )  D(Y )  2Cov(X ，Y ) = 36  25  24 = 85，
-D(X -Y ) = D(X )  D(Y ) - 2Cov(X ，Y )= 36  25 - 24 = 37． </p>
-<p>定理 对于随机变量 X 与 Y ，下列命题等价：
-① E(XY ) = E(X )E(Y )； } 
-② D(X  Y ) = D(X )  D(Y )；
-X 与Y 独立
-③ Cov(X ，Y ) = 0；
-④ ρ = 0．
-XY
-注 ① 独立性表示不存在任何直接关系，而不相关表示不存在线性关系，
-但不排除有其它的关系；
-② 所有数字特征的计算都归结为期望的计算． </p>
-<p>1
-， x2  y2 \leq1，
-
-例2 设 (X ，Y ) 的联合概率密度函数为 f (x，y) = π
+D(X + Y ) = D(X ) + D(Y ) + 2Cov(X ，Y ) = 36 + 25 + 24 = 85，
+D(X -Y ) = D(X ) + D(Y ) - 2Cov(X ，Y )= 36 + 25 - 24 = 37．  -->
+
+<p><mark class="critic">协方差与相关系数的性质</mark></p>
+<p><strong>定理</strong> 对于随机变量 X 与 Y ，下列命题等价：</p>
+<ul>
+<li><span class="arithmatex">\(E(XY ) = E(X )E(Y )\)</span></li>
+<li><span class="arithmatex">\(D(X \pm Y ) = D(X ) + D(Y )\)</span></li>
+<li><span class="arithmatex">\(Cov(X ，Y ) = 0\)</span></li>
+<li><span class="arithmatex">\(\rho _{\tiny XY} = 0\)</span></li>
+</ul>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<ul>
+<li>独立性表示不存在任何直接关系，而不相关表示不存在线性关系，但不排除有其它的关系</li>
+<li>所有数字特征的计算都归结为期望的计算</li>
+</ul>
+</details>
+<!-- 例2 设 (X ，Y ) 的联合概率密度函数为 f (x，y) = \pi
 
 0， 其它，
 
-试求 E(X )，E(Y )，E(XY )，D(X )，D(Y )，Cov(X ，Y )，ρ .
+试求 E(X )，E(Y )，E(XY )，D(X )，D(Y )，Cov(X ，Y )，\rho .
 XY
 1
-解 记 D：x2  y2 \leq1，E(X ) =  x  dxdy = 0，同理：E(Y ) = 0，
-π
+解 记 D：x2 + y2 \leq1，E(X ) = \int\int x \cdot  dxdy = 0，同理：E(Y ) = 0，
+\pi
 D
 1 1 1
-E(XY ) =  xy  dxdy = 0， D(X ) = E(X 2) =  x2  dxdy = ，
-π π 4
+E(XY ) = \int\int xy \cdot  dxdy = 0， D(X ) = E(X 2) = \int\int x2 \cdot  dxdy = ，
+\pi \pi 4
 D D
 1
-同理 D(Y ) = ，Cov(XY ) = E(XY ) - E(X )E(Y ) = 0，ρ = 0．
+同理 D(Y ) = ，Cov(XY ) = E(XY ) - E(X )E(Y ) = 0，\rho = 0．
 XY
-4 </p>
-<p>数学期望的概念 (离散型、连续型) ；
-数学期望的性质与计算；
-随机变量函数的数学期望；
-方差的概念与性质；
-方差的计算；
-协方差、相关系数的概念与性质；
-协方差、相关系数的计算；
-数字特征之间的关系． </p>
+4  -->
+
 <h2 id="_4">第四章 几类重要的概率分布</h2>
-<p>二项分布
-泊松分布
-正态分布
-其他重要的概率分布
-二维正态及二维均匀分布 </p>
 <h3 id="41">4.1  二项分布</h3>
-<p>本节主要内容
-一、伯努利分布
-二、二项分布
-三、二项分布的数字特征 </p>
-<p>伯努利试验
-只有两种可能结果的试验称为伯努利试验．通常把这两个
-结果 A 和 A 称为“成功”和“失败”．
-注 任一试验均可视为只有结果 A 和 A的伯努利试验．
-定义1 在一次伯努利试验中，设 P(A) = p (0 &lt; p &lt; 1)，
-伯努利
-记 X 为 A 发生的次数，则 X 的分布律为
-X
-0 1
-p 1- p p
-称 X 服从伯努利分布(Bernoulli Distribution)或两点分布，记为X \sim B(1，p)． </p>
-<p>n重伯努利试验 将伯努利试验独立重复地进行 n 次．
-例如，连续抛掷两枚均匀的硬币100次，令 X 表示双正面出现的次数，则
-P{X = 30} = C30 (1/ 4)30(1-1/ 4)100-30 ．
-100
-定义2 在 n 重伯努利试验中，设 P(A) = p (0 &lt; p &lt; )，则事件 A 恰好发
-生 k 次的概率为 P{X = k} = P (k) = Ck pk (1- p)n-k ，k = 0，1，2，...，n
-n n
-称 X 服从参数为 n，p 的二项分布，记为X \sim B(n，p)．
-二项分布的数字特征
-设 X \sim B(n，p)．则 E(X ) = np ，D(X ) = np(1- p)．(自证) </p>
-<p>例1 若在 M 件产品中有 N 件次品，现进行有放回的 n 次抽样检查，问
+<p><mark class="critic">两点分布和二项分布</mark></p>
+<p><strong>伯努利试验</strong> 只有两种可能结果的试验称为伯努利试验．通常把这两个结果 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(\bar{A}\)</span> 称为“成功”和“失败”．</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>任一试验均可视为只有结果 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(\bar{A}\)</span> 的伯努利试验．</p>
+</details>
+<p><strong>两点分布</strong> 在一次伯努利试验中，设 <span class="arithmatex">\(P(A) = p \space (0 &lt; p &lt; 1)\)</span>，记 <span class="arithmatex">\(X\)</span> 为 <span class="arithmatex">\(A\)</span> 发生的次数，则 <span class="arithmatex">\(X\)</span> 的分布律为</p>
+<div class="arithmatex">\[
+\begin{array}{c|cc}
+X &amp; 0 &amp; 1 \\
+\hline
+P &amp; 1-p &amp; p
+\end{array}
+\]</div>
+<p>称 <span class="arithmatex">\(X\)</span> 服从伯努利分布(Bernoulli Distribution)或两点分布，记为<span class="arithmatex">\(X \sim B(1，p)\)</span>． </p>
+<p><strong>n重伯努利试验</strong> 将伯努利试验独立重复地进行 n 次．</p>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>连续抛掷两枚均匀的硬币100次，令 <span class="arithmatex">\(X\)</span> 表示双正面出现的次数，则 $P{X = 30} = C_{100} ^{30} (\frac{1}{4})^{30} (1- \frac{1}{4}) ^{100-30} $</p>
+</details>
+<p><strong>二项分布</strong> 在 <span class="arithmatex">\(n\)</span> 重伯努利试验中，设 <span class="arithmatex">\(P(A) = p (0 &lt; p &lt; 1)\)</span>，则事件 <span class="arithmatex">\(A\)</span> 恰好发生 <span class="arithmatex">\(k\)</span> 次的概率为 <span class="arithmatex">\(P{X = k} = P_n (k) = C _n ^k p^k (1- p) ^{n-k} ，k = 0，1，2，...，n\)</span> , 称 <span class="arithmatex">\(X\)</span> 服从参数为 <span class="arithmatex">\(n，p\)</span> 的二项分布，记为 <span class="arithmatex">\(X \sim B(n，p)\)</span>．</p>
+<p><strong>二项分布的数字特征</strong> 设 <span class="arithmatex">\(X \sim B(n，p)\)</span>．则 </p>
+<ul>
+<li><span class="arithmatex">\(E(X ) = np\)</span></li>
+<li><span class="arithmatex">\(D(X ) = np(1- p)\)</span></li>
+</ul>
+<!-- 例1 若在 M 件产品中有 N 件次品，现进行有放回的 n 次抽样检查，问
 共取得 k 件次品的概率．
 解 由于是有放回的抽样，因此过程是 n 重伯努利试验．
 N
@@ -4461,11 +4455,12 @@ M
  M 
 k n-k
  N   N 
-P{X = k} = Ck 1- ．
+P\{X = k\} = Ck 1- ．
    
 n
- M   M  </p>
-<p>例2 设一张考卷上有5道选择题，每道题列出4个可能答案，其中只有
+ M   M  
+
+例2 设一张考卷上有5道选择题，每道题列出4个可能答案，其中只有
 一个答案是正确的，某学生靠猜测至少能答对4道题的概率是多少?
 解 记 A＝{答对一道题}，则 P(A) = 1/ 4，解答5道题相当于做5重伯努
  1 
@@ -4475,636 +4470,509 @@ n
 4 5
  1  3  1  1
 从而可得
-P{X  4} = P{X = 4} P{X = 5}= C4   = ．
+P{X \ge 4} = P{X = 4}+ P{X = 5}= C4 \cdot  + = ．
    
 5
- 4  4  4  64 </p>
-<p>例3 (几何分布) 设某批产品的次品率为p，对该批产品做有放回的
+ 4  4  4  64 
+
+例3 (几何分布) 设某批产品的次品率为p，对该批产品做有放回的
 抽样检查，直到第一次抽到一只次品为止 (在此之前抽到的全是正品)，
 求所抽到的产品数 X 的分布律．
 解 X 的所有可能取值为1，2，...，设 A = {抽到的第 i 个产品是正品}，
 i
 则
-P{X = k} = P(A A ... A A ) = P(A )  P(A ) ...  P(A )  P(A )
+P{X = k} = P(A A ... A A ) = P(A ) \cdot  P(A ) \cdot ... \cdot  P(A ) \cdot  P(A )
 1 2 k-1 k 1 2 k-1 k
-= (1- p)(1- p) ... (1- p)  p = (1- p)k-1 p ．
+= (1- p)(1- p) \cdot ... \cdot (1- p) \cdot  p = (1- p)k-1 p ．
 (k = 1，2，...)
-
+1^2
 (k-1)个
-注 几何分布用来描述某试验“首次成功”的概率模型． </p>
+注 几何分布用来描述某试验“首次成功”的概率模型． 
+ -->
+
 <h3 id="42">4.2  泊松分布</h3>
-<p>本节主要内容
-一、泊松分布
-二、泊松分布的数字特征
-三、泊松分布的应用
-四、二项分布的泊松逼近 </p>
-<p>定义 设离散型随机变量 X 的分布律为
-λk
-P{X = k} = e-λ ， λ  0，k = 0，1，2，...，
-k!
-则称 X 服从参数为 λ 的泊松分布(Poisson Distribution)，
-泊松
-记为 X \sim P(λ) ． </p>
-<p>λk
-设 X \sim P(λ)， 即P{X = k} = e-λ ， λ  0，k = 0，1，2，...，
-k!
-则 E(X ) = λ ，
- λk  λk  λk-1  λk
-E(X ) = k  e-λ = e-λk  = λe-λ = λe-λ
-k! k! (k -1)! k!
-k=0 k=1 k=1 k=0
-= λe-λeλ = λ ． </p>
-<p>λk
-设 X \sim P(λ)， 即P{X = k} = e-λ ， λ  0，k = 0，1，2，...，
-k!
-则 E(X ) = λ ，D(X ) = λ ．
- λk  λk  λk
-E(X 2) = k2  e-λ = e-λk2  = e-λk 
-k! k! (k -1)!
-k=0 k=1 k=1
-  λk  λk    λk-2  λk-1 
-= e-λ (k -1)    = e-λ λ2  λ
-   
-(k -1)! (k -1)! (k - 2)! (k -1)!
-   
-k=1 k=1 k=2 k=1
-= λ2  λ ， 因此 D(X ) = E(X 2) - E2(X ) = λ ． </p>
-<p>① “流量”问题 (电话接到的呼叫次数，车站来到的乘客数，热电子
-辐射数等) 大都服从泊松分布；
-② 作为大量试验中稀有事件 (不幸事件，意外事故，非常见病，自然
-灾害等) 发生的概率模型． </p>
-<p>定理 设 X \sim B(n，p)，则当n   时，X 近似服从 P(λ)， 即有
-λk
-Ck pk (1- p)n-k  e-λ ， 其中 λ = np ．
-n
-k!
-注 当 n 很大且 p 很小时， 才能使近似计算的误差较小． </p>
-<p>例1 假设儿童在注射某疫苗产生不良反应的概率为0.001，试确定
+<p><strong>定义</strong> 设离散型随机变量 <span class="arithmatex">\(X\)</span> 的分布律为 <span class="arithmatex">\(P \{X = k \} = \frac{\lambda ^k}{k!} e ^{- \lambda} ， \lambda &gt; 0，k = 0，1，2，...\)</span>, 则称 <span class="arithmatex">\(X\)</span> 服从参数为 <span class="arithmatex">\(\lambda\)</span> 的泊松分布(Poisson Distribution)，记为 <span class="arithmatex">\(X \sim P(\lambda)\)</span> ． </p>
+<p><mark class="critic">泊松分布的数字特征</mark> 设 <span class="arithmatex">\(X \sim P(\lambda)\)</span>， 即 <span class="arithmatex">\(P \{X = k \} = \frac{\lambda ^k}{k!} e ^{- \lambda} ， \lambda &gt; 0，k = 0，1，2，...\)</span>, 则 </p>
+<ul>
+<li><span class="arithmatex">\(E(X ) = \lambda\)</span></li>
+<li><span class="arithmatex">\(D(X ) = \lambda\)</span></li>
+</ul>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<ul>
+<li>“流量”问题 (电话接到的呼叫次数，车站来到的乘客数，热电子辐射数等) 大都服从泊松分布；</li>
+<li>作为大量试验中稀有事件 (不幸事件，意外事故，非常见病，自然灾害等) 发生的概率模型． </li>
+</ul>
+</details>
+<p><mark class="critic">二项分布的泊松逼近</mark></p>
+<p><strong>定理</strong> 设 <span class="arithmatex">\(X \sim B(n，p)\)</span>，则当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(X\)</span> 近似服从 <span class="arithmatex">\(P(\lambda)\)</span>， 即有 <span class="arithmatex">\(C _n ^k p^k (1- p) ^{n-k} \approx \frac{\lambda ^k}{k!} e ^{- \lambda} ， \lambda &gt; 0，k = 0，1，2，...\)</span>．其中 <span class="arithmatex">\(\lambda = np\)</span></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>当 <span class="arithmatex">\(n\)</span> 很大且 <span class="arithmatex">\(p\)</span> 很小时，才能使近似计算的误差较小． </p>
+</details>
+<!-- 例1 假设儿童在注射某疫苗产生不良反应的概率为0.001，试确定
 2000个儿童中有3个以及2个以上产生不良反应的概率．
 解 设 X 表示注射疫苗的儿童中产生不良反应的个数，
 则 X \sim B(2000，0.001)，因 n 很大且 p 很小，所以由二项分布
 2k
-的泊松逼近得 P{X = k} = e-2 (λ = np = 2) ，k = 0，1，...
+的泊松逼近得 P{X = k} = e-2 (\lambda = np = 2) ，k = 0，1，...
 k!
 23
 故 P{X = 3} = e-2 = 0.18045，
 3!
- 2k
-P{X  2}= P{X  3}   e-2 = 0.32332．
+\infty 2k
+P{X > 2}= P{X \ge 3}  \sum e-2 = 0.32332．
 k!
-k=3 </p>
-<p>例2 设某保险公司为社会提供一项人寿保险，已知参保人死亡概率
+k=3 
+
+例2 设某保险公司为社会提供一项人寿保险，已知参保人死亡概率
 为0.0020，每年需交120元保险金，死亡时家属可领取 2 万元保险金，
 现有2500人参保，求该保险公司亏本以及年赢利不少于10万元的概率?
 解 设 X 为参保人员死亡的人数，则 X \sim B(2500，0.002) ，
-由二项分布的泊松逼近 (此时 λ = np = 5 )可得：
- 5k
-P{公司亏本} = P{X 15} =  e-5 = 0.00007 ，
+由二项分布的泊松逼近 (此时 \lambda = np = 5 )可得：
+\infty 5k
+P{公司亏本} = P{X >15} = \sum e-5 = 0.00007 ，
 k!
 k=16
- 5k
-P{赢利不少于10万}= P{X \leq 10} = 1-  e-5 = 0.9863．
+\infty 5k
+P{赢利不少于10万}= P{X \leq 10} = 1- \sum e-5 = 0.9863．
 k!
-k=11 </p>
+k=11  -->
+
 <h3 id="43">4.3  正态分布</h3>
-<p>本节主要内容
-一、正态分布
-二、正态分布的数字特征
-三、正态分布的计算与应用
-四、有关正态分布的结论 </p>
-<p>定义 若随机变量 X 的概率密度函数为
-2
-1 (x-μ)
--
-f (x) = e 2 (- &lt; x &lt; )
-2σ
-2πσ
-其中 μ，σ(σ  0) 是常数，则称 X 服从参数为 μ，σ 2 的正态分布
-高斯
-(Normal Distribution)或Gauss分布， 记为 X \sim N(μ，σ2)．
-特别地，当 μ = 0，σ =1 时，称 X 服从标准正态分布，记为 X \sim N(0，1)，
-其概率密度函数、分布函数记为 φ(x) 和(x)． </p>
-<p>2． 概率密度函数 f (x) 的性质：
-2
-1 (x-μ)
--
-① f (x) 的各阶导数均存在；
-f (x) = e 2
-2σ
-2πσ
-②密度曲线以 x 轴为渐近线；
-③ f (x)关于 x = μ 对称； y
-1
-④ f (x)在 x = μ 取得最大值 ．
-2πσ
-O μ x </p>
-<p>设 X \sim N(μ，σ2)，则 E(X ) = μ ，
-2
-1 (x-μ)
- -
-E(X ) =  xe 2 dx
-2σ
-2πσ -
-x - μ
-令 = t，则 x = 2σt  μ，dx = 2σdt，
-2σ
-1 μ
- 
-2 2
-E(X ) =  ( 2σt  μ)e-t dt =  e-t dt = μ ．
-π - π - </p>
-<p>设 X \sim N(μ，σ2)，则 E(X ) = μ ，D(X ) = σ2 ．
-2 x - μ
-1 (x-μ)
- -
-E(X 2) =  x2e 2 dx 令 = t， 则x = 2σt  μ，dx = 2σdt
-2σ
-2σ
-2πσ -
-1 1 2σ2
-  
-=  ( 2σt  μ)2e-t2dt =  (2σ2t2  μ2)e-t2dt =  t2e-t2dt  μ2
-π - π - π -
-
-σ2 σ2 σ2 σ2
-= te-t2dt2  μ2 = - tde-t2  μ2 = - te-t2  e-t2dt  μ2
-π - π - π π -
--
-= σ2  μ2 ， 则 D(X ) = E(X 2) - E2(X ) = σ2 ． </p>
-<p>标准正态分布的计算
-y
-\forall x  0，(-x) = 1-(x)．
-为计算方便，书末附表供查阅(x)．
-x
--x o x
-例如 设 X \sim N(0，1)，则有
-P{X \leq 2.38}  =(2.38)= 0.991344，
-P{X &lt; -2.38}  =(-2.38) = 1-(2.38) = 0.008656，
-P{-2 &lt; X &lt; 0}  =-(-2) = 0.5 -[1-(2)] = 0.47725． </p>
-<p>非标准正态分布的计算 正态分布的计算
-X - μ 都归结为标准正
-若 X \sim N(μ，σ2)，则有Y = \sim N(0，1)，从而可得
-态分布的计算！
-σ
- X - μ x - μ   x - μ 
-{ } 
-P X \leq x = P \leq = ．
-   
- σ σ   σ 
-例如 设 X \sim N(2，9)，则有
-1- 2 X - 2 5 - 2
-P{1 \leq X &lt; 5} = P  \leq &lt;  =-(-1/ 3) = 0.47064．
- 3 3 3 
-正态分布的应用
-零件的尺寸、物种的生理特征、测量误差、某地区
-年降雨量等绝大多数随机现象都服从正态分布． </p>
-<p>{A：短，挤 N(50，102)
+<p><strong>定义</strong> 若随机变量 <span class="arithmatex">\(X\)</span> 的概率密度函数为</p>
+<div class="arithmatex">\[
+f (x) = \frac{1}{\sqrt{2 \pi} \sigma} e ^{\frac{-(x- \mu) ^2}{2 \sigma ^2}}, \space - \infty &lt; x &lt; + \infty
+\]</div>
+<p>其中 <span class="arithmatex">\(\mu，\sigma \space (\sigma  &gt; 0)\)</span> 是常数，则称 <span class="arithmatex">\(X\)</span> 服从参数为 <span class="arithmatex">\(\mu，\sigma ^2\)</span> 的正态分布(Normal Distribution)或Gauss分布， 记为 <span class="arithmatex">\(X \sim N(\mu，\sigma ^2)\)</span>．</p>
+<p>特别地，当 <span class="arithmatex">\(\mu = 0，\sigma  =1\)</span> 时，称 <span class="arithmatex">\(X\)</span> 服从标准正态分布，记为 <span class="arithmatex">\(X \sim N(0，1)\)</span>，其概率密度函数、分布函数记为 <span class="arithmatex">\(\varphi (x)\)</span> 和 <span class="arithmatex">\(\varPhi (x)\)</span>． </p>
+<p>概率密度函数 <span class="arithmatex">\(f (x) = \frac{1}{\sqrt{2 \pi} \sigma} e ^{\frac{-(x- \mu) ^2}{2 \sigma ^2}}\)</span> 的性质：</p>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><a class="glightbox" href="https://s2.loli.net/2025/05/09/AaodmsVkIY45lg6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="正态分布.png" src="https://s2.loli.net/2025/05/09/AaodmsVkIY45lg6.png" /></a></p>
+</details>
+<ul>
+<li><span class="arithmatex">\(f (x)\)</span> 的各阶导数均存在</li>
+<li>密度曲线以 <span class="arithmatex">\(x\)</span> 轴为渐近线；</li>
+<li><span class="arithmatex">\(f (x)\)</span> 关于 <span class="arithmatex">\(x = \mu\)</span> 对称</li>
+<li><span class="arithmatex">\(f (x)\)</span> 在 <span class="arithmatex">\(x = \mu\)</span> 取得最大值 <span class="arithmatex">\(\frac{1}{\sqrt{2 \pi} \sigma}\)</span> </li>
+</ul>
+<p><mark class="critic">正态分布的数字特征</mark> 设 <span class="arithmatex">\(X \sim N(\mu，\sigma ^2)\)</span>，则</p>
+<ul>
+<li><span class="arithmatex">\(E(X ) = \mu\)</span></li>
+<li><span class="arithmatex">\(D(X ) = \sigma ^2\)</span> </li>
+</ul>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><a class="glightbox" href="https://s2.loli.net/2025/05/09/kXftWSj4A6pYFsd.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="标准正态分布.png" src="https://s2.loli.net/2025/05/09/kXftWSj4A6pYFsd.png" /></a></p>
+</details>
+<p><mark class="critic">标准正态分布的计算</mark></p>
+<p><span class="arithmatex">\(\forall x &gt; 0，\varPhi (-x) = 1- \varPhi (x)\)</span> ,计算时查表即可．</p>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>设 <span class="arithmatex">\(X \sim N(0，1)\)</span>，则有</p>
+<div class="arithmatex">\[
+P\{X \leq 2.38\}  =\varPhi (2.38)= 0.991344 \\
+P\{X &lt; -2.38\}  =\varPhi (-2.38) = 1-\varPhi (2.38) = 0.008656 \\
+P\{-2 &lt; X &lt; 0\}  =\varPhi (0) -\varPhi (-2) = 0.5 -[1-\varPhi (2)] = 0.47725
+\]</div>
+</details>
+<p><mark class="critic">非标准正态分布的计算</mark></p>
+<p>将非标准正态分布转换为标准正态分布进行计算.</p>
+<p>若 <span class="arithmatex">\(X \sim N(\mu，\sigma ^2)\)</span>，则有 <span class="arithmatex">\(Y = \frac{X - \mu}{\sigma} \sim N(0，1)\)</span>，从而可得</p>
+<div class="arithmatex">\[
+P\{X \leq x\}  = P\{\frac{X - \mu}{\sigma} \leq \frac{x - \mu}{\sigma} \} \\
+= P\{Y \leq \frac{x - \mu}{\sigma} \}= \varPhi (\frac{x - \mu}{\sigma})
+\]</div>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>设 <span class="arithmatex">\(X \sim N(2，9)\)</span>，则有 <span class="arithmatex">\(P \{1 \leq X &lt; 5 \} = P \{\frac{1-2}{3} \leq \frac{X-2}{3} &lt; \frac{5-2}{3} \} =\varPhi (1) -\varPhi ( - \frac{1}{3}) = 0.47064\)</span></p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>零件的尺寸、物种的生理特征、测量误差、某地区年降雨量等绝大多数随机现象都服从正态分布． </p>
+</details>
+<!-- \{A：短，挤 N(50，102)
 例1 学校 火车站
 B：长，畅 N(60，42)
 若有 70 分钟可用，应走那条路? 65 分钟又如何?
 解 设 X 为行车时间，则有
  X -50 70 -50
-①A：P{X \leq 70}  = P \leq  == 0.9772；
+①A：P\{X \leq 70\}  = P \leq  =\varPhi = 0.9772；
  10 10 
  X - 60 70 - 60
-B：P{X \leq 70} = P \leq =(2.5) = 0.9938； 此时应该走路线B．
+B：P\{X \leq 70\} = P \leq =\varPhi (2.5) = 0.9938； 此时应该走路线B．
  4 4 
  X -50 65-50
-②A：P{X \leq 65}  = P \leq =(1.5)= 0.9332；
+②A：P\{X \leq 65\}  = P \leq =\varPhi (1.5)= 0.9332；
  
  10 10 
  X - 60 65- 60
-B：P{X \leq 65}  = P \leq =(1.25) = 0.8944；此时应该走路线A．
+B：P\{X \leq 65\}  = P \leq =\varPhi (1.25) = 0.8944；此时应该走路线A．
  
- 4 4  </p>
-<p>若 X \sim N(μ ，σ2)，则对任意常数a ，b 有
-aX  b \sim N(aμ  b ，a2σ2)
-若 X \sim N(μ ，σ2)，Y \sim N(μ ，σ2)，且 X 与 Y 独立，则
-1 1 2 2
-X  Y \sim N(μ  μ ，σ2  σ2)．
-1 2 1 2
-一般地，n 个相互独立且服从正态分布的随机变量的线性组合仍服从
-正态分布． </p>
-<p>3σ 法则
-若 X \sim N(μ ，σ2)，则
- X - μ 
-{ } 
-P μ - σ \leq X \leq μ  σ = P -1 \leq \leq 1 = 2-1= 0.6826
- 
- σ 
- X - μ 
-P{μ - 2σ \leq X \leq μ  2σ} = P -2 \leq \leq 2 = 2-1= 0.9545
- 
- σ 
- X - μ 
-P{μ - 3σ \leq X \leq μ  3σ}  = P -3 \leq \leq 3 = 2-1= 0.9973
- 
- σ  </p>
-<p>X ,Y
-例2 设 X \sim N(0，1)，Y \sim N(1，2)，且它们相互独立，试求 Z = 2X  Y -1
+ 4 4   -->
+
+<p><mark class="critic">有关正态分布的结论</mark></p>
+<ul>
+<li>若 <span class="arithmatex">\(X \sim N(\mu ，\sigma ^2)\)</span>，则对任意常数<span class="arithmatex">\(a ，b\)</span> 有 <span class="arithmatex">\(aX + b \sim N(a \mu + b ，a ^2 \sigma ^2)\)</span></li>
+<li>若 <span class="arithmatex">\(X \sim N(\mu _1，\sigma _1 ^2)，Y \sim N(\mu _2，\sigma _2 ^2)\)</span>，且 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 独立，则 <span class="arithmatex">\(X \pm Y \sim N(\mu _1 \pm \mu _2 ，\sigma _1 ^2 + \sigma _2 ^2)\)</span></li>
+<li>一般地，n 个相互独立且服从正态分布的随机变量的线性组合仍服从正态分布</li>
+<li><span class="arithmatex">\(3 \sigma\)</span>  法则 若 <span class="arithmatex">\(X \sim N(\mu ，\sigma ^2)\)</span>，则</li>
+</ul>
+<div class="arithmatex">\[
+P \{\mu - \sigma \leq X \leq \mu + \sigma \} = P \{-1 \leq \frac{X - \mu}{\sigma} \leq 1 \} \\
+= \varPhi (1) - \varPhi (-1) = 2 \varPhi (1) - 1 = 0.6826 \\
+P \{\mu - 2 \sigma \leq X \leq \mu + 2 \sigma \} = P \{-2 \leq \frac{X - \mu}{\sigma} \leq 2 \} \\
+= \varPhi (2) - \varPhi (-2) = 2 \varPhi (2) - 1 = 0.9545 \\
+P \{\mu - 3 \sigma \leq X \leq \mu + 3 \sigma \} = P \{-3 \leq \frac{X - \mu}{\sigma} \leq 3 \} \\
+= \varPhi (3) - \varPhi (-3) = 2 \varPhi (3) - 1 = 0.9973
+\]</div>
+<!-- 例2 设 X \sim N(0，1)，Y \sim N(1，2)，且它们相互独立，试求 Z = 2X + Y -1
 的概率密度函数．
 解 因 Z 也服从正态分布，故只需确定 Z 的期望和方差即可求出 Z 的
 概率密度函数．
-E(Z) = 2E(X )  E(Y ) -1 = 2 0 1-1 = 0，
-D(Z) = 22 D(X )  D(Y ) = 22 1 2 = 6，
+E(Z) = 2E(X ) + E(Y ) -1 = 2 0 +1-1 = 0，
+D(Z) = 22 D(X ) + D(Y ) = 22 1+ 2 = 6，
 2
 z
 1
 -
 所以 Z 的概率密度函数为 f (z) = e 12 ， z \in \R ．
-2π 6 </p>
-<p>例3 公共汽车车门高度是按男子与车门顶碰头机率在0.01以下设计，
+2\pi 6 
+
+例3 公共汽车车门高度是按男子与车门顶碰头机率在0.01以下设计，
 设男子身高 X \sim N(170，62) (单位cm)，试确定车门高度．
 解 设车门高度为 x cm，则
-P{X  x}  &lt; 0.01 即 P{X \leq x}   0.99
+P\{X > x\}  < 0.01 即 P\{X \leq x\}  > 0.99
  X -170 x -170  x -170 
-{ } 
-P X \leq x = P \leq =  0.99
+\{ \} 
+P X \leq x = P \leq =\varPhi  > 0.99
    
  6 6   6 
 x -170
-查表得 (2.33) = 0.9901  0.99 则 = 2.33
+查表得 \varPhi (2.33) = 0.9901 > 0.99 则 = 2.33
 6
-解得 x =183.98cm </p>
-<h3 id="44">4.4  其他重要的概率分布</h3>
-<p>本节主要内容
-一、指数分布
-二、均匀分布 </p>
-<p>定义 若随机变量 X 的概率密度函数为
-λe-λx ， x  0，
-f (x) = (λ  0)
-
-0 ， x &lt; 0，
-
-则称 X 为服从参数为 λ 的指数分布，记为 X \sim E(λ)．
-x
-分布函数 F(x) =  f (t)dt， 当x &lt; 0 时， F(x) = 0，
--
-1- e-λx x  0
-x x
-当x  0 时，F(x) =  f (t)dt =  λe-λt dt 因此 F(x) =
-
-- 0 0 x &lt; 0
-
-x
-= -e-λt = 1- e-λx
-0 </p>
-<p>1 1
-数字特征 设 X \sim E(λ)，则 E(X ) = ，D(X ) = ．
-λ λ2
-    
-E(X ) =  xf (x)dx =  x  λe-λx dx = - xde-λx = -xe-λx   e-λx dx
-- 0 0 0 0
-
-1 1
-
-= -xe-λx - e-λx =
-0 λ λ
-0
-2
-   
-E(X 2) =  x2  λe-λx dx = - x2 de-λx = -x2e-λx   2xe-λx dx =
-0 0 0 0 λ2
-2 1 1
-D(X ) = E(X 2) - E2(X ) = - =
-λ2 λ2 λ2
-应用 电子元件的寿命，随机服务系统中的服务时间等． </p>
-<p>无记忆性 (永葆青春的分布)
-设 X \sim E(λ)，则 \forall t  0，s  0，有
-{ }  { } 
-P X  s  t 1- P X \leq s  t
-{ } 
-P X  s  t X t = =
-{ }  { } 
-P X  t 1- P X \leq t
-1- 1- e-λ(st) 
- 
-= = e-λs ．
-1- (1- e-λt )
-结果与 t 没有关系，即再活多少年的概率是一样的． </p>
-<p>例1 设打电话所用的时间 X 服从参数为 λ 的指数分布，且打一次电话
+解得 x =183.98cm  -->
+
+<h3 id="44">4.4  指数分布</h3>
+<p><strong>定义</strong> 若随机变量 <span class="arithmatex">\(X\)</span> 的概率密度函数为 </p>
+<div class="arithmatex">\[
+f(x) = \begin{cases} 
+\lambda e ^{- \lambda x}, \space  x \ge 0 \\ 
+0, \space x &lt; 0 
+\end{cases}
+\]</div>
+<p>其中 <span class="arithmatex">\(\lambda &gt; 0\)</span>, 则称 <span class="arithmatex">\(X\)</span> 为服从参数为 <span class="arithmatex">\(\lambda\)</span> 的指数分布，记为 <span class="arithmatex">\(X \sim E(\lambda)\)</span></p>
+<p>分布函数 </p>
+<div class="arithmatex">\[
+F(x) = \int _{- \infty} ^x \space f(t) dt = \begin{cases}
+1- e ^{- \lambda x}, \space  x \ge 0 \\
+0, \space x &lt; 0
+\end{cases}
+\]</div>
+<p><mark class="critic">指数分布的数字特征</mark> 设 <span class="arithmatex">\(X \sim E(\lambda)\)</span>，则 </p>
+<ul>
+<li><span class="arithmatex">\(E(X ) = \frac{1}{\lambda}\)</span></li>
+<li><span class="arithmatex">\(D(X ) = \frac{1}{\lambda ^2}\)</span></li>
+</ul>
+<details class="tip" open="open">
+<summary>应用</summary>
+<p>电子元件的寿命，随机服务系统中的服务时间等． </p>
+</details>
+<p><strong>无记忆性 (永葆青春的分布)</strong> 设 <span class="arithmatex">\(X \sim E(\lambda)\)</span>，则 <span class="arithmatex">\(\forall t &gt; 0，s &gt; 0\)</span>，有</p>
+<div class="arithmatex">\[
+P \{X &gt; s + t \space | \space X &gt; t \} = \frac{P \{X &gt; s + t \}}{P \{X &gt; t \}} \\
+\space \\
+= \frac{1 - P \{X \leq s + t \}}{1 - P \{X \leq t \}} \\
+\space \\
+= \frac{1 - [1 - e ^{- \lambda (s + t)}]}{1 - (1 - e ^{- \lambda t})} = e ^{- \lambda s}
+\]</div>
+<p>结果与 <span class="arithmatex">\(t\)</span> 没有关系，即再活多少年的概率是一样的． </p>
+<!-- 例1 设打电话所用的时间 X 服从参数为 \lambda 的指数分布，且打一次电话
 平均用时为5分钟，求一次通话用时在5-10分钟的概率．
 1  1 
-解 因为 X \sim E(λ)，而 E(X ) = = 5，所以 X \sim E ，
+解 因为 X \sim E(\lambda)，而 E(X ) = = 5，所以 X \sim E ，
  
-λ  5 
+\lambda  5 
 1 x
 -
- e 5 ， x  0，
+ e 5 ， x \ge 0，
 则 X 的密度函数为 f (x) = 5
 
-0， x &lt; 0，
+0， x < 0，
 
 x
 1
 10 -
-P{5 \leq X \leq 10} =  e 5dx = 0.2326．
-5 5 </p>
-<p>例2 假设一电路装有三个同种电气元件，其工作状态相互独立且无故
-障，工作时间服从参数为 λ  0 的指数分布．当三个元件都无故障时，
+P{5 \leq X \leq 10} = \int e 5dx = 0.2326．
+5 5 
+
+例2 假设一电路装有三个同种电气元件，其工作状态相互独立且无故
+障，工作时间服从参数为 \lambda > 0 的指数分布．当三个元件都无故障时，
 电路正常工作，否则整个电路不能正常工作，试求电路正常工作的
 时间 T 的分布函数．
 解 X ，X ，X 分别表示三个电气元件无故障工作时间，相互独立且
 1 2 3
 同分布，分布函数为：
-1- e-λx， x  0，
+1- e-\lambdax， x \ge 0，
 F(x) =
 
-0， x &lt; 0，
+0， x < 0，
 
-G(t) 表示T 的分布函数，当t &lt; 0 时，G(t) = P{T \leq t}  = 0， </p>
-<p>当t  0 时，G(t) = P{T \leq t}  = P{min(X ，X ，X ) \leq t} 
+G(t) 表示T 的分布函数，当t < 0 时，G(t) = P\{T \leq t\}  = 0， 
+
+当t \ge 0 时，G(t) = P\{T \leq t\}  = P\{min(X ，X ，X ) \leq t\} 
 1 2 3
-= 1- P{min(X ，X ，X )  t} = 1- P{X  t，X  t，X  t} 
+= 1- P\{min(X ，X ，X ) > t\} = 1- P\{X > t，X > t，X > t\} 
 1 2 3 1 2 3
-{ }  { }  { } 
-= 1- P X  t P X  t P X  t
+\{ \}  \{ \}  \{ \} 
+= 1- P X > t P X > t P X > t
 1 2 3
- { }  { }  { } 
-= 1- 1- P X \leq t 1- P X  t 1- P X  t
+ \{ \}  \{ \}  \{ \} 
+= 1- 1- P X \leq t 1- P X > t 1- P X > t
 1 2 3
 3
-= 1-1- F(t)1- F(t)1- F(t) = 1- 1- 1- e-λt  = 1- e-3λt
+= 1-1- F(t)1- F(t)1- F(t) = 1- 1- 1- e-\lambdat  = 1- e-3\lambdat
  
-1- e-3λt ， t  0，
+1- e-3\lambdat ， t \ge 0，
 则T 的分布函数为：G(t) =
 
-0， t &lt; 0．
+0， t < 0．
 
-因此T 服从参数为 3λ 的指数分布． </p>
-<p>定义 若随机变量 X 的概率密度函数为
- 1
-，a \leq x \leq b，
-
-f (x) = b - a (a &lt; b)
-
-0， 其它，
-
-则称 X 在区间 [a，b] 上服从均匀分布， 记为 X \sim U[a，b]．
-数字特征
-a  b (b - a)2
-设 X \sim U[a，b]．则 E(X ) = ，D(X ) = ．(自证)
-2 12
-应用
-四舍五入造成的误差，计算机产生的随机数等． </p>
-<p>例3 设公交车每 6 分钟发车一次，X 表示乘客候车时间，则 X \sim U 0，6，
-求乘客候车时间超过 5 分钟的概率，以及 4 位乘客中有 2 位候车时间超过
-5分钟的概率．
-1 1
- 6
-解 ① P{X  5} =  f (x)dx =  dx = ，
-5 5 6 6
-②令Y表示 4 位乘客中候车时间超过 5 分钟的人数，
-2 4-2
- 1   1   1  25
-则 Y \sim B 4， ，因此有 P{Y = 2} = C2 1- = ．
+因此T 服从参数为 3\lambda 的指数分布． 
+ -->
+
+<h3 id="45">4.5  均匀分布</h3>
+<p><strong>定义</strong> 若随机变量 <span class="arithmatex">\(X\)</span> 的概率密度函数为</p>
+<div class="arithmatex">\[
+f (x) = \begin{cases}
+\frac{1}{b - a}, \space a \leq x \leq b \\
+0, \space \small _{其他}
+\end{cases}
+\]</div>
+<p>其中 <span class="arithmatex">\(a &lt; b\)</span> 则称 <span class="arithmatex">\(X\)</span> 在区间 <span class="arithmatex">\([a，b]\)</span> 上服从均匀分布， 记为 <span class="arithmatex">\(X \sim U[a，b]\)</span>．</p>
+<p><mark class="critic">均匀分布的数字特征</mark> 设 <span class="arithmatex">\(X \sim U[a，b]\)</span>．则 </p>
+<ul>
+<li><span class="arithmatex">\(E(X ) = \frac{a + b}{2}\)</span></li>
+<li><span class="arithmatex">\(D(X ) = \frac{(b - a) ^2}{12}\)</span></li>
+</ul>
+<details class="tip" open="open">
+<summary>应用</summary>
+<p>四舍五入造成的误差，计算机产生的随机数等． </p>
+</details>
+<!--  1   1   1  25
+则 Y \sim B 4， ，因此有 P\{Y = 2\} = C2 1- = ．
      
- 6  4  6   6  216 </p>
-<p>例4 设随机变量 X 服从参数为 λ = 2 的指数分布，证明随机变量
+ 6  4  6   6  216 
+
+例4 设随机变量 X 服从参数为 \lambda = 2 的指数分布，证明随机变量
 Y = 1- e-2X 在区间 [0，1] 上服从均匀分布．
 解 X 的概率密度函数为
-2e-2x， x  0，
+2e-2x， x \ge 0，
 f (x) =
 
 X
-0， x &lt; 0，
+0， x < 0，
 
 Y 的分布函数为 F (y)，
 Y
 F ( y) = P{Y \leq y} = P{1- e-2X \leq y}．
 (下略)
-Y </p>
-<h3 id="45">4.5  二维正态及二维均匀分布</h3>
-<p>本节主要内容
-一、二维正态分布
-二、二维均匀分布 </p>
-<p>定义 若二维随机变量 (X ，Y )的联合概率密度函数为
-1  1 (x - μ )2
-f (x，y) = exp - 1
- 
-2πσ σ 1- ρ2  2(1- ρ2)  σ 2
-1
-1 2
-(x - μ )(y - μ ) (y - μ )2 
--2ρ 1 2  2
-
-σ σ σ2
-
-1 2 2
-其中 μ ，μ ，σ ，σ ，ρ 为常数，并且有 σ  0，σ  0，| ρ |&lt;1，
-1 2 1 2
-1 2
-则称 (X ，Y ) 服从二维正态分布， 记为
-(X ，Y ) \sim N(μ ，μ ；σ2，σ2；ρ)．
-1 2 1 2 </p>
-<p>定理 若 (X ，Y ) \sim N(μ ，μ ；σ2，σ2；ρ)，则有
-1 2 1 2
-E(X ) = μ ，D(X ) = σ2，E(Y ) = μ ，D(Y ) = σ2，
-1 1 2 2
-Cov(X ，Y ) = ρσ σ ，ρ = ρ；
-1 2 XY
-X \sim N(μ ，σ2)，Y \sim N(μ ，σ2)；
-1 1 2 2
-X 与 Y 相互独立  ρ = 0．
-XY
-注 (X ，Y )服从二维正态分布的充要条件是 X 与 Y 的任一
-线性组合服从一维正态分布． </p>
-<p>例1 已知随机变量 X 和 Y 分别服从正态分布 N(1，32)和N(0，42)，
+Y  -->
+
+<h3 id="46">4.6  二维正态分布</h3>
+<p><strong>定义</strong> 若二维随机变量 <span class="arithmatex">\((X ，Y )\)</span>的联合概率密度函数为</p>
+<div class="arithmatex">\[
+f(x, y) = \frac{1}{2 \pi \sigma _1 \sigma_2 \sqrt{1- \rho ^2}} \exp \{(-\frac{1}{2(1-\rho^2)}[(\frac{x-\mu_1}{\sigma_1})^2 - 2\rho(\frac{x-\mu_1}{\sigma_1})(\frac{y-\mu_2}{\sigma_2}) + (\frac{y-\mu_2}{\sigma_2})^2] \}
+\]</div>
+<p>其中 <span class="arithmatex">\(\mu ，\mu ，\sigma  ，\sigma  ，\rho\)</span> 为常数，并且有 <span class="arithmatex">\(\sigma _1 &gt; 0，\sigma _2 &gt; 0，| \rho |&lt;1\)</span>，则称 <span class="arithmatex">\((X ，Y )\)</span> 服从二维正态分布， 记为 <span class="arithmatex">\((X ，Y ) \sim N(\mu _1 ，\mu _2 ；\sigma _1 ^2，\sigma _2 ^2；\rho)\)</span></p>
+<p><strong>定理</strong> 若 <span class="arithmatex">\((X ，Y ) \sim N(\mu _1 ，\mu _2 ；\sigma _1 ^2，\sigma _2 ^2；\rho)\)</span>，则有</p>
+<ul>
+<li><span class="arithmatex">\(E(X ) = \mu _1，D(X ) = \sigma _1 ^2\)</span></li>
+<li><span class="arithmatex">\(E(Y ) = \mu  _2，D(Y ) = \sigma _2 ^2\)</span></li>
+<li><span class="arithmatex">\(Cov(X ，Y ) = \rho \sigma _1 \sigma _2 ，\rho _{XY} = \rho\)</span></li>
+<li><span class="arithmatex">\(X \sim N(\mu _1，\sigma _1  ^2)，Y \sim N(\mu _2，\sigma _2 ^2)\)</span></li>
+<li>如果 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 相互独立 <span class="arithmatex">\(\implies \rho = 0\)</span></li>
+</ul>
+<details class="note" open="open">
+<summary>Note</summary>
+<p><span class="arithmatex">\((X ，Y )\)</span>服从二维正态分布的充要条件是 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 的任一线性组合服从一维正态分布． </p>
+</details>
+<!-- 例1 已知随机变量 X 和 Y 分别服从正态分布 N(1，32)和N(0，42)，
 1
 1 1
-且 X 与Y 的相关系数 ρ = - ，设 Z = X  Y，求：
+且 X 与Y 的相关系数 \rho = - ，设 Z = X + Y，求：
 XY
 2
 3 2
 Z 的数学期望 E(Z) 和方差 D(Z) ；
-ρ ．
+\rho ．
 X 与 Z 的相关系数
 XZ
 解 由已知得 E(X ) = 1，D(X ) = 32 ，E(Y ) = 0 ，D(Y ) = 42 ，
 1
-Cov(X ，Y ) = ρ D(X ) D(Y ) = - 3 4 = -6，
+Cov(X ，Y ) = \rho D(X ) D(Y ) = - \cdot 3\cdot  4 = -6，
 XY
 2
  1 1  1 1 1 1 1
-E(Z) = E X  Y = E(X )  E(Y ) = 1 0 = ，
+E(Z) = E X + Y = E(X ) + E(Y ) = \cdot 1+ \cdot 0 = ，
  
- 3 2  3 2 3 2 3 </p>
-<p>已知 E(X ) = 1，D(X ) = 32，E(Y ) = 0 ，D(Y ) = 42 ，Cov(X ，Y ) = -6，
+ 3 2  3 2 3 2 3 
+
+已知 E(X ) = 1，D(X ) = 32，E(Y ) = 0 ，D(Y ) = 42 ，Cov(X ，Y ) = -6，
  1 1   1   1   1 1 
-D(Z) = D X  Y = D X  D Y  2Cov X ， Y
+D(Z) = D X + Y = D X + D Y + 2Cov X ， Y
        
  3 2   3   2   3 2 
 1 1 1 1 1 1 1 1
-= D(X )  D(Y )  2  Cov(X ，Y ) = 9  16 - 2  6 = 3，
+= D(X ) + D(Y ) + 2\cdot  \cdot  \cdot Cov(X ，Y ) = \cdot 9 + \cdot 16 - 2\cdot  \cdot  \cdot 6 = 3，
 9 4 3 2 9 4 3 2
  1 1  1 1
-Cov(X ，Z) = Cov X ， X  Y = Cov(X ，X )  Cov(X ，Y )
+Cov(X ，Z) = Cov X ， X + Y = Cov(X ，X ) + Cov(X ，Y )
  
  3 2  3 2
 1 1 Cov(X ，Z)
-= D(X )  Cov(X ，Y ) = 0， ρ = = 0．
+= D(X ) + Cov(X ，Y ) = 0， \rho = = 0．
 XZ
-3 2 D(X ) D(Z) </p>
-<p>2 2
-x y
+3 2 D(X ) D(Z) 
+
+2 2
+x +y
 1
 -
 例2 设随机变量(X ，Y ) 服从二维正态分布 f (x，y) = e 2 ，
-2π
+2\pi
 1
-求随机变量 Z = (X 2 Y 2) 的概率密度函数．
+求随机变量 Z = (X 2 +Y 2) 的概率密度函数．
 3
 解 先求 Z 的分布函数
 1 
-F (z) = P{Z \leq z}= P (X 2 Y 2) \leq z ，显然当 z &lt; 0 时，F (z) = 0，
+F (z) = P{Z \leq z}= P (X 2 +Y 2) \leq z ，显然当 z < 0 时，F (z) = 0，
  
 Z Z
 3 
 2 2
-x y
+x +y
 1
-{ }  -
-当 z  0 时，F (z) = P X 2 Y 2 \leq 3z =  e 2 dxdy 其中D：x2  y2 \leq 3z ，
+\{ \}  -
+当 z \ge 0 时，F (z) = P X 2 +Y 2 \leq 3z = \int\int e 2 dxdy 其中D：x2 + y2 \leq 3z ，
 Z
-2π
+2\pi
 D
-1 ρ2 3  3
-2π 3z - - z  - z
-=  dθ e 2 ρdρ =1- e 2 ， 1- e 2 ， z  0，
+1 \rho2 3  3
+2\pi 3z - - z  - z
+= \int dθ\int e 2 \rhod\rho =1- e 2 ， 1- e 2 ， z \ge 0，
 则 F (z) =
 
-2π 0 0 Z
- 0， z &lt; 0，
- </p>
-<p>2 2
-x y
+2\pi 0 0 Z
+ 0， z < 0，
+ 
+
+2 2
+x +y
 1
 -
 例2 设随机变量(X ，Y ) 服从二维正态分布 f (x，y) = e 2 ，
-2π
+2\pi
 1
-求随机变量 Z = (X 2 Y 2) 的概率密度函数．
+求随机变量 Z = (X 2 +Y 2) 的概率密度函数．
 3
  3
 - z
 
-1- e 2 ， z  0，
+1- e 2 ， z \ge 0，
 F (z) =
 
 Z
- 0， z &lt; 0，
+ 0， z < 0，
 
 则Z 的概率密度函数为
 3 3
 - z
- e 2 ， z  0，
+ e 2 ， z \ge 0，
 f (z) =
 2
 Z
 
-0， z &lt; 0．
- </p>
-<p>定义 设D是平面上的一个有界区域，其面积为A，若二维随机变量
-(X ，Y ) 的联合概率密度函数为
- 1
- ， (x，y)\in D，
-f (x，y) =  A
- 0， (x，y) D，
-
-则称 (X ，Y )在 D 上服从二维均匀分布．
-例如，矩形区域上的均匀分布，其概率密度函数为
- 1
-， a \leq x \leq b，c \leq y \leq d，
-
-f (x，y) = (b - a)(d - c)
-
-
-0 ， 其它．
- </p>
-<p>例3 设二维随机变量 (X ，Y ) 在圆域 x2  y2 \leq r2 上服从二维均匀分布，
-求 X 与Y 的相关系数 ρ ；问 X 与Y 是否相互独立．
+0， z < 0．
+  -->
+
+<h3 id="47">4.7  二维均匀分布</h3>
+<p><strong>定义</strong> 设<span class="arithmatex">\(D\)</span>是平面上的一个有界区域，其面积为<span class="arithmatex">\(A\)</span>，若二维随机变量<span class="arithmatex">\((X ，Y )\)</span> 的联合概率密度函数为</p>
+<div class="arithmatex">\[
+f (x，y) = \begin{cases}
+\frac{1}{A}，(x ，y ) \in D \\
+0，(x ，y ) \notin D
+\end{cases}
+\]</div>
+<p>则称 <span class="arithmatex">\((X ，Y )\)</span>在 <span class="arithmatex">\(D\)</span> 上服从二维均匀分布．</p>
+<p>例如，矩形区域上的均匀分布，其概率密度函数为</p>
+<div class="arithmatex">\[
+f (x，y) = \begin{cases}
+\frac{1}{(b-a)(d-c)}，a \le x \le b, \space c \le y \le d \\
+0，\small _{其他}
+\end{cases}
+\]</div>
+<!-- 例3 设二维随机变量 (X ，Y ) 在圆域 x2 + y2 \leq r2 上服从二维均匀分布，
+求 X 与Y 的相关系数 \rho ；问 X 与Y 是否相互独立．
 XY
 解 (X ，Y )的联合概率密度函数为
  1
-， x2  y2 \leq r2，
+， x2 + y2 \leq r2，
 
-f (x，y) = πr2 记 D：x2  y2 \leq r2，
+f (x，y) = \pir2 记 D：x2 + y2 \leq r2，
 
 0， 其他，
 
 1 1
-E(X ) =  x  dxdy = 0， E(Y ) =  y  dxdy = 0，
-πr2 πr2
+E(X ) = \int\int x \cdot  dxdy = 0， E(Y ) = \int\int y \cdot  dxdy = 0，
+\pir2 \pir2
 D D
 1
-E(XY ) =  xy  dxdy = 0， 则 Cov(X ，Y ) = E(XY ) - E(X )E(Y ) = 0，
-πr2
-D </p>
-<p>例3 设二维随机变量 (X ，Y ) 在圆域 x2  y2 \leq r2 上服从二维均匀分布，
-求 X 与Y 的相关系数 ρ ；问 X 与Y 是否相互独立．
+E(XY ) = \int\int xy \cdot  dxdy = 0， 则 Cov(X ，Y ) = E(XY ) - E(X )E(Y ) = 0，
+\pir2
+D 
+
+例3 设二维随机变量 (X ，Y ) 在圆域 x2 + y2 \leq r2 上服从二维均匀分布，
+求 X 与Y 的相关系数 \rho ；问 X 与Y 是否相互独立．
 XY
-
-f (x) =  f (x，y)dy 当 x  r 时，f (x) = 0，
++\infty
+f (x) = \int f (x，y)dy 当 x > r 时，f (x) = 0，
 X X
--
+-\infty
 2 2 1 2
 r -x
-当 x \leq r 时， f (x) =  dy = r2 - x2 ，
-X - r2-x2 πr2 πr2
+当 x \leq r 时， f (x) = \int dy = r2 - x2 ，
+X - r2-x2 \pir2 \pir2
 2 2
  r2 - x2 ， x \leq r，  r2 - y2 ， y \leq r，
-πr2  πr2
+\pir2  \pir2
 则 f (x) = 同理 f (y) =
  
 X Y
  
-x  r， y  r，
- 0，  0， </p>
-<p>例3 设二维随机变量 (X ，Y ) 在圆域 x2  y2 \leq r2 上服从二维均匀分布，
-求 X 与Y 的相关系数 ρ ； 问 X 与Y 是否相互独立．
+x > r， y > r，
+ 0，  0， 
+
+例3 设二维随机变量 (X ，Y ) 在圆域 x2 + y2 \leq r2 上服从二维均匀分布，
+求 X 与Y 的相关系数 \rho ； 问 X 与Y 是否相互独立．
 XY
 2 2
  r2 - x2 ， x \leq r，  r2 - y2 ， y \leq r，
-πr2  πr2
+\pir2  \pir2
 f (x) = f (y) =
  
 X Y
  
-x  r， y  r，
+x > r， y > r，
  0，  0，
  1
-， x2  y2 \leq r2， f (x，y)  f (x) f ( y)，
+， x2 + y2 \leq r2， f (x，y)  f (x) f ( y)，
 
-f (x，y) = πr2 X Y
+f (x，y) = \pir2 X Y
 
- 0， 其他． X 与Y 不相互独立． </p>
-<p>伯努利
-(1654 – 1705) ( 雅各布ꞏ 伯努利 )
-瑞士数学家，他家祖孙三代出过八位数学家．1694年
-他首次给出了直角坐标和极坐标下的曲率半径公式，
-1695
-年提出了著名的伯努利方程， 1713年出版了他的巨著
-《猜度术》，这是组合数学与概率论史上的一件大事，书中给出的
-伯努利数在很多地方有用，而伯努利定理则是大数定律的最早形式．
-此外，他对双纽线，悬链线和对数螺线都有深入的研究． </p>
-<p>泊松
-(1781 – 1840)
-泊松(Poisson，Simeon-Denis)，法国数学家、物理学家
-和力学家．1781年6月生于皮蒂维耶，1840年4月卒于巴黎
-泊松的科学生涯开始于研究微分方程及其在
-附近的索镇．
-摆的运动和声学理论中的应用．他工作的特色是应用数学方法研究各类
-力学和物理问题，并由此得到数学上的发现．他对积分理论、行星运动
-理论、热物理、弹性理论、电磁理论、位势理论和概率论都有重要贡献． </p>
-<p>高斯
-(1777 – 1855)
-德国数学家、天文学家和物理学家，是与阿基米德，牛顿
-并列的伟大数学家，他的数学成就遍及各个领域，在数论、
-代数、非欧几何、 微分几何、 超几何级数、复变函数及
-椭圆函数论等方面均有一系列开创性的贡献，他还十分重视数学的应用，
-在对天文学、大地测量学和磁学的研究中发明和发展了最小二乘法、
-曲面论和位势论等．他在学术上十分谨慎，恪守这样的原则：“问题在
-思想上没有弄通之前决不动笔”． </p>
+ 0， 其他． X 与Y 不相互独立．  -->
+
 <h2 id="_5">第五章 基本极限定理</h2>
 <p>切比雪夫不等式与大数定律
 中心极限定理 </p>
@@ -5120,21 +4988,21 @@ f (x，y) = πr2 X Y
 u ×
 刻划 ① \lim n = p；
 n
-n
+n\to\infty
  u  u
-② \lim P  n - p &lt; ε = 1，即 n p p (n  )．
-n  n  n </p>
+② \lim P  n - p &lt; ε = 1，即 n p\to p (n \to \infty)．
+n\to\infty  n  n </p>
 <p>一、切比雪夫不等式
-定理1 设 X 的数学期望 E(X ) = μ ，方差 D(X ) = σ2 &lt;  ，
-则 \forall ε  0 ，有
-σ2
+定理1 设 X 的数学期望 E(X ) = \mu ，方差 D(X ) = \sigma 2 &lt; \infty ，
+则 \forall ε &gt; 0 ，有
+\sigma 2
 切比雪夫
 { } 
-P X - μ  ε \leq
+P X - \mu \ge ε \leq
 ε2
-σ2
+\sigma 2
 { } 
-或 P X - μ &lt; ε  1- ，
+或 P X - \mu &lt; ε \ge 1- ，
 ε2
 注 切比雪夫不等式常用来在 E(X ) 和 D(X ) 已知时， 对事件
 { } 
@@ -5146,25 +5014,25 @@ X - E(X ) &lt; ε 发生的概率进行估计． </p>
 D(X ) = 1600，则由切比雪夫不等式知
 1600
 { } 
-P{7800 &lt; X &lt; 8200}= P X - 8000 &lt; 200  1- = 0.96，
+P{7800 &lt; X &lt; 8200}= P X - 8000 &lt; 200 \ge 1- = 0.96，
 2002
 这说明只需供应8200盏灯的电力就能以相当大的概率保证这1万盏灯
 的正常使用． </p>
 <p>切比雪夫大数定律
 定理2 设相互独立的随机变量 X ，X ，...，X ，... 具有有限的期望
 1 2 n
-和方差，若存在常数 C 使 D(X ) \leq C ，则 \forall ε  0，
+和方差，若存在常数 C 使 D(X ) \leq C ，则 \forall ε &gt; 0，
 i
  1 n  1 n  
-有 \lim P   X - E  X &lt; ε =1，
+有 \lim P  \sum X - E \sum X &lt; ε =1，
  
 i i
 n n
-n  
+n\to\infty  
  
 i=1 i=1
 1 n  1 n 
-即  X p E  X (n  )．
+即 \sum X p\to E \sum X (n \to \infty)．
  
 i i
 n n
@@ -5172,27 +5040,27 @@ n n
 i=1 i=1 </p>
 <p>推论 设相互独立的随机变量 X ，X ，...，X ，... 服从相同的分布，
 1 2 n
-且 E(X ) = μ ，D(X ) = σ2，i = 1，2，...，则有
+且 E(X ) = \mu ，D(X ) = \sigma 2，i = 1，2，...，则有
 i i
 1 n
- X p μ (n  )．
+\sum X p\to \mu (n \to \infty)．
 i
 n
 i=1
 注 该结论的实际意义在于，为了减少测量的随机误差，常常用测量
 的平均值来代替真实值，即
-X  X ... X
-1 2 n  μ．
+X + X +...+ X
+1 2 n  \mu．
 n </p>
 <p>伯努利大数定律 (切比雪夫大数定律推论的特殊形式)
 定理3 设 u 是 n 重伯努利试验中事件A发生的次数，且 P(A) = p ，
 n
-则有 u X ... X
+则有 u X +...+ X
 n = 1 n ，X \sim B(1，p)
 i
 n n
 u
-n p p (n  )
+n p\to p (n \to \infty)
 n
 注 该结论的实际意义在于，当试验次数很大时，便可以用事件发生
 的频率来代替其概率． </p>
@@ -5200,10 +5068,10 @@ n
 定理4 设相互独立的随机变量 X ，...，X ，... 服从相同的分布，
 1 n
 辛钦
-且 E(X ) = μ，i = 1，2，...，则有
+且 E(X ) = \mu，i = 1，2，...，则有
 i
 1 n
- X p μ (n  )．
+\sum X p\to \mu (n \to \infty)．
 i
 n
 i=1
@@ -5218,28 +5086,28 @@ i=1
 内容 设独立随机变量序列 X ，X ，...，X ，... 的期望和方差都存在，
 1 2 n
 n   n   n 
-则当n很大时， X \sim N  E   X ，D  X ．
+则当n很大时，\sum X \sim N  E  \sum X ，D \sum X ．
 i i i
     
 i=1 i=1 i=1
  
  n  n   n  
-刻划 \lim P  X - E   X  D  X  \leq x =(x)．
+刻划 \lim P \sum X - E  \sum X  D \sum X  \leq x =\varPhi (x)．
 i i i
-n      
+n\to\infty      
  i=1 i=1 i=1  </p>
 <p>定理1 设相互独立的随机变量 X ，X ，...，X ，... 服从相同的分布，
 1 2 n
-且 E(X ) = μ ，D(X ) = σ2 (σ  0)，则\forall x \in \R，
+且 E(X ) = \mu ，D(X ) = \sigma 2 (\sigma  &gt; 0)，则\forall x \in \R，
 i i
  n  
-有 \lim P   X - nμ nσ \leq x=(x)，
+有 \lim P  \sum X - n\mu n\sigma  \leq x=\varPhi (x)，
  
 i
-n   
+n\to\infty   
 i=1
  n 
-即  X - nμ nσ \sim N(0，1) (n  )．
+即 \sum X - n\mu n\sigma  \sim N(0，1) (n \to \infty)．
  
 i
  
@@ -5250,28 +5118,28 @@ i=1
 解 设 X 表示第 i 袋食品的净重，则 X ，X ，...，X 独立
 i 1 2 100
 100
-同分布，且 E(X ) = 100，D(X ) = 16，而一箱净重 X =  X ，
+同分布，且 E(X ) = 100，D(X ) = 16，而一箱净重 X = \sum X ，
 i i i
 i=1
 由独立同分布的中心极限定理可知：X \sim N(10000，402)，
  X -10000 10100 -10000
-所以 P{X  10100}  = 1- P{X \leq 10100}  = 1- P \leq
+所以 P{X &gt; 10100}  = 1- P{X \leq 10100}  = 1- P \leq
  
  40 40 
- 1-(2.5) = 0.0062． </p>
+ 1-\varPhi (2.5) = 0.0062． </p>
 <p>独立同分布的中心极限定理的特殊形式
 定理2 设 u 是n重伯努利试验中事件A发生的次数，且 P(A) = p，
 n
-u = X ... X ，X \sim B(1，p)
+u = X +...+ X ，X \sim B(1，p)
 则有 n 1 n i
 拉普拉斯
 u - np
-n \sim N(0，1) (n  )．
+n \sim N(0，1) (n \to \infty)．
 np(1- p)
 注 设 X \sim B(n，p)，当n比较大时，对任意的 a &lt; b 有
    
 b - np a - np
-P{a &lt; X \leq b}   - ．
+P{a &lt; X \leq b}  \varPhi  -\varPhi  ．
    
 np(1- p) np(1- p)
     </p>
@@ -5285,10 +5153,10 @@ P{X = k}  = Ck 0.2k0.8100-k ， k = 0，1，...，100
 已知 n = 100，p = 0.2，由拉普拉斯中心极限定理得
  30 -100 0.2   14 -100 0.2 
 { } 
-P 14 &lt; X \leq 30  -
+P 14 &lt; X \leq 30 \varPhi  -\varPhi 
    
  100 0.2 0.8   100 0.2 0.8 
-=(2.5) -(-1.5) = 0.927． </p>
+=\varPhi (2.5) -\varPhi (-1.5) = 0.927． </p>
 <p>例4 已知甲乙两地有A、B两种交通工具，每天有1000人要从甲地
 去往乙地，这1000人等概率的随机选择 A、B 两种工具中的其中一个，
 问A、B两种交通工具上至少各准备多少个座位，才能有99%的可能
@@ -5296,12 +5164,12 @@ P 14 &lt; X \leq 30  -
 解 设每种交通工具需准备 x个座位，每天有 X 个人乘坐A交通工具
 易知X \sim B(1000，0.5)，
  X - 500 x - 500  x - 500 
-P{X \leq x}  = P \leq =  0.99，
+P{X \leq x}  = P \leq =\varPhi  \ge 0.99，
  
  
  250 250   250 
 x - 500
-则  2.33，x  536.8，每种交通工具需准备537个座位．
+则 \ge 2.33，x \ge 536.8，每种交通工具需准备537个座位．
 250 </p>
 <p>利用切比雪夫不等式进行近似计算；
 切比雪夫大数定律；
@@ -5373,13 +5241,13 @@ x ，x ，...，x
 1 2 n
 独立同分布
 称为样本值．
-统计量 不含任何未知参数的样本的函数 φ(X ，X ，...，X ) 称为统计量．
+统计量 不含任何未知参数的样本的函数 \varphi(X ，X ，...，X ) 称为统计量．
 1 2 n
-例如，设总体 X \sim N(μ，σ2)，其中 μ 已知，σ2 未知，则 X  X  μ
+例如，设总体 X \sim N(\mu，\sigma 2)，其中 \mu 已知，\sigma 2 未知，则 X + X + \mu
 1 2
 3 X 2
-是统计量， i 不是统计量．
-σ2
+是统计量，\sum i 不是统计量．
+\sigma 2
 i=1 </p>
 <p>设总体 X 的分布函数为F (x)，X ，X ，...，X 是来自总体的一个样本，
 1 2 n
@@ -5402,9 +5270,9 @@ p*(x ，x ，...，x ) =  p(x )．
 i=1 </p>
 <p>例1 设总体 X  N(12，4) ，从中抽取容量为5的样本 (X ，X ，X ，X ，X )，
 1 2 3 4 5
-求 P{max(X ，X ，X ，X ，X ) 15} ．
+求 P{max(X ，X ，X ，X ，X ) &gt;15} ．
 1 2 3 4 5
-解 P{max(X ，X ，X ，X ，X )  15} 
+解 P{max(X ，X ，X ，X ，X ) &gt; 15} 
 1 2 3 4 5
 = 1- P{max(X ，X ，X ，X ，X ) \leq 15} 
 1 2 3 4 5
@@ -5415,7 +5283,7 @@ i=1 </p>
 1 2 5
 5
  15 -12 
-= 1-  = 1-(1.5)5  0.2923．
+= 1- \varPhi  = 1-\varPhi (1.5)5  0.2923．
   
   2  </p>
 <h3 id="62">6.2 分布函数与概率密度函</h3>
@@ -5435,10 +5303,10 @@ F (x) =
 n 2 / n， x<em> \leq x &lt; x</em> ，
 2 3
 
-1 ， x  x*，
+1 ， x \ge x*，
 n
 Gilvenko定理
-设总体X \sim F(x)，则 F (x) a.s.F(x) (n  )．
+设总体X \sim F(x)，则 F (x) a.s.\toF(x) (n \to \infty)．
 n 一致
 注 该定理是用样本来推断总体的基本的理论依据． </p>
 <p>直方图是频率分布的图形表示，其一般做法为：
@@ -5471,7 +5339,7 @@ O a a a a a
 k-1 k
 m
 a
-到其概率，即 k p k f (x)dx ，所以当n无限增大时，分组组距越
+到其概率，即 k p\to\int k f (x)dx ，所以当n无限增大时，分组组距越
 n a
 k-1
 来越小，直方图就越接近密度曲线． </p>
@@ -5481,27 +5349,27 @@ k-1
 二、样本矩 </p>
 <p>称 m = E(X k ) (假设存在)为总体 X 的 k 阶原点矩；
 k
-称 μ = E[X - E(X )]k 为 X 的 k 阶中心矩．
+称 \mu = E[X - E(X )]k 为 X 的 k 阶中心矩．
 k
-特别地，m = E(X )，μ = D(X )．
+特别地，m = E(X )，\mu = D(X )．
 1 2
 注意 总体矩是一个常数． </p>
 <p>1 n
-设 X ，X ，...，X 是总体 X 的一样本，称 X =  X 为样本均值，
+设 X ，X ，...，X 是总体 X 的一样本，称 X = \sum X 为样本均值，
 1 2 n
 i
 n
 i=1
 1 n
 1 n
-S2 = (X - X )2 为样本方差．而称A =  X k 为样本 k 阶原点矩，
+S2 = \sum(X - X )2 为样本方差．而称A = \sum X k 为样本 k 阶原点矩，
 i
 n -1 k i
 n
 i=1
 i=1
 1 n
-B = (X - X )k 为样本 k 阶中心矩．
+B = \sum(X - X )k 为样本 k 阶中心矩．
 k i
 n
 i=1
@@ -5528,20 +5396,20 @@ n </p>
 F (x) =
 10 2 /10， 63 \leq x &lt; 65，
 
-1， x 100． </p>
+1， x \ge100． </p>
 <p>1 n 1
-样本均值 x =  x = (50  63 ...100) = 78.1，
+样本均值 x = \sum x = (50 + 63 +...+100) = 78.1，
 i
 n 10
 i=1
 1 n 1
-样本方差 S2 = (x - x)2= (-28.1)2 ... 21.92  = 252.54，
+样本方差 S2 = \sum(x - x)2= (-28.1)2 +...+ 21.92  = 252.54，
  
 i
 n -1 9
 i=1
 1 n 1
-样本二阶中心矩 b = (x - x)2= (-28.1)2 ... = 227.29．
+样本二阶中心矩 b = \sum(x - x)2= (-28.1)2 +... = 227.29．
  
 2 i
 n 10
@@ -5553,43 +5421,43 @@ i=1 </p>
 <p>正态分布
 y
 2 f (x)
-1 (x-μ)
+1 (x-\mu)
 -
-1) 定义 f (x) = e 2σ2 ， x \in \R
-2πσ
+1) 定义 f (x) = e 2\sigma 2 ， x \in \R
+2\pi\sigma 
 2) 性质 (略)
-O μ x
+O \mu x
 3) 结论
 1 n
-① 设 X ，X ，...，X 是来自总体 N(μ，σ2) 的一个样本， 
+① 设 X ，X ，...，X 是来自总体 N(\mu，\sigma 2) 的一个样本， \sum
 X = X
 1 2 n
 i
 n
- σ2  i=1
-为样本均值，则 X \sim N μ， ，从而可得统计量
+ \sigma 2  i=1
+为样本均值，则 X \sim N \mu， ，从而可得统计量
  
 n
  
-X - μ
+X - \mu
 U = n \sim N(0，1)；
-σ </p>
-<p>②设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(μ ，σ2) 和
+\sigma  </p>
+<p>②设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(\mu ，\sigma 2) 和
 1 2 m 1 2 n 1 1
-N(μ ，σ2) 的两个样本，且总体 X，Y 相互独立，则
+N(\mu ，\sigma 2) 的两个样本，且总体 X，Y 相互独立，则
 2 2
-(X -Y ) - (μ - μ )
+(X -Y ) - (\mu - \mu )
 U = 1 2 \sim N(0，1)
-σ2 m  σ2 n
+\sigma 2 m + \sigma 2 n
 1 2
 1 m 1 n
-其中 X =  X ，Y = Y ．
+其中 X = \sum X ，Y = \sumY ．
 m i n j
 i=1 j=1 </p>
 <p>   2 分布
 1) 定义 设 X ，X ，...，X 相互独立且均服从 N(0，1)，则称统计量
 1 2 n
-χ2 = X 2 ... X 2 服从自由度为 n 的 χ2 分布，记作 χ2 \sim χ2(n)．
+χ2 = X 2 +...+ X 2 服从自由度为 n 的 χ2 分布，记作 χ2 \sim χ2(n)．
 1 n
 2) 性质
 ① 若 χ2 \sim χ2(n)，则 E( χ2) = n， D( χ2) = 2n；(自证) y
@@ -5598,22 +5466,22 @@ f (x)
 ② 设 χ2 \sim χ2(n )， χ2 \sim χ2(n )，且 χ2，χ2 相互独立，
 1 1 2 2 1 2
 O x
-则有 χ2  χ2 \sim χ2(n  n )． (可加性)
+则有 χ2 + χ2 \sim χ2(n + n )． (可加性)
 1 2 1 2 </p>
 <p>3) 结论
-① 设 X ，X ，...，X 是来自总体 N(μ，σ2)的一个样本，则统计量
+① 设 X ，X ，...，X 是来自总体 N(\mu，\sigma 2)的一个样本，则统计量
 1 2 n
 1 n
-χ2 = (X - μ)2 \sim χ2(n)；
-σ2 i
+χ2 = \sum(X - \mu)2 \sim χ2(n)；
+\sigma 2 i
 i=1
-② 设 X ，X ，...，X 是来自总体 N(μ，σ2) 的一个样本，则样本均值
+② 设 X ，X ，...，X 是来自总体 N(\mu，\sigma 2) 的一个样本，则样本均值
 1 2 n
 与样本方差 S2 相互独立，且统计量
 X
 (n -1)S2 1 n
-= (X - X )2 \sim χ2(n -1)．
-σ2 σ2 i
+= \sum(X - X )2 \sim χ2(n -1)．
+\sigma 2 \sigma 2 i
 i=1 </p>
 <p>t 分布 (学生 t 分布)
 1) 定义 设 X \sim N(0，1)，Y \sim χ2(n)，且 X 与 Y 相互独立，则
@@ -5624,30 +5492,30 @@ y
 ① f (x) 关于 y 轴对称； f (x)
 t
 t
-② 当n   时，t 分布 N(0，1)．
+② 当n \to \infty 时，t 分布\to N(0，1)．
 x
 3) 结论 O
-① 设 X ，X ，...，X 是来自总体 N(μ，σ2) 的一个样本，则统计量
+① 设 X ，X ，...，X 是来自总体 N(\mu，\sigma 2) 的一个样本，则统计量
 1 2 n
 X -
-X - μ
+X - \mu
 T = n \sim t(n -1)；U = n \sim N(0，1)
-S σ </p>
-<p>② 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(μ ，σ2)
+S \sigma  </p>
+<p>② 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(\mu ，\sigma 2)
 1 2 m 1 2 n 1
-和 N(μ ，σ2) 的两个样本，且总体 X，Y 相互独立，
+和 N(\mu ，\sigma 2) 的两个样本，且总体 X，Y 相互独立，
 2
-(X -Y ) - (μ - μ ) (X -Y ) - (μ - μ )
-则 T = 1 2 \sim t(m  n - 2)．U = 1 2 \sim N(0，1)
-S2 m  S2 n σ2 m  σ2 n
+(X -Y ) - (\mu - \mu ) (X -Y ) - (\mu - \mu )
+则 T = 1 2 \sim t(m + n - 2)．U = 1 2 \sim N(0，1)
+S2 m + S2 n \sigma 2 m + \sigma 2 n
 w w 1 1
-(m -1)S2  (n -1)S2
+(m -1)S2 + (n -1)S2
 其中 S2 = 1 2 称为复合样本方差，
 w
-m  n - 2
+m + n - 2
 1 m
-S2 = (X - X )2 ， 1 n
-S2 = (Y -Y )2 ．
+S2 = \sum(X - X )2 ， 1 n
+S2 = \sum(Y -Y )2 ．
 1 i
 m -1
 2 j
@@ -5669,20 +5537,20 @@ O x
 ② 若 T \sim t(n)，则 T 2 \sim F(1，n)．
 [提示：X \sim N(0，1)  X 2 \sim 2] </p>
 <p>3) 结论
-① 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(μ ，σ2) 和
+① 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(\mu ，\sigma 2) 和
 1 2 m 1 2 n 1 1
-N(μ ，σ2) 的两个样本，且总体 X ，Y 相互独立，则
+N(\mu ，\sigma 2) 的两个样本，且总体 X ，Y 相互独立，则
 2 2
 S2 S2
 F = 1 2 \sim F(m -1，n -1)．
-σ2 σ2
+\sigma 2 \sigma 2
 1 2
 S 2 S 2
 ② 统计量 F = 1 2 \sim F(m，n)．
-σ2 σ2
+\sigma 2 \sigma 2
 1 2
 1 m 1 n
-其中 S 2 = (X - μ )2， S 2 = (Y - μ )2 ．
+其中 S 2 = \sum(X - \mu )2， S 2 = \sum(Y - \mu )2 ．
 2 j 2
 1 i 1 n
 m
@@ -5697,13 +5565,13 @@ P{X \leq x }  = F(x ) = α ，则称 x 为 X 的下侧 α 分位数．
 α α
 常用分布的分位数
 y
-1) N (0，1)的下侧 α 分位数 u 满足： φ(x)
+1) N (0，1)的下侧 α 分位数 u 满足： \varphi(x)
 α
 α α
 u
-P{U \leq u } =  α φ(x)dx = α ，
+P{U \leq u } = \int α \varphi(x)dx = α ，
 α
-- x
+-\infty x
 u u
 O
 由对称性 -u = u ． α 1-α
@@ -5737,19 +5605,19 @@ x
 α 1-α O F (m，n) F (m，n)
 α 1-α </p>
 <p> 10 
-例1 设 X ，X ，...，X 是来自总体 N(0，0.32)的样本，求 P  X 2  1.44 ．
+例1 设 X ，X ，...，X 是来自总体 N(0，0.32)的样本，求 P \sum X 2 &gt; 1.44 ．
  
 1 2 10 i
  
 i=1
 2
-10  X - μ  10 X 2
-解 因为  i =  i \sim χ2(10)，所以
+10  X - \mu  10 X 2
+解 因为 \sum i = \sum i \sim χ2(10)，所以
  
- σ  0.32
+ \sigma   0.32
 i=1 i=1
  10   10 X 2 1.44
-P  X 2  1.44 = P  i   = P{χ2(10)  16}
+P \sum X 2 &gt; 1.44 = P \sum i &gt;  = P{χ2(10) &gt; 16}
 i 0.32 0.32
    
 i=1 i=1
@@ -5802,12 +5670,12 @@ i=1 i=1
 矩估计
 点估计方法
 最大似然估计 (极大似然估计) </p>
-<p>假设 θ = (θ ，θ ，...，θ ) 为总体 X 的待估参数， 原理：A pm
+<p>假设 θ = (θ ，θ ，...，θ ) 为总体 X 的待估参数， 原理：A p\tom
 1 2 l
 k k
  A = m
 1 1 1 n
- A =  X k
+ A = \sum X k
 A = m
 
 k i
@@ -5825,46 +5693,46 @@ l l
 1 2 l 1 2 l
 量为矩估计量，相应的观察值称为矩估计值．
 注 具体求解中只需掌握 l = 1，2的情形． </p>
-<p>例1 设 X ，X ，...，X 为总体 X 的一样本，而 X 的期望 μ 和方差 σ2
+<p>例1 设 X ，X ，...，X 为总体 X 的一样本，而 X 的期望 \mu 和方差 \sigma 2
 1 2 n
-都存在但未知，试求 μ 和 σ2 的矩估计量．
+都存在但未知，试求 \mu 和 \sigma 2 的矩估计量．
  A = m ， 1 n 1 n
-解 令 1 1 而 A =  X = X ，A =  X 2，
+解 令 1 1 而 A = \sum X = X ，A = \sum X 2，
 
 1 i 2 i
 A = m ， n n
 
 2 2 i=1 i=1
-m = E(X ) = μ， m = E(X 2) = D(X )  E2(X ) = σ2  μ2，
+m = E(X ) = \mu， m = E(X 2) = D(X ) + E2(X ) = \sigma 2 + \mu2，
 1 2
-μˆ = X = A ， 倒推可证
+\muˆ = X = A ， 倒推可证
 1
 所以得
 1 n 1 n
-σˆ2 =  X 2 - X 2 = (X - X )2 = S2 ．
+\sigma ˆ2 = \sum X 2 - X 2 = \sum(X - X )2 = S2 ．
 i i
 n n
 i=1 i=1
 注 上述结果表明，总体期望的矩估计量为样本的均值，总体方差的矩
 估计量为样本的二阶中心矩． </p>
-<p>例2 设总体 X \sim P(λ)，λ 未知，X ，X ，...，X 是 X 的一个样本，
+<p>例2 设总体 X \sim P(\lambda)，\lambda 未知，X ，X ，...，X 是 X 的一个样本，
 1 2 n
-求 λ 的矩估计量．
-解 因为 E(X ) = λ ，D(X ) = λ ，由例1的结论：
+求 \lambda 的矩估计量．
+解 因为 E(X ) = \lambda ，D(X ) = \lambda ，由例1的结论：
 总体期望的矩估计量为样本的均值，从而可得
 ˆ
-λ = X ，
+\lambda = X ，
 总体方差的矩估计量为样本的二阶中心矩，从而可得
 1 n
 ˆ 
-λ = (X - X )2 = S2 ，
+\lambda = \sum(X - X )2 = S2 ，
 i
 n
 i=1
 即该待估参数有两个不同的矩估计量． </p>
 <p>例3 设总体 X \sim U[a，b]，其中a，b 为未知参数，试求 a，b 的矩估计量．
 ˆ
-aˆ  b
+aˆ + b
 = X ，
 
  2
@@ -5877,12 +5745,12 @@ i=1
 
  12
 ˆ 
-aˆ  b = 2X ， aˆ = X - 3S，
+aˆ + b = 2X ， aˆ = X - 3S，
  
  
  
 ˆ  ˆ 
-b - aˆ = 2 3S， b = X  3S．
+b - aˆ = 2 3S， b = X + 3S．
   </p>
 <p>平均体重θ：
 原理：大概率事件易发生
@@ -5905,54 +5773,54 @@ i=1
 <p>例4 设总体 X \sim B(1，p)，p未知，求 p 的最大似然估计量．
 解 因 X \sim P{X = x} = px(1- p)1-x，x = 0，1，则似然函数
 n n
-n n  
+n n \sum \sum
 x n- x
 L( p) =  p(x ；p) =  pxi (1- p)1-xi = p i (1- p) i ，
 i=1 i=1
 i
 i=1 i=1
  n   n 
-取对数 ln L( p) =  x ln p  n -  x ln(1- p)，
+取对数 ln L( p) = \sum x ln p + n - \sum x ln(1- p)，
    
 i i
    
 i=1 i=1
 dln L( p) 1 n
-令 = 0  p =  x ，
+令 = 0  p = \sum x ，
 i
 dp n
 i=1
 1 n
-所以 p 的最大似然估计量为 pˆ =  X = X ．
+所以 p 的最大似然估计量为 pˆ = \sum X = X ．
 i
 n
 i=1 </p>
-<p>例5 设总体X \sim P(λ)，λ未知，求 λ 的最大似然估计量．
-λx
-解 因 X \sim P{X = x} = e-λ，x = 0，1，2，...， 则似然函数
+<p>例5 设总体X \sim P(\lambda)，\lambda未知，求 \lambda 的最大似然估计量．
+\lambdax
+解 因 X \sim P{X = x} = e-\lambda，x = 0，1，2，...， 则似然函数
 x!
 n
-
+\sum
 x
 i
-n n λxi λi=1
-L(λ) =  p(x ；λ) =  e-λ= e-nλ，
+n n \lambdaxi \lambdai=1
+L(\lambda) =  p(x ；\lambda) =  e-\lambda= e-n\lambda，
 i
-x ! x ! x !...x !
+x ! x !\cdot  x !...x !
 i=1 i=1 i 1 2 n
  n  n
-取对数 ln L(λ) =  x ln λ - nλ - ln(x !)，
+取对数 ln L(\lambda) = \sum x ln \lambda - n\lambda - \sumln(x !)，
  
 i i
  
 i=1 i=1
-dln L(λ) 1 n 1 n
-令 =  x - n = 0  λ =  x ，
-dλ λ i n i
+dln L(\lambda) 1 n 1 n
+令 = \sum x - n = 0  \lambda = \sum x ，
+d\lambda \lambda i n i
 i=1 i=1
 1 n
 ˆ
-所以 λ 的最大似然估计量为 λ =  X = X ．
+所以 \lambda 的最大似然估计量为 \lambda = \sum X = X ．
 i
 n
 i=1 </p>
@@ -5977,7 +5845,7 @@ P 2 2(1-) (1-)2
 (1，2，1) 为来自总体的一个样本，求 θ 的最大似然估计．
 解 样本中出现了2个1，1个2，0个3，即 n = 2，n = 1，n = 0
 1 2 3
-L() = 2 2 2(1-)1  (1-)2 0 = 25 - 26
+L() = 2 2 \cdot 2(1-)1 \cdot  (1-)2 0 = 25 - 26
    
 5
 L() = 104 -125 = 0 解得 ˆ = 0 (舍) 或 ˆ = ．
@@ -5989,72 +5857,72 @@ P p2 2p(1- p) p2 1- 2p  2 
 (1，3，0，2，3，3，1，3) 为来自总体的一个样本，求 p 的最大似然估计．
 解 n = 1，n = 2，n = 1，n = 4
 0 1 2 3
-L( p) =  p2 1 2 p(1- p)2   p2 1 1- 2 p4= 4 p6(1- p)2(1- 2 p)4
+L( p) =  p2 1 \cdot 2 p(1- p)2 \cdot   p2 1 \cdot 1- 2 p4= 4 p6(1- p)2(1- 2 p)4
    
-ln L( p) = ln 4  6ln p  2ln(1- p)  4ln(1- 2 p)
+ln L( p) = ln 4 + 6ln p + 2ln(1- p) + 4ln(1- 2 p)
 dln L( p) 6 2 8 7 - 13
-= - - = 0，得 12 p2 -14 p  3 = 0，pˆ =  0.2829
+= - - = 0，得 12 p2 -14 p + 3 = 0，pˆ =  0.2829
 dp p 1- p 1- 2 p 12 </p>
-<p>例8 设总体X \sim E(λ)，λ未知，求 λ 的最大似然估计量．
-λe-λx， x  0，
-解 因 X \sim f (x；λ) =  则似然函数
+<p>例8 设总体X \sim E(\lambda)，\lambda未知，求 \lambda 的最大似然估计量．
+\lambdae-\lambdax， x \ge 0，
+解 因 X \sim f (x；\lambda) =  则似然函数
 0， x &lt; 0，
 
   n 
-n λn exp -λ x ， x ，...，x  0，
+n \lambdan exp -\lambda\sum x ， x ，...，x \ge 0，
   
-L(λ) =  f (x ；λ) = i 1 n
+L(\lambda) =  f (x ；\lambda) = i 1 n
   
 i i=1
 i=1 
 0， 其它，
 
-dln L(λ) n 1
-两边取对数并令 = 0  λ = n  x = ，
+dln L(\lambda) n 1
+两边取对数并令 = 0  \lambda = n \sum x = ，
 i
-dλ x
+d\lambda x
 i=1
 n 1
 ˆ
-所以λ 的最大似然估计量为 λ = n  X = ．
+所以\lambda 的最大似然估计量为 \lambda = n \sum X = ．
 i
 X
 i=1 </p>
-<p>例9 设总体X \sim N(μ，σ2)，μ，σ2 未知，求 μ，σ2的最大似然估计量．
+<p>例9 设总体X \sim N(\mu，\sigma 2)，\mu，\sigma 2 未知，求 \mu，\sigma 2的最大似然估计量．
 2
-1 (x-μ)
+1 (x-\mu)
 -
-解 因 X \sim f (x; μ，σ2) = e 2 ， x \in \R，
-2σ
-2πσ
+解 因 X \sim f (x; \mu，\sigma 2) = e 2 ， x \in \R，
+2\sigma 
+2\pi\sigma 
 n  1 n 
-则似然函数 L(μ，σ2) =  f (x ; μ，σ2) = (2πσ2)-n exp - (x - μ)2 ，
+则似然函数 L(\mu，\sigma 2) =  f (x ; \mu，\sigma 2) = (2\pi\sigma 2)-n exp - \sum(x - \mu)2 ，
 2  
-i 2σ2 i
+i 2\sigma 2 i
  
 i=1 i=1
 n 1 n
-取对数 ln L(μ，σ2) = - (ln 2π  ln σ2) - (x - μ)2，
-2 2σ2 i
+取对数 ln L(\mu，\sigma 2) = - (ln 2\pi + ln \sigma 2) - \sum(x - \mu)2，
+2 2\sigma 2 i
 i=1 </p>
-<p>例9 设总体X \sim N(μ，σ2)，μ，σ2 未知，求 μ，σ2的最大似然估计量．
+<p>例9 设总体X \sim N(\mu，\sigma 2)，\mu，\sigma 2 未知，求 \mu，\sigma 2的最大似然估计量．
   1 n
-[ln L(μ，σ2)] = (x - μ) = 0， (1)
+[ln L(\mu，\sigma 2)] = \sum(x - \mu) = 0， (1)
 
 2 i
-μ σ
+\mu \sigma 
 
 i=1
 令 
  n 1 n
 
-[ln L(μ，σ2)] = -  (x - μ)2 = 0，
+[ln L(\mu，\sigma 2)] = - + \sum(x - \mu)2 = 0，
 (2)
- σ2 2σ2 2σ4 i
+ \sigma 2 2\sigma 2 2\sigma 4 i
 
 i=1
 1 n 1 n
-由(1)式得 μ =  x = x，代入(2)得 σ2 = (x - x)2，
+由(1)式得 \mu = \sum x = x，代入(2)得 \sigma 2 = \sum(x - x)2，
 i
 n i
 n
@@ -6062,21 +5930,21 @@ i=1
 i=1
 1 n 1 n
 
-μˆ =  X = X ， σˆ2 = (X - X )2 = S2 ．
+\muˆ = \sum X = X ， \sigma ˆ2 = \sum(X - X )2 = S2 ．
 所以
 i i
 n n
 i=1 i=1 </p>
-<p>e-(x-)， x ，
+<p>e-(x-)， x \ge，
 例10 设总体 X \sim f (x;) = θ 未知，求 θ 的最大似然
 
 0， x &lt;，
 
 估计量．
  n
-
+\sum
 n  n- xi
-解 似然函数 L(θ) =  f (x ;θ) = e i=1 ， x ，...，x ，
+解 似然函数 L(θ) =  f (x ;θ) = e i=1 ， x ，...，x \ge，
 
 1 n
 i
@@ -6084,7 +5952,7 @@ i
 i=1 0， 其它，
 
  n
-
+\sum
 n- x
 n i
 
@@ -6123,7 +5991,7 @@ i=1 
 0， 其它，
 
  1
-n ， a \leq min{x }，b  max{x }，
+n ， a \leq min{x }，b \ge max{x }，
 
 L(a，b) =  f (x ；a，b) = (b - a)n 1\leqi\leqn i 1\leqi\leqn i
 i
@@ -6153,56 +6021,56 @@ i i
 1 2 1 2 1 2
 有效．
 三、相合性
-定义3 设ˆ是的估计量，若ˆ p (n  )， 则称ˆ 是的相合
+定义3 设ˆ是的估计量，若ˆ p\to (n \to \infty)， 则称ˆ 是的相合
 估计量． </p>
-<p>例1 证明：样本均值 X 是总体期望 μ 的无偏估计量，样本方差 S2 是
-总体方差 σ2 的无偏估计量．
+<p>例1 证明：样本均值 X 是总体期望 \mu 的无偏估计量，样本方差 S2 是
+总体方差 \sigma 2 的无偏估计量．
  1 n  1
-证 因为 E(X ) = E  X =  nμ = μ，所以 X 是 μ 的无偏估计量．
+证 因为 E(X ) = E \sum X = \cdot  n\mu = \mu，所以 X 是 \mu 的无偏估计量．
  
 n i n
  
 i=1
  1 n  1  n 
-又 E(S2) = E (X - X )2 = E  X 2 - nX 2 ，
+又 E(S2) = E \sum(X - X )2 = E \sum X 2 - nX 2 ，
    
 i i
 n -1 n -1
    
 i=1 i=1
-而 E(X 2) = D(X )  E2(X ) = σ2  μ2，E(X 2) = D(X )  E2(X ) = σ2 n  μ2，
+而 E(X 2) = D(X ) + E2(X ) = \sigma 2 + \mu2，E(X 2) = D(X ) + E2(X ) = \sigma 2 n + \mu2，
 i i i
 1
-则 E(S2) = [n(σ2  μ2) - n(σ2 n  μ2)] = σ2，
+则 E(S2) = [n(\sigma 2 + \mu2) - n(\sigma 2 n + \mu2)] = \sigma 2，
 n -1
-所以 S2 是 σ2 的无偏估计量． </p>
+所以 S2 是 \sigma 2 的无偏估计量． </p>
 <p>n -1
-由于 S2 是 σ2 的无偏估计量， 且 S2 = S2 ，
+由于 S2 是 \sigma 2 的无偏估计量， 且 S2 = S2 ，
 n
 n -1 n -1
-因此 E(S2) = E(S2) = σ2 ， 所以 S2 不是 σ2 的无偏估计量．
+因此 E(S2) = E(S2) = \sigma 2 ， 所以 S2 不是 \sigma 2 的无偏估计量．
 n n
-注意 虽然 S2 是 σ2 的无偏估计量， 但是 S 并不是 σ 的无偏估计量．
+注意 虽然 S2 是 \sigma 2 的无偏估计量， 但是 S 并不是 \sigma  的无偏估计量．
 事实上，由于 D(S) = E(S2) - E2(S) ，得
-E(S) = E(S2) - D(S) = σ2 - D(S)  σ </p>
-<p>例2 设 (X ，X ，X ) 为来自总体 N(μ，1) 的一个样本， μ 未知，
+E(S) = E(S2) - D(S) = \sigma 2 - D(S)  \sigma  </p>
+<p>例2 设 (X ，X ，X ) 为来自总体 N(\mu，1) 的一个样本， \mu 未知，
 1 2 3
-则下列 μ 的无偏估计量中最有效的是 (         )．
+则下列 \mu 的无偏估计量中最有效的是 (         )．
 1 1 1 1 1 1
-(A) X  X  X ； (B) X  X  X ；
+(A) X + X + X ； (B) X + X + X ；
 1 2 3 1 2 3
 2 3 6 2 4 4
 1 1 1
-(C) X  X  X ； (D) X  X - X ．
+(C) X + X + X ； (D) X + X - X ．
 1 2 3 1 2 3
 3 3 3
  1 1 1  1 1 1 7  1 1 1  3
-解 D X  X  X =   = ； D X  X  X = ；
+解 D X + X + X = + + = ； D X + X + X = ；
    
 1 2 3 1 2 3
  2 3 6  4 9 36 18  2 4 4  8
  1 1 1  1
-D X  X  X = ； D X  X - X  = 3．
+D X + X + X = ； D X + X - X  = 3．
  
 1 2 3 1 2 3
  3 3 3  3 </p>
@@ -6227,32 +6095,32 @@ P{ \leq\leq} —可信程度 E( -) —精确程度
 1 1 n 2 1 n 1 2
 则称[θ ，θ ]为 θ 的置信度为 1- α 的置信区间．
 1 2
-引例 设总体 X \sim N(μ，σ2)，其中 σ = σ 已知， μ 未知，X ，...，X
+引例 设总体 X \sim N(\mu，\sigma 2)，其中 \sigma  = \sigma  已知， \mu 未知，X ，...，X
 0 1 n
-是 X 的样本，求 μ 的置信度为1- α 的置信区间． </p>
-<p>引例 设总体 X \sim N(μ，σ2)，其中 σ = σ 已知，μ 未知，X ，...，X
+是 X 的样本，求 \mu 的置信度为1- α 的置信区间． </p>
+<p>引例 设总体 X \sim N(\mu，\sigma 2)，其中 \sigma  = \sigma  已知，\mu 未知，X ，...，X
 0 1 n
-是 X 的样本，求 μ 的置信度为1- α 的置信区间．
-X - μ
-解 因 σ = σ 已知，则由抽样分布知 U = n 只包含未知参数 μ 且
+是 X 的样本，求 \mu 的置信度为1- α 的置信区间．
+X - \mu
+解 因 \sigma  = \sigma  已知，则由抽样分布知 U = n 只包含未知参数 \mu 且
 0
-σ
+\sigma 
 服从 N(0，1) ，现需找一尽量短的区间，使得U落在该区间内的概率为1- α．
 y
 由分位数的定义知 P{-u \leq U \leq u } = 1- α，
-φ(x)
+\varphi(x)
 1-α/2 1-α/2
 α / 2 α / 2
- X - μ 
+ X - \mu 
 即 P -u \leq n \leq u = 1- α，
  
 x
 1-α/2 1-α/2
-σ -u O u
+\sigma  -u O u
  
 1-α/2 1-α/2
- σ σ 
-因此 μ 的置信度为1- α 的置信区间为 X - u ，X  u ．
+ \sigma  \sigma  
+因此 \mu 的置信度为1- α 的置信区间为 X - u ，X + u ．
  
 1-α/2 1-α/2
  n n  </p>
@@ -6264,25 +6132,25 @@ x
 ③ 从 a \leq U \leq b 中得到等价不等式 θ \leq θ \leq θ ，则[θ ，θ ] 就是 θ 的置信
 1 2 1 2
 度为 1- α 的置信区间． </p>
-<p>设总体 X \sim N(μ，σ2)，X ，X ，...，X 是 X 的一个样本，对给定置信度
+<p>设总体 X \sim N(\mu，\sigma 2)，X ，X ，...，X 是 X 的一个样本，对给定置信度
 1 2 n
-1- α ，求 μ 和 σ2 的置信区间．
- μ的置信区间
-1) 当 σ 2 已知时
-由引例可知， μ 的置信度为1- α 的置信区间为
- σ σ 
-X - u ，X  u ．
+1- α ，求 \mu 和 \sigma 2 的置信区间．
+ \mu的置信区间
+1) 当 \sigma  2 已知时
+由引例可知， \mu 的置信度为1- α 的置信区间为
+ \sigma  \sigma  
+X - u ，X + u ．
  
 1-α/2 1-α/2
  n n  </p>
-<p>2)当 σ 2 未知时
-因为S 2是σ 2 的无偏估计，所以可以用S 代替 σ，则由抽样分布知
-X - μ X - μ
+<p>2)当 \sigma  2 未知时
+因为S 2是\sigma  2 的无偏估计，所以可以用S 代替 \sigma ，则由抽样分布知
+X - \mu X - \mu
 T = n \sim t(n -1)， U = n \sim N(0，1)
-S σ
+S \sigma 
 由分位数 P{-t (n -1) \leq T \leq t (n -1)} =1- α，
 1-α/2 1-α/2
- X - μ 
+ X - \mu 
 即 P -t (n -1) \leq n \leq t (n -1) = 1- α，
  
 1-α/2 1-α/2
@@ -6290,37 +6158,37 @@ S
  
 y
 f (x)
-所以 μ 的置信度为1- α 的置信区间为 t
+所以 \mu 的置信度为1- α 的置信区间为 t
 α / 2 α / 2
  S S 
-X - t (n -1)，X  t (n -1) ． O
+X - t (n -1)，X + t (n -1) ． O
 x
  
 1-α/2 1-α/2
  n n  -t t (n -1)
 1-α/2
 1-α/2 </p>
-<p>例1 某厂生产的节能灯寿命X \sim N(μ，8)，从生产的一批
+<p>例1 某厂生产的节能灯寿命X \sim N(\mu，8)，从生产的一批
 灯中抽取10只作寿命测试，数据如下(小时)：
 1050，1100，1080，1120，1200，1250，1040，1130，1300，1200
 试估计这批节能灯平均寿命的范围 ( α   =   0  . 0  5  )．
 解 这是在方差已知的情况下对期望进行区间估计．
 因为 X = 1147，u = u =1.96，从而可得
 1-α/2 0.975
-σ
-σ
-X - u = 1145.25， X  u = 1148.75，
+\sigma 
+\sigma 
+X - u = 1145.25， X + u = 1148.75，
 1-α/2 1-α/2
 n n
-所以这批节能灯平均寿命 μ在0.95的置信水平下的置信区间为
-1145.25，1148.75．(区间长度为3.5)  σ σ 
-X - u ，X  u
+所以这批节能灯平均寿命 \mu在0.95的置信水平下的置信区间为
+1145.25，1148.75．(区间长度为3.5)  \sigma  \sigma  
+X - u ，X + u
  
 1-α/2 1-α/2
  n n  </p>
-<p>例2 若例1中的方差未知，求这批节能灯平均寿命 μ 的置信水平为0.95的
+<p>例2 若例1中的方差未知，求这批节能灯平均寿命 \mu 的置信水平为0.95的
  S S 
-置信区间． X - t (n -1)，X  t (n -1)
+置信区间． X - t (n -1)，X + t (n -1)
  
 1-α/2 1-α/2
  n n 
@@ -6329,57 +6197,57 @@ S = S2  87.06，类似得置信水平为0.95的置信区间为1084.72，12
 (长度为124.56)
 注 例2表明，由于对总体的了解少了(方差未知)，因而在相同的置信水
 平下估计的效果也就差很多． </p>
-<p>σ2 的置信区间
-1) 当 μ 已知时
+<p>\sigma 2 的置信区间
+1) 当 \mu 已知时
 1 n
-因 μ = μ 已知，则由抽样分布知 χ2 = (X - μ)2 只包含未知参数
-0 σ2 i
+因 \mu = \mu 已知，则由抽样分布知 χ2 = \sum(X - \mu)2 只包含未知参数
+0 \sigma 2 i
 i=1
-σ2 且服从 χ2(n)，现需找一尽量短的区间，使得 χ2落在该区间内的概率
+\sigma 2 且服从 χ2(n)，现需找一尽量短的区间，使得 χ2落在该区间内的概率
 为1- α．
 非最短区间，但易求!
 由分位数定义 P{χ2 (n) \leq χ2 \leq χ2 (n)} =1- α，
 α/2 1-α/2 y
 f (x)
-所以 σ2 的置信度为 1- α 的置信区间为： 2α / 2
+所以 \sigma 2 的置信度为 1- α 的置信区间为： 2α / 2
 α / 2
  n n  x
-(X - μ)2 / χ2 (n)，(X - μ)2 / χ2 (n) ． O χ2 (n) χ2 (n)
+\sum(X - \mu)2 / χ2 (n)，\sum(X - \mu)2 / χ2 (n) ． O χ2 (n) χ2 (n)
  
 i 1-α/2 i α/2 α/2 1-α/2
  
 i=1 i=1 </p>
-<p>2) 当 μ 未知时
+<p>2) 当 \mu 未知时
 1 n  n n 
-χ2 = (X - μ)2 \sim χ2(n) (X - μ)2 / χ2 (n)，(X - μ)2 / χ2 (n)
+χ2 = \sum(X - \mu)2 \sim χ2(n) \sum(X - \mu)2 / χ2 (n)，\sum(X - \mu)2 / χ2 (n)
  
-σ2 i  i 1-α/2 i α/2 
+\sigma 2 i  i 1-α/2 i α/2 
 i=1 i=1 i=1
-因为 是 μ 的无偏估计，所以可以用 代替 μ ，则由抽样分布知
+因为 是 \mu 的无偏估计，所以可以用 代替 \mu ，则由抽样分布知
 X X
 (n -1)S2 1 n
-= (X - X )2 \sim χ2(n -1) ，
-σ2 σ2 i
+= \sum(X - X )2 \sim χ2(n -1) ，
+\sigma 2 \sigma 2 i
 i=1
-类似可得 σ2 的置信度为1- α 的置信区间为：
+类似可得 \sigma 2 的置信度为1- α 的置信区间为：
  n n 
-(X - X )2 / χ2 (n -1)，(X - X )2 / χ2 (n -1) ．
+\sum(X - X )2 / χ2 (n -1)，\sum(X - X )2 / χ2 (n -1) ．
  
 i 1-α/2 i α/2
  
 i=1 i=1 </p>
-<p>例3 从总体 X \sim N(0 ，σ2) 中抽取一个容量为4的样本：
+<p>例3 从总体 X \sim N(0 ，\sigma 2) 中抽取一个容量为4的样本：
 1.3   −2.78    0.06    1.98
-试求 σ2 的置信水平为0.95的置信区间．
+试求 \sigma 2 的置信水平为0.95的置信区间．
 解 这是在期望已知的情况下对方差进行区间估计．
 4
-因为 (x - 0)2 =13.34 ， χ2 (n) = 0.484 ，
+因为 \sum(x - 0)2 =13.34 ， χ2 (n) = 0.484 ，
 i α/2
 i=1
-χ2 (n) = 11.143 ， 所以可得 σ2 置信水平为0.95的置信区间为
+χ2 (n) = 11.143 ， 所以可得 \sigma 2 置信水平为0.95的置信区间为
 1-α/2
 1.20，27.56．  n n 
-(X - μ)2 / χ2 (n)，(X - μ)2 / χ2 (n)
+\sum(X - \mu)2 / χ2 (n)，\sum(X - \mu)2 / χ2 (n)
  
 i 1-α/2 i α/2
  
@@ -6429,24 +6297,24 @@ P 接受H | H 不真 = β
 引例 某厂正常情况下生产灯泡寿命X \sim N(1600，802)，现从一批灯泡
 中抽取10个，测得它们的平均寿命 x = 1548， 若灯泡使用寿命的标准差
 不变，在显著性水平 α = 0.05 的条件下，能否认为该厂的生产正常? </p>
-<p>解 由题意，要检验假设 H ：μ = μ = 1600，H ：μ  1600，
+<p>解 由题意，要检验假设 H ：\mu = \mu = 1600，H ：\mu  1600，
 0 0 1
-因 X 是 μ 的无偏估计，所以用 X 来检验 H 是合理的．
+因 X 是 \mu 的无偏估计，所以用 X 来检验 H 是合理的．
 0 
-X - μ
+X - \mu
 在H 成立的条件下，统计量U = 0 n \sim N(0，1)，若 H 不真，
 0 0 
-σ
-则 U 一般会很大，于是由 P{U  u }  = α，得拒绝域
+\sigma 
+则 U 一般会很大，于是由 P{U &gt; u }  = α，得拒绝域
 1-α/2
 { } 
-W = U  u 或U &lt; -u ．
+W = U &gt; u 或U &lt; -u ．
 “小概率事件”
 1-α/2 1-α/2
 1548 -1600
 y
 因 u = 10  -2.06 &lt; -u = -1.96，
-φ(x)
+\varphi(x)
 0.975
 80
 α / 2 α / 2
@@ -6468,45 +6336,45 @@ x
 <p>本节主要内容
 一、期望的假设检验
 二、方差的假设检验 </p>
-<p>X - μ
-当σ 2 已知时 —U检验 U = 0 n \sim N(0，1)
-σ
-(a) H ：μ = μ ，H ：μ  μ ； (双侧) y
-0 0 1 0 φ(x)
+<p>X - \mu
+当\sigma  2 已知时 —U检验 U = 0 n \sim N(0，1)
+\sigma 
+(a) H ：\mu = \mu ，H ：\mu  \mu ； (双侧) y
+0 0 1 0 \varphi(x)
 α / 2 α / 2
-W = {U  u 或U &lt; -u }．
+W = {U &gt; u 或U &lt; -u }．
 1-α/2 1-α/2
 x
 -u O u
-(b) H ：μ \leq μ ，H ：μ  μ ； (单侧) 1-α/2 1-α/2
+(b) H ：\mu \leq \mu ，H ：\mu &gt; \mu ； (单侧) 1-α/2 1-α/2
 0 0 1 0
-W = {U  u }． y
-1-α φ(x)
+W = {U &gt; u }． y
+1-α \varphi(x)
 α
-(c) H ：μ  μ ，H ：μ &lt; μ ；(单侧)
+(c) H ：\mu \ge \mu ，H ：\mu &lt; \mu ；(单侧)
 0 0 1 0
 x
 W = {U &lt; -u }． O u
 1-α
 1-α </p>
-<p>X - μ
-当σ 2未知时 —T检验 T = 0 n \sim t(n -1)
+<p>X - \mu
+当\sigma  2未知时 —T检验 T = 0 n \sim t(n -1)
 S
-(a) H ：μ = μ ，H ：μ  μ ；
+(a) H ：\mu = \mu ，H ：\mu  \mu ；
 0 0 1 0
 { } 
-W = T  t (n -1) 或T &lt; -t (n -1) ．
+W = T &gt; t (n -1) 或T &lt; -t (n -1) ．
 y
 1-α/2 1-α/2
 f (x)
 t
-(b) H ：μ \leq μ ，H ：μ  μ ； α / 2 α / 2
+(b) H ：\mu \leq \mu ，H ：\mu &gt; \mu ； α / 2 α / 2
 0 0 1 0
-W = {T  t (n -1)} ．
+W = {T &gt; t (n -1)} ．
 x
 1-α -t O t (n -1)
 1-α/2 1-α/2
-(c) H ：μ  μ ，H ：μ &lt; μ ；
+(c) H ：\mu \ge \mu ，H ：\mu &lt; \mu ；
 y
 0 0 1 0 f (x)
 t
@@ -6518,17 +6386,17 @@ x
 0  1-α </p>
 <p>例1 厂商称他们的装潢材料抗断强度X \sim N(3.25，1.21)，现从中抽取9件
 进行检验，测得平均抗断强度为3.15，问能否接受该厂商的说法? (α = 0.05)
-解 由题意，要检验假设 H ：μ = μ = 3.25，H ：μ  3.25，
+解 由题意，要检验假设 H ：\mu = \mu = 3.25，H ：\mu  3.25，
 0 0 1
 因为是在方差已知的情况下对期望进行假设检验， 所以使用 U 检验，
-X - μ
+X - \mu
 即 U = 0 n \sim N(0，1)，从而可得拒绝域
-σ
+\sigma 
 { } 
-W = U  u 或U &lt; -u ．
+W = U &gt; u 或U &lt; -u ．
 1-α/2 1-α/2
 3.15 - 3.25
-因 1.96 = u  u = 9  -0.273  -u = -1.96，
+因 1.96 = u &gt; u = 9  -0.273 &gt; -u = -1.96，
 0.975 0.975
 1.1
 所以接受H ，即认为该厂商的说法是正确的．
@@ -6537,10 +6405,10 @@ W = U  u 或U &lt; -u ．
 为15万元，已知这类企业广告播出后的收益量服从正态分布． 现抽取
 容量为20的样本，得平均收益量为13.2万元，标准差为3.4，试在显著
 性水平 α = 0.05 下，判断该广告部的说法是否正确?
-解 由题意，要检验假设 H ：μ  μ =15，H ：μ &lt;15，
+解 由题意，要检验假设 H ：\mu \ge \mu =15，H ：\mu &lt;15，
 0 0 1
 因为是在方差未知的情况下对期望进行假设检验， 所以使用 T 检验，
-X - μ
+X - \mu
 即 T = 0 n \sim t(n -1)， 拒绝域 W = {T &lt; -t (n -1)}，
 1-α
 S
@@ -6551,27 +6419,27 @@ S
 所以拒绝 H ，即认为该广告部的说法不正确．
 0 </p>
 <p>1 n
-χ2 = (X - μ)2 \sim χ2(n)
-1.当 μ 已知时 — 2(n) 检验
-σ2 i
+χ2 = \sum(X - \mu)2 \sim χ2(n)
+1.当 \mu 已知时 — 2(n) 检验
+\sigma 2 i
 0 i=1
-(a) H ：σ2 = σ2，H ：σ2  σ2；
+(a) H ：\sigma 2 = \sigma 2，H ：\sigma 2  \sigma 2；
 0 0 1 0
 { } 
-W = χ2  χ2 (n) 或 χ2 &lt; χ2 (n) ，
+W = χ2 &gt; χ2 (n) 或 χ2 &lt; χ2 (n) ，
 1-α/2 α/2 y
 f (x)
 χ2
-(b) H ：σ2 \leq σ2，H ：σ2  σ2； α / 2 α / 2
+(b) H ：\sigma 2 \leq \sigma 2，H ：\sigma 2 &gt; \sigma 2； α / 2 α / 2
 0 0 1 0
 { }  x
-W = χ2  χ2 (n) ，
+W = χ2 &gt; χ2 (n) ，
 O χ2 (n) χ2 (n)
 1-α
 α/2 1-α/2
 y
 f (x)
-(c) H ：σ2  σ2，H ：σ2 &lt; σ2； χ2
+(c) H ：\sigma 2 \ge \sigma 2，H ：\sigma 2 &lt; \sigma 2； χ2
 α
 0 0 1 0
 { } 
@@ -6580,24 +6448,24 @@ o
 α χ2 (n)
 1-α </p>
 <p>1 n
-2.当 μ 未知时 — 2(n -1)检验 χ2 = (X - X )2 \sim χ2(n -1)
-σ2 i
+2.当 \mu 未知时 — 2(n -1)检验 χ2 = \sum(X - X )2 \sim χ2(n -1)
+\sigma 2 i
 0 i=1
-(a) H ：σ2 = σ2，H ：σ2  σ2；
+(a) H ：\sigma 2 = \sigma 2，H ：\sigma 2  \sigma 2；
 0 0 1 0
-W = {χ2  χ2 (n -1) 或 χ2 &lt; χ2 (n -1)}，
+W = {χ2 &gt; χ2 (n -1) 或 χ2 &lt; χ2 (n -1)}，
 1-α/2 α/2
 y
 f (x)
-(b) H ：σ2 \leq σ2，H ：σ2  σ2； 2α / 2
+(b) H ：\sigma 2 \leq \sigma 2，H ：\sigma 2 &gt; \sigma 2； 2α / 2
 α / 2
 0 0 1 0
-W = {χ2  χ2 (n -1)}， x
+W = {χ2 &gt; χ2 (n -1)}， x
 o χ2
 1-α χ2 (n -1)
 α/2
 1-α/2
-(c) H ：σ2  σ2，H ：σ2 &lt; σ2； y
+(c) H ：\sigma 2 \ge \sigma 2，H ：\sigma 2 &lt; \sigma 2； y
 f (x)
 0 0 1 0
 2
@@ -6609,18 +6477,18 @@ o
 χ2(n -1)
 注 双侧检验的接受域即为置信区间．
 α </p>
-<p>例3 某车间生产的金属丝的折断力X \sim N(μ，64)，现从一批产品中抽出
+<p>例3 某车间生产的金属丝的折断力X \sim N(\mu，64)，现从一批产品中抽出
 10根作折断力试验，结果如下：
 578，572，570，568，572，570，572，596，584，570
 问能否认为这批金属丝的折断力方差仍为64? (α = 0.05)
-解 由题意，要检验假设 H ：σ2 = σ2 = 64；H ：σ2  64，因为是在期望
+解 由题意，要检验假设 H ：\sigma 2 = \sigma 2 = 64；H ：\sigma 2  64，因为是在期望
 0 0 1
 未知的情况下对方差进行假设检验，所以使用 χ2(n -1) 检验，即
 1 n
-χ2 = (X - X )2 \sim χ2(n -1)，从而可得
-σ2 i
+χ2 = \sum(X - X )2 \sim χ2(n -1)，从而可得
+\sigma 2 i
 0 i=1
-拒绝域 W ={χ2  χ2 (n -1)或 χ2 &lt; χ2 (n -1)}．
+拒绝域 W ={χ2 &gt; χ2 (n -1)或 χ2 &lt; χ2 (n -1)}．
 1-α/2 α/2
 由于 2.7 = 2 &lt; 2 10.65 &lt; 2 =19.02，
 0.025 0.975
@@ -6630,14 +6498,14 @@ o
 今从一批产品中抽出25个， 测得其熔化时间的方差为388.58．已知保险
 丝熔化时间服从正态分布，试根据所给数据，检验这批产品是否符合
 要求? (α = 0.05)
-解 由题意，要检验假设 H ：σ2 \leq σ2 = 400；H ：σ2  400，
+解 由题意，要检验假设 H ：\sigma 2 \leq \sigma 2 = 400；H ：\sigma 2 &gt; 400，
 0 0 1
 因为在期望未知的情况下对方差进行假设检验，所以使用2(n -1) 检验，
 1 n
 { } 
-χ2 = (X - X )2 \sim χ2(n -1)，从而可得拒绝域 W = χ2  χ2 (n -1) ．
+χ2 = \sum(X - X )2 \sim χ2(n -1)，从而可得拒绝域 W = χ2 &gt; χ2 (n -1) ．
 即
-σ2 i 1-α
+\sigma 2 i 1-α
 0 i=1
 由于 χ2  23.31 &lt; χ2 (24) = 36.42，
 0.95
