@@ -2908,17 +2908,17 @@ $$</p>
 “既发热又干咳”— 0.05， “无上述现象”— 0.0001
 现对某疫区25000人检查发现：“仅发热”—500人，
 “仅干咳”—1000人， “既发热又干咳”—250人，求
-①疫区中任取一人，他为该传染病患者的概率；
-②某人为该传染病患者，计算他临床表现为“仅发热”的概率． 
+-疫区中任取一人，他为该传染病患者的概率；
+-某人为该传染病患者，计算他临床表现为“仅发热”的概率． 
 
 解 设 A={仅发热病人}，B={仅干咳病人}，C={既发热又干咳病人}，
 D={无明显症状的病人}，E={得了该传染病}
-①由全概率公式得：
+-由全概率公式得：
 P(E) = P(A)P(E | A) + P(B)P(E | B)+P(C)P(E | C) + P(D)P(E | D)
 500
 =  0.03 +... = 0.001593
 25000
-②由贝叶斯公式得：
+-由贝叶斯公式得：
 500
  0.03
 P(A)P(E | A)
@@ -3066,15 +3066,15 @@ P(A A ... A ) = P(A )P(A )...P(A )
 <p><strong>事件独立性的应用</strong></p>
 <p>加法公式的简化 若事件 <span class="arithmatex">\(A_1, A_2, ..., A_n\)</span> 相互独立， 则 <span class="arithmatex">\(P(A_1 \cup A_2 \cup ... \cup A_n ) =1 - P(\bar{A_1} \bar{A_2} ... \bar{A_n}) =1- P(\bar{A_1}) ... P(\bar{A_n})\)</span></p>
 <!-- 例12 用步枪射击飞机，每支步枪的命中率为0.004，
-求：① 现用250支步枪同时射击飞机一次，飞机被击中
+求：- 现用250支步枪同时射击飞机一次，飞机被击中
 的概率．
-② 假如想以99%的概率击中飞机，至少需要多少支步枪同时射击．
+- 假如想以99%的概率击中飞机，至少需要多少支步枪同时射击．
 解 设 A ={第 i 支步枪击中飞机}，
 i
-① P(A \cup A \cup...\cup A ) = 1- P(A )...P(A ) = 1- 0.996250  0.63，
+- P(A \cup A \cup...\cup A ) = 1- P(A )...P(A ) = 1- 0.996250  0.63，
 1 250
 1 2 250
-② 由 1- 0.996n \ge 0.99  n 1150． 
+- 由 1- 0.996n \ge 0.99  n 1150． 
 
 例13 如图，1、2、3、4、5表示继电器触点， 假设
 1 4
@@ -3683,10 +3683,10 @@ Y
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
-求：①常数C，F(x，y)，f (x)，f (y)；
+求：-常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
-解 ① 由规范性
+- P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
+解 - 由规范性
 C
 +\infty +\infty +\infty +\infty
 1= \int \int f (x，y)dxdy = \int \int Ce-2(x+y)dxdy = ．
@@ -3698,9 +3698,9 @@ C
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
-求：①常数C，F(x，y)，f (x)，f (y)；
+求：-常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
+- P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
  x y
 x y \int \int 4e-2(u+v)dvdu， x > 0，y > 0
 F(x，y) = \int \int f (u，v)dvdu =
@@ -3718,9 +3718,9 @@ F(x，y) = \int \int f (u，v)dvdu =
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
-求：①常数C，F(x，y)，f (x)，f (y)；
+求：-常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
+- P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
  +\infty
 +\infty \int 4e-2(x+y)dy， x > 0，
 f (x) = \int f (x，y)dy
@@ -3740,10 +3740,10 @@ X Y
 例2 设 (X ，Y )的联合概率密度函数为 f (x，y) = 
 0， 其它,
 
-求：①常数C，F(x，y)，f (x)，f (y)；
+求：-常数C，F(x，y)，f (x)，f (y)；
 X Y
-② P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
-② P\{(X ，Y )\in D\}  = \int\int f (x，y)dxdy y
+- P\{(X ，Y )\in D\} ，D由 x = 0，y = 0，x + y = 1 围成．
+- P\{(X ，Y )\in D\}  = \int\int f (x，y)dxdy y
 D
 x + y =1
 1 1-x
@@ -3756,13 +3756,13 @@ O x
 0， 其它，
 
  1 1 
-求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
+求：- 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
-②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+-求(X ，Y ) 的边缘概率密度函数及联合分布函数．
  1 1  1 1 15
 1 1
-解 ① P 0 < X < ， < Y < 1 = \int 2 \int 4xy dydx = \int 2 2xdx\int 2y dy = ，
+解 - P 0 < X < ， < Y < 1 = \int 2 \int 4xy dydx = \int 2 2xdx\int 2y dy = ，
 1 1
  2 4  0 0 64
 4 4
@@ -3781,12 +3781,12 @@ O 1
 0， 其它，
 
  1 1 
-求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
+求：- 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
-②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+-求(X ，Y ) 的边缘概率密度函数及联合分布函数．
 +\infty
-② f (x) = \int f (x，y)dy，当 x \leq 0 或 x \ge1 时，由于 f (x，y) = 0，得 f (x) = 0
+- f (x) = \int f (x，y)dy，当 x \leq 0 或 x \ge1 时，由于 f (x，y) = 0，得 f (x) = 0
 X X
 -\infty
 1
@@ -3804,10 +3804,10 @@ X  0， 其它， Y 0， 其它，
 0， 其它，
 
  1 1 
-求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
+求：- 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
-②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+-求(X ，Y ) 的边缘概率密度函数及联合分布函数．
 当 x \leq 0 或 y \leq 0 时， 有 F(x，y) = 0， x y
 F(x，y) = \int \int f (u，v)dvdu
 -\infty -\infty
@@ -3821,10 +3821,10 @@ F(x，y) = \int \int f (u，v)dvdu = \int \int 4uvdvdu = x2 y2，
 0， 其它，
 
  1 1 
-求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
+求：- 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
-②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+-求(X ，Y ) 的边缘概率密度函数及联合分布函数．
 x y x 1
 当0 < x < 1且 y \ge 1 时，F(x，y) = \int \int f (u，v)dvdu = \int \int 4uvdvdu = x2，
 -\infty -\infty 0 0
@@ -3840,10 +3840,10 @@ x y 1 1
 0， 其它，
 
  1 1 
-求：① 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
+求：- 求 P 0 < X < ， < Y < 1 及P\{X < Y\} ．
  
  2 4 
-②求(X ，Y ) 的边缘概率密度函数及联合分布函数．
+-求(X ，Y ) 的边缘概率密度函数及联合分布函数．
  0， x \leq 0 或 y \leq 0，
 
 x2 y2， 0 < x < 1，0 < y < 1，
@@ -3893,9 +3893,9 @@ X
 例2 设 (X ，Y ) \sim
 1 1/8 a 1/24
 2 b 1/4 1/8
-求 ① a,ab，b 满足的条件；② 若 X 与 Y 独立，求 a，b 的值．
+求 - a,ab，b 满足的条件；- 若 X 与 Y 独立，求 a，b 的值．
 \{ a \ge 0
-解 ①由分布律的非负性和规范性知 b \ge 0
+解 -由分布律的非负性和规范性知 b \ge 0
 11
 a + b =
 24 
@@ -3905,8 +3905,8 @@ X
 例2 设 (X ，Y ) \sim
 1 1/8 a 1/24
 2 b 1/4 1/8
-求 ① a,ab，b 满足的条件；② 若 X 与 Y 独立，求 a，b 的值．
-② 由 X 与 Y 独立，得 p = p p ， \forall i，j，从而有
+求 - a,ab，b 满足的条件；- 若 X 与 Y 独立，求 a，b 的值．
+- 由 X 与 Y 独立，得 p = p p ， \forall i，j，从而有
 ij i\cdot  \cdot  j
  11  1
 a + b = a =
@@ -3934,11 +3934,11 @@ a + b = a =
  
 1/ 2 1/ 2
  
-求：① (X ，Y ) 的联合分布律；
-② Z = X + Y 的分布律；
+求：- (X ，Y ) 的联合分布律；
+- Z = X + Y 的分布律；
 ③ P\{X = Y\} ． 
 
-解 ① 由 X 与 Y 相互独立，p = p p ， 则 (X ，Y )的联合分布律为
+解 - 由 X 与 Y 相互独立，p = p p ， 则 (X ，Y )的联合分布律为
 ij i\cdot  \cdot  j
 Y
 -1 1
@@ -3949,7 +3949,7 @@ X
 1 1 1 1 1
 \cdot  \cdot 
 2 2 2 2
-② 的分布律为
+- 的分布律为
 Z = X + Y
 Z -2 0 2
 p 1/ 4 1/ 2 1/ 4
@@ -4612,13 +4612,13 @@ B：长，畅 N(60，42)
 若有 70 分钟可用，应走那条路? 65 分钟又如何?
 解 设 X 为行车时间，则有
  X -50 70 -50
-①A：P\{X \leq 70\}  = P \leq  =\varPhi = 0.9772；
+-A：P\{X \leq 70\}  = P \leq  =\varPhi = 0.9772；
  10 10 
  X - 60 70 - 60
 B：P\{X \leq 70\} = P \leq =\varPhi (2.5) = 0.9938； 此时应该走路线B．
  4 4 
  X -50 65-50
-②A：P\{X \leq 65\}  = P \leq =\varPhi (1.5)= 0.9332；
+-A：P\{X \leq 65\}  = P \leq =\varPhi (1.5)= 0.9332；
  
  10 10 
  X - 60 65- 60
@@ -5274,213 +5274,164 @@ U = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{\sigma _1 ^2}{m} 
 </li>
 <li>
 <p><span class="arithmatex">\(\chi ^2\)</span> 分布</p>
+<details class="info" open="open">
+<summary><span class="arithmatex">\(\chi ^2\)</span> 分布</summary>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X _1，X _2，...，X_n\)</span> 相互独立且均服从 <span class="arithmatex">\(N(0，1)\)</span>，则称统计量 <span class="arithmatex">\(\chi ^2 = X _1 ^2 +...+ X_n ^2\)</span> 服从自由度为 <span class="arithmatex">\(n\)</span> 的 <span class="arithmatex">\(\chi ^2\)</span> 分布，记作 <span class="arithmatex">\(\chi ^2 \sim \chi ^2 (n)\)</span></p>
+<p><strong>性质</strong></p>
+<ul>
+<li>若 <span class="arithmatex">\(\chi ^2 \sim \chi ^2 (n)\)</span>，则 <span class="arithmatex">\(E( \chi ^2) = n\)</span>， <span class="arithmatex">\(D( \chi ^2) = 2n\)</span></li>
+<li>设 <span class="arithmatex">\(\chi _1 ^2 \sim \chi ^2(n_1 )， \chi _2 ^2 \sim \chi ^2 (n_2)\)</span>，且 <span class="arithmatex">\(\chi _1 ^2，\chi _2 ^2\)</span> 相互独立，则有 <span class="arithmatex">\(\chi _1 ^2 + \chi _2 ^2 \sim \chi ^2(n_1 + n_2 )\)</span>． (可加性)</li>
+</ul>
+<p><strong>结论</strong></p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(X_1 ，X _2，...，X_n\)</span> 是来自总体 <span class="arithmatex">\(N(\mu，\sigma ^2)\)</span>的一个样本，则统计量</p>
+<div class="arithmatex">\[
+\chi ^2 = \frac{1}{\sigma ^2} \sum _{i=1} ^n (X_i - \mu) ^2 \sim \chi ^2 (n)
+\]</div>
 </li>
-<li>4) 定义 设 X ，X ，...，X 相互独立且均服从 N(0，1)，则称统计量
-1 2 n
-χ2 = X 2 +...+ X 2 服从自由度为 n 的 χ2 分布，记作 χ2 \sim χ2(n)．
-1 n
-1) 性质
-① 若 χ2 \sim χ2(n)，则 E( χ2) = n， D( χ2) = 2n；(自证) y
-f (x)
-2
-② 设 χ2 \sim χ2(n )， χ2 \sim χ2(n )，且 χ2，χ2 相互独立，
-1 1 2 2 1 2
-O x
-则有 χ2 + χ2 \sim χ2(n + n )． (可加性)
-1 2 1 2 </li>
+<li>
+<p>设 <span class="arithmatex">\(X_1 ，X _2，...，X_n\)</span> 是来自总体 <span class="arithmatex">\(N(\mu，\sigma ^2)\)</span>的一个样本，则样本均值<span class="arithmatex">\(\bar{X}\)</span>与样本方差 <span class="arithmatex">\(S^2\)</span> 相互独立，且统计量</p>
+<div class="arithmatex">\[
+\frac{(n-1) S^2}{\sigma ^2} = \frac{1}{\sigma ^2} \sum _{i=1} ^n (X_i - \mu) ^2 \sim \chi ^2 (n-1)
+\]</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(t\)</span> 分布 (学生 <span class="arithmatex">\(t\)</span> 分布)</p>
+<details class="info" open="open">
+<summary><span class="arithmatex">\(t\)</span> 分布</summary>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X \sim N(0，1)，Y \sim \chi ^2 (n)\)</span>，且 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 相互独立，则称统计量 </p>
+<div class="arithmatex">\[
+T = \frac{X}{\sqrt{\frac{Y}{n}}}\]</div>
+<p>服从自由度为 <span class="arithmatex">\(n\)</span> 的 <span class="arithmatex">\(t\)</span> 分布，记作 <span class="arithmatex">\(T \sim t(n)\)</span>．</p>
+<p><strong>性质</strong></p>
+<ul>
+<li><span class="arithmatex">\(f_t (x)\)</span> 关于 <span class="arithmatex">\(y\)</span> 轴对称</li>
+<li>当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(t\)</span> 分布 <span class="arithmatex">\(\to N(0，1)\)</span></li>
+</ul>
+<p><strong>结论</strong></p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(X_1 ，X _2，...，X_n\)</span> 是来自总体 <span class="arithmatex">\(N(\mu，\sigma ^2)\)</span>的一个样本，则统计量</p>
+<div class="arithmatex">\[
+T = \frac{\bar{X} - \mu}{S} \sqrt{n} \sim t(n-1) \\
+\space \\
+U = \frac{\bar{X} - \mu}{\sigma} \sqrt{n} \sim N(0,1) \space \text{正态分布}
+\]</div>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(X_1 ，X _2，...，X_n\)</span>  和 <span class="arithmatex">\(Y_1 ，Y _2，...，Y_n\)</span>  分别为来自正态总体 <span class="arithmatex">\(N(\mu _1，\sigma ^2)\)</span> 和 <span class="arithmatex">\(N(\mu _2，\sigma ^2)\)</span> 的两个样本，且总体 <span class="arithmatex">\(X，Y\)</span> 相互独立，则</p>
+<div class="arithmatex">\[
+T = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{S_w ^2}{m} + \frac{S_w ^2}{n}}} \sim t(m+n-2) \\
+\space \\
+U = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{\sigma _1 ^2}{m} + \frac{\sigma _2 ^2}{n}}} \sim N(0,1) \space \text{正态分布}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+S_1 ^2 = \frac{1}{m-1} \sum _{i=1} ^m (X_i - \bar{X} ) ^2 \\
+\space \\
+S_2 ^2 = \frac{1}{n-1} \sum _{j=1} ^n (Y_j - \bar{Y} ) ^2 \\
+\space \\
+S_w ^2 = \frac{(m-1) S_1 ^2 + (n-1) S_2 ^2}{m+n-2} \space \text{复合样本方差}
+\]</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p><span class="arithmatex">\(F\)</span> 分布</p>
+<details class="info" open="open">
+<summary><span class="arithmatex">\(F\)</span> 分布</summary>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X \sim \chi ^2 (m)\)</span>，<span class="arithmatex">\(Y \sim \chi ^2 (n)\)</span>，且 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 相互独立，则称统计量</p>
+<div class="arithmatex">\[
+F = \frac{X/m}{Y/n}
+\]</div>
+<p>服从第一自由度为 <span class="arithmatex">\(m\)</span>，第二自由度为 <span class="arithmatex">\(n\)</span> 的 F$ 分布，记作<span class="arithmatex">\(F \sim F(m，n)\)</span>．</p>
+</details>
+</li>
 </ol>
-<p>1) 结论
-① 设 X ，X ，...，X 是来自总体 N(\mu，\sigma 2)的一个样本，则统计量
-1 2 n
-1 n
-χ2 = \sum(X - \mu)2 \sim χ2(n)；
-\sigma 2 i
-i=1
-② 设 X ，X ，...，X 是来自总体 N(\mu，\sigma 2) 的一个样本，则样本均值
-1 2 n
-与样本方差 S2 相互独立，且统计量
-X
-(n -1)S2 1 n
-= \sum(X - X )2 \sim χ2(n -1)．
-\sigma 2 \sigma 2 i
-i=1 </p>
-<p>t 分布 (学生 t 分布)
-1) 定义 设 X \sim N(0，1)，Y \sim χ2(n)，且 X 与 Y 相互独立，则
-称统计量 T = X Y n 服从自由度为 n 的 t 分布，记作 T \sim t(n)．
-威廉ꞏ戈塞
-2) 性质
-y
-① f (x) 关于 y 轴对称； f (x)
-t
-t
-② 当n \to \infty 时，t 分布\to N(0，1)．
-x
-3) 结论 O
-① 设 X ，X ，...，X 是来自总体 N(\mu，\sigma 2) 的一个样本，则统计量
-1 2 n
-X -
-X - \mu
-T = n \sim t(n -1)；U = n \sim N(0，1)
-S \sigma  </p>
-<p>② 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(\mu ，\sigma 2)
-1 2 m 1 2 n 1
-和 N(\mu ，\sigma 2) 的两个样本，且总体 X，Y 相互独立，
-2
-(X -Y ) - (\mu - \mu ) (X -Y ) - (\mu - \mu )
-则 T = 1 2 \sim t(m + n - 2)．U = 1 2 \sim N(0，1)
-S2 m + S2 n \sigma 2 m + \sigma 2 n
-w w 1 1
-(m -1)S2 + (n -1)S2
-其中 S2 = 1 2 称为复合样本方差，
-w
-m + n - 2
-1 m
-S2 = \sum(X - X )2 ， 1 n
-S2 = \sum(Y -Y )2 ．
-1 i
-m -1
-2 j
-n -1
-i=1
-j=1 </p>
-<p>F 分布
-1) 定义 设 X \sim 2(m)，Y \sim 2(n)，且 X ，Y 相互独立，则称统计量
-X m
-F = 服从第一自由度为m，第二自由度为 n 的 F 分布，记作F \sim F(m，n)．
-Y n
-2) 性质 y
-f (x)
-1
-F
-① 若 F \sim F(m，n)，则 \sim F(n，m)；
-F
-O x
-② 若 T \sim t(n)，则 T 2 \sim F(1，n)．
-[提示：X \sim N(0，1)  X 2 \sim 2] </p>
-<p>3) 结论
-① 设 X ，X ，...，X 和 Y ，Y ，...，Y 分别为来自正态总体 N(\mu ，\sigma 2) 和
-1 2 m 1 2 n 1 1
-N(\mu ，\sigma 2) 的两个样本，且总体 X ，Y 相互独立，则
-2 2
-S2 S2
-F = 1 2 \sim F(m -1，n -1)．
-\sigma 2 \sigma 2
-1 2
-S 2 S 2
-② 统计量 F = 1 2 \sim F(m，n)．
-\sigma 2 \sigma 2
-1 2
-1 m 1 n
-其中 S 2 = \sum(X - \mu )2， S 2 = \sum(Y - \mu )2 ．
-2 j 2
-1 i 1 n
-m
-j=1
-i=1 </p>
-<p>引例 设 X \sim N(0，1)，且有 P{X \leq x} = 0.8，则 x = ?
-当 P{X \leq x} = 0.2 时，x 的值又是多少? (查附表3)
-定义 设 X \sim F(x)，α \in(0，1) 为一常数，若对于某一 实数 x 满足
-
-P{X \leq x }  = F(x ) = α ，则称 x 为 X 的下侧 α 分位数．
-α
-α α
-常用分布的分位数
-y
-1) N (0，1)的下侧 α 分位数 u 满足： \varphi(x)
-α
-α α
-u
-P{U \leq u } = \int α \varphi(x)dx = α ，
-α
--\infty x
-u u
-O
-由对称性 -u = u ． α 1-α
-α 1-α </p>
-<p>2) χ2(n) 的下侧 α 分位数 χ2(n) 满足： y
-α
-f (x)
-2 α
-P{χ2 \leq χ2(n)} = α； α
-α
-x
-O
-2(n) 2 (n)
-3) t(n) 的下侧 α 分位数 t (n) 满足：  1-
-α
-y
-f (x)
-P{T \leq t (n)} = α； t
-α α α
--t (n) = t (n)；
-α 1-α x
-t (n) Ot (n)
- 1-
-4) F(m，n)的下侧α分位数 F (m，n) 满足：
-α
-y
-P{F \leq F (m，n)} = α； f (x)
-α α F α
-F (m，n) = 1 F (n，m)．(自证)
-x
-α 1-α O F (m，n) F (m，n)
-α 1-α </p>
-<p> 10 
-例1 设 X ，X ，...，X 是来自总体 N(0，0.32)的样本，求 P \sum X 2 &gt; 1.44 ．
+<p><strong>性质</strong></p>
+<ul>
+<li>若 <span class="arithmatex">\(F \sim F(m，n)\)</span>，则<span class="arithmatex">\(\frac{1}{F} \sim F(n，m)\)</span></li>
+<li>若 <span class="arithmatex">\(T \sim t(n)\)</span>，则 <span class="arithmatex">\(T ^2 \sim F(1，n)\)</span> </li>
+</ul>
+<p><strong>结论</strong></p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(X_1 ，X _2，...，X_n\)</span>  和 <span class="arithmatex">\(Y_1 ，Y _2，...，Y_n\)</span>  分别为来自正态总体 <span class="arithmatex">\(N(\mu _1，\sigma _1^2)\)</span> 和 <span class="arithmatex">\(N(\mu _2，\sigma _2^2)\)</span> 的两个样本，且总体 <span class="arithmatex">\(X，Y\)</span> 相互独立，则</p>
+<div class="arithmatex">\[
+F = \frac{S_1 ^2 / S_2 ^2}{\sigma _1 ^2 / \sigma _2 ^2} \sim F(m-1，n-1)
+\]</div>
+</li>
+<li>
+<p>统计量</p>
+<div class="arithmatex">\[
+F = \frac{\bar{S}_1 ^2 / \bar{S}_2 ^2}{\sigma _1 ^2 / \sigma _2 ^2} \sim F(m，n)
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\bar{S}_1 ^2 = \frac{1}{m} \sum _{i=1} ^m (X_i - \mu _1 ) ^2 \\
+\space \\
+\bar{S}_2 ^2 = \frac{1}{n} \sum _{j=1} ^n (Y_j - \mu _2 ) ^2
+\]</div>
+</li>
+</ul>
+<p><mark class="critic">分位数</mark></p>
+<!-- 引例 设 X \sim N(0，1)，且有 P{X \leq x} = 0.8，则 x = ?
+当 P{X \leq x} = 0.2 时，x 的值又是多少? (查附表3) -->
+<p><strong>定义</strong> 设 <span class="arithmatex">\(X \sim F(x)，\alpha \in(0，1)\)</span>为一常数，若对于某一 实数 <span class="arithmatex">\(x _{\alpha}\)</span> 满足 <span class="arithmatex">\(P\{X \leq x_{\alpha} \}  = F(x_{\alpha} ) = \alpha\)</span> ，则称 <span class="arithmatex">\(x_{\alpha}\)</span> 为 <span class="arithmatex">\(X\)</span> 的下侧 <span class="arithmatex">\(\alpha\)</span> 分位数．</p>
+<details class="success inline end" open="open">
+<summary>常用分布的分位数图示</summary>
+<p><a class="glightbox" href="https://s2.loli.net/2025/05/10/zWaw5cB2I1bUH4h.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img1.png" src="https://s2.loli.net/2025/05/10/zWaw5cB2I1bUH4h.png" /></a></p>
+<p><a class="glightbox" href="https://s2.loli.net/2025/05/10/KyXGHahqdtTglW6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img2.png" src="https://s2.loli.net/2025/05/10/KyXGHahqdtTglW6.png" /></a></p>
+</details>
+<p><strong>常用分布的分位数</strong></p>
+<ul>
+<li><span class="arithmatex">\(N (0，1)\)</span>的下侧 <span class="arithmatex">\(\alpha\)</span> 分位数 <span class="arithmatex">\(u_{\alpha}\)</span> 满足 <span class="arithmatex">\(P \{U \leq u_{\alpha} \} = \int _{- \infty} ^{u _{\alpha}} \varphi(x)dx = \alpha\)</span>, 由对称性 <span class="arithmatex">\(-u_{\alpha} = u_{1 - \alpha}\)</span></li>
+<li><span class="arithmatex">\(\chi ^2(n)\)</span>的下侧 <span class="arithmatex">\(\alpha\)</span> 分位数 <span class="arithmatex">\(\chi ^2_{\alpha} (n)\)</span> 满足 <span class="arithmatex">\(P \{ \chi ^2 \leq \chi ^2_{\alpha} (n) \} = \alpha\)</span></li>
+<li><span class="arithmatex">\(t(n)\)</span>的下侧 <span class="arithmatex">\(\alpha\)</span> 分位数 <span class="arithmatex">\(t_{\alpha} (n)\)</span> 满足 <span class="arithmatex">\(P \{ t \leq t_{\alpha} (n) \} = \alpha\)</span>, 由对称性 <span class="arithmatex">\(-t_{\alpha} (n) = t_{1 - \alpha} (n)\)</span></li>
+<li><span class="arithmatex">\(F(m，n)\)</span>的下侧 <span class="arithmatex">\(\alpha\)</span> 分位数 <span class="arithmatex">\(F_{\alpha} (m,n)\)</span> 满足 <span class="arithmatex">\(P \{ F \leq F_{\alpha} (m,n) \} = \alpha\)</span>, <span class="arithmatex">\(F_{\alpha} (m,n) = \frac{1}{F_{1 - \alpha} (n,m)}\)</span></li>
+</ul>
+<!--  10 
+例1 设 X ，X ，...，X 是来自总体 N(0，0.32)的样本，求 P \sum X 2 > 1.44 ．
  
 1 2 10 i
  
 i=1
 2
 10  X - \mu  10 X 2
-解 因为 \sum i = \sum i \sim χ2(10)，所以
+解 因为 \sum i = \sum i \sim \chi ^2(10)，所以
  
  \sigma   0.32
 i=1 i=1
  10   10 X 2 1.44
-P \sum X 2 &gt; 1.44 = P \sum i &gt;  = P{χ2(10) &gt; 16}
+P \sum X 2 > 1.44 = P \sum i >  = P{\chi ^2(10) > 16}
 i 0.32 0.32
    
 i=1 i=1
-= 1- P{χ2(10) \leq 16} (附表6)
-= 1- 0.9 = 0.1． </p>
-<p>总体与个体的概念；
-样本与统计量的定义；
-总体矩与样本矩的定义；
-总体分布函数和密度函数的近似解；
-几种常用的样本分布 (四大分布)；
-分位数的定义与计算． </p>
-<p>威廉ꞏ戈塞(1876 – 1937)
-威廉ꞏ戈塞，英国化学家、数学家与统计学家，1876年6月
-生于英堪特伯雷，1937年10月去世．
-威廉ꞏ戈塞是英国现代统计方法发展的先驱． 1899年，他
-进入都柏林的吉尼斯父子酿酒厂工作，为提高大麦质量的
-重要性促使他于1904年写成一篇报告《误差法则应用》．因酿酒厂禁止
-他发表关于酿酒过程变化性的研究成果， 他不得不于1908年以笔名
-“学生(Student)”发表他的论文，这正是“学生t-分布”名字的由来． </p>
+= 1- P{\chi ^2(10) \leq 16} (附表6)
+= 1- 0.9 = 0.1．  -->
+
 <h2 id="_7">第七章 参数估计</h2>
-<p>参数估计的概念
-点估计量的求法
-估计量的评选标准
-区间估计 </p>
 <h3 id="71">7.1  参数估计的概念</h3>
-<p>本节主要内容
-一、参数估计的概念
-二、参数估计的分类 </p>
-<p>一、参数估计的概念
-总体的具体分布 (比较困难)
-统计推断的目的
-总体的某些参数(数字特征)
-参数估计
-二、参数估计的分类
-点 估 计：给出未知参数的估计值
-区间估计：给出未知参数的取值范围 </p>
+<p><strong>参数估计的概念</strong></p>
+<pre class="mermaid"><code>flowchart TD
+    A[统计推断的目的] --&gt;  B[总体的具体分布-比较困难]
+    A --&gt; C[总体的某些参数-数字特征]
+    C --&gt; D[参数估计]
+    D --&gt; E[点估计]
+    D --&gt; F[区间估计]</code></pre>
+<p><strong>参数估计的分类</strong></p>
+<ul>
+<li>点估计：给出未知参数的估计值</li>
+<li>区间估计：给出未知参数的取值范围 </li>
+</ul>
 <h3 id="72">7.2  点估计量的求法</h3>
-<p>本节主要内容
-一、点估计的概念
-二、矩估计
-三、最大似然估计 </p>
-<p>设总体 X 中含有未知参数θ，X ，X ，...，X 为 X 的一样本．
+<p><mark class="critic">点估计的概念</mark></p>
+<p>设总体 <span class="arithmatex">\(X\)</span> 中含有未知参数θ，X ，X ，...，X 为 X 的一样本．
 1 2 n
 ˆ
 点估计就是要构造适当的统计量(X ，X ，...，X )，用其观测值
@@ -5831,10 +5782,6 @@ a，b 的最大似然估计为 aˆ = min{X }，b = max{X }．
 i i
 1\leqi\leqn 1\leqi\leqn </p>
 <h3 id="73">7.3  估计量的评选标准</h3>
-<p>本节主要内容
-一、无偏性
-二、有效性
-三、相合性 </p>
 <p>一、无偏性
 定义1 设ˆ是参数的估计量，若 E(ˆ) =，则称ˆ 是的无偏估计量．
 二、有效性
@@ -5844,7 +5791,7 @@ i i
 三、相合性
 定义3 设ˆ是的估计量，若ˆ p\to (n \to \infty)， 则称ˆ 是的相合
 估计量． </p>
-<p>例1 证明：样本均值 X 是总体期望 \mu 的无偏估计量，样本方差 S2 是
+<!-- 例1 证明：样本均值 X 是总体期望 \mu 的无偏估计量，样本方差 S2 是
 总体方差 \sigma 2 的无偏估计量．
  1 n  1
 证 因为 E(X ) = E \sum X = \cdot  n\mu = \mu，所以 X 是 \mu 的无偏估计量．
@@ -5864,8 +5811,9 @@ i i i
 1
 则 E(S2) = [n(\sigma 2 + \mu2) - n(\sigma 2 n + \mu2)] = \sigma 2，
 n -1
-所以 S2 是 \sigma 2 的无偏估计量． </p>
-<p>n -1
+所以 S2 是 \sigma 2 的无偏估计量． 
+
+n -1
 由于 S2 是 \sigma 2 的无偏估计量， 且 S2 = S2 ，
 n
 n -1 n -1
@@ -5873,8 +5821,9 @@ n -1 n -1
 n n
 注意 虽然 S2 是 \sigma 2 的无偏估计量， 但是 S 并不是 \sigma  的无偏估计量．
 事实上，由于 D(S) = E(S2) - E2(S) ，得
-E(S) = E(S2) - D(S) = \sigma 2 - D(S)  \sigma  </p>
-<p>例2 设 (X ，X ，X ) 为来自总体 N(\mu，1) 的一个样本， \mu 未知，
+E(S) = E(S2) - D(S) = \sigma 2 - D(S)  \sigma  
+
+例2 设 (X ，X ，X ) 为来自总体 N(\mu，1) 的一个样本， \mu 未知，
 1 2 3
 则下列 \mu 的无偏估计量中最有效的是 (         )．
 1 1 1 1 1 1
@@ -5894,15 +5843,10 @@ E(S) = E(S2) - D(S) = \sigma 2 - D(S)  \sigma  </p>
 D X + X + X = ； D X + X - X  = 3．
  
 1 2 3 1 2 3
- 3 3 3  3 </p>
+ 3 3 3  3  -->
+
 <h3 id="74">7.4  区间估计</h3>
-<p>本节主要内容
-一、置信区间的概念及求法
-二、单个正态总体的情形
-三、两个正态总体的情形 </p>
-<p>引 言
-ˆ
-点估计的缺陷 未能反映出估计值与真实值 θ 之间的误差及可靠性．
+<p>点估计的缺陷 未能反映出估计值与真实值 θ 之间的误差及可靠性．
 区间估计的思想 对未知参数θ，构造两统计量与 ， 使得 θ 能以
 1 2
 较大的概率落在随机区间 [， ] 内，由相应的观测值来估计 θ 的
@@ -5911,186 +5855,175 @@ D X + X + X = ； D X + X - X  = 3．
 P{ \leq\leq} —可信程度 E( -) —精确程度
 1 2 2 1
 最优区间估计：可信度给定情况下区间尽量短． </p>
-<p>定义 设总体 X 含未知参数θ，对于给定的α \in(0，1)，若存在两个
-统计量 θ (X ，...，X ) 和 θ (X ，...，X )， 使得 P{θ \leq θ \leq θ } = 1- α，
+<p>定义 设总体 X 含未知参数θ，对于给定的\alpha \in(0，1)，若存在两个
+统计量 θ (X ，...，X ) 和 θ (X ，...，X )， 使得 P{θ \leq θ \leq θ } = 1- \alpha，
 1 1 n 2 1 n 1 2
-则称[θ ，θ ]为 θ 的置信度为 1- α 的置信区间．
+则称[θ ，θ ]为 θ 的置信度为 1- \alpha 的置信区间．
 1 2
 引例 设总体 X \sim N(\mu，\sigma 2)，其中 \sigma  = \sigma  已知， \mu 未知，X ，...，X
 0 1 n
-是 X 的样本，求 \mu 的置信度为1- α 的置信区间． </p>
+是 X 的样本，求 \mu 的置信度为1- \alpha 的置信区间． </p>
 <p>引例 设总体 X \sim N(\mu，\sigma 2)，其中 \sigma  = \sigma  已知，\mu 未知，X ，...，X
 0 1 n
-是 X 的样本，求 \mu 的置信度为1- α 的置信区间．
+是 X 的样本，求 \mu 的置信度为1- \alpha 的置信区间．
 X - \mu
 解 因 \sigma  = \sigma  已知，则由抽样分布知 U = n 只包含未知参数 \mu 且
 0
 \sigma 
-服从 N(0，1) ，现需找一尽量短的区间，使得U落在该区间内的概率为1- α．
+服从 N(0，1) ，现需找一尽量短的区间，使得U落在该区间内的概率为1- \alpha．
 y
-由分位数的定义知 P{-u \leq U \leq u } = 1- α，
+由分位数的定义知 P{-u \leq U \leq u } = 1- \alpha，
 \varphi(x)
-1-α/2 1-α/2
-α / 2 α / 2
+1-\alpha/2 1-\alpha/2
+\alpha / 2 \alpha / 2
  X - \mu 
-即 P -u \leq n \leq u = 1- α，
+即 P -u \leq n \leq u = 1- \alpha，
  
 x
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
 \sigma  -u O u
  
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
  \sigma  \sigma  
-因此 \mu 的置信度为1- α 的置信区间为 X - u ，X + u ．
+因此 \mu 的置信度为1- \alpha 的置信区间为 X - u ，X + u ．
  
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
  n n  </p>
 <p>求解步骤
-① 构造一个只包含待估参数 θ 的样本的函数U，要求它的分布已知；
+- 构造一个只包含待估参数 θ 的样本的函数U，要求它的分布已知；
 (一般由抽样分布可得)
-② 寻求一尽量短的区间 [a，b]，使得 U 落在该区间内的概率为1- α；
+- 寻求一尽量短的区间 [a，b]，使得 U 落在该区间内的概率为1- \alpha；
 (一般由分位数可得)
 ③ 从 a \leq U \leq b 中得到等价不等式 θ \leq θ \leq θ ，则[θ ，θ ] 就是 θ 的置信
 1 2 1 2
-度为 1- α 的置信区间． </p>
+度为 1- \alpha 的置信区间． </p>
 <p>设总体 X \sim N(\mu，\sigma 2)，X ，X ，...，X 是 X 的一个样本，对给定置信度
 1 2 n
-1- α ，求 \mu 和 \sigma 2 的置信区间．
+1- \alpha ，求 \mu 和 \sigma 2 的置信区间．
  \mu的置信区间
 1) 当 \sigma  2 已知时
-由引例可知， \mu 的置信度为1- α 的置信区间为
+由引例可知， \mu 的置信度为1- \alpha 的置信区间为
  \sigma  \sigma  
 X - u ，X + u ．
  
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
  n n  </p>
 <p>2)当 \sigma  2 未知时
 因为S 2是\sigma  2 的无偏估计，所以可以用S 代替 \sigma ，则由抽样分布知
 X - \mu X - \mu
 T = n \sim t(n -1)， U = n \sim N(0，1)
 S \sigma 
-由分位数 P{-t (n -1) \leq T \leq t (n -1)} =1- α，
-1-α/2 1-α/2
+由分位数 P{-t (n -1) \leq T \leq t (n -1)} =1- \alpha，
+1-\alpha/2 1-\alpha/2
  X - \mu 
-即 P -t (n -1) \leq n \leq t (n -1) = 1- α，
+即 P -t (n -1) \leq n \leq t (n -1) = 1- \alpha，
  
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
 S
  
 y
 f (x)
-所以 \mu 的置信度为1- α 的置信区间为 t
-α / 2 α / 2
+所以 \mu 的置信度为1- \alpha 的置信区间为 t
+\alpha / 2 \alpha / 2
  S S 
 X - t (n -1)，X + t (n -1) ． O
 x
  
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
  n n  -t t (n -1)
-1-α/2
-1-α/2 </p>
-<p>例1 某厂生产的节能灯寿命X \sim N(\mu，8)，从生产的一批
+1-\alpha/2
+1-\alpha/2 </p>
+<!-- 例1 某厂生产的节能灯寿命X \sim N(\mu，8)，从生产的一批
 灯中抽取10只作寿命测试，数据如下(小时)：
 1050，1100，1080，1120，1200，1250，1040，1130，1300，1200
-试估计这批节能灯平均寿命的范围 ( α   =   0  . 0  5  )．
+试估计这批节能灯平均寿命的范围 ( \alpha   =   0  . 0  5  )．
 解 这是在方差已知的情况下对期望进行区间估计．
 因为 X = 1147，u = u =1.96，从而可得
-1-α/2 0.975
+1-\alpha/2 0.975
 \sigma 
 \sigma 
 X - u = 1145.25， X + u = 1148.75，
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
 n n
 所以这批节能灯平均寿命 \mu在0.95的置信水平下的置信区间为
 1145.25，1148.75．(区间长度为3.5)  \sigma  \sigma  
 X - u ，X + u
  
-1-α/2 1-α/2
- n n  </p>
-<p>例2 若例1中的方差未知，求这批节能灯平均寿命 \mu 的置信水平为0.95的
+1-\alpha/2 1-\alpha/2
+ n n  
+
+例2 若例1中的方差未知，求这批节能灯平均寿命 \mu 的置信水平为0.95的
  S S 
 置信区间． X - t (n -1)，X + t (n -1)
  
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
  n n 
 解 这是在方差未知的情况下对期望进行区间估计．由例1的数据
 S = S2  87.06，类似得置信水平为0.95的置信区间为1084.72，1209.28．
 (长度为124.56)
 注 例2表明，由于对总体的了解少了(方差未知)，因而在相同的置信水
-平下估计的效果也就差很多． </p>
-<p>\sigma 2 的置信区间
+平下估计的效果也就差很多． 
+
+\sigma 2 的置信区间
 1) 当 \mu 已知时
 1 n
-因 \mu = \mu 已知，则由抽样分布知 χ2 = \sum(X - \mu)2 只包含未知参数
+因 \mu = \mu 已知，则由抽样分布知 \chi ^2 = \sum(X - \mu)2 只包含未知参数
 0 \sigma 2 i
 i=1
-\sigma 2 且服从 χ2(n)，现需找一尽量短的区间，使得 χ2落在该区间内的概率
-为1- α．
+\sigma 2 且服从 \chi ^2(n)，现需找一尽量短的区间，使得 \chi ^2落在该区间内的概率
+为1- \alpha．
 非最短区间，但易求!
-由分位数定义 P{χ2 (n) \leq χ2 \leq χ2 (n)} =1- α，
-α/2 1-α/2 y
+由分位数定义 P{\chi ^2 (n) \leq \chi ^2 \leq \chi ^2 (n)} =1- \alpha，
+\alpha/2 1-\alpha/2 y
 f (x)
-所以 \sigma 2 的置信度为 1- α 的置信区间为： 2α / 2
-α / 2
+所以 \sigma 2 的置信度为 1- \alpha 的置信区间为： 2\alpha / 2
+\alpha / 2
  n n  x
-\sum(X - \mu)2 / χ2 (n)，\sum(X - \mu)2 / χ2 (n) ． O χ2 (n) χ2 (n)
+\sum(X - \mu)2 / \chi ^2 (n)，\sum(X - \mu)2 / \chi ^2 (n) ． O \chi ^2 (n) \chi ^2 (n)
  
-i 1-α/2 i α/2 α/2 1-α/2
+i 1-\alpha/2 i \alpha/2 \alpha/2 1-\alpha/2
  
-i=1 i=1 </p>
-<p>2) 当 \mu 未知时
+i=1 i=1 
+
+2) 当 \mu 未知时
 1 n  n n 
-χ2 = \sum(X - \mu)2 \sim χ2(n) \sum(X - \mu)2 / χ2 (n)，\sum(X - \mu)2 / χ2 (n)
+\chi ^2 = \sum(X - \mu)2 \sim \chi ^2(n) \sum(X - \mu)2 / \chi ^2 (n)，\sum(X - \mu)2 / \chi ^2 (n)
  
-\sigma 2 i  i 1-α/2 i α/2 
+\sigma 2 i  i 1-\alpha/2 i \alpha/2 
 i=1 i=1 i=1
 因为 是 \mu 的无偏估计，所以可以用 代替 \mu ，则由抽样分布知
 X X
 (n -1)S2 1 n
-= \sum(X - X )2 \sim χ2(n -1) ，
+= \sum(X - X )2 \sim \chi ^2(n -1) ，
 \sigma 2 \sigma 2 i
 i=1
-类似可得 \sigma 2 的置信度为1- α 的置信区间为：
+类似可得 \sigma 2 的置信度为1- \alpha 的置信区间为：
  n n 
-\sum(X - X )2 / χ2 (n -1)，\sum(X - X )2 / χ2 (n -1) ．
+\sum(X - X )2 / \chi ^2 (n -1)，\sum(X - X )2 / \chi ^2 (n -1) ．
  
-i 1-α/2 i α/2
+i 1-\alpha/2 i \alpha/2
  
-i=1 i=1 </p>
-<p>例3 从总体 X \sim N(0 ，\sigma 2) 中抽取一个容量为4的样本：
+i=1 i=1 
+
+例3 从总体 X \sim N(0 ，\sigma 2) 中抽取一个容量为4的样本：
 1.3   −2.78    0.06    1.98
 试求 \sigma 2 的置信水平为0.95的置信区间．
 解 这是在期望已知的情况下对方差进行区间估计．
 4
-因为 \sum(x - 0)2 =13.34 ， χ2 (n) = 0.484 ，
-i α/2
+因为 \sum(x - 0)2 =13.34 ， \chi ^2 (n) = 0.484 ，
+i \alpha/2
 i=1
-χ2 (n) = 11.143 ， 所以可得 \sigma 2 置信水平为0.95的置信区间为
-1-α/2
+\chi ^2 (n) = 11.143 ， 所以可得 \sigma 2 置信水平为0.95的置信区间为
+1-\alpha/2
 1.20，27.56．  n n 
-\sum(X - \mu)2 / χ2 (n)，\sum(X - \mu)2 / χ2 (n)
+\sum(X - \mu)2 / \chi ^2 (n)，\sum(X - \mu)2 / \chi ^2 (n)
  
-i 1-α/2 i α/2
+i 1-\alpha/2 i \alpha/2
  
-i=1 i=1 </p>
-<p>参数估计的概念；
-点估计的概念；
-矩估计的原理及求法；
-最大似然估计的原理及求法；
-估计量的评选标准；
-置信区间的基本概念；
-单正态总体期望与方差的置信区间；
-两正态总体期望差与方差比的置信区间． </p>
+i=1 i=1  -->
+
 <h2 id="_8">第八章 假设检验</h2>
-<p>假设检验的基本思想
-单个正态总体参数的假设检验
-两个正态总体参数的假设检验
-总体分布的假设检验 </p>
 <h3 id="81">8.1  假设检验的基本思想</h3>
-<p>本节主要内容
-一、假设检验的基本思想
-二、两类错误
-三、假设检验的步骤 </p>
 <p>一、假设检验的基本思想 (概率性质的反证法)
 为了推断总体，首先对总体的分布或未知参数作出某种假设 H ，
 0
@@ -6103,11 +6036,11 @@ i=1 i=1 </p>
 从而接受 H ．
 0 </p>
 <p>二、两类错误
-固定α—显著性检验
+固定\alpha—显著性检验
 第一类错误(弃真) H 实际正确，但据抽样分析拒绝了H ；
 0 0
 { } 
-P 拒绝H | H 为真 = α ——显著性水平
+P 拒绝H | H 为真 = \alpha ——显著性水平
 0 0
 第二类错误(纳伪) H 实际错误，但据抽样分析接受了H ．
 0 0
@@ -6117,7 +6050,7 @@ P 接受H | H 不真 = β
 三、假设检验的步骤
 引例 某厂正常情况下生产灯泡寿命X \sim N(1600，802)，现从一批灯泡
 中抽取10个，测得它们的平均寿命 x = 1548， 若灯泡使用寿命的标准差
-不变，在显著性水平 α = 0.05 的条件下，能否认为该厂的生产正常? </p>
+不变，在显著性水平 \alpha = 0.05 的条件下，能否认为该厂的生产正常? </p>
 <p>解 由题意，要检验假设 H ：\mu = \mu = 1600，H ：\mu  1600，
 0 0 1
 因 X 是 \mu 的无偏估计，所以用 X 来检验 H 是合理的．
@@ -6126,58 +6059,54 @@ X - \mu
 在H 成立的条件下，统计量U = 0 n \sim N(0，1)，若 H 不真，
 0 0 
 \sigma 
-则 U 一般会很大，于是由 P{U &gt; u }  = α，得拒绝域
-1-α/2
+则 U 一般会很大，于是由 P{U &gt; u }  = \alpha，得拒绝域
+1-\alpha/2
 { } 
 W = U &gt; u 或U &lt; -u ．
 “小概率事件”
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
 1548 -1600
 y
 因 u = 10  -2.06 &lt; -u = -1.96，
 \varphi(x)
 0.975
 80
-α / 2 α / 2
+\alpha / 2 \alpha / 2
 观测值落入拒绝域，即“小概率事件”竟发生了，
 x
 -u Ou
-从而拒绝原假设 H ，认为生产过程不正常． 1-α/2 1-α/2
+从而拒绝原假设 H ，认为生产过程不正常． 1-\alpha/2 1-\alpha/2
 0 </p>
 <p>假设检验求解过程
-① 由实际问题的要求提出原假设 H 和对立假设 H ；
+- 由实际问题的要求提出原假设 H 和对立假设 H ；
 0  1 
-② 选择适当的统计量，在 H 成立的条件下确定其分布；
+- 选择适当的统计量，在 H 成立的条件下确定其分布；
 0 
-③ 对给定的 α，构造“小概率事件”，得到拒绝域；
+③ 对给定的 \alpha，构造“小概率事件”，得到拒绝域；
 ④ 据统计量的观测值对是否接受 H 做出判断．
 0  </p>
 <h3 id="82">8.2  单个正态总体参数的</h3>
-<p>假设检验 </p>
-<p>本节主要内容
-一、期望的假设检验
-二、方差的假设检验 </p>
 <p>X - \mu
 当\sigma  2 已知时 —U检验 U = 0 n \sim N(0，1)
 \sigma 
 (a) H ：\mu = \mu ，H ：\mu  \mu ； (双侧) y
 0 0 1 0 \varphi(x)
-α / 2 α / 2
+\alpha / 2 \alpha / 2
 W = {U &gt; u 或U &lt; -u }．
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
 x
 -u O u
-(b) H ：\mu \leq \mu ，H ：\mu &gt; \mu ； (单侧) 1-α/2 1-α/2
+(b) H ：\mu \leq \mu ，H ：\mu &gt; \mu ； (单侧) 1-\alpha/2 1-\alpha/2
 0 0 1 0
 W = {U &gt; u }． y
-1-α \varphi(x)
-α
+1-\alpha \varphi(x)
+\alpha
 (c) H ：\mu \ge \mu ，H ：\mu &lt; \mu ；(单侧)
 0 0 1 0
 x
 W = {U &lt; -u }． O u
-1-α
-1-α </p>
+1-\alpha
+1-\alpha </p>
 <p>X - \mu
 当\sigma  2未知时 —T检验 T = 0 n \sim t(n -1)
 S
@@ -6186,158 +6115,156 @@ S
 { } 
 W = T &gt; t (n -1) 或T &lt; -t (n -1) ．
 y
-1-α/2 1-α/2
+1-\alpha/2 1-\alpha/2
 f (x)
 t
-(b) H ：\mu \leq \mu ，H ：\mu &gt; \mu ； α / 2 α / 2
+(b) H ：\mu \leq \mu ，H ：\mu &gt; \mu ； \alpha / 2 \alpha / 2
 0 0 1 0
 W = {T &gt; t (n -1)} ．
 x
-1-α -t O t (n -1)
-1-α/2 1-α/2
+1-\alpha -t O t (n -1)
+1-\alpha/2 1-\alpha/2
 (c) H ：\mu \ge \mu ，H ：\mu &lt; \mu ；
 y
 0 0 1 0 f (x)
 t
-α
+\alpha
 W = {T &lt; -t (n -1)} ．
-1-α
+1-\alpha
 x
 注 拒绝域中的不等号与 H 的相反． -t (n -1) O
-0  1-α </p>
-<p>例1 厂商称他们的装潢材料抗断强度X \sim N(3.25，1.21)，现从中抽取9件
-进行检验，测得平均抗断强度为3.15，问能否接受该厂商的说法? (α = 0.05)
+0  1-\alpha </p>
+<!-- 例1 厂商称他们的装潢材料抗断强度X \sim N(3.25，1.21)，现从中抽取9件
+进行检验，测得平均抗断强度为3.15，问能否接受该厂商的说法? (\alpha = 0.05)
 解 由题意，要检验假设 H ：\mu = \mu = 3.25，H ：\mu  3.25，
 0 0 1
 因为是在方差已知的情况下对期望进行假设检验， 所以使用 U 检验，
 X - \mu
 即 U = 0 n \sim N(0，1)，从而可得拒绝域
 \sigma 
-{ } 
-W = U &gt; u 或U &lt; -u ．
-1-α/2 1-α/2
+\{ \} 
+W = U > u 或U < -u ．
+1-\alpha/2 1-\alpha/2
 3.15 - 3.25
-因 1.96 = u &gt; u = 9  -0.273 &gt; -u = -1.96，
+因 1.96 = u > u = 9  -0.273 > -u = -1.96，
 0.975 0.975
 1.1
 所以接受H ，即认为该厂商的说法是正确的．
-0 </p>
-<p>例2 电视台广告部称企业在该台播放广告后的平均利润收益量至少
+0 
+
+例2 电视台广告部称企业在该台播放广告后的平均利润收益量至少
 为15万元，已知这类企业广告播出后的收益量服从正态分布． 现抽取
 容量为20的样本，得平均收益量为13.2万元，标准差为3.4，试在显著
-性水平 α = 0.05 下，判断该广告部的说法是否正确?
-解 由题意，要检验假设 H ：\mu \ge \mu =15，H ：\mu &lt;15，
+性水平 \alpha = 0.05 下，判断该广告部的说法是否正确?
+解 由题意，要检验假设 H ：\mu \ge \mu =15，H ：\mu <15，
 0 0 1
 因为是在方差未知的情况下对期望进行假设检验， 所以使用 T 检验，
 X - \mu
-即 T = 0 n \sim t(n -1)， 拒绝域 W = {T &lt; -t (n -1)}，
-1-α
+即 T = 0 n \sim t(n -1)， 拒绝域 W = {T < -t (n -1)}，
+1-\alpha
 S
 13.2 -15
-由于 t = 20  -2.37 &lt; -t (19) = -1.729，
+由于 t = 20  -2.37 < -t (19) = -1.729，
 0.95
 3.4
 所以拒绝 H ，即认为该广告部的说法不正确．
-0 </p>
-<p>1 n
-χ2 = \sum(X - \mu)2 \sim χ2(n)
+0 
+
+1 n
+\chi ^2 = \sum(X - \mu)2 \sim \chi ^2(n)
 1.当 \mu 已知时 — 2(n) 检验
 \sigma 2 i
 0 i=1
 (a) H ：\sigma 2 = \sigma 2，H ：\sigma 2  \sigma 2；
 0 0 1 0
-{ } 
-W = χ2 &gt; χ2 (n) 或 χ2 &lt; χ2 (n) ，
-1-α/2 α/2 y
+\{ \} 
+W = \chi ^2 > \chi ^2 (n) 或 \chi ^2 < \chi ^2 (n) ，
+1-\alpha/2 \alpha/2 y
 f (x)
-χ2
-(b) H ：\sigma 2 \leq \sigma 2，H ：\sigma 2 &gt; \sigma 2； α / 2 α / 2
+\chi ^2
+(b) H ：\sigma 2 \leq \sigma 2，H ：\sigma 2 > \sigma 2； \alpha / 2 \alpha / 2
 0 0 1 0
-{ }  x
-W = χ2 &gt; χ2 (n) ，
-O χ2 (n) χ2 (n)
-1-α
-α/2 1-α/2
+\{ \}  x
+W = \chi ^2 > \chi ^2 (n) ，
+O \chi ^2 (n) \chi ^2 (n)
+1-\alpha
+\alpha/2 1-\alpha/2
 y
 f (x)
-(c) H ：\sigma 2 \ge \sigma 2，H ：\sigma 2 &lt; \sigma 2； χ2
-α
+(c) H ：\sigma 2 \ge \sigma 2，H ：\sigma 2 < \sigma 2； \chi ^2
+\alpha
 0 0 1 0
-{ } 
-W = χ2 &lt; χ2 (n) ． x
+\{ \} 
+W = \chi ^2 < \chi ^2 (n) ． x
 o
-α χ2 (n)
-1-α </p>
-<p>1 n
-2.当 \mu 未知时 — 2(n -1)检验 χ2 = \sum(X - X )2 \sim χ2(n -1)
+\alpha \chi ^2 (n)
+1-\alpha 
+
+1 n
+2.当 \mu 未知时 — 2(n -1)检验 \chi ^2 = \sum(X - X )2 \sim \chi ^2(n -1)
 \sigma 2 i
 0 i=1
 (a) H ：\sigma 2 = \sigma 2，H ：\sigma 2  \sigma 2；
 0 0 1 0
-W = {χ2 &gt; χ2 (n -1) 或 χ2 &lt; χ2 (n -1)}，
-1-α/2 α/2
+W = {\chi ^2 > \chi ^2 (n -1) 或 \chi ^2 < \chi ^2 (n -1)}，
+1-\alpha/2 \alpha/2
 y
 f (x)
-(b) H ：\sigma 2 \leq \sigma 2，H ：\sigma 2 &gt; \sigma 2； 2α / 2
-α / 2
+(b) H ：\sigma 2 \leq \sigma 2，H ：\sigma 2 > \sigma 2； 2\alpha / 2
+\alpha / 2
 0 0 1 0
-W = {χ2 &gt; χ2 (n -1)}， x
-o χ2
-1-α χ2 (n -1)
-α/2
-1-α/2
-(c) H ：\sigma 2 \ge \sigma 2，H ：\sigma 2 &lt; \sigma 2； y
+W = {\chi ^2 > \chi ^2 (n -1)}， x
+o \chi ^2
+1-\alpha \chi ^2 (n -1)
+\alpha/2
+1-\alpha/2
+(c) H ：\sigma 2 \ge \sigma 2，H ：\sigma 2 < \sigma 2； y
 f (x)
 0 0 1 0
 2
-α
-W = {χ2 &lt; χ2 (n -1)}．
-α
+\alpha
+W = {\chi ^2 < \chi ^2 (n -1)}．
+\alpha
 x
 o
-χ2(n -1)
+\chi ^2(n -1)
 注 双侧检验的接受域即为置信区间．
-α </p>
-<p>例3 某车间生产的金属丝的折断力X \sim N(\mu，64)，现从一批产品中抽出
+\alpha 
+
+例3 某车间生产的金属丝的折断力X \sim N(\mu，64)，现从一批产品中抽出
 10根作折断力试验，结果如下：
 578，572，570，568，572，570，572，596，584，570
-问能否认为这批金属丝的折断力方差仍为64? (α = 0.05)
+问能否认为这批金属丝的折断力方差仍为64? (\alpha = 0.05)
 解 由题意，要检验假设 H ：\sigma 2 = \sigma 2 = 64；H ：\sigma 2  64，因为是在期望
 0 0 1
-未知的情况下对方差进行假设检验，所以使用 χ2(n -1) 检验，即
+未知的情况下对方差进行假设检验，所以使用 \chi ^2(n -1) 检验，即
 1 n
-χ2 = \sum(X - X )2 \sim χ2(n -1)，从而可得
+\chi ^2 = \sum(X - X )2 \sim \chi ^2(n -1)，从而可得
 \sigma 2 i
 0 i=1
-拒绝域 W ={χ2 &gt; χ2 (n -1)或 χ2 &lt; χ2 (n -1)}．
-1-α/2 α/2
-由于 2.7 = 2 &lt; 2 10.65 &lt; 2 =19.02，
+拒绝域 W ={\chi ^2 > \chi ^2 (n -1)或 \chi ^2 < \chi ^2 (n -1)}．
+1-\alpha/2 \alpha/2
+由于 2.7 = 2 < 2 10.65 < 2 =19.02，
 0.025 0.975
 所以接受H ，即认为折断力的方差与 64 无显著差异．
-0 </p>
-<p>例4 某车间生产一种保险丝，规定保险丝熔化时间的方差不得超过400．
+0 
+
+例4 某车间生产一种保险丝，规定保险丝熔化时间的方差不得超过400．
 今从一批产品中抽出25个， 测得其熔化时间的方差为388.58．已知保险
 丝熔化时间服从正态分布，试根据所给数据，检验这批产品是否符合
-要求? (α = 0.05)
-解 由题意，要检验假设 H ：\sigma 2 \leq \sigma 2 = 400；H ：\sigma 2 &gt; 400，
+要求? (\alpha = 0.05)
+解 由题意，要检验假设 H ：\sigma 2 \leq \sigma 2 = 400；H ：\sigma 2 > 400，
 0 0 1
 因为在期望未知的情况下对方差进行假设检验，所以使用2(n -1) 检验，
 1 n
-{ } 
-χ2 = \sum(X - X )2 \sim χ2(n -1)，从而可得拒绝域 W = χ2 &gt; χ2 (n -1) ．
+\{ \} 
+\chi ^2 = \sum(X - X )2 \sim \chi ^2(n -1)，从而可得拒绝域 W = \chi ^2 > \chi ^2 (n -1) ．
 即
-\sigma 2 i 1-α
+\sigma 2 i 1-\alpha
 0 i=1
-由于 χ2  23.31 &lt; χ2 (24) = 36.42，
+由于 \chi ^2  23.31 < \chi ^2 (24) = 36.42，
 0.95
-所以应该接受H ，即这批保险丝符合要求．
-0 </p>
-<p>假设检验的基本思想 (概率性质的反证法)；
-两类错误的概念；
-假设检验的基本步骤；
-单个正态总体的假设检验(均值、方差)；
-两个正态总体的假设检验；
-总体分布的假设检验 (拟合优度检验)． </p>
+所以应该接受H ，即这批保险丝符合要求． -->
 
 
 
@@ -6353,6 +6280,61 @@ o
 
 
 
+
+  <h2 id="__comments">评论</h2>
+  
+  <script src="https://giscus.app/client.js"
+    data-repo="interset-wq/comment"
+    data-repo-id="R_kgDOOFimQg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOOFimQs4CnvJd"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
   
 
 
