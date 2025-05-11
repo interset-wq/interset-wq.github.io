@@ -1833,6 +1833,68 @@
   
 
 
+<style>
+  #toggle {
+    display: none;
+  }
+
+  /* 按钮样式 */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2196F3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #1976D2;
+  }
+
+  /* 图片容器默认隐藏 */
+  .support {
+    display: none;
+    border: 1px solid #1976D2;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* 当复选框被选中时显示图片 */
+  #toggle:checked ~ .support {
+    display: block;
+    opacity: 1;
+}
+</style>
+<h3>赞助</h3>
+<p>如果您觉得本站的文章对您有帮助，欢迎赞助本站。您的打赏是对本站最大的支持！</p>
+
+<div class="support-container" style="text-align: center;">
+  <!-- 隐藏的复选框 -->
+  <input type="checkbox" id="toggle">
+    
+  <!-- 按钮实际上是复选框的标签 -->
+  <label class="btn" for="toggle">点我打赏本站</label>
+  
+  <div class="support">
+  
+    <div style="display: inline-block; width: 200px; text-align: center;">
+      <span>微信赞赏</span>
+      <img src="https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg" height="200px">
+      <!-- 您可以通过微信赞赏码为本站打赏 -->
+    </div>
+    <div style="display: inline-block; width: 200px; text-align: center;">
+      <span>支付宝</span>
+      <!-- ![wechat.jpg](https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg) -->
+      <!-- ![alipay.jpg](https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg) -->
+      <img src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg" height="150px">
+      <!-- 欢迎使用支付宝赞赏本站 -->
+    </div>
+  </div>
+</div>
+
 
 
   <h2 id="__comments">评论</h2>
