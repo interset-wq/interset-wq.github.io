@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waline imageUploader 案例</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti beatae quae unde tenetur modi, eos ipsum labore ad deserunt perspiciatis error iure saepe ullam voluptatem laborum veritatis perferendis adipisci quis, ipsa nesciunt porro corporis vel cum? Iste reprehenderit veritatis, illo incidunt exercitationem vero. Alias, sint quas? Tenetur architecto, repellat ipsum esse eum impedit ipsam ea. Exercitationem vel cumque quae sunt tempora porro earum, cum pariatur, fugit amet esse accusamus, natus provident ad ea! Ea a deserunt amet nemo vel earum quo numquam impedit nesciunt libero autem sit explicabo molestias facere, vero porro? Facere iste incidunt, dignissimos placeat ratione consequuntur in eveniet, laborum sint itaque culpa quo illum molestiae quos nesciunt earum, cupiditate ipsum sed eligendi quae ex. Incidunt ratione ab amet iusto culpa possimus corporis autem in vero accusamus, alias blanditiis nobis? Placeat hic vero tenetur laborum. Provident ratione temporibus, nihil enim maxime tempore qui perspiciatis. Asperiores hic libero neque molestias delectus ratione enim vero! Sint, illo ut nisi aperiam ipsa officiis sequi magnam quasi architecto repellendus perspiciatis! Ratione veniam voluptas perferendis iste, consectetur quas deleniti totam rerum omnis nihil magnam iusto accusamus soluta vel itaque reprehenderit dolorum quae sed expedita, commodi, distinctio quibusdam porro deserunt repellat. Iste, nam! Sequi rem, saepe beatae incidunt adipisci maxime asperiores blanditiis ipsa minus, quibusdam ipsam magnam praesentium eveniet quisquam! Possimus mollitia expedita sequi labore, tempora animi laborum temporibus eveniet aliquam cum sunt magnam pariatur est reiciendis natus corrupti soluta sed quaerat perferendis nam sapiente. Harum sed dicta est, laborum id molestias maiores libero mollitia deleniti, beatae similique voluptas nobis perspiciatis quidem eveniet, unde illo ea minima tenetur fuga doloremque impedit sint molestiae rerum. Laborum vel ipsum fuga. Esse error temporibus earum ea assumenda, veritatis odio laboriosam minus ipsa dolores ex beatae iusto distinctio corporis excepturi minima mollitia quia, obcaecati consequatur ullam aspernatur cum enim nemo aperiam. Qui tempora quibusdam labore temporibus cumque velit maiores explicabo repudiandae dolores alias inventore reiciendis aliquid, in quia dignissimos similique? Iusto reprehenderit sint mollitia labore est accusamus voluptatibus ipsam! Est, voluptate. Assumenda vero ipsum fugiat doloribus impedit similique voluptatem, delectus neque repudiandae necessitatibus temporibus eveniet esse enim explicabo omnis, iusto voluptate! Deleniti eius debitis iure cupiditate suscipit temporibus sed incidunt laboriosam repellendus accusamus facere recusandae, veritatis quis quas quam est pariatur quidem dolor et ex totam illo? Aliquam nobis recusandae possimus tempore sequi doloremque sunt earum, sed corporis repellendus itaque consectetur. Consequuntur, architecto neque. Expedita dicta aspernatur veritatis eos reprehenderit fugit obcaecati fugiat sapiente earum dolore officia facilis quos architecto nobis, quod quam rerum? Cupiditate deserunt magni nemo? Impedit quos illum est sunt odio, ipsa rerum animi. Expedita ducimus possimus enim dignissimos sit voluptatum ea vel veritatis. Reprehenderit eligendi quo magnam aspernatur, tempore libero voluptatem consectetur sit ipsa, nulla eius placeat earum et, alias officiis. Illum quas odio laboriosam minus, quos aliquid natus sed labore delectus tempore nemo soluta aut deleniti nihil tenetur commodi possimus consectetur quidem, accusamus corrupti autem praesentium omnis? Unde quae amet labore officia ipsum officiis enim optio? Maxime dignissimos quis in at ipsum.</p>
+    <div id="waline" style="max-width: 800px; margin: 0 auto"></div>
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+      const waline = init({
+        el: '#waline',
+        serverURL: 'https://waline.d111kc.top',
+        reaction: true, // 开启反应
+        path: '/',
+        lang: 'zh-CN',
+        // meta: ['nick', 'mail', 'link'],
+        requiredMeta: ['nick', 'mail'],
+        login: 'disable',
+        imageUploader: (file) => {
+          let formData = new FormData();
+          let headers = new Headers();
+
+          formData.append('file', file);
+          headers.append('Authorization', '!{API TOKEN}');
+          headers.append('Accept', 'application/json');
+
+          return fetch('!{API URL}', {
+            method: 'POST',
+            headers: headers,
+            body: formData,
+          })
+            .then((resp) => resp.json())
+            .then((resp) => resp.data.links.url);
+        },
+      });
+    </script>
+  </body>
+</html>

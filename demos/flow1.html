@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow1</title>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="eb4aa2bc-3afd-4efe-9336-5f8dc9c2addb"></script>
+    <style>
+        .outer {
+            background-color: grey;
+            border: 1px solid pink;
+            width: 400px;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        .box1 {
+            background: blue;
+            float: left;
+        }
+        .box2 {
+            background: yellow;
+            float: left;
+        }
+        .box3 {
+            background: red;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Example 4 三个盒子都左浮动，但是父容器的宽度不够，导致box3被挤到第二行，父容器只显示为边框线</h2>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>
