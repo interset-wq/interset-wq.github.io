@@ -1,7 +1,7 @@
 ---
 comments: true
-icon: material/emoticon-happy 
-status: new
+icon: material/language-python
+# status: new
 title: Python基础语法
 ---
 

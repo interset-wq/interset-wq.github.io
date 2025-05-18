@@ -1,3 +1,77 @@
+<style>
+  .support-container {
+    text-align: center;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  /* 按钮样式 */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: skyblue;
+  }
+
+  /* 图片容器默认隐藏 */
+  .support {
+    display: none;
+    border: 1px solid blue;
+    margin-top: 10px;
+    padding-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .support .qr {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+  }
+
+  .suport .qr img {
+    height: 150px;
+  }
+
+  /* 当复选框被选中时显示图片 */
+  #toggle:checked ~ .support {
+    display: inline-block;
+    opacity: 1;
+  }
+</style>
+
+<hr>
+<h3>赞助</h3>
+<p>如果您觉得本站的文章对您有帮助，欢迎<strong>赞助</strong>本站。您的打赏是对本站最大的支持！</p>
+
+<div class="support-container">
+  <!-- 隐藏的复选框 -->
+  <input type="checkbox" id="toggle"> 
+  <!-- 按钮实际上是复选框的标签 -->
+  <label class="btn" for="toggle">点我打赏</label>
+  <br>
+  <div class="support">
+    <div class="qr">
+      <span>微信赞赏</span>
+      <img alt="微信赞赏" src="https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg">
+    </div>
+    <div class="qr">
+      <span>支付宝</span>
+      <img alt="支付宝" src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg">
+    </div>
+  </div>
+
+</div>
+
 
 {% if page.meta.comments %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>

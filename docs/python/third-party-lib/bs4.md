@@ -1,11 +1,14 @@
 ---
 comments: true
-icon: material/emoticon-happy 
-status: new
+# icon: material/emoticon-happy 
+# status: new
 title: bs4
+subtitle: 解析网页
 ---
 
 :material-pen-plus: `本文创建于2025-4-12`
+
+[bs4官方文档](https://beautifulsoup.readthedocs.io/zh-cn/v4.4.0/){ .md-button .md-button--primary }
 
 ## 第一步：创建soup对象
 

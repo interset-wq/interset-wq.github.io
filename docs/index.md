@@ -1,10 +1,10 @@
 ---
 # 隐藏导航栏和目录
 hide:
-  - navigation
-  - toc
-comments: true
-date: 2025-3-9
+   - navigation
+   - toc
+comments: false
+# pdf: true
 # 屏蔽搜索
 search:
   exclude: true
@@ -14,6 +14,18 @@ search:
 :material-pen-plus: `本文创建于2025-3-9`
 
 本站是使用python第三方库[mkdocs](https://www.mkdocs.org)搭建的静态网站。
+
+## 近期计划
+
+计划在2025年9月之前停用 `tour.d111kc.top` 子域名，并关闭此站点。到时候所有文章将会迁移到新的站点。我打算依据以下计划来搭建新的网站：
+
+- [ ] 正式启用 `d111kc.top` 域名,并将其重定向到 `www.d111kc.top` 域名,用于个人主页以及作为 `d111kc.top` 域名之下所有子域名的导航页,计划使用响应式布局设计网站,并同时支持简体中文、繁体中文和英文,同时通过搭建个人主页练习 `HTML` 和 `CSS` 以及 `JavaScript` 等相关技术
+- [ ] 启用 `blog.d111kc.top` 域名, 用于博客记录生活
+- [ ] 启用 `note.d111kc.top` 域名, 用于学习记录
+- [ ] 启用 `py.d111kc.top` 域名, 专门记录python方面的学习记录
+- [ ] 启用 `h5.d111kc.top` 域名, 专门记录前端方面的学习记录
+- [ ] 将 [@interset-wq](https://github.com/interset-wq) 账号下的仓库迁移到 [@d111kc](https://github.com/d111kc) 账号下, 并使用两个账号练习git协作以及git相关命令操作
+
 
 ## 为何创建此站点？
 
@@ -31,25 +43,21 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
 
 ## 关于我
 
-我是 `D111KC`，当然你也可以称呼我为 `interset-wq`，目前就读于一所本科大学，学习土木工程专业。
+我是 [@interset-wq](https://github.com/interset-wq) **(D111KC)** 目前就读于一所本科大学，学习土木工程专业。
 
 一个由于自己的大学生活过于无聊，而对编程感兴趣的人。某个下午，闲来无事去图书馆闲逛了一下，看到了一本比较有意思的写python的书籍，于是我就在网上买了一本，花了一个暑假看完了。是那本书让我对python很感兴趣，我先后学习了pygame游戏、django网站开发、数据可视化、flask网站开发、网络爬虫、tkinter GUI设计，越是学习就越入迷，也越是发现自己知识的匮乏。最近打算学习一下JavaScript，增长自己的见识。
 
 联系我：<d111kc@foxmail.com>
 
-!!! info inline end "赞助"
+<!-- !!! info inline end "赞助"
 
     如果您觉得本站的文章对您有帮助，欢迎赞助本站。您的打赏是对本站最大的支持！
     === "微信赞赏"
         <img src="https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg" width="200" align="left">
-        <!-- 您可以通过微信赞赏码为本站打赏 -->
-        <!-- ![wechat.jpg](https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg) -->
     === "支付宝"
-        <!-- ![alipay.jpg](https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg) -->
-        <img src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg" width="200">
-        <!-- 欢迎使用支付宝赞赏本站 -->
+        <img src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg" width="200"> -->
 
-近期学习计划：
+<!-- 近期学习计划：
 
 - [ ] :fontawesome-brands-python: python
     - [x] :simple-pandas: 数据可视化
@@ -70,5 +78,5 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
 - [ ] 大学英语
     - [ ] CET-4
     - [ ] CET-6
-- [ ] :material-microsoft-office: 计算机二级 `MS Office`
+- [x] :material-microsoft-office: 计算机二级 `MS Office` `[合格]` -->
 

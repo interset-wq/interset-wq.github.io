@@ -44,7 +44,7 @@ theme:
     - navigation.instant.prefetch # 预加载
     # - navigation.instant.progress # 进度指示器
     - navigation.instant.preview # 全局即时预览
-    # - navigation.tracking # 锚点跟踪
+    - navigation.tracking # 锚点跟踪
     - navigation.tabs # 导航选项卡
     - navigation.tabs.sticky # 固定导航选项卡
     - navigation.sections # 左侧导航收缩箭头
@@ -110,11 +110,9 @@ extra:
       link: mailto:d111kc@foxmail.com
       name: 通过邮箱联系我
 
-
-
   
 copyright: 
-  Copyright &copy; 2024 - 2025 by <a href="https://github.com/interset-wq" target="_blank">D111KC</a>
+  Copyright &copy; 2024 - 2025 <a href="https://github.com/interset-wq" target="_blank">interset-wq</a>
   <br><a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
 
 # 插件
@@ -143,7 +141,18 @@ plugins:
   #     categories:
   #       - categories
   #       - tags 
-  - glightbox # 图片放大
+  - glightbox # 图片放大 
+  - exporter:
+      formats:
+        pdf:
+          enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, true]
+          explicit: true
+          concurrency: 16
+      buttons:
+        - title: Download as PDF
+          icon: material-file-download-outline
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
 
 markdown_extensions:
   - admonition # 提示，引用
@@ -192,29 +201,42 @@ extra_javascript:
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-  - https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js
+  # - https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js
+  # - https://cloud.umami.is/script.js
+  # - javascripts/umami.js
+
 
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
-  - stylesheets/extra.css
   
 
 nav:
-  - 首页:
-    - index.md
+  - 首页: index.md
 
   - 速查表: 
     - reference/markdown.md
     - reference/extended-markdown.md
     - reference/shortcut-keys.md
+    - reference/katex.md
 
   - 博客:
     - blog/index.md
 
   - Python:
     - python/syntax.md
-    - python/bs4.md
+    - 标准库:
+      - python/standard-lib/threading.md
+      - python/standard-lib/path.md
+      - python/standard-lib/re.md
+    - 第三方库:
+      - python/third-party-lib/bs4.md
+      - python/third-party-lib/drissionpage.md
+      - python/third-party-lib/pdf.md
+      - python/third-party-lib/numpy.md
+      - python/third-party-lib/matplotlib.md
+      - python/third-party-lib/pandas.md
+      - python/third-party-lib/scipy.md
   - GUI:
     - GUI/tkinter0.md
   - 前端:
@@ -222,6 +244,19 @@ nav:
     - h5/classic-box.md
     - h5/h5c3.md
     - h5/js.md
-    
+    - h5/web-apis.md
+  - 命令行:
+    - Git Bash:
+      - command-line/git/quick-start.md
+      - command-line/git/basic-git-command.md
+      - command-line/git/first-contributions.md
+  - 笔记:
+    - mynote/revit.md
+    - mynote/probability.md
+    - mynote/geology.md
+    - mynote/surveying.md
+
+# mkdocs gh-deploy --force
+
 
 

@@ -1,7 +1,7 @@
 ---
 comments: true
-icon: material/emoticon-happy-outline
-status:  new # deprecated # new
+icon: material/keyboard
+# status:  new # deprecated # new
 ---
 
 # 快捷键

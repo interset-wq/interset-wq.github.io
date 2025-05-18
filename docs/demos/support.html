@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* 隐藏复选框 */
+#toggle {
+    display: none;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2196F3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1976D2;
+}
+
+/* 图片容器默认隐藏 */
+.support {
+    display: none;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* 当复选框被选中时显示图片 */
+#toggle:checked ~ .support {
+    display: block;
+    opacity: 1;
+}
+
+/* 图片样式 */
+.qr-code {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- 隐藏的复选框 -->
+<input type="checkbox" id="toggle">
+
+<!-- 按钮实际上是复选框的标签 -->
+<label class="btn" for="toggle">显示二维码</label>
+
+<!-- 图片容器 -->
+<div class="support">
+    <img src="your-image-url.jpg" class="qr-code" alt="二维码">
+</div>
+
+</body>
+</html>

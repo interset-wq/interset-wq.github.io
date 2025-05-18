@@ -1,7 +1,7 @@
 ---
 title: Markdown 扩展语法
 comments: true
-icon: material/emoticon-happy-outline
+icon: material/language-markdown
 # status:  new # deprecated # new
 description: 适用于 mkdocs 的 markdown 扩展语法
 subtitle: Markdown 语法
@@ -316,14 +316,16 @@ root.mainloop()
 
 你可以看到：
 
+
 ``` mermaid
 graph LR
-  A[开始] --> B{出错?};
-  B -->|是| C[认真思考...];
-  C --> D[调试];
-  D --> B;
-  B ---->|否| E[输出结果!];
+A[开始] --> B{出错?};
+B -->|是| C[认真思考...];
+C --> D[调试];
+D --> B;
+B ---->|否| E[输出结果!];
 ```
+
 
 
 ## 七、脚注
