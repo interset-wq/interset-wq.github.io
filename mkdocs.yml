@@ -142,17 +142,6 @@ plugins:
   #       - categories
   #       - tags 
   - glightbox # 图片放大 
-  # - exporter:
-  #     formats:
-  #       pdf:
-  #         enabled: !ENV [MKDOCS_EXPORTER_PDF_ENABLED, true]
-  #         explicit: true
-  #         concurrency: 16
-  #     buttons:
-  #       - title: Download as PDF
-  #         icon: material-file-download-outline
-  #         enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
-  #         attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
 
 markdown_extensions:
   - admonition # 提示，引用
