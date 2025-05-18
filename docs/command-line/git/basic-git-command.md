@@ -14,6 +14,9 @@ title: Git 基本命令
 [GitCode官方文档](https://docs.gitcode.com/){ .md-button .md-button--primary }
 [:simple-gitee: Gitee官方文档](https://gitee.com/all-about-git){ .md-button }
 
+???+ warning
+    创建 repo 时,一定要创建 `.gitignore` 和 `LICENSE` 文件,减少不必要的麻烦
+
 `git init` 初始化一个全新的 Git 存储库并开始跟踪现有目录。 它在现有目录中添加一个隐藏的子文件夹，该子文件夹包含版本控制所需的内部数据结构。
 
 `git clone HTTPS/SSH` 通过HTTPS或SSH创建远程已存在的项目的本地副本。 克隆包括项目的所有文件、历史记录和分支。

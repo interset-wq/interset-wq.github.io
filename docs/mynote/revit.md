@@ -9,8 +9,8 @@ status: new
 
 :material-pen-plus: `本文创建于2025-5-10`
 
-???+ quote 
-    本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF
+<!-- ???+ quote 
+    本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF -->
 
 ## 简介
 
