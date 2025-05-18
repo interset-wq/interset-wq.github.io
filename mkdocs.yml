@@ -141,7 +141,7 @@ plugins:
   #     categories:
   #       - categories
   #       - tags 
-  - glightbox # 图片放大 
+  # - glightbox # 图片放大 
 
 markdown_extensions:
   - admonition # 提示，引用
