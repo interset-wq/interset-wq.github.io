@@ -9,13 +9,13 @@ title: Git 基本命令
 :material-pen-plus: `本文创建于2025-5-17`
 
 [:simple-git: Git官方文档](https://git-scm.com/doc){ .md-button .md-button--primary }
-[:simple-github: GitHub官方文档](https://docs.github.com/zh){ .md-button }
+[:simple-github: GitHub文档](https://docs.github.com/zh){ .md-button }
 
-[GitCode官方文档](https://docs.gitcode.com/){ .md-button .md-button--primary }
-[:simple-gitee: Gitee官方文档](https://gitee.com/all-about-git){ .md-button }
+[GitCode文档](https://docs.gitcode.com/){ .md-button .md-button--primary }
+[:simple-gitee: Gitee文档](https://gitee.com/all-about-git){ .md-button }
 
 ???+ warning
-    创建 repo 时,一定要创建 `.gitignore` 和 `LICENSE` 文件,减少不必要的麻烦
+    创建 repo 时,一定要创建 `README.md` `.gitignore` 和 `LICENSE` 文件,减少不必要的麻烦
 
 `git init` 初始化一个全新的 Git 存储库并开始跟踪现有目录。 它在现有目录中添加一个隐藏的子文件夹，该子文件夹包含版本控制所需的内部数据结构。
 

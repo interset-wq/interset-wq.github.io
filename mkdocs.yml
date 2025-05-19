@@ -242,7 +242,6 @@ nav:
   - 笔记:
     - mynote/revit.md
     - mynote/probability.md
-    - mynote/geology.md
     - mynote/surveying.md
 
 # mkdocs gh-deploy --force
