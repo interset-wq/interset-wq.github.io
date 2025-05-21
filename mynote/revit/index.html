@@ -2191,6 +2191,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#22_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 绘制一层建筑外墙
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 绘制一层内墙
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2458,6 +2476,24 @@
   <a href="#21-cad" class="md-nav__link">
     <span class="md-ellipsis">
       2.1 绘制标高 导入CAD图形 绘制轴网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 绘制一层建筑外墙
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 绘制一层内墙
     </span>
   </a>
   
@@ -2835,6 +2871,25 @@
 <h2 id="revit_1">第二步: 使用Revit创建一个建筑模型</h2>
 <p>新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)</p>
 <h3 id="21-cad">2.1 绘制标高 导入CAD图形 绘制轴网</h3>
+<h3 id="22_1">2.2 绘制一层建筑外墙</h3>
+<p>如果墙不是承重构件(剪力墙),则使用 <code>墙:建筑</code>,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)</p>
+<p><img alt="3-1.png" src="https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png" /></p>
+<h3 id="23_1">2.3 绘制一层内墙</h3>
+<p>墙面有装饰需要参考 <strong>建筑材料表</strong></p>
+<p>墙由 <strong>主体结构</strong> 和 <strong>装饰层</strong> 组成, 装饰层又由 <strong>踢脚线墙裙线</strong> 和 <strong>墙面装饰</strong> 组层.</p>
+<p>以下以分割车库和卫生间的墙面为例说明:</p>
+<p>分析 <strong>建筑材料表</strong>:</p>
+<p><img alt="3-2.png" src="https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png" /></p>
+<p><img alt="3-3.png" src="https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png" /></p>
+<p><img alt="3-4.png" src="https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png" /></p>
+<p>这面墙的结构大致如下图所示.</p>
+<p><img alt="3-5.png" src="https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png" /></p>
+<p>可将这面墙分成三段建模(从下往上):</p>
+<ol>
+<li>第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖</li>
+<li>第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖</li>
+<li>第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖</li>
+</ol>
 
 
 
