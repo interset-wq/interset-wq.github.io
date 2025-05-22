@@ -2875,21 +2875,43 @@
 <p>如果墙不是承重构件(剪力墙),则使用 <code>墙:建筑</code>,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)</p>
 <p><img alt="3-1.png" src="https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png" /></p>
 <h3 id="23_1">2.3 绘制一层内墙</h3>
-<p>墙面有装饰需要参考 <strong>建筑材料表</strong></p>
-<p>墙由 <strong>主体结构</strong> 和 <strong>装饰层</strong> 组成, 装饰层又由 <strong>踢脚线墙裙线</strong> 和 <strong>墙面装饰</strong> 组层.</p>
+<p>墙面有装饰需要参考 <strong>建筑材料表</strong> 或 <strong>工程做法表</strong></p>
+<p>墙由 <strong>主体结构</strong> 和 <strong>装饰层</strong> 组成, 装饰层又由 <strong>踢脚线墙裙线</strong> 和 <strong>墙面</strong> 组层.</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p><strong>踢脚线墙裙线</strong> 位于 <strong>墙面</strong> 之上,因此有关 <strong>踢脚线墙裙线</strong> 的建模都需要考虑 <strong>墙面</strong> 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 <strong>水泥砂浆</strong> 作为材料.</p>
+</details>
 <p>以下以分割车库和卫生间的墙面为例说明:</p>
 <p>分析 <strong>建筑材料表</strong>:</p>
 <p><img alt="3-2.png" src="https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png" /></p>
 <p><img alt="3-3.png" src="https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png" /></p>
 <p><img alt="3-4.png" src="https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png" /></p>
-<p>这面墙的结构大致如下图所示.</p>
+<p>这面墙的结构大致如下图所示(图示的墙结构中的 <code>墙</code> 指的是这面墙的 <code>主体结构</code> 和 <code>墙面</code>).</p>
 <p><img alt="3-5.png" src="https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png" /></p>
 <p>可将这面墙分成三段建模(从下往上):</p>
 <ol>
-<li>第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖</li>
-<li>第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖</li>
+<li>
+<p>第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖</p>
+<details class="info" open="open">
+<summary>第一段的建模</summary>
+<p>新建一个 <code>墙:建筑</code>,对其进行修改,revit提供的材料无法满足需要时需要 <code>新建材质</code></p>
+<p><img alt="3-6.png" src="https://s2.loli.net/2025/05/22/dINtDvkZOUY451e.png" /></p>
+<p>参考 <strong>建筑材料表</strong> 计算并建模.</p>
+<p><img alt="3-7.png" src="https://s2.loli.net/2025/05/22/Q85CNrnmdkG1thx.png" /></p>
+</details>
+</li>
+<li>
+<p>第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖</p>
+</li>
 <li>第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖</li>
 </ol>
+<p>使用 <code>叠层墙</code> 将以上三部分合成为一面墙.</p>
+<p>在左侧 <code>属性</code> 中将墙切换到 <code>叠层墙</code>, 新建一个叠层墙,编辑类型</p>
+<p>将以上三部分添加到这个叠层墙中,根据实际情况建模</p>
+<p><img alt="3-8.png" src="https://s2.loli.net/2025/05/22/UTBk4v2iNPIewRm.png" /></p>
+<p>绘制时,根据实际情况选择绘制墙时的定位线</p>
+<p><img alt="3-9.png" src="https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png" /></p>
+<p>绘制楼梯间和卫生间的墙的操作同上.</p>
 
 
 
