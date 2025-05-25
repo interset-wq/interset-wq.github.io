@@ -4,6 +4,8 @@ theme:
   name: material
   custom_dir: overrides
   language: zh
+  logo: assets/Interset-Wq.svg
+  favicon: assets/favicon.ico
   icon:
     tag:
       html: fontawesome/brands/html5
@@ -70,6 +72,7 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      # primary: cyan
       toggle:
         icon: material/weather-night
         name: 切换到夜间模式

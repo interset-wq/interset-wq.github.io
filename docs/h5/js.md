@@ -455,6 +455,31 @@ for (let i = 0; i < arr.length; i++) {
     console.log(arr) // [1, 2, 3, 4, 5]
     ```
 
+???+ tip "map方法(常用)"
+    数组的 `.map(function (item, index) {})` 方法, 类似于python列表推导式,可以用于产生新数组. 也类似于python列表遍历的 `enumerate()` 函数,可以同时遍历数组的元素和下标(但是这种遍历方法不推荐使用,因为 `.map()` 方法是用来产生新元组的).
+
+    语法:
+
+    ```js
+    const arr = ['py', 'js', 'html', 'css']
+    const newArr = arr.map(function (item, index) {
+        console.log(item, index) // 遍历数组,依次输出数组元素和下标
+        return item + '语言'
+    })
+    console.log(newArr) // ['py语言', 'js语言', 'html语言', 'css语言']
+    ```
+
+???+ info "join方法(常用)"
+    数组的 `.join()`  可以用来将数组中的元素拼接为一个字符串, 类似于python中的 `','.join(list)` 方法,只不过js中的 `.join()` 不传参时,相当于传入了默认值 `','`
+
+    ```js
+    const arr = ['py', 'js', 'html', 'css']
+    const newArr1 = arr.join()
+    console.log(newArr1) // py,js,html,css
+    const newArr2 = arr.join('')
+    console.log(newArr2) // pyjshtmlcss
+    ```
+
 ## 八、函数
 
 ### 8.1 具名函数
