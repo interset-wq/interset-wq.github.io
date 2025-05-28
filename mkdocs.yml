@@ -237,6 +237,7 @@ nav:
     - h5/h5c3.md
     - h5/js.md
     - h5/web-apis.md
+    - h5/js2.md
   - 命令行:
     - Git Bash:
       - command-line/git/quick-start.md
