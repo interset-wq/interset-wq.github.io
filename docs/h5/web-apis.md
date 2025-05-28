@@ -498,6 +498,9 @@ JavaScript 语言的一大特点就是单线程，也就是说，同一个时间
 
 ## 六、正则表达式
 
+???+ error
+    所有正则表达式都不要随便加空格,符合之间不需要任何空格
+
 ### 6.1 简介
 
 正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象通常用来查找、替换那些符合正则表达式的文本，许多语言都支持正则表达式。
@@ -519,3 +522,146 @@ JavaScript 语言的一大特点就是单线程，也就是说，同一个时间
 
 - `regExp.test(字符串)` 判断字符串中是否有符合匹配的内容,返回布尔值
 - `regExp.exec(字符串)` 检索符合匹配的内容, 返回元组, 如果没有符合匹配的内容,则返回 `null`
+
+### 6.3 元字符
+
+普通字符: 大多数的字符仅能够描述它们本身，这些字符称作普通字符，例如所有的字母和数字。也就是说普通字符只能够匹配字符串中与它们相同的字符。例如 `/hello/` 这个正则表达式使用的就是普通字符
+
+元字符(特殊字符) 是一些具有特殊含义的字符，可以极大提高了灵活性和强大的匹配功能。比如，规定用户只能输入英文26个英文字母，普通字符的话`/abcdefghijklmnopqrstuvwxyz/`, 但是换成元字符写法： `[a-z]`
+
+参考文档：[MDN正则表达式文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions){ .md-button .md-button--primary }
+[开源中国正则测试工具](http://tool.oschina.net/regex){ .md-button }
+
+元字符分为以下三类:
+
+- 边界符（表示位置，开头和结尾，必须用什么开头，用什么结尾）
+    - `^` 以什么开始
+    - `$` 以什么结尾
+    - 如果 `^` 和 `$` 在一起，表示必须是精确匹配
+
+    ???+ example 
+        ```js
+        // 普通字符, 只要字符串中有 h 就返回 true
+        console.log(/h/.test('hello')) // true
+        console.log(/h/.test('high')) // true
+
+        // 使用^, 必须以 h 开头
+        console.log(/^h/.test('hello')) // true
+        console.log(/^h/.test('lunch')) // false
+
+        // 使用$, 必须以 h 结尾
+        console.log(/h$/.test('lunch')) // true
+        console.log(/h$/.test('hello')) // false
+
+        // 同时使用^和$, 只匹配 h
+        console.log(/^h$/.test('lunch')) // false
+        console.log(/^h$/.test('h')) // true
+        console.log(/^h$/.test('hh')) // false
+        ```
+
+- 量词 （表示重复次数）
+    - `*` 重复0次或更多次
+    - `+` 重复1次或更多次
+    - `?` 重复0次或1次
+    - `{n}` 重复n次
+    - `{n,}` 重复n次或更多次,不要随便加空格,逗号之后也不要空格
+    - `{n,m}` 重复n次到m次,包括m和n,不要随便加空格,逗号之后也不要空格
+
+    ???+ example
+        ```js
+        // 使用*, 重复0次或更多次(字符串中只能有h,但h可以重复任意次)
+        console.log(/^h*$/.test('')) // true
+        console.log(/^h*$/.test('h')) // true
+        console.log(/^h*$/.test('hhhhhhhhh')) // true
+
+        // 使用+, 重复1次或更多次(字符串中只能有h,但h可以重复1次及其以上)
+        console.log(/^h+$/.test('')) // false
+        console.log(/^h+$/.test('h')) // true
+        console.log(/^h+$/.test('hhhhhhh')) // true
+
+        // 使用?, 重复0次或1次(字符串中只能有1个h,或者为空字符串)
+        console.log(/^h?$/.test('')) // true
+        console.log(/^h?$/.test('h')) // true
+        console.log(/^h?$/.test('hh')) // false
+
+        // 使用{n}, 重复n次(字符串只能为'hhh')
+        console.log(/^h{3}$/.test('hh')) // false
+        console.log(/^h{3}$/.test('hhh')) // true
+        console.log(/^h{3}$/.test('hhhh')) // false
+
+        // 使用{n,}, 重复n次及其以上(字符串中只能有h, 且至少有3个h)
+        console.log(/^h{3,}$/.test('hh')) // false
+        console.log(/^h{3,}$/.test('hhh')) // true
+        console.log(/^h{3,}$/.test('hhhhhhhh')) // true
+
+        // 使用{n,m}, 重复n到m次,包括端点(字符串只能是'hhh', 'hhhh', 'hhhhh')
+        console.log(/^h{3,5}$/.test('hh')) // false
+        console.log(/^h{3,5}$/.test('hhh')) // true
+        console.log(/^h{3,5}$/.test('hhhh')) // true
+        console.log(/^h{3,5}$/.test('hhhhh')) // true
+        console.log(/^h{3,5}$/.test('hhhhhh')) // false
+        ```
+
+- 字符类 （比如 \d 表示 0~9）
+    - `[]` 匹配字符集合, 只要字符串中有正则表达式方括号中任一字符, 就符合匹配, 在 `[]`中还可以使用 `-`, 比如 
+        - `[0-9]` 相当于 `[0123456789]`
+        - `[a-z] ` 相当于 小写英文字母的字符集合
+        - `[a-zA-Z]` 相当于 英文字母的字符集合
+        - 腾讯QQ号从10000开始, 因此可表示为 `^[1-9][0-9]{4,}$`
+
+        ???+ example
+            ```js
+            // 只要字符串中有a,b,c三者中的一个,就符合匹配
+            console.log(/[abc]/.test('java')) // true
+            console.log(/[abc]/.test('boy')) // true
+            console.log(/[abc]/.test('css')) // true
+            console.log(/[abc]/.test('html')) // false
+
+            // 字符串必须是'a', 'b', 'c' 三者之一
+            console.log(/^[abc]$/.test('api')) // false
+            console.log(/^[abc]$/.test('abc')) // false
+            console.log(/^[abc]$/.test('a')) // true
+            console.log(/^[abc]$/.test('b')) // true
+            console.log(/^[abc]$/.test('c')) // true
+
+            // 字符串必须是 a, b, c中二者的组合而成的字符串, 例如 'aa', 'ab', 'ac'等
+            console.log(/^[abc]{2}$/.test('api')) // false
+            console.log(/^[abc]{2}$/.test('aa')) // true
+            ```
+    
+    - `[^]` 表示 `[]`字符集合的取反, 例如 `[^a-z]` 匹配除了小写字母以外的字符
+    - `.` 匹配除换行符之外的任何单个字符
+    - 预定义, 某些常用正则表达式的简写, 例如可以使用 `\d{4}-\d{1,2}-\d{1,2}` 匹配 `2025-5-26` 格式的日期
+
+        | 预定义 | 含义 |
+        | --- | --- |
+        | `\d` | 匹配0-9之间的任一数字，相当于`[0-9]` |
+        | `\D` | 匹配所有0-9以外的字符，相当于`[^0-9]` |
+        | `\w` | 匹配任意的字母、数字和下划线，相当于`[A-Za-z0-9_]` |
+        | `\W` | 除所有字母、数字和下划线以外的字符，相当于`[^A-Za-z0-9_]` |
+        | `\s` | 匹配空格（包括换行符\n、制表符\t、空格符等），相等于`[ \t\r\n\v\f]` |
+        | `\S` | 匹配非空格的字符，相当于`[^ \t\r\n\v\f]` |
+
+    - 修饰符 修饰符约束正则执行的某些细节行为，如是否区分大小写、是否支持多行匹配等
+        - 语法 `/正则表达式/修饰符` 
+        - `i` 是单词 ignore 的缩写，正则匹配时字母不区分大小写
+        - `g` 是单词 global 的缩写，匹配所有满足正则表达式的结果(正则表达式默认只匹配第一个符合条件的结果)
+        - `ig` 或 `gi` 不区分大小写,匹配所有结果
+
+        ???+ example
+            ```js
+            // 不区分大小写
+            console.log(/a/i.test('API')) // true
+            console.log(/a/i.test('api')) // true
+            ```
+    
+    - `.replace()` 方法
+        - 语法 `字符串.replace(正则表达式对象, '替换为的文本')` 将字符串中符合匹配的文本替换为传入的文本
+
+        ```js
+        const str = 'HTML 是一门前端语言, 学习 html 对于学习前端非常重要'
+        const newStr1 = str.replace(/HTML/, 'JavaScript')
+        console.log(newStr1) // JavaScript 是一门前端语言, 学习 html 对于学习前端非常重要
+        const newStr2 = str.replace(/HTML/ig, 'JavaScript')
+        console.log(newStr2) // JavaScript 是一门前端语言, 学习 JavaScript 对于学习前端非常重要
+        ```

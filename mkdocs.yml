@@ -243,9 +243,10 @@ nav:
       - command-line/git/basic-git-command.md
       - command-line/git/first-contributions.md
   - 笔记:
-    - mynote/revit.md
-    - mynote/probability.md
-    - mynote/surveying.md
+    - note/revit.md
+    - note/excel-degree.md
+    - note/probability.md
+    - note/surveying.md
 
 # mkdocs gh-deploy --force
 
