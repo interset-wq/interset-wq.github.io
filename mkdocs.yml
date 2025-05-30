@@ -4,7 +4,7 @@ theme:
   name: material
   custom_dir: overrides
   language: zh
-  logo: assets/Interset-Wq.svg
+  logo: assets/Interset-Wq.png
   favicon: assets/favicon.ico
   icon:
     tag:

@@ -192,3 +192,325 @@ result() // 函数被调用了3次
     闭包的作用: 封闭数据，实现数据私有，外部也可以访问函数内部的变量. 闭包很有用，因为它允许将函数与其所操作的某些数据（环境）关联起来
     
     闭包可能引起的问题: 内存泄漏
+
+### 1.6 变量提升
+
+变量提升是 JavaScript 中比较“奇怪”的现象，它允许在变量声明之前即被访问（仅存在于var声明变量）
+
+```js
+// 使用 var 声明变量,可以先使用变量,再声明变量
+// 因为变量提升会自动将 var 声明的变量移动到当前作用域的最前面
+console.log(msg + ' world!') // 输出结果 undefined world!
+var msg = 'Hello'
+
+// 以上代码相当于
+// var msg
+// console.log(msg + ' world!') // 输出结果 undefined world!
+// msg = 'Hello'
+```
+
+???+ warning
+    - 变量在未声明即被访问时会报语法错误
+    - 变量在var声明之前即被访问，变量的值为 undefined
+    - let/const 声明的变量不存在变量提升
+    - 变量提升出现在相同作用域当中
+    - 实际开发中推荐先声明再访问变量
+
+???+ note
+    使用 `var` 关键字声明变量会有变量提升, 因此不建议使用 `var` 声明变量
+
+    变量提升的流程:
+
+    - 先把var 变量提升到当前作用域于最前面
+    - 只提升变量声明， 不提升变量赋值
+    - 然后依次执行代码
+
+## 二、函数
+
+### 2.1 函数提升
+
+函数提升与变量提升比较类似，是指函数在声明之前即可被调用(Python函数只能先声明再调用)。
+
+总结：
+
+- 函数提升能够使函数的声明调用更灵活
+- 函数表达式不存在提升的现象
+- 函数提升出现在相同作用域当中
+
+```js
+// JS 可以先调用函数,再声明函数
+fn() // 输出结果 Hello world!
+
+function fn() {
+    console.log('Hello world!')
+}
+```
+
+```js
+// 函数表达式没有函数提升
+// fun() // 报错 Uncaught TypeError: fun is not a function
+var fun = function () {
+    console.log('Hello world!')
+}
+
+fun() // 输出结果 Hello world!
+
+// 以上代码相当于
+// var fun 
+// // fun() // Uncaught TypeError: fun is not a function
+// fun = function () {
+//     console.log('Hello world!')
+// }
+// fun() // 输出结果 Hello world!
+```
+
+### 2.2 动态参数和剩余参数
+
+JS 中的动态参数和剩余参数相当于 Python 中的不定长参数 `*args`
+
+**动态参数:**
+
+arguments 是函数内部内置的伪数组变量，它包含了调用函数时传入的所有实参
+
+```js
+function print_sum() {
+    // console.log(arguments) // 返回传入实参的伪数组
+    let sum = 0
+    for (let i=0; i < arguments.length; i++) {
+        sum += arguments[i]
+    }
+    console.log(sum)
+}
+
+print_sum(1, 2) // 输出结果 3
+```
+
+???+ note
+    - `arguments` 是一个伪数组，只存在于函数中
+    - `arguments` 的作用是动态获取函数的实参
+    - 可以通过for循环依次得到传递过来的实参
+
+**剩余参数:**
+
+剩余参数允许我们将一个不定数量的参数表示为一个数组, 用法与 Python 不定长参数几乎完全相同
+
+```js
+function print_args(...other) {
+    console.log(other)
+}
+
+print_args(1, 5, 6) // 输出传入实参的数组(并不是伪数组)
+```
+
+???+ note
+    - `...` 是语法符号，置于最末函数形参之前，用于获取多余的实参, 和python中的 `*` 类似
+    - 借助 `...` 获取的剩余实参，是个真数组
+    - 开发中，在可以使用动态参数和剩余参数时优先使用 **剩余参数**
+
+=== "JS"
+    ```js
+    let nums = [1, 2, 3]
+    console.log(...nums) // 输出结果 1 2 3
+    ```
+
+=== "Python"
+    ```py
+    nums = [1, 2, 3]
+    print(*nums) # 输出结果 1 2 3
+    ```
+
+???+ info "展开运算符..."
+展开运算符(…),将一个数组进行展开, 不会修改原数组. 典型运用场景： 求数组最大值(最小值)、合并数组等
+
+剩余参数：函数参数使用，得到真数组. 展开运算符：数组中使用，数组展开
+
+=== "求数组最值"
+    ```js
+    let arr = [8, 4, 6, 9, 1]
+    let max = Math.max(...arr)
+    let min = Math.min(...arr)
+    console.log(`数组最大值为${max}`) // 数组最大值为9
+    console.log(`数组最小值为${min}`) // 数组最大值为1
+    ```
+
+=== "合并数组"
+    ```js
+    let arr1 = ['py', 'c', 'cpp']
+    let arr2 = ['html', 'css', 'js']
+    let arr = [...arr1, ...arr2]
+    console.log(arr) // ['py', 'c', 'cpp', 'html', 'css', 'js']
+    ```
+
+### 2.3 箭头函数
+
+引入箭头函数的目的是更简短的函数写法并且不绑定this，箭头函数的语法比函数表达式更简洁. 使用场景：箭头函数更适用于那些本来需要匿名函数的地方
+
+#### 2.3.1 箭头函数基本语法
+
+=== "基本写法"
+    ```js
+    // 普通函数
+    // function fn() {
+    //     console.log('Hello world!')
+    // }
+
+    // 箭头函数
+    const fn = () => {
+        console.log('Hello world!')
+    }
+    fn() // 输出结果 Hello world!
+    ```
+
+=== "省略小括号"
+    只有一个参数可以省略小括号
+
+    ```js
+    //  普通函数
+    // function fn(x) {
+    //     return x + x
+    // }
+
+    // 箭头函数
+    // const fn = (x) => {
+    //     return x + x
+    // }
+
+    // 箭头函数(只有一个参数时可以省略括号)
+    const fn = x => {
+        return x + x
+    }
+
+    const result = fn(5)
+    console.log(result) // 输出结果 10
+    ```
+
+=== "省略return"
+    如果函数体只有一行代码(return语句)，可以写到一行上，并且无需写 return 直接返回值
+
+    ```js
+    // 普通函数
+    // function fn(x, y) {
+    //     return x + y
+    // }
+
+    // 箭头函数
+    // const fn = (x, y) => {
+    //     return x + y
+    // }
+
+    // 箭头函数(函数体只用return语句时,可以省略花括号和return)
+    const fn = (x, y) => x + y
+
+    const result = fn(4, 7)
+    console.log(result) // 输出结果 11
+    ```
+
+=== "返回对象的箭头函数"
+    ```js
+    // 箭头函数(返回值是对象数据类型时,要使用小括号包裹对象的花括号,用以区分函数体的花括号)
+    const fn = uname => ({ name: uname })
+
+    const result = fn('wq')
+    console.log(result) // 输出结果 {name: 'wq'}
+    ```
+
+???+ note
+    - 箭头函数属于表达式函数，因此不存在函数提升
+    - 箭头函数只有一个参数时可以省略圆括号 ()
+    - 箭头函数函数体只有一行代码时可以省略花括号 {}，并自动做为返回值被返回
+    - 加括号的函数体返回对象字面量表达式
+
+#### 2.3.2 箭头函数参数
+
+普通函数有 `arguments` 动态参数, 但是箭头函数没有 `arguments` 动态参数，有 剩余参数 `..args`
+
+```js
+// 普通函数使用动态参数
+// function get_sum() {
+//     let sum = 0
+//     for (let i=0; i < arguments.length; i++) {
+//         sum += arguments[i]
+//     }
+//     return sum
+// }
+
+// 普通函数使用剩余参数
+// function get_sum(...args) {
+//     let sum = 0
+//     for (let i=0; i < args.length; i++) {
+//         sum += args[i]
+//     }
+//     return sum
+// }
+
+// 箭头函数使用剩余参数
+const get_sum = (...args) => {
+    let sum = 0
+    for (let i=0; i < args.length; i++) {
+        sum += args[i]
+    }
+    return sum
+}
+
+const result = get_sum(1, 5, 9, 3)
+console.log(result) // 输出结果 18
+```
+
+#### 2.3.3 箭头函数this
+
+在箭头函数出现之前，每一个新函数根据它是被如何调用的来定义这个函数的this值， 非常令人讨厌。箭头函数不会创建自己的this,它只会从自己的作用域链的上一层沿用this
+
+```html
+<button>submit</button>
+<script>
+    console.log(this) // 此处this指向window对象
+
+    const fn = function() {
+        console.log(this)
+    }
+    fn() // 普通函数this指向调用者, 此处指向window对象
+
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function() {
+        console.log(this) // 事件监听,this指向DOM对象,此处指向btn对象
+    })   
+</script>
+```
+
+```js
+<button>submit</button>
+<script>
+    const fn = () => {
+        console.log(this) // this指向window对象
+    }
+    fn()
+
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', () => {
+        console.log(this) // this指向window对象, 不指向btn对象,因此时间监听不建议使用箭头函数
+    })
+
+    const user = {
+        name: 'wq',
+        fn: () => {
+            console.log(this) // 指向window对象
+        }
+    }
+    user.fn()
+
+    const superuser = {
+        name: 'WQ',
+        fn: function () {
+            console.log(this) // 普通函数的this指向调用者,此处指向superuser对象
+            const fun = () => {
+                console.log(this) // 此处this指向普通函数fn()的调用者superuser对象
+            }
+            fun()
+        }
+    }
+    superuser.fn()
+```
+
+在开发中使用箭头函数前需要考虑函数中 this 的值，事件回调函数使用箭头函数时，this 为全局的 window，因此DOM事件回调函数为了简便，不推荐使用箭头函数
+
+## 三、解构赋值
