@@ -480,6 +480,68 @@ for (let i = 0; i < arr.length; i++) {
     console.log(newArr2) // pyjshtmlcss
     ```
 
+???+ tip ".forEach()方法"
+    `.forEach()` 方法用于调用数组的每个元素，并将元素传递给回调函数. 这个方法没有返回值,它的作用就是遍历数组, 类似于python的`enumerate()`函数
+
+    语法:
+
+    ```js
+    arr.forEach(function(item, index) {
+        // 函数体
+    })
+
+    // 或
+    arr.forEach(function(item) {
+        // 函数体
+    })
+    ```
+
+    === "Python"
+        ```py
+        mylist = ['py', 'c', 'js', 'css']
+        for index, item in enumerate(mylist):
+            print(index) # 遍历下标
+            print(item) # 遍历列表
+        ```
+
+    === "JavaScript"
+        ```js
+        const arr = ['py', 'c', 'js', 'css']
+
+        // forEach可以同时遍历数组元素和下标
+        arr.forEach(function(item, index) {
+            console.log(item) // 遍历数组
+            console.log(index) // 遍历下标
+        })
+        ```
+
+???+ tip ".filter()方法"
+`.filter()` 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组
+
+语法:
+
+```js
+arr.filter(function(item, index){
+    return 筛选条件
+})
+
+// 或
+arr.filter(function(item){
+    return 筛选条件
+})
+```
+
+返回值：返回数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组. 因为返回新数组，所以不会影响原数组
+
+```js
+const arr = [51, 2, 7, 15, 37, 20]
+
+const newArr = arr.filter(function(item, index){
+    return item > 20
+})
+console.log(newArr) // [51, 37]
+```
+
 ## 八、函数
 
 ### 8.1 具名函数

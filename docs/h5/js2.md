@@ -514,3 +514,191 @@ console.log(result) // 输出结果 18
 在开发中使用箭头函数前需要考虑函数中 this 的值，事件回调函数使用箭头函数时，this 为全局的 window，因此DOM事件回调函数为了简便，不推荐使用箭头函数
 
 ## 三、解构赋值
+
+### 3.1 数组解构
+
+解构赋值是一种快速为变量赋值的简洁语法，本质上仍然是为变量赋值。类似于 Python 使用元组同时为多个变量赋值.
+
+基本语法： 赋值运算符 `=` 左侧的 `[]` 用于包裹批量声明变量，右侧数组的元素值将被赋值给左侧的变量. 变量的顺序对应数组单元值的位置依次进行赋值操作
+
+```js
+const arr = [5, 3, 6]
+const [a, b, c] = arr
+console.log(`a=${a}, b=${b}, c=${c}`) // a=5, b=3, c=6
+```
+
+可以使用这种方法交换两个变量的值
+
+```js
+let a = 5
+let b = 7; // 此处的";"必不可少,因为当方括号位于句首时,前面必须要有结束符号";",否则会报错
+[a, b] = [b, a]
+console.log(`a=${a}, b=${b}`) // a=7, b=5
+```
+
+???+ info "js 前面必须加分号情况"
+    - 立即执行函数
+
+        ```js
+        // 写法一
+        (function fn() {})();
+
+        // 写法二
+        ;(function fn() {})()
+        ```
+
+    - 数组解构
+
+        ```js
+        ;[a, b] = [b, a]
+        ```
+
+变量的数量大于数组元素值数量时，多余的变量将被赋值为 `undefined`
+
+```js
+const arr = ['py', 'c']
+const [a, b, c] = arr
+console.log(a) // py
+console.log(b) // c
+console.log(c) // undefined
+```
+
+变量的数量小于数组元素值数量时，多余的元素值不分配,或使用剩余参数全分配给最后一个变量
+
+```js
+const arr = ['py', 'c', 'js', 'html', 'css']
+
+// 多余的数组元素不分配
+// const [a, b, c] = arr
+// console.log(a) // py
+// console.log(b) // c
+// console.log(c) // js
+
+// 将剩余数组元素分配给最后一个变量
+const [a, b, ...c] = arr
+console.log(a) // py
+console.log(b) // c
+console.log(c) // ['js', 'html', 'css']
+```
+
+设置默认值,防止有 `undefined`
+
+```js
+// 设置默认值,防止出现undefined
+const arr = ['py', 'c']
+const [a='cpp', b='cpp', c='cpp'] = arr
+console.log(a) // py
+console.log(b) // c
+console.log(c) // cpp
+```
+
+故意跳过某些值
+
+```js
+// 故意跳过 'c'
+const arr = ['py', 'c', 'js', 'html']
+const [a, , c, d] = arr
+console.log(a) // py
+console.log(c) // js
+console.log(d) // html
+```
+
+多维数组
+
+```js
+const arr = ['py', ['js', 'html']]
+
+// const [a, b] = arr
+// console.log(a) // py
+// console.log(b) // ['js', 'html']
+
+const [a, [b, c]] = arr
+console.log(a) // py
+console.log(b) // js
+console.log(c) // html
+```
+
+### 3.2 对象解构
+
+对象解构是将对象属性和方法快速批量赋值给一系列变量的简洁语法
+
+基本语法：
+
+- 赋值运算符 `=` 左侧的 `{}` 用于包裹需要批量声明的变量，右侧对象的属性值将被赋值给左侧的变量
+- 对象属性的值将被赋值给与属性名相同的变量
+- 注意解构的变量名不要和外面的变量名冲突否则报错
+- 对象中找不到与变量名一致的属性时变量值为 `undefined`
+
+```js
+// 创建一个对象
+const user = {
+    name: 'wq',
+    age: 18
+}
+
+// 对象解构
+// const {name, age} = user
+// console.log(name) // wq
+// console.log(age) // 18
+
+// 对象解构,并通过':'自定义变量名
+const {name: uname, age} = user
+console.log(uname) // wq
+console.log(age) // 18
+```
+
+对数组对象进行对象解构:
+
+```js
+// 创建一个数组对象
+const user = [
+    {
+        name: 'wq',
+        age: 18
+    }
+]
+
+// 对象解构
+const [{name, age}] = user
+console.log(name) // wq
+console.log(age) // 18
+```
+
+多级对象解构:
+
+```js
+// 创建一个对象
+const lang = {
+    msg: 'Hello world!',
+    h5: {
+        body: 'html',
+        style: 'css',
+        action: 'js'
+    }
+}
+
+// 对象解构
+const {msg, h5: {body, style, action}} = lang
+console.log(msg) // Hello world!
+console.log(body) // html
+console.log(style) // css
+console.log(action) // js
+```
+
+可以根据自己的实际需要进行对象解构:
+
+```js
+// 创建一个对象
+const lang = {
+    msg: 'Hello world!',
+    h5: {
+        body: 'html',
+        style: 'css',
+        action: 'js'
+    }
+}
+
+// 对象解构
+const {h5} = lang
+console.log(h5) // {body: 'html', style: 'css', action: 'js'}
+```

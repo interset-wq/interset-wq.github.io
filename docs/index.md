@@ -15,7 +15,7 @@ search:
 
 本站是使用python第三方库[mkdocs](https://www.mkdocs.org)搭建的静态网站。
 
-## 近期计划
+<!-- ## 近期计划
 
 计划在2025年9月之前停用 `tour.d111kc.top` 子域名，并关闭此站点。到时候所有文章将会迁移到新的站点。我打算依据以下计划来搭建新的网站：
 
@@ -24,7 +24,7 @@ search:
 - [ ] 启用 `note.d111kc.top` 域名, 用于学习记录
 - [ ] 启用 `py.d111kc.top` 域名, 专门记录python方面的学习记录
 - [ ] 启用 `h5.d111kc.top` 域名, 专门记录前端方面的学习记录
-- [ ] 将 [@interset-wq](https://github.com/interset-wq) 账号下的仓库迁移到 [@d111kc](https://github.com/d111kc) 账号下, 并使用两个账号练习git协作以及git相关命令操作
+- [ ] 将 [@interset-wq](https://github.com/interset-wq) 账号下的仓库迁移到 [@d111kc](https://github.com/d111kc) 账号下, 并使用两个账号练习git协作以及git相关命令操作 -->
 
 
 ## 为何创建此站点？
@@ -57,7 +57,7 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
     === "支付宝"
         <img src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg" width="200"> -->
 
-<!-- 近期学习计划：
+近期学习计划：
 
 - [ ] :fontawesome-brands-python: python
     - [x] :simple-pandas: 数据可视化
@@ -75,8 +75,11 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
     - [ ] :fontawesome-brands-js: JavaScript
         * [ ] :fontawesome-brands-node-js: node.js
         * [ ] :fontawesome-brands-vuejs: vue.js
+    - [ ] :simple-typescript: TypeScript
 - [ ] 大学英语
     - [ ] CET-4
     - [ ] CET-6
-- [x] :material-microsoft-office: 计算机二级 `MS Office` `[合格]` -->
+- [x] :material-microsoft-office: 计算机二级 `MS Office` `[合格]`
+- [ ] :simple-autocad: AutoCAD
+- [ ] :simple-autodeskrevit: Revit
 
