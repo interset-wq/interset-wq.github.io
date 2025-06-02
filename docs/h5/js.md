@@ -469,7 +469,7 @@ for (let i = 0; i < arr.length; i++) {
     console.log(newArr) // ['py语言', 'js语言', 'html语言', 'css语言']
     ```
 
-???+ info "join方法(常用)"
+???+ info ".join()方法"
     数组的 `.join()`  可以用来将数组中的元素拼接为一个字符串, 类似于python中的 `','.join(list)` 方法,只不过js中的 `.join()` 不传参时,相当于传入了默认值 `','`
 
     ```js
@@ -516,31 +516,31 @@ for (let i = 0; i < arr.length; i++) {
         ```
 
 ???+ tip ".filter()方法"
-`.filter()` 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组
+    `.filter()` 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组
 
-语法:
+    语法:
 
-```js
-arr.filter(function(item, index){
-    return 筛选条件
-})
+    ```js
+    arr.filter(function(item, index){
+        return 筛选条件
+    })
 
-// 或
-arr.filter(function(item){
-    return 筛选条件
-})
-```
+    // 或
+    arr.filter(function(item){
+        return 筛选条件
+    })
+    ```
 
-返回值：返回数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组. 因为返回新数组，所以不会影响原数组
+    返回值：返回数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组. 因为返回新数组，所以不会影响原数组
 
-```js
-const arr = [51, 2, 7, 15, 37, 20]
+    ```js
+    const arr = [51, 2, 7, 15, 37, 20]
 
-const newArr = arr.filter(function(item, index){
-    return item > 20
-})
-console.log(newArr) // [51, 37]
-```
+    const newArr = arr.filter(function(item, index){
+        return item > 20
+    })
+    console.log(newArr) // [51, 37]
+    ```
 
 ## 八、函数
 

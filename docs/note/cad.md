@@ -178,3 +178,460 @@ title: AutoCAD
 ### 5.3 定距等分点 `ME` `MEASURE`
 
 ### 5.4 直线 `LINE`
+
+### 5.5 多线 `MLINE`
+
+#### 5.5.1 绘制多线 `MLIME`
+
+多线实际上是双线,绘制的线条都是成对的平行线,常用于绘制墙.
+
+正对(J) 以下三种情况的多线的起点都是坐标原点(0,0)
+
+=== "上(T)"
+    上(T), 即top,绘制多线时以顶线为基准.
+
+    ![top.webp](https://s2.loli.net/2025/06/01/Mtu6FwmZrA49HVY.webp)
+
+=== "无(Z)"
+    绘制多线时,以两条平行线的中线为基准.
+
+    ![z.webp](https://s2.loli.net/2025/06/01/8GgIkEp1CzbqZTU.webp)
+
+=== "下(B)"
+    下(B),即bottom,以底线为基准.
+
+    ![bottom.webp](https://s2.loli.net/2025/06/01/gXefnvCzDhZsy4j.webp)
+
+比例(S) 即scale,可以理解为多线两条平行线间的距离,默认为20
+
+样式(ST) 即style,多线的样式,默认为STANDARD,距离1. 多线两条线之间的距离实际上是样式距离与比例的乘积.
+
+#### 5.5.2 定义多线样式 `MLSTYLE`
+
+- 方法一: `格式(O)` - `多线样式`
+- 方法二: 命令行输入 `MLSTYLE`
+
+![new_mline.webp](https://s2.loli.net/2025/06/01/1uDIPtJgZXRKBHo.webp)
+
+![new_milne2.webp](https://s2.loli.net/2025/06/01/PD2SLiV5c1vZg6o.webp)
+
+???+ note
+    大多数情况下,使用双线就已经足够了,没有必要使用多线.
+
+### 5.6 多段线 `PLINE`
+
+通过 `宽度(W)` 分别设置起点宽度为0和端点宽度为90, 用于绘制箭头
+
+### 5.7 圆 `CIRCLE`
+
+### 5.8 圆弧 `ARC`
+
+### 5.9 圆环 `DONUT`
+
+绘制圆环之前要先通过 `FILL` 命令来设置是否填充圆环区域.
+
+![donut.webp](https://s2.loli.net/2025/06/01/mXYVgdE7sy5rlBp.webp)
+
+### 5.10 椭圆/椭圆弧 `ELLIPSE`
+
+### 5.11 矩形 `RECTANG` `REC`
+
+如果需要使用线宽(W), 矩形绘制前也需要使用 `FILL` 命令来设置是否填充.
+
+![rec.webp](https://s2.loli.net/2025/06/01/2VGDjlvsXcxmUCL.webp)
+
+### 5.12 正多边形 `POLYGON`
+
+### 5.13 图案填充/渐变色填充  `H` `BHATCH` `HATCH` `GRADIENT`
+
+- 方法一: `绘图(D)` - `图案填充`
+- 方法二: 命令行输入 `HATCH` 或 `BHATCH`, `GRADIENT`特指渐变色填充
+
+填充图案的编辑:
+
+- 方法一: `修改(M)` - `对象` - `图案填充`
+- 方法二: 命令行输入 `HATCHEDIT`
+
+## 六、信息查询
+
+通用方法: `工具(T)` - `查询`
+
+### 6.1 查询点的坐标 `ID`
+
+### 6.2 查询距离 `DIST` `MEASUREGEOM`
+
+### 6.3 查询面积和周长 `AREA`
+
+### 6.4 查询几何特征和对象特征 `LIST`
+
+### 6.5 查询文件状态 `STATUS`
+
+### 6.6 查询文件时间 `TIME`
+
+## 七、块
+
+将多个对象合成为一个整体,这个整体就是块.
+
+### 7.1 创建块 `BLOCK`
+
+- 方法一: `绘图(D)` - `块` - `创建`
+- 方法二: 命令行输入 `BLOCK`
+
+![block.webp](https://s2.loli.net/2025/06/01/FtY32Pq9nSZcB1g.webp)
+
+如果需要使用刚刚创建的块,只需要点击 `默认` - `块` - `插入`
+
+???+ note
+    使用这种方法创建的块,只能在这个dwg文件中使用.
+
+### 7.2 外部块 `WBLOCK`
+
+通过写块 `WBLOCK` 命令可以创建外部块.
+
+![wblock.webp](https://s2.loli.net/2025/06/01/3pC4OyserK9NQMm.webp)
+
+使用此功能创建的块会另存为一个dwg文件. 如果需要使用刚刚创建的块,只需要点击 `默认` - `块` - `插入` - `浏览` 选取这个dwg文件的路径. 任何图形都可以导入外部块.
+
+### 7.3 块属性
+
+块属性是块带有的一些文字属性.
+
+- 方法一: `绘图(D)` - `块` - `定义属性`
+- 方法二: 命令行输入 `ATTDEF`
+
+### 7.4 创建带属性的块
+
+以标高符号为例.
+
+第一步: 绘制标高符号
+
+第二步: 命令行输入 `ATTDEF` 创建块属性,并放置在想要放置的位置
+
+![def.webp](https://s2.loli.net/2025/06/01/FDfRywh1IK3AsZT.webp)
+
+![def2.webp](https://s2.loli.net/2025/06/01/OtgmqTIhzoNA37f.webp)
+
+第三步: 命令行输入 `BLOCK` 创建块
+
+![def3.webp](https://s2.loli.net/2025/06/01/5HlcChgBEj9MiAv.webp)
+
+![def4.webp](https://s2.loli.net/2025/06/01/D6M3cfZaqxKwTES.webp)
+
+第四步: 命令行输入 `INSERT` 插入块, 如果标高值输错了,可以双击这个图形修改
+
+![def5.webp](https://s2.loli.net/2025/06/01/3Df9Kk8ExYnT4Mv.webp)
+
+## 八、二维图形的修改
+
+### 8.1 对象选择方式
+
+- 单选: 鼠标左键点击选取
+- 窗口方式(W方式): 从左上到右下的框选, 全部被框选到才被选中
+- 交互方式(C方式): 从右下到左上的框选, 只要有一部分被框中就选中
+- 全选(ALL方式): ++ctrl+c++ 或 `编辑(E)` - `全部选择`
+- 窗口多边形(WP方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `WP` 可以使用窗口多边形方式选取, 全部被框选到才会被选中
+- 交叉多边形(CP方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `CP` 可以使用交叉多边形方式选取, 只要有一部分被框中就选中
+- 栏选(F方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `F` 可以使用栏选, 栏选通过多段线选择, 画出的多段线只要与对象相交就选中
+- 单选取消: 按住 ++shift++ , 鼠标左键单击
+- 快速选择: 命令行输入 `QSELECT` 根据对象的特性进行选择
+- 设置对象选择模式: 命令行输入 `OPTIONS`
+
+### 8.2 删除对象 `ERASE`
+
+- 方法一: 选中 ++delete++
+- 方法二: 命令行输入 `ERASE`
+
+### 8.3 复制对象 `COPY`
+
+### 8.4 镜像对象 `MIRROR`
+
+对文字使用镜像时, 镜像效果与 `MIRRTEXT` 有关. 在命令行输入 `MIRRTEXT` , 输入值为 0 时镜像无法对文字生效, 输入值为1时镜像才会对文字生效
+
+### 8.5 偏移对象 `OFFSET`
+
+可以通过 `删除(E)` 设置偏移对象时是否删除原对象
+
+### 8.6 阵列对象 `ARRAY`
+
+### 8.7 移动对象 `MOVE`
+
+### 8.8 旋转对象 `ROTATE`
+
+输入的数值单位默认是度, 值为正数时逆时针旋转, 为负数时顺时针旋转
+
+### 8.9 缩放对象 `SCALE`
+
+### 8.10 拉伸对象 `STRETCH`
+
+选择对象时必须使用交互方式(C方式)或交叉多边形方式(CP方式), 即只能从右下到左上选择. 如果从左上到右下选择, 则相当于 `MOVE`
+
+选择对象时, 请不要将要拉伸的对象全部选中, 只需选中一部分才可以进行拉伸. 全部选中相当于 `MOVE`
+
+### 8.11 拉长对象 `LENGTHEN`
+
+### 8.12 修剪对象 `TRIM`
+
+修剪时,使用栏选(F方式)和窗交(W方式), 可以快速修剪
+
+如果要修剪的对象和剪切边不相交, 按住 ++shift++ ,并在被修剪对象上单击, 可以将被修剪对象延伸到与剪切边相交.
+
+### 8.13 延伸对象 `EXTEND`
+
+如果按住 ++shift++ , 相当于修剪 `TRIM`
+
+### 8.14 打断对象 `BREAK`
+
+第二个点输入 `@` 时, 相当于第二个点和第一个点的位置相同, 即直接将直线一分为二
+
+### 8.15 倒角 `CHAMFER`
+
+如果没有设置 `距离(D)` 图形相邻的两条边之间不能使用倒角. 多段线和直线绘制成的图形倒角的效果并不相同.
+
+![chamfer.webp](https://s2.loli.net/2025/06/01/BfwuEp2FQhk81z4.webp)
+
+通过 `距离(D)` 设置: 两条不相交的直线, 如果倒角距离都为0, 那么倒角就相当于同时延长或缩短这两条线,使它们相交
+
+通过 `修剪(T)` 设置: 是否保留倒角前后多余的线条
+
+![chamfer2.webp](https://s2.loli.net/2025/06/01/O2xAbznZSH6DClq.webp)
+
+### 8.16 圆角 `FILLET`
+
+和倒角用法类似
+
+### 8.17 分解对象 `EXPLODE`
+
+将多段线,块等复杂对象分解为线等简单对象.
+
+### 8.18 对象特性管理器 `PROPERTIES`
+
+### 8.19 特性匹配 `MATCHPROP`
+
+类似于 Word 中的格式刷
+
+## 九、文字
+
+### 9.1 定义文字样式 `STYLE`
+
+- 方法一: `格式(O)` - `文字样式`
+- 方法二: 命令行输入 `STYLE`
+
+由于土木工程图纸文字要求使用长仿宋体, 因此在CAD中只能使用 `gbenor.shx` `gbeitc.shx` `gbcbig.shx`, 并且必须勾选 `使用大字体`
+
+![style.webp](https://s2.loli.net/2025/06/01/7PgTUJQdzjrFoOM.webp)
+
+### 9.2 单行文字 `DTEXT`
+
+### 9.3 多行文字 `MTEXT`
+
+### 9.4 输入特殊字符
+
+AutoCAD通过 `%%` 开头的控制码输入特殊符号.
+
+| 控制码 | 特殊符号 |
+| ------ | ------- |
+| %%O | 开启或关闭文字上划线 |
+| %%U | 开启或关闭文字下划线 |
+| %%D | 角度符号 $\degree$ |
+| %%P | 正负号 $\pm$ |
+| %%C | 直径符号 $\varPhi$ |
+
+![sp.webp](https://s2.loli.net/2025/06/01/7LKPYcAmDSBNyn9.webp)
+
+### 9.5 编辑文字 `DDEDIT`
+
+- 方法一: 命令行输入 `DDEDIT`
+- 方法二: 选中文字对象 - 单击鼠标右键 - `特性`
+- 方法三: `修改(M)` - `特性`
+- 方法四: 标准工具栏 - `特性`
+- 方法五: 命令行输入 `PROPERTIES` 或 `DDMODIFY`
+
+## 十、表格
+
+### 10.1 表格样式 `TABLESTYLE`
+
+- 方法一: 命令行输入 `TABLESTYLE`
+- 方法二: `格式(O)` - `表格样式`
+
+![tstyle.webp](https://s2.loli.net/2025/06/01/QDCjlOT8fBA5HtK.webp)
+
+![tstyle2.webp](https://s2.loli.net/2025/06/01/FAmZhpBPNuEceJb.webp)
+
+### 10.2 创建表格 `TABLE`
+
+- 方法一: 命令行输入 `TABLE`
+- 方法二: `绘图(D)` - `表格`
+
+![table.webp](https://s2.loli.net/2025/06/01/VuWBr9YfGtSADUR.webp)
+
+在表格中输入时,类似于Excel可以使用箭头键切换单元格,双击可以更改单元格中的内容
+
+使用鼠标右键可以进行合并单元格等操作.
+
+## 十一、尺寸标注
+
+### 11.1 概述
+
+尺寸标注规则:
+
+- 绘图时 1: 1 绘图, 因为尺寸标注要求标注实际的尺寸
+- 建筑平面图以 `mm` 为单位. 建筑平面图和建筑立面图以及剖面图的标高, 使用 `m` 为单位. 尺寸标注不需要写单位
+
+尺寸标注的组成:
+
+- 尺寸线
+- 尺寸界限
+- 尺寸起止符号
+- 尺寸文本
+
+### 11.2 尺寸标注样式 `D`
+
+- 方法一: `标注(N)` - `标注样式`
+- 方法二: `格式(O)`- `标注样式`
+- 方法三: 命令行输入 `DIMSTYLE` `D` `DST` `DDIM` `DIMSTY`
+
+![d.webp](https://s2.loli.net/2025/06/01/RJusoEb2rt8SO5m.webp)
+
+主要使用前五个选项卡进行设置,最后两个在土木工程中用不到.
+
+![d1.webp](https://s2.loli.net/2025/06/01/gLsdmVwQxqz2pWc.webp)
+
+![d2.webp](https://s2.loli.net/2025/06/01/zrW1aDEBv653McC.webp)
+
+![d3.webp](https://s2.loli.net/2025/06/01/1NB8WVdtRCzlqoi.webp)
+
+![d4.webp](https://s2.loli.net/2025/06/01/YpCEtGRK7czafiT.webp)
+
+![d5.webp](https://s2.loli.net/2025/06/01/naFAwRoOLXhN4W6.webp)
+
+### 11.3 替代尺寸标注样式
+
+替代尺寸标注样式是设置某一尺寸标注样式的临时替代
+
+![re.webp](https://s2.loli.net/2025/06/02/9VKLqE8m7HT5fMa.webp)
+
+### 11.4 创建尺寸标注 
+
+常用的尺寸标注有线性标注, 对齐标注, 基线标注, 连续标注, 快速标注
+
+#### 11.4.1 线性标注 `DIMLINEAR` `DIMLIN`
+
+主要用于水平或垂直方向的标注
+
+- 方法一: `标注(N)` - `线性标注`
+- 方法二: 命令行输入 `DIMLINEAR` `DIMLIN`
+
+![dimlin.webp](https://s2.loli.net/2025/06/02/EAbtHrB6cVMJNx2.webp)
+
+#### 11.4.2 对齐标注 `DIMALIGNED` `DIMALI`
+
+用于倾斜线条的标注
+
+- 方法一: `标注(N)` - `对齐`
+- 方法二: 命令行输入 `DIMALIGNED` `DIMALI`
+
+![dimali.webp](https://s2.loli.net/2025/06/02/XsNCRiLkF7q2p4Z.webp)
+
+#### 11.4.3 基线标注 `DIMBASELINE` `DIMBASE`
+
+以线性标注的一侧为基准进行标注. 使用基线标注之前,必须要有一个线性标注.
+
+- 方法一: `标注(N)` - `基线`
+- 方法二: 命令行输入 `DIMBASELINE` `DIMBASE`
+
+![dimbase.webp](https://s2.loli.net/2025/06/02/dUO3NAv2GnxlJty.webp)
+
+#### 11.4.4 连续标注 `DIMCONTINUE` `DIMCONT`
+
+类似于基线标注.
+
+- 方法一: `标注(N)` - `连续`
+- 方法二: 命令行输入 `DIMCONTINUE` `DIMCONT`
+
+![dimcont.webp](https://s2.loli.net/2025/06/02/qe6pkwhsjX4FEVP.webp)
+
+#### 11.4.5 快速标注 `QDIM`
+
+选中图形即可快速进行连续标注和基线标注, 非常好用.
+
+- 方法一: `标注(N)` - `快速标注`
+- 方法二: 命令行输入 `QDIM`
+
+### 11.5 编辑尺寸标注 `DIMEDIT`
+
+### 11.6 编辑尺寸标注文字 `DIMTEDIT`
+
+双击可直接修改尺寸标注文字的内容
+
+### 11.7 更新尺寸标注 `-DIMSTYLE`
+
+如果切换了尺寸标注样式,可以使用此方法批量替换样式.
+
+- 方法一: `标注(N)` - `更新`
+- 方法二: 命令行输入 `-DIMSTYLE`
+
+## 十二、输出图形为PDF
+
+{==AutoCAD绘图基本原则: 始终以1:1绘图, 绘图时的长度即为实际长度==}
+
+### 12.1 模型和布局 `TILEMODE`
+
+AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和布局.
+
+- 模型, 就是绘图时使用的选项卡
+- 布局, 就是绘图结束, 用来输出图形的选项卡
+
+可以在命令行输入 `TILEMODE` 切换模型和布局选项卡, 输入值为1时切换为模型, 输入值为0时切换为布局.
+
+### 12.2 创建布局 `LAYOUT` `LAYOUTWIZARD`
+
+`LAYOUT` `LAYOUTWIZARD`两个命令并不相同, `LAYOUT` 通过模版创建新布局, `LAYOUTWIZARD` 通过对话框创建新布局. 此处主要介绍 `LAYOUTWIZARD`.
+
+- 方法一: 命令行输入 `LAYOUTWIZARD`
+- 方法二: `插入(I)` - `布局` - `创建布局向导`
+
+第一步: 命令行输入 `LAYOUTWIZARD`, 打开布局向导
+
+![l1.webp](https://s2.loli.net/2025/06/02/cGe2Iagduq96yiz.webp)
+
+第二步: 选择打印机, 建议选MS打印机
+
+![l2.webp](https://s2.loli.net/2025/06/02/sT6GI7BvMePlfNc.webp)
+
+第三步: 设置图纸尺寸
+
+![l3.webp](https://s2.loli.net/2025/06/02/f2XgshLoPuzwJaN.webp)
+
+第四步: 选择图纸方向
+
+第五步: 是否使用AutoCAD内置标题栏
+
+第六步: 定义视口
+
+![l4.webp](https://s2.loli.net/2025/06/02/5viAzrFBZ9oPMwJ.webp)
+
+第七部: 拾取设置
+
+![l5.webp](https://s2.loli.net/2025/06/02/nAWVjJs1E9pNSL3.webp)
+
+第八步: 完成并关闭向导. 创建的布局如下图所示
+
+![l6.webp](https://s2.loli.net/2025/06/02/XhQMAxUnONBHCDJ.webp)
+
+### 12.3 设置布局参数 `PAGESETUP`
+
+如果不需要使用样式表, 请忽略此步骤.
+
+- 方法一: `文件(F)` - `页面设置管理器`
+- 方法二: 命令行输入 `PAGESETUP`
+
+![set1.webp](https://s2.loli.net/2025/06/02/3bHlDeLcCyOQhg5.webp)
+
+![set2.webp](https://s2.loli.net/2025/06/02/Y6CgB1J85FH739K.webp)
+
+
+### 12.4 将布局输出为PDF `PLOT`
+
+输出之前先使用 `文件(I)` - `打印预览` 查看效果
+
+再通过 `文件(I)` - `打印` 或在命令行输入 `PLOT` 将图形输出为PDF

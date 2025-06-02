@@ -57,7 +57,7 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
     === "支付宝"
         <img src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg" width="200"> -->
 
-近期学习计划：
+学习计划：
 
 - [ ] :fontawesome-brands-python: python
     - [x] :simple-pandas: 数据可视化
@@ -68,7 +68,7 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
         - [ ] :simple-flask: flask
         - [ ] :simple-fastapi: fastapi
     - [ ] :simple-selenium: selenium
-    - [ ] :simple-qt: GUI
+    - [ ] :fontawesome-brands-python: Tkinter
 - [ ] :material-google-chrome: :simple-firefox: :material-microsoft-edge: 前端
     - [x] :fontawesome-brands-html5: HTML5
     - [x] :simple-css3: CSS3
@@ -80,6 +80,17 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
     - [ ] CET-4
     - [ ] CET-6
 - [x] :material-microsoft-office: 计算机二级 `MS Office` `[合格]`
-- [ ] :simple-autocad: AutoCAD
+- [x] :simple-autocad: AutoCAD
 - [ ] :simple-autodeskrevit: Revit
+- [ ] :simple-mysql: MySQL
+- [ ] :simple-linux: Linux
+- [ ] :material-powershell: Powershell
+- [ ] :simple-git: Git
+- [ ] :simple-docker: Docker
 
+计划阅读的书籍:
+
+- [ ] Pro Git
+- [ ] Python GUI Programming with Tkinter(2ed)
+- [ ] Flask Web开发: 基于Python的Web应用开发实战(第2版)
+- [ ] Hello 算法

@@ -702,3 +702,294 @@ const lang = {
 const {h5} = lang
 console.log(h5) // {body: 'html', style: 'css', action: 'js'}
 ```
+
+## 四、对象
+
+### 4.1 创建对象的三种方式
+
+- 方式一: 通过字面量创建
+
+    ```js
+    // 通过字面量创建
+    const obj = {
+        name: 'wq',
+        age: 18
+    }
+    ```
+
+- 方式二: new Object
+
+    ```js
+    // new Object
+    const obj = new Object({
+        name: 'wq',
+        age: 18
+    })
+    ```
+
+- 方式三: 利用构造函数创建对象
+
+### 4.2 构造函数
+
+构造函数 ：是一种特殊的函数，主要用来初始化对象. 可以通过构造函数来快速创建多个类似的对象. 类似于 Python 通过类的实例化创建对象. 构造函数在技术上是常规函数
+
+```js
+function Person(name, age) {
+    this.name = name
+    this.age = age
+}
+
+const person1 = new Person('wq', 18)
+console.log(person1) // {name: 'wq', age: 18}
+
+const person2 = new Person('jerry', 20)
+console.log(person2) // {name: 'jerry', age: 20}
+```
+
+???+ note
+    - 它们的命名以大写字母开头, 大驼峰命名法
+    - 它们只能由 `new` 操作符来执行
+    - 使用 `new` 关键字调用函数的行为被称为实例化
+    - 实例化构造函数时没有参数时可以省略 `()`
+    - 构造函数内部无需写 `return`，返回值即为新创建的对象
+    - 构造函数内部的 `return` 返回的值无效，所以不要写 `return`
+    - `new Object()` `new Date()` 也是实例化构造函数
+
+??? info "实例化执行过程"
+    - 创建新对象
+    - 构造函数this指向新对象
+    - 执行构造函数代码，修改this，添加新的属性
+    - 返回新对象
+
+### 4.3 实例成员和静态成员
+
+实例成员：通过构造函数创建的对象称为实例对象，实例对象中的属性和方法称为实例成员。类似于 Python 中的实例属性和实例方法.
+
+???+ note
+    - 实例对象的属性和方法即为实例成员
+    - 为构造函数传入参数，动态创建结构相同但值不同的对象
+    - 构造函数创建的实例对象彼此独立互不影响。
+
+静态成员：构造函数的属性和方法被称为静态成员. 类似于 Python 类属性和类方法.
+
+???+ note
+    - 构造函数的属性和方法被称为静态成员
+    - 一般公共特征的属性或方法静态成员设置为静态成员
+    - 静态成员方法中的 this 指向构造函数本身
+
+### 4.4 内置构造函数
+
+```mermaid
+flowchart LR
+    A[JavaScript的6中主要基本数据类型] -->  B[基本数据类型/包装类型]
+    A --> C[引用类型/对象]
+    B --> D[字符串String]
+    B --> E[数值Number]
+    B --> F[布尔值Boolen]
+    B --> G[undefined]
+    B --> H[null]
+    C --> I[Object/Array/RegExp/Date等]
+```
+
+字符串、数值、布尔、等基本类型也都有专门的构造函数，这些我们称为包装类型。JS中几乎所有的数据都可以基于构成函数创建。
+
+#### 4.4.1 对象Object
+
+`Object` 是内置的构造函数，用于创建普通对象。 推荐使用字面量方式声明对象，而不是 Object 构造函数
+
+```js
+// 使用构造函数创建对象
+// const user = new Object({
+//     name: 'wq',
+//     age: 18
+// })
+
+// 通过字面量创建对象
+const user = {
+    name: 'wq',
+    age: 18
+}
+```
+
+不使用对象的静态方法时, 要想要遍历对象的值需要使用 `for (in)` 语句
+
+```js
+const user = {
+    name: 'wq',
+    age: 18
+}
+
+for (let key in user) {
+    console.log(key) // 遍历user对象的属性
+    console.log(user[key]) // 遍历user对象的属性值
+}
+```
+
+这种方法明显不够简便, 使用对象的静态方法可以简化此过程.
+
+对象的三个常用静态方法:
+
+- `Object.keys()` 传入对象,获取对象的全部属性,返回属性列表, 类似于Python字典的 `.keys()` 方法,只不过Python字典的 `.keys()`方法只用于遍历
+
+    ```js
+    const user = {
+        name: 'wq',
+        age: 18
+    }
+    
+    const arr = Object.keys(user)
+    console.log(arr) // ['name', 'age']]
+    ```
+
+- `Object.values()` 传入对象,获取对象的全部属性值,返回属性值列表, 类似于Python字典的 `.values()` 方法
+
+    ```js
+    const user = {
+        name: 'wq',
+        age: 18
+    }
+    
+    const arr = Object.values(user)
+    console.log(arr) // ['wq', 18]]
+    ```
+
+- `Object.assign(obj1, obj2)` 将obj2拷贝到obj1, 常用于对象添加属性
+
+    ```js
+    const obj1 = {}
+    const obj2 = {
+        name: 'wq',
+        age: 18
+    }
+    Object.assign(obj1, obj2)  
+    console.log(obj1) // {name: 'wq', age: 18}  
+    ```
+
+    ```js
+    const user = {
+        name: 'wq',
+        age: 18
+    }
+    Object.assign(user, {hobby: 'python'})
+    console.log(user) // {name: 'wq', age: 18, hobby: 'python'}
+    ```
+
+#### 4.4.2 数组Array
+
+`Array` 是内置的构造函数，用于创建数组. 创建数组建议使用字面量创建，不用 Array构造函数创建
+
+```js
+// 使用构造函数创建数组
+// const arr = new Array(1, 2, 3) // 不需要方括号
+// console.log(arr) // [1, 2, 3]
+
+// 使用字面量创建数组
+const arr = [1, 2, 3]
+```
+
+数组常用实例方法:
+
+- `.forEach()` 遍历数组, 无返回值
+
+    `.forEach()` 方法用于调用数组的每个元素，并将元素传递给回调函数. 这个方法没有返回值,它的作用就是遍历数组, 类似于python的`enumerate()`函数
+
+    语法:
+
+    ```js
+    arr.forEach(function(item, index) {
+        // 函数体
+    })
+
+    // 或
+    arr.forEach(function(item) {
+        // 函数体
+    })
+    ```
+
+    === "Python"
+        ```py
+        mylist = ['py', 'c', 'js', 'css']
+        for index, item in enumerate(mylist):
+            print(index) # 遍历下标
+            print(item) # 遍历列表
+        ```
+
+    === "JavaScript"
+        ```js
+        const arr = ['py', 'c', 'js', 'css']
+
+        // forEach可以同时遍历数组元素和下标
+        arr.forEach(function(item, index) {
+            console.log(item) // 遍历数组
+            console.log(index) // 遍历下标
+        })
+        ```
+
+- `.filter()` 过滤数组, 筛选数组元素,返回新数组
+
+    `.filter()` 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组
+
+    语法:
+
+    ```js
+    arr.filter(function(item, index){
+        return 筛选条件
+    })
+
+    // 或
+    arr.filter(function(item){
+        return 筛选条件
+    })
+    ```
+
+    返回值：返回数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组. 因为返回新数组，所以不会影响原数组
+
+    ```js
+    const arr = [51, 2, 7, 15, 37, 20]
+
+    const newArr = arr.filter(function(item, index){
+        return item > 20
+    })
+    console.log(newArr) // [51, 37]
+    ```
+
+- `.map()` 迭代数组
+
+    数组的 `.map(function (item, index) {})` 方法, 类似于python列表推导式,可以用于产生新数组. 也类似于python列表遍历的 `enumerate()` 函数,可以同时遍历数组的元素和下标(但是这种遍历方法不推荐使用,因为 `.map()` 方法是用来产生新元组的).
+
+    语法:
+
+    ```js
+    const arr = ['py', 'js', 'html', 'css']
+    const newArr = arr.map(function (item, index) {
+        console.log(item, index) // 遍历数组,依次输出数组元素和下标
+        return item + '语言'
+    })
+    console.log(newArr) // ['py语言', 'js语言', 'html语言', 'css语言']
+    ```
+
+- `.reduce()` 累加器, 用于数组求和
+
+    基本语法: `arr.reduce(function(累计值, 当前元素, 索引号, 原数组){}, 起始值)` 起始值可以省略，如果写就作为第一次累计的起始值. 索引号和原数组可省略
+
+    ???+ note
+        - 如果有起始值，则以起始值为准开始累计， 累计值 = 起始值
+        - 如果没有起始值， 则累计值以数组的第一个数组元素作为起始值开始累计
+        - 后面每次遍历就会用后面的数组元素 累计到 累计值 里面 （类似求和里面的 sum ）
+        - 有起始值最后的求和结果相当于没有起始值时的结果加上起始值
+
+    ```js
+    const arr = [1, 7, 6]
+
+    // 无起始值
+    // const total = arr.reduce(function(prev, current){
+    //     return prev + current
+    // })
+    // 使用箭头函数
+    const total1 = arr.reduce((prev, current) => prev + current)
+    console.log(total1) // 14
+
+    // 有起始值
+    const total2 = arr.reduce((prev, current) => prev + current, 10)
+    console.log(total2) // 24
+    ```
