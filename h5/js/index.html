@@ -3213,7 +3213,7 @@
 </span></code></pre></div>
 </details>
 <details class="info" open="open">
-<summary>join方法(常用)</summary>
+<summary>.join()方法</summary>
 <p>数组的 <code>.join()</code>  可以用来将数组中的元素拼接为一个字符串, 类似于python中的 <code>','.join(list)</code> 方法,只不过js中的 <code>.join()</code> 不传参时,相当于传入了默认值 <code>','</code></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;py&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;js&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;html&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;css&#39;</span><span class="p">]</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">newArr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">()</span>
@@ -3259,7 +3259,6 @@
 </details>
 <details class="tip" open="open">
 <summary>.filter()方法</summary>
-</details>
 <p><code>.filter()</code> 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组</p>
 <p>语法:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">){</span>
@@ -3279,6 +3278,7 @@
 </span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">})</span>
 </span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArr</span><span class="p">)</span><span class="w"> </span><span class="c1">// [51, 37]</span>
 </span></code></pre></div>
+</details>
 <h2 id="_6">八、函数</h2>
 <h3 id="81">8.1 具名函数</h3>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">函数名</span><span class="p">(</span><span class="nx">参数</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
