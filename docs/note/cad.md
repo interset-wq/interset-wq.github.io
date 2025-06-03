@@ -1,6 +1,6 @@
 ---
 comments: true
-status: new
+# status: new
 title: AutoCAD
 # pdf: true
 ---
@@ -635,3 +635,7 @@ AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和
 输出之前先使用 `文件(I)` - `打印预览` 查看效果
 
 再通过 `文件(I)` - `打印` 或在命令行输入 `PLOT` 将图形输出为PDF
+
+## 十三、脚本 `SCRIPT`
+
+通过 `.scr` 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.

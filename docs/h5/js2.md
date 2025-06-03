@@ -993,3 +993,188 @@ const arr = [1, 2, 3]
     const total2 = arr.reduce((prev, current) => prev + current, 10)
     console.log(total2) // 24
     ```
+
+- `.join()` 将数组元素拼接为字符串,返回字符串
+
+    数组的 `.join()`  可以用来将数组中的元素拼接为一个字符串, 类似于python中的 `','.join(list)` 方法,只不过js中的 `.join()` 不传参时,相当于传入了默认值 `','`
+
+    ```js
+    const arr = ['py', 'js', 'html', 'css']
+    const newArr1 = arr.join()
+    console.log(newArr1) // py,js,html,css
+    const newArr2 = arr.join('')
+    console.log(newArr2) // pyjshtmlcss
+    ```
+
+- `.find()` 查找元素,符合测试条件的第一个数组元素值，如果没有符合条件的则返回 `undefined`
+
+    ```js
+    const arr = [
+        {
+            lang: 'python',
+            suffix: 'py'
+        },
+        {
+            lang: 'javascript',
+            suffix: 'js'
+        }
+    ]
+    
+    const js = arr.find(function(item){
+        return item.suffix === 'js'
+    })
+    console.log(js) // {lang: 'javascript', suffix: 'js'}
+    ```
+
+- `.every()`  检测数组所有元素是否都符合指定条件，如果所有元素都通过检测返回true，否则返回false
+- `.some()`  检测数组中的元素是否满足指定条件如果数组中有元素满足条件返回true，否则返回false
+- `.concat()` 合并两个数组，返回生成新数组
+- `.sort()` 对原数组单元值排序
+- `.splice()` 删除或替换原数组单元
+- `.reverse()` 反转数组
+- `.findIndex()` 查找元素的下标
+- 静态方法 `Array.from()` 将伪数组转换为数组
+
+#### 4.4.3 字符串String
+
+在 JavaScript 中的字符串、数值、布尔具有对象的使用特征，如具有属性和方法. 之所以具有对象特征的原因是字符串、数值、布尔类型数据是 JavaScript 底层使用 Object 构造函数“包装”来的，被称为包装类型。
+
+- `.length`属性 用来获取字符串的长度
+- `.split('分隔符')` 用来将字符串拆分成数组, 和数组的`.join()`功能相反
+
+    ```js
+    // 将字符串拆分为数组
+    const str = 'js,html,css'
+    const arr = str.split(',')
+    console.log(arr) // ['js', 'html', 'css']
+    // 将数组拼接为字符串
+    const str2 = arr.join()
+    console.log(str2) // js,html,css
+    ```
+
+- `.substring(开始下标[,结束下标])` 用于字符串截取,类似于python字符串的切片
+
+    ```js
+    const str = 'Hello world!'
+    const newStr = str.substring(3)
+    console.log(newStr) // lo world!
+    ```
+
+- `.startsWith(检测字符串[，检测位置索引号])` 检测是否以某字符开头,返回布尔值
+- `.includes(搜索的字符串[，检测位置索引号])` 判断一个字符串是否包含在另一个字符串中，根据情况返回true 或false
+- `.toUppercase()` 用于将字母转换成大写
+- `.toLowerCase()` 用于将字母转换成小写
+- `.indexOf()` 检测是否包含某字符
+- `.endsWith()` 检测是否以某字符结尾,返回布尔值
+- `.replace()` 用于替换字符串，支持正则匹配
+- `.match()` 用于查找字符串，支持正则匹配
+
+#### 4.4.4 数组Number
+
+`Number` 是内置的构造函数，用于创建数值
+
+常用方法： `toFixed()` 设置保留小数位的长度,四舍五入
+
+```js
+const num = 3.1415
+console.log(num.toFixed(3)) // 3.142
+```
+
+## 五、面向对象(OOP)
+
+前端语言主要使用面向过程(函数式编程)
+
+### 5.1 编程思想
+
+面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候再一个一个的依次调用就可以了。面向过程，就是按照我们分析好了的步骤，按照步骤解决问题. 函数式编程
+
+面向对象是把事务分解成为一个个对象，然后由对象之间分工与合作. 面向对象是以对象功能来划分问题，而不是步骤
+
+在面向对象程序开发思想中，每一个对象都是功能中心，具有明确分工。面向对象编程具有灵活、代码可复用、容易维护和开发的优点，更适合多人合作的大型软件项目。 面向对象的特性： 封装性, 继承性, 多态性.
+
+- 面向过程编程
+    - 优点：性能比面向对象高，适合跟硬件联系很紧密的东西，例如单片机就采用的面向过程编程。
+    - 缺点：没有面向对象易维护、易复用、易扩展
+- 面向对象编程
+    - 优点：易维护、易复用、易扩展，由于面向对象有封装、继承、多态性的特性，可以设计出低耦合的系统，使系统 更加灵活、更加易于维护
+    - 缺点：性能比面向过程低
+
+### 5.2 构造函数
+
+封装是面向对象思想中比较重要的一部分，js面向对象可以通过构造函数实现的封装。 同样的将变量和函数组合到了一起并能通过 this 实现数据的共享，所不同的是借助构造函数创建出来的实例对象之间是彼此不影响的, 因此存在浪费内存的问题
+
+???+ note
+    - 构造函数体现了面向对象的封装特性
+    - 构造函数实例创建的对象彼此独立、互不影响
+
+```js
+function User(name, age) {
+    this.name = name,
+    this.age = age
+    this.sayHi = function(){
+        console.log('Hello world!')
+    }
+}
+
+const bob = new User('bob', 10)
+const mike = new User('mike', 20)
+console.log(bob.sayHi === mike.sayHi) // false 
+// 这说明不同对象的方法占据了不同的内存空间,因此造成了内存浪费
+```
+
+### 5.3 原型
+
+#### 5.3.1 简介
+
+通过原型可以解决前面构造函数造成的内存浪费.
+
+构造函数通过原型分配的函数是所有对象所 共享的。 JavaScript 规定，每一个构造函数都有一个 prototype 属性，指向另一个对象，所以我们也称为原型对象.  这个对象可以挂载函数，对象实例化不会多次创建原型上函数，节约内存. 我们可以把那些不变的方法，直接定义在 prototype 对象上，这样所有对象的实例就可以共享这些方法。 构造函数和原型对象中的this 都指向 实例化的对象
+
+使用原型改进前面的构造函数:
+
+```js
+function User(name, age) {
+    this.name = name,
+    this.age = age
+}
+User.prototype.sayHi = function(){
+    console.log('Hello world!')
+}
+
+const bob = new User('bob', 10)
+const mike = new User('mike', 20)
+console.log(bob.sayHi === mike.sayHi) // true 
+// 解决了以前写法造成的内存浪费
+```
+
+#### 5.3.2 constructor 属性
+
+每个原型对象里面都有个`constructor` 属性（`constructor` 构造函数）. 作用：该属性指向该原型对象的构造函数
+
+使用场景：如果有多个对象的方法，我们可以给原型对象采取对象形式赋值.但是这样就会覆盖构造函数原型对象原来的内容，这样修改后的原型对象 `constructor` 就不再指向当前构造函数了.此时，我们可以在修改后的原型对象中，添加一个 `constructor` 指向原来的构造函数。
+
+```js
+function User(){}
+
+// 为User构造函数添加方法
+
+// 追加方式添加
+// User.prototype.sayHi = function(){
+//     console.log('Hello World!')
+// }
+// User.prototype.hobby = function(){
+//     console.log('I like js!')
+// }
+
+// 修改原型添加
+User.prototype = {
+    constructor: User, // 如果没有这行代码,User.prototype.constructor将指向Object
+    sayHi: function(){
+        console.log('Hello World!')
+    },
+    hobby: function(){
+        console.log('I like js!')
+    }
+}
+console.log(User.prototype.constructor) // 指向 User
+```
