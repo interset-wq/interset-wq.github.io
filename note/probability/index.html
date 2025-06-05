@@ -3338,105 +3338,149 @@ P(A_2) = P(\bar{A_1} A_2) = P(\bar{A_1}) P(A_2|\bar{A_1}) = \frac{n-1}{n} \cdot 
 <p>同理 <span class="arithmatex">\(P(A_n) = \frac{1}{n}\)</span></p>
 </details>
 <p><mark class="critic">全概率公式</mark></p>
-<p>完备事件组 事件组 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span>，若满足：
-$$
+<p><strong>完备事件组</strong> </p>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="p1.webp" src="https://s2.loli.net/2025/06/04/y2gJNR91Hs8l4dr.webp" /></p>
+</details>
+<p>事件组 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span>，若满足：</p>
+<div class="arithmatex">\[
 \bigcup_{i=1}^n A_i = \varOmega \newline
 A_i A_j = \varnothing (i \not ={j} ),i,j = 1, 2,..., n
-$$
-则称 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 为 <span class="arithmatex">\(\varOmega\)</span> 的一个分割或完备事件组．</p>
-<p>全概率公式 设 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 是 <span class="arithmatex">\(\varOmega\)</span> 的一个分割，且 <span class="arithmatex">\(P(A ) &gt; 0 (i =  1，2，...，n)\)</span>．则对<span class="arithmatex">\(\forall B\)</span>，有
-$$
-P(B) = \sum <em i="1">{i=1} ^n P(A_i B) =  \sum </em> ^n P(A_i )P(B | A_i )
-$$
-称为全概率公式．</p>
-<!-- 例4 设某工厂有三个车间，生产同一种产品，
-一 二 三
-次品率：
-0.05 0.03 0.01
-产量：
-2500 2000 1500
-混合后从中任取一件，求该产品为次品的概率．
-解 设B表示取到得产品为次品；A 表示取到第 i 个车间的产品．i = 1，2，3
-i
-P(B) = P(A B) + P(A B) + P(A B)
-1 2 3
-= P(A )P(B | A ) + P(A )P(B | A ) + P(A )P(B | A )
-1 1 2 2 3 3
-2500 2000 1500
-=  0.05 +  0.03 +  0.01  3.3
-6000 6000 6000 
-
-例5 已知一个袋子中有12个乒乓球，其中9个新球，
-3个旧球，现从中任取3个球进行比赛，比赛结束后，
-将3个球放回袋中．第二天，再任取3球进行比赛，求
-第二次抽出的3个球全是新球的概率是多少？
-解 设 A 表示第一次取出 i 个新球 i = 0，1，2，3，
-i
-B表示第二次取出3个新球
-P(B) = P(A )P(B | A ) + P(A )P(B | A ) + P(A )P(B | A ) + P(A )P(B | A )
-0 0 1 1 2 2 3 3
-C3C0 C3 C2C1 C3 C1C2 C3 C0C3 C3
-= 3 9 \cdot  9 + 3 9 \cdot  8 + 3 9 \cdot  7 + 3 9 \cdot  6 = 0.146
-C3 C3 C3 C3 C3 C3 C3 C3
-12 12 12 12 12 12 12 12  -->
-
+\]</div>
+<p>则称 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 为 <span class="arithmatex">\(\varOmega\)</span> 的一个分割或完备事件组．</p>
+<p><strong>全概率公式</strong> </p>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="p2.webp" src="https://s2.loli.net/2025/06/04/IhOA94Bs7zCleRV.webp" /></p>
+</details>
+<p>设 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 是 <span class="arithmatex">\(\varOmega\)</span> 的一个分割，且 <span class="arithmatex">\(P(A ) &gt; 0 (i =  1，2，...，n)\)</span>．则对<span class="arithmatex">\(\forall B\)</span>，有</p>
+<div class="arithmatex">\[
+P(B) = \sum _{i=1} ^n P(A_i B) =  \sum _{i=1} ^n P(A_i )P(B | A_i )
+\]</div>
+<p>称为全概率公式．</p>
+<details class="example" open="open">
+<summary>全概率公式</summary>
+<p>设某工厂有三个车间，生产同一种产品，混合后从中任取一件，求该产品为次品的概率．</p>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>一</th>
+<th>二</th>
+<th>三</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>次品率</td>
+<td>0.05</td>
+<td>0.03</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>产量</td>
+<td>2500</td>
+<td>2000</td>
+<td>1500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解</strong> 设B表示取到得产品为次品；<span class="arithmatex">\(A_i\)</span> 表示取到第 i 个车间的产品．i = 1，2，3. 问题转化为了求 <span class="arithmatex">\(P(B)\)</span></p>
+<div class="arithmatex">\[
+P(B) = P(A_1 B) + P(A_2 B) + P(A_3 B) \\
+= P(A_1)P(B | A_1 ) + P(A_2)P(B | A_2) + P(A_3)P(B | A_3) \\
+= \frac{2500}{6000} \times 0.05 + \frac{2000}{6000} \times 0.03 + \frac{1500}{6000} \times 0.01 \approx 3.3 \%
+\]</div>
+</details>
+<details class="example" open="open">
+<summary>全概率公式</summary>
+<p>已知一个袋子中有12个乒乓球，其中9个新球，3个旧球，现从中任取3个球进行比赛，比赛结束后，将3个球放回袋中．第二天，再任取3球进行比赛，求第二次抽出的3个球全是新球的概率是多少？</p>
+<p><strong>解</strong> 设 <span class="arithmatex">\(A_i\)</span> 表示第一次取出 i 个新球 i = 0，1，2，3，B 表示第二次取出3个新球, 问题转换为了求<span class="arithmatex">\(P(B)\)</span></p>
+<div class="arithmatex">\[
+P(B) = P(A_0 B) + P(A_1 B) + P(A_2 B) + P(A_3 B) \\
+= P(A_0)P(B | A_0) + P(A_1)P(B | A_1) + P(A_2)P(B | A_2) + P(A_3)P(B | A_3) \\
+= \frac{C_3 ^3}{C_12 ^3} \frac{C_9 ^3}{C_12 ^3} + \cdots
+\]</div>
+</details>
 <p><mark class="critic">贝叶斯公式</mark></p>
-<p>贝叶斯公式 设 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 是 <span class="arithmatex">\(\varOmega\)</span> 的一个分割，且<span class="arithmatex">\(P(A ) &gt; 0 (i =1，2，...，n)\)</span>.则对<span class="arithmatex">\(\forall B\)</span>， 若<span class="arithmatex">\(P(B) &gt; 0\)</span>，有
-$$
+<p>设 <span class="arithmatex">\(A_1 ，A_2 ，...，A_n\)</span> 是 <span class="arithmatex">\(\varOmega\)</span> 的一个分割，且<span class="arithmatex">\(P(A ) &gt; 0 (i =1，2，...，n)\)</span>.则对<span class="arithmatex">\(\forall B\)</span>， 若<span class="arithmatex">\(P(B) &gt; 0\)</span>，有</p>
+<div class="arithmatex">\[
 P(A_j | B) = \frac{P(A_j B)}{P(B)} = \frac{P(A_j ) P(B | A_j )}{\sum _{i=1} ^n P(A_i ) P(B | A_i )}
-$$</p>
+\]</div>
 <p>称为贝叶斯公式 (或逆全概率公式)． </p>
-<!-- 例6 某传染病临床上统计发生下述症状的易感者患病概率为：
-“仅发热”— 0.03，“仅干咳”— 0.01，
-“既发热又干咳”— 0.05， “无上述现象”— 0.0001
-现对某疫区25000人检查发现：“仅发热”—500人，
-“仅干咳”—1000人， “既发热又干咳”—250人，求
--疫区中任取一人，他为该传染病患者的概率；
--某人为该传染病患者，计算他临床表现为“仅发热”的概率． 
-
-解 设 A={仅发热病人}，B={仅干咳病人}，C={既发热又干咳病人}，
-D={无明显症状的病人}，E={得了该传染病}
--由全概率公式得：
-P(E) = P(A)P(E | A) + P(B)P(E | B)+P(C)P(E | C) + P(D)P(E | D)
-500
-=  0.03 +... = 0.001593
-25000
--由贝叶斯公式得：
-500
- 0.03
-P(A)P(E | A)
-25000
-P(A | E) = = = 0.376648
-P(E) 0.001593 
-
-例7 商店论箱出售玻璃杯，每箱20只，其中每箱含有 0，1，2 只
-次品的概率分别为0.8，0.1，0.1，某顾客选中一箱，从中任选
-4只检查，结果都是好的， 便买下了这一箱．问这一箱含有一
-个次品的概率是多少？
-解 设 A表示从一箱中任取4只检查，结果都是好的．
-B ，B ，B 分别表示事件每箱含 0，1，2只次品，
-0 1 2
-已知 P(B ) = 0.8，P(B ) = 0.1，P(B ) = 0.1，
-0 1 2 
-
-例7 商店论箱出售玻璃杯，每箱20只，其中每箱含有 0，1，2 只
-次品的概率分别为0.8，0.1，0.1，某顾客选中一箱，从中任选
-4只检查，结果都是好的， 便买下了这一箱．问这一箱含有一
-个次品的概率是多少？
-C4 4 C4 12
-P(A | B ) = 1 P(A | B ) = 19 =
-P(A | B ) = 18 =
-0 1 C4 5 2 C4 19
-20
-20
-P(B )P(A | B )
-由贝叶斯公式 P(B | A) = 1 1 = 0.0848．
-1 2
-\sum
-P(B )P(A | B )
-i i
-i=0 
-
+<details class="example" open="open">
+<summary>全概率公式和贝叶斯公式</summary>
+<p>某传染病临床上统计发生下述症状的易感者患病概率为：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>仅发热</th>
+<th>仅干咳</th>
+<th>既发热又干咳</th>
+<th>无上述现象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>概率</td>
+<td>0.03</td>
+<td>0.01</td>
+<td>0.05</td>
+<td>0.0001</td>
+</tr>
+</tbody>
+</table>
+<p>现对某疫区25000人检查发现：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>仅发热</th>
+<th>仅干咳</th>
+<th>既发热又干咳</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人数/人</td>
+<td>500</td>
+<td>1000</td>
+<td>250</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ol>
+<li>疫区中任取一人，他为该传染病患者的概率；</li>
+<li>某人为该传染病患者，计算他临床表现为“仅发热”的概率． </li>
+</ol>
+</blockquote>
+<p><strong>解</strong> 设 A={仅发热病人}，B={仅干咳病人}，C={既发热又干咳病人}，D={无明显症状的病人}，E={得了该传染病}</p>
+<ol>
+<li>
+<p>问题转换为求<span class="arithmatex">\(P(E)\)</span>, 由全概率公式得：</p>
+<p>$P(E) = P(A)P(E | A) + P(B)P(E | B)+P(C)P(E | C) + P(D)P(E | D) = \frac{500}{25000} \times 0.03 + \cdots = 0.001593 $</p>
+</li>
+<li>
+<p>问题转换为求<span class="arithmatex">\(P(A|E)\)</span> , 由贝叶斯公式得：</p>
+<p><span class="arithmatex">\(P(A|E) = \frac{P(A)P(E|A)}{P(E)} = 0.37648\)</span></p>
+</li>
+</ol>
+</details>
+<details class="example" open="open">
+<summary>贝叶斯公式</summary>
+<p>商店论箱出售玻璃杯，每箱20只，其中每箱含有 0，1，2 只次品的概率分别为0.8，0.1，0.1，某顾客选中一箱，从中任选4只检查，结果都是好的， 便买下了这一箱．问这一箱含有一个次品的概率是多少？</p>
+<p><strong>解</strong> 设 A表示从一箱中任取4只检查，结果都是好的．<span class="arithmatex">\(B_i\)</span> 表示事件每箱含 i 只次品，i = 0,1,2. 问题转化为了求 <span class="arithmatex">\(P(B_1|A)\)</span></p>
+<p>已知 <span class="arithmatex">\(P(B_1) = 0.8，P(B_2) = 0.1，P(B_3) = 0.1\)</span></p>
+<p><span class="arithmatex">\(P(A|B_0) = 1, \space P(A|B_1) = \frac{C_19 ^4}{C_20 ^4} = \frac{4}{5}, \space P(A|B_2) = \frac{C_18 ^4}{C_20 ^4} = \frac{12}{19}\)</span></p>
+<p>由贝叶斯公式得 </p>
+<div class="arithmatex">\[
+P(B_1|A) = \frac{P(AB_1)}{P(A)} = \frac{P(B_1)P(A|B_1)}{P(B_0)P(A|B_0) + P(B_1)P(A|B_1) + P(B_2)P(A|B_2)} = 0.0848
+\]</div>
+</details>
+<!-- ???+ example 
 例8 三个盒子分别装着2个红球，2个蓝球，1红1蓝，
 现从中抽取一个盒子，再从盒子中抽出一个球，发现是
 红球，问另一个球也是红球的概率?
@@ -3461,40 +3505,47 @@ P(B) 1/ 2 3
 淘汰两个蓝球，只剩下2红1蓝， 则第二次抽到红球的概率为 ．
 3  -->
 
-<p><strong>全概率公式与贝叶斯公式说明</strong></p>
+<details class="note" open="open">
+<summary>全概率公式与贝叶斯公式说明</summary>
 <p>令 <span class="arithmatex">\(A_i\)</span> 表示“原因”， <span class="arithmatex">\(B\)</span> 表示“结果”，则<span class="arithmatex">\(P(A_i)\)</span>表示第 <span class="arithmatex">\(i\)</span> 种原因发生的概率．$P(B | A_i) $表示原因 <span class="arithmatex">\(A_i\)</span>引起结果 <span class="arithmatex">\(B\)</span> 发生的可能性大小．</p>
-<p><strong>全概率公式</strong> 综合引起结果的各种原因，导致该结果出现的可能性大小．</p>
-<p><strong>贝叶斯公式</strong> 当结果出现时，它是由某原因引起的可能性大小． </p>
+<ul>
+<li><strong>全概率公式</strong> 综合引起结果的各种原因，导致该结果出现的可能性大小．</li>
+<li><strong>贝叶斯公式</strong> 当结果出现时，它是由某原因引起的可能性大小． 逆转因果</li>
+</ul>
+</details>
 <p><mark class="critic">事件的相互独立性</mark></p>
 <p><strong>两事件独立</strong> 若<span class="arithmatex">\(A，B\)</span>两个事件满足 <span class="arithmatex">\(P(AB) = P(A) P(B)\)</span>，则称事件A与B相互独立．</p>
 <details class="note" open="open">
 <summary>Note</summary>
 <ul>
 <li><span class="arithmatex">\(\varOmega, \varnothing\)</span> 与任何事件相互独立</li>
-<li>事件的独立与事件的互斥的区别；(无联系)</li>
-<li>定义验证；判别独立的方法；对实际问题，由经验验证． </li>
+<li>事件的独立与事件的互斥无联系</li>
+<li>判别独立的方法<ul>
+<li>定义验证</li>
+<li>对实际问题，由经验验证． </li>
+</ul>
+</li>
 </ul>
 </details>
-<!-- 例9 掷两枚均匀的骰子一次，求出现双6点的概率．
-解 设 A ={第 i 枚骰子出现6点}，i = 1，2，易知 A ，A 独立，
-i 1 2
-1 1 1
-因此 P(A A )= P(A ) \cdot  P(A ) = \cdot  =
-1 2 1 2
-6 6 36
-例10 从一付52张(去掉王)的扑克牌中任意抽取一张，令 A={抽出一张 K }，
-B={抽出一张黑桃}，问 A 与 B 是否独立?
-C1 C1
-1
-解
-P(A) = 4 ， P(B) = 13 ， P(AB) = ，
-C1 C1 C1
-52 52 加上大小
-52
-由 P(AB) = P(A)P(B) 得A，B 是相互独立的． 王如何？  -->
-
-<p><span class="arithmatex">\(A，B\)</span> 相互独立 <span class="arithmatex">\(\iff P(A | B) = P(A),P(B) &gt; 0 \iff P(B | A) = P(B) ,P(A) &gt; 0\)</span></p>
-<p>若事件<span class="arithmatex">\(A\)</span>与<span class="arithmatex">\(B\)</span>独立，则<span class="arithmatex">\(A\)</span>与<span class="arithmatex">\(\bar{B}\)</span>、<span class="arithmatex">\(\bar{A}\)</span>与<span class="arithmatex">\(B\)</span>、<span class="arithmatex">\(\bar{A}\)</span>与<span class="arithmatex">\(\bar{B}\)</span> 也相互独立．</p>
+<details class="example" open="open">
+<summary>事件独立-由生活经验判断</summary>
+<p>掷两枚均匀的骰子一次，求出现双6点的概率．</p>
+<p><strong>解</strong> 设 <span class="arithmatex">\(A_i\)</span> ={第 i 枚骰子出现6点}，i = 1，2，易知 <span class="arithmatex">\(A_1，A_1\)</span> 独立，问题转化为求 <span class="arithmatex">\(P(A_1A_2)\)</span></p>
+<p><span class="arithmatex">\(P(A_1A_2)= P(A_1) \cdot  P(A_2) = \frac{1}{6} \times \frac{1}{6} = \frac{1}{36}\)</span></p>
+</details>
+<details class="example" open="open">
+<summary>事件独立-由定义判断</summary>
+<p>从一付52张(去掉王)的扑克牌中任意抽取一张，令 A={抽出一张 K }，B={抽出一张黑桃}，问 A 与 B 是否独立?</p>
+<p><strong>解</strong> <span class="arithmatex">\(\because P(A) = \frac{4}{52} ， P(B) = \frac{13}{52} ， P(AB) = \frac{1}{52} = P(A)P(B)\)</span></p>
+<p><span class="arithmatex">\(\therefore\)</span> 两事件相互独立</p>
+</details>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<ul>
+<li><span class="arithmatex">\(A，B\)</span> 相互独立 <span class="arithmatex">\(\iff P(A | B) = P(A),P(B) &gt; 0 \iff P(B | A) = P(B) ,P(A) &gt; 0\)</span></li>
+<li>若事件<span class="arithmatex">\(A\)</span>与<span class="arithmatex">\(B\)</span>独立，则<span class="arithmatex">\(A\)</span>与<span class="arithmatex">\(\bar{B}\)</span>、<span class="arithmatex">\(\bar{A}\)</span>与<span class="arithmatex">\(B\)</span>、<span class="arithmatex">\(\bar{A}\)</span>与<span class="arithmatex">\(\bar{B}\)</span> 也相互独立．</li>
+</ul>
+</details>
 <!-- 例11 两射手同时向同一目标射击一次，其命中率分别为 0.8 和 0.6 ，
 求在一次射击中目标被击中的概率．
 解 设 A ={甲中}， B= {乙中}， C= {目标被击中}，
@@ -3504,7 +3555,10 @@ C1 C1 C1
 P(C) = 1- P(AB)
 = 1- P(A)P(B) = 1- 0.2 0.4 = 0.92．  -->
 
-<p><strong>多个事件的独立</strong> 若三个事件 <span class="arithmatex">\(A，B，C\)</span> 满足 <span class="arithmatex">\(P(AB) = P(A) P(B) , P(AC) = P(A) P(C) , P(BC) = P(B) P(C)\)</span> 则称事件 <span class="arithmatex">\(A，B，C\)</span> 两两独立．若在此基础上还满足 <span class="arithmatex">\(P(ABC) = P(A) P(B) P(C)\)</span> 则称事件 <span class="arithmatex">\(A，B，C\)</span> 相互独立． </p>
+<p><strong>多个事件的独立</strong> 若三个事件 <span class="arithmatex">\(A，B，C\)</span> 满足 </p>
+<div class="arithmatex">\[P(AB) = P(A) P(B) , P(AC) = P(A) P(C) , P(BC) = P(B) P(C)
+\]</div>
+<p>则称事件 <span class="arithmatex">\(A，B，C\)</span> 两两独立．若在此基础上还满足 <span class="arithmatex">\(P(ABC) = P(A) P(B) P(C)\)</span> 则称事件 <span class="arithmatex">\(A，B，C\)</span> 相互独立． </p>
 <!-- 注 两两独立 相互独立
 例如 有4张同样大小的卡片，上面标有数字，每张被抽到的概率相同，
 1,2,3 1    2    3   
@@ -3546,8 +3600,13 @@ P(A A ... A ) = P(A )P(A )...P(A )
 则称 n 个事件 A ，A ，...，A 相互独立．
 1 2 n  -->
 
-<p><strong>事件独立性的应用</strong></p>
-<p>加法公式的简化 若事件 <span class="arithmatex">\(A_1, A_2, ..., A_n\)</span> 相互独立， 则 <span class="arithmatex">\(P(A_1 \cup A_2 \cup ... \cup A_n ) =1 - P(\bar{A_1} \bar{A_2} ... \bar{A_n}) =1- P(\bar{A_1}) ... P(\bar{A_n})\)</span></p>
+<details class="note" open="open">
+<summary>事件独立性的应用-加法公式的简化</summary>
+<p>若事件 <span class="arithmatex">\(A_1, A_2, ..., A_n\)</span> 相互独立， 则 <span class="arithmatex">\(P(A_1 \cup A_2 \cup ... \cup A_n ) =1 - P(\bar{A_1} \bar{A_2} \cdots \bar{A_n}) =1- P(\bar{A_1}) ... P(\bar{A_n})\)</span></p>
+<blockquote>
+<p><span class="arithmatex">\(\overline{ A \cup B } = \overline{A} \cap \overline{B} = \bar{A} \bar{B}\)</span> (和的逆=逆的积)</p>
+</blockquote>
+</details>
 <!-- 例12 用步枪射击飞机，每支步枪的命中率为0.004，
 求：- 现用250支步枪同时射击飞机一次，飞机被击中
 的概率．
@@ -3591,10 +3650,7 @@ P(A) = P(A )P(A | A ) + P(A )P(A | A ) L R
 3 3
 2 5
 = 2 p2 + 2 p3 - 5 p4 + 2 p5 ． 
-
-六个概念：随机试验、样本空间、事件、概率、条件概率、独立性
-四个公式：加法公式、乘法公式、全概率公式、贝叶斯公式
-两个概型：古典概型、几何概型  -->
+-->
 
 <h2 id="_2">第二章 随机变量及其概率分布</h2>
 <h3 id="21">2.1  随机变量的概念</h3>
@@ -3615,16 +3671,16 @@ P(A) = P(A )P(A | A ) + P(A )P(A | A ) L R
 <p>若用 X 表示掷一枚骰子的试验中出现的点数，则 <span class="arithmatex">\(\{X &lt; 5 \}\)</span> 表示掷出点数小于 5 这一事件，<span class="arithmatex">\(\{X = 3 \}\)</span> 表示掷出的点数为 3 点这一事件． </p>
 </details>
 <h3 id="22">2.2  随机变量的概率分布</h3>
-<p><mark class="critic">随机变量的分布函数</mark></p>
+<p><mark class="critic">随机变量的分布函数F(x)</mark></p>
 <p><strong>定义</strong> 设 <span class="arithmatex">\(X\)</span> 为一随机变量， <span class="arithmatex">\(x\)</span> 为任意实数，称函数 <span class="arithmatex">\(F(x) = P \{X \leq x \}\)</span> 为 X 的分布函数．</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
-</details>
 <ul>
 <li><span class="arithmatex">\(F(x)\)</span> 是一普通函数，其定义域为 <span class="arithmatex">\((- \infty，+ \infty)\)</span></li>
 <li><span class="arithmatex">\(F(x)\)</span> 的值为事件 <span class="arithmatex">\(\{ X \leq x \}\)</span> 的概率</li>
 <li><span class="arithmatex">\(F(x)\)</span> 可以完全地描述随机变量取值的规律性．</li>
 </ul>
+</details>
 <details class="example" open="open">
 <summary>Example</summary>
 <p><span class="arithmatex">\(P\{x_1 &lt; X \leq x_2 \} = P \{X \leq x_2 \}  - P \{X \leq x_1 \}  = F(x_2 ) - F(x_1 )\)</span>．</p>
@@ -3650,68 +3706,46 @@ $$</p>
 <summary>Note</summary>
 <p>任一满足以上三个性质的函数，都可以作为某随机变量的分布函数． </p>
 </details>
-<!-- 例2 设随机变量 X 的分布函数为
-F(x) = A + overlinectan x - \infty < x < +\infty，
-求 A 和 B 的值．
-\pi
-解 由规范性知 F(-\infty) = \lim F(x) = A - \cdot  B = 0
-2
-x\to-\infty
-\pi
-F(+\infty) = \lim F(x) = A + \cdot  B = 1
-2
-x\to+\infty
-1 1
-解得 A = ， B = ．
-2 \pi 
-
- 0， x \leq 0，
-
-例3 设某随机变量的分布函数为 F(x) = Ax2， 0 < x \leq 1，
-
-1， x > 1，
-
-求 A 及 P{0.3 < X \leq 0.7}．
-解 利用右连续性知
-\lim F(x) = F(1)，即 1 = A\cdot 12，则 A = 1．
-+
-x\to1
-P\{0.3 < X \leq 0.7\}  = F(0.7) - F(0.3) = 0.72 - 0.32 = 0.4． 
- -->
-
+<details class="example">
+<summary>分布函数的性质</summary>
+<p>设随机变量 X 的分布函数为 <span class="arithmatex">\(F(x) = A + B arctan x , \space - \infty &lt; x &lt; +\infty\)</span>，求 A 和 B 的值．</p>
+<p><strong>解</strong> 由规范性知 <span class="arithmatex">\(F(-\infty) = A - \frac{\pi}{2} \cdot  B = 0, \space F(+\infty) = A + \frac{\pi}{2} \cdot B = 1\)</span></p>
+<p>解得 <span class="arithmatex">\(A = \frac{1}{2}， B =\frac{1}{\pi}\)</span></p>
+</details>
+<details class="example" open="open">
+<summary>分布函数</summary>
+<p>设某随机变量的分布函数为</p>
+<div class="arithmatex">\[
+F(x) = 
+\begin{cases} 
+0 , \space x \le 0 \\
+Ax^2 , \space0 &lt; x \le 1 \\
+1 , \space x &gt; 1
+\end{cases}
+\]</div>
+<p>求 A 及 <span class="arithmatex">\(P \{0.3 &lt; X \leq 0.7 \}\)</span>．</p>
+<p><strong>解</strong> 利用右连续性知 <span class="arithmatex">\(F(1^+) = F(1)\)</span>，则 A = 1．</p>
+<p><span class="arithmatex">\(P\{0.3 &lt; X \leq 0.7\}  = F(0.7) - F(0.3) = 0.72 - 0.32 = 0.4\)</span></p>
+</details>
 <details class="note" open="open">
 <summary>Note</summary>
-</details>
 <p>设 <span class="arithmatex">\(X \sim F(x)，\forall a，b \in \R\)</span>，且 <span class="arithmatex">\(a &lt; b\)</span>， 则有</p>
-<div class="arithmatex">\[
-P \{ X &lt; b \} = \lim _{x \to b^-} F(x) = F(b ^-) \newline
-P \{ X = b \} = P \{ X \le b \} - P \{ X &lt; b \} = F(b) - F(b ^-) \newline
-P \{X &gt; a \} = 1 - P \{X \leq a \} = 1 - F(a) \newline
-P \{X \geq a \} = 1 - P \{X &lt; a \} = 1 - F(a ^-) \newline
-P \{a &lt; X &lt; b \} = P \{X &lt; b \} - P \{X \leq a \} = F(b) - F(a) \newline
-\]</div>
-<!-- 例4 设 X \sim F(x) = 2 / 3， 1 \leq x < 2
- 求 P\{X =1\} ， P\{X \leq 3\} ，
-
-11/12， 2 \leq x < 3
-
- 1， x \ge 3
-
-P{X > 1/ 2}，P\{2 < X < 4\} ．
-2 1 1
-解 P\{X = 1\}  = F- F(1-) = - = ； P\{X \leq 3\}  = F= 1；
-3 2 6
- 1   1  1 3 11 1
-P X >  = 1- F  = 1- = ；P\{2 < X < 4\}  = F(4-) - F= 1- = ．
- 2  2  4 4 12 12  -->
-
+<ul>
+<li><span class="arithmatex">\(P \{ X \le b \} = F(b)\)</span></li>
+<li><span class="arithmatex">\(P \{ X &lt; b \} = F(b ^-)\)</span></li>
+<li><span class="arithmatex">\(P \{ X = b \} = P \{ X \le b \} - P \{ X &lt; b \} = F(b) - F(b ^-)\)</span></li>
+<li><span class="arithmatex">\(P \{X &gt; a \} = 1 - P \{X \leq a \} = 1 - F(a)\)</span></li>
+<li><span class="arithmatex">\(P \{X \geq a \} = 1 - P \{X &lt; a \} = 1 - F(a ^-)\)</span></li>
+<li><span class="arithmatex">\(P \{a &lt; X &lt; b \} = P \{X &lt; b \} - P \{X \leq a \} = F(b^-) - F(a)\)</span></li>
+</ul>
+</details>
 <p><strong>随机变量的分类</strong></p>
 <ul>
 <li><strong>离散型随机变量</strong> 取值为有限个或可列个．例如：一批产品中的次品数．</li>
 <li><strong>连续型随机变量</strong> 取值为某一区间上的值．例如：零件尺寸与规定尺寸的偏差． </li>
 </ul>
 <p><mark class="critic">离散型随机变量的分布律</mark></p>
-<p><strong>定义</strong> 设 <span class="arithmatex">\(x_i (i = 1，2，...)\)</span>为离散型随机变量 <span class="arithmatex">\(X\)</span> 的所有可能取值，事件 <span class="arithmatex">\(\{X = x \}\)</span>  的概率 <span class="arithmatex">\(P\{X = x_i \}  = p_i ，i = 1，2，...\)</span> 称为 <span class="arithmatex">\(X\)</span> 的分布律 (列)，常写成表格形式：</p>
+<p><strong>定义</strong> 设 <span class="arithmatex">\(x_i (i = 1，2，...)\)</span>为离散型随机变量 <span class="arithmatex">\(X\)</span> 的所有可能取值，事件 <span class="arithmatex">\(\{X = x_i \}\)</span>  的概率 <span class="arithmatex">\(P\{X = x_i \}  = p_i ，i = 1，2，...\)</span> 称为 <span class="arithmatex">\(X\)</span> 的分布律 (列)，常写成表格形式：</p>
 <div class="arithmatex">\[
 \begin{array}{c|cccc}
 X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \cdots \\
@@ -3719,127 +3753,71 @@ X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \cdots \\
 P &amp; p_1 &amp; p_2 &amp; \cdots &amp; p_n \cdots
 \end{array}
 \]</div>
-<p><strong>分布律的性质</strong></p>
+<details class="note" open="open">
+<summary>离散型随机变量分布律的性质</summary>
 <ul>
 <li><strong>非负性</strong> <span class="arithmatex">\(p_i \geq 0\)</span>， <span class="arithmatex">\(i = 1，2，...\)</span></li>
 <li><strong>规范性</strong> <span class="arithmatex">\(\sum p_i = 1\)</span></li>
 </ul>
-<details class="note" open="open">
-<summary>Note</summary>
 <p>任一满足这两条性质的数列，都可作为某离散型随机变量的分布律．</p>
 </details>
-<!-- 例5 袋中有编号为1-5的5个球，从中任取3个球，求取出球的
-最大号 X 的分布律和分布函数．
-解 X 的可能取值为3，4，5，
-1 1 C2 3 C2 6
-P\{X = 3\}  = = ； P\{X = 4\}  = 3 = ； P\{X = 5\}  = 4 = ．
-C3 10 C3 10 C3 10
-5 5 5
-3 4 5
-X
-所以 X 的分布律为
-1 3 6
-p
-10 10 10 
-
-3 4 5
-X
-X 的分布律
-1 3 6
-p
-10 10 10
-则 X 的分布函数为
-x < 3
- 0，
-
-1/10， 3 \leq x < 4
-
-F(x) = P\{X \leq x\}  = \sum p =
-
-i
-1/10 + 3 /10， 4 \leq x < 5
-i:x \leqx 
-i
-1/10 + 3 /10 + 6 /10， x \ge 5
- 
-
-3 4 5
-X
-X 的分布律
-1 3 6
-p
-10 10 10
-则 X 的分布函数为
-F(x)
- 0， x < 3
-1
-
-1/10，3 \leq x < 4
-\{ \} 
-F(x) = P X \leq x =
- 4/10
-4 /10，
-4 \leq x < 5
-
-1/10
-
- 1， x \ge 5
-O 3 4 5 x 
-
-例6 已知 X 的分布函数如下，求 X 的分布律．
-0，      x < 0，
-
-0.4，   0 \leq x <1，
-
-F(x) =
-
-0.5，   1 \leq x < 2，
-
-1，     x \ge 2
-
-X 0        1        2
-解
-P 0.4    0.1     0.5
-注 分布律 分布函数  -->
-
-<p><mark class="critic">连续型随机变量的概率密度函数</mark></p>
+<details class="example" open="open">
+<summary>离散型随机变量的分布律和分布函数</summary>
+<p>袋中有编号为1-5的5个球，从中任取3个球，求取出球的最大号 X 的分布律和分布函数．</p>
+<p><strong>解</strong> X 的可能取值为3，4，5</p>
+<p><span class="arithmatex">\(P\{X = 3 \}  = \frac{1}{C_5 ^3} = \frac{1}{10}, \space P\{X = 4 \} = \frac{C_3 ^2}{C_5 ^3} = \frac{3}{10}, \space P\{X = 5\}  = \frac{C_4 ^2}{C_5 ^3} = \frac{6}{10}\)</span></p>
+<p>所以 X 的分布律为</p>
+<div class="arithmatex">\[
+\begin{array}{c|cccc}
+X &amp; 3 &amp; 4 &amp; 5 \\
+\hline
+P &amp; \frac{1}{10} &amp; \frac{3}{10} &amp; \frac{6}{10}
+\end{array}
+\]</div>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="fx.webp" src="https://s2.loli.net/2025/06/05/3udGmq9zTcoQ8fn.webp" /></p>
+</details>
+<p>则 X 的分布函数为</p>
+<div class="arithmatex">\[
+F(x) = P \{X \le x \}
+\begin{cases} 
+0 , \space x &lt; 3 \\
+\frac{1}{10} , \space 3 \le x &lt; 4 \\
+\frac{4}{10} , \space 4 \le x &lt; 5 \\
+1 , \space x \ge 5
+\end{cases}
+\]</div>
+</details>
+<p><mark class="critic">连续型随机变量的概率密度函数f(x)</mark></p>
+<details class="success inline end" open="open">
+<summary>连续性随机变量概率密度函数几何意义</summary>
+<p><img alt="概率密度函数.png" src="https://s2.loli.net/2025/05/07/GazSHucAJnjsomF.png" /></p>
+</details>
 <p><strong>定义</strong> 设 <span class="arithmatex">\(X \sim F(x)\)</span>，若存在一个非负可积的函数 <span class="arithmatex">\(f (x)\)</span>，使 <span class="arithmatex">\(\forall x \in \R\)</span>，有</p>
 <div class="arithmatex">\[
 F(x) = P \{ X \le x \} = \int _ {-\infty} ^x f (t) dt
 \]</div>
 <p>则称 X 为连续型随机变量，<span class="arithmatex">\(f (x)\)</span>称为 X 的概率密度函数或分布密度函数．连续型随机变量的分布函数 <span class="arithmatex">\(F(x)\)</span> 是连续函数．</p>
-<p>几何意义：</p>
-<p><img alt="概率密度函数.png" src="https://s2.loli.net/2025/05/07/GazSHucAJnjsomF.png" /></p>
-<p>概率密度函数 <span class="arithmatex">\(f (x)\)</span> 的性质：</p>
+<details class="note" open="open">
+<summary>概率密度函数 <span class="arithmatex">\(f (x)\)</span> 的性质</summary>
 <ul>
 <li><strong>非负性</strong> <span class="arithmatex">\(f (x) \geq 0\)</span></li>
-<li>
-<p><strong>规范性</strong> <span class="arithmatex">\(\int _ {-\infty} ^ {+\infty} f (x) dx = 1\)</span></p>
-<details class="note" open="open">
-<summary>Note</summary>
+<li><strong>规范性</strong> <span class="arithmatex">\(F(+\infty) =  \int _ {-\infty} ^ {+\infty} f (x) dx = 1\)</span></li>
+</ul>
 <p>任一满足以上两条性质的函数，都可以作为某连续型随机变量的概率密度函数．</p>
-</details>
-</li>
-<li>
-<p><span class="arithmatex">\(P\{a &lt; X \leq b\}  = F(b) - F(a) = \int _a ^b f(x) dx\)</span></p>
-</li>
+<ul>
+<li><span class="arithmatex">\(P\{a &lt; X \leq b\}  = F(b) - F(a) = \int _a ^b f(x) dx\)</span></li>
 <li>若 <span class="arithmatex">\(f (x)\)</span> 在 <span class="arithmatex">\(x\)</span> 处连续，则 <span class="arithmatex">\(F' (x) = f (x)\)</span>． </li>
 </ul>
-<details class="warning" open="open">
-<summary>Warning</summary>
-<p>设 X 为一连续型随机变量，a为任意常数，则有 <span class="arithmatex">\(P\{X = a\}  = 0\)</span> .</p>
+<blockquote>
+<p>设 <span class="arithmatex">\(X\)</span> 为一连续型随机变量， <span class="arithmatex">\(a\)</span> 为任意常数，则有 <span class="arithmatex">\(P\{X = a\}  = 0\)</span> (概率为0的事件未必是不可能事件)</p>
+</blockquote>
+<p><strong>证明</strong> <span class="arithmatex">\(\because F(x)\)</span> 是连续的 <span class="arithmatex">\(\Rightarrow F(a^-) = F(a)\)</span></p>
+<p><span class="arithmatex">\(\therefore P \{X = a \} = P \{X \leq a \} - P \{X &lt; a\} = F(a) - F(a^-) = F(a) - F(a) = 0\)</span></p>
+<p><span class="arithmatex">\(\therefore P \{a &lt; X \leq b \} = P \{a \leq X \leq b \} = P \{a &lt; X &lt; b \}= P \{a \leq X &lt; b \} = \int _a ^b f (x)dx\)</span></p>
 </details>
-<!-- 证明 \{ \}  \{ \}  \{ \} 
-P X = a = P X \leq a - P X < a
-概率为0的事件未必
-= F(a) - F(a-) = F(a) - F(a) = 0 是不可能事件！
-F(x) 是连续的
-\{ \}  \{ \}  \{ \}  \{ \} 
-从而，P a < X \leq b = P a \leq X \leq b = P a < X < b = P a \leq X < b
-b
-= \int f (x)dx
-a 
-
+<!-- 
 例7 已知 P(A \cup B) = 0.8 ，P(A) = 0.3，P(B) = 0.5，则事件 A 与B 的关系
 为 (     D        )．
 (A) 事件 A 与B 相互独立； (B) 事件 A与 B 互不相容；
