@@ -223,3 +223,23 @@ $$
     \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
     \end{array}
     $$
+
+分段函数
+
+$$
+F(x) = 
+\begin{cases} 
+0 , \space x \le 0 \\
+Ax^2 , \space0 < x \le 1 \\
+1 , \space x > 1
+\end{cases}
+$$
+
+    $$
+    F(x) = 
+    \begin{cases} 
+    0 , \space x \le 0 \\
+    Ax^2 , \space0 < x \le 1 \\
+    1 , \space x > 1
+    \end{cases}
+    $$

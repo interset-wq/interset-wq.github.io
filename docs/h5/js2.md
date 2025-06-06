@@ -1124,7 +1124,7 @@ console.log(bob.sayHi === mike.sayHi) // false
 
 ### 5.3 原型
 
-#### 5.3.1 简介
+#### 5.3.1 原型对象 `prototype`
 
 通过原型可以解决前面构造函数造成的内存浪费.
 
@@ -1178,3 +1178,355 @@ User.prototype = {
 }
 console.log(User.prototype.constructor) // 指向 User
 ```
+
+#### 5.3.3 对象原型 `__proto__`
+
+构造函数可以创建实例对象，构造函数还有一个原型对象，一些公共的属性或者方法放到这个原型对象身上.
+
+对象都会有一个属性 `__proto__` 指向构造函数的 `prototype` 原型对象，之所以我们对象可以使用构造函数 `prototype` 原型对象的属性和方法，就是因为对象有 `__proto__` 原型的存在
+
+???+ note
+    - `__proto__` 是JS非标准属性
+    - `[[prototype]]`和`__proto__`意义相同
+    - 用来表明当前实例对象指向哪个原型对象 `prototype`
+    - `__proto__` 对象原型里面也有一个 `constructor` 属性，指向创建该实例对象的构造函数
+
+???+ note
+    - `prototype` 是 **原型(原型对象)** ,构造函数都自动有原型
+    - `prototype` 原型 和 对象原型 `__proto__` 里面都有 `constructor` 属性, 这个属性都指向创建实例对象/原型的构造函数
+    - `__proto__` 属性在实例对象里面,指向原型 `prototype`
+
+#### 5.3.4 原型继承
+
+继承是面向对象编程的另一个特征，通过继承进一步提升代码封装的程度，JavaScript 中大多是借助原型对象实现继承的特性。
+
+```js
+function Dog() {
+    this.eyes = 2
+    this.ears = 2
+}
+
+// 继承Dog()
+function PetDog() {}
+PetDog.prototype = new Dog()
+PetDog.prototype.constructor = PetDog
+// 为PetDog()定义新方法
+PetDog.prototype.sit = function(){
+    console.log('Sit down.')
+}
+```
+
+#### 5.3.5 原型链
+
+基于原型对象的继承使得不同构造函数的原型对象关联在一起，并且这种关联的关系是一种链状的结构，我们将原型对象的链状结构关系称为原型链
+
+???+ note "原型链-查找规则"
+    - 当访问一个对象的属性（包括方法）时，首先查找这个对象自身有没有该属性。
+    - 如果没有就查找它的原型（也就是 `__proto__` 指向的 `prototype` 原型对象）
+    - 如果还没有就查找原型对象的原型（`Object`的原型对象）
+    - 依此类推一直找到 `Object` 为止（null）
+    - `__proto__` 对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线
+    - 可以使用 `instanceof` 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上
+
+## 六、技巧
+
+### 6.1 拷贝
+
+```js
+const obj1 = {
+    name: 'wq',
+    age: 10
+}
+const obj2 = obj1
+console.log(obj1, obj2) // {name: 'wq', age: 10} {name: 'wq', age: 10}
+// 修改obj2,实际上也修改了obj1,因为这两个对象指向同一个地址
+obj2.age = 20
+console.log(obj1, obj2) // {name: 'wq', age: 20} {name: 'wq', age: 20}
+```
+
+要解决这种问题需要用到深拷贝和浅拷贝, 浅拷贝和深拷贝只针对引用类型.
+
+#### 6.1.1 浅拷贝
+
+浅拷贝：拷贝的是地址
+
+常见方法：
+
+- 拷贝对象
+    - 方法一 `Object.assgin()` 
+    - 方法二: 使用展开运算符 `{...obj}`
+- 拷贝数组
+    - 方法一 `.concat()` 方法
+    - 方法二 `[...arr]`
+
+```js
+const obj1 = {
+    name: 'wq',
+    age: 10
+}
+
+// 通过展开运算符浅拷贝
+// const obj2 = {...obj1}
+
+// 通过Object.assgin()浅拷贝
+const obj2 = {}
+Object.assign(obj2, obj1)
+
+console.log(obj1, obj2) // {name: 'wq', age: 10} {name: 'wq', age: 10}
+// 修改obj2,不影响obj1
+obj2.age = 20
+console.log(obj1, obj2) // {name: 'wq', age: 10} {name: 'wq', age: 20}
+```
+
+```js
+const arr1 = [1, 2, 3]
+
+// 使用展开运算符浅拷贝
+// const arr2 = [...arr1]
+
+// 使用 .concat() 方法
+const arr2 = arr1.concat()
+
+console.log(arr1, arr2) // [1, 2, 3] [1, 2, 3]
+
+arr2[0] = 9
+console.log(arr1, arr2) // [1, 2, 3] [9, 2, 3]
+```
+
+但是对于嵌套的数组和对象,浅拷贝也无济于事.
+
+???+ note "直接赋值和浅拷贝的区别"
+    - 直接赋值的方法，只要是对象，都会相互影响，因为是直接拷贝对象栈里面的地址
+    - 浅拷贝如果是一层对象，不相互影响，如果出现多层对象拷贝还会相互影响
+
+???+ note
+    拷贝对象之后，里面的属性值是简单数据类型直接拷贝值. 如果属性值是引用数据类型则拷贝的是地址
+
+#### 6.1.2 深拷贝
+
+深拷贝：拷贝的是对象，不是地址
+
+常见的实现深拷贝的方法：
+
+- 通过递归实现深拷贝
+- js库lodash
+- 通过 `JSON.stringify()` 实现 (推荐) 先将对象转换为JSON,再把JSON字符串转换为对象
+
+???+ info "递归"
+    如果一个函数在内部可以调用其本身，那么这个函数就是递归函数. 简单理解:函数内部自己调用自己, 这个函数就是递归函数, 递归函数的作用和循环效果类似, 由于递归很容易发生“栈溢出”错误（stack overflow），所以必须要加退出条件 `return`, 此时的 `return` 类似于 循环中的 `break`
+
+    ```js
+    let i = 1
+    function fn() {
+        console.log(i)
+        if (i >= 3) {
+            return
+        }
+        i ++
+        fn()
+    }
+
+    fn() // 这是一个递归函数
+    ```
+
+???+ tip "通过JSON实现深拷贝"
+    ```js
+    const user1 = {
+        name: 'wq',
+        age: 18,
+        hobby: {
+            langs: ['python', 'javascript'],
+            sport: 'walking'
+        }
+    }
+    const user2 = JSON.parse(JSON.stringify(user1))
+    console.log(user2)
+    ```
+
+### 6.2 异常处理
+
+异常处理是指预估代码执行过程中可能发生的错误，然后最大程度的避免错误的发生导致整个程序无法继续运行.
+
+#### 6.2.1 抛出异常
+
+- throw 抛出异常信息，程序也会终止执行
+- throw 后面跟的是错误提示信息
+- Error 对象配合 throw 使用，能够设置更详细的错误信息
+
+```js
+function getSum(x, y) {
+    if (!x || !y) {
+        throw new Error('参数不能为空')
+    }
+    return x + y
+}
+
+getSum() // 报错
+```
+
+#### 6.2.2 捕获异常
+
+我们可以通过try / catch 捕获错误信息（浏览器提供的错误信息） try 试试 catch 拦住 finally 最后
+
+???+ note
+    - `try` `catch` 用于捕获错误信息
+    - 将预估可能发生错误的代码写在 `try` 代码段中
+    - 如果 `try` 代码段中出现错误后，会执行 `catch` 代码段，并截获到错误信息, 程序不终止
+    - `finally` 不管是否有错误，都会执行
+
+```js
+function fn() {
+    try {
+        // 可能发送错误的代码 要写到 try
+        const p = document.querySelector('.p')
+        p.style.color = 'red'
+    } catch (err) {
+        // 拦截错误，提示浏览器提供的错误信息，但是不中断程序的执行
+        console.log(err.message)
+        throw new Error('你看看，选择器错误了吧')
+        // 加return 可以中断程序
+        // return
+    } finally {
+        // 不管是否有异常，一定会执行的代码
+        alert('弹出对话框')
+    }
+    console.log(11) // 如果有异常,这行代码不执行
+}
+
+fn()
+```
+
+#### 6.2.3 debugger
+
+打开开发者工具就开始自动暂停程序
+
+### 6.3 this
+
+#### 6.3.1 普通函数的this指向
+
+普通函数的调用方式决定了 this 的值，即【谁调用 this 的值指向谁】.普通函数没有明确调用者时 this 值为 window，严格模式下没有调用者时 this 的值为 undefined (在作用域开头写 `'use strict'`开启严格模式,严格模式下全局作用域下的内置函数或全局变量不默认指向window)
+
+#### 6.3.2 箭头函数this指向
+
+箭头函数中的 this 与普通函数完全不同，也不受调用方式的影响，事实上箭头函数中并不存在 this
+
+- 箭头函数会默认帮我们绑定外层 this 的值，所以在箭头函数中 this 的值和外层的 this 是一样的
+- 箭头函数中的this引用的就是最近作用域中的this
+- 向外层作用域中，一层一层查找this，直到有this的定义
+
+???+ warning
+    - 在开发中【使用箭头函数前需要考虑函数中 this 的值】，事件回调函数使用箭头函数时，this 为全局的 window . 因此DOM事件回调函数如果里面需要DOM对象的this，则不推荐使用箭头函数. 事件监听不推荐使用箭头函数
+    - 同样由于箭头函数 this 的原因，基于原型的面向对象也不推荐采用箭头函数. 对象中的函数不推荐使用箭头函数
+
+#### 6.3.3 改变this指向
+
+JavaScript 中还允许指定函数中 this 的指向，有 3 个方法可以动态指定普通函数中 this 的指向
+
+- `.call()`
+
+    ???+ info ".call()方法"
+        使用 call 方法调用函数，同时指定被调用函数中 this 的值
+
+        语法：`fn.call(thisArg, arg1, arg2, ...)`, 参数说明:
+
+        - `thisArg` 在 `fn` 函数运行时指定的 `this` 值,改变this的指向
+        - arg1，arg2 用于传递函数fn的参数
+        - 返回值就是函数的返回值
+
+        ```js
+        const obj = {
+            name: 'wq'
+        }
+        function fn(x, y) {
+            console.log(this)
+            console.log(x + y)
+        }
+        fn(1, 2) // 通过()调用函数,此时this指向window
+        fn.call(obj, 1, 2) // 通过call调用函数,让this指向obj
+        ```
+  
+- `.apply()`
+
+    ???+ info ".apply()方法"
+        使用 apply 方法调用函数，同时指定被调用函数中 this 的值, 配合 `Math.max` 和 `Math.min` 可求数组最大值和最小值.
+
+        语法：`fn.apply(thisArg, [argsArray])` 参数说明:
+
+        - thisArg：在fn函数运行时指定的 this 值
+        - argsArray：传递的值，必须包含在数组里面
+        - 返回值就是函数的返回值
+
+        ```js
+        const obj = {
+            name: 'wq'
+        }
+        function fn(x, y) {
+            console.log(this)
+            console.log(x + y)
+        }
+        fn(1, 2) // 通过()调用函数,此时this指向window
+        // apply和call传参的方式不同
+        fn.apply(obj, [1, 2]) // 通过call调用函数,让this指向obj
+        ```
+
+        ```js
+        const arr = [9, 2, 6]
+        // 通过apply求数组最大值
+        // const max = Math.max.apply(null, arr)
+        // 通过展开运算符求数组最大值
+        const max = Math.max(...arr)
+        console.log(max) // 9
+        ```
+
+- `.bind()`
+
+    ???+ info ".bind()"
+        bind() 方法不会调用函数。但是能改变函数内部this 指向
+
+        语法：`fn.bind(thisArg, arg1, arg2, ...)` 参数说明:
+
+        - thisArg：在 fun 函数运行时指定的 this 值
+        - arg1，arg2：传递的其他参数
+        - 返回新函数, 这个函数是原函数改变了this指向的函数
+
+        ```js
+        const obj = {
+            name: 'wq'
+        }
+        function fn(x, y) {
+            console.log(this)
+            console.log(x + y)
+        }
+        fn(1, 2) // this指向window
+        const fun = fn.bind(obj, 1, 2)
+        fun() // this指向obj
+        ```
+
+???+ note "call apply bind 总结"
+    - 相同点: 都可以改变函数内部的this指向.
+    - 区别点: 
+        - `call` 和 `apply` 会调用函数, 并且改变函数内部this指向.
+        - `call` 和 `apply` 传递的参数不一样
+        - `bind` 不会调用函数, 可以改变函数内部this指向.
+    - 主要应用场景: 
+        - `call` 调用函数并且可以传递参数
+        - `apply` 经常跟数组有关系. 比如借助于数学对象实现数组最大值最小值
+        - `bind` 不调用函数,但是还想改变this指向. 比如改变定时器内部的this指向
+
+### 6.4 性能优化
+
+- 节流（throttle）
+
+    所谓节流，就是指连续触发事件但是在 n 秒中只执行一次函数(只执行第一次触发的函数). 类似于王者荣耀技能释放一次就开始冷却,冷却期间无法再次使用技能
+
+- 防抖（debounce）
+
+    所谓防抖，就是指触发事件后在 n 秒内函数只能执行一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间(只执行最后一次触发的函数). 类似于王者荣耀回城时被打断又要重新计时
+
+???+ note "节流和防抖的区别"
+    - 节流: 就是指连续触发事件但是在 n 秒中只执行一次函数,比如可以利用节流实现 1s之内 只能触发一次鼠标移动事件
+    - 防抖：如果在 n 秒内又触发了事件，则会重新计算函数执行时间
+
+???+ note "节流和防抖的使用场景"
+    - 节流: 鼠标移动，页面尺寸发生变化，滚动条滚动等开销比较大的情况下
+    - 防抖: 搜索框输入，设定每次输入完毕n秒后发送请求，如果期间还有输入，则从新计算时间
