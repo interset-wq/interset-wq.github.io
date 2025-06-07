@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tour.d111kc.top/python/third-party-lib/bs4/">
+        <link rel="canonical" href="https://tour.d111kc.top/python/third-party-lib/jieba/">
       
       
-        <link rel="prev" href="../../standard-lib/turtle/">
+        <link rel="prev" href="../matplotlib/">
       
       
-        <link rel="next" href="../drissionpage/">
+        <link rel="next" href="../pandas/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>bs4 - Tour</title>
+        <title>jieba - Tour</title>
       
     
     
@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#第一步创建soup对象" class="md-skip">
+        <a href="#安装" class="md-skip">
           跳转至
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              bs4
+              jieba
             
           </span>
         </div>
@@ -900,34 +900,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
-  
-  <span class="md-ellipsis">
-    bs4
-    
-      <br>
-      <small>解析网页</small>
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bs4/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
@@ -942,69 +918,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#第一步创建soup对象" class="md-nav__link">
-    <span class="md-ellipsis">
-      第一步：创建soup对象
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#第二步对soup对象进行操作" class="md-nav__link">
-    <span class="md-ellipsis">
-      第二步：对soup对象进行操作
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#find_all方法" class="md-nav__link">
-    <span class="md-ellipsis">
-      find_all()方法
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#find方法" class="md-nav__link">
-    <span class="md-ellipsis">
-      find()方法
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#css选择器进行查找" class="md-nav__link">
-    <span class="md-ellipsis">
-      css选择器进行查找
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1144,10 +1057,34 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../jieba/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+  
+  <span class="md-ellipsis">
+    jieba
+    
+      <br>
+      <small>中文分词结巴</small>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
@@ -1162,6 +1099,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#安装" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#导入" class="md-nav__link">
+    <span class="md-ellipsis">
+      导入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#分词" class="md-nav__link">
+    <span class="md-ellipsis">
+      分词
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1496,45 +1478,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#第一步创建soup对象" class="md-nav__link">
+  <a href="#安装" class="md-nav__link">
     <span class="md-ellipsis">
-      第一步：创建soup对象
+      安装
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#第二步对soup对象进行操作" class="md-nav__link">
+  <a href="#导入" class="md-nav__link">
     <span class="md-ellipsis">
-      第二步：对soup对象进行操作
+      导入
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#find_all方法" class="md-nav__link">
+  <a href="#分词" class="md-nav__link">
     <span class="md-ellipsis">
-      find_all()方法
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#find方法" class="md-nav__link">
-    <span class="md-ellipsis">
-      find()方法
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#css选择器进行查找" class="md-nav__link">
-    <span class="md-ellipsis">
-      css选择器进行查找
+      分词
     </span>
   </a>
   
@@ -1556,153 +1520,70 @@
 
 
 
-  <h1>bs4</h1>
+  <h1>jieba</h1>
 
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-12</code></p>
-<p><a class="md-button md-button--primary" href="https://beautifulsoup.readthedocs.io/zh-cn/v4.4.0/">bs4官方文档</a></p>
-<h2 id="第一步创建soup对象">第一步：创建soup对象<a class="headerlink" href="#第一步创建soup对象" title="permalink">💭</a></h2>
-<p><code>BeautifulSoup()</code> 类</p>
-<ul>
-<li>第一个参数是html格式的文本，常传入 <code>res.text</code></li>
-<li>第二个位置参数是解析器，常使用 <code>"lxml"</code></li>
-<li>关键字参数 <code>multi_valued_attributes</code> （默认按照html语法规范解析，不推荐使用此参数修改配置）<ul>
-<li><code>multi_valued_attributes=None</code> ，将所有html标签的属性当做是单值属性解析</li>
-<li><code>multi_valued_attributes=class_is_multi</code> ，将所有属性当做多值属性解析</li>
-</ul>
-</li>
-</ul>
-<p>常用的解析器：</p>
-<ul>
-<li>html.parser解析器（属于python标准库） <code>BeautifulSoup(res.text, "html.parser")</code><ul>
-<li>Python的内置标准库</li>
-<li>执行速度较快</li>
-<li>容错能力强</li>
-<li>速度没有 lxml 快，容错没有 html5lib强</li>
-</ul>
-</li>
-<li>lxml HTML解析器（第三方库，推荐使用） <code>BeautifulSoup(res.text, "lxml")</code><ul>
-<li>速度快</li>
-<li>容错能力强 </li>
-<li>额外的 C 依赖</li>
-</ul>
-</li>
-<li>lxml XML解析器（第三方库） <code>BeautifulSoup(markup, ["lxml-xml"])</code> 或 <code>BeautifulSoup(markup, "xml")</code><ul>
-<li>速度快</li>
-<li>唯一支持 XML 的解析器 </li>
-<li>额外的 C 依赖</li>
-<li>使用此解析器，所有属性当做是单值属性解析</li>
-</ul>
-</li>
-<li>html5lib解析器（第三方库） <code>BeautifulSoup(markup, "html5lib")</code><ul>
-<li>最好的容错性</li>
-<li>以浏览器的方式解析文档</li>
-<li>生成 HTML5 格式的文档</li>
-<li>速度慢</li>
-<li>额外的 Python 依赖</li>
-</ul>
-</li>
-</ul>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://127.0.0.1:5500/docs/demos/bs4-demo.html&#39;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0&#39;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># res.encoding = &#39;utf-8&#39;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># print(res.text)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># 创建soup对象</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-<h2 id="第二步对soup对象进行操作">第二步：对soup对象进行操作<a class="headerlink" href="#第二步对soup对象进行操作" title="permalink">💭</a></h2>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># print(soup.prettify())</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># 获取html的title标签，即浏览器标签页标题</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># print(soup.title)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 获取title标签的标签名（这个属性有些鸡肋）</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># print(soup.title.name)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># 获取title标签的文字</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># print(soup.title.string)</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># 获取title标签的父标签</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># print(soup.title.parent)</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># 获取title标签的父标签名</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># print(soup.title.parent.name)</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># 获取第一个h2标签</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># print(soup.h2)</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># 获取第一个h2标签的id</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># print(soup.h2[&#39;id&#39;])</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># print(soup.h2.get(&#39;id&#39;))</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1"># 获取第一个h2标签的所有属性</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1"># print(soup.h2.attrs)</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># 获取第一个h2标签的class属性，由于class多值属性，返回列表</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># print(soup.h2[&#39;class&#39;]) # 或使用get()方法</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="c1"># print(soup.h2.get(&#39;class&#39;))</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="c1"># 获取所有的h2标签，返回列表</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="c1"># print(soup.find_all(&#39;h2&#39;))</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="c1"># 获取id值是author的标签，返回列表（注意class不能使用这种用法）</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="c1"># print(soup.find_all(id=&#39;author&#39;))</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="c1"># 获取网页所有的文本内容</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="c1"># print(soup.get_text())</span>
-</span></code></pre></div>
-<p>soup对象的属性和方法：</p>
-<ul>
-<li>
-<p>所有html标签都可以看做是soup对象的属性，<code>soup.标签</code> 相当于对soup对象使用了元素选择器，且只选中 <mark class="critic">第一个</mark> 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）</p>
-<details class="note" open="open">
-<summary>子节点</summary>
-<p>tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-6-7</code></p>
+<p><a class="md-button md-button--primary" href="https://github.com/fxsjy/jieba"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> README.md</a></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>这个模块已无人维护, 不建议过多的学习. 掌握基本用法即可.</p>
 </details>
+<h2 id="安装">安装<a class="headerlink" href="#安装" title="permalink">💭</a></h2>
+<div class="language-text highlight"><pre><span></span><code>pip install jieba
+</code></pre></div>
+<h2 id="导入">导入<a class="headerlink" href="#导入" title="permalink">💭</a></h2>
+<div class="language-text highlight"><pre><span></span><code>import jieba
+</code></pre></div>
+<h2 id="分词">分词<a class="headerlink" href="#分词" title="permalink">💭</a></h2>
 <ul>
-<li><code>name</code> 属性，用于获取标签名（有些鸡肋），可以对其重新赋值，并会对tag对象产生影响（改变html元素的标签），对子节点使用时，如果子节点是字符串，则返回None</li>
-<li><code>string</code> 属性，用于获取标签包裹的文字，返回NavigableString 对象，使用str()函数可以将NavigableString 对象转换成python字符串，如果tag对象中还嵌套了其他html标签（子节点），返回None。NavigableString 对象的属性和方法如下：<ul>
-<li><code>replace_with()</code> 方法 将NavigableString 对象中的字符串替换为传入的字符串</li>
+<li><code>jieba.cut(sentence, cut_all=False, HMM=True, use_paddle=False)</code> 函数 返回generator迭代器, 可以使用 <code>list()</code>函数 转换为分词之后的 <code>list</code> 对象<ul>
+<li><code>sentence</code> 需要分词的字符串</li>
+<li><code>cut_all</code> 参数用来控制是否采用全模式</li>
+<li><code>HMM</code> 参数用来控制是否使用 HMM 模型</li>
+<li><code>use_paddle</code> 参数用来控制是否使用paddle模式下的分词模式</li>
 </ul>
 </li>
-<li><code>attrs</code> 属性，返回所有属性的字典，属性名作为键，属性值作为值，多值属性（如class）的值用字典表示</li>
-<li><code>contents</code> 属性，返回tag对象所有节点的列表</li>
-<li><code>tag['key']</code> 字典操作，可以把tag对象的名称当做是字典的变量名，这个字典实际上就是 <code>tag.attrs</code>，tag对象 的属性可以被添加、删除或修改。tag的属性操作方法与字典一样</li>
-<li><code>get_attribute_list()</code>方法 传入属性名，返回属性值列表，单值属性（id等单值属性，即使因为书写不规范导致属性值之间有空格，仍然返回单元素列表）返回单元素列表</li>
-<li><code>find_all()</code> 方法 传入html标签，返回所有匹配的列表，tag对象也可以使用</li>
-<li><code>prettify()</code> 方法 类似于 <code>pprint.pprint()</code> 格式化soup对象，增加可读性</li>
+<li><code>jieba.cut_for_search(sentence, HMM=True)</code> 函数 返回generator迭代器, 可以使用 <code>list()</code>函数 转换为分词之后的 <code>list</code> 对象. 搜索引擎模式, 该方法适合用于搜索引擎构建倒排索引的分词. 效果类似于 <code>jieba.cut()</code>全模式<ul>
+<li><code>sentence</code> 需要分词的字符串. unicode 或 UTF-8 字符串、GBK 字符串。注意：不建议直接输入 GBK 字符串，可能无法预料地错误解码成 UTF-8</li>
+<li><code>HMM</code> 是否使用 HMM 模型        </li>
 </ul>
 </li>
 </ul>
-<h2 id="find_all方法">find_all()方法<a class="headerlink" href="#find_all方法" title="permalink">💭</a></h2>
-<p>标准写法：</p>
-<p><code>find_all(name , attrs , recursive , string , **kwargs)</code></p>
-<p>简写：可以将soup或tag对象的对象名直接当成是函数使用，它们的用法和find_all()方法完全相同</p>
-<p><code>tag(name , attrs , recursive , string , **kwargs)</code></p>
-<p><code>soup(name , attrs , recursive , string , **kwargs)</code></p>
-<p>各参数说明：</p>
-<ul>
-<li>name参数（常使用位置参数传入），返回tag对象列表，参数值如下<ul>
-<li>标签名，传入html标签名</li>
-<li>列表，传入html标签名列表，匹配列表中的所有标签的tag对象</li>
-<li>正则表达式，需要先导入re，传入 <code>re.compile("正则表达式")</code>，匹配所有符合要求的tag对象</li>
-<li>函数名，自定义函数</li>
-<li>字符串</li>
-<li>True，可以匹配任何值，查找到所有的 tag，但是不会返回字符串节点</li>
-</ul>
-</li>
-<li>关键字参数**kwargs，常用关键字参数如下：<ul>
-<li><code>id="id值"</code> 通过id查找tag对象</li>
-<li><code>id=True</code> 查找所有带有id属性的参数的tag对象</li>
-<li><code>href=re.compile("正则表达式")</code> 查找所有带有href属性并符合匹配的tag对象</li>
-<li><code>class_="类名"</code> 通过类名查找tag对象</li>
-<li><code>limit=数字</code> 限制查找的tag对象的个数</li>
-</ul>
-</li>
-<li>attrs参数（常作为关键字参数使用），<code>attrs={"属性名": "属性值"}</code>，以字典的方式传入属性名和属性值，查找对应的tag对象</li>
-<li><code>recursive=False</code> 设置此参数只查找子节点，默认查找所有后代节点</li>
-<li>string参数（常作为关键字参数传入），用法和name参数类似，只是针对的是html中的文本来进行查找，而不是针对标签</li>
-</ul>
-<h2 id="find方法">find()方法<a class="headerlink" href="#find方法" title="permalink">💭</a></h2>
-<p>用法和find_all()相同，只查找第一个tag对象，返回tag对象</p>
-<h2 id="css选择器进行查找">css选择器进行查找<a class="headerlink" href="#css选择器进行查找" title="permalink">💭</a></h2>
-<p><code>css.select("css选择器")</code> 方法 使用css选择器查找，返回tag对象列表</p>
-<p><code>select()</code> 和 <code>select_one()</code>方法，两个方法作用相同，与<code>css.select()</code>用法相同，值查找第一个匹配到的tag对象，返回tag对象</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p><code>jieba.cut()</code> 以及 <code>jieba.cut_for_search()</code> 返回的结构都是一个可迭代的 <code>generator</code> ，可以使用 for 循环来获得分词后得到的每一个词语(unicode)，或者用 <code>jieba.lcut()</code> 以及 <code>jieba.lcut_for_search()</code> 直接返回 <code>list</code>对象</p>
+</details>
+<details class="quote" open="open">
+<summary>Quote</summary>
+<p>如果需要返回字典,请直接使用<code>jieba.lcut()</code> 以及 <code>jieba.lcut_for_search()</code></p>
+</details>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">jieba</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;今天下午我要去打乒乓球&#39;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="sd">&quot;&quot;&quot;精确模式cut_all=False&quot;&quot;&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># seg_gener = jieba.cut(string) # 返回generator</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># seg_list = list(seg_gener) # 将generator转换为list对象</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">seg_list</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1"># lcut()直接返回list对象,不返回generator</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">seg_list</span><span class="p">)</span> <span class="c1"># [&#39;今天下午&#39;, &#39;我要&#39;, &#39;去&#39;, &#39;打乒乓球&#39;]</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">seg_string</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">seg_list</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cut_all=False精确模式&#39;</span><span class="p">,</span> <span class="n">seg_string</span><span class="p">)</span> <span class="c1"># cut_all=False精确模式 今天下午/我要/去/打乒乓球</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="sd">&quot;&quot;&quot;全模式cut_all=True&quot;&quot;&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># full_seg_gener = jieba.cut(string, cut_all=True)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># full_seg_list = list(full_seg_gener)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">full_seg_list</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">cut_all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">full_seg_list</span><span class="p">)</span> <span class="c1"># [&#39;今天&#39;, &#39;今天下午&#39;, &#39;天下&#39;, &#39;下午&#39;, &#39;我&#39;, &#39;要&#39;, &#39;去&#39;, &#39;打乒乓球&#39;, &#39;乒乓&#39;, &#39;乒乓球&#39;]</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">full_seg_string</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">full_seg_list</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cut_all=True全模式&#39;</span><span class="p">,</span> <span class="n">full_seg_string</span><span class="p">)</span> <span class="c1"># cut_all=True全模式 今天/今天下午/天下/下午/我/要/去/打乒乓球/乒乓/乒乓球</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="sd">&quot;&quot;&quot;cut_for_search搜索引擎模式&quot;&quot;&quot;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">search_seg_gener</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">cut_for_search</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">search_seg_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">search_seg_gener</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">search_seg_list</span><span class="p">)</span> <span class="c1"># [&#39;今天&#39;, &#39;天下&#39;, &#39;下午&#39;, &#39;今天下午&#39;, &#39;我要&#39;, &#39;去&#39;, &#39;乒乓&#39;, &#39;乒乓球&#39;, &#39;打乒乓球&#39;]</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">search_seg_string</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">search_seg_list</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cut_for_search搜索引擎模式&#39;</span><span class="p">,</span> <span class="n">search_seg_string</span><span class="p">)</span> <span class="c1"># cut_for_search搜索引擎模式 今天/天下/下午/今天下午/我要/去/乒乓/乒乓球/打乒乓球</span>
+</span></code></pre></div>
 
 
 
@@ -1876,7 +1757,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../standard-lib/turtle/" class="md-footer__link md-footer__link--prev" aria-label="上一页: turtle">
+          <a href="../matplotlib/" class="md-footer__link md-footer__link--prev" aria-label="上一页: matplotlib">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1886,20 +1767,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                turtle
+                matplotlib
               </div>
             </div>
           </a>
         
         
           
-          <a href="../drissionpage/" class="md-footer__link md-footer__link--next" aria-label="下一页: DrissionPage">
+          <a href="../pandas/" class="md-footer__link md-footer__link--next" aria-label="下一页: pandas">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                DrissionPage
+                pandas
               </div>
             </div>
             <div class="md-footer__button md-icon">
