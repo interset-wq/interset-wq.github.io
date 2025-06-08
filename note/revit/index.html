@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tour.d111kc.top/note/revit/">
       
       
-        <link rel="prev" href="../probability/">
+        <link rel="prev" href="../statistics/">
       
       
         <link rel="next" href="../cad/">
@@ -802,6 +802,8 @@
       
         
       
+        
+      
     
     
       
@@ -852,7 +854,29 @@
         
   
   <span class="md-ellipsis">
-    概率统计
+    概率统计-概率论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概率统计-数理统计
     
   </span>
   
@@ -1515,14 +1539,14 @@
 <!-- ???+ quote 
     本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF -->
 
-<h2 id="简介">简介<a class="headerlink" href="#简介" title="permalink">💭</a></h2>
+<h2 id="简介">简介<a class="headerlink" href="#简介" title="permalink">¶</a></h2>
 <p>族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等</p>
 <p>项目样板: 相当于模板文件</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.</p>
 </details>
-<h3 id="无cad图纸根据pdf直接使用revit绘制图形的步骤">无CAD图纸,根据PDF直接使用revit绘制图形的步骤<a class="headerlink" href="#无cad图纸根据pdf直接使用revit绘制图形的步骤" title="permalink">💭</a></h3>
+<h3 id="无cad图纸根据pdf直接使用revit绘制图形的步骤">无CAD图纸,根据PDF直接使用revit绘制图形的步骤<a class="headerlink" href="#无cad图纸根据pdf直接使用revit绘制图形的步骤" title="permalink">¶</a></h3>
 <ol>
 <li>
 <p>在revit立面视图绘制标高</p>
@@ -1557,7 +1581,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="第一步-使用autocad从结构图和建筑图中拆分平面图作为底图">第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图<a class="headerlink" href="#第一步-使用autocad从结构图和建筑图中拆分平面图作为底图" title="permalink">💭</a></h2>
+<h2 id="第一步-使用autocad从结构图和建筑图中拆分平面图作为底图">第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图<a class="headerlink" href="#第一步-使用autocad从结构图和建筑图中拆分平面图作为底图" title="permalink">¶</a></h2>
 <p>使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 <code>.dwg</code>. 采用图形上面的图名作为文件名, 以便后续使用.</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
@@ -1589,14 +1613,14 @@
 <p>step2 打开菜单栏的 <code>工具</code> 选项卡</p>
 <p><img alt="step2.png" src="https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png" /></p>
 </details>
-<h2 id="第二步-使用revit创建一个结构模型">第二步: 使用Revit创建一个结构模型<a class="headerlink" href="#第二步-使用revit创建一个结构模型" title="permalink">💭</a></h2>
+<h2 id="第二步-使用revit创建一个结构模型">第二步: 使用Revit创建一个结构模型<a class="headerlink" href="#第二步-使用revit创建一个结构模型" title="permalink">¶</a></h2>
 <p>新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)</p>
 <p><img alt="newproj.png" src="https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png" /></p>
 <details class="tip" open="open">
 <summary>如何打开项目选择器和属性</summary>
 <p><img alt="如何打开项目选择器和属性.png" src="https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png" /></p>
 </details>
-<h3 id="21-绘制标高">2.1 绘制标高<a class="headerlink" href="#21-绘制标高" title="permalink">💭</a></h3>
+<h3 id="21-绘制标高">2.1 绘制标高<a class="headerlink" href="#21-绘制标高" title="permalink">¶</a></h3>
 <ol>
 <li>
 <p>随便选取一个立面,绘制标高,此处以"东"为例:</p>
@@ -1617,7 +1641,7 @@
 </li>
 </ol>
 <p>至此, 标高绘制完成.</p>
-<h3 id="22-绘制轴网">2.2 绘制轴网<a class="headerlink" href="#22-绘制轴网" title="permalink">💭</a></h3>
+<h3 id="22-绘制轴网">2.2 绘制轴网<a class="headerlink" href="#22-绘制轴网" title="permalink">¶</a></h3>
 <ol>
 <li>
 <p>将Revit视图切换到任意结构平面视图,将CAD图形导入Revit,注意:结构平面视图应与CAD图形一一对应,依次导入.</p>
@@ -1637,7 +1661,7 @@
 </li>
 </ol>
 <p>至此, 轴网绘制完成.</p>
-<h3 id="23-在基础平面图中绘制垫层">2.3 在基础平面图中绘制垫层<a class="headerlink" href="#23-在基础平面图中绘制垫层" title="permalink">💭</a></h3>
+<h3 id="23-在基础平面图中绘制垫层">2.3 在基础平面图中绘制垫层<a class="headerlink" href="#23-在基础平面图中绘制垫层" title="permalink">¶</a></h3>
 <ol>
 <li>
 <p>通过结构图读出垫层的厚度和尺寸.</p>
@@ -1658,7 +1682,7 @@
 </ol>
 <p>至此, 垫层绘制完成.</p>
 <p>关闭此文件 <code>结构模型</code> <code>.rvt</code></p>
-<h3 id="24-新建条形基础族和放置条形基础">2.4 新建条形基础族和放置条形基础<a class="headerlink" href="#24-新建条形基础族和放置条形基础" title="permalink">💭</a></h3>
+<h3 id="24-新建条形基础族和放置条形基础">2.4 新建条形基础族和放置条形基础<a class="headerlink" href="#24-新建条形基础族和放置条形基础" title="permalink">¶</a></h3>
 <ol>
 <li>
 <p>新建一个族</p>
@@ -1727,7 +1751,7 @@
 </li>
 </ol>
 <p>至此,放置基础完成.</p>
-<h3 id="25-放置基础到一层的结构柱">2.5 放置基础到一层的结构柱<a class="headerlink" href="#25-放置基础到一层的结构柱" title="permalink">💭</a></h3>
+<h3 id="25-放置基础到一层的结构柱">2.5 放置基础到一层的结构柱<a class="headerlink" href="#25-放置基础到一层的结构柱" title="permalink">¶</a></h3>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.</p>
@@ -1759,7 +1783,7 @@
 <p>改变三维模型的观察角度: 按住 <span class="keys"><kbd class="key-shift">Shift</kbd></span> 键,同时使用鼠标中键拖动</p>
 </details>
 <p>至此,基础层的柱放置完成.</p>
-<h3 id="26-绘制基础和一层之间的的梁板">2.6 绘制基础和一层之间的的梁/板<a class="headerlink" href="#26-绘制基础和一层之间的的梁板" title="permalink">💭</a></h3>
+<h3 id="26-绘制基础和一层之间的的梁板">2.6 绘制基础和一层之间的的梁/板<a class="headerlink" href="#26-绘制基础和一层之间的的梁板" title="permalink">¶</a></h3>
 <ol>
 <li>
 <p>将视图切换到 <code>一层</code> 调整 <code>视图范围</code>, 防止基础层线条对一层的干扰</p>
@@ -1803,8 +1827,8 @@
 </ol>
 <p>至此,梁和板放置完毕.</p>
 <p>基础层绘制完毕.</p>
-<h3 id="27-放置一层到二层的柱操作同-25">2.7 放置一层到二层的柱(操作同 2.5)<a class="headerlink" href="#27-放置一层到二层的柱操作同-25" title="permalink">💭</a></h3>
-<h3 id="28-放置楼梯的柱和梁">2.8 放置楼梯的柱和梁<a class="headerlink" href="#28-放置楼梯的柱和梁" title="permalink">💭</a></h3>
+<h3 id="27-放置一层到二层的柱操作同-25">2.7 放置一层到二层的柱(操作同 2.5)<a class="headerlink" href="#27-放置一层到二层的柱操作同-25" title="permalink">¶</a></h3>
+<h3 id="28-放置楼梯的柱和梁">2.8 放置楼梯的柱和梁<a class="headerlink" href="#28-放置楼梯的柱和梁" title="permalink">¶</a></h3>
 <ol>
 <li>
 <p>分析结构图,计算柱高和梁的偏移高度</p>
@@ -1828,10 +1852,10 @@
 </li>
 </ol>
 <p>至此,楼梯的柱和梁放置完毕.</p>
-<h3 id="29-放置二层的梁和板">2.9 放置二层的梁和板<a class="headerlink" href="#29-放置二层的梁和板" title="permalink">💭</a></h3>
+<h3 id="29-放置二层的梁和板">2.9 放置二层的梁和板<a class="headerlink" href="#29-放置二层的梁和板" title="permalink">¶</a></h3>
 <p>由于二层的梁比较多,因此可以使用 <code>hh</code> 隐藏二层平面布置图,导入二层梁平面配筋图.以此图为基准绘制梁和板</p>
-<h3 id="210-放置二层到屋顶的柱">2.10 放置二层到屋顶的柱<a class="headerlink" href="#210-放置二层到屋顶的柱" title="permalink">💭</a></h3>
-<h3 id="211-放置屋顶的梁">2.11 放置屋顶的梁<a class="headerlink" href="#211-放置屋顶的梁" title="permalink">💭</a></h3>
+<h3 id="210-放置二层到屋顶的柱">2.10 放置二层到屋顶的柱<a class="headerlink" href="#210-放置二层到屋顶的柱" title="permalink">¶</a></h3>
+<h3 id="211-放置屋顶的梁">2.11 放置屋顶的梁<a class="headerlink" href="#211-放置屋顶的梁" title="permalink">¶</a></h3>
 <p>通过观察发现,屋顶的梁的布置和一层梁的布置大致相同,因此可以直接复制一层的梁,粘贴</p>
 <ol>
 <li>
@@ -1855,15 +1879,15 @@
 </li>
 </ol>
 <p>至此,屋顶的梁放置完毕.</p>
-<h3 id="212-绘制屋顶的板">2.12 绘制屋顶的板<a class="headerlink" href="#212-绘制屋顶的板" title="permalink">💭</a></h3>
+<h3 id="212-绘制屋顶的板">2.12 绘制屋顶的板<a class="headerlink" href="#212-绘制屋顶的板" title="permalink">¶</a></h3>
 <p>结构模型绘制完成.</p>
-<h2 id="第三步-使用revit创建一个建筑模型">第三步: 使用Revit创建一个建筑模型<a class="headerlink" href="#第三步-使用revit创建一个建筑模型" title="permalink">💭</a></h2>
+<h2 id="第三步-使用revit创建一个建筑模型">第三步: 使用Revit创建一个建筑模型<a class="headerlink" href="#第三步-使用revit创建一个建筑模型" title="permalink">¶</a></h2>
 <p>新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)</p>
-<h3 id="21-绘制标高-导入cad图形-绘制轴网">2.1 绘制标高 导入CAD图形 绘制轴网<a class="headerlink" href="#21-绘制标高-导入cad图形-绘制轴网" title="permalink">💭</a></h3>
-<h3 id="32-绘制一层建筑外墙">3.2 绘制一层建筑外墙<a class="headerlink" href="#32-绘制一层建筑外墙" title="permalink">💭</a></h3>
+<h3 id="21-绘制标高-导入cad图形-绘制轴网">2.1 绘制标高 导入CAD图形 绘制轴网<a class="headerlink" href="#21-绘制标高-导入cad图形-绘制轴网" title="permalink">¶</a></h3>
+<h3 id="32-绘制一层建筑外墙">3.2 绘制一层建筑外墙<a class="headerlink" href="#32-绘制一层建筑外墙" title="permalink">¶</a></h3>
 <p>如果墙不是承重构件(剪力墙),则使用 <code>墙:建筑</code>,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)</p>
 <p><img alt="3-1.png" src="https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png" /></p>
-<h3 id="33-绘制一层内墙">3.3 绘制一层内墙<a class="headerlink" href="#33-绘制一层内墙" title="permalink">💭</a></h3>
+<h3 id="33-绘制一层内墙">3.3 绘制一层内墙<a class="headerlink" href="#33-绘制一层内墙" title="permalink">¶</a></h3>
 <p>墙面有装饰需要参考 <strong>建筑材料表</strong> 或 <strong>工程做法表</strong></p>
 <p>墙由 <strong>主体结构</strong> 和 <strong>装饰层</strong> 组成, 装饰层又由 <strong>踢脚线墙裙线</strong> 和 <strong>墙面</strong> 组层.</p>
 <details class="warning" open="open">
@@ -1901,7 +1925,7 @@
 <p>绘制时,根据实际情况选择绘制墙时的定位线</p>
 <p><img alt="3-9.png" src="https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png" /></p>
 <p>绘制楼梯间和卫生间的墙的操作同上.</p>
-<h3 id="34-放置门">3.4 放置门<a class="headerlink" href="#34-放置门" title="permalink">💭</a></h3>
+<h3 id="34-放置门">3.4 放置门<a class="headerlink" href="#34-放置门" title="permalink">¶</a></h3>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.</p>
@@ -1909,14 +1933,14 @@
 <p>先将CAD底图切换为 <code>前景</code>,根据建筑图CAD图纸确定门的尺寸.注意将 <code>类型标记</code> 修改为图纸上的标记.</p>
 <p><img alt="3-10.png" src="https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png" /></p>
 <p><img alt="3-11.png" src="https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png" /></p>
-<h3 id="35-放置窗">3.5 放置窗<a class="headerlink" href="#35-放置窗" title="permalink">💭</a></h3>
+<h3 id="35-放置窗">3.5 放置窗<a class="headerlink" href="#35-放置窗" title="permalink">¶</a></h3>
 <p>和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 <code>默认窗台高度</code></p>
 <p><img alt="3-14.png" src="https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png" /></p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>放置窗时如果看不到窗,可能是因为 <code>视图范围</code>, 此时需要调整一下视图范围,使窗可见.</p>
 </details>
-<h3 id="36-绘制外墙装饰层内侧">3.6 绘制外墙装饰层(内侧)<a class="headerlink" href="#36-绘制外墙装饰层内侧" title="permalink">💭</a></h3>
+<h3 id="36-绘制外墙装饰层内侧">3.6 绘制外墙装饰层(内侧)<a class="headerlink" href="#36-绘制外墙装饰层内侧" title="permalink">¶</a></h3>
 <p>思路:把装饰层看做是一面墙,并紧贴外墙</p>
 <p><img alt="3-15.png" src="https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png" /></p>
 
@@ -2092,7 +2116,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../probability/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 概率统计">
+          <a href="../statistics/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 概率统计-数理统计">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2102,7 +2126,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                概率统计
+                概率统计-数理统计
               </div>
             </div>
           </a>

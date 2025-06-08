@@ -1456,6 +1456,8 @@
       
         
       
+        
+      
     
     
       
@@ -1598,10 +1600,10 @@
 
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-30</code></p>
 <p><a class="md-button md-button--primary" href="https://github.com/jsvine/pdfplumber"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> README.md</a></p>
-<h2 id="一导入">一、导入<a class="headerlink" href="#一导入" title="permalink">💭</a></h2>
+<h2 id="一导入">一、导入<a class="headerlink" href="#一导入" title="permalink">¶</a></h2>
 <div class="language-text highlight"><pre><span></span><code>import pdfplumber
 </code></pre></div>
-<h2 id="二打开pdf文件并创建一个pdf对象">二、打开pdf文件，并创建一个pdf对象<a class="headerlink" href="#二打开pdf文件并创建一个pdf对象" title="permalink">💭</a></h2>
+<h2 id="二打开pdf文件并创建一个pdf对象">二、打开pdf文件，并创建一个pdf对象<a class="headerlink" href="#二打开pdf文件并创建一个pdf对象" title="permalink">¶</a></h2>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">with</span> <span class="n">pdfplumber</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">pdf</span><span class="p">:</span>
 </span></code></pre></div>
 <p>因为是对pdf文件的内容进行操作，所以通过<code>with open</code>语句可以避免忘记关闭文件</p>
@@ -1615,7 +1617,7 @@
 <li><code>metadata</code> 属性 用于获取 PDF 文件的元数据信息，返回一个字典</li>
 <li><code>pages</code> 属性 用于获取 PDF 文件的所有页面，返回一个Page对象列表</li>
 </ul>
-<h2 id="三创建page对象核心类">三、创建Page对象（核心类）<a class="headerlink" href="#三创建page对象核心类" title="permalink">💭</a></h2>
+<h2 id="三创建page对象核心类">三、创建Page对象（核心类）<a class="headerlink" href="#三创建page对象核心类" title="permalink">¶</a></h2>
 <p>PDF文档的每一页都是一个Page对象</p>
 <p>Page对象的属性和方法：</p>
 <ul>
@@ -1687,8 +1689,8 @@
 <li><code>name</code> 图像名称</li>
 </ul>
 </details>
-<h2 id="四操作page对象">四、操作Page对象<a class="headerlink" href="#四操作page对象" title="permalink">💭</a></h2>
-<h3 id="41-将页面page对象转换为图片pageimage对象">4.1 将页面Page对象转换为图片PageImage对象<a class="headerlink" href="#41-将页面page对象转换为图片pageimage对象" title="permalink">💭</a></h3>
+<h2 id="四操作page对象">四、操作Page对象<a class="headerlink" href="#四操作page对象" title="permalink">¶</a></h2>
+<h3 id="41-将页面page对象转换为图片pageimage对象">4.1 将页面Page对象转换为图片PageImage对象<a class="headerlink" href="#41-将页面page对象转换为图片pageimage对象" title="permalink">¶</a></h3>
 <p><code>page.to_image()</code> 方法可以将页面转换为Image对象，返回一个PageImage对象。可以对裁剪后的Page对象使用。可选参数如下：</p>
 <ul>
 <li><code>resolution</code> 传入整数，图片每英寸的像素，默认值:72，像素越大图片越清晰，但是体积越大</li>
@@ -1705,7 +1707,7 @@
 <li><code>save(path_or_fileobject, format="PNG")</code>  保存已标记的图片</li>
 <li><code>save(path_or_fileobject, format="PNG", quantize=True, colors=256, bits=8)</code>   将带有注释的图像保存为 PNG 文件。默认参数会将图像量化为一个包含 256 种颜色的调色板，并以 8 位色深保存 PNG 文件。如果想禁用量化，可以传递quantize=False参数；如果想调整颜色调色板的大小，可以传递colors=N参数，其中 N 表示颜色的数量</li>
 </ul>
-<h3 id="42-从page对象中提取文本">4.2 从Page对象中提取文本<a class="headerlink" href="#42-从page对象中提取文本" title="permalink">💭</a></h3>
+<h3 id="42-从page对象中提取文本">4.2 从Page对象中提取文本<a class="headerlink" href="#42-从page对象中提取文本" title="permalink">¶</a></h3>
 <ul>
 <li><code>extract_text(x_tolerance=3, x_tolerance_ratio=None, y_tolerance=3, layout=False, x_density=7.25, y_density=13, line_dir_render=None, char_dir_render=None, **kwargs)</code>方法 将页面的所有字符对象拼贴成单个字符串。<ul>
 <li>当 layout=False: 如果一个字符的x1与下一个字符的x0之间的差大于x_tolerance，则添加空格。(如果 x_tolerance_ratio 不是 None，提取器将使用等于 x_tolerance_ratio * previous_character["size"] 的动态 x_tolerance)。如果一个字符的doctop与下一个字符的doctop之间的差大于y_tolerance，则添加换行符。</li>

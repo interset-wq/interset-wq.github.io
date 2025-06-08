@@ -1281,6 +1281,8 @@
       
         
       
+        
+      
     
     
       
@@ -1638,7 +1640,7 @@
   <h1>盒子模型和经典布局</h1>
 
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-2</code></p>
-<h2 id="一盒子模型">一、盒子模型<a class="headerlink" href="#一盒子模型" title="permalink">💭</a></h2>
+<h2 id="一盒子模型">一、盒子模型<a class="headerlink" href="#一盒子模型" title="permalink">¶</a></h2>
 <details class="note" open="open">
 <summary>css长度单位</summary>
 <p>CSS 中设置长度，必须加单位，否则样式无效！</p>
@@ -1649,7 +1651,7 @@
 <li><code>%</code> ：百分比，相对父元素计算。</li>
 </ul>
 </details>
-<h3 id="11-css元素的显示模式">1.1 CSS元素的显示模式<a class="headerlink" href="#11-css元素的显示模式" title="permalink">💭</a></h3>
+<h3 id="11-css元素的显示模式">1.1 CSS元素的显示模式<a class="headerlink" href="#11-css元素的显示模式" title="permalink">¶</a></h3>
 <p>分为三种：<em>行内元素</em>、<em>块元素</em>、<em>行内块元素</em></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="块元素block" name="__tabbed_1" type="radio" /><input id="行内元素inline" name="__tabbed_1" type="radio" /><input id="行内元素inline-block" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="块元素block">块元素block</label><label for="行内元素inline">行内元素inline</label><label for="行内元素inline-block">行内元素inline-block</label></div>
 <div class="tabbed-content">
@@ -1720,7 +1722,7 @@
 <li><code>inline-block</code> 元素将作为行内块元素显示。</li>
 </ul>
 </div>
-<h3 id="12-盒子模型的基本组成">1.2 盒子模型的基本组成<a class="headerlink" href="#12-盒子模型的基本组成" title="permalink">💭</a></h3>
+<h3 id="12-盒子模型的基本组成">1.2 盒子模型的基本组成<a class="headerlink" href="#12-盒子模型的基本组成" title="permalink">¶</a></h3>
 <p>CSS 会把所有的 HTML 元素都看成一个盒子，所有的样式也都是基于这个盒子。这个盒子从外到里依次是：</p>
 <ol>
 <li>margin（外边距）： 盒子与外界的距离。外边距 margin 不会影响盒子的大小，但会影响盒子的位置。</li>
@@ -1731,7 +1733,7 @@
 <p>图示如下：</p>
 <p><img alt="盒子模型（图一）" src="https://s2.loli.net/2025/04/02/Lk3AW1dT4zw9DsK.png" /></p>
 <p><img alt="盒子模型（图二）" src="https://s2.loli.net/2025/04/02/5xPipn7IRQ2KM94.png" /></p>
-<h3 id="13-盒子内容区content">1.3 盒子内容区content<a class="headerlink" href="#13-盒子内容区content" title="permalink">💭</a></h3>
+<h3 id="13-盒子内容区content">1.3 盒子内容区content<a class="headerlink" href="#13-盒子内容区content" title="permalink">¶</a></h3>
 <p>内容区常用属性，这些属性的属性值全是css长度：</p>
 <ul>
 <li><code>width</code> 设置内容区域宽度</li>
@@ -1747,7 +1749,7 @@
 <p>总宽度 = 父的 content — 自身的左右 margin </p>
 <p>内容区的宽度 = 父的 content — 自身的左右 margin — 自身的左右 border — 自身的左右padding</p>
 </details>
-<h3 id="14-盒子内边距padding">1.4 盒子内边距padding<a class="headerlink" href="#14-盒子内边距padding" title="permalink">💭</a></h3>
+<h3 id="14-盒子内边距padding">1.4 盒子内边距padding<a class="headerlink" href="#14-盒子内边距padding" title="permalink">¶</a></h3>
 <p>内边距常用属性，属性值全是css长度单位：</p>
 <ul>
 <li><code>padding-top</code> 上内边距 长度</li>
@@ -1772,7 +1774,7 @@
 <li>块级元素、行内块元素，四个方向内边距都可以完美设置。</li>
 </ol>
 </details>
-<h3 id="15-盒子边框border">1.5 盒子边框border<a class="headerlink" href="#15-盒子边框border" title="permalink">💭</a></h3>
+<h3 id="15-盒子边框border">1.5 盒子边框border<a class="headerlink" href="#15-盒子边框border" title="permalink">¶</a></h3>
 <p>边框属性共有20个，其中有4个复合属性。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="复合属性" name="__tabbed_2" type="radio" /><input id="左边框属性" name="__tabbed_2" type="radio" /><input id="右边框属性" name="__tabbed_2" type="radio" /><input id="上边框属性" name="__tabbed_2" type="radio" /><input id="下边框属性" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="复合属性">复合属性</label><label for="左边框属性">左边框属性</label><label for="右边框属性">右边框属性</label><label for="上边框属性">上边框属性</label><label for="下边框属性">下边框属性</label></div>
 <div class="tabbed-content">
@@ -1818,7 +1820,7 @@
 </div>
 </div>
 </div>
-<h3 id="16-盒子外边距margin">1.6 盒子外边距margin<a class="headerlink" href="#16-盒子外边距margin" title="permalink">💭</a></h3>
+<h3 id="16-盒子外边距margin">1.6 盒子外边距margin<a class="headerlink" href="#16-盒子外边距margin" title="permalink">¶</a></h3>
 <p>外边距相关属性：</p>
 <ul>
 <li><code>margin</code> 复合属性，可以写1-4个值，类似于padding</li>
@@ -1852,7 +1854,7 @@
 <p>margin 合并：上面兄弟元素的下外边距和下面兄弟元素的上外边距会合并，取一个最大的值，而不是相加。</p>
 <p>margin 合并无需解决，布局的时候上下的兄弟元素，只给一个设置上下外边距就可以了。</p>
 </details>
-<h3 id="17-处理内容溢出">1.7 处理内容溢出<a class="headerlink" href="#17-处理内容溢出" title="permalink">💭</a></h3>
+<h3 id="17-处理内容溢出">1.7 处理内容溢出<a class="headerlink" href="#17-处理内容溢出" title="permalink">¶</a></h3>
 <p>如果盒子的高度小于盒子中内容的高度，那么内容就会从盒子中溢出。内容溢出会影响排版，需要处理。</p>
 <p>溢出相关属性：</p>
 <ul>
@@ -1866,7 +1868,7 @@
 <li>overflow-x 实验性属性，不推荐使用。水平方向溢出内容的处理方式 同 overflow</li>
 <li>overflow-y 实验性属性，不推荐使用。垂直方向溢出内容给的处理方式 同 overflow</li>
 </ul>
-<h3 id="18-隐藏元素的两种方式">1.8 隐藏元素的两种方式<a class="headerlink" href="#18-隐藏元素的两种方式" title="permalink">💭</a></h3>
+<h3 id="18-隐藏元素的两种方式">1.8 隐藏元素的两种方式<a class="headerlink" href="#18-隐藏元素的两种方式" title="permalink">¶</a></h3>
 <ul>
 <li>方式一：visibility 属性<ul>
 <li>visibility 属性默认值是 show ，如果设置为 hidden ，元素会隐藏。</li>
@@ -1879,7 +1881,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="19-样式的继承和默认样式">1.9 样式的继承和默认样式<a class="headerlink" href="#19-样式的继承和默认样式" title="permalink">💭</a></h3>
+<h3 id="19-样式的继承和默认样式">1.9 样式的继承和默认样式<a class="headerlink" href="#19-样式的继承和默认样式" title="permalink">¶</a></h3>
 <p><strong>样式的继承</strong></p>
 <p>有些样式会继承，元素如果本身设置了某个样式，就使用本身设置的样式；但如果本身没有设置某个样式，会从父元素开始一级一级继承（优先继承离得近的祖先元素）。</p>
 <p>会继承的 css 属性：字体属性、文本属性（除了vertical-align）、文字颜色 等。</p>
@@ -1888,7 +1890,7 @@
 <p><strong>默认样式</strong></p>
 <p>元素一般都些默认的样式。</p>
 <p>优先级：<mark class="critic">元素的默认样式 &gt; 继承的样式</mark>，所以如果要重置元素的默认样式，选择器一定要直接选择器到该元素。</p>
-<h3 id="110-布局技巧">1.10 布局技巧<a class="headerlink" href="#110-布局技巧" title="permalink">💭</a></h3>
+<h3 id="110-布局技巧">1.10 布局技巧<a class="headerlink" href="#110-布局技巧" title="permalink">¶</a></h3>
 <ol>
 <li>行内元素、行内块元素，可以被父元素当做文本处理。即：可以像处理文本对齐一样，去处理行内、行内块在父元素中的对齐。例如： <code>text-align</code> <code>line-height</code> <code>text-indent</code> 等。</li>
 <li>如何让子元素，在父亲中<em>水平居中</em>：<ul>
@@ -1903,14 +1905,14 @@
 </ul>
 </li>
 </ol>
-<h3 id="111-处理元素间的空白">1.11 处理元素间的空白<a class="headerlink" href="#111-处理元素间的空白" title="permalink">💭</a></h3>
+<h3 id="111-处理元素间的空白">1.11 处理元素间的空白<a class="headerlink" href="#111-处理元素间的空白" title="permalink">¶</a></h3>
 <p>行内元素、行内块元素，彼此之间的换行会被浏览器解析为一个空白字符。元素间的空白会影响排版，需要解决。</p>
 <p>解决方案：</p>
 <ol>
 <li>方案一： 去掉换行和空格，这种方法降低了程序的易读性，不推荐使用</li>
 <li>方案二： 给父元素设置 <code>font-size: 0;</code> 再给需要显示文字的元素，单独设置字体大小（推荐）。</li>
 </ol>
-<h3 id="112-处理行内块间的幽灵空白">1.12 处理行内块间的幽灵空白<a class="headerlink" href="#112-处理行内块间的幽灵空白" title="permalink">💭</a></h3>
+<h3 id="112-处理行内块间的幽灵空白">1.12 处理行内块间的幽灵空白<a class="headerlink" href="#112-处理行内块间的幽灵空白" title="permalink">¶</a></h3>
 <p>行内块元素与文本的基线对齐，而文本的基线与文本最底端之间是有一定距离的，这段距离就会产生额外的空白。</p>
 <p>解决方案：</p>
 <ol>
@@ -1918,7 +1920,7 @@
 <li>方案二： 若父元素中只有一张图片，设置图片为 <code>display: block;</code> 将图片行内块转换为块元素。</li>
 <li>方案三： 给父元素设置 <code>font-size: 0;</code> 如果该行内块内部还有文本，则需单独设置 font-size </li>
 </ol>
-<h2 id="二浮动">二、浮动<a class="headerlink" href="#二浮动" title="permalink">💭</a></h2>
+<h2 id="二浮动">二、浮动<a class="headerlink" href="#二浮动" title="permalink">¶</a></h2>
 <p>在最初，浮动是用来实现文字环绕图片效果的，现在浮动是主流的页面布局方式之一。</p>
 <p>浮动相关属性：</p>
 <ul>
@@ -1935,7 +1937,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="21-元素浮动后的特点">2.1 元素浮动后的特点<a class="headerlink" href="#21-元素浮动后的特点" title="permalink">💭</a></h3>
+<h3 id="21-元素浮动后的特点">2.1 元素浮动后的特点<a class="headerlink" href="#21-元素浮动后的特点" title="permalink">¶</a></h3>
 <ol>
 <li>脱离文档流。脱离文档流相当于元素飞起来了。</li>
 <li>不管浮动前是什么元素，浮动后：默认宽与高都是被内容撑开（尽可能小，类似于行内元素），而且可以设置宽高。</li>
@@ -1943,7 +1945,7 @@
 <li>不会发生 margin 合并，也不会发生 margin 塌陷，能够完美的设置四个方向的 margin 和 padding </li>
 <li>不会像行内块一样被当做文本处理（没有行内块的空白问题）。</li>
 </ol>
-<h3 id="22-解决浮动产生的影响">2.2 解决浮动产生的影响<a class="headerlink" href="#22-解决浮动产生的影响" title="permalink">💭</a></h3>
+<h3 id="22-解决浮动产生的影响">2.2 解决浮动产生的影响<a class="headerlink" href="#22-解决浮动产生的影响" title="permalink">¶</a></h3>
 <p>元素浮动后的影响：</p>
 <ul>
 <li>对兄弟元素的影响： 后面的兄弟元素，会占据浮动元素之前的位置，在浮动元素的下面；对前面的兄弟无影响。</li>
@@ -1969,8 +1971,8 @@
 <summary>Note</summary>
 <p>布局中的一个原则：设置浮动的时候，兄弟元素要么全都浮动，要么全都不浮动。</p>
 </details>
-<h2 id="三定位">三、定位<a class="headerlink" href="#三定位" title="permalink">💭</a></h2>
-<h3 id="31-相对定位">3.1 相对定位<a class="headerlink" href="#31-相对定位" title="permalink">💭</a></h3>
+<h2 id="三定位">三、定位<a class="headerlink" href="#三定位" title="permalink">¶</a></h2>
+<h3 id="31-相对定位">3.1 相对定位<a class="headerlink" href="#31-相对定位" title="permalink">¶</a></h3>
 <p>给元素设置 <code>position:relative;</code> 即可实现相对定位。可以使用 <code>left</code>  <code>right</code>  <code>top</code>  <code>bottom</code> 四个属性调整位置，这四个属性的值都是长度。</p>
 <p>相对定位的参考点：相对自己原来的位置。绝大多数情况下，相对定位，会与绝对定位配合使用。</p>
 <p>相对定位的特点：</p>
@@ -1985,7 +1987,7 @@
 <li>相对定位的元素，也能继续浮动，但不推荐这样做。</li>
 <li>相对行为的元素，也能通过 margin 调整位置，但不推荐这样做。</li>
 </ol>
-<h3 id="32-绝对定位">3.2 绝对定位<a class="headerlink" href="#32-绝对定位" title="permalink">💭</a></h3>
+<h3 id="32-绝对定位">3.2 绝对定位<a class="headerlink" href="#32-绝对定位" title="permalink">¶</a></h3>
 <p>给元素设置 <code>position: absolute;</code> 即可实现绝对定位。可以使用 left 、 right 、 top 、 bottom 四个属性调整位置。</p>
 <p>绝对定位的参考点：参考它的包含块。一般父元素使用相对定位，子元素使用绝对定位。</p>
 <p>什么是包含块？</p>
@@ -2001,7 +2003,7 @@
 <li>绝对定位的元素，也能通过 margin 调整位置，但不推荐这样做。</li>
 <li>无论是什么元素（行内、行内块、块级）设置为绝对定位之后，都变成了定位元素。定位元素：默认宽、高都被内容所撑开，且能自由设置宽高。</li>
 </ol>
-<h3 id="33-固定定位">3.3 固定定位<a class="headerlink" href="#33-固定定位" title="permalink">💭</a></h3>
+<h3 id="33-固定定位">3.3 固定定位<a class="headerlink" href="#33-固定定位" title="permalink">¶</a></h3>
 <p>给元素设置 <code>position: fixed;</code> 即可实现固定定位。可以使用 left 、 right 、 top 、 bottom 四个属性调整位置。</p>
 <p>固定定位的参考点：参考它的视口。视口：对于 PC 浏览器来说，视口就是我们看网页的那扇“窗户”。</p>
 <p>固定定位元素的特点</p>
@@ -2012,7 +2014,7 @@
 <li>固定定位的元素，也能通过 margin 调整位置，但不推荐这样做。</li>
 <li>无论是什么元素（行内、行内块、块级）设置为固定定位之后，都变成了定位元素。</li>
 </ol>
-<h3 id="34-粘性定位">3.4 粘性定位<a class="headerlink" href="#34-粘性定位" title="permalink">💭</a></h3>
+<h3 id="34-粘性定位">3.4 粘性定位<a class="headerlink" href="#34-粘性定位" title="permalink">¶</a></h3>
 <p>给元素设置 <code>position:sticky</code> 即可实现粘性定位。可以使用 left 、 right 、 top 、 bottom 四个属性调整位置，不过最常用的是 top 值。常用于制作固定导航栏。</p>
 <p>粘性定位的参考点：离它最近的一个拥有“滚动机制”的祖先元素，即便这个祖先不是最近的真实可滚动祖先。</p>
 <p>粘性定位元素的特点：</p>
@@ -2023,7 +2025,7 @@
 <li>粘性定位的元素，也能通过 margin 调整位置，但不推荐这样做。</li>
 <li>粘性定位和相对定位的特点基本一致，不同的是：粘性定位可以在元素到达某个位置时将其固定。</li>
 </ol>
-<h3 id="35-定位层级">3.5 定位层级<a class="headerlink" href="#35-定位层级" title="permalink">💭</a></h3>
+<h3 id="35-定位层级">3.5 定位层级<a class="headerlink" href="#35-定位层级" title="permalink">¶</a></h3>
 <ol>
 <li>定位元素的显示层级比普通元素高，无论什么定位，显示层级都是一样的。</li>
 <li>如果位置发生重叠，默认情况是：后面的元素，会显示在前面元素之上。</li>
@@ -2032,7 +2034,7 @@
 <li>只有定位的元素设置 z-index 才有效。</li>
 <li>如果 z-index 值大的元素，依然没有覆盖掉 z-index 值小的元素，那么请检查其包含块的层级。</li>
 </ol>
-<h3 id="36-定位的特殊应用">3.6 定位的特殊应用<a class="headerlink" href="#36-定位的特殊应用" title="permalink">💭</a></h3>
+<h3 id="36-定位的特殊应用">3.6 定位的特殊应用<a class="headerlink" href="#36-定位的特殊应用" title="permalink">¶</a></h3>
 <details class="note" open="open">
 <summary>Note</summary>
 <ol>
@@ -2062,10 +2064,10 @@ margin:auto;
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">margin-top</span><span class="o">:</span><span class="w"> </span><span class="nt">负的高度一半</span><span class="o">;</span>
 </span></code></pre></div>
 </details>
-<h2 id="四布局">四、布局<a class="headerlink" href="#四布局" title="permalink">💭</a></h2>
-<h3 id="41-版心">4.1 版心<a class="headerlink" href="#41-版心" title="permalink">💭</a></h3>
+<h2 id="四布局">四、布局<a class="headerlink" href="#四布局" title="permalink">¶</a></h2>
+<h3 id="41-版心">4.1 版心<a class="headerlink" href="#41-版心" title="permalink">¶</a></h3>
 <p>在 PC 端网页中，一般都会有一个固定宽度且水平居中的盒子，来显示网页的主要内容，这是网页的版心。版心的宽度一般是 960 ~ 1200 像素之间。版心可以是一个，也可以是多个。</p>
-<h3 id="42-布局常用英文单词">4.2 布局常用英文单词<a class="headerlink" href="#42-布局常用英文单词" title="permalink">💭</a></h3>
+<h3 id="42-布局常用英文单词">4.2 布局常用英文单词<a class="headerlink" href="#42-布局常用英文单词" title="permalink">¶</a></h3>
 <ul>
 <li>顶部导航条 topbar</li>
 <li>页头 header 、 page-header</li>
@@ -2076,7 +2078,7 @@ margin:auto;
 <li>侧边栏 aside 、 sidebar</li>
 <li>页脚 footer 、 page-footer</li>
 </ul>
-<h3 id="43-重置默认样式">4.3 重置默认样式<a class="headerlink" href="#43-重置默认样式" title="permalink">💭</a></h3>
+<h3 id="43-重置默认样式">4.3 重置默认样式<a class="headerlink" href="#43-重置默认样式" title="permalink">¶</a></h3>
 <p>HTML很多元素都有默认样式，这些默认样式往往会对排版造成影响，因此需要根据我们的需要重置默认样式。</p>
 <p>方案一：使用全局选择器（只适用于简单的排版）</p>
 <div class="language-text highlight"><pre><span></span><code>* {
@@ -2097,7 +2099,7 @@ margin:auto;
 <li>对并集选择器的使用比较谨慎，有效避免调试工具杂乱。</li>
 </ol>
 <p>备注： Normalize.css 的重置，和 reset.css 相比，更加的温和，开发时可根据实际情况进行选择。</p>
-<h2 id="五网页编写技巧">五、网页编写技巧<a class="headerlink" href="#五网页编写技巧" title="permalink">💭</a></h2>
+<h2 id="五网页编写技巧">五、网页编写技巧<a class="headerlink" href="#五网页编写技巧" title="permalink">¶</a></h2>
 <p>第一步：在 <code>head</code> 标签内引入</p>
 <ul>
 <li>引入浏览器标签页图标

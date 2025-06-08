@@ -1472,6 +1472,8 @@
       
         
       
+        
+      
     
     
       
@@ -1638,16 +1640,16 @@
 
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-19</code></p>
 <p><a class="md-button md-button--primary" href="https://drissionpage.cn/">DrissionPage官方文档</a></p>
-<h2 id="两个核心的类">两个核心的类<a class="headerlink" href="#两个核心的类" title="permalink">💭</a></h2>
+<h2 id="两个核心的类">两个核心的类<a class="headerlink" href="#两个核心的类" title="permalink">¶</a></h2>
 <ul>
 <li><code>ChromiumPage</code> 用于操作浏览器</li>
 <li><code>SessionPage</code> </li>
 </ul>
-<h2 id="使用chromiumpage类操作浏览器">使用ChromiumPage类操作浏览器<a class="headerlink" href="#使用chromiumpage类操作浏览器" title="permalink">💭</a></h2>
-<h3 id="第一步导入模块">第一步：导入模块<a class="headerlink" href="#第一步导入模块" title="permalink">💭</a></h3>
+<h2 id="使用chromiumpage类操作浏览器">使用ChromiumPage类操作浏览器<a class="headerlink" href="#使用chromiumpage类操作浏览器" title="permalink">¶</a></h2>
+<h3 id="第一步导入模块">第一步：导入模块<a class="headerlink" href="#第一步导入模块" title="permalink">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code>from DrissionPage import Chromium
 </code></pre></div>
-<h3 id="第二步创建浏览器driver对象并打开浏览器">第二步：创建浏览器driver对象，并打开浏览器<a class="headerlink" href="#第二步创建浏览器driver对象并打开浏览器" title="permalink">💭</a></h3>
+<h3 id="第二步创建浏览器driver对象并打开浏览器">第二步：创建浏览器driver对象，并打开浏览器<a class="headerlink" href="#第二步创建浏览器driver对象并打开浏览器" title="permalink">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code>driver = Chromium()
 </code></pre></div>
 <details class="note">
@@ -1669,7 +1671,7 @@
 <li><code>set.cookies()</code>方法 用于设置一个或多个 cookie</li>
 </ul>
 </details>
-<h3 id="第三步创建标签页tab对象">第三步：创建标签页Tab对象<a class="headerlink" href="#第三步创建标签页tab对象" title="permalink">💭</a></h3>
+<h3 id="第三步创建标签页tab对象">第三步：创建标签页Tab对象<a class="headerlink" href="#第三步创建标签页tab对象" title="permalink">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code>tab = browser.latest_tab # 获取最新打开的标签页
 </code></pre></div>
 <details class="note" open="open">
@@ -1680,7 +1682,7 @@
 <li><code>tab = browser.get_tabs()</code> 有多个标签页时，按条件获取多个标签页对象，模糊匹配</li>
 </ul>
 </details>
-<h3 id="第四步通过tab对象访问网页">第四步：通过Tab对象访问网页<a class="headerlink" href="#第四步通过tab对象访问网页" title="permalink">💭</a></h3>
+<h3 id="第四步通过tab对象访问网页">第四步：通过Tab对象访问网页<a class="headerlink" href="#第四步通过tab对象访问网页" title="permalink">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code>tab.get(url) # 传入网页地址，访问网页，相当于`requests.get()`方法
 </code></pre></div>
 <details class="note" open="open">
@@ -1731,8 +1733,8 @@
 <li><code>states.has_alert</code>属性 判断当前页面是否有弹窗</li>
 </ul>
 </details>
-<h3 id="第五步使用tab对象操作浏览器">第五步：使用Tab对象操作浏览器<a class="headerlink" href="#第五步使用tab对象操作浏览器" title="permalink">💭</a></h3>
-<h4 id="51-定位元素并操作">5.1 定位元素并操作<a class="headerlink" href="#51-定位元素并操作" title="permalink">💭</a></h4>
+<h3 id="第五步使用tab对象操作浏览器">第五步：使用Tab对象操作浏览器<a class="headerlink" href="#第五步使用tab对象操作浏览器" title="permalink">¶</a></h3>
+<h4 id="51-定位元素并操作">5.1 定位元素并操作<a class="headerlink" href="#51-定位元素并操作" title="permalink">¶</a></h4>
 <p>Tab对象常用的方法：</p>
 <ul>
 <li><code>ele()</code> 通过css、xpath等定位元素，返回Element对象，可以使用类似于bs4的简写法，即把对象名看作是函数</li>

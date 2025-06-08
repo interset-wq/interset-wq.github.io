@@ -802,6 +802,8 @@
       
         
       
+        
+      
     
     
       
@@ -852,7 +854,29 @@
         
   
   <span class="md-ellipsis">
-    概率统计
+    概率统计-概率论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概率统计-数理统计
     
   </span>
   
@@ -2936,29 +2960,29 @@
 <summary>Abstract</summary>
 <p>主要介绍一些AutoCAD常用命令</p>
 </details>
-<h2 id="一概述">一、概述<a class="headerlink" href="#一概述" title="permalink">💭</a></h2>
-<h3 id="11-修改坐标系图标样式">1.1 修改坐标系图标样式<a class="headerlink" href="#11-修改坐标系图标样式" title="permalink">💭</a></h3>
+<h2 id="一概述">一、概述<a class="headerlink" href="#一概述" title="permalink">¶</a></h2>
+<h3 id="11-修改坐标系图标样式">1.1 修改坐标系图标样式<a class="headerlink" href="#11-修改坐标系图标样式" title="permalink">¶</a></h3>
 <p>为了便于请区分绘制图形的线条和坐标系十字标记(UCS图标, User Coordinate System), 可以更改坐标系十字标记的样式. 操作步骤:</p>
 <p><code>视图(V)</code> - <code>显示</code> - <code>UCS图标</code> - <code>特性</code></p>
 <p><img alt="ucs.jpg" src="https://s2.loli.net/2025/05/31/58m4oaeTFwrjpJD.jpg" /></p>
 <p>也可以隐藏 UCS图标. 操作步骤:</p>
 <p><code>视图(V)</code> - <code>显示</code> - <code>UCS图标</code> - <code>开</code></p>
-<h3 id="12-打开工具栏">1.2 打开工具栏<a class="headerlink" href="#12-打开工具栏" title="permalink">💭</a></h3>
+<h3 id="12-打开工具栏">1.2 打开工具栏<a class="headerlink" href="#12-打开工具栏" title="permalink">¶</a></h3>
 <ul>
 <li>如果之前没有打开过任何工具栏, 操作步骤: <code>工具(T)</code> - <code>工具栏</code> - <code>AutoCAD</code> ,勾选自己需要使用的工具栏, 推荐勾选 <code>修改</code>  <code>绘图</code> <code>标准</code></li>
 <li>如果之前打开过工具栏, 可以将鼠标悬停在工具栏上, 单击鼠标右键</li>
 </ul>
-<h3 id="13-新建dwg文件-new">1.3 新建dwg文件 <code>NEW</code><a class="headerlink" href="#13-新建dwg文件-new" title="permalink">💭</a></h3>
+<h3 id="13-新建dwg文件-new">1.3 新建dwg文件 <code>NEW</code><a class="headerlink" href="#13-新建dwg文件-new" title="permalink">¶</a></h3>
 <p>在命令行输入 <code>NEW</code> 可新建dwg文件, 样板文件推荐选择 <code>acad.dwt</code> 或 <code>acadiso.dwt</code> ,也可以不使用样板文件新建dwg文件</p>
-<h3 id="14-打开文件-open">1.4 打开文件 <code>OPEN</code><a class="headerlink" href="#14-打开文件-open" title="permalink">💭</a></h3>
-<h3 id="15-在命令行输入坐标">1.5 在命令行输入坐标<a class="headerlink" href="#15-在命令行输入坐标" title="permalink">💭</a></h3>
+<h3 id="14-打开文件-open">1.4 打开文件 <code>OPEN</code><a class="headerlink" href="#14-打开文件-open" title="permalink">¶</a></h3>
+<h3 id="15-在命令行输入坐标">1.5 在命令行输入坐标<a class="headerlink" href="#15-在命令行输入坐标" title="permalink">¶</a></h3>
 <ul>
 <li>绝对直角坐标, 相对于 USC坐标系 原点的坐标, <code>x,y</code></li>
 <li>相对直角坐标, 相对于上一个点的坐标, <code>@x,y</code>, x和y表示相对于上一个点在X和Y方向坐标的增量</li>
 <li>绝对极坐标, 相对于 USC坐标系 原点的极坐标, <code>距离&lt;角度</code>. 距离表示绘制点到原点的距离,角度表示角度表示从x轴逆时针旋转到连线的角度(如果是顺时针旋转,角度表示为负值)</li>
 <li>相对极坐标, 相对于上一点的极坐标, <code>@距离&lt;角度</code></li>
 </ul>
-<h3 id="16-视图缩放-zoom">1.6 视图缩放 <code>ZOOM</code><a class="headerlink" href="#16-视图缩放-zoom" title="permalink">💭</a></h3>
+<h3 id="16-视图缩放-zoom">1.6 视图缩放 <code>ZOOM</code><a class="headerlink" href="#16-视图缩放-zoom" title="permalink">¶</a></h3>
 <p>视图缩放并不会改变图形的尺寸.</p>
 <ul>
 <li>方法一: <code>视图(V)</code> - <code>缩放</code></li>
@@ -2976,15 +3000,15 @@
 <li>比例缩放</li>
 </ul>
 </details>
-<h3 id="17-视图平移-pan">1.7 视图平移 <code>PAN</code><a class="headerlink" href="#17-视图平移-pan" title="permalink">💭</a></h3>
+<h3 id="17-视图平移-pan">1.7 视图平移 <code>PAN</code><a class="headerlink" href="#17-视图平移-pan" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: 在命令行输入 <code>PAN</code>, 鼠标光标将变为小手</li>
 <li>方法二: 如果打开了标准工具栏, 可以在标准工具栏快捷使用 <code>实时平移</code></li>
 <li>方法三: <code>视图(V)</code> - <code>平移</code></li>
 <li>方法四: 按住鼠标中键,并拖动鼠标</li>
 </ul>
-<h2 id="二绘图环境">二、绘图环境<a class="headerlink" href="#二绘图环境" title="permalink">💭</a></h2>
-<h3 id="21-设置图形界限-limits">2.1 设置图形界限 <code>LIMITS</code><a class="headerlink" href="#21-设置图形界限-limits" title="permalink">💭</a></h3>
+<h2 id="二绘图环境">二、绘图环境<a class="headerlink" href="#二绘图环境" title="permalink">¶</a></h2>
+<h3 id="21-设置图形界限-limits">2.1 设置图形界限 <code>LIMITS</code><a class="headerlink" href="#21-设置图形界限-limits" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: 在命令行输入 <code>LIMITS</code>, 此时会依次提示输入左下角点和右上角点的坐标,左下角点一般不输入,直接使用默认值坐标原点</li>
 <li>方法二: <code>格式(O)</code> - <code>图形界限</code></li>
@@ -2993,15 +3017,15 @@
 <summary>Note</summary>
 <p>使用CAD绘图时,遵从 1:1 绘制的原则, 因此绘图时是否使用图形界限取决于个人需要.</p>
 </details>
-<h3 id="22-设置绘图单位-units">2.2 设置绘图单位 <code>UNITS</code><a class="headerlink" href="#22-设置绘图单位-units" title="permalink">💭</a></h3>
+<h3 id="22-设置绘图单位-units">2.2 设置绘图单位 <code>UNITS</code><a class="headerlink" href="#22-设置绘图单位-units" title="permalink">¶</a></h3>
 <p>绘图之前,往往需要设置单位的精度和使用的单位.</p>
 <ul>
 <li>方法一: 在命令行输入 <code>UNITS</code></li>
 <li>方法二: <code>格式(O)</code> - <code>单位</code></li>
 </ul>
 <p><img alt="units.jpg" src="https://s2.loli.net/2025/05/31/53Pa1WvjRiLKFVp.jpg" /></p>
-<h2 id="三右下角状态栏">三、右下角状态栏<a class="headerlink" href="#三右下角状态栏" title="permalink">💭</a></h2>
-<h3 id="31-栅格捕捉模式和草图设置-dsettings">3.1 栅格、捕捉模式和草图设置 <code>DSETTINGS</code><a class="headerlink" href="#31-栅格捕捉模式和草图设置-dsettings" title="permalink">💭</a></h3>
+<h2 id="三右下角状态栏">三、右下角状态栏<a class="headerlink" href="#三右下角状态栏" title="permalink">¶</a></h2>
+<h3 id="31-栅格捕捉模式和草图设置-dsettings">3.1 栅格、捕捉模式和草图设置 <code>DSETTINGS</code><a class="headerlink" href="#31-栅格捕捉模式和草图设置-dsettings" title="permalink">¶</a></h3>
 <p>显示为格子纸样式,图形打印时,并不会打印栅格. 通过以下方法可以打开<code>草图设置</code>对话框</p>
 <ul>
 <li>方法一: 鼠标右键单击 右下角状态栏 <code>显示图形栅格</code> - <code>网格设置</code>. 如果需要启用栅格只需要鼠标左键单击 <code>显示图形栅格</code></li>
@@ -3012,11 +3036,11 @@
 <summary>Warning</summary>
 <p>右下角状态栏 <code>显示图形栅格</code> 右侧的 <code>捕捉模式</code> 后绘图时只能点击到栅格上的点, 可以通过 <span class="keys"><kbd class="key-f9">F9</kbd></span> 快速开启 <code>捕捉模式</code></p>
 </details>
-<h3 id="32-正交模式">3.2 正交模式<a class="headerlink" href="#32-正交模式" title="permalink">💭</a></h3>
+<h3 id="32-正交模式">3.2 正交模式<a class="headerlink" href="#32-正交模式" title="permalink">¶</a></h3>
 <p>在右下角状态栏打开 <code>正交限制光标</code> 之后,移动光标时,水平轴或垂直轴哪个离光标最近,拖引线将沿着该轴移动.</p>
 <p>输入坐标或者指定对象捕捉时会忽视正交.</p>
 <p>按住 <span class="keys"><kbd class="key-shift">Shift</kbd></span> 可以临时打开或关闭正交.</p>
-<h3 id="33-对象捕捉">3.3 对象捕捉<a class="headerlink" href="#33-对象捕捉" title="permalink">💭</a></h3>
+<h3 id="33-对象捕捉">3.3 对象捕捉<a class="headerlink" href="#33-对象捕捉" title="permalink">¶</a></h3>
 <p>对象捕捉就是利用已经绘制了的图形的几何特征点来定位点的方法. 点击右下角状态栏的 <code>将光标捕捉到二维参照点</code> 或 通过 <span class="keys"><kbd class="key-f3">F3</kbd></span> 开启对象捕捉.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -3025,11 +3049,11 @@
 <p><code>对象捕捉</code> 或 <code>将光标捕捉到二维参照点</code> 捕捉的是已经绘制图形的几何特征点.</p>
 <p><img alt="catch.webp" src="https://s2.loli.net/2025/05/31/fltmEeALukcFsDz.webp" /></p>
 </details>
-<h3 id="34-极轴追踪">3.4 极轴追踪<a class="headerlink" href="#34-极轴追踪" title="permalink">💭</a></h3>
+<h3 id="34-极轴追踪">3.4 极轴追踪<a class="headerlink" href="#34-极轴追踪" title="permalink">¶</a></h3>
 <p>点击右下角状态栏的 <code>按指定角度限制光标</code> 或 通过 <span class="keys"><kbd class="key-f10">F10</kbd></span> 打开极轴追踪. 打开极轴追踪后,光标将按照指定角度移动. <code>极轴追踪</code> 和 <code>正交模式</code> 二者不能同时打开, 会自动关闭另一个.</p>
-<h2 id="四图层管理">四、图层管理<a class="headerlink" href="#四图层管理" title="permalink">💭</a></h2>
+<h2 id="四图层管理">四、图层管理<a class="headerlink" href="#四图层管理" title="permalink">¶</a></h2>
 <p>绘图时往往将不同的部分绘制在不同的图层中，通过这种方法可以方便的调整线条的宽度等,而且当图形比较复杂时,可以隐藏一些图层,便于观察.</p>
-<h3 id="41-创建图层-layer">4.1 创建图层 <code>LAYER</code><a class="headerlink" href="#41-创建图层-layer" title="permalink">💭</a></h3>
+<h3 id="41-创建图层-layer">4.1 创建图层 <code>LAYER</code><a class="headerlink" href="#41-创建图层-layer" title="permalink">¶</a></h3>
 <p>通过以下方法可以打开 <code>图层特性管理器</code></p>
 <ul>
 <li>方法一: <code>默认</code> - <code>图层特性</code></li>
@@ -3041,7 +3065,7 @@
 <p>轴线使用 <code>单点长划线</code>. <code>全局比例因子</code> 一般设置为 0.2~0.5 , 比例因子用于控制点划线之间的间距.</p>
 <p><img alt="itscale.webp" src="https://s2.loli.net/2025/05/31/6falVxD8jA9JTeY.webp" /></p>
 <p>也可以在命令行输入 <code>LTSCALE</code> 设置比例因子</p>
-<h3 id="42-图层操作">4.2 图层操作<a class="headerlink" href="#42-图层操作" title="permalink">💭</a></h3>
+<h3 id="42-图层操作">4.2 图层操作<a class="headerlink" href="#42-图层操作" title="permalink">¶</a></h3>
 <p>可以设置每个图层的线型和线宽, 以及设置不同图层的线条颜色,用于区分.</p>
 <p>一般情况下, <code>轴线</code> 图层设置为红色, <code>墙体</code> 图层设置为白色, <code>门窗</code> 图层设置为青色, <code>家具</code> 图层设置为蓝色, <code>标注</code> 图层设置为绿色.</p>
 <p><img alt="layer2.webp" src="https://s2.loli.net/2025/05/31/jKP6kDoGOfZnlHt.webp" /></p>
@@ -3052,8 +3076,8 @@
 <li>冻结</li>
 <li>锁定: 锁定后的图层可见,但是不可修改,可以对上面的线条使用对象捕捉来定位几何特征点.</li>
 </ul>
-<h2 id="五二维图形的绘制">五、二维图形的绘制<a class="headerlink" href="#五二维图形的绘制" title="permalink">💭</a></h2>
-<h3 id="51-点-point">5.1 点 <code>POINT</code><a class="headerlink" href="#51-点-point" title="permalink">💭</a></h3>
+<h2 id="五二维图形的绘制">五、二维图形的绘制<a class="headerlink" href="#五二维图形的绘制" title="permalink">¶</a></h2>
+<h3 id="51-点-point">5.1 点 <code>POINT</code><a class="headerlink" href="#51-点-point" title="permalink">¶</a></h3>
 <p>绘制点时必须先设置点样式,否则点太小而不便于观察. 通过以下方法设置点样式:</p>
 <ul>
 <li>方法一: <code>格式(O)</code> - <code>点样式</code></li>
@@ -3061,11 +3085,11 @@
 </ul>
 <p><img alt="ptype.webp" src="https://s2.loli.net/2025/05/31/oMu6VZXNUsK7359.webp" /></p>
 <p>在命令行输入 <code>POINT</code> 绘制点</p>
-<h3 id="52-定数等分点-div-divide">5.2 定数等分点 <code>DIV</code> <code>DIVIDE</code><a class="headerlink" href="#52-定数等分点-div-divide" title="permalink">💭</a></h3>
-<h3 id="53-定距等分点-me-measure">5.3 定距等分点 <code>ME</code> <code>MEASURE</code><a class="headerlink" href="#53-定距等分点-me-measure" title="permalink">💭</a></h3>
-<h3 id="54-直线-line">5.4 直线 <code>LINE</code><a class="headerlink" href="#54-直线-line" title="permalink">💭</a></h3>
-<h3 id="55-多线-mline">5.5 多线 <code>MLINE</code><a class="headerlink" href="#55-多线-mline" title="permalink">💭</a></h3>
-<h4 id="551-绘制多线-mlime">5.5.1 绘制多线 <code>MLIME</code><a class="headerlink" href="#551-绘制多线-mlime" title="permalink">💭</a></h4>
+<h3 id="52-定数等分点-div-divide">5.2 定数等分点 <code>DIV</code> <code>DIVIDE</code><a class="headerlink" href="#52-定数等分点-div-divide" title="permalink">¶</a></h3>
+<h3 id="53-定距等分点-me-measure">5.3 定距等分点 <code>ME</code> <code>MEASURE</code><a class="headerlink" href="#53-定距等分点-me-measure" title="permalink">¶</a></h3>
+<h3 id="54-直线-line">5.4 直线 <code>LINE</code><a class="headerlink" href="#54-直线-line" title="permalink">¶</a></h3>
+<h3 id="55-多线-mline">5.5 多线 <code>MLINE</code><a class="headerlink" href="#55-多线-mline" title="permalink">¶</a></h3>
+<h4 id="551-绘制多线-mlime">5.5.1 绘制多线 <code>MLIME</code><a class="headerlink" href="#551-绘制多线-mlime" title="permalink">¶</a></h4>
 <p>多线实际上是双线,绘制的线条都是成对的平行线,常用于绘制墙.</p>
 <p>正对(J) 以下三种情况的多线的起点都是坐标原点(0,0)</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="上t" name="__tabbed_1" type="radio" /><input id="无z" name="__tabbed_1" type="radio" /><input id="下b" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="上t">上(T)</label><label for="无z">无(Z)</label><label for="下b">下(B)</label></div>
@@ -3086,7 +3110,7 @@
 </div>
 <p>比例(S) 即scale,可以理解为多线两条平行线间的距离,默认为20</p>
 <p>样式(ST) 即style,多线的样式,默认为STANDARD,距离1. 多线两条线之间的距离实际上是样式距离与比例的乘积.</p>
-<h4 id="552-定义多线样式-mlstyle">5.5.2 定义多线样式 <code>MLSTYLE</code><a class="headerlink" href="#552-定义多线样式-mlstyle" title="permalink">💭</a></h4>
+<h4 id="552-定义多线样式-mlstyle">5.5.2 定义多线样式 <code>MLSTYLE</code><a class="headerlink" href="#552-定义多线样式-mlstyle" title="permalink">¶</a></h4>
 <ul>
 <li>方法一: <code>格式(O)</code> - <code>多线样式</code></li>
 <li>方法二: 命令行输入 <code>MLSTYLE</code></li>
@@ -3097,19 +3121,19 @@
 <summary>Note</summary>
 <p>大多数情况下,使用双线就已经足够了,没有必要使用多线.</p>
 </details>
-<h3 id="56-多段线-pline">5.6 多段线 <code>PLINE</code><a class="headerlink" href="#56-多段线-pline" title="permalink">💭</a></h3>
+<h3 id="56-多段线-pline">5.6 多段线 <code>PLINE</code><a class="headerlink" href="#56-多段线-pline" title="permalink">¶</a></h3>
 <p>通过 <code>宽度(W)</code> 分别设置起点宽度为0和端点宽度为90, 用于绘制箭头</p>
-<h3 id="57-圆-circle">5.7 圆 <code>CIRCLE</code><a class="headerlink" href="#57-圆-circle" title="permalink">💭</a></h3>
-<h3 id="58-圆弧-arc">5.8 圆弧 <code>ARC</code><a class="headerlink" href="#58-圆弧-arc" title="permalink">💭</a></h3>
-<h3 id="59-圆环-donut">5.9 圆环 <code>DONUT</code><a class="headerlink" href="#59-圆环-donut" title="permalink">💭</a></h3>
+<h3 id="57-圆-circle">5.7 圆 <code>CIRCLE</code><a class="headerlink" href="#57-圆-circle" title="permalink">¶</a></h3>
+<h3 id="58-圆弧-arc">5.8 圆弧 <code>ARC</code><a class="headerlink" href="#58-圆弧-arc" title="permalink">¶</a></h3>
+<h3 id="59-圆环-donut">5.9 圆环 <code>DONUT</code><a class="headerlink" href="#59-圆环-donut" title="permalink">¶</a></h3>
 <p>绘制圆环之前要先通过 <code>FILL</code> 命令来设置是否填充圆环区域.</p>
 <p><img alt="donut.webp" src="https://s2.loli.net/2025/06/01/mXYVgdE7sy5rlBp.webp" /></p>
-<h3 id="510-椭圆椭圆弧-ellipse">5.10 椭圆/椭圆弧 <code>ELLIPSE</code><a class="headerlink" href="#510-椭圆椭圆弧-ellipse" title="permalink">💭</a></h3>
-<h3 id="511-矩形-rectang-rec">5.11 矩形 <code>RECTANG</code> <code>REC</code><a class="headerlink" href="#511-矩形-rectang-rec" title="permalink">💭</a></h3>
+<h3 id="510-椭圆椭圆弧-ellipse">5.10 椭圆/椭圆弧 <code>ELLIPSE</code><a class="headerlink" href="#510-椭圆椭圆弧-ellipse" title="permalink">¶</a></h3>
+<h3 id="511-矩形-rectang-rec">5.11 矩形 <code>RECTANG</code> <code>REC</code><a class="headerlink" href="#511-矩形-rectang-rec" title="permalink">¶</a></h3>
 <p>如果需要使用线宽(W), 矩形绘制前也需要使用 <code>FILL</code> 命令来设置是否填充.</p>
 <p><img alt="rec.webp" src="https://s2.loli.net/2025/06/01/2VGDjlvsXcxmUCL.webp" /></p>
-<h3 id="512-正多边形-polygon">5.12 正多边形 <code>POLYGON</code><a class="headerlink" href="#512-正多边形-polygon" title="permalink">💭</a></h3>
-<h3 id="513-图案填充渐变色填充-h-bhatch-hatch-gradient">5.13 图案填充/渐变色填充  <code>H</code> <code>BHATCH</code> <code>HATCH</code> <code>GRADIENT</code><a class="headerlink" href="#513-图案填充渐变色填充-h-bhatch-hatch-gradient" title="permalink">💭</a></h3>
+<h3 id="512-正多边形-polygon">5.12 正多边形 <code>POLYGON</code><a class="headerlink" href="#512-正多边形-polygon" title="permalink">¶</a></h3>
+<h3 id="513-图案填充渐变色填充-h-bhatch-hatch-gradient">5.13 图案填充/渐变色填充  <code>H</code> <code>BHATCH</code> <code>HATCH</code> <code>GRADIENT</code><a class="headerlink" href="#513-图案填充渐变色填充-h-bhatch-hatch-gradient" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: <code>绘图(D)</code> - <code>图案填充</code></li>
 <li>方法二: 命令行输入 <code>HATCH</code> 或 <code>BHATCH</code>, <code>GRADIENT</code>特指渐变色填充</li>
@@ -3119,17 +3143,17 @@
 <li>方法一: <code>修改(M)</code> - <code>对象</code> - <code>图案填充</code></li>
 <li>方法二: 命令行输入 <code>HATCHEDIT</code></li>
 </ul>
-<h2 id="六信息查询">六、信息查询<a class="headerlink" href="#六信息查询" title="permalink">💭</a></h2>
+<h2 id="六信息查询">六、信息查询<a class="headerlink" href="#六信息查询" title="permalink">¶</a></h2>
 <p>通用方法: <code>工具(T)</code> - <code>查询</code></p>
-<h3 id="61-查询点的坐标-id">6.1 查询点的坐标 <code>ID</code><a class="headerlink" href="#61-查询点的坐标-id" title="permalink">💭</a></h3>
-<h3 id="62-查询距离-dist-measuregeom">6.2 查询距离 <code>DIST</code> <code>MEASUREGEOM</code><a class="headerlink" href="#62-查询距离-dist-measuregeom" title="permalink">💭</a></h3>
-<h3 id="63-查询面积和周长-area">6.3 查询面积和周长 <code>AREA</code><a class="headerlink" href="#63-查询面积和周长-area" title="permalink">💭</a></h3>
-<h3 id="64-查询几何特征和对象特征-list">6.4 查询几何特征和对象特征 <code>LIST</code><a class="headerlink" href="#64-查询几何特征和对象特征-list" title="permalink">💭</a></h3>
-<h3 id="65-查询文件状态-status">6.5 查询文件状态 <code>STATUS</code><a class="headerlink" href="#65-查询文件状态-status" title="permalink">💭</a></h3>
-<h3 id="66-查询文件时间-time">6.6 查询文件时间 <code>TIME</code><a class="headerlink" href="#66-查询文件时间-time" title="permalink">💭</a></h3>
-<h2 id="七块">七、块<a class="headerlink" href="#七块" title="permalink">💭</a></h2>
+<h3 id="61-查询点的坐标-id">6.1 查询点的坐标 <code>ID</code><a class="headerlink" href="#61-查询点的坐标-id" title="permalink">¶</a></h3>
+<h3 id="62-查询距离-dist-measuregeom">6.2 查询距离 <code>DIST</code> <code>MEASUREGEOM</code><a class="headerlink" href="#62-查询距离-dist-measuregeom" title="permalink">¶</a></h3>
+<h3 id="63-查询面积和周长-area">6.3 查询面积和周长 <code>AREA</code><a class="headerlink" href="#63-查询面积和周长-area" title="permalink">¶</a></h3>
+<h3 id="64-查询几何特征和对象特征-list">6.4 查询几何特征和对象特征 <code>LIST</code><a class="headerlink" href="#64-查询几何特征和对象特征-list" title="permalink">¶</a></h3>
+<h3 id="65-查询文件状态-status">6.5 查询文件状态 <code>STATUS</code><a class="headerlink" href="#65-查询文件状态-status" title="permalink">¶</a></h3>
+<h3 id="66-查询文件时间-time">6.6 查询文件时间 <code>TIME</code><a class="headerlink" href="#66-查询文件时间-time" title="permalink">¶</a></h3>
+<h2 id="七块">七、块<a class="headerlink" href="#七块" title="permalink">¶</a></h2>
 <p>将多个对象合成为一个整体,这个整体就是块.</p>
-<h3 id="71-创建块-block">7.1 创建块 <code>BLOCK</code><a class="headerlink" href="#71-创建块-block" title="permalink">💭</a></h3>
+<h3 id="71-创建块-block">7.1 创建块 <code>BLOCK</code><a class="headerlink" href="#71-创建块-block" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: <code>绘图(D)</code> - <code>块</code> - <code>创建</code></li>
 <li>方法二: 命令行输入 <code>BLOCK</code></li>
@@ -3140,17 +3164,17 @@
 <summary>Note</summary>
 <p>使用这种方法创建的块,只能在这个dwg文件中使用.</p>
 </details>
-<h3 id="72-外部块-wblock">7.2 外部块 <code>WBLOCK</code><a class="headerlink" href="#72-外部块-wblock" title="permalink">💭</a></h3>
+<h3 id="72-外部块-wblock">7.2 外部块 <code>WBLOCK</code><a class="headerlink" href="#72-外部块-wblock" title="permalink">¶</a></h3>
 <p>通过写块 <code>WBLOCK</code> 命令可以创建外部块.</p>
 <p><img alt="wblock.webp" src="https://s2.loli.net/2025/06/01/3pC4OyserK9NQMm.webp" /></p>
 <p>使用此功能创建的块会另存为一个dwg文件. 如果需要使用刚刚创建的块,只需要点击 <code>默认</code> - <code>块</code> - <code>插入</code> - <code>浏览</code> 选取这个dwg文件的路径. 任何图形都可以导入外部块.</p>
-<h3 id="73-块属性">7.3 块属性<a class="headerlink" href="#73-块属性" title="permalink">💭</a></h3>
+<h3 id="73-块属性">7.3 块属性<a class="headerlink" href="#73-块属性" title="permalink">¶</a></h3>
 <p>块属性是块带有的一些文字属性.</p>
 <ul>
 <li>方法一: <code>绘图(D)</code> - <code>块</code> - <code>定义属性</code></li>
 <li>方法二: 命令行输入 <code>ATTDEF</code></li>
 </ul>
-<h3 id="74-创建带属性的块">7.4 创建带属性的块<a class="headerlink" href="#74-创建带属性的块" title="permalink">💭</a></h3>
+<h3 id="74-创建带属性的块">7.4 创建带属性的块<a class="headerlink" href="#74-创建带属性的块" title="permalink">¶</a></h3>
 <p>以标高符号为例.</p>
 <p>第一步: 绘制标高符号</p>
 <p>第二步: 命令行输入 <code>ATTDEF</code> 创建块属性,并放置在想要放置的位置</p>
@@ -3161,8 +3185,8 @@
 <p><img alt="def4.webp" src="https://s2.loli.net/2025/06/01/D6M3cfZaqxKwTES.webp" /></p>
 <p>第四步: 命令行输入 <code>INSERT</code> 插入块, 如果标高值输错了,可以双击这个图形修改</p>
 <p><img alt="def5.webp" src="https://s2.loli.net/2025/06/01/3Df9Kk8ExYnT4Mv.webp" /></p>
-<h2 id="八二维图形的修改">八、二维图形的修改<a class="headerlink" href="#八二维图形的修改" title="permalink">💭</a></h2>
-<h3 id="81-对象选择方式">8.1 对象选择方式<a class="headerlink" href="#81-对象选择方式" title="permalink">💭</a></h3>
+<h2 id="八二维图形的修改">八、二维图形的修改<a class="headerlink" href="#八二维图形的修改" title="permalink">¶</a></h2>
+<h3 id="81-对象选择方式">8.1 对象选择方式<a class="headerlink" href="#81-对象选择方式" title="permalink">¶</a></h3>
 <ul>
 <li>单选: 鼠标左键点击选取</li>
 <li>窗口方式(W方式): 从左上到右下的框选, 全部被框选到才被选中</li>
@@ -3175,56 +3199,56 @@
 <li>快速选择: 命令行输入 <code>QSELECT</code> 根据对象的特性进行选择</li>
 <li>设置对象选择模式: 命令行输入 <code>OPTIONS</code></li>
 </ul>
-<h3 id="82-删除对象-erase">8.2 删除对象 <code>ERASE</code><a class="headerlink" href="#82-删除对象-erase" title="permalink">💭</a></h3>
+<h3 id="82-删除对象-erase">8.2 删除对象 <code>ERASE</code><a class="headerlink" href="#82-删除对象-erase" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: 选中 <span class="keys"><kbd class="key-delete">Del</kbd></span></li>
 <li>方法二: 命令行输入 <code>ERASE</code></li>
 </ul>
-<h3 id="83-复制对象-copy">8.3 复制对象 <code>COPY</code><a class="headerlink" href="#83-复制对象-copy" title="permalink">💭</a></h3>
-<h3 id="84-镜像对象-mirror">8.4 镜像对象 <code>MIRROR</code><a class="headerlink" href="#84-镜像对象-mirror" title="permalink">💭</a></h3>
+<h3 id="83-复制对象-copy">8.3 复制对象 <code>COPY</code><a class="headerlink" href="#83-复制对象-copy" title="permalink">¶</a></h3>
+<h3 id="84-镜像对象-mirror">8.4 镜像对象 <code>MIRROR</code><a class="headerlink" href="#84-镜像对象-mirror" title="permalink">¶</a></h3>
 <p>对文字使用镜像时, 镜像效果与 <code>MIRRTEXT</code> 有关. 在命令行输入 <code>MIRRTEXT</code> , 输入值为 0 时镜像无法对文字生效, 输入值为1时镜像才会对文字生效</p>
-<h3 id="85-偏移对象-offset">8.5 偏移对象 <code>OFFSET</code><a class="headerlink" href="#85-偏移对象-offset" title="permalink">💭</a></h3>
+<h3 id="85-偏移对象-offset">8.5 偏移对象 <code>OFFSET</code><a class="headerlink" href="#85-偏移对象-offset" title="permalink">¶</a></h3>
 <p>可以通过 <code>删除(E)</code> 设置偏移对象时是否删除原对象</p>
-<h3 id="86-阵列对象-array">8.6 阵列对象 <code>ARRAY</code><a class="headerlink" href="#86-阵列对象-array" title="permalink">💭</a></h3>
-<h3 id="87-移动对象-move">8.7 移动对象 <code>MOVE</code><a class="headerlink" href="#87-移动对象-move" title="permalink">💭</a></h3>
-<h3 id="88-旋转对象-rotate">8.8 旋转对象 <code>ROTATE</code><a class="headerlink" href="#88-旋转对象-rotate" title="permalink">💭</a></h3>
+<h3 id="86-阵列对象-array">8.6 阵列对象 <code>ARRAY</code><a class="headerlink" href="#86-阵列对象-array" title="permalink">¶</a></h3>
+<h3 id="87-移动对象-move">8.7 移动对象 <code>MOVE</code><a class="headerlink" href="#87-移动对象-move" title="permalink">¶</a></h3>
+<h3 id="88-旋转对象-rotate">8.8 旋转对象 <code>ROTATE</code><a class="headerlink" href="#88-旋转对象-rotate" title="permalink">¶</a></h3>
 <p>输入的数值单位默认是度, 值为正数时逆时针旋转, 为负数时顺时针旋转</p>
-<h3 id="89-缩放对象-scale">8.9 缩放对象 <code>SCALE</code><a class="headerlink" href="#89-缩放对象-scale" title="permalink">💭</a></h3>
-<h3 id="810-拉伸对象-stretch">8.10 拉伸对象 <code>STRETCH</code><a class="headerlink" href="#810-拉伸对象-stretch" title="permalink">💭</a></h3>
+<h3 id="89-缩放对象-scale">8.9 缩放对象 <code>SCALE</code><a class="headerlink" href="#89-缩放对象-scale" title="permalink">¶</a></h3>
+<h3 id="810-拉伸对象-stretch">8.10 拉伸对象 <code>STRETCH</code><a class="headerlink" href="#810-拉伸对象-stretch" title="permalink">¶</a></h3>
 <p>选择对象时必须使用交互方式(C方式)或交叉多边形方式(CP方式), 即只能从右下到左上选择. 如果从左上到右下选择, 则相当于 <code>MOVE</code></p>
 <p>选择对象时, 请不要将要拉伸的对象全部选中, 只需选中一部分才可以进行拉伸. 全部选中相当于 <code>MOVE</code></p>
-<h3 id="811-拉长对象-lengthen">8.11 拉长对象 <code>LENGTHEN</code><a class="headerlink" href="#811-拉长对象-lengthen" title="permalink">💭</a></h3>
-<h3 id="812-修剪对象-trim">8.12 修剪对象 <code>TRIM</code><a class="headerlink" href="#812-修剪对象-trim" title="permalink">💭</a></h3>
+<h3 id="811-拉长对象-lengthen">8.11 拉长对象 <code>LENGTHEN</code><a class="headerlink" href="#811-拉长对象-lengthen" title="permalink">¶</a></h3>
+<h3 id="812-修剪对象-trim">8.12 修剪对象 <code>TRIM</code><a class="headerlink" href="#812-修剪对象-trim" title="permalink">¶</a></h3>
 <p>修剪时,使用栏选(F方式)和窗交(W方式), 可以快速修剪</p>
 <p>如果要修剪的对象和剪切边不相交, 按住 <span class="keys"><kbd class="key-shift">Shift</kbd></span> ,并在被修剪对象上单击, 可以将被修剪对象延伸到与剪切边相交.</p>
-<h3 id="813-延伸对象-extend">8.13 延伸对象 <code>EXTEND</code><a class="headerlink" href="#813-延伸对象-extend" title="permalink">💭</a></h3>
+<h3 id="813-延伸对象-extend">8.13 延伸对象 <code>EXTEND</code><a class="headerlink" href="#813-延伸对象-extend" title="permalink">¶</a></h3>
 <p>如果按住 <span class="keys"><kbd class="key-shift">Shift</kbd></span> , 相当于修剪 <code>TRIM</code></p>
-<h3 id="814-打断对象-break">8.14 打断对象 <code>BREAK</code><a class="headerlink" href="#814-打断对象-break" title="permalink">💭</a></h3>
+<h3 id="814-打断对象-break">8.14 打断对象 <code>BREAK</code><a class="headerlink" href="#814-打断对象-break" title="permalink">¶</a></h3>
 <p>第二个点输入 <code>@</code> 时, 相当于第二个点和第一个点的位置相同, 即直接将直线一分为二</p>
-<h3 id="815-倒角-chamfer">8.15 倒角 <code>CHAMFER</code><a class="headerlink" href="#815-倒角-chamfer" title="permalink">💭</a></h3>
+<h3 id="815-倒角-chamfer">8.15 倒角 <code>CHAMFER</code><a class="headerlink" href="#815-倒角-chamfer" title="permalink">¶</a></h3>
 <p>如果没有设置 <code>距离(D)</code> 图形相邻的两条边之间不能使用倒角. 多段线和直线绘制成的图形倒角的效果并不相同.</p>
 <p><img alt="chamfer.webp" src="https://s2.loli.net/2025/06/01/BfwuEp2FQhk81z4.webp" /></p>
 <p>通过 <code>距离(D)</code> 设置: 两条不相交的直线, 如果倒角距离都为0, 那么倒角就相当于同时延长或缩短这两条线,使它们相交</p>
 <p>通过 <code>修剪(T)</code> 设置: 是否保留倒角前后多余的线条</p>
 <p><img alt="chamfer2.webp" src="https://s2.loli.net/2025/06/01/O2xAbznZSH6DClq.webp" /></p>
-<h3 id="816-圆角-fillet">8.16 圆角 <code>FILLET</code><a class="headerlink" href="#816-圆角-fillet" title="permalink">💭</a></h3>
+<h3 id="816-圆角-fillet">8.16 圆角 <code>FILLET</code><a class="headerlink" href="#816-圆角-fillet" title="permalink">¶</a></h3>
 <p>和倒角用法类似</p>
-<h3 id="817-分解对象-explode">8.17 分解对象 <code>EXPLODE</code><a class="headerlink" href="#817-分解对象-explode" title="permalink">💭</a></h3>
+<h3 id="817-分解对象-explode">8.17 分解对象 <code>EXPLODE</code><a class="headerlink" href="#817-分解对象-explode" title="permalink">¶</a></h3>
 <p>将多段线,块等复杂对象分解为线等简单对象.</p>
-<h3 id="818-对象特性管理器-properties">8.18 对象特性管理器 <code>PROPERTIES</code><a class="headerlink" href="#818-对象特性管理器-properties" title="permalink">💭</a></h3>
-<h3 id="819-特性匹配-matchprop">8.19 特性匹配 <code>MATCHPROP</code><a class="headerlink" href="#819-特性匹配-matchprop" title="permalink">💭</a></h3>
+<h3 id="818-对象特性管理器-properties">8.18 对象特性管理器 <code>PROPERTIES</code><a class="headerlink" href="#818-对象特性管理器-properties" title="permalink">¶</a></h3>
+<h3 id="819-特性匹配-matchprop">8.19 特性匹配 <code>MATCHPROP</code><a class="headerlink" href="#819-特性匹配-matchprop" title="permalink">¶</a></h3>
 <p>类似于 Word 中的格式刷</p>
-<h2 id="九文字">九、文字<a class="headerlink" href="#九文字" title="permalink">💭</a></h2>
-<h3 id="91-定义文字样式-style">9.1 定义文字样式 <code>STYLE</code><a class="headerlink" href="#91-定义文字样式-style" title="permalink">💭</a></h3>
+<h2 id="九文字">九、文字<a class="headerlink" href="#九文字" title="permalink">¶</a></h2>
+<h3 id="91-定义文字样式-style">9.1 定义文字样式 <code>STYLE</code><a class="headerlink" href="#91-定义文字样式-style" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: <code>格式(O)</code> - <code>文字样式</code></li>
 <li>方法二: 命令行输入 <code>STYLE</code></li>
 </ul>
 <p>由于土木工程图纸文字要求使用长仿宋体, 因此在CAD中只能使用 <code>gbenor.shx</code> <code>gbeitc.shx</code> <code>gbcbig.shx</code>, 并且必须勾选 <code>使用大字体</code></p>
 <p><img alt="style.webp" src="https://s2.loli.net/2025/06/01/7PgTUJQdzjrFoOM.webp" /></p>
-<h3 id="92-单行文字-dtext">9.2 单行文字 <code>DTEXT</code><a class="headerlink" href="#92-单行文字-dtext" title="permalink">💭</a></h3>
-<h3 id="93-多行文字-mtext">9.3 多行文字 <code>MTEXT</code><a class="headerlink" href="#93-多行文字-mtext" title="permalink">💭</a></h3>
-<h3 id="94-输入特殊字符">9.4 输入特殊字符<a class="headerlink" href="#94-输入特殊字符" title="permalink">💭</a></h3>
+<h3 id="92-单行文字-dtext">9.2 单行文字 <code>DTEXT</code><a class="headerlink" href="#92-单行文字-dtext" title="permalink">¶</a></h3>
+<h3 id="93-多行文字-mtext">9.3 多行文字 <code>MTEXT</code><a class="headerlink" href="#93-多行文字-mtext" title="permalink">¶</a></h3>
+<h3 id="94-输入特殊字符">9.4 输入特殊字符<a class="headerlink" href="#94-输入特殊字符" title="permalink">¶</a></h3>
 <p>AutoCAD通过 <code>%%</code> 开头的控制码输入特殊符号.</p>
 <table>
 <thead>
@@ -3257,7 +3281,7 @@
 </tbody>
 </table>
 <p><img alt="sp.webp" src="https://s2.loli.net/2025/06/01/7LKPYcAmDSBNyn9.webp" /></p>
-<h3 id="95-编辑文字-ddedit">9.5 编辑文字 <code>DDEDIT</code><a class="headerlink" href="#95-编辑文字-ddedit" title="permalink">💭</a></h3>
+<h3 id="95-编辑文字-ddedit">9.5 编辑文字 <code>DDEDIT</code><a class="headerlink" href="#95-编辑文字-ddedit" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: 命令行输入 <code>DDEDIT</code></li>
 <li>方法二: 选中文字对象 - 单击鼠标右键 - <code>特性</code></li>
@@ -3265,15 +3289,15 @@
 <li>方法四: 标准工具栏 - <code>特性</code></li>
 <li>方法五: 命令行输入 <code>PROPERTIES</code> 或 <code>DDMODIFY</code></li>
 </ul>
-<h2 id="十表格">十、表格<a class="headerlink" href="#十表格" title="permalink">💭</a></h2>
-<h3 id="101-表格样式-tablestyle">10.1 表格样式 <code>TABLESTYLE</code><a class="headerlink" href="#101-表格样式-tablestyle" title="permalink">💭</a></h3>
+<h2 id="十表格">十、表格<a class="headerlink" href="#十表格" title="permalink">¶</a></h2>
+<h3 id="101-表格样式-tablestyle">10.1 表格样式 <code>TABLESTYLE</code><a class="headerlink" href="#101-表格样式-tablestyle" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: 命令行输入 <code>TABLESTYLE</code></li>
 <li>方法二: <code>格式(O)</code> - <code>表格样式</code></li>
 </ul>
 <p><img alt="tstyle.webp" src="https://s2.loli.net/2025/06/01/QDCjlOT8fBA5HtK.webp" /></p>
 <p><img alt="tstyle2.webp" src="https://s2.loli.net/2025/06/01/FAmZhpBPNuEceJb.webp" /></p>
-<h3 id="102-创建表格-table">10.2 创建表格 <code>TABLE</code><a class="headerlink" href="#102-创建表格-table" title="permalink">💭</a></h3>
+<h3 id="102-创建表格-table">10.2 创建表格 <code>TABLE</code><a class="headerlink" href="#102-创建表格-table" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: 命令行输入 <code>TABLE</code></li>
 <li>方法二: <code>绘图(D)</code> - <code>表格</code></li>
@@ -3281,8 +3305,8 @@
 <p><img alt="table.webp" src="https://s2.loli.net/2025/06/01/VuWBr9YfGtSADUR.webp" /></p>
 <p>在表格中输入时,类似于Excel可以使用箭头键切换单元格,双击可以更改单元格中的内容</p>
 <p>使用鼠标右键可以进行合并单元格等操作.</p>
-<h2 id="十一尺寸标注">十一、尺寸标注<a class="headerlink" href="#十一尺寸标注" title="permalink">💭</a></h2>
-<h3 id="111-概述">11.1 概述<a class="headerlink" href="#111-概述" title="permalink">💭</a></h3>
+<h2 id="十一尺寸标注">十一、尺寸标注<a class="headerlink" href="#十一尺寸标注" title="permalink">¶</a></h2>
+<h3 id="111-概述">11.1 概述<a class="headerlink" href="#111-概述" title="permalink">¶</a></h3>
 <p>尺寸标注规则:</p>
 <ul>
 <li>绘图时 1: 1 绘图, 因为尺寸标注要求标注实际的尺寸</li>
@@ -3295,7 +3319,7 @@
 <li>尺寸起止符号</li>
 <li>尺寸文本</li>
 </ul>
-<h3 id="112-尺寸标注样式-d">11.2 尺寸标注样式 <code>D</code><a class="headerlink" href="#112-尺寸标注样式-d" title="permalink">💭</a></h3>
+<h3 id="112-尺寸标注样式-d">11.2 尺寸标注样式 <code>D</code><a class="headerlink" href="#112-尺寸标注样式-d" title="permalink">¶</a></h3>
 <ul>
 <li>方法一: <code>标注(N)</code> - <code>标注样式</code></li>
 <li>方法二: <code>格式(O)</code>- <code>标注样式</code></li>
@@ -3308,64 +3332,64 @@
 <p><img alt="d3.webp" src="https://s2.loli.net/2025/06/01/1NB8WVdtRCzlqoi.webp" /></p>
 <p><img alt="d4.webp" src="https://s2.loli.net/2025/06/01/YpCEtGRK7czafiT.webp" /></p>
 <p><img alt="d5.webp" src="https://s2.loli.net/2025/06/01/naFAwRoOLXhN4W6.webp" /></p>
-<h3 id="113-替代尺寸标注样式">11.3 替代尺寸标注样式<a class="headerlink" href="#113-替代尺寸标注样式" title="permalink">💭</a></h3>
+<h3 id="113-替代尺寸标注样式">11.3 替代尺寸标注样式<a class="headerlink" href="#113-替代尺寸标注样式" title="permalink">¶</a></h3>
 <p>替代尺寸标注样式是设置某一尺寸标注样式的临时替代</p>
 <p><img alt="re.webp" src="https://s2.loli.net/2025/06/02/9VKLqE8m7HT5fMa.webp" /></p>
-<h3 id="114-创建尺寸标注">11.4 创建尺寸标注<a class="headerlink" href="#114-创建尺寸标注" title="permalink">💭</a></h3>
+<h3 id="114-创建尺寸标注">11.4 创建尺寸标注<a class="headerlink" href="#114-创建尺寸标注" title="permalink">¶</a></h3>
 <p>常用的尺寸标注有线性标注, 对齐标注, 基线标注, 连续标注, 快速标注</p>
-<h4 id="1141-线性标注-dimlinear-dimlin">11.4.1 线性标注 <code>DIMLINEAR</code> <code>DIMLIN</code><a class="headerlink" href="#1141-线性标注-dimlinear-dimlin" title="permalink">💭</a></h4>
+<h4 id="1141-线性标注-dimlinear-dimlin">11.4.1 线性标注 <code>DIMLINEAR</code> <code>DIMLIN</code><a class="headerlink" href="#1141-线性标注-dimlinear-dimlin" title="permalink">¶</a></h4>
 <p>主要用于水平或垂直方向的标注</p>
 <ul>
 <li>方法一: <code>标注(N)</code> - <code>线性标注</code></li>
 <li>方法二: 命令行输入 <code>DIMLINEAR</code> <code>DIMLIN</code></li>
 </ul>
 <p><img alt="dimlin.webp" src="https://s2.loli.net/2025/06/02/EAbtHrB6cVMJNx2.webp" /></p>
-<h4 id="1142-对齐标注-dimaligned-dimali">11.4.2 对齐标注 <code>DIMALIGNED</code> <code>DIMALI</code><a class="headerlink" href="#1142-对齐标注-dimaligned-dimali" title="permalink">💭</a></h4>
+<h4 id="1142-对齐标注-dimaligned-dimali">11.4.2 对齐标注 <code>DIMALIGNED</code> <code>DIMALI</code><a class="headerlink" href="#1142-对齐标注-dimaligned-dimali" title="permalink">¶</a></h4>
 <p>用于倾斜线条的标注</p>
 <ul>
 <li>方法一: <code>标注(N)</code> - <code>对齐</code></li>
 <li>方法二: 命令行输入 <code>DIMALIGNED</code> <code>DIMALI</code></li>
 </ul>
 <p><img alt="dimali.webp" src="https://s2.loli.net/2025/06/02/XsNCRiLkF7q2p4Z.webp" /></p>
-<h4 id="1143-基线标注-dimbaseline-dimbase">11.4.3 基线标注 <code>DIMBASELINE</code> <code>DIMBASE</code><a class="headerlink" href="#1143-基线标注-dimbaseline-dimbase" title="permalink">💭</a></h4>
+<h4 id="1143-基线标注-dimbaseline-dimbase">11.4.3 基线标注 <code>DIMBASELINE</code> <code>DIMBASE</code><a class="headerlink" href="#1143-基线标注-dimbaseline-dimbase" title="permalink">¶</a></h4>
 <p>以线性标注的一侧为基准进行标注. 使用基线标注之前,必须要有一个线性标注.</p>
 <ul>
 <li>方法一: <code>标注(N)</code> - <code>基线</code></li>
 <li>方法二: 命令行输入 <code>DIMBASELINE</code> <code>DIMBASE</code></li>
 </ul>
 <p><img alt="dimbase.webp" src="https://s2.loli.net/2025/06/02/dUO3NAv2GnxlJty.webp" /></p>
-<h4 id="1144-连续标注-dimcontinue-dimcont">11.4.4 连续标注 <code>DIMCONTINUE</code> <code>DIMCONT</code><a class="headerlink" href="#1144-连续标注-dimcontinue-dimcont" title="permalink">💭</a></h4>
+<h4 id="1144-连续标注-dimcontinue-dimcont">11.4.4 连续标注 <code>DIMCONTINUE</code> <code>DIMCONT</code><a class="headerlink" href="#1144-连续标注-dimcontinue-dimcont" title="permalink">¶</a></h4>
 <p>类似于基线标注.</p>
 <ul>
 <li>方法一: <code>标注(N)</code> - <code>连续</code></li>
 <li>方法二: 命令行输入 <code>DIMCONTINUE</code> <code>DIMCONT</code></li>
 </ul>
 <p><img alt="dimcont.webp" src="https://s2.loli.net/2025/06/02/qe6pkwhsjX4FEVP.webp" /></p>
-<h4 id="1145-快速标注-qdim">11.4.5 快速标注 <code>QDIM</code><a class="headerlink" href="#1145-快速标注-qdim" title="permalink">💭</a></h4>
+<h4 id="1145-快速标注-qdim">11.4.5 快速标注 <code>QDIM</code><a class="headerlink" href="#1145-快速标注-qdim" title="permalink">¶</a></h4>
 <p>选中图形即可快速进行连续标注和基线标注, 非常好用.</p>
 <ul>
 <li>方法一: <code>标注(N)</code> - <code>快速标注</code></li>
 <li>方法二: 命令行输入 <code>QDIM</code></li>
 </ul>
-<h3 id="115-编辑尺寸标注-dimedit">11.5 编辑尺寸标注 <code>DIMEDIT</code><a class="headerlink" href="#115-编辑尺寸标注-dimedit" title="permalink">💭</a></h3>
-<h3 id="116-编辑尺寸标注文字-dimtedit">11.6 编辑尺寸标注文字 <code>DIMTEDIT</code><a class="headerlink" href="#116-编辑尺寸标注文字-dimtedit" title="permalink">💭</a></h3>
+<h3 id="115-编辑尺寸标注-dimedit">11.5 编辑尺寸标注 <code>DIMEDIT</code><a class="headerlink" href="#115-编辑尺寸标注-dimedit" title="permalink">¶</a></h3>
+<h3 id="116-编辑尺寸标注文字-dimtedit">11.6 编辑尺寸标注文字 <code>DIMTEDIT</code><a class="headerlink" href="#116-编辑尺寸标注文字-dimtedit" title="permalink">¶</a></h3>
 <p>双击可直接修改尺寸标注文字的内容</p>
-<h3 id="117-更新尺寸标注--dimstyle">11.7 更新尺寸标注 <code>-DIMSTYLE</code><a class="headerlink" href="#117-更新尺寸标注--dimstyle" title="permalink">💭</a></h3>
+<h3 id="117-更新尺寸标注--dimstyle">11.7 更新尺寸标注 <code>-DIMSTYLE</code><a class="headerlink" href="#117-更新尺寸标注--dimstyle" title="permalink">¶</a></h3>
 <p>如果切换了尺寸标注样式,可以使用此方法批量替换样式.</p>
 <ul>
 <li>方法一: <code>标注(N)</code> - <code>更新</code></li>
 <li>方法二: 命令行输入 <code>-DIMSTYLE</code></li>
 </ul>
-<h2 id="十二输出图形为pdf">十二、输出图形为PDF<a class="headerlink" href="#十二输出图形为pdf" title="permalink">💭</a></h2>
+<h2 id="十二输出图形为pdf">十二、输出图形为PDF<a class="headerlink" href="#十二输出图形为pdf" title="permalink">¶</a></h2>
 <p><mark class="critic">AutoCAD绘图基本原则: 始终以1:1绘图, 绘图时的长度即为实际长度</mark></p>
-<h3 id="121-模型和布局-tilemode">12.1 模型和布局 <code>TILEMODE</code><a class="headerlink" href="#121-模型和布局-tilemode" title="permalink">💭</a></h3>
+<h3 id="121-模型和布局-tilemode">12.1 模型和布局 <code>TILEMODE</code><a class="headerlink" href="#121-模型和布局-tilemode" title="permalink">¶</a></h3>
 <p>AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和布局.</p>
 <ul>
 <li>模型, 就是绘图时使用的选项卡</li>
 <li>布局, 就是绘图结束, 用来输出图形的选项卡</li>
 </ul>
 <p>可以在命令行输入 <code>TILEMODE</code> 切换模型和布局选项卡, 输入值为1时切换为模型, 输入值为0时切换为布局.</p>
-<h3 id="122-创建布局-layout-layoutwizard">12.2 创建布局 <code>LAYOUT</code> <code>LAYOUTWIZARD</code><a class="headerlink" href="#122-创建布局-layout-layoutwizard" title="permalink">💭</a></h3>
+<h3 id="122-创建布局-layout-layoutwizard">12.2 创建布局 <code>LAYOUT</code> <code>LAYOUTWIZARD</code><a class="headerlink" href="#122-创建布局-layout-layoutwizard" title="permalink">¶</a></h3>
 <p><code>LAYOUT</code> <code>LAYOUTWIZARD</code>两个命令并不相同, <code>LAYOUT</code> 通过模版创建新布局, <code>LAYOUTWIZARD</code> 通过对话框创建新布局. 此处主要介绍 <code>LAYOUTWIZARD</code>.</p>
 <ul>
 <li>方法一: 命令行输入 <code>LAYOUTWIZARD</code></li>
@@ -3385,7 +3409,7 @@
 <p><img alt="l5.webp" src="https://s2.loli.net/2025/06/02/nAWVjJs1E9pNSL3.webp" /></p>
 <p>第八步: 完成并关闭向导. 创建的布局如下图所示</p>
 <p><img alt="l6.webp" src="https://s2.loli.net/2025/06/02/XhQMAxUnONBHCDJ.webp" /></p>
-<h3 id="123-设置布局参数-pagesetup">12.3 设置布局参数 <code>PAGESETUP</code><a class="headerlink" href="#123-设置布局参数-pagesetup" title="permalink">💭</a></h3>
+<h3 id="123-设置布局参数-pagesetup">12.3 设置布局参数 <code>PAGESETUP</code><a class="headerlink" href="#123-设置布局参数-pagesetup" title="permalink">¶</a></h3>
 <p>如果不需要使用样式表, 请忽略此步骤.</p>
 <ul>
 <li>方法一: <code>文件(F)</code> - <code>页面设置管理器</code></li>
@@ -3393,10 +3417,10 @@
 </ul>
 <p><img alt="set1.webp" src="https://s2.loli.net/2025/06/02/3bHlDeLcCyOQhg5.webp" /></p>
 <p><img alt="set2.webp" src="https://s2.loli.net/2025/06/02/Y6CgB1J85FH739K.webp" /></p>
-<h3 id="124-将布局输出为pdf-plot">12.4 将布局输出为PDF <code>PLOT</code><a class="headerlink" href="#124-将布局输出为pdf-plot" title="permalink">💭</a></h3>
+<h3 id="124-将布局输出为pdf-plot">12.4 将布局输出为PDF <code>PLOT</code><a class="headerlink" href="#124-将布局输出为pdf-plot" title="permalink">¶</a></h3>
 <p>输出之前先使用 <code>文件(I)</code> - <code>打印预览</code> 查看效果</p>
 <p>再通过 <code>文件(I)</code> - <code>打印</code> 或在命令行输入 <code>PLOT</code> 将图形输出为PDF</p>
-<h2 id="十三脚本-script">十三、脚本 <code>SCRIPT</code><a class="headerlink" href="#十三脚本-script" title="permalink">💭</a></h2>
+<h2 id="十三脚本-script">十三、脚本 <code>SCRIPT</code><a class="headerlink" href="#十三脚本-script" title="permalink">¶</a></h2>
 <p>通过 <code>.scr</code> 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.</p>
 
 

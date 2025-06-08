@@ -1275,6 +1275,8 @@
       
         
       
+        
+      
     
     
       
@@ -1630,8 +1632,8 @@
 
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-12</code></p>
 <p><a class="md-button md-button--primary" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.538 1.1-6.745 21.8h-2.77L18.77 1.1ZM24 1.1v21.8h-2.462V1.1Zm-12 0v21.8H9.538V1.1Zm-2.462 0L2.77 22.9H0L6.746 1.1Z"/></svg></span> MDN权威文档</a></p>
-<h2 id="一javascript简介">一、JavaScript简介<a class="headerlink" href="#一javascript简介" title="permalink">💭</a></h2>
-<h3 id="11-javascript-代码的书写位置">1.1 JavaScript 代码的书写位置<a class="headerlink" href="#11-javascript-代码的书写位置" title="permalink">💭</a></h3>
+<h2 id="一javascript简介">一、JavaScript简介<a class="headerlink" href="#一javascript简介" title="permalink">¶</a></h2>
+<h3 id="11-javascript-代码的书写位置">1.1 JavaScript 代码的书写位置<a class="headerlink" href="#11-javascript-代码的书写位置" title="permalink">¶</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="内部js代码" name="__tabbed_1" type="radio" /><input id="外部js代码" name="__tabbed_1" type="radio" /><input id="写在其他html标签内部" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="内部js代码">内部js代码</label><label for="外部js代码">外部js代码</label><label for="写在其他html标签内部">写在其他html标签内部</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1655,15 +1657,15 @@
 </div>
 </div>
 </div>
-<h3 id="12-注释">1.2 注释<a class="headerlink" href="#12-注释" title="permalink">💭</a></h3>
+<h3 id="12-注释">1.2 注释<a class="headerlink" href="#12-注释" title="permalink">¶</a></h3>
 <p>单行注释 <code>//</code>，快捷键 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-slash">/</kbd></span></p>
 <p>多行注释 <code>/* 此处代码会被忽略 */</code>，快捷键 <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-a">A</kbd></span></p>
-<h3 id="13-结束符">1.3 结束符<a class="headerlink" href="#13-结束符" title="permalink">💭</a></h3>
+<h3 id="13-结束符">1.3 结束符<a class="headerlink" href="#13-结束符" title="permalink">¶</a></h3>
 <p>js代码使用 <code>;</code> 作为每一行代码结束的标志，可写可不写，但是要统一</p>
 <p>实际情况： 实际开发中，可写可不写, 浏览器(JavaScript 引擎) 可以自动推断语句的结束位置</p>
 <p>现状： 在实际开发中，越来越多的人主张，书写 JavaScript 代码时省略结束符</p>
 <p>约定：为了风格统一，结束符要么每句都写，要么每句都不写（按照团队要求.）</p>
-<h3 id="14-常用的输入输出语句">1.4 常用的输入输出语句<a class="headerlink" href="#14-常用的输入输出语句" title="permalink">💭</a></h3>
+<h3 id="14-常用的输入输出语句">1.4 常用的输入输出语句<a class="headerlink" href="#14-常用的输入输出语句" title="permalink">¶</a></h3>
 <ul>
 <li><code>document.write('要输出的内容')</code> 在网页上输出内容，可以传入包含html标签的字符串，这些字符串会被添加到 <code>body</code> 标签内</li>
 <li><code>alert()</code> 页面弹出警告对话框</li>
@@ -1675,7 +1677,7 @@
 <p>按HTML文档流顺序执行JavaScript代码</p>
 <p><code>alert()</code> 和 <code>prompt()</code> 它们会跳过页面渲染先被执行</p>
 </details>
-<h2 id="二变量">二、变量<a class="headerlink" href="#二变量" title="permalink">💭</a></h2>
+<h2 id="二变量">二、变量<a class="headerlink" href="#二变量" title="permalink">¶</a></h2>
 <p>使用 <code>let</code> 关键字来声明变量，一般声明变量就要初始化（对变量赋值）。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1726,7 +1728,7 @@
 <summary>常量</summary>
 <p>使用 <code>const</code> 关键字来声明常量，常量声明时必须初始化，命名时常量的变量名全大写。</p>
 </details>
-<h2 id="三数据类型">三、数据类型<a class="headerlink" href="#三数据类型" title="permalink">💭</a></h2>
+<h2 id="三数据类型">三、数据类型<a class="headerlink" href="#三数据类型" title="permalink">¶</a></h2>
 <ul>
 <li>基本数据类型：<ul>
 <li>number 数字型</li>
@@ -1741,35 +1743,35 @@
 </ul>
 </li>
 </ul>
-<h3 id="31-数字number">3.1 数字number<a class="headerlink" href="#31-数字number" title="permalink">💭</a></h3>
+<h3 id="31-数字number">3.1 数字number<a class="headerlink" href="#31-数字number" title="permalink">¶</a></h3>
 <p>js中的数字类型类似于python中的数字类型。<code>NaN</code> 是js中的一个特殊的数字，它代表一个计算错误，它是一个不正确的或者一个未定义的数学操作所得到的结果，任何对 NaN 的操作都会返回 NaN</p>
-<h3 id="32-字符串string">3.2 字符串string<a class="headerlink" href="#32-字符串string" title="permalink">💭</a></h3>
+<h3 id="32-字符串string">3.2 字符串string<a class="headerlink" href="#32-字符串string" title="permalink">¶</a></h3>
 <p>通过单引号（'） 、双引号（"）或反引号(`) 包裹的数据都叫字符串，单引号和双引号没有本质上的区别，推荐使用单引号。字符串可以使用 + 拼接。字符串中有变量时，可以用 ${ } 包住变量，类似于python中是 f字符串</p>
 <ol>
 <li>无论单引号或是双引号必须成对使用</li>
 <li>单引号/双引号可以互相嵌套，但是不以自已嵌套自已（口诀：外双内单，或者外单内双）</li>
 <li>必要时可以使用转义符 \，输出单引号或双引号</li>
 </ol>
-<h3 id="33-布尔值boolean">3.3 布尔值boolean<a class="headerlink" href="#33-布尔值boolean" title="permalink">💭</a></h3>
+<h3 id="33-布尔值boolean">3.3 布尔值boolean<a class="headerlink" href="#33-布尔值boolean" title="permalink">¶</a></h3>
 <p>表示肯定或否定时在计算机中对应的是布尔类型数据。</p>
 <p>它有两个固定的值 true 和 false，表示肯定的数据用 true（真），表示否定的数据用 false（假）。</p>
-<h3 id="34-未定义类型undefined">3.4 未定义类型undefined<a class="headerlink" href="#34-未定义类型undefined" title="permalink">💭</a></h3>
+<h3 id="34-未定义类型undefined">3.4 未定义类型undefined<a class="headerlink" href="#34-未定义类型undefined" title="permalink">¶</a></h3>
 <p>未定义是比较特殊的类型，只有一个值 <code>undefined</code></p>
 <p>只声明变量，不赋值的情况下，变量的默认值为 undefined，一般很少直接为某个变量赋值为 undefined。我们开发中经常声明一个变量，等待传送过来的数据。如果我们不知道这个数据是否传递过来，此时我们可以通过检测这个变量是不是undefined，就判断用户是否有数据传递过来。</p>
-<h3 id="35-空类型null">3.5 空类型null<a class="headerlink" href="#35-空类型null" title="permalink">💭</a></h3>
+<h3 id="35-空类型null">3.5 空类型null<a class="headerlink" href="#35-空类型null" title="permalink">¶</a></h3>
 <p>JavaScript 中的 null 仅仅是一个代表“无”、“空”或“值未知”的特殊值。常把 null 作为尚未创建的对象，即将来有个变量里面存放的是一个对象，但是对象还没创建好，可以先给个null</p>
 <details class="null 和 undefined 区别" open="open">
 <summary>Null</summary>
 <p>undefined 表示没有赋值</p>
 <p>null 表示赋值了，但是内容为空</p>
 </details>
-<h3 id="36-使用typeof判断数据类型">3.6 使用typeof判断数据类型<a class="headerlink" href="#36-使用typeof判断数据类型" title="permalink">💭</a></h3>
+<h3 id="36-使用typeof判断数据类型">3.6 使用typeof判断数据类型<a class="headerlink" href="#36-使用typeof判断数据类型" title="permalink">¶</a></h3>
 <p><code>typeof</code> 运算符可以返回被检测的数据类型。它支持两种语法形式（用x表示变量）：</p>
 <ol>
 <li>作为运算符： <code>typeof x</code> （常用的写法）</li>
 <li>函数形式： <code>typeof(x)</code></li>
 </ol>
-<h3 id="37-类型转换">3.7 类型转换<a class="headerlink" href="#37-类型转换" title="permalink">💭</a></h3>
+<h3 id="37-类型转换">3.7 类型转换<a class="headerlink" href="#37-类型转换" title="permalink">¶</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="隐式转换" name="__tabbed_2" type="radio" /><input id="强制转换" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="隐式转换">隐式转换</label><label for="强制转换">强制转换</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1813,7 +1815,7 @@
 </div>
 </div>
 </div>
-<h2 id="四运算符">四、运算符<a class="headerlink" href="#四运算符" title="permalink">💭</a></h2>
+<h2 id="四运算符">四、运算符<a class="headerlink" href="#四运算符" title="permalink">¶</a></h2>
 <details class="info" open="open">
 <summary>优先级</summary>
 <ol>
@@ -1881,8 +1883,8 @@
 </div>
 </div>
 </div>
-<h2 id="五分支语句">五、分支语句<a class="headerlink" href="#五分支语句" title="permalink">💭</a></h2>
-<h3 id="51-if语句">5.1 if语句<a class="headerlink" href="#51-if语句" title="permalink">💭</a></h3>
+<h2 id="五分支语句">五、分支语句<a class="headerlink" href="#五分支语句" title="permalink">¶</a></h2>
+<h3 id="51-if语句">5.1 if语句<a class="headerlink" href="#51-if语句" title="permalink">¶</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="单分支" name="__tabbed_4" type="radio" /><input id="双分支" name="__tabbed_4" type="radio" /><input id="多分支" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="单分支">单分支</label><label for="双分支">双分支</label><label for="多分支">多分支</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1917,7 +1919,7 @@
 </div>
 </div>
 </div>
-<h3 id="52-switch语句">5.2 switch语句<a class="headerlink" href="#52-switch语句" title="permalink">💭</a></h3>
+<h3 id="52-switch语句">5.2 switch语句<a class="headerlink" href="#52-switch语句" title="permalink">¶</a></h3>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">变量名</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">值1</span><span class="o">:</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nx">代码</span>
@@ -1938,8 +1940,8 @@
 <li>switch case一般需要配合break关键字使用 没有break会造成case穿透</li>
 </ul>
 </details>
-<h2 id="六循环语句">六、循环语句<a class="headerlink" href="#六循环语句" title="permalink">💭</a></h2>
-<h3 id="61-while循环">6.1 while循环<a class="headerlink" href="#61-while循环" title="permalink">💭</a></h3>
+<h2 id="六循环语句">六、循环语句<a class="headerlink" href="#六循环语句" title="permalink">¶</a></h2>
+<h3 id="61-while循环">6.1 while循环<a class="headerlink" href="#61-while循环" title="permalink">¶</a></h3>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">循环终止条件</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nx">循环体</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nx">使循环终止的代码</span><span class="err">（</span><span class="nx">一般是自增自减运算</span><span class="err">）</span>
@@ -1953,15 +1955,15 @@
 <li>使循环终止的代码：常用自增自减运算</li>
 </ul>
 </details>
-<h3 id="62-for循环">6.2 for循环<a class="headerlink" href="#62-for循环" title="permalink">💭</a></h3>
+<h3 id="62-for循环">6.2 for循环<a class="headerlink" href="#62-for循环" title="permalink">¶</a></h3>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">变量起始值</span><span class="p">;</span><span class="w"> </span><span class="nx">循环终止条件</span><span class="p">;</span><span class="w"> </span><span class="nx">使循环终止的代码</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nx">循环体</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="63-退出循环">6.3 退出循环<a class="headerlink" href="#63-退出循环" title="permalink">💭</a></h3>
+<h3 id="63-退出循环">6.3 退出循环<a class="headerlink" href="#63-退出循环" title="permalink">¶</a></h3>
 <p><code>break</code> 语句，退出本次循环</p>
 <p><code>continue</code> 语句，退出整个循环语句</p>
-<h2 id="七数组array">七、数组Array<a class="headerlink" href="#七数组array" title="permalink">💭</a></h2>
+<h2 id="七数组array">七、数组Array<a class="headerlink" href="#七数组array" title="permalink">¶</a></h2>
 <p>使用let声明一个数组的两种方式：</p>
 <ul>
 <li><code>let myArr = [元素1, 元素2, 元素3]</code></li>
@@ -2161,8 +2163,8 @@
 </span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArr</span><span class="p">)</span><span class="w"> </span><span class="c1">// [51, 37]</span>
 </span></code></pre></div>
 </details>
-<h2 id="八函数">八、函数<a class="headerlink" href="#八函数" title="permalink">💭</a></h2>
-<h3 id="81-具名函数">8.1 具名函数<a class="headerlink" href="#81-具名函数" title="permalink">💭</a></h3>
+<h2 id="八函数">八、函数<a class="headerlink" href="#八函数" title="permalink">¶</a></h2>
+<h3 id="81-具名函数">8.1 具名函数<a class="headerlink" href="#81-具名函数" title="permalink">¶</a></h3>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">函数名</span><span class="p">(</span><span class="nx">参数</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="nx">函数体</span>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">返回值</span>
@@ -2234,7 +2236,7 @@
 </tbody>
 </table>
 </details>
-<h3 id="82-匿名函数">8.2 匿名函数<a class="headerlink" href="#82-匿名函数" title="permalink">💭</a></h3>
+<h3 id="82-匿名函数">8.2 匿名函数<a class="headerlink" href="#82-匿名函数" title="permalink">¶</a></h3>
 <p>两种匿名函数：</p>
 <ol>
 <li>函数表达式：将匿名函数赋值给一个变量，并且通过变量名称进行调用 我们将这个称为函数表达式
@@ -2254,7 +2256,7 @@
 </span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">函数体</span><span class="w"> </span><span class="p">}());</span>
 </span></code></pre></div></li>
 </ol>
-<h2 id="九对象">九、对象<a class="headerlink" href="#九对象" title="permalink">💭</a></h2>
+<h2 id="九对象">九、对象<a class="headerlink" href="#九对象" title="permalink">¶</a></h2>
 <p>声明对象的两种方式：</p>
 <ul>
 <li>方式一 <code>let 对象名 = {}</code></li>

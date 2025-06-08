@@ -1433,6 +1433,8 @@
       
         
       
+        
+      
     
     
       
@@ -1560,7 +1562,7 @@
 
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-12</code></p>
 <p><a class="md-button md-button--primary" href="https://beautifulsoup.readthedocs.io/zh-cn/v4.4.0/">bs4官方文档</a></p>
-<h2 id="第一步创建soup对象">第一步：创建soup对象<a class="headerlink" href="#第一步创建soup对象" title="permalink">💭</a></h2>
+<h2 id="第一步创建soup对象">第一步：创建soup对象<a class="headerlink" href="#第一步创建soup对象" title="permalink">¶</a></h2>
 <p><code>BeautifulSoup()</code> 类</p>
 <ul>
 <li>第一个参数是html格式的文本，常传入 <code>res.text</code></li>
@@ -1617,7 +1619,7 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># 创建soup对象</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="第二步对soup对象进行操作">第二步：对soup对象进行操作<a class="headerlink" href="#第二步对soup对象进行操作" title="permalink">💭</a></h2>
+<h2 id="第二步对soup对象进行操作">第二步：对soup对象进行操作<a class="headerlink" href="#第二步对soup对象进行操作" title="permalink">¶</a></h2>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># print(soup.prettify())</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># 获取html的title标签，即浏览器标签页标题</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># print(soup.title)</span>
@@ -1669,7 +1671,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="find_all方法">find_all()方法<a class="headerlink" href="#find_all方法" title="permalink">💭</a></h2>
+<h2 id="find_all方法">find_all()方法<a class="headerlink" href="#find_all方法" title="permalink">¶</a></h2>
 <p>标准写法：</p>
 <p><code>find_all(name , attrs , recursive , string , **kwargs)</code></p>
 <p>简写：可以将soup或tag对象的对象名直接当成是函数使用，它们的用法和find_all()方法完全相同</p>
@@ -1698,9 +1700,9 @@
 <li><code>recursive=False</code> 设置此参数只查找子节点，默认查找所有后代节点</li>
 <li>string参数（常作为关键字参数传入），用法和name参数类似，只是针对的是html中的文本来进行查找，而不是针对标签</li>
 </ul>
-<h2 id="find方法">find()方法<a class="headerlink" href="#find方法" title="permalink">💭</a></h2>
+<h2 id="find方法">find()方法<a class="headerlink" href="#find方法" title="permalink">¶</a></h2>
 <p>用法和find_all()相同，只查找第一个tag对象，返回tag对象</p>
-<h2 id="css选择器进行查找">css选择器进行查找<a class="headerlink" href="#css选择器进行查找" title="permalink">💭</a></h2>
+<h2 id="css选择器进行查找">css选择器进行查找<a class="headerlink" href="#css选择器进行查找" title="permalink">¶</a></h2>
 <p><code>css.select("css选择器")</code> 方法 使用css选择器查找，返回tag对象列表</p>
 <p><code>select()</code> 和 <code>select_one()</code>方法，两个方法作用相同，与<code>css.select()</code>用法相同，值查找第一个匹配到的tag对象，返回tag对象</p>
 
