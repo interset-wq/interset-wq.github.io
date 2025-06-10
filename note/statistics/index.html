@@ -1158,6 +1158,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="7.4 区间估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-置信区间的概念及其求法" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1 置信区间的概念及其求法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-单个正态总体的情形" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.2 单个正态总体的情形
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1218,11 +1242,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-单个正态总体参数的" class="md-nav__link">
+  <a href="#82-单个正态总体参数的假设检验" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 单个正态总体参数的
+      8.2 单个正态总体参数的假设检验
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="8.2 单个正态总体参数的假设检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#821-期望的假设检验" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.1 期望的假设检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#822-方差的假设检验" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.2 方差的假设检验
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1594,6 +1642,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="7.4 区间估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-置信区间的概念及其求法" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1 置信区间的概念及其求法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-单个正态总体的情形" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.2 单个正态总体的情形
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1654,11 +1726,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-单个正态总体参数的" class="md-nav__link">
+  <a href="#82-单个正态总体参数的假设检验" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 单个正态总体参数的
+      8.2 单个正态总体参数的假设检验
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="8.2 单个正态总体参数的假设检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#821-期望的假设检验" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.1 期望的假设检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#822-方差的假设检验" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.2 方差的假设检验
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2283,240 +2379,154 @@ i i
 <h3 id="73-估计量的评选标准">7.3  估计量的评选标准<a class="headerlink" href="#73-估计量的评选标准" title="permalink">¶</a></h3>
 <ul>
 <li><strong>无偏性</strong> 设 <span class="arithmatex">\(\hat{\theta}\)</span> 是参数 <span class="arithmatex">\(\theta\)</span> 的估计量,  若 <span class="arithmatex">\(E(\hat{\theta} ) = \theta\)</span> ,  则称 <span class="arithmatex">\(\hat{\theta}\)</span>  是 <span class="arithmatex">\(\theta\)</span>的无偏估计量．</li>
-<li><strong>有效性</strong> 设\hat{\theta}  与\hat{\theta}  都是\hat{\theta} 的无偏估计量,  若D(\hat{\theta}  ) &lt; D(\hat{\theta}  ),   则称\hat{\theta}  比\hat{\theta}  更有效．</li>
-<li><strong>相合性</strong> 设\hat{\theta} 是\hat{\theta} 的估计量,  若\hat{\theta}  p\to\hat{\theta}  (n \to \infty),   则称\hat{\theta}  是\hat{\theta} 的相合估计量． </li>
+<li><strong>有效性</strong> 设<span class="arithmatex">\(\hat{\theta _1}\)</span>  与<span class="arithmatex">\(\hat{\theta _2}\)</span>  都是 <span class="arithmatex">\(\theta\)</span> 的无偏估计量,  若 <span class="arithmatex">\(D(\hat{\theta _1}  ) &lt; D(\hat{\theta _2}  )\)</span>,   则称<span class="arithmatex">\(\hat{\theta _1}\)</span>  比<span class="arithmatex">\(\hat{\theta _2}\)</span>  更有效．</li>
+<li><strong>相合性</strong> 设<span class="arithmatex">\(\hat{\theta}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的估计量,  若<span class="arithmatex">\(\hat{\theta} \xrightarrow{p} \theta \space  (n \to \infty)\)</span>,   则称 <span class="arithmatex">\(\hat{\theta}\)</span>  是 <span class="arithmatex">\(\theta\)</span> 的相合估计量． </li>
 </ul>
-<!-- 例1 证明：样本均值 X 是总体期望 \mu 的无偏估计量,  样本方差 S2 是
-总体方差 \sigma 2 的无偏估计量．
- 1 n  1
-证 因为 E(X ) = E \sum X = \cdot  n\mu = \mu,  所以 X 是 \mu 的无偏估计量．
- 
-n i n
- 
-i=1
- 1 n  1  n 
-又 E(S2) = E \sum(X - X )2 = E \sum X 2 - nX 2 ,  
-   
-i i
-n -1 n -1
-   
-i=1 i=1
-而 E(X 2) = D(X ) + E2(X ) = \sigma 2 + \mu2,  E(X 2) = D(X ) + E2(X ) = \sigma 2 n + \mu2,  
-i i i
-1
-则 E(S2) = [n(\sigma 2 + \mu2) - n(\sigma 2 n + \mu2)] = \sigma 2,  
-n -1
-所以 S2 是 \sigma 2 的无偏估计量． 
-
-n -1
-由于 S2 是 \sigma 2 的无偏估计量,   且 S2 = S2 ,  
-n
-n -1 n -1
-因此 E(S2) = E(S2) = \sigma 2 ,   所以 S2 不是 \sigma 2 的无偏估计量．
-n n
-注意 虽然 S2 是 \sigma 2 的无偏估计量,   但是 S 并不是 \sigma  的无偏估计量．
-事实上,  由于 D(S) = E(S2) - E2(S) ,  得
-E(S) = E(S2) - D(S) = \sigma 2 - D(S) \not = \sigma  
-
-例2 设 (X ,  X ,  X ) 为来自总体 N(\mu,  1) 的一个样本,   \mu 未知,  
-1 2 3
-则下列 \mu 的无偏估计量中最有效的是 (         )．
-1 1 1 1 1 1
-(A) X + X + X ； (B) X + X + X ；
-1 2 3 1 2 3
-2 3 6 2 4 4
-1 1 1
-(C) X + X + X ； (D) X + X - X ．
-1 2 3 1 2 3
-3 3 3
- 1 1 1  1 1 1 7  1 1 1  3
-解 D X + X + X = + + = ； D X + X + X = ；
-   
-1 2 3 1 2 3
- 2 3 6  4 9 36 18  2 4 4  8
- 1 1 1  1
-D X + X + X = ； D X + X - X  = 3．
- 
-1 2 3 1 2 3
- 3 3 3  3  -->
-
+<details class="example" open="open">
+<summary>无偏性</summary>
+<p>证明：样本均值 <span class="arithmatex">\(\bar{X}\)</span> 是总体期望 <span class="arithmatex">\(\mu\)</span> 的无偏估计量,  样本方差 <span class="arithmatex">\(S^2\)</span> 是总体方差 <span class="arithmatex">\(\sigma ^2\)</span> 的无偏估计量．</p>
+<p><strong>证</strong> 因为 <span class="arithmatex">\(E( \bar{X} ) = E( \frac{1}{n} \sum X_i) = \frac{1}{n} \cdot  n \mu = \mu\)</span>,  所以 <span class="arithmatex">\(\bar{X}\)</span> 是 <span class="arithmatex">\(\mu\)</span> 的无偏估计量．</p>
+<p>又 <span class="arithmatex">\(E(S^2) = E \large[ \frac{1}{n - 1} \sum (X_i - \bar{X} ) ^2  \large] = \frac{1}{n - 1} E( \sum X_i ^2 - n \bar{X} ^2)\)</span></p>
+<p>而 <span class="arithmatex">\(E(X_i ^2) = D(X_i ) + E^2(X_i ) = \sigma ^2 + \mu ^2, \space  E(\bar{X} ^2) = D(\bar{X} ) + E^2(\bar{x} ) = \frac{ \sigma ^2}{ n} + \mu ^2\)</span></p>
+<p>则 <span class="arithmatex">\(E(S^2) = \frac{1}{n -1 } \large[n(\sigma ^2 + \mu ^2) - n(\frac{ \sigma ^2}{ n} + \mu ^2) \large] = \sigma ^2\)</span></p>
+<p>所以 <span class="arithmatex">\(S^2\)</span> 是 <span class="arithmatex">\(\sigma ^2\)</span> 的无偏估计量． </p>
+<hr />
+<p>由于 <span class="arithmatex">\(S^2\)</span> 是 <span class="arithmatex">\(\sigma ^2\)</span> 的无偏估计量,   且 <span class="arithmatex">\(\tilde{S}^2 = \frac{n - 1}{n} S^2\)</span> ,  </p>
+<p>因此 <span class="arithmatex">\(E( \tilde{S}^2 ) = \frac{n-1}{n} E(S^2) = \frac{n-1}{n} \sigma ^2\)</span> ,   所以  <span class="arithmatex">\(\tilde{S}^2\)</span>  不是 <span class="arithmatex">\(\sigma ^2\)</span> 的无偏估计量．</p>
+<blockquote>
+<p>虽然 <span class="arithmatex">\(S^2\)</span> 是 <span class="arithmatex">\(\sigma ^2\)</span> 的无偏估计量,   但是 <span class="arithmatex">\(S\)</span> 并不是 <span class="arithmatex">\(\sigma\)</span>  的无偏估计量．事实上,  由于 <span class="arithmatex">\(D(S) = E(S^2) - E^2(S)\)</span> ,  得 $E(S) = \sqrt{ E(S^2) - D(S) } = \sqrt{ \sigma ^2 - D(S) } \not = \sigma  $</p>
+</blockquote>
+</details>
+<details class="example" open="open">
+<summary>有效性</summary>
+<p>设 <span class="arithmatex">\((X_1 ,  X_2 ,  X_3 )\)</span> 为来自总体 <span class="arithmatex">\(N(\mu,  1)\)</span> 的一个样本,   <span class="arithmatex">\(\mu\)</span> 未知,  则下列 <span class="arithmatex">\(\mu\)</span> 的无偏估计量中最有效的是 (A)．</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> (A) <span class="arithmatex">\(\frac{1}{2} X_1 + \frac{1}{3} X_2 + \frac{1}{6} X_3\)</span></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (B) <span class="arithmatex">\(\frac{1}{2} X_1 + \frac{1}{4} X_2 + \frac{1}{4} X_3\)</span></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (C) <span class="arithmatex">\(\frac{1}{3} X_1 + \frac{1}{3} X_2 + \frac{1}{3} X_3\)</span></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (D) $ X_1 +  X_2 - X_3$</li>
+</ul>
+<p><strong>解析</strong> </p>
+<ul>
+<li><span class="arithmatex">\(D(\frac{1}{2} X_1 + \frac{1}{3} X_2 + \frac{1}{6} X_3) = \frac{1}{4} + \frac{1}{9} + \frac{1}{36} = \frac{7}{18}\)</span></li>
+<li><span class="arithmatex">\(D(\frac{1}{2} X_1 + \frac{1}{4} X_2 + \frac{1}{4} X_3) = \frac{1}{4} + \frac{1}{16} + \frac{1}{16} = \frac{3}{8}\)</span></li>
+<li><span class="arithmatex">\(D(\frac{1}{3} X_1 + \frac{1}{3} X_2 + \frac{1}{3} X_3) = \frac{1}{9} + \frac{1}{9} + \frac{1}{9} = \frac{1}{3}\)</span></li>
+<li><span class="arithmatex">\(D(X_1 +  X_2 - X_3) = 1 + 1 + 1 = 3\)</span></li>
+</ul>
+</details>
 <h3 id="74-区间估计">7.4  区间估计<a class="headerlink" href="#74-区间估计" title="permalink">¶</a></h3>
-<p>点估计的缺陷 未能反映出估计值\hat{\theta} 与真实值 \theta 之间的误差及可靠性．
-区间估计的思想 对未知参数\theta,  构造两统计量\hat{\theta} 与\hat{\theta}  ,   使得 \theta 能以
-1 2
-较大的概率落在随机区间 [\hat{\theta} ,  \hat{\theta}  ] 内,  由相应的观测值来估计 \theta 的
-1 2
-的观测值来估计\theta 的取值范围．
-P{\hat{\theta}  \leq\hat{\theta} \leq\hat{\theta} } —可信程度 E(\hat{\theta}  -\hat{\theta} ) —精确程度
-1 2 2 1
-最优区间估计：可信度给定情况下区间尽量短． </p>
-<p>定义 设总体 X 含未知参数\theta,  对于给定的\alpha \in(0,  1),  若存在两个
-统计量 \theta (X ,  ...,  X ) 和 \theta (X ,  ...,  X ),   使得 P{\theta \leq \theta \leq \theta } = 1- \alpha,<br />
-1 1 n 2 1 n 1 2
-则称[\theta ,  \theta ]为 \theta 的置信度为 1- \alpha 的置信区间．
-1 2
-引例 设总体 X \sim N(\mu,  \sigma 2),  其中 \sigma  = \sigma  已知,   \mu 未知,  X ,  ...,  X
-0 1 n
-是 X 的样本,  求 \mu 的置信度为1- \alpha 的置信区间． </p>
-<p>引例 设总体 X \sim N(\mu,  \sigma 2),  其中 \sigma  = \sigma  已知,  \mu 未知,  X ,  ...,  X
-0 1 n
-是 X 的样本,  求 \mu 的置信度为1- \alpha 的置信区间．
-X - \mu
-解 因 \sigma  = \sigma  已知,  则由抽样分布知 U = n 只包含未知参数 \mu 且
-0
-\sigma 
-服从 N(0,  1) ,  现需找一尽量短的区间,  使得U落在该区间内的概率为1- \alpha．
-y
-由分位数的定义知 P{-u \leq U \leq u } = 1- \alpha,<br />
-\varphi(x)
-1-\alpha/2 1-\alpha/2
-\alpha / 2 \alpha / 2
- X - \mu 
-即 P -u \leq n \leq u = 1- \alpha,<br />
- 
-x
-1-\alpha/2 1-\alpha/2
-\sigma  -u O u
- 
-1-\alpha/2 1-\alpha/2
- \sigma  \sigma  
-因此 \mu 的置信度为1- \alpha 的置信区间为 X - u ,  X + u ．
- 
-1-\alpha/2 1-\alpha/2
- n n  </p>
-<p>求解步骤
-- 构造一个只包含待估参数 \theta 的样本的函数U,  要求它的分布已知；
-(一般由抽样分布可得)
-- 寻求一尽量短的区间 [a,  b],  使得 U 落在该区间内的概率为1- \alpha；
-(一般由分位数可得)
-③ 从 a \leq U \leq b 中得到等价不等式 \theta \leq \theta \leq \theta ,  则[\theta ,  \theta ] 就是 \theta 的置信
-1 2 1 2
-度为 1- \alpha 的置信区间． </p>
-<p>设总体 X \sim N(\mu,  \sigma 2),  X ,  X ,  ...,  X 是 X 的一个样本,  对给定置信度
-1 2 n
-1- \alpha ,  求 \mu 和 \sigma 2 的置信区间．
- \mu的置信区间
-1) 当 \sigma  2 已知时
-由引例可知,   \mu 的置信度为1- \alpha 的置信区间为
- \sigma  \sigma  
-X - u ,  X + u ．
- 
-1-\alpha/2 1-\alpha/2
- n n  </p>
-<p>2)当 \sigma  2 未知时
-因为S 2是\sigma  2 的无偏估计,  所以可以用S 代替 \sigma ,  则由抽样分布知
-X - \mu X - \mu
-T = n \sim t(n -1),   U = n \sim N(0,  1)
-S \sigma 
-由分位数 P{-t (n -1) \leq T \leq t (n -1)} =1- \alpha,<br />
-1-\alpha/2 1-\alpha/2
- X - \mu 
-即 P -t (n -1) \leq n \leq t (n -1) = 1- \alpha,<br />
- 
-1-\alpha/2 1-\alpha/2
-S
- 
-y
-f (x)
-所以 \mu 的置信度为1- \alpha 的置信区间为 t
-\alpha / 2 \alpha / 2
- S S 
-X - t (n -1),  X + t (n -1) ． O
-x
- 
-1-\alpha/2 1-\alpha/2
- n n  -t t (n -1)
-1-\alpha/2
-1-\alpha/2 </p>
-<!-- 例1 某厂生产的节能灯寿命X \sim N(\mu,  8),  从生产的一批
-灯中抽取10只作寿命测试,  数据如下(小时)：
-1050,  1100,  1080,  1120,  1200,  1250,  1040,  1130,  1300,  1200
-试估计这批节能灯平均寿命的范围 ( \alpha   =   0  . 0  5  )．
-解 这是在方差已知的情况下对期望进行区间估计．
-因为 X = 1147,  u = u =1.96,  从而可得
-1-\alpha/2 0.975
-\sigma 
-\sigma 
-X - u = 1145.25,   X + u = 1148.75,  
-1-\alpha/2 1-\alpha/2
-n n
-所以这批节能灯平均寿命 \mu在0.95的置信水平下的置信区间为
-1145.25,  1148.75．(区间长度为3.5)  \sigma  \sigma  
-X - u ,  X + u
- 
-1-\alpha/2 1-\alpha/2
- n n  
-
-例2 若例1中的方差未知,  求这批节能灯平均寿命 \mu 的置信水平为0.95的
- S S 
-置信区间． X - t (n -1),  X + t (n -1)
- 
-1-\alpha/2 1-\alpha/2
- n n 
-解 这是在方差未知的情况下对期望进行区间估计．由例1的数据
-S = S2  87.06,  类似得置信水平为0.95的置信区间为1084.72,  1209.28．
-(长度为124.56)
-注 例2表明,  由于对总体的了解少了(方差未知),  因而在相同的置信水
-平下估计的效果也就差很多． 
-
-\sigma 2 的置信区间
-1) 当 \mu 已知时
-1 n
-因 \mu = \mu 已知,  则由抽样分布知 \chi ^2 = \sum(X - \mu)2 只包含未知参数
-0 \sigma 2 i
-i=1
-\sigma 2 且服从 \chi ^2(n),  现需找一尽量短的区间,  使得 \chi ^2落在该区间内的概率
-为1- \alpha．
-非最短区间,  但易求!
-由分位数定义 P{\chi ^2 (n) \leq \chi ^2 \leq \chi ^2 (n)} =1- \alpha,  
-\alpha/2 1-\alpha/2 y
-f (x)
-所以 \sigma 2 的置信度为 1- \alpha 的置信区间为： 2\alpha / 2
-\alpha / 2
- n n  x
-\sum(X - \mu)2 / \chi ^2 (n),  \sum(X - \mu)2 / \chi ^2 (n) ． O \chi ^2 (n) \chi ^2 (n)
- 
-i 1-\alpha/2 i \alpha/2 \alpha/2 1-\alpha/2
- 
-i=1 i=1 
-
-2) 当 \mu 未知时
-1 n  n n 
-\chi ^2 = \sum(X - \mu)2 \sim \chi ^2(n) \sum(X - \mu)2 / \chi ^2 (n),  \sum(X - \mu)2 / \chi ^2 (n)
- 
-\sigma 2 i  i 1-\alpha/2 i \alpha/2 
-i=1 i=1 i=1
-因为 是 \mu 的无偏估计,  所以可以用 代替 \mu ,  则由抽样分布知
-X X
-(n -1)S2 1 n
-= \sum(X - X )2 \sim \chi ^2(n -1) ,  
-\sigma 2 \sigma 2 i
-i=1
-类似可得 \sigma 2 的置信度为1- \alpha 的置信区间为：
- n n 
-\sum(X - X )2 / \chi ^2 (n -1),  \sum(X - X )2 / \chi ^2 (n -1) ．
- 
-i 1-\alpha/2 i \alpha/2
- 
-i=1 i=1 
-
-例3 从总体 X \sim N(0 ,  \sigma 2) 中抽取一个容量为4的样本：
-1.3   −2.78    0.06    1.98
-试求 \sigma 2 的置信水平为0.95的置信区间．
-解 这是在期望已知的情况下对方差进行区间估计．
-4
-因为 \sum(x - 0)2 =13.34 ,   \chi ^2 (n) = 0.484 ,  
-i \alpha/2
-i=1
-\chi ^2 (n) = 11.143 ,   所以可得 \sigma 2 置信水平为0.95的置信区间为
-1-\alpha/2
-1.20,  27.56．  n n 
-\sum(X - \mu)2 / \chi ^2 (n),  \sum(X - \mu)2 / \chi ^2 (n)
- 
-i 1-\alpha/2 i \alpha/2
- 
-i=1 i=1  -->
-
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<ul>
+<li><strong>点估计的缺陷</strong> 未能反映出估计值<span class="arithmatex">\(\hat{\theta}\)</span> 与真实值 <span class="arithmatex">\(\theta\)</span> 之间的误差及可靠性．</li>
+<li><strong>区间估计的思想</strong> 对未知参数<span class="arithmatex">\(\theta\)</span>,  构造两统计量<span class="arithmatex">\(\theta _1\)</span> 与<span class="arithmatex">\(\theta _2\)</span>  ,   使得 <span class="arithmatex">\(\theta\)</span> 能以较大的概率落在随机区间 <span class="arithmatex">\([\theta _1 ,  \\theta _2  ]\)</span> 内,  由相应的观测值来估计<span class="arithmatex">\(\theta\)</span> 的取值范围．</li>
+</ul>
+<p><span class="arithmatex">\(P \set{\theta _1  \leq \theta \leq \theta _2}\)</span> —可信程度 </p>
+<p><span class="arithmatex">\(E(\theta _2  - \theta _1)\)</span> —精确程度</p>
+<p>最优区间估计：可信度给定情况下区间尽量短． </p>
+</details>
+<h4 id="741-置信区间的概念及其求法">7.4.1 置信区间的概念及其求法<a class="headerlink" href="#741-置信区间的概念及其求法" title="permalink">¶</a></h4>
+<p>定义 设总体 <span class="arithmatex">\(X\)</span> 含未知参数<span class="arithmatex">\(\theta\)</span>,  对于给定的 <span class="arithmatex">\(\alpha \in (0,  1)\)</span>,  若存在两个统计量 <span class="arithmatex">\(\theta _1 (X_1 ,  X_2 ,  ...,  X_n)\)</span> 和 <span class="arithmatex">\(\theta _2 (X_1 ,  X_2 ,  ...,  X_n)\)</span>,   使得 <span class="arithmatex">\(P \set{\theta _1  \leq \theta \leq \theta _2} = 1- \alpha\)</span>, 则称 <span class="arithmatex">\([\theta _1 ,  \theta _2]\)</span> 为 <span class="arithmatex">\(\theta\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间．</p>
+<details class="example" open="open">
+<summary>置信区间</summary>
+<p>设总体 <span class="arithmatex">\(X \sim N(\mu,  \sigma ^2)\)</span>,  其中 <span class="arithmatex">\(\sigma  = \sigma _0\)</span>  已知,   <span class="arithmatex">\(\mu\)</span> 未知, <span class="arithmatex">\(X_1 ,  X_2 ,  ...,  X_n\)</span> 是 <span class="arithmatex">\(X\)</span> 的样本,  求 <span class="arithmatex">\(\mu\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间． </p>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="sigma.webp" src="https://s2.loli.net/2025/06/09/efgX1dvlYqJkArw.webp" /></p>
+</details>
+<p>解 因 <span class="arithmatex">\(\sigma  = \sigma _0\)</span>  已知,  则由抽样分布知 $U = \frac{\bar{X} -\mu}{\sigma} \sqrt{n} $ 只包含未知参数 <span class="arithmatex">\(\mu\)</span> 且服从 <span class="arithmatex">\(N(0,  1)\)</span> ,  现需找一尽量短的区间,  使得 <span class="arithmatex">\(U\)</span> 落在该区间内的概率为 <span class="arithmatex">\(1- \alpha\)</span>．由分位数的定义知 <span class="arithmatex">\(P{-u_{1 - \alpha /2} \leq U \leq u_{1 - \alpha /2} } = 1- \alpha\)</span></p>
+<p>即 <span class="arithmatex">\(P \set{-u_{1 - \alpha /2} \leq \frac{\bar{X} -\mu}{\sigma} \sqrt{n} \leq u_{1 - \alpha /2} } = 1 - \alpha\)</span></p>
+<p>因此 <span class="arithmatex">\(\mu\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间为 <span class="arithmatex">\(\large[ \bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2},\bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} \large]\)</span></p>
+</details>
+<details class="tip" open="open">
+<summary>求解步骤</summary>
+<ol>
+<li>构造一个只包含待估参数 <span class="arithmatex">\(\theta\)</span> 的样本的函数 <span class="arithmatex">\(U\)</span> ,  要求它的分布已知(一般由抽样分布可得)</li>
+<li>寻求一尽量短的区间 <span class="arithmatex">\([a,  b]\)</span>,  使得 <span class="arithmatex">\(U\)</span> 落在该区间内的概率为 <span class="arithmatex">\(1- \alpha\)</span> (一般由分位数可得)</li>
+<li>从 <span class="arithmatex">\(a \leq U \leq b\)</span> 中得到等价不等式 <span class="arithmatex">\(\theta _1 \leq \theta \leq \theta _2\)</span> ,  则$[\theta _1 ,  \theta _2 ] $ 就是 <span class="arithmatex">\(\theta\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间． </li>
+</ol>
+</details>
+<h4 id="742-单个正态总体的情形">7.4.2 单个正态总体的情形<a class="headerlink" href="#742-单个正态总体的情形" title="permalink">¶</a></h4>
+<p>设总体 <span class="arithmatex">\(X \sim N(\mu,  \sigma ^2),  X_1 ,  X_2 ,  ...,  X_n\)</span> 是 <span class="arithmatex">\(X\)</span> 的一个样本,  对给定置信度 <span class="arithmatex">\(1- \alpha\)</span> ,  求 <span class="arithmatex">\(\mu\)</span> 和 <span class="arithmatex">\(\sigma ^2\)</span> 的置信区间．</p>
+<p><strong><span class="arithmatex">\(\mu\)</span> 的置信区间</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="当-sigma-2-已知时" name="__tabbed_1" type="radio" /><input id="当-sigma-2-未知时" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="当-sigma-2-已知时">当 <span class="arithmatex">\(\sigma ^2\)</span> 已知时</label><label for="当-sigma-2-未知时">当 <span class="arithmatex">\(\sigma ^2\)</span> 未知时</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>上一题可知,   <span class="arithmatex">\(\mu\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间为</p>
+<div class="arithmatex">\[
+\large[ \bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2}, \bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} \large]
+\]</div>
+</div>
+<div class="tabbed-block">
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="sigma2.webp" src="https://s2.loli.net/2025/06/09/IWu7celE2JhMo4C.webp" /></p>
+</details>
+<p>因为 <span class="arithmatex">\(S^2\)</span> 是 $\sigma  ^2 $ 的无偏估计,  所以可以用$S $代替 <span class="arithmatex">\(\sigma\)</span> ,  则由抽样分布知 $T = \frac{\bar{X} -\mu}{S} \sqrt{n} \sim t(n-1) $</p>
+<p>由分位数 <span class="arithmatex">\(P \set{-t_{1 - \alpha /2} (n -1) \leq T \leq t_{1 - \alpha /2} (n -1)} = 1- \alpha\)</span></p>
+<p>即 <span class="arithmatex">\(P \set{-t_{1 - \alpha /2} (n -1) \leq \frac{\bar{X} -\mu}{S} \sqrt{n} \leq t_{1 - \alpha /2} (n -1)} = 1- \alpha\)</span></p>
+<p>所以 <span class="arithmatex">\(\mu\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间为 </p>
+<div class="arithmatex">\[
+[\bar{X} - \frac{S}{\sqrt{n}}t_{1 - \alpha /2}, \bar{X} + \frac{S}{\sqrt{n}}t_{1 - \alpha /2}]
+\]</div>
+</div>
+</div>
+</div>
+<hr />
+<details class="example" open="open">
+<summary>方差已知</summary>
+<p>某厂生产的节能灯寿命 <span class="arithmatex">\(X \sim N(\mu,  8)\)</span>,  从生产的一批灯中抽取10只作寿命测试,  数据如下(小时)：1050,  1100,  1080,  1120,  1200,  1250,  1040,  1130,  1300,  1200 试估计这批节能灯平均寿命的范围 ( $\alpha   =   0.05 $ )．</p>
+<p><strong>解</strong> 这是在方差已知的情况下对期望进行区间估计．因为 <span class="arithmatex">\(\bar{X} = 1147,  u_{1 - \alpha /2} = u_{0.975} =1.96\)</span>,  从而可得</p>
+<ul>
+<li><span class="arithmatex">\(\bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} = 1145.25\)</span></li>
+<li><span class="arithmatex">\(\bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} = 1148.75\)</span></li>
+</ul>
+<p>所以这批节能灯平均寿命 <span class="arithmatex">\(\mu\)</span> 在0.95的置信水平下的置信区间为<span class="arithmatex">\([1145.25,  1148.75]\)</span>．(区间长度为3.5)</p>
+</details>
+<details class="example" open="open">
+<summary>方差未知</summary>
+<p>若上一题中的方差未知,  求这批节能灯平均寿命 <span class="arithmatex">\(\mu\)</span> 的置信水平为0.95的置信区间． </p>
+<p><strong>解</strong> 这是在方差未知的情况下对期望进行区间估计．由上一题的数据计算标准差 <span class="arithmatex">\(S = \sqrt{S^2} \approx 87.06\)</span>,  类似得置信水平为0.95的置信区间为 <span class="arithmatex">\([1084.72,  1209.28]\)</span>(长度为124.56)</p>
+<blockquote>
+<p>此题表明,  由于对总体的了解少了(方差未知),  因而在相同的置信水平下估计的效果也就差很多． </p>
+</blockquote>
+</details>
+<p><span class="arithmatex">\(\sigma ^2\)</span> 的置信区间</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="当-mu-已知时" name="__tabbed_2" type="radio" /><input id="当-mu-未知时" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="当-mu-已知时">当 <span class="arithmatex">\(\mu\)</span> 已知时</label><label for="当-mu-未知时">当 <span class="arithmatex">\(\mu\)</span> 未知时</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="sigma1.webp" src="https://s2.loli.net/2025/06/10/FRmUnGQqoJw7TEa.webp" /></p>
+</details>
+<p>因 <span class="arithmatex">\(\mu = \mu _0\)</span> 已知,  则由抽样分布知 <span class="arithmatex">\(\chi ^2 = \frac{1}{\sigma ^2} \sum (X_i - \mu) ^2\)</span> 只包含未知参数 <span class="arithmatex">\(\sigma ^2\)</span> 且服从 <span class="arithmatex">\(\chi ^2(n)\)</span>,  现需找一尽量短的区间,  使得 <span class="arithmatex">\(\chi ^2\)</span> 落在该区间内的概率为 <span class="arithmatex">\(1- \alpha\)</span></p>
+<p>由分位数定义 <span class="arithmatex">\(P \set{\chi _{\alpha /2} ^2 (n) \leq \chi ^2 \leq \chi _{1 - \alpha /2} ^2 (n)} = 1- \alpha\)</span></p>
+<p>所以 <span class="arithmatex">\(\sigma ^2\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间为： </p>
+<div class="arithmatex">\[
+\big[\frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{1 - \alpha /2} ^2 (n)}, \space \frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{\alpha /2} ^2 (n)}  \big]
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>因为 <span class="arithmatex">\(\bar{X}\)</span> 是 <span class="arithmatex">\(\mu\)</span> 的无偏估计,  所以可以用 <span class="arithmatex">\(\bar{X}\)</span> 代替 <span class="arithmatex">\(\mu\)</span> ,  则由抽样分布知</p>
+<p><span class="arithmatex">\(\frac{(n -1)S^2}{\sigma ^2} = \sigma ^2 \sum (X_i - \bar{X} )^2 \sim \chi ^2 (n -1)\)</span></p>
+<p>类似可得 <span class="arithmatex">\(\sigma ^2\)</span> 的置信度为 <span class="arithmatex">\(1- \alpha\)</span> 的置信区间为：</p>
+<div class="arithmatex">\[
+\big[\frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{1 - \alpha /2} ^2 (n-1)}, \space \frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{\alpha /2} ^2 (n-1)}  \big]
+\]</div>
+</div>
+</div>
+</div>
+<hr />
+<details class="example" open="open">
+<summary>期望已知</summary>
+<p>从总体 <span class="arithmatex">\(X \sim N(0 ,  \sigma ^2)\)</span> 中抽取一个容量为4的样本：1.3 , −2.78 , 0.06 , 1.98, 试求 <span class="arithmatex">\(\sigma ^2\)</span> 的置信水平为0.95的置信区间．</p>
+<p><strong>解</strong> 这是在期望已知的情况下对方差进行区间估计．</p>
+<p>因为 <span class="arithmatex">\(\sum (x_i - 0) ^2 =13.34 ,   \chi _{\alpha / 2} ^2 (n) = 0.484, \chi _{1 - \alpha / 2} ^2 (n) = 11.143\)</span>  </p>
+<p>所以可得 <span class="arithmatex">\(\sigma ^2\)</span> 置信水平为0.95的置信区间为 <span class="arithmatex">\([\frac{13.34}{11.143}, \frac{13.34}{0.484}]\)</span></p>
+<blockquote>
+<p>需要查表</p>
+</blockquote>
+</details>
 <h2 id="第八章-假设检验">第八章 假设检验<a class="headerlink" href="#第八章-假设检验" title="permalink">¶</a></h2>
 <h3 id="81-假设检验的基本思想">8.1  假设检验的基本思想<a class="headerlink" href="#81-假设检验的基本思想" title="permalink">¶</a></h3>
 <h4 id="811-假设检验的基本思想-概率性质的反证法">8.1.1 假设检验的基本思想 (概率性质的反证法)<a class="headerlink" href="#811-假设检验的基本思想-概率性质的反证法" title="permalink">¶</a></h4>
@@ -2529,221 +2539,165 @@ i=1 i=1  -->
 <h4 id="813-假设检验的步骤">8.1.3 假设检验的步骤<a class="headerlink" href="#813-假设检验的步骤" title="permalink">¶</a></h4>
 <details class="example" open="open">
 <summary>假设检验</summary>
-</details>
 <p>某厂正常情况下生产灯泡寿命<span class="arithmatex">\(X \sim N(1600,  80^2)\)</span>,  现从一批灯泡中抽取10个,  测得它们的平均寿命 <span class="arithmatex">\(\bar{x} = 1548\)</span>,   若灯泡使用寿命的标准差不变,  在显著性水平 <span class="arithmatex">\(\alpha = 0.05\)</span> 的条件下,  能否认为该厂的生产正常? </p>
-<p><strong>解</strong> 由题意,  要检验假设 <span class="arithmatex">\(H_0 ：\mu = \mu _0 = 1600,  H ：\mu \not = 1600\)</span>,<br />
-因 X 是 \mu 的无偏估计,  所以用 X 来检验 H 是合理的．
-0 
-X - \mu
-在H 成立的条件下,  统计量U = 0 n \sim N(0,  1),  若 H 不真,<br />
-0 0 
-\sigma 
-则 U 一般会很大,  于是由 P{U &gt; u }  = \alpha,  得拒绝域
-1-\alpha/2
-{ } 
-W = U &gt; u 或U &lt; -u ．
-“小概率事件”
-1-\alpha/2 1-\alpha/2
-1548 -1600
-y
-因 u = 10  -2.06 &lt; -u = -1.96,<br />
-\varphi(x)
-0.975
-80
-\alpha / 2 \alpha / 2
-观测值落入拒绝域,  即“小概率事件”竟发生了,<br />
-x
--u Ou
-从而拒绝原假设 H ,  认为生产过程不正常． 1-\alpha/2 1-\alpha/2
-0 </p>
-<p>假设检验求解过程
-- 由实际问题的要求提出原假设 H 和对立假设 H ；
-0  1 
-- 选择适当的统计量,  在 H 成立的条件下确定其分布；
-0 
-③ 对给定的 \alpha,  构造“小概率事件”,  得到拒绝域；
-④ 据统计量的观测值对是否接受 H 做出判断．
-0  </p>
-<h3 id="82-单个正态总体参数的">8.2  单个正态总体参数的<a class="headerlink" href="#82-单个正态总体参数的" title="permalink">¶</a></h3>
-<p>X - \mu
-当\sigma  2 已知时 —U检验 U = 0 n \sim N(0,  1)
-\sigma 
-(a) H ：\mu = \mu ,  H ：\mu \not = \mu ； (双侧) y
-0 0 1 0 \varphi(x)
-\alpha / 2 \alpha / 2
-W = {U &gt; u 或U &lt; -u }．
-1-\alpha/2 1-\alpha/2
-x
--u O u
-(b) H ：\mu \leq \mu ,  H ：\mu &gt; \mu ； (单侧) 1-\alpha/2 1-\alpha/2
-0 0 1 0
-W = {U &gt; u }． y
-1-\alpha \varphi(x)
-\alpha
-(c) H ：\mu \ge \mu ,  H ：\mu &lt; \mu ；(单侧)
-0 0 1 0
-x
-W = {U &lt; -u }． O u
-1-\alpha
-1-\alpha </p>
-<p>X - \mu
-当\sigma  2未知时 —T检验 T = 0 n \sim t(n -1)
-S
-(a) H ：\mu = \mu ,  H ：\mu \not = \mu ；
-0 0 1 0
-{ } 
-W = T &gt; t (n -1) 或T &lt; -t (n -1) ．
-y
-1-\alpha/2 1-\alpha/2
-f (x)
-t
-(b) H ：\mu \leq \mu ,  H ：\mu &gt; \mu ； \alpha / 2 \alpha / 2
-0 0 1 0
-W = {T &gt; t (n -1)} ．
-x
-1-\alpha -t O t (n -1)
-1-\alpha/2 1-\alpha/2
-(c) H ：\mu \ge \mu ,  H ：\mu &lt; \mu ；
-y
-0 0 1 0 f (x)
-t
-\alpha
-W = {T &lt; -t (n -1)} ．
-1-\alpha
-x
-注 拒绝域中的不等号与 H 的相反． -t (n -1) O
-0  1-\alpha </p>
-<!-- 例1 厂商称他们的装潢材料抗断强度X \sim N(3.25,  1.21),  现从中抽取9件
-进行检验,  测得平均抗断强度为3.15,  问能否接受该厂商的说法? (\alpha = 0.05)
-解 由题意,  要检验假设 H ：\mu = \mu = 3.25,  H ：\mu \not = 3.25,  
-0 0 1
-因为是在方差已知的情况下对期望进行假设检验,   所以使用 U 检验,  
-X - \mu
-即 U = 0 n \sim N(0,  1),  从而可得拒绝域
-\sigma 
-\{ \} 
-W = U > u 或U < -u ．
-1-\alpha/2 1-\alpha/2
-3.15 - 3.25
-因 1.96 = u > u = 9  -0.273 > -u = -1.96,  
-0.975 0.975
-1.1
-所以接受H ,  即认为该厂商的说法是正确的．
-0 
-
-例2 电视台广告部称企业在该台播放广告后的平均利润收益量至少
-为15万元,  已知这类企业广告播出后的收益量服从正态分布． 现抽取
-容量为20的样本,  得平均收益量为13.2万元,  标准差为3.4,  试在显著
-性水平 \alpha = 0.05 下,  判断该广告部的说法是否正确?
-解 由题意,  要检验假设 H ：\mu \ge \mu =15,  H ：\mu <15,  
-0 0 1
-因为是在方差未知的情况下对期望进行假设检验,   所以使用 T 检验,  
-X - \mu
-即 T = 0 n \sim t(n -1),   拒绝域 W = {T < -t (n -1)},  
-1-\alpha
-S
-13.2 -15
-由于 t = 20  -2.37 < -t (19) = -1.729,  
-0.95
-3.4
-所以拒绝 H ,  即认为该广告部的说法不正确．
-0 
-
-1 n
-\chi ^2 = \sum(X - \mu)2 \sim \chi ^2(n)
-1.当 \mu 已知时 — 2(n) 检验
-\sigma 2 i
-0 i=1
-(a) H ：\sigma 2 = \sigma 2,  H ：\sigma 2 \not = \sigma 2；
-0 0 1 0
-\{ \} 
-W = \chi ^2 > \chi ^2 (n) 或 \chi ^2 < \chi ^2 (n) ,  
-1-\alpha/2 \alpha/2 y
-f (x)
-\chi ^2
-(b) H ：\sigma 2 \leq \sigma 2,  H ：\sigma 2 > \sigma 2； \alpha / 2 \alpha / 2
-0 0 1 0
-\{ \}  x
-W = \chi ^2 > \chi ^2 (n) ,  
-O \chi ^2 (n) \chi ^2 (n)
-1-\alpha
-\alpha/2 1-\alpha/2
-y
-f (x)
-(c) H ：\sigma 2 \ge \sigma 2,  H ：\sigma 2 < \sigma 2； \chi ^2
-\alpha
-0 0 1 0
-\{ \} 
-W = \chi ^2 < \chi ^2 (n) ． x
-o
-\alpha \chi ^2 (n)
-1-\alpha 
-
-1 n
-2.当 \mu 未知时 — 2(n -1)检验 \chi ^2 = \sum(X - X )2 \sim \chi ^2(n -1)
-\sigma 2 i
-0 i=1
-(a) H ：\sigma 2 = \sigma 2,  H ：\sigma 2 \not = \sigma 2；
-0 0 1 0
-W = {\chi ^2 > \chi ^2 (n -1) 或 \chi ^2 < \chi ^2 (n -1)},  
-1-\alpha/2 \alpha/2
-y
-f (x)
-(b) H ：\sigma 2 \leq \sigma 2,  H ：\sigma 2 > \sigma 2； 2\alpha / 2
-\alpha / 2
-0 0 1 0
-W = {\chi ^2 > \chi ^2 (n -1)},   x
-o \chi ^2
-1-\alpha \chi ^2 (n -1)
-\alpha/2
-1-\alpha/2
-(c) H ：\sigma 2 \ge \sigma 2,  H ：\sigma 2 < \sigma 2； y
-f (x)
-0 0 1 0
-2
-\alpha
-W = {\chi ^2 < \chi ^2 (n -1)}．
-\alpha
-x
-o
-\chi ^2(n -1)
-注 双侧检验的接受域即为置信区间．
-\alpha 
-
-例3 某车间生产的金属丝的折断力X \sim N(\mu,  64),  现从一批产品中抽出
-10根作折断力试验,  结果如下：
-578,  572,  570,  568,  572,  570,  572,  596,  584,  570
-问能否认为这批金属丝的折断力方差仍为64? (\alpha = 0.05)
-解 由题意,  要检验假设 H ：\sigma 2 = \sigma 2 = 64；H ：\sigma 2 \not = 64,  因为是在期望
-0 0 1
-未知的情况下对方差进行假设检验,  所以使用 \chi ^2(n -1) 检验,  即
-1 n
-\chi ^2 = \sum(X - X )2 \sim \chi ^2(n -1),  从而可得
-\sigma 2 i
-0 i=1
-拒绝域 W ={\chi ^2 > \chi ^2 (n -1)或 \chi ^2 < \chi ^2 (n -1)}．
-1-\alpha/2 \alpha/2
-由于 2.7 = 2 < 2 10.65 < 2 =19.02,  
-0.025 0.975
-所以接受H ,  即认为折断力的方差与 64 无显著差异．
-0 
-
-例4 某车间生产一种保险丝,  规定保险丝熔化时间的方差不得超过400．
-今从一批产品中抽出25个,   测得其熔化时间的方差为388.58．已知保险
-丝熔化时间服从正态分布,  试根据所给数据,  检验这批产品是否符合
-要求? (\alpha = 0.05)
-解 由题意,  要检验假设 H ：\sigma 2 \leq \sigma 2 = 400；H ：\sigma 2 > 400,  
-0 0 1
-因为在期望未知的情况下对方差进行假设检验,  所以使用2(n -1) 检验,  
-1 n
-\{ \} 
-\chi ^2 = \sum(X - X )2 \sim \chi ^2(n -1),  从而可得拒绝域 W = \chi ^2 > \chi ^2 (n -1) ．
-即
-\sigma 2 i 1-\alpha
-0 i=1
-由于 \chi ^2  23.31 < \chi ^2 (24) = 36.42,  
-0.95
-所以应该接受H ,  即这批保险丝符合要求． -->
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="ex.webp" src="https://s2.loli.net/2025/06/10/92xgizYjr3EMvfT.webp" /></p>
+</details>
+<p><strong>解</strong> 由题意,  要检验假设 <span class="arithmatex">\(H_0 ：\mu = \mu _0 = 1600,  H ：\mu \not = 1600\)</span>,  因 <span class="arithmatex">\(\bar{X}\)</span> 是 <span class="arithmatex">\(\mu\)</span> 的无偏估计,  所以用 <span class="arithmatex">\(\bar{X}\)</span> 来检验 <span class="arithmatex">\(H_0\)</span> 是合理的．</p>
+<p>在 <span class="arithmatex">\(H_0\)</span> 成立的条件下,  统计量 <span class="arithmatex">\(U = \frac{\bar{X} - \mu _0}{\sigma} \sqrt{n} \sim N(0,  1)\)</span>,  若 <span class="arithmatex">\(H_0\)</span> 不真,  则 <span class="arithmatex">\(|U|\)</span> 一般会很大,  于是由 <span class="arithmatex">\(P \{|U| &gt; u_{1 - \alpha / 2} \}  = \alpha\)</span>,  得拒绝域 <span class="arithmatex">\(W = U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2}\)</span></p>
+<p>因 <span class="arithmatex">\(u = \frac{1548 - 1600}{80} \sqrt{10} \approx -2.06 &lt; - u_{0.975} = -1.96\)</span></p>
+<p>观测值落入拒绝域,  即“小概率事件”竟发生了,  从而拒绝原假设 <span class="arithmatex">\(H_0\)</span> ,  认为生产过程不正常． </p>
+</details>
+<details class="tip" open="open">
+<summary>假设检验求解过程</summary>
+<ol>
+<li>由实际问题的要求提出原假设 <span class="arithmatex">\(H_0\)</span> 和对立假设 <span class="arithmatex">\(H_1\)</span></li>
+<li>选择适当的统计量,  在 <span class="arithmatex">\(H_0\)</span> 成立的条件下确定其分布</li>
+<li>对给定的 <span class="arithmatex">\(\alpha\)</span>,  构造“小概率事件”,  得到拒绝域</li>
+<li>据统计量的观测值对是否接受 <span class="arithmatex">\(H_0\)</span> 做出判断</li>
+</ol>
+</details>
+<h3 id="82-单个正态总体参数的假设检验">8.2  单个正态总体参数的假设检验<a class="headerlink" href="#82-单个正态总体参数的假设检验" title="permalink">¶</a></h3>
+<h4 id="821-期望的假设检验">8.2.1 期望的假设检验<a class="headerlink" href="#821-期望的假设检验" title="permalink">¶</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="当-sigma-2-已知时_1" name="__tabbed_3" type="radio" /><input id="当-sigma-2-未知时_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="当-sigma-2-已知时_1">当 <span class="arithmatex">\(\sigma  ^2\)</span> 已知时</label><label for="当-sigma-2-未知时_1">当 <span class="arithmatex">\(\sigma ^2\)</span> 未知时</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(U\)</span> 检验 <span class="arithmatex">\(U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)\)</span></p>
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="sig.webp" src="https://s2.loli.net/2025/06/10/f9rbdIZXDmqaSzC.webp" /></p>
+</details>
+<ul>
+<li>
+<p><span class="arithmatex">\(H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0\)</span> (双侧) </p>
+<p><span class="arithmatex">\(W = \set{U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2} }\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &gt; \mu _0\)</span> (单侧) </p>
+<p><span class="arithmatex">\(W = \set{U &gt; u_{1 - \alpha}}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &lt; \mu _0\)</span> (单侧) </p>
+<p><span class="arithmatex">\(W = \set{U &lt; u_{1 - \alpha}}\)</span></p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="p.webp" src="https://s2.loli.net/2025/06/10/yLkCUQo1nOB3sGE.webp" /></p>
+</details>
+<p><span class="arithmatex">\(T\)</span> 检验 <span class="arithmatex">\(T = \frac{\bar{X} - \mu _0}{S} \sqrt{n} \sim t(n -1)\)</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0\)</span> </p>
+<p><span class="arithmatex">\(W = \set{T &gt; t_{1 - \alpha / 2} (n - 1) 或 T &lt; -t_{1 - \alpha / 2} (n - 1)}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &gt; \mu _0\)</span> </p>
+<p><span class="arithmatex">\(W = \set{T &gt; t_{1 - \alpha} (n - 1)}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &lt; \mu _0\)</span> </p>
+<p><span class="arithmatex">\(W = \set{T &lt; - t_{1 - \alpha} (n - 1)}\)</span></p>
+</li>
+</ul>
+<blockquote>
+<p>拒绝域中的不等号与 H 的相反．</p>
+</blockquote>
+</div>
+</div>
+</div>
+<hr />
+<details class="example" open="open">
+<summary>U检验</summary>
+<p>厂商称他们的装潢材料抗断强度 <span class="arithmatex">\(X \sim N(3.25,  1.21)\)</span>,  现从中抽取9件进行检验,  测得平均抗断强度为3.15,  问能否接受该厂商的说法? <span class="arithmatex">\((\alpha = 0.05)\)</span></p>
+<p><strong>解</strong> 由题意,  要检验假设 <span class="arithmatex">\(H_0 ：\mu = \mu _0 = 3.25,  H_1 ：\mu \not = 3.25\)</span> , 因为是在方差已知的情况下对期望进行假设检验,   所以使用 U 检验,  即 <span class="arithmatex">\(U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)\)</span>,  从而可得拒绝域</p>
+<p><span class="arithmatex">\(W = \set{U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2} }\)</span></p>
+<p>因 <span class="arithmatex">\(1.96 = u_{0.975} &gt; u = \frac{3.15 - 3.25}{1.1} \sqrt{9} \approx -0.273 &gt; -u_{0.975} = -1.96\)</span></p>
+<p>所以接受 <span class="arithmatex">\(H_0\)</span> ,  即认为该厂商的说法是正确的．</p>
+</details>
+<details class="example" open="open">
+<summary>T检验</summary>
+<p>电视台广告部称企业在该台播放广告后的平均利润收益量至少为15万元,  已知这类企业广告播出后的收益量服从正态分布． 现抽取容量为20的样本,  得平均收益量为13.2万元,  标准差为3.4,  试在显著性水平 <span class="arithmatex">\(\alpha = 0.05\)</span> 下,  判断该广告部的说法是否正确?</p>
+<p><strong>解</strong> 由题意,  要检验假设 <span class="arithmatex">\(H_0 ：\mu \ge \mu =15,  H_1 ：\mu &lt;15\)</span> , 因为是在方差未知的情况下对期望进行假设检验,   所以使用 T 检验,  即 <span class="arithmatex">\(T = \frac{\bar{X} - \mu _0}{S} \sqrt{n} \sim t(n -1)\)</span>,   拒绝域 <span class="arithmatex">\(W = \set{T &lt; - t_{1 - \alpha} (n - 1)}\)</span>  </p>
+<p>由于 <span class="arithmatex">\(t = \frac{13.2 - 15}{3.4} \sqrt{20} \approx -2.37  &lt; -t_{0.95} (19) = -1.729\)</span></p>
+<p>所以拒绝 <span class="arithmatex">\(H_0\)</span> ,  即认为该广告部的说法不正确．</p>
+</details>
+<h4 id="822-方差的假设检验">8.2.2 方差的假设检验<a class="headerlink" href="#822-方差的假设检验" title="permalink">¶</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="当-mu-已知时_1" name="__tabbed_4" type="radio" /><input id="当-mu-未知时_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="当-mu-已知时_1">当 <span class="arithmatex">\(\mu\)</span> 已知时</label><label for="当-mu-未知时_1">当 <span class="arithmatex">\(\mu\)</span> 未知时</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="p1.webp" src="https://s2.loli.net/2025/06/10/D3FQJmUMIafT9Se.webp" /></p>
+</details>
+<p><span class="arithmatex">\(\chi ^2(n)\)</span> 检验 </p>
+<div class="arithmatex">\[
+\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \mu)^2 \sim \chi ^2(n)
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2\)</span></p>
+<p><span class="arithmatex">\(W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n)}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &gt; \sigma ^2\)</span></p>
+<p><span class="arithmatex">\(W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n)}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &lt; \sigma ^2\)</span></p>
+<p><span class="arithmatex">\(W = \set{\chi ^2 &lt; \chi _{\alpha} ^2 (n)}\)</span></p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<details class="success inline end" open="open">
+<summary>Success</summary>
+<p><img alt="p2.webp" src="https://s2.loli.net/2025/06/10/7DbAXcYZB62fdlJ.webp" /></p>
+</details>
+<p><span class="arithmatex">\(\chi ^2 (n-1)\)</span> 检验 </p>
+<div class="arithmatex">\[
+\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \bar{X})^2 \sim \chi ^2(n-1)
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2\)</span></p>
+<p><span class="arithmatex">\(W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n-1)}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &gt; \sigma ^2\)</span></p>
+<p><span class="arithmatex">\(W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n-1)}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &lt; \sigma ^2\)</span></p>
+<p><span class="arithmatex">\(W = \set{\chi ^2 &lt; \chi _{\alpha} ^2 (n-1)}\)</span></p>
+</li>
+</ul>
+<blockquote>
+<p>双侧检验的接受域即为置信区间．</p>
+</blockquote>
+</div>
+</div>
+</div>
+<hr />
+<details class="example" open="open">
+<summary><span class="arithmatex">\(\chi ^2 (n-1)\)</span> 检验</summary>
+<p>某车间生产的金属丝的折断力 <span class="arithmatex">\(X \sim N(\mu,  64)\)</span>,  现从一批产品中抽出10根作折断力试验,  结果如下：578,  572,  570,  568,  572,  570,  572,  596,  584,  570 问能否认为这批金属丝的折断力方差仍为64? <span class="arithmatex">\((\alpha = 0.05)\)</span></p>
+<p><strong>解</strong> 由题意,  要检验假设 <span class="arithmatex">\(H_0 ：\sigma ^2 = \sigma _0 ^2 = 64；H_1 ：\sigma ^2 \not = 64\)</span>,  因为是在期望未知的情况下对方差进行假设检验,  所以使用 <span class="arithmatex">\(\chi ^2(n -1)\)</span> 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$,  从而可得</p>
+<p>拒绝域 <span class="arithmatex">\(W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n-1)}\)</span></p>
+<p>由于 <span class="arithmatex">\(2.7 = \chi _{0.025} ^2 (9) &lt; \chi ^2 \approx 10.65 &lt; \chi _{0.975} ^2 (9) =19.02\)</span></p>
+<p>所以接受 <span class="arithmatex">\(H_0\)</span> ,  即认为折断力的方差与 64 无显著差异．</p>
+</details>
+<details class="example" open="open">
+<summary><span class="arithmatex">\(\chi ^2 (n-1)\)</span> 检验</summary>
+<p>某车间生产一种保险丝,  规定保险丝熔化时间的方差不得超过400．今从一批产品中抽出25个,   测得其熔化时间的方差为388.58．已知保险丝熔化时间服从正态分布,  试根据所给数据,  检验这批产品是否符合
+要求? <span class="arithmatex">\((\alpha = 0.05)\)</span></p>
+<p><strong>解</strong> 由题意,  要检验假设 <span class="arithmatex">\(H_0 ：\sigma ^2 \leq \sigma _0 ^2 = 400；H_1 ：\sigma ^2 &gt; 400\)</span> 因为在期望未知的情况下对方差进行假设检验,  所以使用 <span class="arithmatex">\(\chi ^2 (n-1)\)</span> 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$ ,  从而可得拒绝域  <span class="arithmatex">\(W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n-1)}\)</span></p>
+<p>由于 <span class="arithmatex">\(\chi ^2 \approx 23.31 &lt; \chi _{0.95} ^2 (24) = 36.42\)</span></p>
+<p>所以应该接受 <span class="arithmatex">\(H_0\)</span> ,  即这批保险丝符合要求．</p>
+</details>
 
 
 
