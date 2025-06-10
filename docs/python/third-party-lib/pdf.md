@@ -1,6 +1,6 @@
 ---
 comments: true
-# icon: material/language-python
+icon: material/language-python
 status: new
 title: pdfplumber
 subtitle: 处理PDF文档

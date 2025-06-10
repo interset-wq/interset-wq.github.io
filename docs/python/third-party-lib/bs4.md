@@ -1,6 +1,6 @@
 ---
 comments: true
-# icon: material/emoticon-happy 
+icon: material/language-python
 # status: new
 title: bs4
 subtitle: 解析网页

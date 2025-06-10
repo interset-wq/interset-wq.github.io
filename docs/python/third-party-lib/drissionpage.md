@@ -1,6 +1,6 @@
 ---
 comments: true
-# icon: material/emoticon-happy 
+icon: material/language-python
 # status: new
 title: DrissionPage
 subtitle: 浏览器自动化操作

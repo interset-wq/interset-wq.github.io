@@ -69,13 +69,14 @@ Tour，有旅行的意思，记得以前英语老师说过tour是指有往返的
         - [ ] :simple-fastapi: fastapi
     - [ ] :simple-selenium: selenium
     - [ ] :fontawesome-brands-python: Tkinter
-- [ ] :material-google-chrome: :simple-firefox: :material-microsoft-edge: 前端
+- [ ] :material-web: 前端
     - [x] :fontawesome-brands-html5: HTML5
     - [x] :simple-css3: CSS3
-    - [ ] :fontawesome-brands-js: JavaScript
-        * [ ] :fontawesome-brands-node-js: node.js
-        * [ ] :fontawesome-brands-vuejs: vue.js
+    - [x] :fontawesome-brands-js: JavaScript
+    - [ ] :fontawesome-brands-node-js: node.js
+    - [ ] :fontawesome-brands-vuejs: vue.js
     - [ ] :simple-typescript: TypeScript
+    - [ ] :simple-android: AutoJS
 - [ ] 大学英语
     - [ ] CET-4
     - [ ] CET-6

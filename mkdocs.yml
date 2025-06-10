@@ -191,7 +191,7 @@ markdown_extensions:
       generic: true
   - abbr # 缩写
   - toc:
-      permalink: "💭"
+      permalink: ¶ # "💭"
       permalink_title: permalink
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
@@ -229,12 +229,14 @@ nav:
       - python/standard-lib/threading.md
       - python/standard-lib/path.md
       - python/standard-lib/re.md
+      - python/standard-lib/turtle.md
     - 第三方库:
       - python/third-party-lib/bs4.md
       - python/third-party-lib/drissionpage.md
       - python/third-party-lib/pdf.md
       - python/third-party-lib/numpy.md
       - python/third-party-lib/matplotlib.md
+      - python/third-party-lib/jieba.md
       - python/third-party-lib/pandas.md
       - python/third-party-lib/scipy.md
   - GUI:
@@ -253,7 +255,7 @@ nav:
       - command-line/git/first-contributions.md
   - 笔记:
     - note/probability.md
-    - note/network.md
+    - note/statistics.md
     - note/revit.md
     - note/cad.md
     - note/excel-degree.md
