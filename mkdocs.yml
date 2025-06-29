@@ -5,7 +5,7 @@ theme:
   custom_dir: overrides
   language: zh
   logo: assets/Interset-Wq.png
-  favicon: assets/favicon.ico
+  # favicon: material/library-shelves
   icon:
     tag:
       html: fontawesome/brands/html5
@@ -119,8 +119,10 @@ extra:
 
   
 copyright: 
-  Copyright &copy; 2024 - 2025 <a href="https://github.com/interset-wq" target="_blank">interset-wq</a>
-  <br><a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
+  <div style="text-align:center">Copyright &copy; 2024 - 2025 <a href="https://github.com/interset-wq" target="_blank">Interset Wq</a>
+    <br>
+    <a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
+  </div>
 
 # 插件
 plugins:
@@ -230,6 +232,7 @@ nav:
       - python/standard-lib/path.md
       - python/standard-lib/re.md
       - python/standard-lib/turtle.md
+      - python/standard-lib/string.md
     - 第三方库:
       - python/third-party-lib/bs4.md
       - python/third-party-lib/drissionpage.md
@@ -254,6 +257,7 @@ nav:
       - command-line/git/basic-git-command.md
       - command-line/git/first-contributions.md
   - 笔记:
+    - note/tr.md
     - note/probability.md
     - note/statistics.md
     - note/revit.md

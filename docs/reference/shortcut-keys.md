@@ -8,6 +8,15 @@ icon: material/keyboard
 
 :material-pen-plus: `本文创建于2025-3-13`
 
+## Win11
+
+- 全屏,不显示任务栏 ++f11++
+- emoji ++windows+period++
+- 剪贴板 ++windows+v++
+- 切换输入法 ++windows+space++
+- 回到桌面 ++windows+d++
+- 打开文件资源管理器 ++windows+e++
+
 ## VS Code
 
 缩进

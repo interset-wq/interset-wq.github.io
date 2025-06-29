@@ -125,7 +125,7 @@ $$
 
 ### 6.3 抽样分布 
 
-#### 6.3.1 正态分布
+#### 6.3.1 正态分布 $U \sim N(0, 1)$
 
 ???+ success inline end
     ![正态分布.png](https://s2.loli.net/2025/05/09/U91ThMJHEIWQ2be.png)
@@ -144,19 +144,16 @@ $$
 
     其中 $\bar{X} = \frac{1}{m} \sum _{i=1} ^m X_i \space,  \bar{Y} = \frac{1}{n} \sum _{i=1} ^n Y_i$
 
-#### 6.3.2 $\chi ^2$ 分布
+#### 6.3.2 $\chi ^2$ 分布 $\chi ^2 \sim \chi ^2 (n)$
 
 ???+ success inline end 
     ![k.webp](https://s2.loli.net/2025/06/08/CbAQR8xnWoY2zpE.webp)
 
 **定义** 设 $X _1,  X _2,  ...,  X_n$ 相互独立且均服从 $N(0,  1)$,  则称统计量 $\chi ^2 = X _1 ^2 +...+ X_n ^2$ 服从自由度为 $n$ 的 $\chi ^2$ 分布,  记作 $\chi ^2 \sim \chi ^2 (n)$
 
-**性质**
-
-- 若 $\chi ^2 \sim \chi ^2 (n)$,  则 $E( \chi ^2) = n$,   $D( \chi ^2) = 2n$
-- 设 $\chi _1 ^2 \sim \chi ^2(n_1 ),   \chi _2 ^2 \sim \chi ^2 (n_2)$,  且 $\chi _1 ^2,  \chi _2 ^2$ 相互独立,  则有 $\chi _1 ^2 + \chi _2 ^2 \sim \chi ^2(n_1 + n_2 )$． (可加性)
-
-**结论**
+???+ note "$\chi ^2$ 分布的性质"
+    - 若 $\chi ^2 \sim \chi ^2 (n)$,  则 $E( \chi ^2) = n$,   $D( \chi ^2) = 2n$
+    - 设 $\chi _1 ^2 \sim \chi ^2(n_1 ),   \chi _2 ^2 \sim \chi ^2 (n_2)$,  且 $\chi _1 ^2,  \chi _2 ^2$ 相互独立,  则有 $\chi _1 ^2 + \chi _2 ^2 \sim \chi ^2(n_1 + n_2 )$． (可加性)
 
 - 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则统计量
 
@@ -170,7 +167,7 @@ $$
     \frac{(n-1) S^2}{\sigma ^2} = \frac{1}{\sigma ^2} \sum _{i=1} ^n (X_i - \mu) ^2 \sim \chi ^2 (n-1)
     $$
 
-#### 6.3.3 $t$ 分布 (学生 $t$ 分布)
+#### 6.3.3 $t$ 分布 (学生 $t$ 分布) $T \sim t(n)$
 
 ???+ success inline end
     ![t.webp](https://s2.loli.net/2025/06/08/dKYBvRqUOMwQDt6.webp)
@@ -178,29 +175,27 @@ $$
 **定义** 设 $X \sim N(0,  1),  Y \sim \chi ^2 (n)$,  且 $X$ 与 $Y$ 相互独立,  则称统计量 
 
 $$
-T = \frac{X}{\sqrt{\frac{Y}{n}}}$$ 
+T = \frac{X}{\sqrt{\frac{Y}{n}}} = \frac{X}{\sqrt{Y}} \sqrt{n}
+$$ 
 
 服从自由度为 $n$ 的 $t$ 分布,  记作 $T \sim t(n)$．
 
-**性质**
-
-- $f_t (x)$ 关于 $y$ 轴对称
-- 当 $n \to \infty$ 时,  $t$ 分布 $\to N(0,  1)$
-
-**结论**
+???+ note "$t$ 分布的性质"
+    - $f_t (x)$ 关于 $y$ 轴对称
+    - 当 $n \to \infty$ 时,  $t$ 分布 $\to N(0,  1)$
 
 - 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则统计量
 
-    $$
-    T = \frac{\bar{X} - \mu}{S} \sqrt{n} \sim t(n-1) \\
-    \space \\
-    U = \frac{\bar{X} - \mu}{\sigma} \sqrt{n} \sim N(0, 1) \space \text{正态分布}
-    $$
+    - $T = \frac{\bar{X} - \mu}{S} \sqrt{n} \sim t(n-1)$ 学生 $t$ 分布 
+
+        > 其中 $S ^2 = \frac{1}{n-1} \sum _{i=1} ^n (X_i - \bar{X} ) ^2$
+
+    - $U = \frac{\bar{X} - \mu}{\sigma} \sqrt{n} \sim N(0, 1)$  正态分布
 
 - 设 $X_1 ,  X _2,  ...,  X_n$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma ^2)$ 和 $N(\mu _2,  \sigma ^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则
 
     $$
-    T = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{S_w ^2}{m} + \frac{S_w ^2}{n}}} \sim t(m+n-2) \\
+    T = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{S_w ^2}{m} + \frac{S_w ^2}{n}}} \sim t(m+n-2) \space \text{学生t分布} \\
     \space \\
     U = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{\sigma _1 ^2}{m} + \frac{\sigma _2 ^2}{n}}} \sim N(0, 1) \space \text{正态分布}
     $$
@@ -215,7 +210,7 @@ T = \frac{X}{\sqrt{\frac{Y}{n}}}$$
     S_w ^2 = \frac{(m-1) S_1 ^2 + (n-1) S_2 ^2}{m+n-2} \space \text{复合样本方差}
     $$
 
-#### 6.3.4 $F$ 分布
+#### 6.3.4 $F$ 分布 $F \sim F(m,  n)$
 
 ???+ success inline end
     ![f.webp](https://s2.loli.net/2025/06/08/d9khm8P2zreZXID.webp)
@@ -226,14 +221,11 @@ $$
 F = \frac{X/m}{Y/n}
 $$
 
-服从第一自由度为 $m$,  第二自由度为 $n$ 的 $F$ 分布,  记作$F \sim F(m,  n)$．
+服从第一自由度为 $m$,  第二自由度为 $n$ 的 $F$ 分布,  记作 $F \sim F(m,  n)$
 
-**性质**
-
-- 若 $F \sim F(m,  n)$,  则$\frac{1}{F} \sim F(n,  m)$
-- 若 $T \sim t(n)$,  则 $T ^2 \sim F(1,  n)$ 
-
-**结论**
+???+ note "$F$ 分布的性质"
+    - 若 $F \sim F(m,  n)$,  则$\frac{1}{F} \sim F(n,  m)$
+    - 若 $T \sim t(n)$,  则 $T ^2 \sim F(1,  n)$ 
 
 - 设 $X_1 ,  X _2,  ...,  X_n$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma _1^2)$ 和 $N(\mu _2,  \sigma _2^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则
 
@@ -266,10 +258,25 @@ $$
 
 **常用分布的分位数**
 
-- $N (0,  1)$的下侧 $\alpha$ 分位数 $u_{\alpha}$ 满足 $P \{U \leq u_{\alpha} \} = \int _{- \infty} ^{u _{\alpha}} \varphi(x)dx = \alpha$,  由对称性 $-u_{\alpha} = u_{1 - \alpha}$
-- $\chi ^2(n)$的下侧 $\alpha$ 分位数 $\chi ^2_{\alpha} (n)$ 满足 $P \{ \chi ^2 \leq \chi ^2_{\alpha} (n) \} = \alpha$
-- $t(n)$的下侧 $\alpha$ 分位数 $t_{\alpha} (n)$ 满足 $P \{ t \leq t_{\alpha} (n) \} = \alpha$,  由对称性 $-t_{\alpha} (n) = t_{1 - \alpha} (n)$
-- $F(m,  n)$的下侧 $\alpha$ 分位数 $F_{\alpha} (m, n)$ 满足 $P \{ F \leq F_{\alpha} (m, n) \} = \alpha$,  $F_{\alpha} (m, n) = \frac{1}{F_{1 - \alpha} (n, m)}$
+- $N (0,  1)$的下侧 $\alpha$ 分位数 $u_{\alpha}$ 满足 
+
+    $P \{U \leq u_{\alpha} \} = \int _{- \infty} ^{u _{\alpha}} \varphi(x)dx = \alpha$
+    
+    > 由对称性 $-u_{\alpha} = u_{1 - \alpha}$
+
+- $\chi ^2(n)$的下侧 $\alpha$ 分位数 $\chi ^2_{\alpha} (n)$ 满足 
+  
+    $P \{ \chi ^2 \leq \chi ^2_{\alpha} (n) \} = \alpha$
+
+- $t(n)$的下侧 $\alpha$ 分位数 $t_{\alpha} (n)$ 满足 
+  
+    $P \{ t \leq t_{\alpha} (n) \} = \alpha$
+    
+    > 由对称性 $-t_{\alpha} (n) = t_{1 - \alpha} (n)$
+
+- $F(m,  n)$的下侧 $\alpha$ 分位数 $F_{\alpha} (m, n)$ 满足 
+    - $P \{ F \leq F_{\alpha} (m, n) \} = \alpha$
+    - $F_{\alpha} (m, n) = \frac{1}{F_{1 - \alpha} (n, m)}$
 
 ???+ example "分位数"
     设 $X_1 ,  X_2 ,  ...,  X_{10}$ 是来自总体 $N(0,  0.3^2)$的样本,  求 $P \set{\sum _{i=1} ^{10} X_i ^2 > 1.44}$ ．
@@ -330,7 +337,7 @@ $$
 > 具体求解中只需掌握 $l = 1,  2$ 的情形． 
 
 ???+ note
-    原理 $A_k \rightarrow ^P m_k$
+    原理 $A_k \xrightarrow{P} m_k$
 
     - 样本矩 $A_k = \frac{1}{n} \sum _{i=1} ^n X_i ^k$
     - 总体矩 $m_k = E(X^k)$
@@ -356,7 +363,7 @@ $$
     $$
     \begin{cases} 
     \hat{\mu} = \bar{X} = A_1 \\
-    \hat{\sigma ^2} = A_2 - \mu ^2 = \frac{1}{n} \sum X_i ^2 - \bar{X} ^2 = \frac{1}{n} \sum (X_i - \bar{X}) ^2 = \tilde{S} ^2
+    \hat{\sigma} ^2 = A_2 - \mu ^2 = \frac{1}{n} \sum X_i ^2 - \bar{X} ^2 = \frac{1}{n} \sum (X_i - \bar{X}) ^2 = \tilde{S} ^2
     \end{cases}
     $$
 
@@ -725,7 +732,7 @@ i i
 
 设总体 $X \sim N(\mu,  \sigma ^2),  X_1 ,  X_2 ,  ...,  X_n$ 是 $X$ 的一个样本,  对给定置信度 $1- \alpha$ ,  求 $\mu$ 和 $\sigma ^2$ 的置信区间．
 
-**$\mu$ 的置信区间**
+{==问题一: 求 $\mu$ 的置信区间==}
 
 === "当 $\sigma ^2$ 已知时"
 
@@ -767,11 +774,13 @@ i i
 ???+ example "方差未知"
     若上一题中的方差未知,  求这批节能灯平均寿命 $\mu$ 的置信水平为0.95的置信区间． 
 
+    > $1 - \alpha = 0.95 \implies \alpha = 0.05$
+
     **解** 这是在方差未知的情况下对期望进行区间估计．由上一题的数据计算标准差 $S = \sqrt{S^2} \approx 87.06$,  类似得置信水平为0.95的置信区间为 $[1084.72,  1209.28]$(长度为124.56)
 
     > 此题表明,  由于对总体的了解少了(方差未知),  因而在相同的置信水平下估计的效果也就差很多． 
 
-$\sigma ^2$ 的置信区间
+{==问题二: 求 $\sigma ^2$ 的置信区间==}
 
 === "当 $\mu$ 已知时"
 
@@ -854,10 +863,10 @@ $\sigma ^2$ 的置信区间
 
 === "当 $\sigma  ^2$ 已知时"
 
-    $U$ 检验 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$
-
     ???+ success inline end
         ![sig.webp](https://s2.loli.net/2025/06/10/f9rbdIZXDmqaSzC.webp)
+
+    $U$ 检验 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$
 
     - $H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0$ (双侧) 
 
@@ -890,7 +899,7 @@ $\sigma ^2$ 的置信区间
 
         $W = \set{T < - t_{1 - \alpha} (n - 1)}$
 
-    > 拒绝域中的不等号与 H 的相反．
+    > 拒绝域中的不等号与 $H_0$ 的相反．
 
 ---
 
