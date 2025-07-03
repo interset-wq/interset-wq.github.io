@@ -1,6 +1,6 @@
 ---
 comments: true
-status: new
+# status: new
 title: 概率统计-数理统计
 # pdf: true
 ---

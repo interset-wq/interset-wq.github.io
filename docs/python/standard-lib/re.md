@@ -1,71 +1,141 @@
 ---
 comments: true
-# icon: material/language-python
+icon: material/language-python
 status: new
 title: re
-subtitle: 正则表达式
+subtitle: 正则表达式Regular Expression
 ---
 
 :material-pen-plus: `本文创建于2025-5-11`
 
-
 [:simple-python: re官方文档](https://docs.python.org/zh-cn/3/library/re.html){ .md-button .md-button--primary }
 [:simple-python: 正则表达式指南](https://docs.python.org/zh-cn/3/howto/regex.html){ .md-button }
 
+<!-- (.*?) 匹配所有字符 -->
+
+## 正则表达式匹配模式
+
+- `[]` 匹配其中之一，例如 `ma[dnt]` 匹配 `mad` ， `man` 或 `mat`, `[a-d3-6]` 表示 `[a-d]` 和 `[3-6]` 的结合，即 `[abcd3456]`
+- `-` 到，例如 `a-d` 相当于 `abcd`, `0-9` 相当于 `0123456789`
+- `^` 否定，例如 `[^abc]`匹配不在方括号内的任意字符
+- `.` 任意单个字符(换行符除外)
+- `+` 匹配一次或多次前面的分组
+- `\` 转义字符，要匹配 `+`，需要使用 `\+`
+- `r` 纯字符串(raw string)，用法类似于f-string，并且可以和f-string一起使用，纯字符串情况下，所有特殊字符被当作普通字符看待，此时不需要使用转义字符
+- ?匹配零次或一次前面的分组。
+- *匹配零次或多次前面的分组。
+- {n}匹配n次前面的分组。
+- {n,}匹配n次或更多前面的分组。
+- {,m}匹配零次到m次前面的分组。
+- {n,m}匹配至少n次、至多m次前面的分组。
+- {n,m}?或*?或+?对前面的分组进行非贪心匹配。
+- ^spam意味着字符串必须以spam开始。
+- spam$意味着字符串必须以spam结束。
+
+## 常用缩写
+
+- `\d` 单个数字字符，相当于 `[0-9]`
+- `\D` 单个非数字字符，相当于 `[^0-9]`
+- `\w` 单个字母/数字/下划线字符，相当于 `[a-zA-Z0-9_]`
+- `\W` 单个非字母/数字/下划线的字符，相当于 `[^a-zA-Z0-9_]`
+- `\s` 单个空白字符，相当于 `[ \t\n\r\v\f]`
+- `\S` 单个非空白字符，相当于 `[^ \t\n\r\v\f]`
+
+## 两种写法
+
+search和findall可以使用函数，也可以使用方法进行匹配。两种写法差别不大，代码量也没有很大区别。
+
+- search 只匹配第一个符合匹配模式的字符串，返回Match对象
+- findall 匹配所有符合匹配模式的字符串，返回 `list[str]` 对象
+
+绝大多数情况下，findall明显比search更好用
+
+### search
+
+=== "方法"
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = re.compile('ma')
+    match = pattern.search(my_str)
+    print(match) # <re.Match object; span=(39, 41), match='ma'>
+    print(match.group()) # ma
+    ```
+
+    - `re.compile()` 函数，传入一个字符串，返回一个Pattern对象，表示正则表达式的匹配模式，用pattren表示这个变量名
+    - Pattern对象的 `pattern.search()` 方法，在search方法传入的字符串中寻找满足条件的字符串，返回Match对象，用match表示这个变量名
+    - Match对象的 `match.group()`方法，返回查找字符串中实际匹配的文本
+
+=== "函数"
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = 'ma'
+    match = re.search(pattern, my_str)
+    print(match) # <re.Match object; span=(39, 41), match='ma'>
+    print(match.group()) # ma
+    ```
+
+### findall
+
+=== "方法"
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = re.compile('ma')
+    match = pattern.findall(my_str)
+    print(match) # ['ma', 'ma']
+    ```
+=== "函数"
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = 'ma'
+    match = re.findall(pattern, my_str)
+    print(match) # ['ma','ma']
+    ```
+    
+## 正则表达式的匹配模式详细说明
+
+### 利用小括号 `()` 分组
+
+=== "search方法"
+    ```python
+    import re
+    my_str = 'My phone num is 123-456-7890.'
+    pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+    match = pattern.search(my_str)
+    print(match.group()) # 123-456-7890
+    print(match.group(0)) # 123-456-7890
+    print(match.group(1)) # 123
+    print(match.group(2)) # 456-7890
+    print(match.groups()) # ('123', '456-7890')
+    ```
+
+    Pattern对象中的第一对括号是第1组，第二对括号是第2组(这与list等序列的下标从0开始不同，分组是从1开始)
+
+    Match对象的 `.group()` 方法 和 `.groups()` 方法
+
+    - `match.group()` 或 `match.group(0)` 无视分组，返回符合匹配文本
+    - `match.group()` 传入组号，返回对应分组的文本
+    - `match.groups()` 获取所有分组的文本，返回 `tuple[str]` 对象
+
+=== "search函数"
+    ```python
+    import re
+    my_str = 'My phone num is 123-456-7890.'
+    pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
+    match = re.search(pattern, my_str)
+    print(match.group()) # 123-456-7890
+    print(match.group(0)) # 123-456-7890
+    print(match.group(1)) # 123
+    print(match.group(2)) # 456-7890
+    print(match.groups()) # ('123', '456-7890')
+    ```
 
 
-(.*?) 匹配所有字符
-## re库
-用法举例：
-```python
-import re
 
-phone_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
-mo = phone_regex.search('my phone num is 123-456-7890')
-print(mo)
-print(mo.group())
-"""运行结果
-<re.Match object; span=(16, 28), match='123-456-7890'>
-123-456-7890
-"""
-```
-compile()函数，返回一个regex对象（匹配方法）。regex对象的search()方法，在search方法传入的字符串中寻找满足条件的字符串，返回match对象，常用mo表示。mo的group()方法，返回查找字符串中实际匹配的文本。
-## 常用
-?匹配零次或一次前面的分组。
-*匹配零次或多次前面的分组。
-+匹配一次或多次前面的分组。
-{n}匹配n次前面的分组。
-{n,}匹配n次或更多前面的分组。
-{,m}匹配零次到m次前面的分组。
-{n,m}匹配至少n次、至多m次前面的分组。
-{n,m}?或*?或+?对前面的分组进行非贪心匹配。
-^spam意味着字符串必须以spam开始。
-spam$意味着字符串必须以spam结束。
-.匹配所有字符，换行符除外。
-\d、\w和\s分别匹配数字、单词和空格。
-\D、\W和\S分别匹配出数字、单词和空格外的所有字符。
-[abc]匹配方括号内的任意字符（诸如a、b或c）。
-[^abc]匹配不在方括号内的任意字符。
-## 正则表达式的匹配模式
-### 利用括号分组
-```python
-import re
-
-phone_regex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
-mo = phone_regex.search('my phone num is 123-456-7890')
-print(mo.group())
-# 运行结果123-456-7890
-print(mo.group(0))
-# 123-456-7890
-print(mo.group(1))
-# 123
-print(mo.group(2))
-# 456-7890
-print(mo.groups())
-# ('123', '456-7890')
-```
-正则表达式字符串中的第一对括号是第1组，第二对括号是第2组。向group()方法传入相应的数字获取相应的文本，传入0或不传参，则返回整个匹配文本。使用groups()方法一次性获取所有分组。如果匹配的文字中有括号需要使用转义字符。
-### 使用管道（竖线）匹配多个分组
+### 使用管道(竖线)匹配多个分组
 字符“|”称为“管道”，表示“或”。如果有多个符合匹配的文本，则第一个出现的作为match对象返回。
 ```python
 import re
@@ -154,15 +224,6 @@ print(list2)
 # 输出结果 [('415', '555', '9999'), ('212', '555', '0000')]
 ```
 findall()函数 findall(r'正则表达式', '被查找的字符串')
-## 字符分类
-| 字符 | 表示 |
-|---|---|
-| \d | 0到9任何数字 |
-| \D | 除0到9之外的任意字符 |
-| \w | 单词（任何字母、数字、下划线） |
-| \W | 除字母、数字、下划线之外的字符 |
-| \s | 空白字符（空格、制表位、换行符） |
-| \S | 除空白字符意外的任意字符 |
 ## 建立自己的字符分类
 可以用方括号定义自己的字符分类。例如，字符分类[aeiouAEIOU]将匹配所有元音字符，不论大小写。
 ```python
@@ -171,7 +232,7 @@ import re
 list = re.findall(r'[aeiouAEIOU]', 'RoboCop eats baby food. BABY FOOD.')
 print(list)# 输出结果 ['o', 'o', 'o', 'e', 'a', 'a', 'o', 'o', 'A', 'O', 'O']
 ```
-也可以使用短横表示字母或数字的范围。例如，字符分类[a-zA-Z0-9]将匹配所有小写字母、大写字母和数字。注意，在方括号内，普通的正则表达式符号不会被解释。你不需要前面加上倒斜杠转义.、*、?或()字符。例如，字符分类将匹配数字0到5和一个句点，则需要将它写成[0-5.] 。通过在字符分类的左方括号后加上一个插入字符（^），就可以得到“非字符类”。非字符类将匹配不在这个字符类中的所有字符。
+也可以使用短横表示字母或数字的范围。例如，字符分类[a-zA-Z0-9]将匹配所有小写字母、大写字母和数字。注意，在方括号内，普通的正则表达式符号不会被解释。你不需要前面加上倒斜杠转义.、*、?或()字符。例如，字符分类将匹配数字0到5和一个句点，则需要将它写成[0-5.] 。通过在字符分类的左方括号后加上一个插入字符(^)，就可以得到“非字符类”。非字符类将匹配不在这个字符类中的所有字符。
 ```python
 import re
 # 匹配所有非元音字母
@@ -179,9 +240,9 @@ list = re.findall(r'[^aeiouAEIOU]', 'RoboCop eats baby food. BABY FOOD.')
 print(list)# 输出结果 ['R', 'b', 'C', 'p', ' ', 't', 's', ' ', 'b', 'b', 'y', ' ', 'f', 'd', '.', ' ', 'B', 'B', 'Y', ' ', 'F', 'D', '.']
 ```
 ## 插入字符和美元字符
-可以在正则表达式的开始处使用插入符号（^），表明匹配必须发生在被查找文本开始处。类似地，可以再正则表达式的末尾加上美元符号（$），表示该字符串必须以这个正则表达式的模式结束。可以同时使用^和$，表明整个字符串必须匹配该模式，也就是说，只匹配该字符串的某个子集是不够的。
+可以在正则表达式的开始处使用插入符号(^)，表明匹配必须发生在被查找文本开始处。类似地，可以再正则表达式的末尾加上美元符号($)，表示该字符串必须以这个正则表达式的模式结束。可以同时使用^和$，表明整个字符串必须匹配该模式，也就是说，只匹配该字符串的某个子集是不够的。
 ## 通配符
-在正则表达式中，.（句点）字符称为“通配符”。它匹配除了换行之外的所有字符。
+在正则表达式中，.(句点)字符称为“通配符”。它匹配除了换行之外的所有字符。
 ```python
 import re
 
@@ -190,7 +251,7 @@ print(list)# 输出结果 ['cat', 'hat', 'sat', 'lat', 'mat']
 ```
 要记住，句点字符只匹配一个字符，所以，对于文本flat，只匹配lat。要匹配真正的句点，就是用倒斜杠转义。
 ### 用点-星匹配所有字符
-可以用点-星（.*）表示“任意文本”。句点字符表示“除换行外所有单个字符”，星号字符表示“前面字符出现零次或多次”。
+可以用点-星(.*)表示“任意文本”。句点字符表示“除换行外所有单个字符”，星号字符表示“前面字符出现零次或多次”。
 在交互式环境中输入以下代码：
 ```python
 import re
@@ -260,8 +321,8 @@ phone_regex = re.compile(r'''(
     )''', re.VERBOSE)
 ```
 使用了三重引号('")，创建了一个多行字符串。这样就可以将正则表达式定义放在多行中，让它更可读。正则表达式字符串中的注释规则，与普通的Python代码一样：#符号和它后面直到行末的内容，都被忽略。而且，表示正则表达式的多行字符串中，多余的空白字符也不认为是要匹配的文本模式的一部分。
-## 组合使用re.IGNOREC ASE、re.DOTALL和re.VERBOSE（不推荐使用）
-如果你希望在正则表达式中使用re.VERBOSE来编写注释，还希望使用re.IGNORECASE来忽略大小写，该怎么办？遗憾的是，re.compile()函数只接受一个值作为它的第二参数。可以使用管道字符（|）将变量组合起来，从而绕过这个限制。管道字符在这里称为“按位或”操作符。所以，如果希望正则表达式不区分大小写，并且句点字符匹配换行，就可以这样构造re.compile()调用：
+## 组合使用re.IGNOREC ASE、re.DOTALL和re.VERBOSE(不推荐使用)
+如果你希望在正则表达式中使用re.VERBOSE来编写注释，还希望使用re.IGNORECASE来忽略大小写，该怎么办？遗憾的是，re.compile()函数只接受一个值作为它的第二参数。可以使用管道字符(|)将变量组合起来，从而绕过这个限制。管道字符在这里称为“按位或”操作符。所以，如果希望正则表达式不区分大小写，并且句点字符匹配换行，就可以这样构造re.compile()调用：
 ```python
 someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL)
 someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
