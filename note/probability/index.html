@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tour.d111kc.top/note/probability/">
       
       
-        <link rel="prev" href="../../command-line/git/first-contributions/">
+        <link rel="prev" href="../t20/">
       
       
         <link rel="next" href="../statistics/">
@@ -384,7 +384,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../tr/" class="md-tabs__link">
           
   
     
@@ -804,6 +804,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -842,6 +846,58 @@
             笔记
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revit 天正插件TR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t20/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoCAD 天正插件T20
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1261,6 +1317,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3.2 方差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-方差的计算" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 方差的计算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-方差的性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 方差的性质
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1558,14 +1638,6 @@
     概率统计-数理统计
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--new" title="最近更新">
-    </span>
-  
-
   
 
       </a>
@@ -2068,6 +2140,30 @@
       3.2 方差
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3.2 方差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-方差的计算" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 方差的计算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-方差的性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 方差的性质
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3311,14 +3407,19 @@ Y
 <li><strong>几何意义：</strong> <span class="arithmatex">\((X ,  Y )\)</span>落在点 <span class="arithmatex">\((x,  y)\)</span> 的左下方无穷矩形域内的概率．</li>
 <li><span class="arithmatex">\(P\{x_1 &lt; X \leq x_2 ,  y_1 &lt; Y \leq y_2 \} = F(x_2 ,  y_2 ) - F(x_1 ,  y_2 ) - F(x_2 ,  y_1) + F(x_1 ,  y_1 )\)</span>．</li>
 </ul>
+<blockquote>
+<p>此处事件中的逗号表示 "且"</p>
+</blockquote>
 </details>
-<p><strong>性质</strong> </p>
+<details class="note" open="open">
+<summary>性质</summary>
 <ul>
 <li><span class="arithmatex">\(F(x,  y)\)</span> 关于 <span class="arithmatex">\(x,  y\)</span> 具有单调不减性；</li>
 <li><span class="arithmatex">\(F(+ \infty,  + \infty) = 1,  F(-\infty,  - \infty) = 0,  F(x,  - \infty) = 0,  F(-\infty,  y) = 0\)</span></li>
 <li><span class="arithmatex">\(F(x,  y)\)</span> 关于 <span class="arithmatex">\(x,  y\)</span> 具有右连续性；</li>
 <li>对<span class="arithmatex">\(\forall x_1 &lt; x_2 ,  y_1 &lt; y_2\)</span>均有 <span class="arithmatex">\(F(x_2 ,  y_2 ) - F(x_1 ,  y_2 ) - F(x_2 ,  y_1 ) + F(x_1 ,  y_1 ) \ge 0\)</span></li>
 </ul>
+</details>
 <p><strong>边缘分布函数</strong> </p>
 <ul>
 <li><span class="arithmatex">\(F_X (x) = P\{X \leq x\} = F(x,  + \infty)\)</span></li>
@@ -3362,30 +3463,6 @@ x_i &amp; p_{31} &amp; p_{32} &amp; \cdots &amp; p_{3j} &amp; \cdots &amp; p_{i 
 P \{Y= y_j \} = p_{\cdot j} &amp; p_{\cdot 1} &amp; p_{\cdot 2} &amp; \cdots &amp; p_{\cdot j} &amp; \cdots &amp; 1 \\
 \end{array}
 \]</div>
-<!-- 例1 设 X 在 1,  2,  3,  4 中等可能取一值,  Y 在1 \sim X 中等可能取一整数值,  
-求 (X ,  Y )的联合分布律及 X ,  Y 的边缘分布律．
-Y p
-1 2 3 4 i\cdot 
-X
-解
-1 1
-1 \cdot 1 0 0 0
-P{X =1,  Y =1} =
-4 4
-1 1 1 1 1 P{X =1}P{Y =1| X =1}
-2 \cdot  \cdot  0 0
-4 2 4 2 4
-1 1 1 1 1 1 1
-3 \cdot  \cdot  \cdot  0
-4 3 4 3 4 3 4
-1 1 1 1 1 1 1 1 1
-4 \cdot  \cdot  \cdot  \cdot 
-4 4 4 4 4 4 4 4 4
-p 25 13 7 3 \sum
-=1
-\cdot  j
-48 48 48 48  -->
-
 <h4 id="243-二维连续型随机变量">2.4.3 二维连续型随机变量<a class="headerlink" href="#243-二维连续型随机变量" title="permalink">¶</a></h4>
 <p><strong>定义</strong> 设 <span class="arithmatex">\((X ,  Y ) \sim F(x,  y)\)</span>,  若存在一个非负可积的函数 <span class="arithmatex">\(f (x,  y)\)</span>,  使 <span class="arithmatex">\(\forall (x,  y) \in \R^2\)</span>,  有 <span class="arithmatex">\(F(x,  y) = \int _{- \infty} ^x \int _{- \infty} ^y f (u,  v)dvdu\)</span>,  则称 <span class="arithmatex">\((X ,  Y )\)</span>为二维连续型随机变量,   <span class="arithmatex">\(f (x,  y)\)</span> 称为 <span class="arithmatex">\((X ,  Y )\)</span> 的联合概率密度函数． </p>
 <p><span class="arithmatex">\(f (x,  y)\)</span> 的性质:</p>
@@ -3863,7 +3940,7 @@ x+y ,  \space 0 \le x \le 1,  0 \le y \le 1 \\
 <h3 id="32-方差">3.2  方差<a class="headerlink" href="#32-方差" title="permalink">¶</a></h3>
 <p>方差反映的是 <span class="arithmatex">\(X\)</span> 的取值与其期望值的偏离程度．</p>
 <p><strong>定义</strong> 设 <span class="arithmatex">\(X\)</span> 是一随机变量,  若 <span class="arithmatex">\(E[X - E(X )]^2\)</span> 存在,  则称其为 <span class="arithmatex">\(X\)</span> 的方差,  记为 $Var(X ) = D(X ) = E[X - E(X )]^2 $．而称 <span class="arithmatex">\(\sigma (X ) = \sqrt{D(X )}\)</span> 为 <span class="arithmatex">\(X\)</span> 的标准差(或均方差)． </p>
-<p><mark class="critic">方差的计算</mark></p>
+<h4 id="321-方差的计算">3.2.1 方差的计算<a class="headerlink" href="#321-方差的计算" title="permalink">¶</a></h4>
 <ul>
 <li>方差是随机变量函数 <span class="arithmatex">\(g(X ) = [X - E(X )]^2\)</span> 的期望<ul>
 <li>设 <span class="arithmatex">\(X \sim P \{X = x _i\} = p_i ,  i =1,  2,  ...\)</span>, 则 <span class="arithmatex">\(D(X ) = \sum _i [x - E(X )] ^2 p_i\)</span></li>
@@ -3877,9 +3954,9 @@ x+y ,  \space 0 \le x \le 1,  0 \le y \le 1 \\
 </blockquote>
 </li>
 </ul>
-<p><mark class="critic">方差的性质</mark></p>
+<h4 id="322-方差的性质">3.2.2 方差的性质<a class="headerlink" href="#322-方差的性质" title="permalink">¶</a></h4>
 <ul>
-<li><span class="arithmatex">\(D(c) = 0\)</span></li>
+<li><span class="arithmatex">\(D(C) = 0\)</span></li>
 <li><span class="arithmatex">\(D(aX + b) = a ^2 D(X )\)</span></li>
 <li>若 <span class="arithmatex">\(X ,  Y\)</span> 相互独立,  则 <span class="arithmatex">\(D(X \pm Y ) = D(X ) + D(Y )\)</span><ul>
 <li>
@@ -4334,36 +4411,42 @@ f (x,  y) = \begin{cases}
 </ul>
 <p><span class="arithmatex">\(\therefore Cov(X ,  Y ) = E(XY ) - E(X )E(Y ) = 0 \implies \rho _{\tiny XY} = 0\)</span></p>
 <hr />
+<p><span class="arithmatex">\(f_X (x) = \int _{- \infty} ^{+ \infty} f (x,  y)dy\)</span> </p>
+<ul>
+<li>当 <span class="arithmatex">\(|x| &gt; r\)</span> 时,  <span class="arithmatex">\(f_X (x) = 0\)</span></li>
+<li>
+<p>当 <span class="arithmatex">\(|x| \leq r\)</span> 时,   </p>
+<div class="arithmatex">\[
+f_X (x) = \int _{- \sqrt{r^2 - x^2}} ^{+ \sqrt{r^2 - x^2}} \frac{1}{\pi r^2} dy = \frac{2}{\pi r^2} \sqrt{r^2 - x^2}
+\]</div>
+</li>
+</ul>
+<div class="arithmatex">\[
+\therefore
+f_X(x) = 
+\begin{cases} 
+\frac{2}{\pi r^2} \sqrt{r^2 - x^2} , \space |x| \le r \\
+0 , \space |x| &gt; r
+\end{cases}
+\]</div>
+<p>同理</p>
+<div class="arithmatex">\[
+f_Y(y) = 
+\begin{cases} 
+\frac{2}{\pi r^2} \sqrt{r^2 - y^2} , \space |y| \le r \\
+0 , \space |y| &gt; r
+\end{cases}
+\]</div>
+<div class="arithmatex">\[
+f(x,y) = 
+\begin{cases} 
+\frac{1}{\pi r^2} , x^2 + y^2 \le r^2 \\
+0 , \space 其他
+\end{cases}
+\]</div>
+<p><span class="arithmatex">\(\therefore f(x,y) \not = f_X(x) f_Y(y)\)</span></p>
+<p><span class="arithmatex">\(\therefore X\)</span> 与 <span class="arithmatex">\(Y\)</span> 不相互独立</p>
 </details>
-<!-- $f_X (x) = \int _{- \infty} ^{+ \infty} f (x,  y)dy$ 
-
-- 当 $|x| > r$ 时,  $f_X (x) = 0$
-- 当 $|x| \leq r$ 时,   f (x) = \int dy = r2 - x2 ,  
-X - r2-x2 \pir2 \pir2
-2 2
- r2 - x2 ,   x \leq r,    r2 - y2 ,   y \leq r,  
-\pir2  \pir2
-则 f (x) = 同理 f (y) =
- 
-X Y
- 
-x > r,   y > r,  
- 0,    0,   
-
-
-f (x) = f (y) =
- 
-X Y
- 
-x > r,   y > r,  
- 0,    0,  
- 1
-,   x2 + y2 \leq r2,   f (x,  y)  f (x) f ( y),  
-
-f (x,  y) = \pir2 X Y
-
- 0,   其他． X 与Y 不相互独立．  -->
-
 <h2 id="第五章-基本极限定理">第五章 基本极限定理<a class="headerlink" href="#第五章-基本极限定理" title="permalink">¶</a></h2>
 <h3 id="51-切比雪夫不等式与大数定律">5.1 切比雪夫不等式与大数定律<a class="headerlink" href="#51-切比雪夫不等式与大数定律" title="permalink">¶</a></h3>
 <details class="abstract" open="open">
@@ -4442,12 +4525,14 @@ D(X ) = 1600\)</span>,  则由切比雪夫不等式知</p>
 \]</div>
 <p>即</p>
 <div class="arithmatex">\[
-\frac{\sum _{i=1}^n X_i - n \mu}{\sqrt{n} \sigma} \sim  N(0,  1) \space (n \to \infty)
+\frac{\sum _{i=1}^n X_i - n \mu}{\sqrt{n} \sigma} \sim  N(0,  1) \space (n \to \infty) \\
+\\ 
+\sum _{i=1}^n X_i \sim  N(n \mu,  n \sigma ^2) \space (n \to \infty)
 \]</div>
 <details class="example" open="open">
 <summary>独立同分布的中心极限定理</summary>
 <p>设某食品用机器装袋,  每袋净重的期望为100g,  标准差为4g, 一箱装100袋,  求一箱净重大于10100g的概率．</p>
-<p><strong>解</strong> 设$ X_i$ 表示第 i 袋食品的净重,  则 <span class="arithmatex">\(X_1 ,  X_2 ,  ...,  X_100\)</span> 独立同分布,  且 <span class="arithmatex">\(E(X_i ) = 100,  D(X_i ) = 16\)</span>,  而一箱净重 <span class="arithmatex">\(X = \sum _{i=1} ^100 X_i\)</span> </p>
+<p><strong>解</strong> 设$ X_i$ 表示第 i 袋食品的净重,  则 <span class="arithmatex">\(X_1 ,  X_2 ,  ...,  X_{100}\)</span> 独立同分布,  且 <span class="arithmatex">\(E(X_i ) = 100,  D(X_i ) = 16\)</span>,  而一箱净重 <span class="arithmatex">\(X = \sum _{i=1} ^{100} X_i\)</span> </p>
 <p>由独立同分布的中心极限定理可知：<span class="arithmatex">\(\frac{X - 100 E(X_i)}{\sqrt{100}D(X_i)} \sim N(0, 1)\)</span>,  即 <span class="arithmatex">\(\frac{X - 10000}{40} \sim N(0, 1)\)</span></p>
 <p>所以 <span class="arithmatex">\(P\{X &gt; 10100\}  = 1- P\{X \leq 10100\}  = 1- P \set{\frac{X - 10000}{40} \leq  \frac{10100 - 10000}{40}} = 1-\varPhi (2.5) = 0.0062\)</span></p>
 <blockquote>
@@ -4658,7 +4743,7 @@ P\{a &lt; X \le b\} \approx \varPhi (\frac{b -np}{\sqrt{np(1-p)}}) - \varPhi (\f
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../command-line/git/first-contributions/" class="md-footer__link md-footer__link--prev" aria-label="上一页: First Contributions">
+          <a href="../t20/" class="md-footer__link md-footer__link--prev" aria-label="上一页: AutoCAD 天正插件T20">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4668,7 +4753,7 @@ P\{a &lt; X \le b\} \approx \varPhi (\frac{b -np}{\sqrt{np(1-p)}}) - \varPhi (\f
                 上一页
               </span>
               <div class="md-ellipsis">
-                First Contributions
+                AutoCAD 天正插件T20
               </div>
             </div>
           </a>
@@ -4698,7 +4783,7 @@ P\{a &lt; X \le b\} \approx \varPhi (\frac{b -np}{\sqrt{np(1-p)}}) - \varPhi (\f
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <div style="text-align:center">Copyright &copy; 2024 - 2025 <a href="https://github.com/interset-wq" target="_blank">Interset Wq</a> <br> <a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a> </div>
+      Copyright &copy; 2024 - 2025 <a href="https://github.com/interset-wq" target="_blank">Interset Wq</a> <br> <a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
     </div>
   
   
