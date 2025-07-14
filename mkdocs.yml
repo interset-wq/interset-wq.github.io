@@ -255,12 +255,14 @@ nav:
       - command-line/git/quick-start.md
       - command-line/git/basic-git-command.md
       - command-line/git/first-contributions.md
+    - Linux:
+      - command-line/linux/basic.md
   - 笔记:
+    - note/revit2.md
+    - note/revit.md
     - note/tr.md
-    - note/t20.md
     - note/probability.md
     - note/statistics.md
-    - note/revit.md
     - note/cad.md
     - note/excel-degree.md
     - note/surveying.md
