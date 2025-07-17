@@ -135,34 +135,36 @@ more命令同样可以查看文件内容，同cat不同的是：
 
 ## cp命令
 
+cp，即copy
+
 功能：复制文件、文件夹
 
 语法：`cp [-r] 参数1 参数2`
 
-- 参数1，被复制的
+- 参数1，被复制的文件或文件夹
 - 参数2，要复制去的地方
-- 选项：-r，可选，复制文件夹使用
+- 选项：`-r`，可选，复制文件夹时必须使用此选项
 
 示例：
 
-- cp a.txt b.txt，复制当前目录下a.txt为b.txt
-- cp a.txt test/，复制当前目录a.txt到test文件夹内
-- cp -r test test2，复制文件夹test到当前文件夹内为test2存在
-
-
+- `cp a.txt b.txt`，复制当前目录下a.txt为b.txt
+- `cp a.txt test/`，复制当前目录a.txt到test文件夹内
+- `cp -r test test2`，复制文件夹test到当前文件夹内为test2存在
 
 ## mv命令
 
-功能：移动文件、文件夹
+mv，即move
+
+功能：移动文件、文件夹，文件或文件夹重命名
 
 语法：`mv 参数1 参数2`
 
-- 参数1：被移动的
+- 参数1：被移动的文件或文件夹
 - 参数2：要移动去的地方，参数2如果不存在，则会进行改名
 
-
-
 ## rm命令
+
+rm，即remove
 
 功能：删除文件、文件夹
 
@@ -170,34 +172,80 @@ more命令同样可以查看文件内容，同cat不同的是：
 
 - 参数：支持多个，每一个表示被删除的，空格进行分隔
 - 选项：-r，删除文件夹使用
-- 选项：-f，强制删除，不会给出确认提示，一般root用户会用到
+- 选项：-f，强制删除，不会给出确认提示，一般root用户会用到，普通用户-f选项没有意义
 
+### 配合通配符 `*` 使用
 
+`rm`命令支持通配符 `*`，用来做模糊匹配，符号`*` 表示通配符，即匹配任意内容（包含空），示例：
 
-> rm命令很危险，一定要注意，特别是切换到root用户的时候。
+- `test*`，表示匹配任何以test开头的内容
+- `*test`，表示匹配任何以test结尾的内容
+- `*test*`，表示匹配任何包含test的内容
 
+举例：
 
+- 删除所有以test开头的文件或文件夹 `rm -r test*`
+- 删除所有以test结尾的文件或文件夹 `rm -r *test`
+- 删除所有包含test的文件或文件夹 `rm -r *test*`
+
+### root用户使用-f选项强制删除文件或文件夹
+
+`su - root` 再输入密码 使用root用户（超级管理员）身份操作终端，此时命令提示符由 `$` 变为 `#`
+
+`exit` 退出root用户，此时命令提示符重新变成 `$`
+
+root用户使用rm命令删除文件或文件夹时，都会在命令行提示是否删除（输入`y`表示确定，`n`表示取消），如果不想看到这个提示，可以使用-f选项强制删除
+
+如下命令，请千万千万不要在root管理员用户下执行：
+
+    rm -rf /
+    rm -rf /*
+
+效果等同于在Windows上执行C盘格式化
+
+> rm命令很危险，一定要注意，特别是切换到root用户的时候
 
 ## which命令
 
-功能：查看命令的程序本体文件路径
+功能：查看命令的程序本体文件路径。Linux每一个命令都有一个对应的文件，通过which可以查看这些文件的路径
 
 语法：`which 参数`
 
 - 参数：被查看的命令
 
-
-
 ## find命令
 
-功能：搜索文件
+功能：搜索文件，类似于Windows文件资源管理器的搜索功能
 
-语法1按文件名搜索：`find 路径 -name 参数`
+### 按照文件名搜索
+
+按文件名搜索：`find 路径 -name 参数`
 
 - 路径，搜索的起始路径
 - 参数，搜索的关键字，支持通配符*， 比如：`*`test表示搜索任意以test结尾的文件
 
+例如：
 
+- `find / -name "test"` 从根目录开始查找所有文件名是test的文件
+
+### 按照文件大小搜索
+
+语法：
+
+- `find 路径 -size +n[kMG]`
+- `find 路径 -size -n[kMG]`
+
+参数：
+
+- `+` `-` 表示大于和小于
+- `n` 表示大小数字
+- `kMG` 表示大小单位，k(小写字母)表示kb，M表示MB，G表示GB
+
+示例：
+
+- 查找小于10KB的文件： `find / -size -10k`
+- 查找大于100MB的文件：`find / -size +100M`
+- 查找大于1GB的文件：`find / -size +1G`
 
 ## grep命令
 
@@ -206,18 +254,14 @@ more命令同样可以查看文件内容，同cat不同的是：
 语法：`grep [-n] 关键字 文件路径`
 
 - 选项-n，可选，表示在结果中显示匹配的行的行号。
-- 参数，关键字，必填，表示过滤的关键字，带有空格或其它特殊符号，建议使用””将关键字包围起来
+- 参数，关键字，必填，表示过滤的关键字，带有空格或其它特殊符号，建议使用双引号将关键字包围起来
 - 参数，文件路径，必填，表示要过滤内容的文件路径，可作为内容输入端口
-
-
 
 > 参数文件路径，可以作为管道符的输入
 
-
-
 ## wc命令
 
-功能：统计
+功能：统计字节数、行数、单词数、字符数
 
 语法：`wc [-c -m -l -w] 文件路径`
 
@@ -225,62 +269,60 @@ more命令同样可以查看文件内容，同cat不同的是：
 - 选项，-m，统计字符数量
 - 选项，-l，统计行数
 - 选项，-w，统计单词数量
+- 不使用任何选项时，同时显示行数、单词数、字符数
 - 参数，文件路径，被统计的文件，可作为内容输入端口
-
-
 
 > 参数文件路径，可作为管道符的输入
 
+## 管道符 `|`
 
-
-## 管道符|
-
-写法：`|`
-
-功能：将符号左边的结果，作为符号右边的输入
+功能：将符号左边的结果，作为符号右边的输入，凡是会在控制台输出内容的命令都可以放在管道符的左侧
 
 示例：
 
-`cat a.txt | grep itheima`，将cat a.txt的结果，作为grep命令的输入，用来过滤`itheima`关键字
-
-
-
-可以支持嵌套：
-
-`cat a.txt | grep itheima | grep itcast`
-
-
+- `cat a.txt | grep "you"`，将cat a.txt输出在控制台的内容，作为grep命令的输入，用来过滤`you`关键字，相当于 `grep "you" a.txt`
+- 嵌套 `cat a.txt | grep "you" | grep "to"` 按照从左到右的顺序执行过滤
 
 ## echo命令
 
-功能：输出内容
+功能：输出内容，类似于python中的print()函数
 
 语法：`echo 参数`
 
-- 参数：被输出的内容
+- 参数：被输出的内容，双引号可有可无，如果输入的内容比较复杂还是建议使用双引号包裹
 
-
-
-## `反引号
+## 反引号
 
 功能：被两个反引号包围的内容，会作为命令执行
 
 示例：
 
-- echo \`pwd\`，会输出当前工作目录
+    echo `pwd`
+
+以上命令将在控制台输出pwd命令返回的内容
 
 
+## 重定向符
+
+功能：将符号左边的结果，输出到右边指定的文件中去
+
+- `>`，表示覆写，删除文件原有内容，写入新内容，凡是可以在控制台输出内容的命令都可以放在 `>` 左侧
+- `>>`，表示追加，在原有内容之后另起一行写入新内容，用法和 `>` 相同
+
+例如：
+
+- `echo "hello world" > test.txt` 覆写test.txt，即删除test.txt所有内容，写入hello world
+- `ls >> test.txt` 将ls命令输出的内容追加到test.txt文件中
 
 ## tail命令
 
 功能：查看文件尾部内容
 
-语法：`tail [-f] 参数`
+语法：`tail [-f -n] 参数`
 
 - 参数：被查看的文件
 - 选项：-f，持续跟踪文件修改
-
-
+- 选项：-n，用数字替换掉n，指定查看最后n行的内容，如果不使用这个选项，默认查看最后10行的内容
 
 ## head命令
 
@@ -291,20 +333,42 @@ more命令同样可以查看文件内容，同cat不同的是：
 - 参数：被查看的文件
 - 选项：-n，查看的行数
 
+## vi/vim编辑器
 
+vi是visual interface的简称, 是Linux中最经典的文本编辑器。vim是vi improved，即vi的增强版。二者都是Linux内置的文本编辑器，通过命令行直接使用。vim 是 vi 的加强版本，兼容 vi 的所有指令，不仅能编辑文本，而且还具有 shell 程序编辑的功能，可以不同颜色的字体来辨别语法的正确性，极大方便了程序的设计和编辑性。因此，一般直接使用vim
 
-## 重定向符
+### vi/vim的三种工作模式
 
-功能：将符号左边的结果，输出到右边指定的文件中去
+- 命令模式（Command mode）  命令模式下，所敲的按键编辑器都理解为命令，以命令驱动执行不同的功能。此模式下，不能自由进行文本编辑。
+- 输入模式（Insert mode）  也就是所谓的编辑模式、插入模式。  此模式下，可以对文件内容进行自由编辑。
+- 底线命令模式（Last line mode） 通常用于文件的保存、退出。
 
-- `>`，表示覆盖输出
-- `>>`，表示追加输出
+![图片](https://d111kc.github.io/picx-images-hosting/revit/图片.7sni5dowta.webp)
 
+### 打开vi/vim编辑器
 
+如果需要通过vi/vim编辑器编辑文件，请通过如下命令：
 
-## vi编辑器
+    vi 文件路径
+    vim 文件路径
 
-### 命令模式快捷键
+vim兼容全部的vi功能，后续全部使用vim命令
+
+如果文件路径表示的文件不存在，那么此命令会创建新文件并编辑这个新文件。如果文件路径表示的文件存在，那么此命令用于编辑已有文件
+
+通过vi/vim命令编辑文件，会打开一个新的窗口，此时这个窗口就是：命令模式窗口，命令模式是vi编辑器的入口和出口，进入vi编辑器会进入命令模式。
+
+通过命令模式输入键盘指令，可以进入输入模式。输入模式需要退回到命令模式，然后通过命令可以进入底线命令模式
+
+### 命令模式
+
+- 在命令模式内，按键盘 `i` ，进入输入模式，此时命令行最后一行变为 `-- 插入 --`
+- 按下 ++esc++ 将返回命令模式
+- 命令模式下，按下 ++y+y+p+ 将复制粘贴，类似于pycharm的 ++ctrl+d++
+- ++d+d++ 删除一行
+- ++u++ 撤销
+- 在命令模式中，按下 `:` 键，将进入底线命令模式
+    - 底线命令模式中，输入 `wq` 保存并退出
 
 ![image-20221027215841573](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027215841.png)
 
@@ -315,7 +379,6 @@ more命令同样可以查看文件内容，同cat不同的是：
 ### 底线命令快捷键
 
 ![image-20221027215858967](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027215858.png)
-
 
 
 ## 命令的选项
@@ -341,463 +404,6 @@ more命令同样可以查看文件内容，同cat不同的是：
 可以通过：`man 命令`查看某命令的详细手册
 
 ![image-20221027220009949](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220010.png)
-
-
-
-
-
-# Linux常用操作
-
-## 软件安装
-
-- CentOS系统使用：
-  - yum [install remove search] [-y] 软件名称
-    - install 安装
-    - remove 卸载
-    - search 搜索
-    - -y，自动确认
-- Ubuntu系统使用
-  - apt [install remove search] [-y] 软件名称
-    - install 安装
-    - remove 卸载
-    - search 搜索
-    - -y，自动确认
-
-> yum 和 apt 均需要root权限
-
-
-
-## systemctl
-
-功能：控制系统服务的启动关闭等
-
-语法：`systemctl start | stop | restart | disable | enable | status 服务名`
-
-- start，启动
-- stop，停止
-- status，查看状态
-- disable，关闭开机自启
-- enable，开启开机自启
-- restart，重启
-
-
-
-## 软链接
-
-功能：创建文件、文件夹软链接（快捷方式）
-
-语法：`ln -s 参数1 参数2`
-
-- 参数1：被链接的
-- 参数2：要链接去的地方（快捷方式的名称和存放位置）
-
-
-
-## 日期
-
-语法：`date [-d] [+格式化字符串]`
-
-- -d 按照给定的字符串显示日期，一般用于日期计算
-
-- 格式化字符串：通过特定的字符串标记，来控制显示的日期格式
-  - %Y   年%y   年份后两位数字 (00..99)
-  - %m   月份 (01..12)
-  - %d   日 (01..31)
-  - %H   小时 (00..23)
-  - %M   分钟 (00..59)
-  - %S   秒 (00..60)
-  - %s   自 1970-01-01 00:00:00 UTC 到现在的秒数
-
-
-
-示例：
-
-- 按照2022-01-01的格式显示日期
-
-  ![image-20221027220514640](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220514.png)
-
-- 按照2022-01-01 10:00:00的格式显示日期
-
-  ![image-20221027220525625](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220525.png)
-
-- -d选项日期计算
-
-  ![image-20221027220429831](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220429.png)
-
-  - 支持的时间标记为：
-
-    ![image-20221027220449312](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220449.png)
-
-
-
-
-
-## 时区
-
-修改时区为中国时区
-
-![image-20221027220554654](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220554.png)
-
-
-
-## ntp
-
-功能：同步时间
-
-安装：`yum install -y ntp`
-
-启动管理：`systemctl start | stop | restart | status | disable | enable ntpd`
-
-
-
-手动校准时间：`ntpdate -u ntp.aliyun.com`
-
-
-
-## ip地址
-
-格式：a.b.c.d
-
-- abcd为0~255的数字
-
-
-
-特殊IP：
-
-- 127.0.0.1，表示本机
-- 0.0.0.0
-  - 可以表示本机
-  - 也可以表示任意IP（看使用场景）
-
-
-
-查看ip：`ifconfig`
-
-
-
-## 主机名
-
-功能：Linux系统的名称
-
-查看：`hostname`
-
-设置：`hostnamectl set-hostname 主机名`
-
-
-
-## 配置VMware固定IP
-
-1. 修改VMware网络，参阅PPT，图太多
-
-2. 设置Linux内部固定IP
-
-   修改文件：`/etc/sysconfig/network-scripts/ifcfg-ens33`
-
-   示例文件内容：
-
-   ```shell
-   TYPE="Ethernet"
-   PROXY_METHOD="none"
-   BROWSER_ONLY="no"
-   BOOTPROTO="static"			# 改为static，固定IP
-   DEFROUTE="yes"
-   IPV4_FAILURE_FATAL="no"
-   IPV6INIT="yes"
-   IPV6_AUTOCONF="yes"
-   IPV6_DEFROUTE="yes"
-   IPV6_FAILURE_FATAL="no"
-   IPV6_ADDR_GEN_MODE="stable-privacy"
-   NAME="ens33"
-   UUID="1b0011cb-0d2e-4eaa-8a11-af7d50ebc876"
-   DEVICE="ens33"
-   ONBOOT="yes"
-   IPADDR="192.168.88.131"		# IP地址，自己设置，要匹配网络范围
-   NETMASK="255.255.255.0"		# 子网掩码，固定写法255.255.255.0
-   GATEWAY="192.168.88.2"		# 网关，要和VMware中配置的一致
-   DNS1="192.168.88.2"			# DNS1服务器，和网关一致即可
-   ```
-
-
-
-## ps命令
-
-功能：查看进程信息
-
-语法：`ps -ef`，查看全部进程信息，可以搭配grep做过滤：`ps -ef | grep xxx`
-
-
-
-## kill命令
-
-![image-20221027221303037](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221303.png)
-
-
-
-## nmap命令
-
-![image-20221027221241123](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221241.png)
-
-
-
-## netstat命令
-
-功能：查看端口占用
-
-用法：`netstat -anp | grep xxx`
-
-
-
-## ping命令
-
-测试网络是否联通
-
-语法：`ping [-c num] 参数`
-
-![image-20221027221129782](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221129.png)
-
-
-
-## wget命令
-
-![image-20221027221148964](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221149.png)
-
-## curl命令
-
-![image-20221027221201079](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221201.png)
-
-![image-20221027221210518](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221210.png)
-
-
-
-## top命令
-
-功能：查看主机运行状态
-
-语法：`top`，查看基础信息
-
-
-
-可用选项：
-
-![image-20221027221340729](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221340.png)
-
-
-
-交互式模式中，可用快捷键：
-
-![image-20221027221354137](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221354.png)
-
-
-
-## df命令
-
-查看磁盘占用
-
-![image-20221027221413787](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221413.png)
-
-
-
-## iostat命令
-
-查看CPU、磁盘的相关信息
-
-![image-20221027221439990](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221440.png)
-
-![image-20221027221514237](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221514.png)
-
-
-
-## sar命令
-
-查看网络统计
-
-![image-20221027221545822](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221545.png)
-
-
-
-## 环境变量
-
-- 临时设置：export 变量名=变量值
-- 永久设置：
-  - 针对用户，设置用户HOME目录内：`.bashrc`文件
-  - 针对全局，设置`/etc/profile`
-
-
-
-### PATH变量
-
-记录了执行程序的搜索路径
-
-可以将自定义路径加入PATH内，实现自定义命令在任意地方均可执行的效果
-
-
-
-## $符号
-
-可以取出指定的环境变量的值
-
-语法：`$变量名`
-
-示例：
-
-`echo $PATH`，输出PATH环境变量的值
-
-`echo ${PATH}ABC`，输出PATH环境变量的值以及ABC
-
-如果变量名和其它内容混淆在一起，可以使用${}
-
-
-
-
-
-## 压缩解压
-
-### 压缩
-
-`tar -zcvf 压缩包 被压缩1...被压缩2...被压缩N`
-
-- -z表示使用gzip，可以不写
-
-
-
-`zip [-r] 参数1 参数2 参数N`
-
-![image-20221027221906247](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221906.png)
-
-
-
-### 解压
-
-`tar -zxvf 被解压的文件 -C 要解压去的地方`
-
-- -z表示使用gzip，可以省略
-- -C，可以省略，指定要解压去的地方，不写解压到当前目录
-
-
-
-
-
-
-
-`unzip [-d] 参数`
-
-![image-20221027221939899](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221939.png)
-
-
-
-
-
-## su命令
-
-切换用户
-
-语法：`su [-] [用户]`
-
-![image-20221027222021619](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222021.png)
-
-
-
-## sudo命令
-
-![image-20221027222035337](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222035.png)
-
-
-
-比如：
-
-```shell
-itheima ALL=(ALL)       NOPASSWD: ALL
-```
-
-在visudo内配置如上内容，可以让itheima用户，无需密码直接使用`sudo`
-
-
-
-## chmod命令
-
-修改文件、文件夹权限
-
-
-
-语法：`chmod [-R] 权限 参数`
-
-- 权限，要设置的权限，比如755，表示：`rwxr-xr-x`
-
-  ![image-20221027222157276](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222157.png)
-
-- 参数，被修改的文件、文件夹
-
-- 选项-R，设置文件夹和其内部全部内容一样生效
-
-
-
-## chown命令
-
-修改文件、文件夹所属用户、组
-
-
-
-语法：`chown [-R] [用户][:][用户组] 文件或文件夹`
-
-![image-20221027222326192](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222326.png)
-
-
-
-## 用户组管理
-
-![image-20221027222354498](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222354.png)
-
-
-
-## 用户管理
-
-![image-20221027222407618](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222407.png)
-
-
-
-## genenv命令
-
-- `getenv group`，查看系统全部的用户组
-
-  ![image-20221027222446514](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222446.png)
-
-- `getenv passwd`，查看系统全部的用户
-
-  ![image-20221027222512274](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222512.png)
-
-
-
-## env命令
-
-查看系统全部的环境变量
-
-语法：`env`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

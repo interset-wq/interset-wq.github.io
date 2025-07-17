@@ -257,6 +257,7 @@ nav:
       - command-line/git/first-contributions.md
     - Linux:
       - command-line/linux/basic.md
+      - command-line/linux/usage.md
   - 笔记:
     - note/revit2.md
     - note/revit.md
