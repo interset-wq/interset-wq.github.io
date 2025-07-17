@@ -1,0 +1,2784 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tour.d111kc.top/h5/web-apis/">
+      
+      
+        <link rel="prev" href="../js/">
+      
+      
+        <link rel="next" href="../js2/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Web APIs - Tour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>:root{.md-tag.md-tag--html{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20384%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22m0%2032%2034.9%20395.8L191.5%20480l157.6-52.2L384%2032zm308.2%20127.9H124.4l4.1%2049.4h175.6l-13.6%20148.4-97.9%2027v.3h-1.1l-98.7-27.3-6-75.8h47.7L138%20320l53.5%2014.5%2053.7-14.5%206-62.2H84.3L71.5%20112.2h241.1z%22/%3E%3C/svg%3E');}.md-tag.md-tag--js{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%2032v448h448V32zm243.8%20349.4c0%2043.6-25.6%2063.5-62.9%2063.5-33.7%200-53.2-17.4-63.2-38.5l34.3-20.7c6.6%2011.7%2012.6%2021.6%2027.1%2021.6%2013.8%200%2022.6-5.4%2022.6-26.5V237.7h42.1zm99.6%2063.5c-39.1%200-64.4-18.6-76.7-43l34.3-19.8c9%2014.7%2020.8%2025.6%2041.5%2025.6%2017.4%200%2028.6-8.7%2028.6-20.8%200-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5%200-31.6%2024.1-55.6%2061.6-55.6%2026.8%200%2046%209.3%2059.8%2033.7L368%20290c-7.2-12.9-15-18-27.1-18-12.3%200-20.1%207.8-20.1%2018%200%2012.6%207.8%2017.7%2025.9%2025.6l10.5%204.5c35.8%2015.3%2055.9%2031%2055.9%2066.2%200%2037.8-29.8%2058.6-69.7%2058.6%22/%3E%3C/svg%3E');}.md-tag.md-tag--css{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22m480%2032-64%20368-223.3%2080L0%20400l19.6-94.8h82l-8%2040.6L210%20390.2l134.1-44.4%2018.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="eb4aa2bc-3afd-4efe-9336-5f8dc9c2addb"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.42/dist/twikoo.all.min.js"></script> -->
+    
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#一web-apis-简介" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Tour" class="md-header__button md-logo" aria-label="Tour" data-md-component="logo">
+      
+  <img src="../../assets/Interset-Wq.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/markdown/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  速查表
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python/syntax/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GUI/tkinter0/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  GUI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../h4c2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../command-line/git/quick-start/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  命令行
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../note/revit2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tour" class="md-nav__button md-logo" aria-label="Tour" data-md-component="logo">
+      
+  <img src="../../assets/Interset-Wq.png" alt="logo">
+
+    </a>
+    Tour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reference/markdown/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    速查表
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    博客
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../python/syntax/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../GUI/tkinter0/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    GUI
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    前端
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../h4c2/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13 18-4-4v3H4v-3H2v8h2v-3h5v3zm6-15h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v7h2V9h14v10h-4.2l-2 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M5 7V5h14v2z"/></svg>
+  
+  <span class="md-ellipsis">
+    HTML4和CSS2常用语法
+    
+      <br>
+      <small>为HTML5和CSS3打下基础</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classic-box/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"/></svg>
+  
+  <span class="md-ellipsis">
+    盒子模型和经典布局
+    
+      <br>
+      <small>传统网页布局法</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../h5c3/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M14.064 0h.186C15.216 0 16 .784 16 1.75v.186a8.75 8.75 0 0 1-2.564 6.186l-.458.459q-.472.471-.979.904v3.207c0 .608-.315 1.172-.833 1.49l-2.774 1.707a.75.75 0 0 1-1.11-.418l-.954-3.102a1 1 0 0 1-.145-.125L3.754 9.816a1 1 0 0 1-.124-.145L.528 8.717a.75.75 0 0 1-.418-1.11l1.71-2.774A1.75 1.75 0 0 1 3.31 4h3.204q.433-.508.904-.979l.459-.458A8.75 8.75 0 0 1 14.064 0M8.938 3.623h-.002l-.458.458c-.76.76-1.437 1.598-2.02 2.5l-1.5 2.317 2.143 2.143 2.317-1.5c.902-.583 1.74-1.26 2.499-2.02l.459-.458a7.25 7.25 0 0 0 2.123-5.127V1.75a.25.25 0 0 0-.25-.25h-.186a7.25 7.25 0 0 0-5.125 2.123M3.56 14.56c-.732.732-2.334 1.045-3.005 1.148a.23.23 0 0 1-.201-.064.23.23 0 0 1-.064-.201c.103-.671.416-2.273 1.15-3.003a1.502 1.502 0 1 1 2.12 2.12m6.94-3.935q-.132.09-.266.175l-2.35 1.521.548 1.783 1.949-1.2a.25.25 0 0 0 .119-.213ZM3.678 8.116 5.2 5.766q.087-.135.176-.266H3.309a.25.25 0 0 0-.213.119l-1.2 1.95ZM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>
+  
+  <span class="md-ellipsis">
+    HTML5和CSS3新特性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></svg>
+  
+  <span class="md-ellipsis">
+    JavaScript基础语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Web APIs
+    
+      <br>
+      <small>JavaScript进阶语法</small>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Web APIs
+    
+      <br>
+      <small>JavaScript进阶语法</small>
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一web-apis-简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、Web APIs 简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、Web APIs 简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-dom简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 DOM简介
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-使用css选择器获取dom元素" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 使用CSS选择器获取DOM元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-操作元素文本内容" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 操作元素文本内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-操作元素属性" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 操作元素属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-定时器间歇函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 定时器（间歇函数）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、事件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-事件监听事件绑定" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 事件监听（事件绑定）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-事件对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 事件对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-环境对象this" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 环境对象this
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-事件流" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 事件流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-解绑事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 解绑事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-事件委托" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 事件委托
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-页面加载事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 页面加载事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-页面滚动事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 页面滚动事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-页面尺寸事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 页面尺寸事件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三日期对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、日期对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四节点操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、节点操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、节点操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-查找节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 查找节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-创建节点和添加节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 创建节点和添加节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-克隆节点和添加节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 克隆节点和添加节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-删除节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 删除节点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五window对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、window对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、window对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-定时器-延时函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 定时器-延时函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-js执行机制" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 JS执行机制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-location对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 location对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-navigator对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 navigator对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-history对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 history对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-本地存储" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 本地存储
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-用本地存储存储复杂数据类型对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8 用本地存储存储复杂数据类型(对象)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#六正则表达式" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、正则表达式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、正则表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 简介
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-语法" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-元字符" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 元字符
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js2/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></svg>
+  
+  <span class="md-ellipsis">
+    JavaScript进阶语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../command-line/git/quick-start/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    命令行
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../note/revit2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    笔记
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#一web-apis-简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、Web APIs 简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、Web APIs 简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-dom简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 DOM简介
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-使用css选择器获取dom元素" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 使用CSS选择器获取DOM元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-操作元素文本内容" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 操作元素文本内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-操作元素属性" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 操作元素属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-定时器间歇函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 定时器（间歇函数）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、事件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-事件监听事件绑定" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 事件监听（事件绑定）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-事件对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 事件对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-环境对象this" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 环境对象this
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-事件流" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 事件流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-解绑事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 解绑事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-事件委托" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 事件委托
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-页面加载事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 页面加载事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-页面滚动事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 页面滚动事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-页面尺寸事件" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 页面尺寸事件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三日期对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、日期对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四节点操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、节点操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、节点操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-查找节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 查找节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-创建节点和添加节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 创建节点和添加节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-克隆节点和添加节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 克隆节点和添加节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-删除节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 删除节点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五window对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、window对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、window对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-定时器-延时函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 定时器-延时函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-js执行机制" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 JS执行机制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-location对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 location对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-navigator对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 navigator对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-history对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 history对象
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-本地存储" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 本地存储
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-用本地存储存储复杂数据类型对象" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8 用本地存储存储复杂数据类型(对象)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#六正则表达式" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、正则表达式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、正则表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 简介
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-语法" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-元字符" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 元字符
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Web APIs</h1>
+
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-4-18</code></p>
+<h2 id="一web-apis-简介">一、Web APIs 简介<a class="headerlink" href="#一web-apis-简介" title="permalink">¶</a></h2>
+<details class="note" open="open">
+<summary>变量声明</summary>
+<p>常用 <code>const</code> 和 <code>let</code> 关键字进行变量声明，在两者都可以使用的情况下，优先使用 <code>const</code> 进行变量声明。因为js中很多变量声明之后就不会再更改了，使用 <code>const</code> 声明变量语义化更好。</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<ul>
+<li>数组和对象建议使用 <code>const</code> 进行声明，虽然数组和对象可以使用方法进行修改，但是修改时并不会改变他们的地址，因此可以使用const声明</li>
+<li>for循环条件中的变量需要使用let声明</li>
+</ul>
+</details>
+</details>
+<pre class="mermaid"><code>flowchart TD
+    A[JavaScript] --&gt;  B[JS语言基础ECMAScript]
+    A --&gt; C[Web APIs]
+    C --&gt; D[页面文档对象模型DOM]
+    C --&gt; E[浏览器对象模型BOM]</code></pre>
+<h3 id="11-dom简介">1.1 DOM简介<a class="headerlink" href="#11-dom简介" title="permalink">¶</a></h3>
+<p>DOM（Document Object Model——文档对象模型）是用来呈现以及与任意 HTML 或 XML文档交互的API，即DOM是浏览器提供的一套专门用来 操作网页内容 的功能，用来开发网页内容特效和实现用户交互</p>
+<p><strong>DOM树</strong></p>
+<p>将 HTML 文档以树状结构直观的表现出来，我们称之为文档树或 DOM 树，用来描述网页内容关系的名词，文档树直观的体现了标签与标签之间的关系</p>
+<p><img alt="dom.png" src="https://s2.loli.net/2025/04/18/4qhLksDPcYM3BXJ.png" /></p>
+<p><strong>DOM对象</strong></p>
+<p>DOM对象：浏览器根据html标签生成的 JS对象，所有的html标签都视为DOM对象，html标签属性都可以在这个对象上面找到，修改这个对象的属性会自动映射到标签身上</p>
+<p>DOM的核心思想 把网页内容当做对象来处理</p>
+<p>document 对象 是 DOM 里提供的一个对象，所以它提供的属性和方法都是用来访问和操作网页内容的 例如：document.write()</p>
+<p>网页所有内容都在document里面，document代表整个html文件</p>
+<h3 id="12-使用css选择器获取dom元素">1.2 使用CSS选择器获取DOM元素<a class="headerlink" href="#12-使用css选择器获取dom元素" title="permalink">¶</a></h3>
+<ul>
+<li><code>document.querySelector('css选择器')</code> 传入css选择器，返回CSS选择器匹配到的第一个HTMLelement对象</li>
+<li><code>document.querySelectorAll('css选择器')</code> 同上，返回所有匹配元素的NodeList对象，相当于是返回一个数组<ul>
+<li>这个数组并不是真正的数组，只是和数组类似</li>
+<li>可以使用数组的下标访问元素</li>
+<li>但是不能使用pop()、push()等数组方法</li>
+</ul>
+</li>
+</ul>
+<details class="info">
+<summary>其他获取DOM元素的方法（不推荐使用）</summary>
+<ul>
+<li><code>document.getElementById()</code> 传入元素id值，通过id获取匹配到的第一个元素</li>
+<li><code>document.getElementByTagName()</code> 传入html标签名，通过元素选择器获取匹配到的所有元素</li>
+<li><code>document.getElementByClassName()</code> 传入类名，通过类选择器获取匹配到的所有元素</li>
+</ul>
+</details>
+<h3 id="13-操作元素文本内容">1.3 操作元素文本内容<a class="headerlink" href="#13-操作元素文本内容" title="permalink">¶</a></h3>
+<ul>
+<li><code>对象.innerText</code> 属性 修改html标签的文本内容，显示纯文本，不解析html标签</li>
+<li><code>对象.innerHTML</code> 属性 修改html标签的文本内容，显示纯文本，解析html标签</li>
+</ul>
+<h3 id="14-操作元素属性">1.4 操作元素属性<a class="headerlink" href="#14-操作元素属性" title="permalink">¶</a></h3>
+<p><strong>操作常用属性</strong></p>
+<p><code>对象.属性名 = 值</code> 直接通过属性名修改元素属性值，最常见的属性比如： href、title、src 等</p>
+<p><strong>操作元素样式</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="直接通过style修改" name="__tabbed_1" type="radio" /><input id="使用类名classname修改" name="__tabbed_1" type="radio" /><input id="使用classlist修改推荐" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="直接通过style修改">直接通过style修改</label><label for="使用类名classname修改">使用类名className修改</label><label for="使用classlist修改推荐">使用classList修改（推荐）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><code>对象.style.样式属性 = 值</code> 样式属性就是CSS的属性，由于CSS属性名是使用<code>-</code>来命名的，在JS中使用时统一使用小驼峰格式的命名表示CSS属性名。实际上生成的是行内样式</p>
+</div>
+<div class="tabbed-block">
+<p><code>对象.className = 值</code> 先使用CSS在style标签中创建一个类选择器的样式表，再将这个类的类名赋值给此对象的className属性，如果该对象原先也有类名，则会被替换，多个类名看做一个处理，值应该传入类名，而不是类选择器。</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>对象.classList.add(类名)</code> 添加类名，值应该传入类名，而不是类选择器，不会替换原有类名，而是会添加到原有类名后面</li>
+<li><code>对象.classList.remove(类名)</code> 删除传入的类名</li>
+<li><code>对象.classList.toggle(类名)</code> 切换对象的一个类名，如果对象原先有这个类名，则会移除，如果对象原先没有这个类名，则会添加</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>操作表单属性</strong></p>
+<ul>
+<li>与<strong>操作常用属性</strong>用法类似，但是表单属性比较特殊，表单属性一般都是通过<code>对象.属性名</code>来获取</li>
+<li><code>对象.value</code> 获取input等标签的输入内容，通过赋值可以更改内容</li>
+<li><code>对象.type</code> 获取input等标签的type属性值，通过赋值可以更改输入框类型</li>
+<li>表单属性中的 <code>disabled</code> <code>checked</code> <code>selected</code> 等没有属性值的属性，通过js操作时将其值看作是布尔值，如果为true 代表添加了该属性 如果是false 代表移除了该属性</li>
+</ul>
+<p><strong>自定义属性</strong></p>
+<p>在html5中推出来了专门的<code>data-</code>自定义属性，在标签上一律以<code>data-</code>开头，在DOM对象上一律以<code>dataset</code>对象方式获取，使用dataset获取属性值时不需要写<code>data-</code>前缀</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;div data-id=&quot;demo&quot; data-msg=&quot;hello&quot;&gt;This is a demo!&lt;/div&gt;
+&lt;script&gt;
+    const div = document.querySelector(&#39;div&#39;)
+    console.log(div.dataset)
+    console.log(div.dataset.id) // demo
+    console.log(div.dataset.msg) // hello
+&lt;/script&gt;
+</code></pre></div>
+<h3 id="15-定时器间歇函数">1.5 定时器（间歇函数）<a class="headerlink" href="#15-定时器间歇函数" title="permalink">¶</a></h3>
+<p>每隔一段时间，重复调用一个函数</p>
+<ul>
+<li><code>setInterval(函数名或匿名函数, 间隔时间)</code> 开启定时器，每隔一段时间执行一次函数，间隔时间的单位是毫米，返回一个整数，表示这个定时器的ID，声明变量时使用<code>let</code>关键字</li>
+<li><code>clearInterval(定时器ID)</code> 传入代表定时器ID的变量，关闭定时器</li>
+</ul>
+<h2 id="二事件">二、事件<a class="headerlink" href="#二事件" title="permalink">¶</a></h2>
+<h3 id="21-事件监听事件绑定">2.1 事件监听（事件绑定）<a class="headerlink" href="#21-事件监听事件绑定" title="permalink">¶</a></h3>
+<p><code>对象.addEventListener(事件类型, 函数名或匿名函数)</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数，这个函数也被称为回调函数。这种绑定事件的方法称为 <code>L2</code> 级事件绑定</p>
+<details class="note" open="open">
+<summary>回调函数</summary>
+<p>如果将函数 A 做为参数传递给函数 B 时，我们称函数 A 为回调函数。简单理解： 当一个函数当做参数来传递给另外一个函数的时候，这个函数就是回调函数。</p>
+<p><code>setInterval(函数名或匿名函数, 间隔时间)</code>和<code>对象.addEventListener(事件类型, 函数名或匿名函数)</code>都是将函数作为参数传递给另外一个函数，这个函数就是回调函数。</p>
+</details>
+<p><code>对象.on事件类型 = 函数名或匿名函数</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数，这种方式不推荐使用，因为会覆盖原有的事件处理函数。这种绑定事件的方法称为 <code>L0</code> 级事件绑定</p>
+<p>事件监听三要素：</p>
+<ul>
+<li>事件源： DOM对象</li>
+<li>
+<p>事件类型： 用什么方式触发</p>
+<details class="info" open="open">
+<summary>事件类型</summary>
+<ul>
+<li>
+<p>鼠标事件：鼠标点击<code>click</code>、鼠标进入<code>mouseenter</code>、鼠标离开<code>mouseleave</code></p>
+<details class="warning">
+<summary>Warning</summary>
+<p>鼠标进入有两种表示方式 <code>mouseover</code>和 <code>mouseenter</code> ，鼠标离开有两种表示方式 <code>mouseout</code> 和 <code>mouseleave</code> ，二者区别如下：</p>
+<ul>
+<li><code>mouseover</code> 和 <code>mouseout</code> 会有冒泡效果</li>
+<li><code>mouseenter</code> 和 <code>mouseleave</code> 没有冒泡效果 (推荐)</li>
+</ul>
+</details>
+</li>
+<li>
+<p>键盘事件：键盘按下<code>keydown</code>、键盘抬起<code>keyup</code>，一般使用<code>keyup</code></p>
+</li>
+<li>文本事件：用户输入<code>input</code></li>
+<li>焦点事件：表单获得焦点<code>focus</code>、失去焦点<code>blur</code></li>
+<li>页面加载事件：页面加载完成<code>load</code>、 DOM（HTML标签）加载完成<code>DOMContentLoaded</code></li>
+<li>页面滚动事件：页面滚动<code>scroll</code></li>
+<li>页面尺寸事件：页面尺寸变化<code>resize</code></li>
+</ul>
+<details class="info" open="open">
+<summary>移动端事件</summary>
+<p>移动端事件（M端事件），针对手机平板等触屏设备。触屏事件 <code>touch</code> ，touch 对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可响应用户手指（或触控笔）对屏幕或者触控板操作。M端事件一般使用JS插件完成，例如swiper插件</p>
+<p><a class="md-button md-button--primary" href="https://www.swiper.com.cn/">Swiper官网</a></p>
+<p>常见的触屏事件：</p>
+<ul>
+<li><code>touchstart</code> 手指触摸到一个DOM元素时触发</li>
+<li><code>touchmove</code> 手指在一个DOM元素上滑动时触发</li>
+<li><code>touchend</code> 手指从一个DOM元素上移开时触发</li>
+</ul>
+</details>
+</details>
+</li>
+<li>
+<p>事件调用的函数（回调函数）： 要做什么事</p>
+</li>
+</ul>
+<h3 id="22-事件对象">2.2 事件对象<a class="headerlink" href="#22-事件对象" title="permalink">¶</a></h3>
+<p>事件对象：事件触发时，浏览器会自动创建一个事件对象，这个事件对象会作为参数传递给事件处理函数，我们可以在事件处理函数中使用这个事件对象，来获取事件的详细信息</p>
+<p>一般命名为 <code>event</code> <code>ev</code> <code>e</code>，以下用 <code>e</code> 表示事件对象</p>
+<p><code>对象.addEventListener(事件类型, function (e) {})</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数。在事件绑定的回调函数的第一个参数 <code>e</code> 就是事件对象</p>
+<details class="tip" open="open">
+<summary>事件对象常用属性</summary>
+<ul>
+<li><code>type</code> 获取当前的事件类型，即<code>addEventListener()</code>的第一个参数</li>
+<li><code>clientX</code> <code>clientY</code> 获取光标相对于浏览器可见窗口左上角的位置</li>
+<li><code>offsetX</code> <code>offsetY</code> 获取光标相对于当前DOM元素左上角的位置</li>
+<li><code>key</code> 用户按下的键盘键的值，比如<code>Enter</code>、<code>Space</code>、<code>ArrowUp</code>、<code>ArrowDown</code>、<code>ArrowLeft</code>、<code>ArrowRight</code>等</li>
+</ul>
+</details>
+<h3 id="23-环境对象this">2.3 环境对象this<a class="headerlink" href="#23-环境对象this" title="permalink">¶</a></h3>
+<p>环境对象：指的是函数内部特殊的变量 <code>this</code> ，它代表着当前函数运行时所处的环境，类似于python类的 <code>self</code>。弄清楚this的指向，可以让我们代码更简洁</p>
+<ul>
+<li>函数的调用方式不同，this 指代的对象也不同</li>
+<li>粗略判断this的指向：谁调用， this 就是谁</li>
+<li>直接调用函数，其实相当于是 window.函数，所以 this 指向 window</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">btn</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// 此处this指向对象btn，因此上面的代码也可写成：</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">})</span>
+</span></code></pre></div>
+</details>
+<h3 id="24-事件流">2.4 事件流<a class="headerlink" href="#24-事件流" title="permalink">¶</a></h3>
+<p>事件流：事件流指的是事件完整执行过程中的流动路径。当触发事件时，会经历两个阶段，分别是捕获阶段、冒泡阶段</p>
+<ul>
+<li>
+<p>捕获阶段：从DOM的根元素开始去执行对应的事件 （从外到里）。有同类型事件，先触发祖先元素的事件，再触发父元素的事件，最后触发子元素的事件。</p>
+<details class="info">
+<summary>事件捕获</summary>
+<p><code>对象.addEventListener(事件类型, 函数名或匿名函数, true)</code> 第三个参数为true时，事件会在捕获阶段执行（很少使用）。第三个参数为false，代表冒泡阶段触发，默认就是false</p>
+</details>
+</li>
+<li>
+<p>冒泡阶段：当一个元素的事件被触发时，同样的事件将会在该元素的所有祖先元素中依次被触发。这一过程被称为事件冒泡。有同类型事件，先触发子元素本身的事件，再触发父元素的事件，最后触发祖先元素的事件。<code>对象.addEventListener(事件类型, 函数名或匿名函数, false)</code>或<code>对象.addEventListener(事件类型, 函数名或匿名函数)</code></p>
+</li>
+<li>捕获阶段是从父到子，冒泡阶段是从子到父。实际工作都是使用事件冒泡为主</li>
+</ul>
+<p>阻止冒泡 <code>e.stopPropagation()</code> 此方法可以阻断事件流动传播，不光在冒泡阶段有效，捕获阶段也有效，阻止事件冒泡需要拿到事件对象，此处用 <code>e</code> 表示</p>
+<p>阻止默认行为 <code>e.preventDefault()</code> 此方法可以阻止默认行为，比如a标签的跳转行为，表单的提交行为，右键菜单的弹出行为等，阻止默认行为需要拿到事件对象，此处用 <code>e</code> 表示</p>
+<h3 id="25-解绑事件">2.5 解绑事件<a class="headerlink" href="#25-解绑事件" title="permalink">¶</a></h3>
+<p><code>对象.on事件类型 = null</code> 适用于 L0 事件，直接使用null覆盖原有事件处理函数，将事件处理函数解绑</p>
+<p><code>removeEventListener(事件类型, 事件处理函数, [获取捕获true或者冒泡阶段false])</code> 适用于 L2 事件，移除对象的事件监听，第一个参数为事件类型，第二个参数为事件处理函数名。匿名函数无法被解绑，所以需要解绑时，<code>addEventListener()</code>绑定事件时不能使用匿名函数</p>
+<details class="info">
+<summary>L0和L2事件绑定的区别</summary>
+</details>
+<ul>
+<li>传统on注册（L0）<ul>
+<li>同一个对象,后面注册的事件会覆盖前面注册(同一个事件)</li>
+<li>直接使用null覆盖偶就可以实现事件的解绑</li>
+<li>都是冒泡阶段执行的</li>
+</ul>
+</li>
+<li>事件监听注册（L2）<ul>
+<li>语法: <code>addEventListener(事件类型, 事件处理函数, 是否使用捕获)</code></li>
+<li>后面注册的事件不会覆盖前面注册的事件(同一个事件)</li>
+<li>可以通过第三个参数去确定是在冒泡或者捕获阶段执行</li>
+<li>解绑必须使用<code>removeEventListener(事件类型, 事件处理函数, 获取捕获或者冒泡阶段)</code></li>
+<li>匿名函数无法被解绑</li>
+</ul>
+</li>
+</ul>
+<h3 id="26-事件委托">2.6 事件委托<a class="headerlink" href="#26-事件委托" title="permalink">¶</a></h3>
+<p>事件委托是利用事件流的特征解决一些开发需求的知识技巧</p>
+<ul>
+<li>优点：减少事件绑定的次数，可以提高程序性能</li>
+<li>原理：事件委托其实是利用事件冒泡的特点。给父元素注册事件，当我们触发子元素的时候，会冒泡到父元素身上，从而触发父元素的事件</li>
+<li>实现：<code>e.target.tagName</code> 可以获得真正触发事件的元素的标签名（标签名采用全大写），<code>e</code> 表示事件对象，<code>e.target</code> 表示真正触发事件的元素（对象）</li>
+</ul>
+<details class="example" open="open">
+<summary>事件委托</summary>
+<p><div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>事件1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>事件2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>事件3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>事件4<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>事件5<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>事件6<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nx">ul</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">tagName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;LI&#39;</span><span class="p">){</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">})</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+点击每个li标签，都会变成红色，但是点击p标签不会变成红色，因为p标签不是li标签，所以不会触发事件，使用这种写法可以避免为每个li标签都绑定事件，提高程序性能</p>
+</details>
+<h3 id="27-页面加载事件">2.7 页面加载事件<a class="headerlink" href="#27-页面加载事件" title="permalink">¶</a></h3>
+<p>加载外部资源（如图片、外联CSS和JavaScript等）加载完毕时触发的事件</p>
+<ol>
+<li>
+<p><code>load</code> 事件：页面完全加载再执行回调函数，此时可以将script标签放在head标签内部</p>
+<p>给 <code>window</code> 添加 <code>load</code> 事件 <code>window.addEventListener('load', function(){})</code>，监听页面所有资源加载完毕，加载完毕之后再调用回调函数</p>
+<p>注意：不光可以监听整个页面资源加载完毕，也可以针对某个资源绑定load事件</p>
+</li>
+<li>
+<p><code>DOMContentLoaded</code> 事件：DOM（网页HTML）加载完毕再执行回调函数，而无需等待样式表、图像等完全加载，此时可以将script标签放在head标签内部。监听页面DOM加载完毕：给 <code>document</code> 添加 <code>DOMContentLoaded</code> 事件，<code>document.addEventListener('DOMContentLoaded', function(){})</code></p>
+</li>
+</ol>
+<h3 id="28-页面滚动事件">2.8 页面滚动事件<a class="headerlink" href="#28-页面滚动事件" title="permalink">¶</a></h3>
+<p><code>scroll</code> 事件：页面滚动时触发的事件，滚动条滚动时触发。通常给 <code>window</code> （有时也给 <code>document</code> ） 添加 <code>scroll</code> 事件，监听某个元素的内部滚动直接给某个元素加即可</p>
+<p><code>scrollLeft</code> 和 <code>scrollTop</code> 属性： 获取滚动条滚动像素数的大小，返回数字，可以对其赋值，常使用 <code>scrollTop</code>获取竖直方向滚动的大小</p>
+<p>开发中，我们经常检测页面滚动的距离</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="c1">// document.documentElement 返回HTML标签表示的对象</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">})</span>
+</span></code></pre></div>
+<p><code>元素.scrollTo(x, y)</code> 方法可把内容滚动到指定的坐标，x 是水平方向滚动的像素数，y 是垂直方向滚动的像素数，常用 <code>window.scrollTo(0, 0)</code> 回到顶部</p>
+<h3 id="29-页面尺寸事件">2.9 页面尺寸事件<a class="headerlink" href="#29-页面尺寸事件" title="permalink">¶</a></h3>
+<p><code>resize</code> 事件：页面尺寸变化时触发的事件，通常给 window 添加 resize 事件，监听页面尺寸变化</p>
+<p>获取盒子宽高 <code>clientWidth</code> 和 <code>clientHeight</code> 属性： 获取元素的可见部分宽高（盒子的宽高，不包含border和margin），返回数字，常 <code>clientWidth</code> 获取元素的可见部分宽度，<code>clientHeight</code> 获取元素的可见部分高度。<code>document.documentElement.clientWidth</code> 可以获取浏览器窗口的宽度，<code>document.documentElement.clientHeight</code> 可以获取浏览器窗口的高度</p>
+<p>获取宽高 <code>offsetWidth</code> 和 <code>offsetHeight</code> 属性：获取元素的自身宽高（包含元素自身设置的宽高、padding、border），获取出来的是数值。获取的是可视宽高, 如果盒子是隐藏的,获取的结果是0</p>
+<p>获取位置 <code>offsetLeft</code> 和 <code>offsetTop</code> 属性：获取元素距离自己定位父级元素的左、上距离（如果祖先元素没有开启定位，以 文档左上角为基准），可以通过这种方式获取元素在页面中的位置，从而避免使用css计算宽高，这两个属性不可以赋值</p>
+<p>获取位置 <code>对象.getBoundingClientRect()</code>方法 返回元素的大小及其相对于视口的位置</p>
+<h2 id="三日期对象">三、日期对象<a class="headerlink" href="#三日期对象" title="permalink">¶</a></h2>
+<p>日期对象：用来表示时间的对象。作用：可以得到当前系统时间</p>
+<details class="note" open="open">
+<summary>实例化</summary>
+<p>在代码中使用 new 关键字，一般将这个操作称为实例化</p>
+</details>
+<p>创建一个时间对象并获取时间：</p>
+<ul>
+<li><code>new Date()</code> 不传参，获取的是当前时间</li>
+<li><code>new Date(时间字符串)</code> 传入时间字符串，获取的是指定时间</li>
+</ul>
+<p>日期对象常用方法：</p>
+<ul>
+<li><code>getFullYear()</code> 获得年份 获取四位年份</li>
+<li><code>getMonth()</code> 获得月份 取值为 0 ~ 11，实际月份为 <code>日期对象.getMonth() + 1</code></li>
+<li><code>getDate()</code> 获取月份中的每一天 不同月份取值也不相同</li>
+<li><code>getDay()</code> 获取星期 取值为 0 ~ 6，星期日的序号为0</li>
+<li><code>getHours()</code> 获取小时 取值为 0 ~ 23</li>
+<li><code>getMinutes()</code> 获取分钟 取值为 0 ~ 59</li>
+<li><code>getSeconds()</code> 获取秒 取值为 0 ~ 59</li>
+<li><code>toLocaleString()</code> 转换为本地时间字符串，格式和Windows右下角的日期和时间相同</li>
+<li><code>toLocaleDateString()</code> 转换为本地日期字符串，格式和Windows右下角的日期相同</li>
+</ul>
+<p><strong>时间戳</strong></p>
+<p>时间戳是指1970年01月01日00时00分00秒起至现在的毫秒数，它是一种特殊的计量时间的方式</p>
+<p>获取时间戳的三种方式：</p>
+<ul>
+<li><code>+new Date()</code>（推荐使用） 方法返回当前时间的时间戳，单位为毫秒</li>
+<li><code>Date.now()</code> 方法返回当前时间的时间戳，单位为毫秒，只能获取当前的时间戳</li>
+<li><code>new Date().getTime()</code> 方法返回当前时间的时间戳，单位为毫秒。先创建日期对象，再使用 <code>getTime()</code> 方法获取时间戳</li>
+</ul>
+<h2 id="四节点操作">四、节点操作<a class="headerlink" href="#四节点操作" title="permalink">¶</a></h2>
+<h3 id="41-节点">4.1 节点<a class="headerlink" href="#41-节点" title="permalink">¶</a></h3>
+<p><strong>DOM节点</strong> DOM树里每一个内容都称之为节点</p>
+<p>节点类型：</p>
+<ul>
+<li><strong>元素节点</strong> 所有的标签 比如 body、 div，html 是根节点</li>
+<li>属性节点 所有的属性 比如 href属性、class属性等</li>
+<li>文本节点 所有的文本</li>
+<li>其他</li>
+</ul>
+<p><img alt="dom.png" src="https://s2.loli.net/2025/04/18/4qhLksDPcYM3BXJ.png" /></p>
+<h3 id="42-查找节点">4.2 查找节点<a class="headerlink" href="#42-查找节点" title="permalink">¶</a></h3>
+<ul>
+<li>获取父节点 <code>对象.parentNode</code> 返回的是父节点对象，如果没有父节点，则返回 <code>null</code></li>
+<li>获取所有子节点 <code>对象.childNodes</code> 不推荐使用，获得所有子节点、包括文本节点（空格、换行）、注释节点等</li>
+<li>获取元素子节点 <code>对象.children</code> 推荐使用，获得所有元素子节点，返回的是一个伪数组，与 <code>querySelectorAll()</code> 类似</li>
+<li>获取下一个兄弟元素节点 <code>对象.nextElementSibling</code></li>
+<li>获取上一个兄弟元素节点 <code>对象.previousElementSibling</code></li>
+</ul>
+<h3 id="43-创建节点和添加节点">4.3 创建节点和添加节点<a class="headerlink" href="#43-创建节点和添加节点" title="permalink">¶</a></h3>
+<p>添加节点，一般要先创建，然后追加节点或插入节点</p>
+<ul>
+<li>创建节点 <code>document.createElement(标签名)</code> 创建一个指定标签名的元素节点，返回的是元素节点对象</li>
+<li>追加节点 <code>对象.appendChild(节点对象)</code> 将节点对象追加到指定对象的子节点列表的末尾，类似于给数组追加元素</li>
+<li>插入节点 <code>父元素对象.insertBefore(要插入的节点对象, 参照节点对象)</code> 将节点对象插入到参照节点对象的前面，<code>父元素对象.children[0]</code>为第二个参数时，可以将要插入的节点插入到最前面</li>
+</ul>
+<h3 id="44-克隆节点和添加节点">4.4 克隆节点和添加节点<a class="headerlink" href="#44-克隆节点和添加节点" title="permalink">¶</a></h3>
+<p>特殊情况下，我们新增节点，按照如下操作：复制一个原有的节点，再把复制的节点放入到指定的元素内部</p>
+<p>克隆节点 <code>对象.cloneNode(布尔值)</code> 克隆出一个跟原标签一样的元素，括号内传入布尔值</p>
+<ul>
+<li>若为 <code>true</code> ，则代表克隆时会包含后代节点一起克隆，完全克隆</li>
+<li>若为 <code>false</code> ，默认，则代表克隆时不包含后代节点，只克隆html标签，标签内的文字和标签不会被克隆</li>
+</ul>
+<h3 id="45-删除节点">4.5 删除节点<a class="headerlink" href="#45-删除节点" title="permalink">¶</a></h3>
+<p>删除节点 <code>父元素对象.removeChild(要删除的元素对象)</code> 通过父节点删除子节点，从html中删除节点对应的元素</p>
+<h2 id="五window对象">五、window对象<a class="headerlink" href="#五window对象" title="permalink">¶</a></h2>
+<h3 id="51-bom">5.1 BOM<a class="headerlink" href="#51-bom" title="permalink">¶</a></h3>
+<ul>
+<li>BOM(Browser Object Model ) 是浏览器对象模型</li>
+<li><code>window</code> 对象是一个全局对象，也可以说是JavaScript中的顶级对象</li>
+<li>像 <code>document</code> 、 <code>alert()</code> 、<code>console.log()</code> 这些都是 <code>window</code> 的属性，基本BOM的属性和方法都是 <code>window</code> 的</li>
+<li>所有通过var定义在全局作用域中的变量、函数都会变成window对象的属性和方法</li>
+<li>window对象下的属性和方法调用的时候可以省略window</li>
+</ul>
+<p><img alt="bom.png" src="https://s2.loli.net/2025/05/05/zGTJ4XcA1iCvWhF.png" /></p>
+<h3 id="52-定时器-延时函数">5.2 定时器-延时函数<a class="headerlink" href="#52-定时器-延时函数" title="permalink">¶</a></h3>
+<p><code>setTimeout(函数名或匿名函数, 间隔时间)</code> 让代码延迟执行的函数，类似于 <code>setInterval(函数名或匿名函数, 间隔时间)</code> ，但回调函数仅仅只执行一次，所以可以理解为就是把一段代码延迟执行, 平时省略window</p>
+<p><code>clearTimeout()</code> 清除延时函数</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<ul>
+<li>延时器需要等待,所以后面的代码先执行</li>
+<li>每一次调用延时器都会产生一个新的延时器</li>
+<li>延时函数<code>setTimeout(函数名或匿名函数, 间隔时间)</code>: 执行一次</li>
+<li>间歇函数<code>setInterval(函数名或匿名函数, 间隔时间)</code>:每隔一段时间就执行一次,除非手动清除</li>
+</ul>
+</details>
+<h3 id="53-js执行机制">5.3 JS执行机制<a class="headerlink" href="#53-js执行机制" title="permalink">¶</a></h3>
+<p>JavaScript 语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。这是因为 Javascript 这门脚本语言诞生的使命所致——JavaScript 是为处理页面中用户的交互，以及操作DOM 而诞生的。比如我们对某个 DOM 元素进行添加和删除操作，不能同时进行。 应该先进行添加，之后再删除。单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。这样所导致的问题是：如果 JS 执行的时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉。</p>
+<p>为了解决这个问题，利用多核 CPU 的计算能力，HTML5 提出 Web Worker 标准，允许 JavaScript 脚本创建多个线程。于是，JS 中出现了同步和异步（二者的本质区别是执行顺序不同）： </p>
+<ul>
+<li><strong>同步</strong> 前一个任务结束后再执行后一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的。比如做饭的同步做法：我们要烧水煮饭，等水开了（10分钟之后），再去切菜，炒菜。 </li>
+<li><strong>异步</strong> 你在做一件事情时，因为这件事情会花费很长时间，在做这件事的同时，你还可以去处理其他事情。比如做饭的异步做法，我们在烧水的同时，利用这10分钟，去切菜，炒菜。</li>
+</ul>
+<p><strong>同步任务</strong> 同步任务都在主线程上执行，形成一个执行栈。 </p>
+<p><strong>异步任务</strong> JS 的异步是通过回调函数实现的。一般而言，异步任务有以下三种类型:
+- 普通事件，如 click、resize 等
+- 资源加载，如 load、error 等
+- 定时器，包括 setInterval、setTimeout 等</p>
+<p>异步任务添加到任务队列中（任务队列也称为消息队列）：</p>
+<ol>
+<li>先执行执行栈中的同步任务。</li>
+<li>异步任务放入任务队列中。</li>
+<li>一旦执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行。</li>
+</ol>
+<p>由于主线程不断的重复获得任务、执行任务、再获取任务、再执行，所以这种机制被称为事件循环（ event loop）</p>
+<h3 id="54-location对象">5.4 location对象<a class="headerlink" href="#54-location对象" title="permalink">¶</a></h3>
+<p><code>location</code> 对象，它拆分并保存了 URL 地址的各个组成部分。常用属性和方法：</p>
+<ul>
+<li><code>href</code> 属性获取完整的 URL 地址，对其赋值时用于地址的跳转</li>
+<li><code>search</code> 属性获取地址中携带的参数，符号 ？后面部分的字符串，包括问号</li>
+<li><code>hash</code> 属性获取地址中的啥希值（后期vue路由的铺垫，经常用于不刷新页面，显示不同页面，比如 网易云音乐），符号 # 后面部分，包括 #</li>
+<li><code>reload</code> 方法用来刷新当前页面，相当于 <span class="keys"><kbd class="key-f5">F5</kbd></span> ，传入参数 true 时表示强制刷新，相当于 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f5">F5</kbd></span></li>
+</ul>
+<h3 id="55-navigator对象">5.5 navigator对象<a class="headerlink" href="#55-navigator对象" title="permalink">¶</a></h3>
+<p><code>navigator</code> 对象，该对象下记录了浏览器自身的相关信息</p>
+<p>常用属性 <code>userAgent</code> 检测浏览器的版本及平台，常常通过 UA 将 PC站跳转到 m站</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// 检测 userAgent（浏览器信息）</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">!</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">userAgent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="c1">// 验证是否为Android或iPhone</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">android</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/(Android);?[\s\/]+([\d.]+)?/</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">iphone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/(iPhone\sOS)\s([\d_]+)/</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="c1">// 如果是Android或iPhone，则跳转至移动站点</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">android</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">iphone</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;移动端url&#39;</span><span class="w"> </span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">})()</span>
+</span></code></pre></div>
+<h3 id="56-history对象">5.6 history对象<a class="headerlink" href="#56-history对象" title="permalink">¶</a></h3>
+<p><code>history</code> 对象，此对象不常用，主要管理历史记录，该对象与浏览器地址栏的操作相对应，如前进、后退、历史记
+录等，常用方法如下：</p>
+<ul>
+<li><code>back()</code> 后退，相当于 <code>go(-1)</code></li>
+<li><code>forward()</code> 前进，相当于 <code>go(1)</code></li>
+<li><code>go(数字)</code> 前进或后退，数字为正数时前进，数字为负数时后退，数字为0时刷新当前页面</li>
+</ul>
+<h3 id="57-本地存储">5.7 本地存储<a class="headerlink" href="#57-本地存储" title="permalink">¶</a></h3>
+<p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，HTML5规范提出了相关解决方案。</p>
+<ul>
+<li>数据存储在用户浏览器中</li>
+<li>设置、读取方便、甚至页面刷新不丢失数据</li>
+<li>容量较大，本地存储分为 <code>sessionStorage</code> 和 <code>localStorage</code>, 存储的内容约 5Mb 左右</li>
+</ul>
+<details class="info" open="open">
+<summary>localStorage</summary>
+<p>可以将数据永久存储在本地(用户的电脑), 除非手动删除，否则关闭页面也会存在</p>
+<ul>
+<li>存储数据 <code>localStorage.setItem('键', '值')</code> 存储的数据在 <code>开发者工具</code> 的 <code>应用Application</code> 选项卡 中查看</li>
+<li>获取数据 <code>localStorage.getItem('键')</code> 类似于python字典通过键获取值</li>
+<li>删除数据 <code>localStorage.removeItem('键')</code> 通过键删除键值对</li>
+</ul>
+<p>特性：</p>
+<ul>
+<li>可以多窗口（页面）共享（同一浏览器可以共享）</li>
+<li>以键值对的形式存储使用</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>sessionStorage</summary>
+<p>特性：</p>
+<ul>
+<li>生命周期为关闭浏览器窗口</li>
+<li>在同一个窗口(页面)下数据可以共享</li>
+<li>以键值对的形式存储使用</li>
+<li>用法跟 <code>localStorage</code> 基本相同, 不常用</li>
+</ul>
+</details>
+<h3 id="58-用本地存储存储复杂数据类型对象">5.8 用本地存储存储复杂数据类型(对象)<a class="headerlink" href="#58-用本地存储存储复杂数据类型对象" title="permalink">¶</a></h3>
+<p>本地只能存储字符串,无法存储复杂数据类型(对象等). 如果复杂数据类型需要使用本地存储,需要先把复杂数据类型转换成JSON字符串(JSON字符串的键和值都使用双引号包裹)</p>
+<ul>
+<li><code>JSON.stringify(对象)</code> 将对象转换为JSON字符串</li>
+<li><code>JSON.parse(JSON字符串)</code> 将JSON字符串转换为对象</li>
+</ul>
+<p>存储数据 <code>localStorage.setItem('键', JSON.stringify(对象))</code></p>
+<p>获取数据 <code>localStorage.getItem('键')</code> 获取键对应的JSON字符串,并不是对象,还需要对其返回值使用 <code>JSON.parse(JSON字符串)</code> 才能获取到对象</p>
+<h2 id="六正则表达式">六、正则表达式<a class="headerlink" href="#六正则表达式" title="permalink">¶</a></h2>
+<details class="error" open="open">
+<summary>Error</summary>
+<p>所有正则表达式都不要随便加空格,符合之间不需要任何空格</p>
+</details>
+<h3 id="61-简介">6.1 简介<a class="headerlink" href="#61-简介" title="permalink">¶</a></h3>
+<p>正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象通常用来查找、替换那些符合正则表达式的文本，许多语言都支持正则表达式。</p>
+<p>正则表达式在 JavaScript中的使用场景：</p>
+<ul>
+<li>表单验证（匹配）</li>
+<li>过滤敏感词（替换）</li>
+<li>字符串中提取我们想要的部分（提取）</li>
+</ul>
+<h3 id="62-语法">6.2 语法<a class="headerlink" href="#62-语法" title="permalink">¶</a></h3>
+<p>使用正则表达式,首先需要定义规则(创建正则表达式对象)</p>
+<p><code>const regExp = /正则表达式/</code></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>两个 <code>/</code> 之间的正则表达式不需要使用引号包裹, <code>/</code> 与 正则表达式之间不要随便加空格</p>
+</details>
+<ul>
+<li><code>regExp.test(字符串)</code> 判断字符串中是否有符合匹配的内容,返回布尔值</li>
+<li><code>regExp.exec(字符串)</code> 检索符合匹配的内容, 返回元组, 如果没有符合匹配的内容,则返回 <code>null</code></li>
+</ul>
+<h3 id="63-元字符">6.3 元字符<a class="headerlink" href="#63-元字符" title="permalink">¶</a></h3>
+<p>普通字符: 大多数的字符仅能够描述它们本身，这些字符称作普通字符，例如所有的字母和数字。也就是说普通字符只能够匹配字符串中与它们相同的字符。例如 <code>/hello/</code> 这个正则表达式使用的就是普通字符</p>
+<p>元字符(特殊字符) 是一些具有特殊含义的字符，可以极大提高了灵活性和强大的匹配功能。比如，规定用户只能输入英文26个英文字母，普通字符的话<code>/abcdefghijklmnopqrstuvwxyz/</code>, 但是换成元字符写法： <code>[a-z]</code></p>
+<p>参考文档：<a class="md-button md-button--primary" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions">MDN正则表达式文档</a>
+<a class="md-button" href="http://tool.oschina.net/regex">开源中国正则测试工具</a></p>
+<p>元字符分为以下三类:</p>
+<ul>
+<li>
+<p>边界符（表示位置，开头和结尾，必须用什么开头，用什么结尾）</p>
+<ul>
+<li><code>^</code> 以什么开始</li>
+<li><code>$</code> 以什么结尾</li>
+<li>如果 <code>^</code> 和 <code>$</code> 在一起，表示必须是精确匹配</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// 普通字符, 只要字符串中有 h 就返回 true</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/h/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/h/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;high&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">// 使用^, 必须以 h 开头</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;lunch&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">// 使用$, 必须以 h 结尾</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/h$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;lunch&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/h$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1">// 同时使用^和$, 只匹配 h</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;lunch&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span></code></pre></div>
+</details>
+</li>
+<li>
+<p>量词 （表示重复次数）</p>
+<ul>
+<li><code>*</code> 重复0次或更多次</li>
+<li><code>+</code> 重复1次或更多次</li>
+<li><code>?</code> 重复0次或1次</li>
+<li><code>{n}</code> 重复n次</li>
+<li><code>{n,}</code> 重复n次或更多次,不要随便加空格,逗号之后也不要空格</li>
+<li><code>{n,m}</code> 重复n次到m次,包括m和n,不要随便加空格,逗号之后也不要空格</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// 使用*, 重复0次或更多次(字符串中只能有h,但h可以重复任意次)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h*$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h*$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h*$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhhhhhhhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1">// 使用+, 重复1次或更多次(字符串中只能有h,但h可以重复1次及其以上)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h+$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h+$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h+$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhhhhhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1">// 使用?, 重复0次或1次(字符串中只能有1个h,或者为空字符串)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h?$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h?$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h?$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="c1">// 使用{n}, 重复n次(字符串只能为&#39;hhh&#39;)</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="c1">// 使用{n,}, 重复n次及其以上(字符串中只能有h, 且至少有3个h)</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhhhhhhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="c1">// 使用{n,m}, 重复n到m次,包括端点(字符串只能是&#39;hhh&#39;, &#39;hhhh&#39;, &#39;hhhhh&#39;)</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,5}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,5}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,5}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,5}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhhhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^h{3,5}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;hhhhhh&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span></code></pre></div>
+</details>
+</li>
+<li>
+<p>字符类 （比如 \d 表示 0~9）</p>
+<ul>
+<li>
+<p><code>[]</code> 匹配字符集合, 只要字符串中有正则表达式方括号中任一字符, 就符合匹配, 在 <code>[]</code>中还可以使用 <code>-</code>, 比如 </p>
+<ul>
+<li><code>[0-9]</code> 相当于 <code>[0123456789]</code></li>
+<li><code>[a-z]</code> 相当于 小写英文字母的字符集合</li>
+<li><code>[a-zA-Z]</code> 相当于 英文字母的字符集合</li>
+<li>腾讯QQ号从10000开始, 因此可表示为 <code>^[1-9][0-9]{4,}$</code></li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// 只要字符串中有a,b,c三者中的一个,就符合匹配</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/[abc]/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;java&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/[abc]/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;boy&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/[abc]/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;css&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/[abc]/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">// 字符串必须是&#39;a&#39;, &#39;b&#39;, &#39;c&#39; 三者之一</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^[abc]$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;api&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^[abc]$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^[abc]$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^[abc]$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^[abc]$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c1">// 字符串必须是 a, b, c中二者的组合而成的字符串, 例如 &#39;aa&#39;, &#39;ab&#39;, &#39;ac&#39;等</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^[abc]{2}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;api&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/^[abc]{2}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;aa&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span></code></pre></div>
+</details>
+</li>
+<li>
+<p><code>[^]</code> 表示 <code>[]</code>字符集合的取反, 例如 <code>[^a-z]</code> 匹配除了小写字母以外的字符</p>
+</li>
+<li><code>.</code> 匹配除换行符之外的任何单个字符</li>
+<li>
+<p>预定义, 某些常用正则表达式的简写, 例如可以使用 <code>\d{4}-\d{1,2}-\d{1,2}</code> 匹配 <code>2025-5-26</code> 格式的日期</p>
+<table>
+<thead>
+<tr>
+<th>预定义</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\d</code></td>
+<td>匹配0-9之间的任一数字，相当于<code>[0-9]</code></td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>匹配所有0-9以外的字符，相当于<code>[^0-9]</code></td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>匹配任意的字母、数字和下划线，相当于<code>[A-Za-z0-9_]</code></td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>除所有字母、数字和下划线以外的字符，相当于<code>[^A-Za-z0-9_]</code></td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>匹配空格（包括换行符\n、制表符\t、空格符等），相等于<code>[ \t\r\n\v\f]</code></td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>匹配非空格的字符，相当于<code>[^ \t\r\n\v\f]</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>修饰符 修饰符约束正则执行的某些细节行为，如是否区分大小写、是否支持多行匹配等</p>
+<ul>
+<li>语法 <code>/正则表达式/修饰符</code> </li>
+<li><code>i</code> 是单词 ignore 的缩写，正则匹配时字母不区分大小写</li>
+<li><code>g</code> 是单词 global 的缩写，匹配所有满足正则表达式的结果(正则表达式默认只匹配第一个符合条件的结果)</li>
+<li><code>ig</code> 或 <code>gi</code> 不区分大小写,匹配所有结果</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// 不区分大小写</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/a/i</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;API&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sr">/a/i</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;api&#39;</span><span class="p">))</span><span class="w"> </span><span class="c1">// true</span>
+</span></code></pre></div>
+</details>
+</li>
+<li>
+<p><code>.replace()</code> 方法</p>
+<ul>
+<li>语法 <code>字符串.replace(正则表达式对象, '替换为的文本')</code> 将字符串中符合匹配的文本替换为传入的文本</li>
+</ul>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;HTML 是一门前端语言, 学习 html 对于学习前端非常重要&#39;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">newStr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/HTML/</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;JavaScript&#39;</span><span class="p">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newStr1</span><span class="p">)</span><span class="w"> </span><span class="c1">// JavaScript 是一门前端语言, 学习 html 对于学习前端非常重要</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">newStr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/HTML/ig</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;JavaScript&#39;</span><span class="p">)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newStr2</span><span class="p">)</span><span class="w"> </span><span class="c1">// JavaScript 是一门前端语言, 学习 JavaScript 对于学习前端非常重要</span>
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<style>
+  .support-container {
+    text-align: center;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  /* 按钮样式 */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: skyblue;
+  }
+
+  /* 图片容器默认隐藏 */
+  .support {
+    display: none;
+    border: 1px solid blue;
+    margin-top: 10px;
+    padding-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .support .qr {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+  }
+
+  .suport .qr img {
+    height: 150px;
+  }
+
+  /* 当复选框被选中时显示图片 */
+  #toggle:checked ~ .support {
+    display: inline-block;
+    opacity: 1;
+  }
+</style>
+
+<hr>
+<h3>赞助</h3>
+<p>如果您觉得本站的文章对您有帮助，欢迎<strong>赞助</strong>本站。您的打赏是对本站最大的支持！</p>
+
+<div class="support-container">
+  <!-- 隐藏的复选框 -->
+  <input type="checkbox" id="toggle"> 
+  <!-- 按钮实际上是复选框的标签 -->
+  <label class="btn" for="toggle">点我打赏</label>
+  <br>
+  <div class="support">
+    <div class="qr">
+      <span>微信赞赏</span>
+      <img alt="微信赞赏" src="https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg">
+    </div>
+    <div class="qr">
+      <span>支付宝</span>
+      <img alt="支付宝" src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg">
+    </div>
+  </div>
+
+</div>
+
+
+
+  <h2 id="__comments">评论</h2>
+  
+  <script src="https://giscus.app/client.js"
+    data-repo="interset-wq/comment"
+    data-repo-id="R_kgDOOFimQg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOOFimQs4CnvJd"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+  
+
+
+<!-- 
+   
+-->
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../js/" class="md-footer__link md-footer__link--prev" aria-label="上一页: JavaScript基础语法">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                JavaScript基础语法
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../js2/" class="md-footer__link md-footer__link--next" aria-label="下一页: JavaScript进阶语法">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                JavaScript进阶语法
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - 2025 <a href="https://github.com/interset-wq" target="_blank">Interset Wq</a> <br> <a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/interset-wq" target="_blank" rel="noopener" title="Follow Me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:d111kc@foxmail.com" target="_blank" rel="noopener" title="通过邮箱联系我" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.expand", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "social", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "content.tooltips", "content.action.view", "content.tooltips", "content.action.view"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": {"\u003ctag\u003e": "\u003cidentifier\u003e", "CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2310 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tour.d111kc.top/note/revit/">
+      
+      
+        <link rel="prev" href="../revit2/">
+      
+      
+        <link rel="next" href="../tr/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Revit - Tour</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>:root{.md-tag.md-tag--html{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20384%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22m0%2032%2034.9%20395.8L191.5%20480l157.6-52.2L384%2032zm308.2%20127.9H124.4l4.1%2049.4h175.6l-13.6%20148.4-97.9%2027v.3h-1.1l-98.7-27.3-6-75.8h47.7L138%20320l53.5%2014.5%2053.7-14.5%206-62.2H84.3L71.5%20112.2h241.1z%22/%3E%3C/svg%3E');}.md-tag.md-tag--js{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%2032v448h448V32zm243.8%20349.4c0%2043.6-25.6%2063.5-62.9%2063.5-33.7%200-53.2-17.4-63.2-38.5l34.3-20.7c6.6%2011.7%2012.6%2021.6%2027.1%2021.6%2013.8%200%2022.6-5.4%2022.6-26.5V237.7h42.1zm99.6%2063.5c-39.1%200-64.4-18.6-76.7-43l34.3-19.8c9%2014.7%2020.8%2025.6%2041.5%2025.6%2017.4%200%2028.6-8.7%2028.6-20.8%200-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5%200-31.6%2024.1-55.6%2061.6-55.6%2026.8%200%2046%209.3%2059.8%2033.7L368%20290c-7.2-12.9-15-18-27.1-18-12.3%200-20.1%207.8-20.1%2018%200%2012.6%207.8%2017.7%2025.9%2025.6l10.5%204.5c35.8%2015.3%2055.9%2031%2055.9%2066.2%200%2037.8-29.8%2058.6-69.7%2058.6%22/%3E%3C/svg%3E');}.md-tag.md-tag--css{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22m480%2032-64%20368-223.3%2080L0%20400l19.6-94.8h82l-8%2040.6L210%20390.2l134.1-44.4%2018.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="eb4aa2bc-3afd-4efe-9336-5f8dc9c2addb"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.42/dist/twikoo.all.min.js"></script> -->
+    
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#简介" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Tour" class="md-header__button md-logo" aria-label="Tour" data-md-component="logo">
+      
+  <img src="../../assets/Interset-Wq.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tour
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Revit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/markdown/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  速查表
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python/syntax/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GUI/tkinter0/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  GUI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../h5/h4c2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  前端
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../command-line/git/quick-start/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  命令行
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../revit2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tour" class="md-nav__button md-logo" aria-label="Tour" data-md-component="logo">
+      
+  <img src="../../assets/Interset-Wq.png" alt="logo">
+
+    </a>
+    Tour
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reference/markdown/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    速查表
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../blog/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    博客
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../python/syntax/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../GUI/tkinter0/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    GUI
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../h5/h4c2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    前端
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../command-line/git/quick-start/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    命令行
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../revit2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revit 操作技巧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Revit
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revit
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="最近更新">
+    </span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#无cad图纸根据pdf直接使用revit绘制图形的步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      无CAD图纸,根据PDF直接使用revit绘制图形的步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第一步-使用autocad从结构图和建筑图中拆分平面图作为底图" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第二步-使用revit创建一个结构模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二步: 使用Revit创建一个结构模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二步: 使用Revit创建一个结构模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-绘制标高" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 绘制标高
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-绘制轴网" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 绘制轴网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-在基础平面图中绘制垫层" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 在基础平面图中绘制垫层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-新建条形基础族和放置条形基础" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 新建条形基础族和放置条形基础
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-放置基础到一层的结构柱" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 放置基础到一层的结构柱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-绘制基础和一层之间的的梁板" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 绘制基础和一层之间的的梁/板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-放置一层到二层的柱操作同-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 放置一层到二层的柱(操作同 2.5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-放置楼梯的柱和梁" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 放置楼梯的柱和梁
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-放置二层的梁和板" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 放置二层的梁和板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-放置二层到屋顶的柱" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 放置二层到屋顶的柱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-放置屋顶的梁" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 放置屋顶的梁
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-绘制屋顶的板" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12 绘制屋顶的板
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第三步-使用revit创建一个建筑模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三步: 使用Revit创建一个建筑模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三步: 使用Revit创建一个建筑模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-绘制标高-导入cad图形-绘制轴网" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 绘制标高 导入CAD图形 绘制轴网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-绘制一层建筑外墙" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 绘制一层建筑外墙
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-绘制一层内墙" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 绘制一层内墙
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-放置门" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 放置门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-放置窗" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 放置窗
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-绘制外墙装饰层内侧" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 绘制外墙装饰层(内侧)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revit 天正插件TR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    概率统计-概率论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    概率统计-数理统计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AutoCAD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excel-degree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    使用 Excel 处理角度
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../surveying/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工程测量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#无cad图纸根据pdf直接使用revit绘制图形的步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      无CAD图纸,根据PDF直接使用revit绘制图形的步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第一步-使用autocad从结构图和建筑图中拆分平面图作为底图" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第二步-使用revit创建一个结构模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二步: 使用Revit创建一个结构模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二步: 使用Revit创建一个结构模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-绘制标高" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 绘制标高
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-绘制轴网" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 绘制轴网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-在基础平面图中绘制垫层" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 在基础平面图中绘制垫层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-新建条形基础族和放置条形基础" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 新建条形基础族和放置条形基础
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-放置基础到一层的结构柱" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 放置基础到一层的结构柱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-绘制基础和一层之间的的梁板" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 绘制基础和一层之间的的梁/板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-放置一层到二层的柱操作同-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 放置一层到二层的柱(操作同 2.5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-放置楼梯的柱和梁" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 放置楼梯的柱和梁
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-放置二层的梁和板" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 放置二层的梁和板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-放置二层到屋顶的柱" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 放置二层到屋顶的柱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-放置屋顶的梁" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 放置屋顶的梁
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-绘制屋顶的板" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12 绘制屋顶的板
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第三步-使用revit创建一个建筑模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三步: 使用Revit创建一个建筑模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三步: 使用Revit创建一个建筑模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-绘制标高-导入cad图形-绘制轴网" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 绘制标高 导入CAD图形 绘制轴网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-绘制一层建筑外墙" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 绘制一层建筑外墙
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-绘制一层内墙" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 绘制一层内墙
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-放置门" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 放置门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-放置窗" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 放置窗
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-绘制外墙装饰层内侧" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 绘制外墙装饰层(内侧)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Revit</h1>
+
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.7 7c-.3.4-.7.7-.7 1s.3.6.6 1c.5.5 1 .9.9 1.4 0 .5-.5 1-1 1.5L16.4 16 15 14.7l4.2-4.2-1-1-1.4 1.4L13 7.1l4-3.8c.4-.4 1-.4 1.4 0l2.3 2.3c.4.4.4 1.1 0 1.4M3 17.2l9.6-9.6 3.7 3.8L6.8 21H3zM7 2v3h3v2H7v3H5V7H2V5h3V2z"/></svg></span> <code>本文创建于2025-5-10</code></p>
+<!-- ???+ quote 
+    本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF -->
+
+<h2 id="简介">简介<a class="headerlink" href="#简介" title="permalink">¶</a></h2>
+<p>族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等</p>
+<p>项目样板: 相当于模板文件</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.</p>
+</details>
+<h3 id="无cad图纸根据pdf直接使用revit绘制图形的步骤">无CAD图纸,根据PDF直接使用revit绘制图形的步骤<a class="headerlink" href="#无cad图纸根据pdf直接使用revit绘制图形的步骤" title="permalink">¶</a></h3>
+<ol>
+<li>
+<p>在revit立面视图绘制标高</p>
+<ul>
+<li>根据revit立面视图自带的两个标高绘制</li>
+<li>设置这两个默认标高的左右标记同时可见</li>
+<li>将 <code>上标头</code> 的标高设置为PDF图纸中的大小,不必修改标高别名 <code>标高2</code></li>
+<li>使用 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> 复制 <code>上标头</code></li>
+<li>使用 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> 粘贴,放置, <span class="keys"><kbd class="key-escape">Esc</kbd></span></li>
+<li>修改标高值</li>
+<li>重复上述步骤</li>
+<li>根据图纸修改标高的别名</li>
+<li>
+<p>由于使用了复制粘贴,revit不会将粘贴的标高显示在 <code>项目浏览器</code> 的 <code>结构平面</code> 中,需要手动调整</p>
+<p><img alt="constract.png" src="https://s2.loli.net/2025/05/15/dgb48Qr2Ik3GtDZ.png" /></p>
+<p>按图示操作, 点击 <code>结构平面</code>, revit将弹出 <code>新建结构平面</code> 对话框,选取需要的标高(一般是全选), 点击 <code>确定</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>绘制轴网(在CAD中也称为定位轴线)</p>
+<ul>
+<li>随便绘制一根轴线(此处以横向轴线为例)</li>
+<li>设置这根轴线的左右标记同时可见,修改标记的内容,绘制时按照数字和字母顺序绘制,以使用revit的某人标记</li>
+<li>使用 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> 复制这根轴线</li>
+<li>使用 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> 粘贴</li>
+<li>键盘输入距离</li>
+<li>键盘 <span class="keys"><kbd class="key-escape">Esc</kbd></span> 退出, 使用 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> 复制这根刚刚放置的轴线</li>
+<li>重复上述步骤</li>
+<li>纵向轴线画法相同</li>
+<li>将轴网放置在四个观测记号的中央</li>
+</ul>
+</li>
+</ol>
+<h2 id="第一步-使用autocad从结构图和建筑图中拆分平面图作为底图">第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图<a class="headerlink" href="#第一步-使用autocad从结构图和建筑图中拆分平面图作为底图" title="permalink">¶</a></h2>
+<p>使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 <code>.dwg</code>. 采用图形上面的图名作为文件名, 以便后续使用.</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.</p>
+</details>
+<details class="success" open="open">
+<summary>操作步骤</summary>
+<ol>
+<li>如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.</li>
+<li>
+<p>选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 <code>FILETAB</code> 选项卡 - <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> - 在命令框中输入 <code>0,0</code> - 回车, 这个图形的基点将放置在坐标原点处.</p>
+<p><img alt=".png" src="https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png" /></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.</p>
+</details>
+<details class="tip" open="open">
+<summary>FILETAB选项卡</summary>
+<p><code>FILETAB</code> 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.</p>
+<p><img alt="filetab.png" src="https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png" /></p>
+</details>
+</li>
+</ol>
+</details>
+<details class="tip">
+<summary>如何打开AutoCAD的左右两侧的绘图和修改工具栏</summary>
+<p>step1 显示菜单栏</p>
+<p><img alt="step1.png" src="https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png" /></p>
+<p>step2 打开菜单栏的 <code>工具</code> 选项卡</p>
+<p><img alt="step2.png" src="https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png" /></p>
+</details>
+<h2 id="第二步-使用revit创建一个结构模型">第二步: 使用Revit创建一个结构模型<a class="headerlink" href="#第二步-使用revit创建一个结构模型" title="permalink">¶</a></h2>
+<p>新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)</p>
+<p><img alt="newproj.png" src="https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png" /></p>
+<details class="tip" open="open">
+<summary>如何打开项目选择器和属性</summary>
+<p><img alt="如何打开项目选择器和属性.png" src="https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png" /></p>
+</details>
+<h3 id="21-绘制标高">2.1 绘制标高<a class="headerlink" href="#21-绘制标高" title="permalink">¶</a></h3>
+<ol>
+<li>
+<p>随便选取一个立面,绘制标高,此处以"东"为例:</p>
+<p><img alt="east.png" src="https://s2.loli.net/2025/05/11/VgCML3s1NQYex5H.png" /></p>
+</li>
+<li>
+<p>绘制标高</p>
+<p><img alt="height1.png" src="https://s2.loli.net/2025/05/11/Smn6aLI5XYCc8Zq.png" /></p>
+</li>
+<li>
+<p>随意绘制几个标高,参考结构图将标高的数值改为结构图中的数值,并将"标高1"之类的默认名称改为结构图中的"一层"等名称,更改名称时会弹出提示框"是否希望重命名相应视图",选择"是"即可.</p>
+<p><img alt="height.png" src="https://s2.loli.net/2025/05/11/enPMiSXwj7UfIuh.png" /></p>
+<p><img alt="alert.png" src="https://s2.loli.net/2025/05/11/HG7nX1KARaJf2su.png" /></p>
+</li>
+<li>
+<p>默认标高标注只显示右侧的,为了便于观察,往往需要同时显示左右两侧的标高标注. 在 <code>属性</code> 中点击 <code>编辑类型</code>, 勾选图示内容.</p>
+<p><img alt="edit.png" src="https://s2.loli.net/2025/05/11/tyiwcDMS1LIx2sX.png" /></p>
+</li>
+</ol>
+<p>至此, 标高绘制完成.</p>
+<h3 id="22-绘制轴网">2.2 绘制轴网<a class="headerlink" href="#22-绘制轴网" title="permalink">¶</a></h3>
+<ol>
+<li>
+<p>将Revit视图切换到任意结构平面视图,将CAD图形导入Revit,注意:结构平面视图应与CAD图形一一对应,依次导入.</p>
+<p><img alt="input.png" src="https://s2.loli.net/2025/05/11/qAjM1oTCSu385Gi.png" /></p>
+</li>
+<li>
+<p>绘制轴网,并移动方向标记使其靠近CAD图形,并使CAD图形大致位于四个方向标记的中间位置处.</p>
+<p><img alt="net.png" src="https://s2.loli.net/2025/05/11/zr4y7UVBoIP1pvK.png" /></p>
+<p><img alt="move.png" src="https://s2.loli.net/2025/05/11/6z8g2ojPf4tsump.png" /></p>
+</li>
+<li>
+<p>修改轴网的数字或字母编号,使其与定位轴线的编号一致.类似于标高标记,轴网标记也需要同时显示左右两侧的编号,二者操作类似.但是,轴网的轴线往往与定位轴线相重合,因此可以 <code>设置轴线中段为无</code> 将轴网的轴线隐藏,以免线条太多干扰视线.注意:轴线只需要在任意一个结构平面中绘制一次即可,因此绘制时建议选择线条较少的结构平面.</p>
+<p><img alt="line.png" src="https://s2.loli.net/2025/05/11/Mb9LRvWnEtkdCih.png" /></p>
+</li>
+<li>
+<p>检查其他结构平面的定位轴线与轴网是否一致,如果不一致,请回到第一步重新拆分平面图.</p>
+</li>
+</ol>
+<p>至此, 轴网绘制完成.</p>
+<h3 id="23-在基础平面图中绘制垫层">2.3 在基础平面图中绘制垫层<a class="headerlink" href="#23-在基础平面图中绘制垫层" title="permalink">¶</a></h3>
+<ol>
+<li>
+<p>通过结构图读出垫层的厚度和尺寸.</p>
+<p><img alt="board0.png" src="https://s2.loli.net/2025/05/11/ZEeS51XKvptuQG8.png" /></p>
+</li>
+<li>
+<p>绘制垫层,把垫层视作楼板</p>
+<p><img alt="board.png" src="https://s2.loli.net/2025/05/11/hjkfOSe7aHgP1Fy.png" /></p>
+<p>Revit会直接让我们使用系统族中的楼板, 往往我们需要修改其尺寸.为了保护系统族不会被篡改,往往复制系统族,重命名,然后修改尺寸.</p>
+<p><img alt="board2.png" src="https://s2.loli.net/2025/05/11/PLwK2DyHb7fdtWh.png" /></p>
+<p><img alt="edit_board.png" src="https://s2.loli.net/2025/05/11/7c1DGpd9jgBiIC8.png" /></p>
+<p><img alt="diy_board.png" src="https://s2.loli.net/2025/05/11/IELi475VoahQqcP.png" /></p>
+</li>
+<li>
+<p>选择合适的方式绘制垫层, 绘制结束之后打对钩确认.</p>
+<p><img alt="draw_board.png" src="https://s2.loli.net/2025/05/11/qOwlXsHu8FYetkW.png" /></p>
+</li>
+</ol>
+<p>至此, 垫层绘制完成.</p>
+<p>关闭此文件 <code>结构模型</code> <code>.rvt</code></p>
+<h3 id="24-新建条形基础族和放置条形基础">2.4 新建条形基础族和放置条形基础<a class="headerlink" href="#24-新建条形基础族和放置条形基础" title="permalink">¶</a></h3>
+<ol>
+<li>
+<p>新建一个族</p>
+<p><img alt="新建族.png" src="https://s2.loli.net/2025/05/13/rGKgIV64FtCvxl2.png" /></p>
+</li>
+<li>
+<p>通过 <code>放样</code> (面动成体) 绘制条形基础</p>
+<p><img alt="放样.png" src="https://s2.loli.net/2025/05/13/TFAfjipRtQ6K9yE.png" /></p>
+<p>由于新建组时选取的模型 <code>基于线的公制常规模型</code> 自带线,所以通过<code>拾取路径</code>来绘制截面,绘制完成之后打对钩</p>
+<p><img alt="拾取路径.png" src="https://s2.loli.net/2025/05/13/ezhRc4tZsAKXjP8.png" /></p>
+<ul>
+<li>
+<p>识图,绘制基础轮廓,操作类似于AutoCAD</p>
+<p><img alt="基础.png" src="https://s2.loli.net/2025/05/13/AKzEHoVlg6NnpTS.png" /></p>
+</li>
+<li>
+<p>由于图中的条形基础是对称结构,<code>编辑轮廓</code>时可以随便选取一个面,绘制结束之后打对钩</p>
+<p><img alt="编辑轮廓.png" src="https://s2.loli.net/2025/05/13/EZYV9jUcofAgysk.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>至此,条形基础绘制结束.将这个族命名为 <code>条形基础</code> 保存 <code>.rfa</code>, 并关闭此文件</p>
+</li>
+<li>再次打开 <code>结构模型.rvt</code></li>
+<li>
+<p>导入 <code>条形基础.rfa</code> </p>
+<p><img alt="载入.png" src="https://s2.loli.net/2025/05/13/sIEgGkDJtv5VqA1.png" /></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>进行此操作之后,revit并不会有任何反应,但是族文件已经导入到此项目中了.</p>
+</details>
+</li>
+<li>
+<p>放置条形基础(<code>基于线的公制常规模型</code> 属于 <code>构建</code>)</p>
+<p><img alt="放置.png" src="https://s2.loli.net/2025/05/13/deEVSpTQZYDMCkc.png" /></p>
+<ul>
+<li>
+<p>选择 <code>放置在工作平面上</code> , 根据图纸标高放置在垫层上</p>
+<p><img alt="放置2.png" src="https://s2.loli.net/2025/05/13/nxdlCWhoyDtM3Fw.png" /></p>
+</li>
+<li>
+<p>通过快捷键 <code>hh</code> <code>临时隐藏/隔离</code> 2.3 步骤绘制的垫层,放置其遮挡CAD底图的线条</p>
+</li>
+<li>
+<p>放置条形基础</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>放置时往往不能很好的对齐,因此放置结束之后使用对其命令 <code>al</code> 对齐,来调整基础防止的位置,操作类似于CAD</p>
+<p><img alt="对齐.png" src="https://s2.loli.net/2025/05/13/lkHug6dGfQAB1wN.png" /></p>
+<p>放置时也不好把握基础的具体长度,也需要自行调整,操作类似于CAD</p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>使用 <code>hr</code> 命令取消 <code>hh</code> 的隐藏功能,使垫层可见</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>如果在三维视图中查看感觉显示效果不好,可以在revit窗口左下角切换其他的 <code>视觉样式</code></p>
+<p><img alt="视觉样式.png" src="https://s2.loli.net/2025/05/13/879fDmpQhSXzV12.png" /></p>
+</details>
+</li>
+<li>
+<p>切换到立面图查看,检查</p>
+</li>
+</ol>
+<p>至此,放置基础完成.</p>
+<h3 id="25-放置基础到一层的结构柱">2.5 放置基础到一层的结构柱<a class="headerlink" href="#25-放置基础到一层的结构柱" title="permalink">¶</a></h3>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.</p>
+</details>
+<ol>
+<li>
+<p>由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.</p>
+<p>将底图变为可选状态,点击revit右下角的 <code>选择锁定图元</code> 使其小图标右上角的×消失.</p>
+<p><img alt="link.png" src="https://s2.loli.net/2025/05/14/vFpbnrgm2u8IthA.png" /></p>
+<p>选中底图,将其设置为 <code>前景</code>.</p>
+<p><img alt="foreground.png" src="https://s2.loli.net/2025/05/14/JnhcRmxKbet9rVj.png" /></p>
+<p>再次点击revit右下角的 <code>选择锁定图元</code>,禁止选中底图</p>
+</li>
+<li>
+<p>观察结构图中的柱结构, 如果同一个名字的柱有多种不同的配筋,应该加以区分.</p>
+<p><img alt="domain.png" src="https://s2.loli.net/2025/05/14/Ym3P5wz7XuevRUj.png" /></p>
+</li>
+<li>
+<p>在revit中放置柱,并设置柱是向上延伸(高度)还是向下延伸(深度),以及要延伸到哪一层.</p>
+<p><img alt="domain2.png" src="https://s2.loli.net/2025/05/14/DchtX6prVnSslg3.png" /></p>
+</li>
+<li>
+<p>默认柱直接防止在了基础底图的标高平面上,而柱应该防止在条形基础之上,因此需要设置柱的底部偏移.</p>
+<p><img alt="domain3.png" src="https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png" /></p>
+</li>
+</ol>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>改变三维模型的观察角度: 按住 <span class="keys"><kbd class="key-shift">Shift</kbd></span> 键,同时使用鼠标中键拖动</p>
+</details>
+<p>至此,基础层的柱放置完成.</p>
+<h3 id="26-绘制基础和一层之间的的梁板">2.6 绘制基础和一层之间的的梁/板<a class="headerlink" href="#26-绘制基础和一层之间的的梁板" title="permalink">¶</a></h3>
+<ol>
+<li>
+<p>将视图切换到 <code>一层</code> 调整 <code>视图范围</code>, 防止基础层线条对一层的干扰</p>
+<p><img alt="range.png" src="https://s2.loli.net/2025/05/14/Mpk5vVPqYnjDRgQ.png" /></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>由于视图切换到了 <code>一层</code> , 主要范围的 </p>
+<ul>
+<li><code>顶</code> 应该设置为 <code>标高之上(二层)</code>, 偏移量设置为 <code>0</code>,偏移量的单位是毫米</li>
+<li><code>剖切面</code> 的 <code>偏移量</code> 的值应该设置为小于二层标高的数值</li>
+<li><code>底</code> 应该设置为 <code>标高之上(一层)</code>, 偏移量设置为小于一层标高的一个数值</li>
+</ul>
+<p>视图深度的 <code>标高</code> 可以直接采用主要范围的 <code>底</code> 的设置</p>
+</details>
+</li>
+<li>
+<p>放置梁,可以直接使用柱的中心点作为梁的起止点,然后使用 <code>al</code> 对齐命令对齐即可. <code>结构</code> - <code>梁</code></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,都会被自动截断,这也符合实际情况,因此放置梁时不必在意梁和柱的重合,因此可以直接使用柱的中心点作为梁的起止点.</p>
+<p>revit放置构件时,不必在意配筋情况,只要注意宽高即可.但是,配筋情况不同的同名构件,要用不同的名称命名.</p>
+</details>
+</li>
+<li>
+<p>放置板(这个板实际上是基础层的天花板) <code>结构</code> - <code>楼板</code> - <code>楼板:结构</code> - <code>边界线</code> - <code>矩形</code>, 操作结束之后打对钩</p>
+</li>
+<li>
+<p>revit默认板会截断梁和柱,这明显与实际不符,因此需要改变二者的截断关系.</p>
+<p>在三维视图中选中板 - <code>连接</code> - <code>切换链接顺序</code> - 勾选 <code>多个开关</code> - 再次选中板 - 使用鼠标左键拖动选择</p>
+<p><img alt="board.png" src="https://s2.loli.net/2025/05/14/bTonxU4P9LYdfVR.png" /></p>
+<p><img alt="mul.png" src="https://s2.loli.net/2025/05/14/nIEqoGCMpuOQsJT.png" /></p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>如果板无法选中,请开启revit右下角的 <code>按面选择图元</code></p>
+<p><img alt="tip.png" src="https://s2.loli.net/2025/05/14/YLQf5owJrk4UquN.png" /></p>
+</details>
+</li>
+<li>
+<p>切换到立面图检查</p>
+</li>
+</ol>
+<p>至此,梁和板放置完毕.</p>
+<p>基础层绘制完毕.</p>
+<h3 id="27-放置一层到二层的柱操作同-25">2.7 放置一层到二层的柱(操作同 2.5)<a class="headerlink" href="#27-放置一层到二层的柱操作同-25" title="permalink">¶</a></h3>
+<h3 id="28-放置楼梯的柱和梁">2.8 放置楼梯的柱和梁<a class="headerlink" href="#28-放置楼梯的柱和梁" title="permalink">¶</a></h3>
+<ol>
+<li>
+<p>分析结构图,计算柱高和梁的偏移高度</p>
+<p><img alt="floor-info.png" src="https://s2.loli.net/2025/05/15/2E9lZIpgTzJDW1b.png" /></p>
+</li>
+<li>
+<p>切换到一层的平面视图, <code>结构</code> - <code>柱</code>, 直接设置柱高来放置柱</p>
+<p><img alt="floor-domain.png" src="https://s2.loli.net/2025/05/15/A4fFoVnU3QYyrme.png" /></p>
+</li>
+<li>
+<p>计算梯梁距离一层的高度,设置 <code>Z轴偏移值</code>,再放置梁,可以使用 <code>al</code> 对齐命令辅助对齐.</p>
+<p><img alt="floor-x.png" src="https://s2.loli.net/2025/05/15/t1RTPxIWsf6vDLw.png" /></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>必须先设置偏移值,再放置梁.</p>
+</details>
+</li>
+<li>
+<p>通过 <code>注释</code> 检查梁的标高和柱的标高</p>
+<p><img alt="height.png" src="https://s2.loli.net/2025/05/15/cw7tGlBrb5mMON3.png" /></p>
+</li>
+</ol>
+<p>至此,楼梯的柱和梁放置完毕.</p>
+<h3 id="29-放置二层的梁和板">2.9 放置二层的梁和板<a class="headerlink" href="#29-放置二层的梁和板" title="permalink">¶</a></h3>
+<p>由于二层的梁比较多,因此可以使用 <code>hh</code> 隐藏二层平面布置图,导入二层梁平面配筋图.以此图为基准绘制梁和板</p>
+<h3 id="210-放置二层到屋顶的柱">2.10 放置二层到屋顶的柱<a class="headerlink" href="#210-放置二层到屋顶的柱" title="permalink">¶</a></h3>
+<h3 id="211-放置屋顶的梁">2.11 放置屋顶的梁<a class="headerlink" href="#211-放置屋顶的梁" title="permalink">¶</a></h3>
+<p>通过观察发现,屋顶的梁的布置和一层梁的布置大致相同,因此可以直接复制一层的梁,粘贴</p>
+<ol>
+<li>
+<p>使用鼠标在三维视图中框选,使用 <code>过滤器</code> 选中梁</p>
+<p><img alt="copy.png" src="https://s2.loli.net/2025/05/16/ITawebnRE2L6GuY.png" /></p>
+</li>
+<li>
+<p>点击 <code>复制</code>, 再点击 <code>粘贴</code> - <code>与选定的标高对齐</code></p>
+<p><img alt="copy2.png" src="https://s2.loli.net/2025/05/16/I3hMTVkcARC4xuv.png" /></p>
+</li>
+<li>
+<p>在弹出的对话框中选择 <code>屋顶</code> - <code>确定</code></p>
+<p><img alt="copy3.png" src="https://s2.loli.net/2025/05/16/znpaxqkUrGCW9ub.png" /></p>
+</li>
+<li>
+<p>由于屋顶的梁和一层的梁并不相同,因此需要将复制的梁更换为屋顶的梁</p>
+<ul>
+<li>新建一个梁, <span class="keys"><kbd class="key-escape">Esc</kbd></span></li>
+<li>选中需要替换的梁, 切换为刚刚新建的梁</li>
+</ul>
+</li>
+</ol>
+<p>至此,屋顶的梁放置完毕.</p>
+<h3 id="212-绘制屋顶的板">2.12 绘制屋顶的板<a class="headerlink" href="#212-绘制屋顶的板" title="permalink">¶</a></h3>
+<p>结构模型绘制完成.</p>
+<h2 id="第三步-使用revit创建一个建筑模型">第三步: 使用Revit创建一个建筑模型<a class="headerlink" href="#第三步-使用revit创建一个建筑模型" title="permalink">¶</a></h2>
+<p>新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)</p>
+<h3 id="21-绘制标高-导入cad图形-绘制轴网">2.1 绘制标高 导入CAD图形 绘制轴网<a class="headerlink" href="#21-绘制标高-导入cad图形-绘制轴网" title="permalink">¶</a></h3>
+<h3 id="32-绘制一层建筑外墙">3.2 绘制一层建筑外墙<a class="headerlink" href="#32-绘制一层建筑外墙" title="permalink">¶</a></h3>
+<p>如果墙不是承重构件(剪力墙),则使用 <code>墙:建筑</code>,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)</p>
+<p><img alt="3-1.png" src="https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png" /></p>
+<h3 id="33-绘制一层内墙">3.3 绘制一层内墙<a class="headerlink" href="#33-绘制一层内墙" title="permalink">¶</a></h3>
+<p>墙面有装饰需要参考 <strong>建筑材料表</strong> 或 <strong>工程做法表</strong></p>
+<p>墙由 <strong>主体结构</strong> 和 <strong>装饰层</strong> 组成, 装饰层又由 <strong>踢脚线墙裙线</strong> 和 <strong>墙面</strong> 组层.</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p><strong>踢脚线墙裙线</strong> 位于 <strong>墙面</strong> 之上,因此有关 <strong>踢脚线墙裙线</strong> 的建模都需要考虑 <strong>墙面</strong> 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 <strong>水泥砂浆</strong> 作为材料.</p>
+</details>
+<p>以下以分割车库和卫生间的墙面为例说明:</p>
+<p>分析 <strong>建筑材料表</strong>:</p>
+<p><img alt="3-2.png" src="https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png" /></p>
+<p><img alt="3-3.png" src="https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png" /></p>
+<p><img alt="3-4.png" src="https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png" /></p>
+<p>这面墙的结构大致如下图所示(图示的墙结构中的 <code>墙</code> 指的是这面墙的 <code>主体结构</code> 和 <code>墙面</code>).</p>
+<p><img alt="3-5.png" src="https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png" /></p>
+<p>可将这面墙分成三段建模(从下往上):</p>
+<ol>
+<li>
+<p>第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖</p>
+<details class="info" open="open">
+<summary>第一段的建模</summary>
+<p>新建一个 <code>墙:建筑</code>,对其进行修改,revit提供的材料无法满足需要时需要 <code>新建材质</code></p>
+<p><img alt="3-6.png" src="https://s2.loli.net/2025/05/22/dINtDvkZOUY451e.png" /></p>
+<p>参考 <strong>建筑材料表</strong> 计算并建模.</p>
+<p><img alt="3-7.png" src="https://s2.loli.net/2025/05/22/Q85CNrnmdkG1thx.png" /></p>
+</details>
+</li>
+<li>
+<p>第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖</p>
+</li>
+<li>第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖</li>
+</ol>
+<p>使用 <code>叠层墙</code> 将以上三部分合成为一面墙.</p>
+<p>在左侧 <code>属性</code> 中将墙切换到 <code>叠层墙</code>, 新建一个叠层墙,编辑类型</p>
+<p>将以上三部分添加到这个叠层墙中,根据实际情况建模</p>
+<p><img alt="3-8.png" src="https://s2.loli.net/2025/05/22/UTBk4v2iNPIewRm.png" /></p>
+<p>绘制时,根据实际情况选择绘制墙时的定位线</p>
+<p><img alt="3-9.png" src="https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png" /></p>
+<p>绘制楼梯间和卫生间的墙的操作同上.</p>
+<h3 id="34-放置门">3.4 放置门<a class="headerlink" href="#34-放置门" title="permalink">¶</a></h3>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.</p>
+</details>
+<p>先将CAD底图切换为 <code>前景</code>,根据建筑图CAD图纸确定门的尺寸.注意将 <code>类型标记</code> 修改为图纸上的标记.</p>
+<p><img alt="3-10.png" src="https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png" /></p>
+<p><img alt="3-11.png" src="https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png" /></p>
+<h3 id="35-放置窗">3.5 放置窗<a class="headerlink" href="#35-放置窗" title="permalink">¶</a></h3>
+<p>和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 <code>默认窗台高度</code></p>
+<p><img alt="3-14.png" src="https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png" /></p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>放置窗时如果看不到窗,可能是因为 <code>视图范围</code>, 此时需要调整一下视图范围,使窗可见.</p>
+</details>
+<h3 id="36-绘制外墙装饰层内侧">3.6 绘制外墙装饰层(内侧)<a class="headerlink" href="#36-绘制外墙装饰层内侧" title="permalink">¶</a></h3>
+<p>思路:把装饰层看做是一面墙,并紧贴外墙</p>
+<p><img alt="3-15.png" src="https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<style>
+  .support-container {
+    text-align: center;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  /* 按钮样式 */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: skyblue;
+  }
+
+  /* 图片容器默认隐藏 */
+  .support {
+    display: none;
+    border: 1px solid blue;
+    margin-top: 10px;
+    padding-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .support .qr {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+  }
+
+  .suport .qr img {
+    height: 150px;
+  }
+
+  /* 当复选框被选中时显示图片 */
+  #toggle:checked ~ .support {
+    display: inline-block;
+    opacity: 1;
+  }
+</style>
+
+<hr>
+<h3>赞助</h3>
+<p>如果您觉得本站的文章对您有帮助，欢迎<strong>赞助</strong>本站。您的打赏是对本站最大的支持！</p>
+
+<div class="support-container">
+  <!-- 隐藏的复选框 -->
+  <input type="checkbox" id="toggle"> 
+  <!-- 按钮实际上是复选框的标签 -->
+  <label class="btn" for="toggle">点我打赏</label>
+  <br>
+  <div class="support">
+    <div class="qr">
+      <span>微信赞赏</span>
+      <img alt="微信赞赏" src="https://s2.loli.net/2025/03/19/hB1kMp3NSzRrYgH.jpg">
+    </div>
+    <div class="qr">
+      <span>支付宝</span>
+      <img alt="支付宝" src="https://s2.loli.net/2025/03/19/jCmZuyRFdNQGEDx.jpg">
+    </div>
+  </div>
+
+</div>
+
+
+
+  <h2 id="__comments">评论</h2>
+  
+  <script src="https://giscus.app/client.js"
+    data-repo="interset-wq/comment"
+    data-repo-id="R_kgDOOFimQg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOOFimQs4CnvJd"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+  
+
+
+<!-- 
+   
+-->
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../revit2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Revit 操作技巧">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Revit 操作技巧
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tr/" class="md-footer__link md-footer__link--next" aria-label="下一页: Revit 天正插件TR">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Revit 天正插件TR
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - 2025 <a href="https://github.com/interset-wq" target="_blank">Interset Wq</a> <br> <a href="https://icp.gov.moe/?keyword=20251203" target="_blank">萌ICP备20251203号</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/interset-wq" target="_blank" rel="noopener" title="Follow Me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:d111kc@foxmail.com" target="_blank" rel="noopener" title="通过邮箱联系我" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.expand", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "social", "navigation.footer", "content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "content.tooltips", "content.action.view", "content.tooltips", "content.action.view"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": {"\u003ctag\u003e": "\u003cidentifier\u003e", "CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
