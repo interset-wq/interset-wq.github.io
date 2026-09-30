@@ -10,8 +10,7 @@
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
         let theme = localStorage.getItem("internote_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
-    </script>
-<meta name="description" content="本文同时带有两个标签，用于验证：
+    </script><meta name="description" content="本文同时带有两个标签，用于验证：
 
 - 文章页脚部的多标签展示
 - 标签归档页的分类统计
@@ -45,13 +44,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 #header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
 #footer {margin-top:64px; text-align: center;font-size: small;}
 #footer2 {margin-top:8px;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding:14px 16px;margin-right:8px;}
 
 </style>
 
 <style>
 .postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
-.title-right{display:flex;margin:auto 0 0 auto;}
-.title-right .circle{padding: 14px 16px;margin-right:8px;}
 #postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
 #postBody hr{height:2px;}
 #cmButton{height:48px;margin-top:48px;}
@@ -71,18 +70,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="header">
 <h1 class="postTitle">第三篇测试：多标签文章</h1>
 <div class="title-right">
-    <a href="https://interset-wq.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
-        <svg class="octicon" width="16" height="16">
-            <path id="pathHome" fill-rule="evenodd"></path>
-        </svg>
-    </a>
-
-    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
-        <svg class="octicon" width="16" height="16" >
-            <path id="themeSwitch" fill-rule="evenodd"></path>
-        </svg>
-    </a>
-
+    <a id="buttonHome" href="https://interset-wq.github.io" class="btn btn-invisible circle" title="首页"><svg class="octicon" width="16" height="16"><path id="pathHome" fill-rule="evenodd"></path></svg></a>
+    <a onclick="modeSwitch()" class="btn btn-invisible circle" title="切换主题"><svg class="octicon" width="16" height="16"><path id="themeSwitch" fill-rule="evenodd"></path></svg></a>
 </div>
 </div>
     <div id="content">
@@ -132,14 +121,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </template>
 
 </div>
-    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://interset-wq.github.io">InterNote</a></div>
+    <div id="footer">
+<div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://interset-wq.github.io">InterNote</a></div>
 <div id="footer2"><span id="footerIcons">
-        <a href="https://interset-wq.github.io/rss.xml" target="_blank" id="buttonRSS" class="btn btn-invisible circle" title="RSS">
-            <svg class="octicon" width="16" height="16"><path id="pathRSS" fill-rule="evenodd"></path></svg>
-        </a>
-        <a href="https://github.com/interset-wq/interset-wq.github.io/issues/3" target="_blank" id="buttonGH" class="btn btn-invisible circle" title="GitHub">
-            <svg class="octicon" width="16" height="16"><path id="pathGH" fill-rule="evenodd"></path></svg>
-        </a>
+        <a id="buttonRSS" href="https://interset-wq.github.io/rss.xml" class="btn btn-invisible circle" title="RSS" target="_blank"><svg class="octicon" width="16" height="16"><path id="pathRSS" fill-rule="evenodd"></path></svg></a>
+        <a id="buttonGH" href="https://github.com/interset-wq/interset-wq.github.io/issues/3" class="btn btn-invisible circle" title="GitHub" target="_blank"><svg class="octicon" width="16" height="16"><path id="pathGH" fill-rule="evenodd"></path></svg></a>
     </span>
 </div>
 <div id="footer3">
@@ -160,7 +146,12 @@ if("2026-09-30"!=""){
 </script></div>
 </body>
 <script>
-
+function giscusTheme(theme){
+    const iframe=document.getElementsByClassName('giscus-frame')[0];
+    if(iframe){
+        iframe.contentWindow.postMessage({giscus:{setConfig:{theme:theme}}},'https://giscus.app');
+    }
+}
 let themeSettings={
     "dark": ["dark","moon","#00f0ff","dark"],
     "light": ["light","sun","#ff5000","light"],
@@ -178,12 +169,6 @@ function modeSwitch(){
     localStorage.setItem("internote_theme", newMode);
     if(themeSettings[newMode]){
         changeTheme(...themeSettings[newMode]);
-    }
-}
-function giscusTheme(theme){
-    const iframe=document.getElementsByClassName('giscus-frame')[0];
-    if(iframe){
-        iframe.contentWindow.postMessage({giscus:{setConfig:{theme:theme}}},'https://giscus.app');
     }
 }
 if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
