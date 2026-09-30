@@ -1,0 +1,5 @@
+# 生成产物（dist/、sources/、internote.json、README.md）必须提交，请勿忽略
+# 以下仅为可忽略的本地文件
+*.log
+.DS_Store
+Thumbs.db
