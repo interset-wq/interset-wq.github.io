@@ -100,17 +100,35 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-smi">utc</span> = <span class="pl-c1">8</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+<template id="giscusTemplate">
+    <script src="https://giscus.app/client.js"
+        data-repo="interset-wq/interset-wq.github.io"
+        data-repo-id="R_kgDOTWqpPQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOTWqpPc4DBFW-"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        crossorigin="anonymous"
+        async></script>
+</template>
+
 </div>
     <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://interset-wq.github.io">InterNote</a></div>
 <div id="footer2">
-    <span id="runday"></span><span>Powered by <a href="https://github.com/interset-wq/InterNote">Internote</a> • Based on <a href="https://github.com/Meekdai/Gmeek" target="_blank">Gmeek</a></span></div>
+    <span id="runday"></span><span>Powered by <a href="https://github.com/interset-wq/InterNote">Internote</a> • Based on <a href="https://github.com/Meekdai/Gmeek" target="_blank">Gmeek</a></span><script src="https://interset-wq.github.io/plugins/busuanzi.js"></script></div>
 
 <script>
 var now=new Date();
 document.getElementById("copyrightYear").innerHTML=now.getFullYear();
 
-if(""!=""){
-    var startSite=new Date("");
+if("2026-09-30"!=""){
+    var startSite=new Date("2026-09-30");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
     document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
@@ -140,6 +158,10 @@ function modeSwitch(){
     }
 }
 function giscusTheme(theme){
+    const iframe=document.getElementsByClassName('giscus-frame')[0];
+    if(iframe){
+        iframe.contentWindow.postMessage({giscus:{setConfig:{theme:theme}}},'https://giscus.app');
+    }
 }
 if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
 console.log("\n %c Internote last • Based on Gmeek https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
@@ -151,6 +173,41 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 
 
 
+function currentGiscusTheme(){
+    var t=localStorage.getItem("internote_theme")||"light";
+    if(t=="dark"){return "dark";}
+    if(t=="auto"){return "preferred_color_scheme";}
+    return "light";
+}
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    var tpl=document.getElementById("giscusTemplate");
+    var giscusScript=tpl.content.firstElementChild.cloneNode(true);
+    giscusScript.setAttribute("data-theme",currentGiscusTheme());
+    cm.appendChild(giscusScript);
+
+    int=self.setInterval("giscusLoaded()",200);
+}
+
+function giscusLoaded(){
+    var giscusFrame=document.getElementsByClassName('giscus-frame');
+    if(giscusFrame.length==1){
+        if(giscusFrame[0].style.height!=""){
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            giscusTheme(currentGiscusTheme());
+            console.log("giscus Load OK");
+        }
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const createClipboardHTML = (codeContent, additionalClasses = '') => `
@@ -218,6 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+<script src="https://interset-wq.github.io/plugins/tocbot.js"></script>
 
 
 </html>
