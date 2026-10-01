@@ -36,7 +36,7 @@
     </form>
     <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
 
-  <button class="in-nav-btn" type="button" title="切换主题" aria-label="切换主题">
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
   <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
 </button>
 </nav></header>
@@ -198,29 +198,12 @@
         filter(label);
       }
 
-      function filter(label) {
-        var all = rows();
-        searchInput.value = '';
-        emptyState.hidden = true;
-
-        if (label === 'All') {
-          all.forEach(function (row) {
-            setVisible(row, true);
-          });
-          setHeading('Tag #' + label, label + ' - ' + pageTitle);
-          return;
-        }
-
-        if (knownLabels.indexOf(label) === -1) {
-          searchInput.value = label;
-          search();
-          return;
-        }
-
-        all.forEach(function (row) {
-          setVisible(row, row.dataset.labels.split(' ').indexOf(label) !== -1);
+      function showEmpty(message) {
+        rows().forEach(function (row) {
+          setVisible(row, false);
         });
-        setHeading('Tag #' + label, label + ' - ' + pageTitle);
+        emptyState.textContent = message;
+        emptyState.hidden = false;
       }
 
       function search() {
@@ -240,10 +223,47 @@
         emptyState.textContent = 'Not Find "' + needle + '"';
       }
 
-      document.getElementById('search-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        search();
-      });
+      function filter(label) {
+        var all = rows();
+        if (searchInput) {
+          searchInput.value = '';
+        }
+        emptyState.hidden = true;
+
+        if (label === 'All') {
+          all.forEach(function (row) {
+            setVisible(row, true);
+          });
+          setHeading('Tag #' + label, label + ' - ' + pageTitle);
+          return;
+        }
+
+        if (knownLabels.indexOf(label) === -1) {
+          // An unrecognised hash is free text rather than a tag.
+          if (searchInput) {
+            searchInput.value = label;
+            search();
+            return;
+          }
+          // No inline form: free text is the modal's job now.
+          setHeading('#' + label, label + ' - ' + pageTitle);
+          showEmpty('Not Find "' + label + '"');
+          return;
+        }
+
+        all.forEach(function (row) {
+          setVisible(row, row.dataset.labels.split(' ').indexOf(label) !== -1);
+        });
+        setHeading('Tag #' + label, label + ' - ' + pageTitle);
+      }
+
+      var form = document.getElementById('search-form');
+      if (form) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          search();
+        });
+      }
 
       var request = new XMLHttpRequest();
       request.open('GET', 'post-list.json');
