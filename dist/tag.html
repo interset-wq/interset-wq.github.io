@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-dark-theme="dark" data-light-theme="light">
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <script>window.icons = {"github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "post": "M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"};</script>
-  <link rel="stylesheet" href="https://interset-wq.github.io/templates/assets/primer.css">
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
   
-  <link rel="stylesheet" href="https://interset-wq.github.io/templates/assets/main.css">
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
   <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
   <script>
-    (function() {
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
       var theme = localStorage.getItem('internote_theme') || 'light';
       if (theme === 'auto') {
         theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -18,285 +20,242 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  
-  <meta name="description" content="InterNote search page">
-  <title>InterNote - Tag</title>
-
-  
-  <style>
-    .in-page-title { font-size: 32px; font-weight: 700; margin: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-    .in-search-form { display: flex; align-items: center; margin-right: 8px; }
-    .in-search-input { width: 160px; height: 32px; padding: 4px 8px; border: 1px solid var(--in-color-border); border-right: none; border-radius: 6px 0 0 6px; font-size: 14px; outline: none; }
-    .in-search-input:focus { border-color: var(--in-color-accent); box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15); }
-    .in-search-btn { height: 32px; padding: 4px 12px; border: 1px solid var(--in-color-border); border-radius: 0 6px 6px 0; background: var(--in-color-btn-bg); cursor: pointer; font-size: 14px; }
-    .in-tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-    .in-tag-cloud .in-badge { cursor: pointer; padding: 4px 12px; font-size: 14px; }
-    .in-empty-state { font-size: 24px; margin: 16px 0; color: var(--in-color-muted); }
-    .in-post-list { border: 1px solid var(--in-color-border); border-radius: 6px; overflow: hidden; }
-    .in-post-list-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--in-color-border); text-decoration: none; color: inherit; transition: background-color 0.15s; gap: 12px; }
-    .in-post-list-item:last-child { border-bottom: none; }
-    .in-post-list-item:hover { background-color: var(--in-color-subtle); }
-    .in-post-list-title { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
-    .in-post-list-title span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-    .in-post-list-badges { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
-    @media (max-width: 600px) {
-      .in-page-title { display: none; }
-      .in-post-list-item { flex-direction: column; align-items: flex-start; gap: 8px; }
-      .in-post-list-badges { flex-wrap: wrap; }
-    }
-  </style>
-
+  <meta name="description" content="My notes on everything">
+<meta property="og:title" content="InterNote search page">
+<meta property="og:description" content="My notes on everything">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://interset-wq.github.io">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>InterNote search page</title>
 </head>
 <body>
-  <header class="in-site-header" id="header">
-  <h1 class="in-page-title"><span>Loading</span><span class="in-animated-ellipsis"></span></h1>
-  <nav class="in-site-nav" aria-label="Tag navigation">
-    <form class="in-search-form" onsubmit="event.preventDefault(); searchShow();">
+  <header class="in-site-header" id="header">  <h1 class="in-page-title"><span>Loading</span><span class="in-animated-ellipsis"></span></h1>
+<nav class="in-site-nav" aria-label="Tag navigation">    <form class="in-search-form" id="search-form">
       <input type="search" class="in-search-input" aria-label="Search site" value="">
       <button class="in-search-btn" type="submit">搜索</button>
     </form>
-    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="Home">
-      <svg class="octicon" width="16" height="16"><path id="icon-home" fill-rule="evenodd"></path></svg>
-    </a>
-    <button class="in-nav-btn" type="button" onclick="modeSwitch()" title="切换主题" aria-label="Switch theme" >
-      <svg class="octicon" width="16" height="16"><path id="themeSwitch" fill-rule="evenodd"></path></svg>
-    </button>
-  </nav>
-</header>
-  <main class="in-site-main" id="content">
-  <div class="in-tag-cloud" id="tag-cloud"></div>
-  <nav class="in-post-list" id="post-list" aria-label="Filtered posts"></nav>
-  <div class="in-empty-state" id="empty-state" style="display:none;">Not Find</div>
+    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+
+  <button class="in-nav-btn" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <div class="in-tag-cloud" id="tag-cloud"></div>
+  <ul class="in-post-list" id="post-list" aria-label="Filtered posts"></ul>
+  <div class="in-empty-state" id="empty-state" hidden>Not Find</div>
 </main>
-  <footer class="in-site-footer" id="footer">
-<div class="in-footer-icons" id="footer-icons">
-  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed">
-    <svg class="octicon" width="16" height="16"><path id="icon-rss" fill-rule="evenodd"></path></svg>
-  </a>
-  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository">
-    <svg class="octicon" width="16" height="16"><path id="icon-github" fill-rule="evenodd"></path></svg>
-  </a>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
 </div>
 <div class="in-footer-line" id="footer-copyright">
   Copyright &copy; <span id="copyright-year"></span>
   <a href="https://interset-wq.github.io">InterNote</a>
 </div>
 <div class="in-footer-powered" id="footer-powered">
-  
   <span id="run-days"></span>
-  <span>Powered by <a href="https://github.com/interset-wq/InterNote">Internote</a></span>
-  
-  <script src="https://interset-wq.github.io/plugins/busuanzi.js"></script>
-  
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+  <script id="visit-counter" src="https://interset-wq.github.io/plugins/visit-counter.js"
+    data-counter="busuanzi"
+    data-page-label="本文浏览"
+    data-site-label="总浏览"></script>
 </div>
 <script>
-  (function() {
-    var now = new Date();
-    document.getElementById('copyright-year').textContent = now.getFullYear();
-    document.getElementById('icon-rss').setAttribute('d', window.icons.rss);
-    document.getElementById('icon-github').setAttribute('d', window.icons.github);
-    
-    var startSite = new Date('2026-09-30');
-    var diffDay = Math.floor((now.getTime() - startSite.getTime()) / (1000 * 60 * 60 * 24));
-    document.getElementById('run-days').textContent = '网站运行 ' + diffDay + ' 天' + ' \u2022 ';
-    
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
   })();
 </script></footer>
-
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
   <script>
-    var themeSettings = {
-      dark: ['dark', 'moon', '#00f0ff', 'dark'],
-      light: ['light', 'sun', '#ff5000', 'light'],
-      auto: ['auto', 'sync', '', 'preferred_color_scheme']
-    };
-    function resolveTheme(mode) {
-      return mode === 'auto'
-        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-        : mode;
-    }
-    function changeTheme(mode, icon, color, giscusThemeName) {
-      document.documentElement.setAttribute('data-color-mode', resolveTheme(mode));
-      var sw = document.getElementById('themeSwitch');
-      if (sw) {
-        sw.setAttribute('d', window.icons[icon]);
-        sw.parentNode.style.color = color;
+    (function () {
+      var pageTitle = "InterNote";
+      var list = document.getElementById('post-list');
+      var cloud = document.getElementById('tag-cloud');
+      var emptyState = document.getElementById('empty-state');
+      var heading = document.querySelector('.in-page-title');
+      var searchInput = document.querySelector('.in-search-input');
+      var knownLabels = [];
+
+      function rows() {
+        return list.querySelectorAll('.in-post-list-item-wrapper');
       }
-      if (window.giscusTheme) window.giscusTheme(giscusThemeName);
-    }
-    function modeSwitch() {
-      var currentMode = localStorage.getItem('internote_theme') || 'light';
-      var newMode = currentMode === 'light' ? 'dark' : currentMode === 'dark' ? 'auto' : 'light';
-      localStorage.setItem('internote_theme', newMode);
-      if (themeSettings[newMode]) {
-        changeTheme.apply(null, themeSettings[newMode]);
+
+      function badge(text, color) {
+        var node = document.createElement('span');
+        node.className = 'in-badge';
+        node.style.backgroundColor = color;
+        node.textContent = text;
+        return node;
       }
-    }
-    var theme = localStorage.getItem('internote_theme') || 'light';
-    if (themeSettings[theme]) { changeTheme.apply(null, themeSettings[theme]); }
-  </script>
-  
-  <script>
-    (function() {
-      document.getElementById('icon-home').setAttribute('d', window.icons.home);
 
-      var tagList = [];
-      var labelsCount = {};
-      var jsonData = null;
+      function postIcon() {
+        var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('class', 'octicon');
+        svg.setAttribute('width', '16');
+        svg.setAttribute('height', '16');
+        var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', window.icons.post);
+        svg.appendChild(path);
+        return svg;
+      }
 
-      var request = new XMLHttpRequest();
-      request.open('GET', 'post-list.json');
-      request.responseType = 'text';
-      request.send();
-      request.onload = function() {
-        jsonData = JSON.parse(request.response);
-        showList();
-        setClassDisplay(decodeURI(window.location.hash.slice(1)));
-      };
-
-      function showList() {
-        var postList = document.getElementById('post-list');
-        var tagCloud = document.getElementById('tag-cloud');
-
-        jsonData.label_color_dict.All = '#000';
-        labelsCount.All = 0;
-        for (var key in jsonData) {
-          if (key !== 'label_color_dict' && Array.isArray(jsonData[key].labels)) {
-            labelsCount.All++;
-            jsonData[key].labels.forEach(function(label) {
-              labelsCount[label] = (labelsCount[label] || 0) + 1;
-            });
+      function countLabels(data) {
+        var counts = { All: 0 };
+        Object.keys(data).forEach(function (key) {
+          if (key === 'label_color_dict' || !Array.isArray(data[key].labels)) {
+            return;
           }
-        }
-
-        var sortedLabels = Object.keys(labelsCount).sort(function(a, b) {
-          return labelsCount[b] - labelsCount[a];
+          counts.All += 1;
+          data[key].labels.forEach(function (label) {
+            counts[label] = (counts[label] || 0) + 1;
+          });
         });
+        return counts;
+      }
 
-        sortedLabels.forEach(function(label) {
-          tagList.push(label);
-          var btn = document.createElement('button');
-          btn.className = 'in-badge';
-          btn.style.backgroundColor = jsonData.label_color_dict[label];
-          btn.style.padding = '4px 12px';
-          btn.innerHTML = '&nbsp;&nbsp;' + label + ' ';
-          btn.onclick = function() { updateShowTag(label); };
+      function renderCloud(data, counts) {
+        var colors = data.label_color_dict;
+        colors.All = '#000';
+        Object.keys(counts)
+          .sort(function (a, b) {
+            return counts[b] - counts[a];
+          })
+          .forEach(function (label) {
+            var button = document.createElement('button');
+            button.className = 'in-badge in-tag-cloud-item';
+            button.style.backgroundColor = colors[label];
+            button.appendChild(document.createTextNode(label));
 
-          var count = document.createElement('span');
-          count.style.color = '#fff';
-          count.style.backgroundColor = 'rgba(234, 238, 242, 0.5)';
-          count.textContent = labelsCount[label];
-          btn.appendChild(count);
-          tagCloud.appendChild(btn);
-        });
+            var count = document.createElement('span');
+            count.className = 'in-badge-count';
+            count.textContent = counts[label];
+            button.appendChild(count);
 
-        for (var key in jsonData) {
-          if (key === 'label_color_dict') continue;
-          var item = jsonData[key];
-          var div = document.createElement('div');
-          div.className = 'in-post-list-item-wrapper ' + item.labels.join(' ');
+            button.onclick = function () {
+              showLabel(label);
+            };
+            knownLabels.push(label);
+            cloud.appendChild(button);
+          });
+      }
+
+      function renderRows(data) {
+        var colors = data.label_color_dict;
+        Object.keys(data).forEach(function (key) {
+          if (key === 'label_color_dict') {
+            return;
+          }
+          var item = data[key];
+
+          var row = document.createElement('li');
+          row.className = 'in-post-list-item-wrapper';
+          row.dataset.labels = item.labels.join(' ');
 
           var link = document.createElement('a');
           link.className = 'in-post-list-item';
           link.href = item.post_url;
 
-          var titleDiv = document.createElement('div');
-          titleDiv.className = 'in-post-list-title';
+          var title = document.createElement('div');
+          title.className = 'in-post-list-title';
+          title.appendChild(postIcon());
+          var label = document.createElement('span');
+          label.textContent = item.post_title;
+          title.appendChild(label);
 
-          var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-          svg.setAttribute('class', 'octicon');
-          svg.setAttribute('width', '16');
-          svg.setAttribute('height', '16');
-          svg.style.flexShrink = '0';
-          svg.style.color = 'var(--in-color-muted)';
-          var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-          path.setAttribute('d', window.icons.post);
-          svg.appendChild(path);
-
-          var titleSpan = document.createElement('span');
-          titleSpan.textContent = item.post_title;
-
-          titleDiv.appendChild(svg);
-          titleDiv.appendChild(titleSpan);
-
-          var badgesDiv = document.createElement('div');
-          badgesDiv.className = 'in-post-list-badges';
-
-          item.labels.forEach(function(label) {
-            var badge = document.createElement('span');
-            badge.className = 'in-badge';
-            badge.style.backgroundColor = jsonData.label_color_dict[label];
-            badge.textContent = label;
-            badgesDiv.appendChild(badge);
+          var badges = document.createElement('div');
+          badges.className = 'in-post-list-badges';
+          item.labels.forEach(function (name) {
+            badges.appendChild(badge(name, colors[name]));
           });
+          badges.appendChild(badge(item.created_date, item.date_label_color));
 
-          var timeBadge = document.createElement('span');
-          timeBadge.className = 'in-badge';
-          timeBadge.style.backgroundColor = item.date_label_color;
-          timeBadge.textContent = item.created_date;
-          badgesDiv.appendChild(timeBadge);
-
-          link.appendChild(titleDiv);
-          link.appendChild(badgesDiv);
-          div.appendChild(link);
-          postList.appendChild(div);
-        }
+          link.appendChild(title);
+          link.appendChild(badges);
+          row.appendChild(link);
+          list.appendChild(row);
+        });
       }
 
-      function updateShowTag(label) {
-        if (window.location.hash.slice(1) !== encodeURI(label)) {
-          window.location.hash = '#' + label;
-          setClassDisplay(label);
-        }
+      function setVisible(row, visible) {
+        row.hidden = !visible;
       }
 
-      function setClassDisplay(label) {
-        var lists = document.getElementsByClassName('in-post-list-item-wrapper');
-        var tagTitle = document.getElementsByClassName('in-page-title')[0];
-        tagTitle.innerHTML = 'Tag #' + label;
-        document.title = label + ' - InterNote';
-        document.getElementsByClassName('in-search-input')[0].value = '';
+      function setHeading(text, title) {
+        heading.textContent = text;
+        document.title = title;
+      }
+
+      function showLabel(label) {
+        if (window.location.hash.slice(1) === encodeURI(label)) {
+          return;
+        }
+        window.location.hash = '#' + label;
+        filter(label);
+      }
+
+      function filter(label) {
+        var all = rows();
+        searchInput.value = '';
+        emptyState.hidden = true;
 
         if (label === 'All') {
-          for (var i = 0; i < lists.length; i++) lists[i].style.display = 'block';
-          document.getElementById('empty-state').style.display = 'none';
-        } else if (tagList.indexOf(label) !== -1) {
-          for (var i = 0; i < lists.length; i++) lists[i].style.display = 'none';
-          var labels = document.getElementsByClassName(label);
-          for (var i = 0; i < labels.length; i++) labels[i].style.display = 'block';
-          document.getElementById('empty-state').style.display = 'none';
-        } else {
-          document.getElementsByClassName('in-search-input')[0].value = label;
-          searchShow();
+          all.forEach(function (row) {
+            setVisible(row, true);
+          });
+          setHeading('Tag #' + label, label + ' - ' + pageTitle);
+          return;
         }
+
+        if (knownLabels.indexOf(label) === -1) {
+          searchInput.value = label;
+          search();
+          return;
+        }
+
+        all.forEach(function (row) {
+          setVisible(row, row.dataset.labels.split(' ').indexOf(label) !== -1);
+        });
+        setHeading('Tag #' + label, label + ' - ' + pageTitle);
       }
 
-      function searchShow() {
-        var lists = document.getElementsByClassName('in-post-list-item-wrapper');
-        var tagTitle = document.getElementsByClassName('in-page-title')[0];
-        var searchInput = document.getElementsByClassName('in-search-input')[0].value;
-        tagTitle.innerHTML = 'Search #' + searchInput;
-        document.title = searchInput ? searchInput + ' - InterNote' : 'Search - InterNote';
+      function search() {
+        var needle = searchInput.value;
+        var upper = needle.toUpperCase();
         var found = 0;
-        window.location.hash = '#' + searchInput;
-        for (var i = 0; i < lists.length; i++) {
-          var text = lists[i].textContent.toUpperCase();
-          if (text.indexOf(searchInput.toUpperCase()) === -1) {
-            lists[i].style.display = 'none';
-          } else {
-            lists[i].style.display = 'block';
-            found++;
+        window.location.hash = '#' + needle;
+        rows().forEach(function (row) {
+          var match = row.textContent.toUpperCase().indexOf(upper) !== -1;
+          setVisible(row, match);
+          if (match) {
+            found += 1;
           }
-        }
-        var emptyState = document.getElementById('empty-state');
-        if (found === 0) {
-          emptyState.style.display = 'block';
-          emptyState.innerHTML = 'Not Find "' + searchInput + '"';
-        } else {
-          emptyState.style.display = 'none';
-        }
+        });
+        setHeading('Search #' + needle, needle ? needle + ' - ' + pageTitle : 'Search - ' + pageTitle);
+        emptyState.hidden = found !== 0;
+        emptyState.textContent = 'Not Find "' + needle + '"';
       }
+
+      document.getElementById('search-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        search();
+      });
+
+      var request = new XMLHttpRequest();
+      request.open('GET', 'post-list.json');
+      request.responseType = 'text';
+      request.onload = function () {
+        var data = JSON.parse(request.response);
+        renderCloud(data, countLabels(data));
+        renderRows(data);
+        filter(decodeURI(window.location.hash.slice(1)) || 'All');
+      };
+      request.send();
     })();
   </script>
-
 </body>
 </html>
