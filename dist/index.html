@@ -9,7 +9,6 @@
   
   <link rel="stylesheet" href="https://interset-wq.github.io/templates/assets/main.css">
   <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-  
   <script>
     (function() {
       var theme = localStorage.getItem('internote_theme') || 'light';
@@ -19,7 +18,6 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  
   
   
   
@@ -49,6 +47,7 @@
     .in-post-list-title { display: flex; align-items: flex-start; gap: 12px; flex: 1; min-width: 0; }
     .in-post-list-title span { word-break: break-word; }
     .in-post-list-badges { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; }
+    .in-post-list-badges .in-badge { color: #fff; }
 
     .in-pagination { margin-top: 24px; display: flex; justify-content: center; gap: 8px; }
     .in-pagination a, .in-pagination span { padding: 8px 16px; border: 1px solid var(--in-color-border); border-radius: 6px; text-decoration: none; color: var(--in-color-accent); font-size: 14px; }
@@ -102,13 +101,9 @@
         <div class="in-post-list-badges">
           
           
-          <span class="in-badge" style="background-color:#7c3aed">
-            <a href="https://interset-wq.github.io/tag.html#随笔">随笔</a>
-          </span>
+          <span class="in-badge" style="background-color:#7c3aed">随笔</span>
           
-          <span class="in-badge" style="background-color:#0969da">
-            <a href="https://interset-wq.github.io/tag.html#技术">技术</a>
-          </span>
+          <span class="in-badge" style="background-color:#0969da">技术</span>
           
           <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
         </div>
@@ -126,9 +121,7 @@
         <div class="in-post-list-badges">
           
           
-          <span class="in-badge" style="background-color:#0969da">
-            <a href="https://interset-wq.github.io/tag.html#技术">技术</a>
-          </span>
+          <span class="in-badge" style="background-color:#0969da">技术</span>
           
           <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
         </div>
@@ -146,9 +139,7 @@
         <div class="in-post-list-badges">
           
           
-          <span class="in-badge" style="background-color:#7c3aed">
-            <a href="https://interset-wq.github.io/tag.html#随笔">随笔</a>
-          </span>
+          <span class="in-badge" style="background-color:#7c3aed">随笔</span>
           
           <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
         </div>
@@ -194,7 +185,6 @@
 </script></footer>
 
   <script>
-    
     var themeSettings = {
       dark: ['dark', 'moon', '#00f0ff', 'dark'],
       light: ['light', 'sun', '#ff5000', 'light'],
@@ -224,7 +214,6 @@
     }
     var theme = localStorage.getItem('internote_theme') || 'light';
     if (themeSettings[theme]) { changeTheme.apply(null, themeSettings[theme]); }
-    
   </script>
   
   <script>

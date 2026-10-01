@@ -9,7 +9,6 @@
   
   <link rel="stylesheet" href="https://interset-wq.github.io/templates/assets/main.css">
   <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-  
   <script>
     (function() {
       var theme = localStorage.getItem('internote_theme') || 'light';
@@ -19,7 +18,6 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  
   
   
   
@@ -62,7 +60,17 @@
     .in-post-body { border-bottom: 1px solid var(--in-color-border); padding-bottom: 36px; }
     .in-comments-section { margin-top: 48px; }
     .g-emoji { font-size: 24px; }
-    
+    .in-copy-feedback {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 50px;
+      color: #fff;
+      background-color: var(--in-color-muted);
+      border-radius: 3px;
+      padding: 5px 8px;
+      font-size: 12px;
+    }
     @media (max-width: 600px) {
       .in-post-title { font-size: 24px; }
     }
@@ -182,7 +190,6 @@
 </script></footer>
 
   <script>
-    
     var themeSettings = {
       dark: ['dark', 'moon', '#00f0ff', 'dark'],
       light: ['light', 'sun', '#ff5000', 'light'],
@@ -212,7 +219,6 @@
     }
     var theme = localStorage.getItem('internote_theme') || 'light';
     if (themeSettings[theme]) { changeTheme.apply(null, themeSettings[theme]); }
-    
   </script>
   
   <script>
