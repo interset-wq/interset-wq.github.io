@@ -42,9 +42,9 @@
     .in-site-nav .in-nav-btn { padding: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s; }
     .in-site-nav .in-nav-btn:hover { background-color: var(--in-color-subtle); }
 
-    .in-post-list { border: 1px solid var(--in-color-border); border-radius: 6px; overflow: hidden; }
+    .in-post-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--in-color-border); border-radius: 6px; overflow: hidden; }
     .in-post-list-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--in-color-border); text-decoration: none; color: inherit; transition: background-color 0.15s; gap: 12px; }
-    .in-post-list-item:last-child { border-bottom: none; }
+    .in-post-list li:last-child .in-post-list-item { border-bottom: none; }
     .in-post-list-item:hover { background-color: var(--in-color-subtle); }
     .in-post-list-title { display: flex; align-items: flex-start; gap: 12px; flex: 1; min-width: 0; }
     .in-post-list-title span { word-break: break-word; }
@@ -89,67 +89,73 @@
   
   <p class="in-site-subtitle">My notes on everything</p>
   
-  <nav class="in-post-list" aria-label="Post list">
+  <ul class="in-post-list">
     
-    <a class="in-post-list-item" href="post/3.html">
-      <div class="in-post-list-title">
-        <svg class="octicon" width="16" height="16" style="flex-shrink:0;margin-top:3px;color:var(--in-color-muted)">
-          <path class="in-post-icon-0" fill-rule="evenodd"></path>
-        </svg>
-        <span>第三篇测试：多标签文章</span>
-      </div>
-      <div class="in-post-list-badges">
-        
-        
-        <span class="in-badge" style="background-color:#7c3aed">
-          <a href="https://interset-wq.github.io/tag.html#随笔">随笔</a>
-        </span>
-        
-        <span class="in-badge" style="background-color:#0969da">
-          <a href="https://interset-wq.github.io/tag.html#技术">技术</a>
-        </span>
-        
-        <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
-      </div>
-    </a>
+    <li>
+      <a class="in-post-list-item" href="post/3.html">
+        <div class="in-post-list-title">
+          <svg class="octicon" width="16" height="16" style="flex-shrink:0;margin-top:3px;color:var(--in-color-muted)">
+            <path class="in-post-icon-0" fill-rule="evenodd"></path>
+          </svg>
+          <span>第三篇测试：多标签文章</span>
+        </div>
+        <div class="in-post-list-badges">
+          
+          
+          <span class="in-badge" style="background-color:#7c3aed">
+            <a href="https://interset-wq.github.io/tag.html#随笔">随笔</a>
+          </span>
+          
+          <span class="in-badge" style="background-color:#0969da">
+            <a href="https://interset-wq.github.io/tag.html#技术">技术</a>
+          </span>
+          
+          <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
+        </div>
+      </a>
+    </li>
     
-    <a class="in-post-list-item" href="post/2.html">
-      <div class="in-post-list-title">
-        <svg class="octicon" width="16" height="16" style="flex-shrink:0;margin-top:3px;color:var(--in-color-muted)">
-          <path class="in-post-icon-0" fill-rule="evenodd"></path>
-        </svg>
-        <span>第二篇测试：Python 类型标注实践</span>
-      </div>
-      <div class="in-post-list-badges">
-        
-        
-        <span class="in-badge" style="background-color:#0969da">
-          <a href="https://interset-wq.github.io/tag.html#技术">技术</a>
-        </span>
-        
-        <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
-      </div>
-    </a>
+    <li>
+      <a class="in-post-list-item" href="post/2.html">
+        <div class="in-post-list-title">
+          <svg class="octicon" width="16" height="16" style="flex-shrink:0;margin-top:3px;color:var(--in-color-muted)">
+            <path class="in-post-icon-0" fill-rule="evenodd"></path>
+          </svg>
+          <span>第二篇测试：Python 类型标注实践</span>
+        </div>
+        <div class="in-post-list-badges">
+          
+          
+          <span class="in-badge" style="background-color:#0969da">
+            <a href="https://interset-wq.github.io/tag.html#技术">技术</a>
+          </span>
+          
+          <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
+        </div>
+      </a>
+    </li>
     
-    <a class="in-post-list-item" href="post/1.html">
-      <div class="in-post-list-title">
-        <svg class="octicon" width="16" height="16" style="flex-shrink:0;margin-top:3px;color:var(--in-color-muted)">
-          <path class="in-post-icon-0" fill-rule="evenodd"></path>
-        </svg>
-        <span>第一篇测试文章：编辑标题生效</span>
-      </div>
-      <div class="in-post-list-badges">
-        
-        
-        <span class="in-badge" style="background-color:#7c3aed">
-          <a href="https://interset-wq.github.io/tag.html#随笔">随笔</a>
-        </span>
-        
-        <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
-      </div>
-    </a>
+    <li>
+      <a class="in-post-list-item" href="post/1.html">
+        <div class="in-post-list-title">
+          <svg class="octicon" width="16" height="16" style="flex-shrink:0;margin-top:3px;color:var(--in-color-muted)">
+            <path class="in-post-icon-0" fill-rule="evenodd"></path>
+          </svg>
+          <span>第一篇测试文章：编辑标题生效</span>
+        </div>
+        <div class="in-post-list-badges">
+          
+          
+          <span class="in-badge" style="background-color:#7c3aed">
+            <a href="https://interset-wq.github.io/tag.html#随笔">随笔</a>
+          </span>
+          
+          <span class="in-badge" style="background-color:#1f883d">2026-09-30</span>
+        </div>
+      </a>
+    </li>
     
-  </nav>
+  </ul>
   
 </main>
   <footer class="in-site-footer" id="footer">
