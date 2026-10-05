@@ -44,6 +44,144 @@
   <main class="in-site-main" id="content">  <p class="in-site-subtitle">My notes on everything</p>
   <ul class="in-post-list">
     <li class="in-post-card">
+      <a class="in-post-card-link" href="post/77.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>DrissionPage 浏览器自动化操作</span>
+        </div>
+        <p class="in-post-card-desc"># DrissionPage 浏览器自动化操作
+
+[DrissionPage官方文档](https://drissionpage.cn/)
+
+## 两个核心的类
+
+- `ChromiumPage` 用于操作浏览器
+- `SessionPage` 
+
+## 使用ChromiumPage类操作浏览器
+
+### 第一步：导入模块
+
+    from DrissionPage import Chromium
+
+### 第二步：创建浏览器driver对象，并打开浏览器
+
+    driver = Chromium()
+
+??? note 'driver对象的一些方法和属性'
+    - `latest_tab`属性  获取激活的Tab对象，即当前使用的标签页或打开浏览器时自动打开的标签页
+    - `quit()`方法 关闭浏览器，程序运行结束时不会自动关闭浏览器
+    - `tabs_count`属性 返回当前打开的标签页数量
+    - `tab_ids`属性 返回所有标签页id的列表
+    - `new_tab()`方法 新建一个标签页，传入了url参数是新建一个标签页并访问网址，url为None时新建一个空白标签页
+    - `activate_tab()`方法 激活指定的标签页
+    - `close_tabs()`方法 关闭指定的标签页
+    - `set_timeout()`方法 设置超时时间，单位为秒
+    - `set.load_mode.normal()`方法 等待所有资源加载完毕的模式
+    - `set.load_mode.eager()`方法 等待文档加载完即停止加载的模式
+    - `set.load_mode.none()`方法 不会主动停止加载的模式
+    - `set.retry_times()`方法 用于设置页面连接失败重连次数
+    - `set.retry_interval()`方法 用于设置连接失败重连间隔（秒）
+    - `set.cookies()`方法 用于设置一个或多个 cookie
+
+### 第三步：创建标签页Tab对象
+
+    tab = browser.latest_tab # 获取最新打开的标签页
+
+???+ note '其他创建Tab对象的方法'
+    - `tab = browser.new_tab()`  传入URL，新建一个标签页并访问网址
+    - `tab = browser.get_tab()` 有多个标签页时，按条件获取一个标签页对象，模糊匹配
+    - `tab = browser.get_tabs()` 有多个标签页时，按条件获取多个标签页对象，模糊匹配
+  
+
+### 第四步：通过Tab对象访问网页
+
+    tab.get(url) # 传入网页地址，访问网页，相当于`requests.get()`方法
+
+???+ note '访问网页的其他方法'
+    - `tab.post()`方法 发送POST请求，相当于`requests.post()`方法，返回`requests.Response`对象
+
+??? note 'Tab对象的页面交互相关方法'
+    - `back()`方法 传入整数，用于在浏览历史中后退若干步
+    - `forward()`方法 传入整数，用于在浏览历史中前进若干步
+    - `refresh()`方法 刷新当前页面
+    - `stop_loading()`方法 停止加载当前页面
+    - `set.blocked_urls()`方法 用于设置页面加载过程中需要屏蔽的 URL 列表，传入一个列表，列表中每个元素为一个 URL 字符串
+        - `tab.set.blocked_urls('*.css*')` 设置不加载css文件
+
+??? note 'Tab对象的获取网页信息相关方法和属性'
+    - `html`属性 获取当前页面的HTML文本，获取到的html中不包括iframe元素中的内容
+    - `json`属性 获取当前页面的JSON数据
+    - `title`属性 获取当前页面的标题
+    - `user_agent`属性 获取当前页面的User-Agent
+    - `save()`方法 将当前页面保存为文件，参数如下：
+        - `path` 保存文件的路径
+        - `name` 保存文件的名称，默认为当前页面的标题
+        - `as_pdf` 是否将页面保存为PDF格式，默认为False
+        - `**kwargs` 其他参数，用于设置PDF格式的参数，如：
+    - `url`属性 返回当前访问的URL
+    - `tab_id`属性 返回当前标签页的ID
+    - `states.is_loading`属性 判断当前页面是否正在加载
+    - `states.is_alive`属性 判断当前标签页是否已关闭
+    - `states.ready_state`属性 返回页面当前加载状态，值为：
+        - `complete` 页面加载完成
+        - `loading` 页面正在加载
+        - `interactive` DOM 已加载，但资源未加载完成
+        - `connecting` 网页连接中
+    - `url_avaiable`属性 判断当前链接是否可用
+    - `states.has_alert`属性 判断当前页面是否有弹窗
+
+### 第五步：使用Tab对象操作浏览器
+
+#### 5.1 定位元素并操作
+
+Tab对象常用的方法：
+
+- `ele()` 通过css、xpath等定位元素，返回Element对象，可以使用类似于bs4的简写法，即把对象名看作是函数
+- `eles()` 同上，返回Slement对象的列表
+- `get_frame()` 针对iframe和frame标签，用法与ele()类似
+- `get_frames()` 同上，不建议使用
+- `s_ele()` 用法和ele()类似，将所有元素转换为静态的，这样可以加快获取速度
+- `s_eles()` 同上
+
+DrissionPage支持的元素定位法
+
+- CSS选择器 `ele('css: 选择器')`，可简写为`ele('c: 选择器')`，`css:`与`css=`效果一致，没有`css^`和`css$`语法
+
+    ```py
+    ele = tab.ele('css:.div')  # 查找 div 元素
+    ele = tab.ele('css:>div')  # 查找 div 子元素元素，这个写法是本库特有，原生不支持
+    ```
+
+- XPath `ele('xpath: 选择器')`，可简写为`ele('x: 选择器')`，`xpath:`与`xpath=`效果一致，没有`xpath^`和`xpath$`语法
+
+    ```py
+    ele2 = ele1.ele('xpath:.//div')  # 查找后代中第一个 div 元素
+    ele2 = ele1.ele('xpath://div')  # 和上面一行一样，查找元素的后代时，// 前面的 . 可以省略
+    ele_class_str = ele1.ele('xpath://div/@class')  # 使用xpath获取div元素的class属性（selenium页面元素无此功能）
+    ```
+
+- selenium By对象 `from DrissionPage.common import By` 用法和selenium相同
+- id选择器`#`，相当于当属性定位`@id=id值`
+
+    ```python
+    ele = tab.ele('#one')  # 查找id='one'的元素
+    ele = tab.ele('#=one')  # 同上
+    ele = tab.ele('#:ne')  # 查找id属性包含ne的元素
+    ele = tab.ele('#^on')  # 查找id属性以on开头的元素
+    ele = tab.ele('#$ne')  # 查找id属性以ne结尾的元素
+    ```
+
+- 类选择器`.`，相当于单属性定位'@class=属性值'，和id选择器用法类似。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#3572a5">Python</span>
+          </span>
+          <span class="in-post-card-date">2025-08-08</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
       <a class="in-post-card-link" href="post/76.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
@@ -3391,25 +3529,6 @@ PowerShell Cmdlets可以用于生成对象，并且这些对象通常含有比Po
 ## 通过管道连接命令
 
 powershell通过管道 `|` 连接命令。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/67.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 5 使用提供程序</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 5 使用提供程序
-
-## 提供程序PSProvider
-
-一个PowerShell的提供程序，即PSProvider，本质上是一个适配器。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#012456">PowerShell</span>
