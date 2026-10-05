@@ -39,6 +39,7 @@
 </nav></header>
   <main class="in-site-main" id="content">  <div class="in-tag-cloud" id="tag-cloud"></div>
   <ul class="in-post-list" id="post-list" aria-label="Filtered posts"></ul>
+  <div class="in-timeline" id="timeline" hidden></div>
   <div class="in-empty-state" id="empty-state" hidden>Not Find</div>
 </main>
   <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
@@ -75,7 +76,12 @@
       var cloud = document.getElementById('tag-cloud');
       var emptyState = document.getElementById('empty-state');
       var heading = document.querySelector('.in-page-title');
+      var timeline = document.getElementById('timeline');
       var knownLabels = [];
+
+      // `时间轴` is a pseudo-tag: selecting it hides the card flow and
+      // shows the month-grouped timeline instead of filtering rows.
+      var TIMELINE_LABEL = '时间轴';
 
       function rows() {
         return list.querySelectorAll('.in-post-card');
@@ -108,6 +114,7 @@
             counts[label] = (counts[label] || 0) + 1;
           });
         });
+        counts[TIMELINE_LABEL] = counts.All;
         return counts;
       }
 
@@ -124,11 +131,18 @@
             button.dataset.label = label;
 
             // Neutral chip + colour dot: label colours stay visible without
-            // making the cloud a wall of saturated backgrounds.
-            if (label !== 'All') {
+            // making the cloud a wall of saturated backgrounds. The timeline
+            // pseudo-tag uses an accent dot instead of a label colour.
+            var dotColor = null;
+            if (label === TIMELINE_LABEL) {
+              dotColor = 'var(--in-color-accent)';
+            } else if (label !== 'All') {
+              dotColor = colors[label] || 'var(--in-color-muted)';
+            }
+            if (dotColor) {
               var dot = document.createElement('span');
               dot.className = 'in-tag-cloud-dot';
-              dot.style.backgroundColor = colors[label] || 'var(--in-color-muted)';
+              dot.style.backgroundColor = dotColor;
               button.appendChild(dot);
             }
             button.appendChild(document.createTextNode(label));
@@ -183,6 +197,65 @@
         });
       }
 
+      function renderTimeline(data) {
+        // Group posts by YYYY-MM; the index arrives date-descending, so
+        // groups come out newest-first and stay ordered inside.
+        var groups = {};
+        var order = [];
+        data.posts.forEach(function (item) {
+          var month = (item.date || '').slice(0, 7);
+          if (!groups[month]) {
+            groups[month] = [];
+            order.push(month);
+          }
+          groups[month].push(item);
+        });
+
+        order.forEach(function (month) {
+          var group = document.createElement('section');
+          group.className = 'in-timeline-group';
+          group.dataset.labels = groups[month]
+            .map(function (item) { return item.labels.join(' '); })
+            .join(' ');
+
+          var title = document.createElement('h2');
+          title.className = 'in-timeline-month';
+          title.textContent = month.replace('-', ' 年 ') + ' 月';
+          group.appendChild(title);
+
+          groups[month].forEach(function (item) {
+            var entry = document.createElement('a');
+            entry.className = 'in-timeline-entry';
+            entry.href = item.url;
+
+            var day = document.createElement('span');
+            day.className = 'in-timeline-day';
+            day.textContent = item.date.slice(8) || '?';
+
+            var body = document.createElement('span');
+            body.className = 'in-timeline-body';
+
+            var title = document.createElement('span');
+            title.className = 'in-timeline-title';
+            title.textContent = item.title;
+            body.appendChild(title);
+
+            var labelsBox = document.createElement('span');
+            labelsBox.className = 'in-timeline-labels';
+            item.labels.forEach(function (name) {
+              labelsBox.appendChild(badge(name, data.label_colors[name]));
+            });
+            body.appendChild(labelsBox);
+
+            entry.appendChild(day);
+            entry.appendChild(body);
+            group.appendChild(entry);
+          });
+
+          timeline.appendChild(group);
+        });
+      }
+
       function setVisible(row, visible) {
         row.hidden = !visible;
       }
@@ -224,6 +297,7 @@
 
       function filter(label) {
         var all = rows();
+        var groups = timeline.querySelectorAll('.in-timeline-group');
         emptyState.hidden = true;
 
         // Keep the cloud's active chip in sync with the visible filter.
@@ -235,9 +309,26 @@
           all.forEach(function (row) {
             setVisible(row, true);
           });
+          timeline.hidden = true;
           setHeading('Tag #' + label, label + ' - ' + pageTitle);
           return;
         }
+
+        if (label === TIMELINE_LABEL) {
+          // The pseudo-tag swaps the listing style instead of filtering:
+          // card flow hidden, timeline rail shown, everything visible.
+          all.forEach(function (row) {
+            setVisible(row, false);
+          });
+          timeline.hidden = false;
+          groups.forEach(function (group) {
+            setVisible(group, true);
+          });
+          setHeading('Timeline', 'Timeline - ' + pageTitle);
+          return;
+        }
+
+        timeline.hidden = true;
 
         if (knownLabels.indexOf(label) === -1) {
           // An unrecognised hash is free text rather than a tag.
@@ -247,6 +338,19 @@
           return;
         }
 
+        var timelineEmpty = true;
+        groups.forEach(function (group) {
+          var match = group.dataset.labels.split(' ').indexOf(label) !== -1;
+          setVisible(group, match);
+          if (match) {
+            timelineEmpty = false;
+          }
+        });
+        if (timelineEmpty) {
+          // The timeline has no matching group at all: fall back to the
+          // shared empty state so the same message serves both views.
+          showEmpty('Not Find "' + label + '"');
+        }
         all.forEach(function (row) {
           setVisible(row, row.dataset.labels.split(' ').indexOf(label) !== -1);
         });
@@ -260,6 +364,7 @@
         var data = JSON.parse(request.response);
         renderCloud(data, countLabels(data));
         renderRows(data);
+        renderTimeline(data);
         filter(decodeURI(window.location.hash.slice(1)) || 'All');
       };
       request.send();
