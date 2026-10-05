@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="
+# 选择题
+
+1. 将Windows C:盘（hda1）安装在Linux文件系统的/winsys目录下，命令是（ ）
+    - [ ] A root@l04.edu.cn:~#mount dev/had1 /winsys
+    - [x] B root@l04.edu.cn:~#mount /dev/had1 /winsys
+    - [ ] C root@l04.edu.cn:~#mount /dev/had1 winsys
+    - [ ] D root@l04.edu.cn:~#mount dev/had1 winsys
+    答案：B
+
+2. 设超级用户root当前所在目录为：/usr/local，键入cd命令后，用户当前所在目录为（ ）
+    - [ ] A /home
+    - [x] B /root
+    - [ ] C /home/root
+    - [ ] D /usr/local
+    答案：B
+
+3. 字符设备文件类型的标志是（ ）
+    - [ ] A p
+    - [x] B c
+    - [ ] C s
+    - [ ] D l
+    答案：B
+
+4. 将光盘CD-ROM（hdc）安装到文件系统的/mnt/cdrom目录下的命令是（ ）
+    - [ ] A mount /mnt/cdrom
+    - [ ] B mount /mnt/cdrom /dev/hdc
+    - [x] C mount /dev/hdc /mnt/cdrom
+    - [ ] D mount /dev/hdc
+    答案：C
+
+5. 将光盘/dev/hdc卸载的命令是（ ）
+    - [x] A umount /dev/hdc
+    - [ ] B unmount /dev/hdc
+    - [ ] C umount /mnt/cdrom /dev/hdc
+    - [ ] D unmount /mnt/cdrom /dev/hdc
+    答案：A
+
+6. 在/home/stud1/wang目录下有一文件file，使用（ ）可实现在后台执行命令，此命令将file文件中的内容输出到file.copy文件中。">
+<meta property="og:title" content="Linux 练习题">
+<meta property="og:description" content="
+# 选择题
+
+1. 将Windows C:盘（hda1）安装在Linux文件系统的/winsys目录下，命令是（ ）
+    - [ ] A root@l04.edu.cn:~#mount dev/had1 /winsys
+    - [x] B root@l04.edu.cn:~#mount /dev/had1 /winsys
+    - [ ] C root@l04.edu.cn:~#mount /dev/had1 winsys
+    - [ ] D root@l04.edu.cn:~#mount dev/had1 winsys
+    答案：B
+
+2. 设超级用户root当前所在目录为：/usr/local，键入cd命令后，用户当前所在目录为（ ）
+    - [ ] A /home
+    - [x] B /root
+    - [ ] C /home/root
+    - [ ] D /usr/local
+    答案：B
+
+3. 字符设备文件类型的标志是（ ）
+    - [ ] A p
+    - [x] B c
+    - [ ] C s
+    - [ ] D l
+    答案：B
+
+4. 将光盘CD-ROM（hdc）安装到文件系统的/mnt/cdrom目录下的命令是（ ）
+    - [ ] A mount /mnt/cdrom
+    - [ ] B mount /mnt/cdrom /dev/hdc
+    - [x] C mount /dev/hdc /mnt/cdrom
+    - [ ] D mount /dev/hdc
+    答案：C
+
+5. 将光盘/dev/hdc卸载的命令是（ ）
+    - [x] A umount /dev/hdc
+    - [ ] B unmount /dev/hdc
+    - [ ] C umount /mnt/cdrom /dev/hdc
+    - [ ] D unmount /mnt/cdrom /dev/hdc
+    答案：A
+
+6. 在/home/stud1/wang目录下有一文件file，使用（ ）可实现在后台执行命令，此命令将file文件中的内容输出到file.copy文件中。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/114.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>Linux 练习题</title>
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">Linux 练习题</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-09-10</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1d76db;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Linux">Linux</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><h1>选择题</h1>
+<ol>
+<li>
+<p>将Windows C:盘（hda1）安装在Linux文件系统的/winsys目录下，命令是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A <a href="mailto:root@l04.edu.cn">root@l04.edu.cn</a>:~#mount dev/had1 /winsys</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B <a href="mailto:root@l04.edu.cn">root@l04.edu.cn</a>:~#mount /dev/had1 /winsys</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C <a href="mailto:root@l04.edu.cn">root@l04.edu.cn</a>:~#mount /dev/had1 winsys</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D <a href="mailto:root@l04.edu.cn">root@l04.edu.cn</a>:~#mount dev/had1 winsys<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>设超级用户root当前所在目录为：/usr/local，键入cd命令后，用户当前所在目录为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /home</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B /root</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C /home/root</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /usr/local<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>字符设备文件类型的标志是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A p</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B c</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C s</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D l<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>将光盘CD-ROM（hdc）安装到文件系统的/mnt/cdrom目录下的命令是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A mount /mnt/cdrom</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B mount /mnt/cdrom /dev/hdc</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C mount /dev/hdc /mnt/cdrom</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D mount /dev/hdc<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>将光盘/dev/hdc卸载的命令是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A umount /dev/hdc</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B unmount /dev/hdc</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C umount /mnt/cdrom /dev/hdc</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D unmount /mnt/cdrom /dev/hdc<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>在/home/stud1/wang目录下有一文件file，使用（ ）可实现在后台执行命令，此命令将file文件中的内容输出到file.copy文件中。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A cat file &gt;file.copy</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B cat &gt;file.copy</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C cat file file.copy &amp;</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D cat file &gt;file.copy &amp;<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在DNS配置文件中，用于表示某主机别名的是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A NS</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B CNAME</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C NAME</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D CN<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>可以完成主机名与IP地址的正向解析和反向解析任务的命令是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A nslookup</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B arp</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C ifconfig</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D dnslook<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>下列变量名中有效的shell变量名是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A -2-time</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B _2$3</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C trust_no_1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 2004file<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>qmail是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 收取邮件的协议</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 邮件服务器的一种</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 发送邮件的协议</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 邮件队列<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>已知某用户stud1，其用户目录为/home/stud1。如果当前目录为/home，进入目录/home/stud1/test的命令是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A cd test</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B cd /stud1/test</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C cd stud1/test</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D cd home<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>已知某用户stud1，其用户目录为/home/stud1。分页显示当前目录下的所有文件的文件或目录名、用户组、用户、文件大小、文件或目录权限、文件创建时间等信息的命令是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A more ls –al</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B more –al ls</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C more &lt; ls –al</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D ls –al | more<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>关于进程调度命令，（ ）是不正确的。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 当日晚11点执行clear命令，使用at命令：at 23:00 today clear</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 每年1月1日早上6点执行date命令，使用at命令：at 6am Jan 1 date</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 每日晚11点执行date命令，crontab文件中应为：0 23 * * * date</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 每小时执行一次clear命令，crontab文件中应为：0 */1 * * * clear<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>系统中有用户user1和user2，同属于users组。在user1用户目录下有一文件file1，它拥有644的权限，如果user2用户想修改user1用户目录下的file1文件，应拥有（ ）权限。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 744</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 664</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 646</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 746<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>如果想配置一台匿名ftp服务器，应修改（ ）文件。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /etc/gateway</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B /etc/ftpservers</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C /etc/ftpusers</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /etc/inetd.conf<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>Samba服务器的进程由（ ）两部分组成。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A named 和sendmail</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B smbd 和nmbd</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C bootp 和dhcpd</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D httpd 和squid<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>要配置NFS服务器，在服务器端主要配置（ ）文件。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /etc/rc.d/rc.inet1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B /etc/rc.d/rc.M</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C /etc/exports</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /etc/rc.d/rc.S<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>为保证在启动服务器时自动启动DHCP进程，应对（ ）文件进行编辑。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /etc/rc.d/rc.inet2</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B /etc/rc.d/rc.inet1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C /etc/dhcpd.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /etc/rc.d/rc.S<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>在配置代理服务器时，若设置代理服务器的工作缓存为64MB，配置行应为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A cache 64MB</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B cache_dir ufs /usr/local/squid/cache 10000 16 256</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C cache_ mgr 64MB</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D cache_ mem 64MB<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>安全管理涉及的问题包括保证网络管理工作可靠进行的安全问题和保护网络用户及网络管理对象问题。（ ）属于安全管理的内容。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 配置设备的工作参数</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 收集与网络性能有关的数据</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 控制和维护访问权限</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 监测故障<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>以下命令对中，正确的是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A ls 和sl</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B cat 和tac</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C more 和erom</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D exit 和tixe<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>（ ）命令是在vi编辑器中执行存盘退出。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A :q</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B ZZ</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C :q!</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D :WQ<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>下列关于/etc/fstab文件描述，正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A fstab文件只能描述属于linux的文件系统</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B CD_ROM和软盘必须是自动加载的</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C fstab文件中描述的文件系统不能被卸载</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D 启动时按fstab文件描述内容加载文件系统<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>通过文件名存取文件时，文件系统内部的操作过程是通过（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 文件在目录中查找文件数据存取位置。</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 文件名直接找到文件的数据，进行存取操作。</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 文件名在目录中查找对应的I节点，通过I节点存取文件数据。</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 文件名在中查找对应的超级块，在超级块查找对应i节点，通过i节点存取文件数据<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>Linux将存储设备和输入/输出设备均看做文件来操作，（ ）不是以文件的形式出现。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 目录</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 软链接</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C i节点表</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 网络适配器<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>关于i节点和超级块，下列论述不正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A i节点是一个长度固定的表</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 超级块在文件系统的个数是唯一的</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C i节点包含了描述一个文件所必需的全部信息</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 超级块记录了i节点表和空闲块表信息在磁盘中存放的位置<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>（ ）设备是字符设备。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A hdc</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B fd0</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C hda1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D tty1<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>（ ）目录存放着Linux的源代码。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /etc</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B /usr/src</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C /usr</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /home<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>关于文件系统的安装和卸载，下面描述正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A 如果光盘未经卸载，光驱是打不开的</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 安装文件系统的安装点只能是/mnt下</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 不管光驱中是否有光盘，系统都可以安装CD-ROM设备</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D mount /dev/fd0 /floppy 此命令中目录/floppy是自动生成的<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>（ ）不是进程和程序的区别。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 程序是一组有序的静态指令，进程是一次程序的执行过程</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 程序只能在前台运行，而进程可以在前台或后台运行</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 程序可以长期保存，进程是暂时的</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 程序没有状态，而进程是有状态的<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>文件exer1的访问权限为rw-r--r--，现要增加所有用户的执行权限和同组用户的写权限，下列命令正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A chmod a+x g+w exer1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B chmod 765 exer1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C chmod o+x exer1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D chmod g+w exer1<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>有关归档和压缩命令，下面描述正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 用uncompress命令解压缩由compress命令生成的后缀为.zip的压缩文件</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B unzip命令和gzip命令可以解压缩相同类型的文件</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C tar归档且压缩的文件可以由gzip命令解压缩</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D tar命令归档后的文件也是一种压缩文件<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>不是shell具有的功能和特点的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 管道</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 输入输出重定向</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 执行后台进程</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 处理程序命令<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>下列对shell变量FRUIT操作，正确的是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 为变量赋值：$FRUIT=apple</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 显示变量的值：fruit=apple</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 显示变量的值：echo $FRUIT</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 判断变量是否有值：[ -f “$FRUIT” ]<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>简述Linux文件系统通过i节点把文件的逻辑结构和物理结构转换的工作过程。<br>
+参考答案：<br>
+Linux通过i节点表将文件的逻辑结构和物理结构进行转换。i节点是一个64字节长的表，表中包含了文件的相关信息，其中有文件的大小、文件所有者、文件的存取许可方式以及文件的类型等重要信息。在i节点表中最重要的内容是磁盘地址表。在磁盘地址表中有13个块号，文件将以块号在磁盘地址表中出现的顺序依次读取相应的块。Linux文件系统通过把i节点和文件名进行连接，当需要读取该文件时，文件系统在当前目录表中查找该文件名对应的项，由此得到该文件相对应的i节点号，通过该i节点的磁盘地址表把分散存放的文件物理块连接成文件的逻辑结构。</p>
+</li>
+<li>
+<p>简述进程的启动、终止的方式以及如何进行进程的查看。<br>
+参考答案：<br>
+在Linux中启动一个进程有手工启动和调度启动两种方式：<br>
+（1）手工启动<br>
+用户在输入端发出命令，直接启动一个进程的启动方式。可以分为：<br>
+①前台启动：直接在SHELL中输入命令进行启动。<br>
+②后台启动：启动一个目前并不紧急的进程，如打印进程。<br>
+（2）调度启动<br>
+系统管理员根据系统资源和进程占用资源的情况，事先进行调度安排，指定任务运行的时间和场合，到时候系统会自动完成该任务。<br>
+经常使用的进程调度命令为：at、batch、crontab。</p>
+</li>
+<li>
+<p>简述DNS进行域名解析的过程。<br>
+参考答案：<br>
+首先，客户端发出DNS请求翻译IP地址或主机名。DNS服务器在收到客户机的请求后：<br>
+（1）检查DNS服务器的缓存，若查到请求的地址或名字，即向客户机发出应答信息；<br>
+（2）若没有查到，则在数据库中查找，若查到请求的地址或名字，即向客户机发出应答信息；<br>
+（3）若没有查到，则将请求发给根域DNS服务器，并依序从根域查找顶级域，由顶级查找二级域，二级域查找三级，直至找到要解析的地址或名字，即向客户机所在网络的DNS服务器发出应答信息，DNS服务器收到应答后现在缓存中存储，然后，将解析结果发给客户机。<br>
+（4）若没有找到，则返回错误信息。</p>
+</li>
+<li>
+<p>系统管理员的职责包括那些？管理的对象是什么？<br>
+参考答案：<br>
+系统管理员的职责是进行系统资源管理、设备管理、系统性能管理、安全管理和系统性能监测。管理的对象是服务器、用户、服务器的进程及系统的各种资源等。</p>
+</li>
+<li>
+<p>简述安装Slackware Linux系统的过程。<br>
+参考答案：<br>
+（1）对硬盘重新分区。<br>
+（2）启动Linux系统（用光盘、软盘等）。<br>
+（3）建立Linux主分区和交换分区。<br>
+（4）用setup命令安装Linux系统。<br>
+（5）格式化Linux主分区和交换分区<br>
+（6）安装Linux软件包<br>
+（7）安装完毕，建立从硬盘启动Linux系统的LILO启动程序，或者制作一张启动Linux系统的软盘。重新启动Linux系统。</p>
+</li>
+<li>
+<p>什么是静态路由，其特点是什么？什么是动态路由，其特点是什么？<br>
+参考答案：<br>
+静态路由是由系统管理员设计与构建的路由表规定的路由。适用于网关数量有限的场合，且网络拓朴结构不经常变化的网络。其缺点是不能动态地适用网络状况的变化，当网络状况变化后必须由网络管理员修改路由表。<br>
+动态路由是由路由选择协议而动态构建的，路由协议之间通过交换各自所拥有的路由信息实时更新路由表的内容。动态路由可以自动学习网络的拓朴结构，并更新路由表。其缺点是路由广播更新信息将占据大量的网络带宽。</p>
+</li>
+<li>
+<p>进程的查看和调度分别使用什么命令？<br>
+参考答案：<br>
+进程查看的命令是ps和top。<br>
+进程调度的命令有at，crontab，batch，kill。</p>
+</li>
+<li>
+<p>当文件系统受到破坏时，如何检查和修复系统？<br>
+参考答案：<br>
+成功修复文件系统的前提是要有两个以上的主文件系统，并保证在修复之前首先卸载将被修复的文件系统。<br>
+使用命令fsck对受到破坏的文件系统进行修复。fsck检查文件系统分为5步，每一步检查系统不同部分的连接特性并对上一步进行验证和修改。在执行fsck命令时，检查首先从超级块开始，然后是分配的磁盘块、路径名、目录的连接性、链接数目以及空闲块链表、i-node。</p>
+</li>
+<li>
+<p>解释i节点在文件系统中的作用。<br>
+参考答案：<br>
+在linux文件系统中，是以块为单位存储信息的，为了找到某一个文件在存储空间中存放的位置，用i节点对一个文件进行索引。I节点包含了描述一个文件所必须的全部信息。所以i节点是文件系统管理的一个数据结构。</p>
+</li>
+<li>
+<p>什么是符号链接，什么是硬链接？符号链接与硬链接的区别是什么？<br>
+参考答案：<br>
+链接分硬链接和符号链接。<br>
+符号链接可以建立对于文件和目录的链接。符号链接可以跨文件系统，即可以跨磁盘分区。符号链接的文件类型位是l，链接文件具有新的i节点。 硬链接不可以跨文件系统。它只能建立对文件的链接，硬链接的文件类型位是-，且硬链接文件的i节点同被链接文件的i节点相同。</p>
+</li>
+<li>
+<p>在对linux系统分区进行格式化时需要对磁盘簇（或i节点密度）的大小进行择，请说明选择的原则。<br>
+参考答案：<br>
+磁盘簇（或i节点密度）是文件系统调度文件的基本单元。磁盘簇的大小，直接影响系统调度磁盘空间效率。当磁盘分区较大时，磁盘簇也应选得大些；当分区较小时，磁盘簇应选得小些。通常使用经验值。</p>
+</li>
+<li>
+<p>简述网络文件系统NFS，并说明其作用。<br>
+参考答案：<br>
+网络文件系统是应用层的一种应用服务，它主要应用于Linux和Linux系统、Linux和Unix系统之间的文件或目录的共享。对于用户而言可以通过NFS方便的访问远地的文件系统，使之成为本地文件系统的一部分。采用NFS之后省去了登录的过程，方便了用户访问系统资源。</p>
+</li>
+<li>
+<p>某/etc/fstab文件中的某行如下：<br>
+/dev/had5 /mnt/dosdata msdos defaults,usrquota 1 2<br>
+请解释其含义。<br>
+参考答案：<br>
+（1）第一列：将被加载的文件系统名；<br>
+（2）第二列：该文件系统的安装点；<br>
+（3）第三列：文件系统的类型；<br>
+（4）第四列：设置参数；<br>
+（5）第五列：供备份程序确定上次备份距现在的天数；<br>
+（6）第六列：在系统引导时检测文件系统的顺序。</p>
+</li>
+<li>
+<p>Apache服务器的配置文件httpd.conf中有很多内容，请解释如下配置项：<br>
+（1）MaxKeepAliveRequests 200<br>
+（2）UserDir public_html<br>
+（3）DefaultType text/plain<br>
+（4）AddLanguare en.en<br>
+（5）DocumentRoot“/usr/local/httpd/htdocs”<br>
+（6）AddType application/x-httpd-php.php.php.php4<br>
+参考答案：<br>
+（1）允许每次连接的最大请求数目，此为200；<br>
+（2）设定用户放置网页的目录；<br>
+（3）设置服务器对于不认识的文件类型的预设格式；<br>
+（4）设置可传送语言的文件给浏览器；<br>
+（5）该目录为Apache放置网页的地方；<br>
+（6）服务器选择使用php4。</p>
+</li>
+<li>
+<p>某Linux主机的/etc/rc.d/rc.inet1文件中有如下语句，请修正错误，并解释其内容。<br>
+/etc/rc.d/rc.inet1:……<br>
+ROUTE add –net default gw 192.168.0.101 netmask 255.255.0.0 metric 1<br>
+ROUTE add –net 192.168.1.0 gw 192.168.0.250 netmask 255.255.0.0 metric 1<br>
+参考答案：<br>
+修正错误：<br>
+（1）ROUTE应改为小写：route；<br>
+（2）netmask 255.255.0.0应改为：netmask 255.255.255.0；<br>
+（3）缺省路由的子网掩码应改为：netmask 0.0.0.0；<br>
+（4）缺省路由必须在最后设定，否则其后的路由将无效。<br>
+解释内容：<br>
+（1）route：建立静态路由表的命令；<br>
+（2）add：增加一条新路由；<br>
+（3）-net 192.168.1.0：到达一个目标网络的网络地址；<br>
+（4）default：建立一条缺省路由；<br>
+（5）gw 192.168.0.101：网关地址；<br>
+（6）metric 1：到达目标网络经过的路由器数（跳数）。</p>
+</li>
+<li>
+<p>试解释apache服务器以下配置的含义：<br>
+（1）port 1080<br>
+（2）UserDir userdoc<br>
+（3）DocumentRoot “/home/htdocs”<br>
+（4）&lt;Directory /home/htdocs/inside&gt;<br>
+Options Indexes FollowSymLinks<br>
+AllowOverride None<br>
+Order deny,allow<br>
+deny from all<br>
+allow from 192.168.1.5</p>
+</li>
+</ol>
+
+（5）Server Type Standlone
+参考答案：
+Apache服务器配置行含义如下：
+（1）将apache服务器的端口号设定为1080；
+（2）设定用户网页目录为userdoc；
+（3）设定apache服务器的网页根目录：/home/htdocs；
+（4）在此apache服务器上设定一个目录/home/htdocs/inside，且此目录只允许IP地址为192.168.1.5的主机访问；
+（5）定义apache服务器以独立进程的方式运行。
+<ol start="51">
+<li>简述使用ftp进行文件传输时的两种登录方式？它们的区别是什么？常用的ftp文件传输命令是什么？<br>
+参考答案：<br>
+（1）ftp有两种登录方式：匿名登录和授权登录。使用匿名登录时，用户名为：anonymous，密码为：任何合法email地址；使用授权登录时，用户名为用户在远程系统中的用户帐号，密码为用户在远程系统中的用户密码。<br>
+区别：使用匿名登录只能访问ftp目录下的资源，默认配置下只能下载；而授权登录访问的权限大于匿名登录，且上载、下载均可。<br>
+（2）ftp文件传输有两种文件传输模式：ASCII模式和binary模式。ASCII模式用来传输文本文件，其他文件的传输使用binary模式。<br>
+（3）常用的ftp文件传输命令为：bin、asc、put、get、mput、mget、prompt、bye。</li>
+</ol>
+<hr>
+<h1>shell脚本</h1>
+<ol>
+<li>用Shell编程，判断一文件是不是字符设备文件，如果是将其拷贝到/dev目录下。</li>
+</ol>
+<p>参考程序：<br>
+#!/bin/sh<br>
+FILENAME=<br>
+echo "Input file name:"<br>
+read FILENAME<br>
+if [ -c "$FILENAME" ]<br>
+then<br>
+cp $FILENAME /dev<br>
+fi</p>
+<ol>
+<li>
+<p>请下列shell程序加注释，并说明程序的功能和调用方法：<br>
+#!/bin/sh<br>
+#!/bin/sh</p>
+<h1></h1>
+<h1>/etc/rc.d/rc.httpd</h1>
+<h1></h1>
+<h1>Start/stop/restart the Apache web server.</h1>
+<h1></h1>
+<h1>To make Apache start automatically at boot, make this</h1>
+<h1>file executable: chmod 755 /etc/rc.d/rc.httpd</h1>
+<h1></h1>
+<p>case "$1" in<br>
+'start')<br>
+/usr/sbin/apachectl start<br>
+;;<br>
+'stop')<br>
+/usr/sbin/apachectl stop<br>
+;;<br>
+'restart')<br>
+/usr/sbin/apachectl restart<br>
+;;<br>
+*)<br>
+echo "usage $0 start|stop|restart"<br>
+;;<br>
+esac<br>
+参考答案：<br>
+（1）程序注释<br>
+#!/bin/sh  #定义使用的shell</p>
+<h1>#注释行，以#开始的行均为注释行</h1>
+<h1>/etc/rc.d/rc.httpd  #指定该脚本文件的路径和名称</h1>
+<h1>#注释行</h1>
+<h1>Start/stop/restart the Apache web server.  #说明脚本功能：启动、停止、重启Apache web服务器</h1>
+<h1>#注释行</h1>
+<h1>To make Apache start automatically at boot, make this  #说明使Apache在系统启动时自动运行的方法</h1>
+<h1>file executable: chmod 755 /etc/rc.d/rc.httpd  #具体操作命令：赋予该脚本文件执行权限</h1>
+<h1>#注释行</h1>
+<p>case "$1" in  #case结构开始，判断位置参数$1的值，决定执行对应的操作，本程序携带一个位置参数<br>
+'start')  #若位置参数为start<br>
+/usr/sbin/apachectl start  #执行启动httpd进程的命令<br>
+;;  #跳出当前case分支<br>
+'stop')  #若位置参数为stop<br>
+/usr/sbin/apachectl stop  #执行停止httpd进程的命令<br>
+;;  #跳出当前case分支<br>
+'restart')  #若位置参数为restart<br>
+/usr/sbin/apachectl restart  #执行重新启动httpd进程的命令<br>
+;;  #跳出当前case分支<br>
+*)  #若位置参数不是start、stop或restart时<br>
+echo "usage $0 start|stop|restart"  #显示命令提示信息，告知程序的调用方法<br>
+;;  #跳出当前case分支<br>
+esac  #case结构结束<br>
+（2）程序的功能是启动、停止或重新启动httpd进程<br>
+（3）程序的调用方式有三种：</p>
+<ul>
+<li>启动：/etc/rc.d/rc.httpd start</li>
+<li>停止：/etc/rc.d/rc.httpd stop</li>
+<li>重新启动：/etc/rc.d/rc.httpd restart</li>
+</ul>
+</li>
+<li>
+<p>设计一个shell程序，添加一个新组为class1，然后添加属于这个组的30个用户，用户名的形式为stdxx，其中xx从01到30。<br>
+参考答案：<br>
+#!/bin/sh<br>
+i=1<br>
+groupadd class1<br>
+while [ $i -le 30 ]<br>
+do<br>
+if [ $i -le 9 ];then<br>
+USERNAME=stu0${i}<br>
+else<br>
+USERNAME=stu${i}<br>
+fi<br>
+useradd $USERNAME<br>
+mkdir /home/$USERNAME<br>
+chown -R $USERNAME /home/$USERNAME<br>
+chgrp -R class1 /home/$USERNAME<br>
+i=$(($i+1))<br>
+done</p>
+</li>
+<li>
+<p>编写shell程序，实现自动删除50个账号的功能。账号名为stud1至stud50。<br>
+参考程序：<br>
+#!/bin/sh<br>
+i=1<br>
+while [ $i -le 50 ]<br>
+do<br>
+userdel -r stud${i}<br>
+i=$(($i+1))<br>
+done</p>
+</li>
+</ol>
+<hr>
+<h1>填空题</h1>
+<ol>
+<li>在Linux系统中，以<strong>文件</strong>方式访问设备。</li>
+<li>Linux内核引导时，从文件**/etc/fstab**中读取要加载的文件系统。</li>
+<li>Linux文件系统中每个文件用<strong>i节点</strong>来标识。</li>
+<li>全部磁盘块由四个部分组成，分别为<strong>引导块</strong>、<strong>专用块</strong>、<strong>i节点表块</strong>和<strong>数据存储块</strong>。</li>
+<li>链接分为：<strong>硬链接</strong>和<strong>符号链接</strong>。</li>
+<li>超级块包含了i节点表和空闲块表等重要的文件系统信息。</li>
+<li>某文件的权限为：drw-r--r--，用数值形式表示该权限，则该八进制数为：<strong>644</strong>，该文件属性是<strong>目录</strong>。</li>
+<li>前台起动的进程使用<strong>Ctrl+c</strong>终止。</li>
+<li>静态路由设定后，若网络拓扑结构发生变化，需由<strong>系统管理员</strong>修改路由的设置。</li>
+<li>网络管理的重要任务是：<strong>控制</strong>和<strong>监控</strong>。</li>
+<li>安装Linux系统对硬盘分区时，必须有两种分区类型：<strong>文件系统分区</strong>和<strong>交换分区</strong>。</li>
+<li>编写的Shell程序运行前必须赋予该脚本文件<strong>执行权限</strong>。</li>
+<li>系统管理的任务之一是能够在分布式环境中实现对程序和数据的<strong>安全保护</strong>、<strong>备份</strong>、<strong>恢复</strong>和<strong>更新</strong>。</li>
+<li>系统交换分区是作为系统<strong>虚拟存储器</strong>的一块区域。</li>
+<li>内核分为<strong>进程管理系统</strong>、<strong>内存管理系统</strong>、<strong>I/O管理系统</strong>和<strong>文件管理系统</strong>等四个子系统。</li>
+<li>内核配置是系统管理员在改变系统配置硬件时要进行的重要操作。</li>
+<li>在安装Linux系统中，使用<strong>netconfig</strong>程序对网络进行配置，该安装程序会一步步提示用户输入主机名、域名、域名服务器、IP地址、网关地址和子网掩码等必要信息。</li>
+<li>唯一标识每一个用户的是<strong>用户ID</strong>和<strong>用户名</strong>。</li>
+<li>RIP协议是最为普遍的一种内部协议，一般称为<strong>动态路由选择协议</strong>。</li>
+<li>在Linux系统中所有内容都被表示为文件，组织文件的各种方法称为<strong>文件系统</strong>。</li>
+<li>DHCP可以实现<strong>动态IP地址分配</strong>。</li>
+<li>系统网络管理员的管理对象是<strong>服务器</strong>、<strong>用户</strong>和服务器的<strong>进程</strong>以及系统的各种<strong>资源</strong>。</li>
+<li>网络管理通常由<strong>监测</strong>、<strong>传输</strong>和<strong>管理</strong>三部分组成，其中<strong>管理</strong>部分是整个网络管理的核心。</li>
+<li>当想删除本系统用不上的设备驱动程序时必须<strong>编译内核</strong>，当内核不支持系统上的设备驱动程序时，必须对内核<strong>升级</strong>。</li>
+<li>Ping命令可以测试网络中本机系统是否能到达一台远程主机，所以常常用于测试网络的<strong>连通性</strong>。</li>
+<li>vi编辑器具有两种工作模式：<strong>命令模式</strong>和<strong>输入模式</strong>。</li>
+<li>可以用<strong>ls –al</strong>命令来观察文件的权限，每个文件的权限都用10位表示，并分为四段，其中第一段占1位，表示<strong>文件类型</strong>，第二段占3位，表示<strong>文件所有者对该文件的权限</strong>。</li>
+<li>进程与程序的区别在于其<strong>动态性</strong>，动态的产生和终止，从产生到终止进程可以具有的基本状态为：<strong>运行态</strong>、<strong>就绪态</strong>和<strong>等待态（阻塞态）</strong>。</li>
+<li>DNS实际上是分布在internet上的主机信息的数据库，其作用是实现<strong>IP地址</strong>和<strong>主机名</strong>之间的转换。</li>
+<li>Apache是实现WWW服务器功能的应用程序，即通常所说的“浏览web服务器”，在服务器端为用户提供浏览web服务的就是<strong>apache</strong>应用程序。</li>
+<li>在Linux系统上做备份可以有两种类型：<strong>系统备份</strong>和<strong>用户备份</strong>。其中前者是指对操作系统的备份，后者是指对应用程序和用户文件的备份。</li>
+<li>CD-ROM标准的文件系统类型是<strong>iso9660</strong>。</li>
+<li>当lilo.conf配置完毕后，使之生效，应运行的命令及参数是<strong>lilo</strong>。</li>
+<li>在使用ls命令时，用八进制形式显示非打印字符应使用参数**-b**。</li>
+<li>Linux使用支持Windows 9.x/2000长文件名的文件系统的类型是<strong>vfat</strong>。</li>
+<li>设定限制用户使用磁盘空间的命令是<strong>quota</strong>。</li>
+<li>在Linux系统中，用来存放系统所需要的配置文件和子目录的目录是**/etc**。</li>
+<li>硬连接只能建立对<strong>文件</strong>链接。符号链接可以跨不同文件系统创建。</li>
+<li>套接字文件的属性位是<strong>s</strong>。</li>
+<li>结束后台进程的命令是<strong>kill</strong>。</li>
+<li>进程的运行有两种方式，即<strong>独立运行</strong>和<strong>使用父进程运行</strong>。</li>
+<li>Links分为<strong>硬链接</strong>和<strong>符号链接</strong>。</li>
+<li>在超级用户下显示Linux系统中正在运行的全部进程，应使用的命令及参数是<strong>ps -aux</strong>。</li>
+<li>管道文件的属性位是<strong>p</strong>。</li>
+<li>将前一个命令的标准输出作为后一个命令的标准输入，称之为<strong>管道</strong>。</li>
+<li>为脚本程序指定执行权的命令及参数是<strong>chmod a+x filename</strong>。</li>
+<li>进行远程登录的命令是<strong>telnet</strong>。</li>
+<li>欲发送10个分组报文测试与主机abc.tuu.edu.cn的连通性，应使用的命令和参数是：<strong>ping abc.tuu.edu.cn –c 10</strong>。</li>
+<li>DNS服务器的进程命名为<strong>named</strong>，当其启动时，自动装载/etc目录下的<strong>named.conf</strong>文件中定义的DNS分区数据库文件。</li>
+<li>Apache服务器进程配置文件是<strong>httpd.conf</strong>。</li>
+<li>在Linux系统中，压缩文件后生成后缀为.gz文件的命令是<strong>gzip</strong>。</li>
+<li>在用vi编辑文件时，将文件内容存入test.txt文件中，应在命令模式下键入**：w test.txt**。</li>
+<li>可以在标准输出上显示整年日历的命令及参数是<strong>cal -y</strong>。</li>
+<li>在shell编程时，使用方括号表示测试条件的规则是：<strong>方括号两边必须有空格</strong>。</li>
+<li>检查已安装的文件系统/dev/had5是否正常，若检查有错，则自动修复，其命令及参数是<strong>fsck –a /dev/had5</strong>。</li>
+<li>在Windows9.x环境下共享Unix/Linux中的用户目录的一个工具是<strong>Samba服务器</strong>。</li>
+<li>系统管理员的职责是进行<strong>系统资源管理</strong>、<strong>系统性能管理</strong>、<strong>设备管理</strong>、<strong>安全管理</strong>和<strong>系统性能监测</strong>。</li>
+<li>在Linux系统中，测试DNS服务器是否能够正确解析域名的的客户端命令，使用命令<strong>nslookup</strong>。</li>
+<li>在Linux系统下，第二个IDE通道的硬盘（从盘）被标识为<strong>hdb</strong>。</li>
+<li>当系统管理员需升级内核版本和改变系统硬件配置时，应<strong>重新编译内核</strong>。</li>
+<li>如果只是要修改系统的IP地址，应修改**/etc/rc.d/rc.inet1**配置文件。</li>
+<li>当LAN内没有条件建立DNS服务器，但又想让局域网内的用户可以使用计算机名互相访问时，应配置**/etc/hosts**文件。</li>
+<li>在vi编辑环境下，使用<strong>Esc</strong>键进行模式转换。</li>
+<li>Slackware Linux 9.0通常使用<strong>ext3</strong>文件系统，系统的全部磁盘块由四部分组成。</li>
+<li>将/home/stud1/wang目录做归档压缩，压缩后生成wang.tar.gz文件，并将此文件保存到/home目录下，实现此任务的tar命令格式<strong>tar zcvf /home/wang.tar.gz /home/stud1/wang</strong>。</li>
+<li>管道就是将前一个命令的<strong>标准输出</strong>作为后一个命令的<strong>标准输入</strong>。</li>
+<li>在使用手工的方法配置网络时，可通过修改**/etc/HOSTNAME<strong>文件来改变主机名，若要配置该计算机的域名解析客户端，需配置</strong>/etc/resolv.conf**文件。</li>
+<li>启动进程有<strong>手动启动</strong>和<strong>调度启动</strong>两种方法，其中调度启动常用的命令为<strong>at</strong>、<strong>batch</strong>和<strong>crontab</strong>。</li>
+<li>test.bns.com.cn的域名是<strong>bns.com.cn</strong>，如果要配置一域名服务器，应在named.conf文件中定义DNS数据库的工作目录。</li>
+<li>Sendmail邮件系统使用的两个主要协议是：<strong>SMTP</strong>和<strong>POP</strong>，前者用来发送邮件，后者用来接收邮件。</li>
+<li>DHCP是<strong>动态主机配置协议</strong>的简称，其作用是：为网络中的主机分配IP地址。</li>
+<li>目前代理服务器使用的软件包有很多种，教材中使用的是<strong>squid</strong>。</li>
+<li>rm命令可删除文件或目录，其主要差别就是是否使用递归开关**-r<strong>或</strong>-R**。</li>
+<li>mv命令可以移动文件和目录，还可以为文件和目录<strong>重新命名</strong>。</li>
+<li>路由选择协议（RIP）的跳数表示到达目的地之前必须通过的网关数，RIP接受的最长距离是<strong>15</strong>跳。</li>
+<li>ping命令用于测试网络的连通性，ping命令通过<strong>ICMP</strong>协议来实现。</li>
+<li>nfs协议用于实现Unix（/linux）主机之间的<strong>文件系统共享</strong>。</li>
+<li>在Linux操作系统中，设备都是通过<strong>特殊的文件</strong>来访问。</li>
+<li>shell不仅是用户命令的解释器，它同时也是一种功能强大的编程语言。<strong>bash</strong>是Linux的缺省shell。</li>
+<li>用**&gt;&gt;** 符号将输出重定向内容附加在原文的后面。</li>
+<li>增加一个用户的命令是：<strong>adduser</strong>或<strong>useradd</strong>。</li>
+<li>进行字符串查找，使用<strong>grep</strong>命令。</li>
+<li>使用***** 每次匹配若干个字符。</li>
+<li><strong>/sbin</strong>目录用来存放系统管理员使用的管理程序。</li>
+</ol>
+<hr>
+<h1>exercise3</h1>
+<h2>单项选择题</h2>
+<ol>
+<li>
+<p>下面的网络协议中，面向连接的的协议是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A 传输控制协议</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 用户数据报协议</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 网际协议</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 网际控制报文协议<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>在/etc/fstab文件中指定的文件系统加载参数中，（ ）参数一般用于CD-ROM等移动设备。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A defaults</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B sw</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C rw 和ro</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D noauto<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>Linux文件权限一共10位长度，分成四段，第三段表示的内容是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 文件类型</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 文件所有者的权限</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 文件所有者所在组的权限</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 其他用户的权限<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>终止一个前台进程可能用到的命令和操作（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A kill</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B Ctrl+C</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C shut down</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D halt<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>在使用mkdir命令创建新的目录时，在其父目录不存在时先创建父目录的选项是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A -m</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B -d</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C -f</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D -p<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>下面关于i节点描述错误的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A i节点和文件是一一对应的</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B i节点能描述文件占用的块数</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C i节点描述了文件大小和指向数据块的指针</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 通过i节点实现文件的逻辑结构和物理结构的转换<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>一个文件名字为rr.Z，可以用来解压缩的命令是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A tar</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B gzip</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C compress</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D uncompress<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>具有很多C语言的功能，又称过滤器的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A csh</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B tcsh</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C awk</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D sed<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>一台主机要实现通过局域网与另一个局域网通信，需要做的工作是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 配置域名服务器</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 定义一条本机指向所在网络的路由</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 定义一条本机指向所在网络网关的路由</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 定义一条本机指向目标网络网关的路由<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>建立动态路由需要用到的文件有（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /etc/hosts</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B /etc/HOSTNAME</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C /etc/resolv.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D /etc/gateways<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>局域网的网络地址192.168.1.0/24，局域网络连接其它网络的网关地址是192.168.1.1。主机192.168.1.20访问172.16.1.0/24网络时，其路由设置正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A route add –net 192.168.1.0 gw 192.168.1.1 netmask 255.255.255.0 metric 1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B route add –net 172.16.1.0 gw 192.168.1.1 netmask 255.255.255.255 metric 1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C route add –net 172.16.1.0 gw 172.16.1.1 netmask 255.255.255.0 metric 1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D route add default 192.168.1.0 netmask 172.168.1.1 metric 1<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>下列提法中，不属于ifconfig命令作用范围的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 配置本地回环地址</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 配置网卡的IP地址</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 激活网络适配器</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D 加载网卡到内核中<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>下列关于链接描述，错误的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 硬链接就是让链接文件的i节点号指向被链接文件的i节点</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 硬链接和符号连接都是产生一个新的i节点</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 链接分为硬链接和符号链接</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 硬连接不能链接目录文件<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>在局域网络内的某台主机用ping命令测试网络连接时发现网络内部的主机都可以连同，而不能与公网连通，问题可能是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 主机IP设置有误</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 没有设置连接局域网的网关</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 局域网的网关或主机的网关设置有误</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 局域网DNS服务器设置有误<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>下列文件中，包含了主机名到IP地址的映射关系的文件是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /etc/HOSTNAME</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B /etc/hosts</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C /etc/resolv.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /etc/networks<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>不需要编译内核的情况是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 删除系统不用的设备驱动程序时</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 升级内核时</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 添加新硬件时</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D 将网卡激活<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在shell中变量的赋值有四种方法，其中，采用name=12的方法称（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A 直接赋值</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 使用read命令</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 使用命令行参数</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 使用命令的输出<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>（ ）命令可以从文本文件的每一行中截取指定内容的数据。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A cp</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B dd</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C fmt</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D cut<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>下列不是Linux系统进程类型的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 交互进程</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 批处理进程</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 守护进程</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D 就绪进程<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>配置Apache 1.3.19服务器需要修改的配置文件为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A httpd.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B access.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C srm.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D named.conf<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>内核不包括的子系统是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 进程管理系统</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 内存管理系统</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C I/O管理系统</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D 硬件管理系统<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在日常管理中，通常CPU会影响系统性能的情况是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A CPU已满负荷地运转</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B CPU的运行效率为30%</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C CPU的运行效率为50%</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D CPU的运行效率为80%<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>若一台计算机的内存为128MB，则交换分区的大小通常是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 64MB</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 128MB</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 256MB</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 512MB<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>在安装Linux的过程中的第五步是让用户选择安装方式，如果用户希望安装部分组件（软件程序），并在选择好后让系统自动安装，应该选择的选项是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A full</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B expert</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C newbie</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D menu<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>Linux有三个查看文件的命令，若希望在查看文件内容过程中可以用光标上下移动来查看文件内容，应使用（ ）命令。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A cat</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B more</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C less</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D menu<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>下列信息是某系统用ps –ef命令列出的正在运行的进程，（ ）进程是运行Internet超级服务器，它负责监听Internet sockets上的连接，并调用合适的服务器来处理接收的信息。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A root 1 4.0 0.0 344 204? S 17:09 0:00 init</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B root 2 0.0 0.1 2916 1520? S 17:09 0:00 /sbin/getty</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C root 3 0.0 0.2 1364 632? S 17:09 0:00 /usr/sbin/syslogd</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D root 4 0.0 1344 1204? S 17:09 0:10 /usr/sbin/inetd<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在TCP/IP模型中，应用层包含了所有的高层协议，在下列的一些应用协议中，（ ）是能够实现本地与远程主机之间的文件传输工作。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A telnet</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B FTP</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C SNMP</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D NFS<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>当我们与某远程网络连接不上时，就需要跟踪路由查看，以便了解在网络的什么位置出现了问题，满足该目的的命令是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A ping</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B ifconfig</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C traceroute</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D netstat<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>对名为fido的文件用chmod 551 fido进行了修改，则它的许可权是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A -rwxr-xr-x</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B -rwxr--r--</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C -r--r--r--</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D -r-xr-x-x<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在i节点表中的磁盘地址表中，若一个文件的长度是从磁盘地址表的第1块到第11块，则该文件共占有（ ）块号。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 256</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 266</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 11</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 256×10<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>用ls –al命令列出下面的文件列表，（ ）文件是符号连接文件。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A -rw-rw-rw- 2 hel-s users 56 Sep 09 11:05 hello</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B -rwxrwxrwx 2 hel-s users 56 Sep 09 11:05 goodbey</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C drwxr--r-- 1 hel users 1024 Sep 10 08:10 zhang</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D lrwxr--r-- 1 hel users 2024 Sep 12 08:12 cheng<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>DNS域名系统主要负责主机名和（ ）之间的解析。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A IP地址</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B MAC地址</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 网络地址</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 主机别名<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>WWW服务器是在Internet上使用最为广泛，它采用的是（ ）结构。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 服务器/工作站</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B B/S</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 集中式</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 分布式<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>Linux系统通过（ ）命令给其他用户发消息。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A less</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B mesg y</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C write</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D echo to<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>NFS是（ ）系统。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 文件</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 磁盘</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 网络文件</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 操作<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>（ ）命令可以在Linux的安全系统中完成文件向磁带备份的工作。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A cp</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B tr</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C dir</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D cpio<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>Linux文件系统的文件都按其作用分门别类地放在相关的目录中，对于外部设备文件，一般应将其放在（ ）目录中。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /bin</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B /etc</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C /dev</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /lib<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>在重新启动Linux系统的同时把内存中的信息写入硬盘，应使用（ ）命令实现。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A # reboot</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B # halt</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C # reboot</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D # shutdown –r now<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>网络管理具备以下几大功能：配置管理、（ ）、性能管理、安全管理和计费管理等。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A 故障管理</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 日常备份管理</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 升级管理</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 发送邮件<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>关于代理服务器的论述，正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A 使用internet上已有的公开代理服务器，只需配置客户端。</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 代理服务器只能代理客户端http的请求。</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 设置好的代理服务器可以被网络上任何主机使用。</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 使用代理服务器的客户端没有自己的ip地址。<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>关闭linux系统（不重新启动）可使用命令（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A Ctrl+Alt+Del</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B halt</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C shutdown -r now</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D reboot<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>实现从IP地址到以太网MAC地址转换的命令为：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A ping</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B ifconfig</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C arp</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D traceroute<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>在vi编辑器中的命令模式下，键入（ ）可在光标当前所在行下添加一新行。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A </li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B </li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C <i></i></li><i>
+<li><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D<br>
+答案：B</li>
+</i></ul><i>
+</i></li><i>
+<li>
+<p>在vi编辑器中的命令模式下，删除当前光标处的字符使用（ ）命令。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A </li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B </li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C </li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D <br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>在vi编辑器中的命令模式下，重复上一次对编辑的文本进行的操作，可使用（ ）命令</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 上箭头</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 下箭头</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C &lt;.&gt;</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D &lt;*&gt;<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>用命令ls -al显示出文件ff的描述如下所示，由此可知文件ff的类型为（ ）<br>
+-rwxr-xr-- 1 root root 599 Cec 10 17:12 ff</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A 普通文件</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 硬链接</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 目录</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 符号链接<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>删除文件命令为：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A mkdir</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B rmdir</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C mv</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D rm<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在下列的名称中，不属于DNS服务器类型的是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A Primary Master Server</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B Secondary Master Server</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C samba</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D Cache_only Server<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>网络管理员对WWW服务器进行访问、控制存取和运行等控制，这些控制可在（ ）文件中体现。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A httpd.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B lilo.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C inetd.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D resolv.conf<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>邮件转发代理也称邮件转发服务器，它可以使用SMTP协议，也可以使用（ ）协议。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A FTP</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B TCP</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C UUCP</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D POP<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>启动samba服务器进程，可以有两种方式：独立启动方式和父进程启动方式，其中前者是在（ ）文件中以独立进程方式启动。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A /usr/sbin/smbd</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B /usr/sbin/nmbd</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C rc.samba</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D /etc/inetd.conf<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>DHCP是动态主机配置协议的简称，其作用是可以使网络管理员通过一台服务器来管理一个网络系统，自动地为一个网络中的主机分配（ ）地址。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 网络</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B MAC</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C TCP</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D IP<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>为了保证在启动服务器时自动启动DHCP进程，应将（ ）文件中的dhcpd=no改为dhcpd=yes。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A rc.inet1</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B lilo.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C inetd.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D httpd.conf<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>对文件进行归档的命令为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A dd</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B cpio</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C gzip</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D tar<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>改变文件所有者的命令为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A chmod</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B touch</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C chown</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D cat<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>在给定文件中查找与设定条件相符字符串的命令为：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A grep</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B gzip</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C find</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D sort<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>建立一个新文件可以使用的命令为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A chmod</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B more</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C cp</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D touch<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在下列命令中，不能显示文本文件内容的命令是：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A more</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B less</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C tail</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D join<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在使用匿名登录ftp时，用户名为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A users</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B anonymous</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C root</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D guest<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>在实际操作中，想了解命令logname的用法，可以键入（ ）得到帮助。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A logname --man</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B logname/?</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C help logname</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D logname --help<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>如果LILO被安装在MBR，使用（ ）命令即可卸载LILO。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A lilo –u</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B lilo –c</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C lilo –v</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D lilo -V<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>当用命令ls –al查看文件和目录时，欲观看卷过屏幕的内容，应使用组合键（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A Shift+Home</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B Ctrl+ PgUp</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C Alt+ PgDn</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D Shift+ PgUp<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>mc是UNIX风格操作系统的（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 文件编辑器/程序编译器</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 配置网络的窗口工具</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 目录浏览器/文件管理器</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D Samba服务器管理工具<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>i节点是一个（ ）长的表，表中包含了文件的相关信息。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 8字节</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 16字节</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 32字节</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D 64字节<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>文件权限读、写、执行的三种标志符号依次是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A rwx</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B xrw</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C rdx</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D srw<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>Linux文件名的长度不得超过（ ）个字符。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 64</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 128</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 256</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 512<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>进程有三种状态：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 准备态、执行态和退出态</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 精确态、模糊态和随机态</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 运行态、就绪态和等待态</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 手工态、自动态和自由态<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>从后台启动进程，应在命令的结尾加上符号（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A &amp;</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B @</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C #</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D $<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>（ ）不是邮件系统的组成部分。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 用户代理</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B 代理服务器</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 传输代理</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 投递代理<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>在Shell脚本中，用来读取文件内各个域的内容并将其赋值给Shell变量的命令是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A fold</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B join</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C tr</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D read<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>crontab文件由六个域组成，每个域之间用空格分割，其排列如下：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A MIN HOUR DAY MONTH YEAR COMMAND</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> B MIN HOUR DAY MONTH DAYOFWEEK COMMAND</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C COMMAND HOUR DAY MONTH DAYOFWEEK</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D COMMAND YEAR MONTH DAY HOUR MIN<br>
+答案：B</li>
+</ul>
+</li>
+<li>
+<p>用ftp进行文件传输时，有两种模式：（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A Word 和binary</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B .txt 和Word Document</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C ASCII 和binary</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D ASCII 和Rich Text Format<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>某文件的组外成员的权限为只读；所有者有全部权限；组内的权限为读与写，则该文件的权限为（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 467</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 674</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 476</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D 764<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>在DNS系统测试时，设named进程号是53，命令（ ）通知进程重读配置文件。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A kill –USR2 53</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B kill –USR1 53</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C kill -INT 63</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D kill –HUP 53<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>Apache服务器默认的接听连接端口号是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 1024</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 800</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 80</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 8<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>PHP和MySQL的联合使用解决了（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A 在Proxy上处理数据库的访问问题</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 在WWW服务器上处理黑客的非法访问问题</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C 在WWW服务器上处理数据库的访问问题</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 在Sendmail邮件系统上处理数据库的访问问题<br>
+答案：C</li>
+</ul>
+</li>
+<li>
+<p>OpenSSL是一个（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> A 加密软件</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 邮件系统</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 数据库管理系统</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D 嵌入式脚本编程语言<br>
+答案：A</li>
+</ul>
+</li>
+<li>
+<p>Samba服务器的配置文件是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A httpd.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B inetd.conf</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C rc.samba</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D smb.conf<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>关于DNS服务器，叙述正确的是（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A DNS服务器配置不需要配置客户端</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B 建立某个分区的DNS服务器时只需要建立一个主DNS服务器</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> C 主DNS服务器需要启动named进程，而辅DNS服务器不需要</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> D DNS服务器的root.cache文件包含了根名字服务器的有关信息<br>
+答案：D</li>
+</ul>
+</li>
+<li>
+<p>退出交互模式的shell，应键入（ ）</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> A ;</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> B ^q</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> C exit</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> D quit<br>
+答案：C</li>
+</ul>
+</li>
+</i></ol></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  
+</body>
+</html>
