@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="# 网络管理
+
+## 管理网络接口
+
+计算机的基本网络参数包括那些？
+1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。">
+<meta property="og:title" content="网络管理">
+<meta property="og:description" content="# 网络管理
+
+## 管理网络接口
+
+计算机的基本网络参数包括那些？
+1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/58.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>网络管理</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">网络管理</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-08-06</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1d76db;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Linux">Linux</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><h1>网络管理</h1>
+<h2>管理网络接口</h2>
+<p>计算机的基本网络参数包括那些？<br>
+1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。<br>
+2） 子网掩码：IP 地址必须和子网掩码成对出现，子网掩码用来确定网络部分的位数，在<br>
+IP 地址中对应子网掩码为 1 的位为网络部分。<br>
+3） 网关：网关的功能是跨区域通信。<br>
+4） DNS：DNS 将域名和 IP 进行映射。</p>
+<h3>用 Linux 作为联网机器</h3>
+<p>需要完成以下任务：</p>
+<ol>
+<li>为每个网络接口分配一个适当的 IP 地址和子网掩码（Netmask）</li>
+<li>配置默认网关（Gateway）</li>
+<li>配置一个或一个以上的 DNS 服务器</li>
+</ol>
+<h3>网络接口卡（Network Interface Card，NIC）</h3>
+<p>联网操作是通过机器上的 PCI（Peripheral Component Interconnect）设备，即网络接口卡来实现。Linux 内核可以检测出所有连接的 PCI 设备，同时使用 <code class="notranslate">lspci</code> 命令可验证给出的 PCI设备是否能被内核检测到。</p>
+<h3>网络接口</h3>
+<p>Linux 内核不允许用户将 NIC 作为文件进行访问。在/dev 目录下没有直接关联 NIC 的设备节点，但有相应的硬盘和声卡设备节点</p>
+<p>Linux系统通过网络接口访问NIC。对每一个识别出的NIC，内核都生成一个网络接口，并以eth0或tr1命名，其中字母指的是基本的数据连接技术，数字用来区分检测出的多个网络接口卡。例如：两块以太网NIC将分别用网络接口名eth0和eth1来代表。Linux系统与不同数据连接技术关联的常用接口名称及类型:</p>
+<ul>
+<li>eth0 以太网</li>
+<li>lo （虚拟）回环设备</li>
+<li>ppp0 使用 PPP 协议的串口设备（调制解调器）</li>
+<li>tr0 令牌环（token ring）</li>
+<li>fddi0 光纤</li>
+</ul>
+<h3>用 ifconfig -a 检测接口</h3>
+<p>用<code class="notranslate">ifconfig -a</code>命令可检测所有目前已识别的网络接口信息</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig -a
+ens33: flags=<span class="pl-k">4163&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="pl-k">&gt;</span>  mtu 1500
+        inet 192.168.27.128  netmask 255.255.255.0  broadcast 192.168.27.255
+        inet6 fe80::5f44:5a23:6d7:6307  prefixlen 64  scopeid 0x<span class="pl-k">20&lt;</span>link<span class="pl-k">&gt;</span>
+        ether 00:0c:29:46:28:49  txqueuelen 1000  (Ethernet)
+        RX packets 1772  bytes 1890195 (1.8 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1292  bytes 290100 (283.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=<span class="pl-k">73&lt;</span>UP,LOOPBACK,RUNNING<span class="pl-k">&gt;</span>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x<span class="pl-k">10&lt;</span>host<span class="pl-k">&gt;</span>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=<span class="pl-k">4099&lt;</span>UP,BROADCAST,MULTICAST<span class="pl-k">&gt;</span>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:1f:ed:88  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0-nic: flags=<span class="pl-k">4098&lt;</span>BROADCAST,MULTICAST<span class="pl-k">&gt;</span>  mtu 1500
+        ether 52:54:00:1f:ed:88  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</pre></div>
+<p>接口eth33目前处于活跃状态，并已被配置了IP地址192.168.27.128</p>
+<p>接口lo指的是回环接口（loopbackinterface），它是由Linux内核实现的专用虚拟接口。使用回环接口传输的网络数据包可使用同一接口接收，并不需要连接到真正的网络。回环接口是允许联网客户程序连接在同一台机器上运行的联网服务。</p>
+<p>ifconfig命令如果不附加-a选项，就只能报告活跃的接口。</p>
+<h3>用 ifconfig 命令配置网络接口</h3>
+<p>用户应该为接口配置恰当的联网信息，比如IP地址和子网掩码。在Linux系统中可用ifconfig命令来完成这些操作。ifconfig命令的基本格式如下：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig 接口名 [选项] [地址]</pre></div>
+<p>和大多数Linux命令不同，在这里许多选项要用关键词来指定，而不是用标准命令行选项语法。下面列出一些在ifconfig命令中比较常用的选项关键词。</p>
+<p>选项：</p>
+<ul>
+<li>up:激活接口。</li>
+<li>down：使接口无效。</li>
+<li>netmaskaddr：用addr指定的子网掩码。</li>
+<li>hw addr：将设备的硬件（也就是MAC）地址设为addr。</li>
+<li>mtu limit：将接口的MTU（MaximumTransferUnit）设为limit。</li>
+</ul>
+<p>使用ifconfig命令可激活给出的网络接口，也可使之无效，或为其分配IP地址。</p>
+<h3>接口配置文件</h3>
+<p>linux 接口激活----/etc/init.d/network<br>
+linux 接口配置文件----/etc/sysconfig/network-scripts<br>
+Linux 系统采用更普遍的方法来配置网络接口，即根据目录/etc/sysconfig/network-scripts/<br>
+中 以 ifcfg- 形 式 命 名 的 配 置 文 件 来 配 置 网 络 接 口 ， 例 如 ，<br>
+/etc/sysconfig/network-scripts/ifcfg-eth0<br>
+习惯上分配给回环接口的 IP 地址和子网掩码是 127.0.0.1/255.0.0.0。<br>
+10.2 基本 IP 路由和网关</p>
+<ol>
+<li>IP 网络 每个 IP 地址包括两个部分：网络部分和主机部分。<br>
+子网掩码的网络定义为 A 类 B 类和 C 类网络，网络地址分别对应为包含第 1 个 IP 字段，<br>
+后面 3 个 0：255.0.0.0；前两个网络地址字段：255.255.0.0；前 3 个：255.255.255.0。</li>
+<li>以太网硬件（物理）地址<br>
+每个以太网接口的地址有两个，IP 地址，硬件（MAC）地址。IP 地址用于两台主机间的<br>
+通信，MAC 地址用于同一 IP 网络中不同主机间的通信。</li>
+<li>在本地网络中与其他机器通信<br>
+过程：确认通向同一网络地址；确定目的机器的硬件地址，使用本地网络的底层 ARP 协<br>
+议（Address Resolution Protocol，地址解析协议）验证；<br>
+源机器会将找到的目的及其保留 IP 地址/MAC 地址对，即 APR 缓存。可用 arp -a 命令来<br>
+检测缓存。arp -n : 查看 ip 地址与 mac 地址的映射表<br>
+用来将以太网 MAC 地址和一个 IP 地址关联起来的网络协议是 ARP。<br>
+10.3 配置 DNS 客户机</li>
+<li>域名系统 DNS<br>
+1）将 IP 地址与主机名对应起来的表。只要输入一个主机的名字，计算机系统就会自动的<br>
+将这个名字转换成计算机了解的 IP 地址，这也是 Linux 系统中/etc/hosts 文件的由来<br>
+2）DNS 是域名系统（Domain Name System）分布式数据库，作用是使复杂难记的 IP 地址<br>
+转换成简明易记的域名，实现 主机名 与 IP 地址 的转换，在 TCP/IP 网络中有非常重要的地<br>
+位。</li>
+<li>静态查询：/etc/hosts</li>
+<li>动态查询：/etc/resolv.conf<br>
+Linux 应用程序使用通用架构来解析主机名，即 resolve 库。当解析一个主机名时，resolve<br>
+库首先试图执行静态查询；接下来 resolve 库将试着通过咨询/etc/resolv.conf 配置文件中列<br>
+出的域名服务器来进行动态查询。<br>
+10.4 DHCP 配置详解<br>
+DHCP（Dynamic Host Configuration Protocol，动态主机配置协议）是一种网络管理协议。<br>
+通过 DHCP 获得信息的机器没有固定的 IP 地址，相反，每当增加一个接口时（用 ifup 命令）<br>
+都动态地获得一个 IP 地址，每当减少一个接口时（用 ifdown 命令）就释放一个 IP 地址。<br>
+为将一台机器当作 DHCP 客户机使用，在接口配置文件中将 BOOTPROTO 变量设为 dhcp。<br>
+当使用 DHCP 配置接口时，dhclient 守护进程会自动启动来管理 DHCP 通信。所有这些由<br>
+dhclient 守护进程接收到的信息都会立即得到应用。默认网关会添加到路由表中，域名服<br>
+务器会写入/etc/resolv.conf 文件，同时 NIS 域（Network Information Service，网络信息服<br>
+务）也会自动设定<br>
+10.5 配置 Web 服务器<br>
+HTTP 协议的全称是 Hyper Text Transfer Protocol（超文本传输协议），他是起什么作用的协<br>
+议?<br>
+HTTP 协议与 TCP/IP 协议族内的其他众多协议相同，用于客户端和服务器之间的通信。<br>
+Apache 是实现 WWW 服务器功能的应用程序，通常所说的“浏览 Web 服务器”，在 服务器<br>
+端 为用户提供浏览 Web 服务 的就是 Apache 应用程序。<br>
+10.6 配置 Telnet<br>
+常用的远程控制 Web 服务器的方法<br>
+10.7 其他网络设置</li>
+<li>分配主机名<br>
+hostname 命令，可以检验机器的主机名，还可动态分配主机名。</li>
+<li>/etc/sysconfig/network 文件<br>
+记录通用联网配置信息，可用来定义整合到启动过程中的 shell 变量。<br>
+3.将网络配置视为 service<br>
+网络配置可用 service 服务来管理，service network stop。。。<br>
+10.8 网络诊断工具<br>
+1.ping、host 和 traceroute 命令<br>
+1）ping 命令<br>
+可以测试网络中本机系统是否能到达 一台远程主机 ，用来测试两台机器间底层 IP 连接性<br>
+（连通性）的。最简单的情况，ping 命令接受一个主机名或者 IP 地址作为其单一参数。<br>
+2）host 命令<br>
+用来直接执行 DNS 查询。最简单的情况，只使用一个主机名作为参数，这时 host 命令会<br>
+使用在/etc/resolv.conf 配置文件中定义的域名服务器进行 DNS 查询。<br>
+3）traceroute 命令<br>
+为数据包在路由器间穿行并最终到达目的地路径提供了详尽的说明。<br>
+2.诊断网络配置问题<br>
+3.用 tcpdump 命令检测网络活性<br>
+用来直接监视网络，显示独立数据包的信息概要。会一直执行，直到 Ctrl+C 组合键取消这<br>
+个命令。<br>
+1）可列出所有当前活跃的网络接口的命令是：ifconfig。<br>
+3）习惯上分配给回环接口的 IP 地址和子网掩码是：127.0.0.1/255.255.0.0<br>
+4）定义本地主机名和 IP 地址间转换的文件是：/etc/hosts<br>
+5）可将 Linux 内核的主机名设置为 station=.example.com 的命令是<br>
+hostname station.example.com<br>
+6） 可准确定义 Linux 内核的主机名，并使其在启动时被动设定的文件是 /etc/hosts<br>
+7）可启用安装了红帽 Linux 系统的机器，使其充当路由器角色的文件是： /etc/syscfl.conf<br>
+/etc/sysctl.conf 这个文件是用来在 Linux 中开启路由功能的配置文件（这个配置文件是个<br>
+内核的配置文件，主要用来修改内核的参数，随系统重新启动而启动一些功能）<br>
+8）在适当的文件中，用来启用路由功能的参数名称是：net.ipv4.ip_forward；<br>
+<a href="https://blog.csdn.net/han156/article/details/77924734" rel="nofollow">https://blog.csdn.net/han156/article/details/77924734</a><br>
+9）用来直接执行 DNS 主机名解析的程序是：system-config-network-tui<br>
+10）用来截取使用 HTTP 协议（端口 80）的网页浏览器和网页服务器间数据传输的命令是，<br>
+只在端口 80 将数据传送给网页服务器，并将传输记录用二进制格式保存在文件<br>
+http.capture 中：tcpdump-p 80&gt;http.capture<br>
+11）Linux 网络接口配置文件名都以 ifcfg 为前缀，文件中变量 DEVICE 用来定义该文件含<br>
+有哪个接口的配置信息<br>
+12 ） ifconfig 可 以 配 置 网 卡 的 Ip 地 址 等 参 数 ， 这 与 修 改 配 置 文 件 有 什 么 差 别 ？<br>
+ifconfig 暂时改变网络参数,并不写入配置文件，因此当计算机重新启动后,还是从配置<br>
+文件中设置网络参数。<br>
+net.ipv4.ip_forward = 0 进入这个配置文件找到第七行 ，把这个 0 改为 1 就等于开启了路<br>
+由功能。<br>
+net.ipv4.ip_forward = 1 说明 Linux 开启了路由转发功能</li>
+</ol></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="JavaScript进阶语法">
+<meta property="og:title" content="Web APIs">
+<meta property="og:description" content="JavaScript进阶语法">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/33.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>Web APIs</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">Web APIs</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#e34c26;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#H5">H5</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-4-18</code></p>
+<h2>一、Web APIs 简介</h2>
+<p>???+ note "变量声明"<br>
+常用 <code class="notranslate">const</code> 和 <code class="notranslate">let</code> 关键字进行变量声明，在两者都可以使用的情况下，优先使用 <code class="notranslate">const</code> 进行变量声明。因为js中很多变量声明之后就不会再更改了，使用 <code class="notranslate">const</code> 声明变量语义化更好。</p>
+<pre class="notranslate"><code class="notranslate">???+ tip 
+    - 数组和对象建议使用 `const` 进行声明，虽然数组和对象可以使用方法进行修改，但是修改时并不会改变他们的地址，因此可以使用const声明
+    - for循环条件中的变量需要使用let声明
+</code></pre>
+<div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">flowchart</span> <span class="pl-c1">TD</span>
+    <span class="pl-ent">A</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>JavaScript<span class="pl-pds"><span class="pl-sg">]</span></span></span> <span class="pl-k">--&gt;</span>  <span class="pl-ent">B</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>JS语言基础ECMAScript<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">A</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">C</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>Web APIs<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">C</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">D</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>页面文档对象模型DOM<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">C</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">E</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>浏览器对象模型BOM<span class="pl-pds"><span class="pl-sg">]</span></span></span></pre></div>
+<h3>1.1 DOM简介</h3>
+<p>DOM（Document Object Model——文档对象模型）是用来呈现以及与任意 HTML 或 XML文档交互的API，即DOM是浏览器提供的一套专门用来 操作网页内容 的功能，用来开发网页内容特效和实现用户交互</p>
+<p><strong>DOM树</strong></p>
+<p>将 HTML 文档以树状结构直观的表现出来，我们称之为文档树或 DOM 树，用来描述网页内容关系的名词，文档树直观的体现了标签与标签之间的关系</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c5ba3c1bd9857c460eb638993caea7e691fe9f8bc5b12b5116174b5c8b031cd5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30342f31382f3471684c6b73445063594d3342584a2e706e67"><img src="https://camo.githubusercontent.com/c5ba3c1bd9857c460eb638993caea7e691fe9f8bc5b12b5116174b5c8b031cd5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30342f31382f3471684c6b73445063594d3342584a2e706e67" alt="dom.png" data-canonical-src="https://s2.loli.net/2025/04/18/4qhLksDPcYM3BXJ.png" style="max-width: 100%;"></a></p>
+<p><strong>DOM对象</strong></p>
+<p>DOM对象：浏览器根据html标签生成的 JS对象，所有的html标签都视为DOM对象，html标签属性都可以在这个对象上面找到，修改这个对象的属性会自动映射到标签身上</p>
+<p>DOM的核心思想 把网页内容当做对象来处理</p>
+<p>document 对象 是 DOM 里提供的一个对象，所以它提供的属性和方法都是用来访问和操作网页内容的 例如：document.write()</p>
+<p>网页所有内容都在document里面，document代表整个html文件</p>
+<h3>1.2 使用CSS选择器获取DOM元素</h3>
+<ul>
+<li><code class="notranslate">document.querySelector('css选择器')</code> 传入css选择器，返回CSS选择器匹配到的第一个HTMLelement对象</li>
+<li><code class="notranslate">document.querySelectorAll('css选择器')</code> 同上，返回所有匹配元素的NodeList对象，相当于是返回一个数组
+<ul>
+<li>这个数组并不是真正的数组，只是和数组类似</li>
+<li>可以使用数组的下标访问元素</li>
+<li>但是不能使用pop()、push()等数组方法</li>
+</ul>
+</li>
+</ul>
+<p>??? info "其他获取DOM元素的方法（不推荐使用）"<br>
+- <code class="notranslate">document.getElementById()</code> 传入元素id值，通过id获取匹配到的第一个元素<br>
+- <code class="notranslate">document.getElementByTagName()</code> 传入html标签名，通过元素选择器获取匹配到的所有元素<br>
+- <code class="notranslate">document.getElementByClassName()</code> 传入类名，通过类选择器获取匹配到的所有元素</p>
+<h3>1.3 操作元素文本内容</h3>
+<ul>
+<li><code class="notranslate">对象.innerText</code> 属性 修改html标签的文本内容，显示纯文本，不解析html标签</li>
+<li><code class="notranslate">对象.innerHTML</code> 属性 修改html标签的文本内容，显示纯文本，解析html标签</li>
+</ul>
+<h3>1.4 操作元素属性</h3>
+<p><strong>操作常用属性</strong></p>
+<p><code class="notranslate">对象.属性名 = 值</code> 直接通过属性名修改元素属性值，最常见的属性比如： href、title、src 等</p>
+<p><strong>操作元素样式</strong></p>
+<p>=== "直接通过style修改"<br>
+<code class="notranslate">对象.style.样式属性 = 值</code> 样式属性就是CSS的属性，由于CSS属性名是使用<code class="notranslate">-</code>来命名的，在JS中使用时统一使用小驼峰格式的命名表示CSS属性名。实际上生成的是行内样式</p>
+<p>=== "使用类名className修改"<br>
+<code class="notranslate">对象.className = 值</code> 先使用CSS在style标签中创建一个类选择器的样式表，再将这个类的类名赋值给此对象的className属性，如果该对象原先也有类名，则会被替换，多个类名看做一个处理，值应该传入类名，而不是类选择器。</p>
+<p>=== "使用classList修改（推荐）"<br>
+- <code class="notranslate">对象.classList.add(类名)</code> 添加类名，值应该传入类名，而不是类选择器，不会替换原有类名，而是会添加到原有类名后面<br>
+- <code class="notranslate">对象.classList.remove(类名)</code> 删除传入的类名<br>
+- <code class="notranslate">对象.classList.toggle(类名)</code> 切换对象的一个类名，如果对象原先有这个类名，则会移除，如果对象原先没有这个类名，则会添加</p>
+<p><strong>操作表单属性</strong></p>
+<ul>
+<li>与<strong>操作常用属性</strong>用法类似，但是表单属性比较特殊，表单属性一般都是通过<code class="notranslate">对象.属性名</code>来获取</li>
+<li><code class="notranslate">对象.value</code> 获取input等标签的输入内容，通过赋值可以更改内容</li>
+<li><code class="notranslate">对象.type</code> 获取input等标签的type属性值，通过赋值可以更改输入框类型</li>
+<li>表单属性中的 <code class="notranslate">disabled</code> <code class="notranslate">checked</code> <code class="notranslate">selected</code> 等没有属性值的属性，通过js操作时将其值看作是布尔值，如果为true 代表添加了该属性 如果是false 代表移除了该属性</li>
+</ul>
+<p><strong>自定义属性</strong></p>
+<p>在html5中推出来了专门的<code class="notranslate">data-</code>自定义属性，在标签上一律以<code class="notranslate">data-</code>开头，在DOM对象上一律以<code class="notranslate">dataset</code>对象方式获取，使用dataset获取属性值时不需要写<code class="notranslate">data-</code>前缀</p>
+<pre class="notranslate"><code class="notranslate">&lt;div data-id="demo" data-msg="hello"&gt;This is a demo!&lt;/div&gt;
+&lt;script&gt;
+    const div = document.querySelector('div')
+    console.log(div.dataset)
+    console.log(div.dataset.id) // demo
+    console.log(div.dataset.msg) // hello
+&lt;/script&gt;
+</code></pre>
+<h3>1.5 定时器（间歇函数）</h3>
+<p>每隔一段时间，重复调用一个函数</p>
+<ul>
+<li><code class="notranslate">setInterval(函数名或匿名函数, 间隔时间)</code> 开启定时器，每隔一段时间执行一次函数，间隔时间的单位是毫米，返回一个整数，表示这个定时器的ID，声明变量时使用<code class="notranslate">let</code>关键字</li>
+<li><code class="notranslate">clearInterval(定时器ID)</code> 传入代表定时器ID的变量，关闭定时器</li>
+</ul>
+<h2>二、事件</h2>
+<h3>2.1 事件监听（事件绑定）</h3>
+<p><code class="notranslate">对象.addEventListener(事件类型, 函数名或匿名函数)</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数，这个函数也被称为回调函数。这种绑定事件的方法称为 <code class="notranslate">L2</code> 级事件绑定</p>
+<p>???+ note "回调函数"<br>
+如果将函数 A 做为参数传递给函数 B 时，我们称函数 A 为回调函数。简单理解： 当一个函数当做参数来传递给另外一个函数的时候，这个函数就是回调函数。</p>
+<pre class="notranslate"><code class="notranslate">`setInterval(函数名或匿名函数, 间隔时间)`和`对象.addEventListener(事件类型, 函数名或匿名函数)`都是将函数作为参数传递给另外一个函数，这个函数就是回调函数。
+</code></pre>
+<p><code class="notranslate">对象.on事件类型 = 函数名或匿名函数</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数，这种方式不推荐使用，因为会覆盖原有的事件处理函数。这种绑定事件的方法称为 <code class="notranslate">L0</code> 级事件绑定</p>
+<p>事件监听三要素：</p>
+<ul>
+<li>
+<p>事件源： DOM对象</p>
+</li>
+<li>
+<p>事件类型： 用什么方式触发</p>
+<p>???+ info "事件类型"<br>
+- 鼠标事件：鼠标点击<code class="notranslate">click</code>、鼠标进入<code class="notranslate">mouseenter</code>、鼠标离开<code class="notranslate">mouseleave</code></p>
+<pre class="notranslate"><code class="notranslate">      ??? warning
+          鼠标进入有两种表示方式 `mouseover`和 `mouseenter` ，鼠标离开有两种表示方式 `mouseout` 和 `mouseleave` ，二者区别如下：
+
+          - `mouseover` 和 `mouseout` 会有冒泡效果
+          - `mouseenter` 和 `mouseleave` 没有冒泡效果 (推荐)
+
+  - 键盘事件：键盘按下`keydown`、键盘抬起`keyup`，一般使用`keyup`
+  - 文本事件：用户输入`input`
+  - 焦点事件：表单获得焦点`focus`、失去焦点`blur`
+  - 页面加载事件：页面加载完成`load`、 DOM（HTML标签）加载完成`DOMContentLoaded`
+  - 页面滚动事件：页面滚动`scroll`
+  - 页面尺寸事件：页面尺寸变化`resize`
+  
+  ???+ info "移动端事件"
+      移动端事件（M端事件），针对手机平板等触屏设备。触屏事件 `touch` ，touch 对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可响应用户手指（或触控笔）对屏幕或者触控板操作。M端事件一般使用JS插件完成，例如swiper插件
+
+      [Swiper官网](https://www.swiper.com.cn/){ .md-button .md-button--primary }
+      
+      常见的触屏事件：
+
+      - `touchstart` 手指触摸到一个DOM元素时触发
+      - `touchmove` 手指在一个DOM元素上滑动时触发
+      - `touchend` 手指从一个DOM元素上移开时触发
+</code></pre>
+</li>
+<li>
+<p>事件调用的函数（回调函数）： 要做什么事</p>
+</li>
+</ul>
+<h3>2.2 事件对象</h3>
+<p>事件对象：事件触发时，浏览器会自动创建一个事件对象，这个事件对象会作为参数传递给事件处理函数，我们可以在事件处理函数中使用这个事件对象，来获取事件的详细信息</p>
+<p>一般命名为 <code class="notranslate">event</code> <code class="notranslate">ev</code> <code class="notranslate">e</code>，以下用 <code class="notranslate">e</code> 表示事件对象</p>
+<p><code class="notranslate">对象.addEventListener(事件类型, function (e) {})</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数。在事件绑定的回调函数的第一个参数 <code class="notranslate">e</code> 就是事件对象</p>
+<p>???+ tip "事件对象常用属性"<br>
+- <code class="notranslate">type</code> 获取当前的事件类型，即<code class="notranslate">addEventListener()</code>的第一个参数<br>
+- <code class="notranslate">clientX</code> <code class="notranslate">clientY</code> 获取光标相对于浏览器可见窗口左上角的位置<br>
+- <code class="notranslate">offsetX</code> <code class="notranslate">offsetY</code> 获取光标相对于当前DOM元素左上角的位置<br>
+- <code class="notranslate">key</code> 用户按下的键盘键的值，比如<code class="notranslate">Enter</code>、<code class="notranslate">Space</code>、<code class="notranslate">ArrowUp</code>、<code class="notranslate">ArrowDown</code>、<code class="notranslate">ArrowLeft</code>、<code class="notranslate">ArrowRight</code>等</p>
+<h3>2.3 环境对象this</h3>
+<p>环境对象：指的是函数内部特殊的变量 <code class="notranslate">this</code> ，它代表着当前函数运行时所处的环境，类似于python类的 <code class="notranslate">self</code>。弄清楚this的指向，可以让我们代码更简洁</p>
+<ul>
+<li>函数的调用方式不同，this 指代的对象也不同</li>
+<li>粗略判断this的指向：谁调用， this 就是谁</li>
+<li>直接调用函数，其实相当于是 window.函数，所以 this 指向 window</li>
+</ul>
+<p>???+ example<br>
+<code class="notranslate">js const btn = document.querySelector('button') btn.addEventListener('click', function (e) { btn.style.backgroundColor = 'red' // 此处this指向对象btn，因此上面的代码也可写成： this.style.backgroundColor = 'red' }) </code></p>
+<h3>2.4 事件流</h3>
+<p>事件流：事件流指的是事件完整执行过程中的流动路径。当触发事件时，会经历两个阶段，分别是捕获阶段、冒泡阶段</p>
+<ul>
+<li>
+<p>捕获阶段：从DOM的根元素开始去执行对应的事件 （从外到里）。有同类型事件，先触发祖先元素的事件，再触发父元素的事件，最后触发子元素的事件。</p>
+<p>??? info "事件捕获"<br>
+<code class="notranslate">对象.addEventListener(事件类型, 函数名或匿名函数, true)</code> 第三个参数为true时，事件会在捕获阶段执行（很少使用）。第三个参数为false，代表冒泡阶段触发，默认就是false</p>
+</li>
+<li>
+<p>冒泡阶段：当一个元素的事件被触发时，同样的事件将会在该元素的所有祖先元素中依次被触发。这一过程被称为事件冒泡。有同类型事件，先触发子元素本身的事件，再触发父元素的事件，最后触发祖先元素的事件。<code class="notranslate">对象.addEventListener(事件类型, 函数名或匿名函数, false)</code>或<code class="notranslate">对象.addEventListener(事件类型, 函数名或匿名函数)</code></p>
+</li>
+<li>
+<p>捕获阶段是从父到子，冒泡阶段是从子到父。实际工作都是使用事件冒泡为主</p>
+</li>
+</ul>
+<p>阻止冒泡 <code class="notranslate">e.stopPropagation()</code> 此方法可以阻断事件流动传播，不光在冒泡阶段有效，捕获阶段也有效，阻止事件冒泡需要拿到事件对象，此处用 <code class="notranslate">e</code> 表示</p>
+<p>阻止默认行为 <code class="notranslate">e.preventDefault()</code> 此方法可以阻止默认行为，比如a标签的跳转行为，表单的提交行为，右键菜单的弹出行为等，阻止默认行为需要拿到事件对象，此处用 <code class="notranslate">e</code> 表示</p>
+<h3>2.5 解绑事件</h3>
+<p><code class="notranslate">对象.on事件类型 = null</code> 适用于 L0 事件，直接使用null覆盖原有事件处理函数，将事件处理函数解绑</p>
+<p><code class="notranslate">removeEventListener(事件类型, 事件处理函数, [获取捕获true或者冒泡阶段false])</code> 适用于 L2 事件，移除对象的事件监听，第一个参数为事件类型，第二个参数为事件处理函数名。匿名函数无法被解绑，所以需要解绑时，<code class="notranslate">addEventListener()</code>绑定事件时不能使用匿名函数</p>
+<p>??? info "L0和L2事件绑定的区别"</p>
+<ul>
+<li>传统on注册（L0）
+<ul>
+<li>同一个对象,后面注册的事件会覆盖前面注册(同一个事件)</li>
+<li>直接使用null覆盖偶就可以实现事件的解绑</li>
+<li>都是冒泡阶段执行的</li>
+</ul>
+</li>
+<li>事件监听注册（L2）
+<ul>
+<li>语法: <code class="notranslate">addEventListener(事件类型, 事件处理函数, 是否使用捕获)</code></li>
+<li>后面注册的事件不会覆盖前面注册的事件(同一个事件)</li>
+<li>可以通过第三个参数去确定是在冒泡或者捕获阶段执行</li>
+<li>解绑必须使用<code class="notranslate">removeEventListener(事件类型, 事件处理函数, 获取捕获或者冒泡阶段)</code></li>
+<li>匿名函数无法被解绑</li>
+</ul>
+</li>
+</ul>
+<h3>2.6 事件委托</h3>
+<p>事件委托是利用事件流的特征解决一些开发需求的知识技巧</p>
+<ul>
+<li>优点：减少事件绑定的次数，可以提高程序性能</li>
+<li>原理：事件委托其实是利用事件冒泡的特点。给父元素注册事件，当我们触发子元素的时候，会冒泡到父元素身上，从而触发父元素的事件</li>
+<li>实现：<code class="notranslate">e.target.tagName</code> 可以获得真正触发事件的元素的标签名（标签名采用全大写），<code class="notranslate">e</code> 表示事件对象，<code class="notranslate">e.target</code> 表示真正触发事件的元素（对象）</li>
+</ul>
+<p>???+ example "事件委托"<br>
+<code class="notranslate">html &lt;ul&gt; &lt;li&gt;事件1&lt;/li&gt; &lt;li&gt;事件2&lt;/li&gt; &lt;li&gt;事件3&lt;/li&gt; &lt;li&gt;事件4&lt;/li&gt; &lt;li&gt;事件5&lt;/li&gt; &lt;p&gt;事件6&lt;/p&gt; &lt;/ul&gt; &lt;script&gt; const ul = document.querySelector('ul') ul.addEventListener('click', function(e){ if(e.target.tagName === 'LI'){ e.target.style.color = 'red' } }) &lt;/script&gt; </code><br>
+点击每个li标签，都会变成红色，但是点击p标签不会变成红色，因为p标签不是li标签，所以不会触发事件，使用这种写法可以避免为每个li标签都绑定事件，提高程序性能</p>
+<h3>2.7 页面加载事件</h3>
+<p>加载外部资源（如图片、外联CSS和JavaScript等）加载完毕时触发的事件</p>
+<ol>
+<li>
+<p><code class="notranslate">load</code> 事件：页面完全加载再执行回调函数，此时可以将script标签放在head标签内部</p>
+<p>给 <code class="notranslate">window</code> 添加 <code class="notranslate">load</code> 事件 <code class="notranslate">window.addEventListener('load', function(){})</code>，监听页面所有资源加载完毕，加载完毕之后再调用回调函数</p>
+<p>注意：不光可以监听整个页面资源加载完毕，也可以针对某个资源绑定load事件</p>
+</li>
+<li>
+<p><code class="notranslate">DOMContentLoaded</code> 事件：DOM（网页HTML）加载完毕再执行回调函数，而无需等待样式表、图像等完全加载，此时可以将script标签放在head标签内部。监听页面DOM加载完毕：给 <code class="notranslate">document</code> 添加 <code class="notranslate">DOMContentLoaded</code> 事件，<code class="notranslate">document.addEventListener('DOMContentLoaded', function(){})</code></p>
+</li>
+</ol>
+<h3>2.8 页面滚动事件</h3>
+<p><code class="notranslate">scroll</code> 事件：页面滚动时触发的事件，滚动条滚动时触发。通常给 <code class="notranslate">window</code> （有时也给 <code class="notranslate">document</code> ） 添加 <code class="notranslate">scroll</code> 事件，监听某个元素的内部滚动直接给某个元素加即可</p>
+<p><code class="notranslate">scrollLeft</code> 和 <code class="notranslate">scrollTop</code> 属性： 获取滚动条滚动像素数的大小，返回数字，可以对其赋值，常使用 <code class="notranslate">scrollTop</code>获取竖直方向滚动的大小</p>
+<p>开发中，我们经常检测页面滚动的距离</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-smi">window</span><span class="pl-kos">.</span><span class="pl-en">addEventListener</span><span class="pl-kos">(</span><span class="pl-s">'scroll'</span><span class="pl-kos">,</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+    <span class="pl-c">// document.documentElement 返回HTML标签表示的对象</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-c1">documentElement</span><span class="pl-kos">.</span><span class="pl-c1">scrollTop</span><span class="pl-kos">)</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
+<p><code class="notranslate">元素.scrollTo(x, y)</code> 方法可把内容滚动到指定的坐标，x 是水平方向滚动的像素数，y 是垂直方向滚动的像素数，常用 <code class="notranslate">window.scrollTo(0, 0)</code> 回到顶部</p>
+<h3>2.9 页面尺寸事件</h3>
+<p><code class="notranslate">resize</code> 事件：页面尺寸变化时触发的事件，通常给 window 添加 resize 事件，监听页面尺寸变化</p>
+<p>获取盒子宽高 <code class="notranslate">clientWidth</code> 和 <code class="notranslate">clientHeight</code> 属性： 获取元素的可见部分宽高（盒子的宽高，不包含border和margin），返回数字，常 <code class="notranslate">clientWidth</code> 获取元素的可见部分宽度，<code class="notranslate">clientHeight</code> 获取元素的可见部分高度。<code class="notranslate">document.documentElement.clientWidth</code> 可以获取浏览器窗口的宽度，<code class="notranslate">document.documentElement.clientHeight</code> 可以获取浏览器窗口的高度</p>
+<p>获取宽高 <code class="notranslate">offsetWidth</code> 和 <code class="notranslate">offsetHeight</code> 属性：获取元素的自身宽高（包含元素自身设置的宽高、padding、border），获取出来的是数值。获取的是可视宽高, 如果盒子是隐藏的,获取的结果是0</p>
+<p>获取位置 <code class="notranslate">offsetLeft</code> 和 <code class="notranslate">offsetTop</code> 属性：获取元素距离自己定位父级元素的左、上距离（如果祖先元素没有开启定位，以 文档左上角为基准），可以通过这种方式获取元素在页面中的位置，从而避免使用css计算宽高，这两个属性不可以赋值</p>
+<p>获取位置 <code class="notranslate">对象.getBoundingClientRect()</code>方法 返回元素的大小及其相对于视口的位置</p>
+<h2>三、日期对象</h2>
+<p>日期对象：用来表示时间的对象。作用：可以得到当前系统时间</p>
+<p>???+ note "实例化"<br>
+在代码中使用 new 关键字，一般将这个操作称为实例化</p>
+<p>创建一个时间对象并获取时间：</p>
+<ul>
+<li><code class="notranslate">new Date()</code> 不传参，获取的是当前时间</li>
+<li><code class="notranslate">new Date(时间字符串)</code> 传入时间字符串，获取的是指定时间</li>
+</ul>
+<p>日期对象常用方法：</p>
+<ul>
+<li><code class="notranslate">getFullYear()</code> 获得年份 获取四位年份</li>
+<li><code class="notranslate">getMonth()</code> 获得月份 取值为 0 ~ 11，实际月份为 <code class="notranslate">日期对象.getMonth() + 1</code></li>
+<li><code class="notranslate">getDate()</code> 获取月份中的每一天 不同月份取值也不相同</li>
+<li><code class="notranslate">getDay()</code> 获取星期 取值为 0 ~ 6，星期日的序号为0</li>
+<li><code class="notranslate">getHours()</code> 获取小时 取值为 0 ~ 23</li>
+<li><code class="notranslate">getMinutes()</code> 获取分钟 取值为 0 ~ 59</li>
+<li><code class="notranslate">getSeconds()</code> 获取秒 取值为 0 ~ 59</li>
+<li><code class="notranslate">toLocaleString()</code> 转换为本地时间字符串，格式和Windows右下角的日期和时间相同</li>
+<li><code class="notranslate">toLocaleDateString()</code> 转换为本地日期字符串，格式和Windows右下角的日期相同</li>
+</ul>
+<p><strong>时间戳</strong></p>
+<p>时间戳是指1970年01月01日00时00分00秒起至现在的毫秒数，它是一种特殊的计量时间的方式</p>
+<p>获取时间戳的三种方式：</p>
+<ul>
+<li><code class="notranslate">+new Date()</code>（推荐使用） 方法返回当前时间的时间戳，单位为毫秒</li>
+<li><code class="notranslate">Date.now()</code> 方法返回当前时间的时间戳，单位为毫秒，只能获取当前的时间戳</li>
+<li><code class="notranslate">new Date().getTime()</code> 方法返回当前时间的时间戳，单位为毫秒。先创建日期对象，再使用 <code class="notranslate">getTime()</code> 方法获取时间戳</li>
+</ul>
+<h2>四、节点操作</h2>
+<h3>4.1 节点</h3>
+<p><strong>DOM节点</strong> DOM树里每一个内容都称之为节点</p>
+<p>节点类型：</p>
+<ul>
+<li><strong>元素节点</strong> 所有的标签 比如 body、 div，html 是根节点</li>
+<li>属性节点 所有的属性 比如 href属性、class属性等</li>
+<li>文本节点 所有的文本</li>
+<li>其他</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c5ba3c1bd9857c460eb638993caea7e691fe9f8bc5b12b5116174b5c8b031cd5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30342f31382f3471684c6b73445063594d3342584a2e706e67"><img src="https://camo.githubusercontent.com/c5ba3c1bd9857c460eb638993caea7e691fe9f8bc5b12b5116174b5c8b031cd5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30342f31382f3471684c6b73445063594d3342584a2e706e67" alt="dom.png" data-canonical-src="https://s2.loli.net/2025/04/18/4qhLksDPcYM3BXJ.png" style="max-width: 100%;"></a></p>
+<h3>4.2 查找节点</h3>
+<ul>
+<li>获取父节点 <code class="notranslate">对象.parentNode</code> 返回的是父节点对象，如果没有父节点，则返回 <code class="notranslate">null</code></li>
+<li>获取所有子节点 <code class="notranslate">对象.childNodes</code> 不推荐使用，获得所有子节点、包括文本节点（空格、换行）、注释节点等</li>
+<li>获取元素子节点 <code class="notranslate">对象.children</code> 推荐使用，获得所有元素子节点，返回的是一个伪数组，与 <code class="notranslate">querySelectorAll()</code> 类似</li>
+<li>获取下一个兄弟元素节点 <code class="notranslate">对象.nextElementSibling</code></li>
+<li>获取上一个兄弟元素节点 <code class="notranslate">对象.previousElementSibling</code></li>
+</ul>
+<h3>4.3 创建节点和添加节点</h3>
+<p>添加节点，一般要先创建，然后追加节点或插入节点</p>
+<ul>
+<li>创建节点 <code class="notranslate">document.createElement(标签名)</code> 创建一个指定标签名的元素节点，返回的是元素节点对象</li>
+<li>追加节点 <code class="notranslate">对象.appendChild(节点对象)</code> 将节点对象追加到指定对象的子节点列表的末尾，类似于给数组追加元素</li>
+<li>插入节点 <code class="notranslate">父元素对象.insertBefore(要插入的节点对象, 参照节点对象)</code> 将节点对象插入到参照节点对象的前面，<code class="notranslate">父元素对象.children[0]</code>为第二个参数时，可以将要插入的节点插入到最前面</li>
+</ul>
+<h3>4.4 克隆节点和添加节点</h3>
+<p>特殊情况下，我们新增节点，按照如下操作：复制一个原有的节点，再把复制的节点放入到指定的元素内部</p>
+<p>克隆节点 <code class="notranslate">对象.cloneNode(布尔值)</code> 克隆出一个跟原标签一样的元素，括号内传入布尔值</p>
+<ul>
+<li>若为 <code class="notranslate">true</code> ，则代表克隆时会包含后代节点一起克隆，完全克隆</li>
+<li>若为 <code class="notranslate">false</code> ，默认，则代表克隆时不包含后代节点，只克隆html标签，标签内的文字和标签不会被克隆</li>
+</ul>
+<h3>4.5 删除节点</h3>
+<p>删除节点 <code class="notranslate">父元素对象.removeChild(要删除的元素对象)</code> 通过父节点删除子节点，从html中删除节点对应的元素</p>
+<h2>五、window对象</h2>
+<h3>5.1 BOM</h3>
+<ul>
+<li>BOM(Browser Object Model ) 是浏览器对象模型</li>
+<li><code class="notranslate">window</code> 对象是一个全局对象，也可以说是JavaScript中的顶级对象</li>
+<li>像 <code class="notranslate">document</code> 、 <code class="notranslate">alert()</code> 、<code class="notranslate">console.log()</code> 这些都是 <code class="notranslate">window</code> 的属性，基本BOM的属性和方法都是 <code class="notranslate">window</code> 的</li>
+<li>所有通过var定义在全局作用域中的变量、函数都会变成window对象的属性和方法</li>
+<li>window对象下的属性和方法调用的时候可以省略window</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/b43df2f46c7fbb59a7ad281c6452911881ffd4017152892b0a789d82f8da6c02/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f30352f7a47544a34586341316943765768462e706e67"><img src="https://camo.githubusercontent.com/b43df2f46c7fbb59a7ad281c6452911881ffd4017152892b0a789d82f8da6c02/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f30352f7a47544a34586341316943765768462e706e67" alt="bom.png" data-canonical-src="https://s2.loli.net/2025/05/05/zGTJ4XcA1iCvWhF.png" style="max-width: 100%;"></a></p>
+<h3>5.2 定时器-延时函数</h3>
+<p><code class="notranslate">setTimeout(函数名或匿名函数, 间隔时间)</code> 让代码延迟执行的函数，类似于 <code class="notranslate">setInterval(函数名或匿名函数, 间隔时间)</code> ，但回调函数仅仅只执行一次，所以可以理解为就是把一段代码延迟执行, 平时省略window</p>
+<p><code class="notranslate">clearTimeout()</code> 清除延时函数</p>
+<p>???+ warning<br>
+- 延时器需要等待,所以后面的代码先执行<br>
+- 每一次调用延时器都会产生一个新的延时器<br>
+- 延时函数<code class="notranslate">setTimeout(函数名或匿名函数, 间隔时间)</code>: 执行一次<br>
+- 间歇函数<code class="notranslate">setInterval(函数名或匿名函数, 间隔时间)</code>:每隔一段时间就执行一次,除非手动清除</p>
+<h3>5.3 JS执行机制</h3>
+<p>JavaScript 语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。这是因为 Javascript 这门脚本语言诞生的使命所致——JavaScript 是为处理页面中用户的交互，以及操作DOM 而诞生的。比如我们对某个 DOM 元素进行添加和删除操作，不能同时进行。 应该先进行添加，之后再删除。单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。这样所导致的问题是：如果 JS 执行的时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉。</p>
+<p>为了解决这个问题，利用多核 CPU 的计算能力，HTML5 提出 Web Worker 标准，允许 JavaScript 脚本创建多个线程。于是，JS 中出现了同步和异步（二者的本质区别是执行顺序不同）：</p>
+<ul>
+<li><strong>同步</strong> 前一个任务结束后再执行后一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的。比如做饭的同步做法：我们要烧水煮饭，等水开了（10分钟之后），再去切菜，炒菜。</li>
+<li><strong>异步</strong> 你在做一件事情时，因为这件事情会花费很长时间，在做这件事的同时，你还可以去处理其他事情。比如做饭的异步做法，我们在烧水的同时，利用这10分钟，去切菜，炒菜。</li>
+</ul>
+<p><strong>同步任务</strong> 同步任务都在主线程上执行，形成一个执行栈。</p>
+<p><strong>异步任务</strong> JS 的异步是通过回调函数实现的。一般而言，异步任务有以下三种类型:</p>
+<ul>
+<li>普通事件，如 click、resize 等</li>
+<li>资源加载，如 load、error 等</li>
+<li>定时器，包括 setInterval、setTimeout 等</li>
+</ul>
+<p>异步任务添加到任务队列中（任务队列也称为消息队列）：</p>
+<ol>
+<li>先执行执行栈中的同步任务。</li>
+<li>异步任务放入任务队列中。</li>
+<li>一旦执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行。</li>
+</ol>
+<p>由于主线程不断的重复获得任务、执行任务、再获取任务、再执行，所以这种机制被称为事件循环（ event loop）</p>
+<h3>5.4 location对象</h3>
+<p><code class="notranslate">location</code> 对象，它拆分并保存了 URL 地址的各个组成部分。常用属性和方法：</p>
+<ul>
+<li><code class="notranslate">href</code> 属性获取完整的 URL 地址，对其赋值时用于地址的跳转</li>
+<li><code class="notranslate">search</code> 属性获取地址中携带的参数，符号 ？后面部分的字符串，包括问号</li>
+<li><code class="notranslate">hash</code> 属性获取地址中的啥希值（后期vue路由的铺垫，经常用于不刷新页面，显示不同页面，比如 网易云音乐），符号 # 后面部分，包括 #</li>
+<li><code class="notranslate">reload</code> 方法用来刷新当前页面，相当于 ++f5++ ，传入参数 true 时表示强制刷新，相当于 ++ctrl+f5++</li>
+</ul>
+<h3>5.5 navigator对象</h3>
+<p><code class="notranslate">navigator</code> 对象，该对象下记录了浏览器自身的相关信息</p>
+<p>常用属性 <code class="notranslate">userAgent</code> 检测浏览器的版本及平台，常常通过 UA 将 PC站跳转到 m站</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 检测 userAgent（浏览器信息）</span>
+<span class="pl-c1">!</span><span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-k">const</span> <span class="pl-s1">userAgent</span> <span class="pl-c1">=</span> <span class="pl-s1">navigator</span><span class="pl-kos">.</span><span class="pl-c1">userAgent</span>
+    <span class="pl-c">// 验证是否为Android或iPhone</span>
+    <span class="pl-k">const</span> <span class="pl-s1">android</span> <span class="pl-c1">=</span> <span class="pl-s1">userAgent</span><span class="pl-kos">.</span><span class="pl-en">match</span><span class="pl-kos">(</span><span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-s">A</span><span class="pl-s">n</span><span class="pl-s">d</span><span class="pl-s">r</span><span class="pl-s">o</span><span class="pl-s">i</span><span class="pl-s">d</span><span class="pl-kos">)</span><span class="pl-s">;</span><span class="pl-c1">?</span><span class="pl-kos">[</span><span class="pl-cce">\s</span><span class="pl-cce">\/</span><span class="pl-kos">]</span><span class="pl-c1">+</span><span class="pl-kos">(</span><span class="pl-kos">[</span><span class="pl-cce">\d</span><span class="pl-c1">.</span><span class="pl-kos">]</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">?</span><span class="pl-c1">/</span></span><span class="pl-kos">)</span>
+    <span class="pl-k">const</span> <span class="pl-s1">iphone</span> <span class="pl-c1">=</span> <span class="pl-s1">userAgent</span><span class="pl-kos">.</span><span class="pl-en">match</span><span class="pl-kos">(</span><span class="pl-pds"><span class="pl-c1">/</span><span class="pl-kos">(</span><span class="pl-s">i</span><span class="pl-s">P</span><span class="pl-s">h</span><span class="pl-s">o</span><span class="pl-s">n</span><span class="pl-s">e</span><span class="pl-cce">\s</span><span class="pl-s">O</span><span class="pl-s">S</span><span class="pl-kos">)</span><span class="pl-cce">\s</span><span class="pl-kos">(</span><span class="pl-kos">[</span><span class="pl-cce">\d</span><span class="pl-c1">_</span><span class="pl-kos">]</span><span class="pl-c1">+</span><span class="pl-kos">)</span><span class="pl-c1">/</span></span><span class="pl-kos">)</span>
+    <span class="pl-c">// 如果是Android或iPhone，则跳转至移动站点</span>
+    <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">android</span> <span class="pl-c1">||</span> <span class="pl-s1">iphone</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+        <span class="pl-s1">location</span><span class="pl-kos">.</span><span class="pl-c1">href</span> <span class="pl-c1">=</span> <span class="pl-s">'移动端url'</span> 
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">(</span><span class="pl-kos">)</span></pre></div>
+<h3>5.6 history对象</h3>
+<p><code class="notranslate">history</code> 对象，此对象不常用，主要管理历史记录，该对象与浏览器地址栏的操作相对应，如前进、后退、历史记<br>
+录等，常用方法如下：</p>
+<ul>
+<li><code class="notranslate">back()</code> 后退，相当于 <code class="notranslate">go(-1)</code></li>
+<li><code class="notranslate">forward()</code> 前进，相当于 <code class="notranslate">go(1)</code></li>
+<li><code class="notranslate">go(数字)</code> 前进或后退，数字为正数时前进，数字为负数时后退，数字为0时刷新当前页面</li>
+</ul>
+<h3>5.7 本地存储</h3>
+<p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，HTML5规范提出了相关解决方案。</p>
+<ul>
+<li>数据存储在用户浏览器中</li>
+<li>设置、读取方便、甚至页面刷新不丢失数据</li>
+<li>容量较大，本地存储分为 <code class="notranslate">sessionStorage</code> 和 <code class="notranslate">localStorage</code>, 存储的内容约 5Mb 左右</li>
+</ul>
+<p>???+ info "localStorage"<br>
+可以将数据永久存储在本地(用户的电脑), 除非手动删除，否则关闭页面也会存在</p>
+<pre class="notranslate"><code class="notranslate">- 存储数据 `localStorage.setItem('键', '值')` 存储的数据在 `开发者工具` 的 `应用Application` 选项卡 中查看
+- 获取数据 `localStorage.getItem('键')` 类似于python字典通过键获取值
+- 删除数据 `localStorage.removeItem('键')` 通过键删除键值对
+
+特性：
+
+- 可以多窗口（页面）共享（同一浏览器可以共享）
+- 以键值对的形式存储使用
+</code></pre>
+<p>???+ info "sessionStorage"<br>
+特性：</p>
+<pre class="notranslate"><code class="notranslate">- 生命周期为关闭浏览器窗口
+- 在同一个窗口(页面)下数据可以共享
+- 以键值对的形式存储使用
+- 用法跟 `localStorage` 基本相同, 不常用
+</code></pre>
+<h3>5.8 用本地存储存储复杂数据类型(对象)</h3>
+<p>本地只能存储字符串,无法存储复杂数据类型(对象等). 如果复杂数据类型需要使用本地存储,需要先把复杂数据类型转换成JSON字符串(JSON字符串的键和值都使用双引号包裹)</p>
+<ul>
+<li><code class="notranslate">JSON.stringify(对象)</code> 将对象转换为JSON字符串</li>
+<li><code class="notranslate">JSON.parse(JSON字符串)</code> 将JSON字符串转换为对象</li>
+</ul>
+<p>存储数据 <code class="notranslate">localStorage.setItem('键', JSON.stringify(对象))</code></p>
+<p>获取数据 <code class="notranslate">localStorage.getItem('键')</code> 获取键对应的JSON字符串,并不是对象,还需要对其返回值使用 <code class="notranslate">JSON.parse(JSON字符串)</code> 才能获取到对象</p>
+<h2>六、正则表达式</h2>
+<p>???+ error<br>
+所有正则表达式都不要随便加空格,符合之间不需要任何空格</p>
+<h3>6.1 简介</h3>
+<p>正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象通常用来查找、替换那些符合正则表达式的文本，许多语言都支持正则表达式。</p>
+<p>正则表达式在 JavaScript中的使用场景：</p>
+<ul>
+<li>表单验证（匹配）</li>
+<li>过滤敏感词（替换）</li>
+<li>字符串中提取我们想要的部分（提取）</li>
+</ul>
+<h3>6.2 语法</h3>
+<p>使用正则表达式,首先需要定义规则(创建正则表达式对象)</p>
+<p><code class="notranslate">const regExp = /正则表达式/</code></p>
+<p>???+ warning<br>
+两个 <code class="notranslate">/</code> 之间的正则表达式不需要使用引号包裹, <code class="notranslate">/</code> 与 正则表达式之间不要随便加空格</p>
+<ul>
+<li><code class="notranslate">regExp.test(字符串)</code> 判断字符串中是否有符合匹配的内容,返回布尔值</li>
+<li><code class="notranslate">regExp.exec(字符串)</code> 检索符合匹配的内容, 返回元组, 如果没有符合匹配的内容,则返回 <code class="notranslate">null</code></li>
+</ul>
+<h3>6.3 元字符</h3>
+<p>普通字符: 大多数的字符仅能够描述它们本身，这些字符称作普通字符，例如所有的字母和数字。也就是说普通字符只能够匹配字符串中与它们相同的字符。例如 <code class="notranslate">/hello/</code> 这个正则表达式使用的就是普通字符</p>
+<p>元字符(特殊字符) 是一些具有特殊含义的字符，可以极大提高了灵活性和强大的匹配功能。比如，规定用户只能输入英文26个英文字母，普通字符的话<code class="notranslate">/abcdefghijklmnopqrstuvwxyz/</code>, 但是换成元字符写法： <code class="notranslate">[a-z]</code></p>
+<p>参考文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions" rel="nofollow">MDN正则表达式文档</a>{ .md-button .md-button--primary }<br>
+<a href="http://tool.oschina.net/regex" rel="nofollow">开源中国正则测试工具</a>{ .md-button }</p>
+<p>元字符分为以下三类:</p>
+<ul>
+<li>
+<p>边界符（表示位置，开头和结尾，必须用什么开头，用什么结尾）</p>
+<ul>
+<li><code class="notranslate">^</code> 以什么开始</li>
+<li><code class="notranslate">$</code> 以什么结尾</li>
+<li>如果 <code class="notranslate">^</code> 和 <code class="notranslate">$</code> 在一起，表示必须是精确匹配</li>
+</ul>
+<p>???+ example<br>
+```js<br>
+// 普通字符, 只要字符串中有 h 就返回 true<br>
+console.log(/h/.test('hello')) // true<br>
+console.log(/h/.test('high')) // true</p>
+<pre class="notranslate"><code class="notranslate">  // 使用^, 必须以 h 开头
+  console.log(/^h/.test('hello')) // true
+  console.log(/^h/.test('lunch')) // false
+
+  // 使用$, 必须以 h 结尾
+  console.log(/h$/.test('lunch')) // true
+  console.log(/h$/.test('hello')) // false
+
+  // 同时使用^和$, 只匹配 h
+  console.log(/^h$/.test('lunch')) // false
+  console.log(/^h$/.test('h')) // true
+  console.log(/^h$/.test('hh')) // false
+  ```
+</code></pre>
+</li>
+<li>
+<p>量词 （表示重复次数）</p>
+<ul>
+<li><code class="notranslate">*</code> 重复0次或更多次</li>
+<li><code class="notranslate">+</code> 重复1次或更多次</li>
+<li><code class="notranslate">?</code> 重复0次或1次</li>
+<li><code class="notranslate">{n}</code> 重复n次</li>
+<li><code class="notranslate">{n,}</code> 重复n次或更多次,不要随便加空格,逗号之后也不要空格</li>
+<li><code class="notranslate">{n,m}</code> 重复n次到m次,包括m和n,不要随便加空格,逗号之后也不要空格</li>
+</ul>
+<p>???+ example<br>
+```js<br>
+// 使用*, 重复0次或更多次(字符串中只能有h,但h可以重复任意次)<br>
+console.log(/^h*$/.test('')) // true<br>
+console.log(/^h*$/.test('h')) // true<br>
+console.log(/^h*$/.test('hhhhhhhhh')) // true</p>
+<pre class="notranslate"><code class="notranslate">  // 使用+, 重复1次或更多次(字符串中只能有h,但h可以重复1次及其以上)
+  console.log(/^h+$/.test('')) // false
+  console.log(/^h+$/.test('h')) // true
+  console.log(/^h+$/.test('hhhhhhh')) // true
+
+  // 使用?, 重复0次或1次(字符串中只能有1个h,或者为空字符串)
+  console.log(/^h?$/.test('')) // true
+  console.log(/^h?$/.test('h')) // true
+  console.log(/^h?$/.test('hh')) // false
+
+  // 使用{n}, 重复n次(字符串只能为'hhh')
+  console.log(/^h{3}$/.test('hh')) // false
+  console.log(/^h{3}$/.test('hhh')) // true
+  console.log(/^h{3}$/.test('hhhh')) // false
+
+  // 使用{n,}, 重复n次及其以上(字符串中只能有h, 且至少有3个h)
+  console.log(/^h{3,}$/.test('hh')) // false
+  console.log(/^h{3,}$/.test('hhh')) // true
+  console.log(/^h{3,}$/.test('hhhhhhhh')) // true
+
+  // 使用{n,m}, 重复n到m次,包括端点(字符串只能是'hhh', 'hhhh', 'hhhhh')
+  console.log(/^h{3,5}$/.test('hh')) // false
+  console.log(/^h{3,5}$/.test('hhh')) // true
+  console.log(/^h{3,5}$/.test('hhhh')) // true
+  console.log(/^h{3,5}$/.test('hhhhh')) // true
+  console.log(/^h{3,5}$/.test('hhhhhh')) // false
+  ```
+</code></pre>
+</li>
+<li>
+<p>字符类 （比如 \d 表示 0~9）</p>
+<ul>
+<li>
+<p><code class="notranslate">[]</code> 匹配字符集合, 只要字符串中有正则表达式方括号中任一字符, 就符合匹配, 在 <code class="notranslate">[]</code>中还可以使用 <code class="notranslate">-</code>, 比如</p>
+<ul>
+<li><code class="notranslate">[0-9]</code> 相当于 <code class="notranslate">[0123456789]</code></li>
+<li><code class="notranslate">[a-z] </code> 相当于 小写英文字母的字符集合</li>
+<li><code class="notranslate">[a-zA-Z]</code> 相当于 英文字母的字符集合</li>
+<li>腾讯QQ号从10000开始, 因此可表示为 <code class="notranslate">^[1-9][0-9]{4,}$</code></li>
+</ul>
+<p>???+ example<br>
+```js<br>
+// 只要字符串中有a,b,c三者中的一个,就符合匹配<br>
+console.log(/[abc]/.test('java')) // true<br>
+console.log(/[abc]/.test('boy')) // true<br>
+console.log(/[abc]/.test('css')) // true<br>
+console.log(/[abc]/.test('html')) // false</p>
+<pre class="notranslate"><code class="notranslate">  // 字符串必须是'a', 'b', 'c' 三者之一
+  console.log(/^[abc]$/.test('api')) // false
+  console.log(/^[abc]$/.test('abc')) // false
+  console.log(/^[abc]$/.test('a')) // true
+  console.log(/^[abc]$/.test('b')) // true
+  console.log(/^[abc]$/.test('c')) // true
+
+  // 字符串必须是 a, b, c中二者的组合而成的字符串, 例如 'aa', 'ab', 'ac'等
+  console.log(/^[abc]{2}$/.test('api')) // false
+  console.log(/^[abc]{2}$/.test('aa')) // true
+  ```
+</code></pre>
+</li>
+<li>
+<p><code class="notranslate">[^]</code> 表示 <code class="notranslate">[]</code>字符集合的取反, 例如 <code class="notranslate">[^a-z]</code> 匹配除了小写字母以外的字符</p>
+</li>
+<li>
+<p><code class="notranslate">.</code> 匹配除换行符之外的任何单个字符</p>
+</li>
+<li>
+<p>预定义, 某些常用正则表达式的简写, 例如可以使用 <code class="notranslate">\d{4}-\d{1,2}-\d{1,2}</code> 匹配 <code class="notranslate">2025-5-26</code> 格式的日期</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>预定义</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="notranslate">\d</code></td>
+<td>匹配0-9之间的任一数字，相当于<code class="notranslate">[0-9]</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">\D</code></td>
+<td>匹配所有0-9以外的字符，相当于<code class="notranslate">[^0-9]</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">\w</code></td>
+<td>匹配任意的字母、数字和下划线，相当于<code class="notranslate">[A-Za-z0-9_]</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">\W</code></td>
+<td>除所有字母、数字和下划线以外的字符，相当于<code class="notranslate">[^A-Za-z0-9_]</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">\s</code></td>
+<td>匹配空格（包括换行符\n、制表符\t、空格符等），相等于<code class="notranslate">[ \t\r\n\v\f]</code></td>
+</tr>
+<tr>
+<td><code class="notranslate">\S</code></td>
+<td>匹配非空格的字符，相当于<code class="notranslate">[^ \t\r\n\v\f]</code></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+</li>
+<li>
+<p>修饰符 修饰符约束正则执行的某些细节行为，如是否区分大小写、是否支持多行匹配等</p>
+<ul>
+<li>语法 <code class="notranslate">/正则表达式/修饰符</code></li>
+<li><code class="notranslate">i</code> 是单词 ignore 的缩写，正则匹配时字母不区分大小写</li>
+<li><code class="notranslate">g</code> 是单词 global 的缩写，匹配所有满足正则表达式的结果(正则表达式默认只匹配第一个符合条件的结果)</li>
+<li><code class="notranslate">ig</code> 或 <code class="notranslate">gi</code> 不区分大小写,匹配所有结果</li>
+</ul>
+<p>???+ example<br>
+<code class="notranslate">js // 不区分大小写 console.log(/a/i.test('API')) // true console.log(/a/i.test('api')) // true </code></p>
+</li>
+<li>
+<p><code class="notranslate">.replace()</code> 方法</p>
+<ul>
+<li>语法 <code class="notranslate">字符串.replace(正则表达式对象, '替换为的文本')</code> 将字符串中符合匹配的文本替换为传入的文本</li>
+</ul>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">'HTML 是一门前端语言, 学习 html 对于学习前端非常重要'</span>
+<span class="pl-k">const</span> <span class="pl-s1">newStr1</span> <span class="pl-c1">=</span> <span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">replace</span><span class="pl-kos">(</span><span class="pl-pds"><span class="pl-c1">/</span><span class="pl-s">H</span><span class="pl-s">T</span><span class="pl-s">M</span><span class="pl-s">L</span><span class="pl-c1">/</span></span><span class="pl-kos">,</span> <span class="pl-s">'JavaScript'</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newStr1</span><span class="pl-kos">)</span> <span class="pl-c">// JavaScript 是一门前端语言, 学习 html 对于学习前端非常重要</span>
+<span class="pl-k">const</span> <span class="pl-s1">newStr2</span> <span class="pl-c1">=</span> <span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">replace</span><span class="pl-kos">(</span><span class="pl-pds"><span class="pl-c1">/</span><span class="pl-s">H</span><span class="pl-s">T</span><span class="pl-s">M</span><span class="pl-s">L</span><span class="pl-c1">/</span>ig</span><span class="pl-kos">,</span> <span class="pl-s">'JavaScript'</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newStr2</span><span class="pl-kos">)</span> <span class="pl-c">// JavaScript 是一门前端语言, 学习 JavaScript 对于学习前端非常重要</span></pre></div>
+</li>
+</ul>
+</li>
+</ul></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

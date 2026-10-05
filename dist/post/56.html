@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="# 存储管理
+
+在Linux系统中“一切皆文件”，所有文件都放置在以根目录为树根的树形目录结构中。">
+<meta property="og:title" content="存储管理">
+<meta property="og:description" content="# 存储管理
+
+在Linux系统中“一切皆文件”，所有文件都放置在以根目录为树根的树形目录结构中。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/56.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>存储管理</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">存储管理</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-08-06</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1d76db;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Linux">Linux</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><h1>存储管理</h1>
+<p>在Linux系统中“一切皆文件”，所有文件都放置在以根目录为树根的树形目录结构中。在Linux看来，任何硬件设备也都是文件，它们各有自己的一套文件系统。</p>
+<h2>存储设备的查看</h2>
+<p>从存储数据的介质上来区分，硬盘可分为机械硬盘（hard disk drive，HDD）和固态硬盘（solid state disk，SSD），机械硬盘采用磁性碟片存储数据，固态硬盘通过闪存颗粒存储。</p>
+<p>机械硬盘的逻辑结构主要分为磁道、扇区和柱面。以下几种，IDE（Integrated DriveElectronics，电子集成驱动器）硬盘接口；SATA（Serial ATA，串口）接口；SCSI（SmallComputer System Interface，小型计算机系统接口）。</p>
+<p>扇区是磁盘的最小存储单位。</p>
+<p>固态硬盘和机械硬盘最大的区别就是不再采用盘片存储数据，而采用存储芯片存储数据。</p>
+<p>固态硬盘低能耗、无噪声、抗震动、低散热、体积小和速度快的优势；价格更高，使用寿命有限。</p>
+<h3>硬盘识别</h3>
+<h3>存储设备的挂载</h3>
+<p>所有的硬件设备必须挂载之后才能使用，有些硬件设备（比如硬盘）在每次系统启动时会自动挂载，而有些（比如U盘、光盘）则需要手动进行挂载。</p>
+<p>挂载指的是将硬件设备的 文件系统 和 Linux 系统中的文件系统，通过 指定目录（作为挂载点） 进行关联。而将文件系统挂载到 Linux 系统上，需要使用 mount 挂载命令。</p>
+<h4>mount 命令</h4>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ mount -l</pre></div>
+<p>单纯使用 mount 命令，会显示出系统中已挂载的设备。使用-l，会额外显示出卷标名称。</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ mount -a</pre></div>
+<p>自动检查/etc/fstab 文件中有无因疏漏而未被挂载的设备文件，若有则进行自动挂载操作。/etc/fstab 文件为自动挂载文件，系统开机时会主动读取文件内容，根据文件配置，系统会自动挂载指定设备。</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ mount [-t 系统类型] [-L 卷标名] [-o 特殊选项] [-n] 设备文件名 挂载
+点</pre></div>
+<p>-t 系统类型：指定欲挂载的文件系统类型。常见的支持类型有 EXT2、EXT3、EXT4、iso9660、vfat、reiserfs 等。<br>
+-L 卷标名：除了使用设备文件名（如/dev/hdc6）之外，还可以利用文件系统的卷标名称进行挂载。<br>
+-n：默认情况下，系统会将实际挂载的情况实时写入/etc/mtab 文件中。但在某些场景下（如单人维护模式），为避免出现问题，会刻意不写入，此时就需要使用这个选项。<br>
+-o 特殊选项：可以指定挂载的额外选项，如读/写权限，同步/异步等。</p>
+<p>卸载使用 umount 命令</p>
+<h4>挂载光盘</h4>
+<p>建立挂载点目录：<br>
+$mkdir /mnt/cdrom/<br>
+挂载命令<br>
+$ mount /dev/cdrom /mnt/cdrom/S</p>
+<h4>挂载 U 盘</h4>
+<p>光盘的设备文件名是固定的（/dev/sr0 或/dev/cdrom），U 盘的设备文件名是在插入 U盘后系统自动分配的。<br>
+先以 root 用户身份登录，通过使用 fdisk 命令查看到 U 盘的设备文件名：<br>
+$ fdisk -l<br>
+假若 U 盘是 sda1，接下来要创建挂载点，在目录/mnt 下建立文件夹/usb：<br>
+$ mkdir /mnt/usb<br>
+然后挂载：<br>
+$ mount -t vfat /dev/sda1 /mnt/usb/</p>
+<h4>自动挂载</h4>
+<p>若想实现开机自动挂载某个硬件设备，使用 root 身份在/etc/fstab 文件中添加此设备即<br>
+可。</p>
+<h2>分区管理</h2>
+<p>Linux 中分区命令 fdisk 和 parted。fdisk 较常用，但不支持大于 2TB 的分区。大于 2TB 使用<br>
+parted 命令，parted 也能分配较小的分区。<br>
+8.2.1 fdisk 命令<br>
+查询本机可以识别的硬盘和分区：<br>
+$ fdisk -l<br>
+给硬盘分区：<br>
+$ fdisk 设备文件名<br>
+不要在当前的硬盘上尝试使用 fdisk，这会完整删除整个系统。<br>
+建立主分区的过程：fdisk 硬盘名—n（新建）—p（建立主分区）—l（指定分区号）—按<br>
+Enter 键（默认从柱面 1 开始建立分区）—+5G（指定分区大小）。当然，分区还没有格式<br>
+化和挂载，还不能使用。<br>
+主分区和扩展分区加起来最多只能建立 4 个，扩展分区最多只能建立 1 个。<br>
+所有的分区在建立过程中如果不保存就退出，是不会生效的。使用 q 命令不保存退出，使<br>
+用 w 命令，保存退出。若不想重新启动系统可以使用 partprobe 命令，作用是让系统内核<br>
+重新读取分区表信息。<br>
+8.2.2 parted 命令<br>
+parted 命令是可以在命令行直接分区和格式化的，parted 交互模式才是更加常用的命令方<br>
+式，进入交互模式命令：<br>
+$ parted 硬盘设备文件名<br>
+在 parted 等待输入交互命令的位置输入 help，可看到在交互模式下支持的所有命令。<br>
+分区完成后，需要进行格式化。使用 parted 交互命令格式化，则只能格式化成 ext2 文件系<br>
+统。需要使用 mkfs 命令（不是 parted 交互命令中的 mkfs，而是系统命令 mkfs）。parted<br>
+命令还可以调整分区的大小。<br>
+parted 所有的操作都是立即生效的！！<br>
+8.3 磁盘管理工具<br>
+8.3.1 df 命令<br>
+用于显示 Linux 系统中个文件系统的硬盘使用情况，包括文件系统所在硬盘分区的总容量、<br>
+已使用的容量、剩余容量等。与整个文件系统有关的数据都保存在超级块（Super Block）. $ df [选项] [目录或文件名] -a：显示所有文件系统信息，包括 Linux 系统特有的/proc、/sysfs 等文件系统。<br>
+-h：使用人们习惯的 MB 或 GB 等单位自行显示容量。<br>
+-i：不显示硬盘容量，而显示 inode 的数量。<br>
+无选项默认将系统内文件系统信息 KB 为单位显示出来。<br>
+df 命令后添加目录名，会自动分析该目录所在的分区，并将所在分区的有关信息显示出来。<br>
+8.3.2 du 命令<br>
+统计目录或文件所占磁盘空间容量的命令。<br>
+$ du [选项] [目录或文件名] -a：显示所有子目录和子文件的磁盘占用量。<br>
+-h：使用习惯单位显示磁盘占用量<br>
+-s：统计总磁盘占用量，而不列出子目录和子文件的从磁盘占用量。<br>
+不带选项为统计当前目录的总磁盘占用量，同时会统计当前目录下所有子目录的磁盘占用<br>
+量，不统计子文件，默认单位 KB。<br>
+当删除一个文件时，不是马上就在文件系统中消失，当所有程序都不用该文件时，才会根<br>
+据操作系统的计算规则释放已经删除的文件空间。<br>
+df 命令能看到已经删除的文件，计算大小的时候，把这一部分的空间也加上了，因此更精<br>
+确。<br>
+8.3.3 fsck 命令<br>
+检查文件系统并尝试修复出现的错误。<br>
+$ fsck [选项] 分区设备文件名<br>
+-a：自动修复文件系统，没有任何提示信息。<br>
+-r：交互式修复模式，修改文件前会进行询问，让用户确认并决定处理方式。<br>
+fsck 命令修复磁盘分区以后，若发现分区中有文件丢失，可以到对应的“lost+found”目录中<br>
+去查找，但由于无法通过文件名称分辨各个文件，可利用 file 命令查看文件系统类型，进<br>
+而判断哪个是用户需要的文件。<br>
+8.4 磁盘阵列</p></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

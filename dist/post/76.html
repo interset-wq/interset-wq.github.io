@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="# bs4 解析网页
+
+[bs4官方文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)
+
+## 安装
+
+    pip install beautifulsoup4
+
+## 第一步：创建soup对象
+
+`BeautifulSoup()` 类
+
+- 第一个参数是html格式的文本，常传入 `res.text`
+- 第二个位置参数是解析器，常使用 `'lxml'`
+- 关键字参数 `multi_valued_attributes` （默认按照html语法规范解析，不推荐使用此参数修改配置）
+    - `multi_valued_attributes=None` ，将所有html标签的属性当做是单值属性解析
+    - `multi_valued_attributes=class_is_multi` ，将所有属性当做多值属性解析
+
+
+常用的解析器：
+
+- html.parser解析器（属于python标准库） `BeautifulSoup(res.text, 'html.parser')`
+    - Python的内置标准库
+    - 执行速度较快
+    - 容错能力强
+    - 速度没有 lxml 快，容错没有 html5lib强
+- lxml HTML解析器（第三方库，推荐使用） `BeautifulSoup(res.text, 'lxml')`
+    - 速度快
+    - 容错能力强	
+    - 额外的 C 依赖
+- lxml XML解析器（第三方库） `BeautifulSoup(markup, ['lxml-xml'])` 或 `BeautifulSoup(markup, 'xml')`
+    - 速度快
+    - 唯一支持 XML 的解析器	
+    - 额外的 C 依赖
+    - 使用此解析器，所有属性当做是单值属性解析
+- html5lib解析器（第三方库） `BeautifulSoup(markup, 'html5lib')`
+    - 最好的容错性
+    - 以浏览器的方式解析文档
+    - 生成 HTML5 格式的文档
+    - 速度慢
+    - 额外的 Python 依赖
+
+## 第二步：对soup对象进行操作
+
+soup对象的属性和方法：
+
+- 所有html标签都可以看做是soup对象的属性，`soup.标签` 相当于对soup对象使用了元素选择器，且只选中 {==第一个==} 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）
+    
+    ???+ note '子节点'
+        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。">
+<meta property="og:title" content="bs4 解析网页">
+<meta property="og:description" content="# bs4 解析网页
+
+[bs4官方文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)
+
+## 安装
+
+    pip install beautifulsoup4
+
+## 第一步：创建soup对象
+
+`BeautifulSoup()` 类
+
+- 第一个参数是html格式的文本，常传入 `res.text`
+- 第二个位置参数是解析器，常使用 `'lxml'`
+- 关键字参数 `multi_valued_attributes` （默认按照html语法规范解析，不推荐使用此参数修改配置）
+    - `multi_valued_attributes=None` ，将所有html标签的属性当做是单值属性解析
+    - `multi_valued_attributes=class_is_multi` ，将所有属性当做多值属性解析
+
+
+常用的解析器：
+
+- html.parser解析器（属于python标准库） `BeautifulSoup(res.text, 'html.parser')`
+    - Python的内置标准库
+    - 执行速度较快
+    - 容错能力强
+    - 速度没有 lxml 快，容错没有 html5lib强
+- lxml HTML解析器（第三方库，推荐使用） `BeautifulSoup(res.text, 'lxml')`
+    - 速度快
+    - 容错能力强	
+    - 额外的 C 依赖
+- lxml XML解析器（第三方库） `BeautifulSoup(markup, ['lxml-xml'])` 或 `BeautifulSoup(markup, 'xml')`
+    - 速度快
+    - 唯一支持 XML 的解析器	
+    - 额外的 C 依赖
+    - 使用此解析器，所有属性当做是单值属性解析
+- html5lib解析器（第三方库） `BeautifulSoup(markup, 'html5lib')`
+    - 最好的容错性
+    - 以浏览器的方式解析文档
+    - 生成 HTML5 格式的文档
+    - 速度慢
+    - 额外的 Python 依赖
+
+## 第二步：对soup对象进行操作
+
+soup对象的属性和方法：
+
+- 所有html标签都可以看做是soup对象的属性，`soup.标签` 相当于对soup对象使用了元素选择器，且只选中 {==第一个==} 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）
+    
+    ???+ note '子节点'
+        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/76.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>bs4 解析网页</title>
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">bs4 解析网页</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-08-08</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#3572a5;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><h1>bs4 解析网页</h1>
+<p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" rel="nofollow">bs4官方文档</a></p>
+<h2>安装</h2>
+<pre class="notranslate"><code class="notranslate">pip install beautifulsoup4
+</code></pre>
+<h2>第一步：创建soup对象</h2>
+<p><code class="notranslate">BeautifulSoup()</code> 类</p>
+<ul>
+<li>第一个参数是html格式的文本，常传入 <code class="notranslate">res.text</code></li>
+<li>第二个位置参数是解析器，常使用 <code class="notranslate">"lxml"</code></li>
+<li>关键字参数 <code class="notranslate">multi_valued_attributes</code> （默认按照html语法规范解析，不推荐使用此参数修改配置）
+<ul>
+<li><code class="notranslate">multi_valued_attributes=None</code> ，将所有html标签的属性当做是单值属性解析</li>
+<li><code class="notranslate">multi_valued_attributes=class_is_multi</code> ，将所有属性当做多值属性解析</li>
+</ul>
+</li>
+</ul>
+<p>常用的解析器：</p>
+<ul>
+<li>html.parser解析器（属于python标准库） <code class="notranslate">BeautifulSoup(res.text, "html.parser")</code>
+<ul>
+<li>Python的内置标准库</li>
+<li>执行速度较快</li>
+<li>容错能力强</li>
+<li>速度没有 lxml 快，容错没有 html5lib强</li>
+</ul>
+</li>
+<li>lxml HTML解析器（第三方库，推荐使用） <code class="notranslate">BeautifulSoup(res.text, "lxml")</code>
+<ul>
+<li>速度快</li>
+<li>容错能力强</li>
+<li>额外的 C 依赖</li>
+</ul>
+</li>
+<li>lxml XML解析器（第三方库） <code class="notranslate">BeautifulSoup(markup, ["lxml-xml"])</code> 或 <code class="notranslate">BeautifulSoup(markup, "xml")</code>
+<ul>
+<li>速度快</li>
+<li>唯一支持 XML 的解析器</li>
+<li>额外的 C 依赖</li>
+<li>使用此解析器，所有属性当做是单值属性解析</li>
+</ul>
+</li>
+<li>html5lib解析器（第三方库） <code class="notranslate">BeautifulSoup(markup, "html5lib")</code>
+<ul>
+<li>最好的容错性</li>
+<li>以浏览器的方式解析文档</li>
+<li>生成 HTML5 格式的文档</li>
+<li>速度慢</li>
+<li>额外的 Python 依赖</li>
+</ul>
+</li>
+</ul>
+<h2>第二步：对soup对象进行操作</h2>
+<p>soup对象的属性和方法：</p>
+<ul>
+<li>
+<p>所有html标签都可以看做是soup对象的属性，<code class="notranslate">soup.标签</code> 相当于对soup对象使用了元素选择器，且只选中 {==第一个==} 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）</p>
+<p>???+ note "子节点"<br>
+tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</p>
+<ul>
+<li><code class="notranslate">name</code> 属性，用于获取标签名（有些鸡肋），可以对其重新赋值，并会对tag对象产生影响（改变html元素的标签），对子节点使用时，如果子节点是字符串，则返回None</li>
+<li><code class="notranslate">string</code> 属性，用于获取标签包裹的文字，返回NavigableString 对象，使用str()函数可以将NavigableString 对象转换成python字符串，如果tag对象中还嵌套了其他html标签（子节点），返回None。NavigableString 对象的属性和方法如下：
+<ul>
+<li><code class="notranslate">replace_with()</code> 方法 将NavigableString 对象中的字符串替换为传入的字符串</li>
+</ul>
+</li>
+<li><code class="notranslate">attrs</code> 属性，返回所有属性的字典，属性名作为键，属性值作为值，多值属性（如class）的值用字典表示</li>
+<li><code class="notranslate">contents</code> 属性，返回tag对象所有节点的列表</li>
+<li><code class="notranslate">tag['key']</code> 字典操作，可以把tag对象的名称当做是字典的变量名，这个字典实际上就是 <code class="notranslate">tag.attrs</code>，tag对象 的属性可以被添加、删除或修改。tag的属性操作方法与字典一样</li>
+<li><code class="notranslate">get_attribute_list()</code>方法 传入属性名，返回属性值列表，单值属性（id等单值属性，即使因为书写不规范导致属性值之间有空格，仍然返回单元素列表）返回单元素列表</li>
+</ul>
+</li>
+<li>
+<p><code class="notranslate">find_all()</code> 方法 传入html标签，返回所有匹配的列表，tag对象也可以使用</p>
+</li>
+<li>
+<p><code class="notranslate">prettify()</code> 方法 类似于 <code class="notranslate">pprint.pprint()</code> 格式化soup对象，增加可读性</p>
+</li>
+</ul>
+<h2>find_all()方法</h2>
+<p>标准写法：</p>
+<p><code class="notranslate">find_all(name , attrs , recursive , string , **kwargs)</code></p>
+<p>简写：可以将soup或tag对象的对象名直接当成是函数使用，它们的用法和find_all()方法完全相同</p>
+<p><code class="notranslate">tag(name , attrs , recursive , string , **kwargs)</code></p>
+<p><code class="notranslate">soup(name , attrs , recursive , string , **kwargs)</code></p>
+<p>各参数说明：</p>
+<ul>
+<li>name参数（常使用位置参数传入），返回tag对象列表，参数值如下
+<ul>
+<li>标签名，传入html标签名</li>
+<li>列表，传入html标签名列表，匹配列表中的所有标签的tag对象</li>
+<li>正则表达式，需要先导入re，传入 <code class="notranslate">re.compile("正则表达式")</code>，匹配所有符合要求的tag对象</li>
+<li>函数名，自定义函数</li>
+<li>字符串</li>
+<li>True，可以匹配任何值，查找到所有的 tag，但是不会返回字符串节点</li>
+</ul>
+</li>
+<li>关键字参数**kwargs，常用关键字参数如下：
+<ul>
+<li><code class="notranslate">id="id值"</code> 通过id查找tag对象</li>
+<li><code class="notranslate">id=True</code> 查找所有带有id属性的参数的tag对象</li>
+<li><code class="notranslate">href=re.compile("正则表达式")</code> 查找所有带有href属性并符合匹配的tag对象</li>
+<li><code class="notranslate">class_="类名"</code> 通过类名查找tag对象</li>
+<li><code class="notranslate">limit=数字</code> 限制查找的tag对象的个数</li>
+</ul>
+</li>
+<li>attrs参数（常作为关键字参数使用），<code class="notranslate">attrs={"属性名": "属性值"}</code>，以字典的方式传入属性名和属性值，查找对应的tag对象</li>
+<li><code class="notranslate">recursive=False</code> 设置此参数只查找子节点，默认查找所有后代节点</li>
+<li>string参数（常作为关键字参数传入），用法和name参数类似，只是针对的是html中的文本来进行查找，而不是针对标签</li>
+</ul>
+<h2>find()方法</h2>
+<p>用法和find_all()相同，只查找第一个tag对象，返回tag对象</p>
+<h2>css选择器进行查找</h2>
+<p><code class="notranslate">css.select("css选择器")</code> 方法 使用css选择器查找，返回tag对象列表</p>
+<p><code class="notranslate">select()</code> 和 <code class="notranslate">select_one()</code>方法，两个方法作用相同，与<code class="notranslate">css.select()</code>用法相同，值查找第一个匹配到的tag对象，返回tag对象</p></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

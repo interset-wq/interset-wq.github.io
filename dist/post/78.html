@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="# pdfplumber 处理PDF文档
+
+[README.md](https://github.com/jsvine/pdfplumber)
+
+## Install
+
+    pip install pdfplumber
+
+## Import
+
+    import pdfplumber
+
+## 二、打开pdf文件，并创建一个pdf对象
+
+```py
+with pdfplumber.open(path) as pdf:
+```
+
+因为是对pdf文件的内容进行操作，所以通过`with open`语句可以避免忘记关闭文件
+
+`pdfplumber.open()` 返回一个PDF对象，函数的参数如下：
+
+- 第一个位置参数 文件路径或文件对象
+- `password` 参数 用于打开加密的 PDF 文件，传入密码即可
+
+PDF对象的属性和方法：
+
+- `metadata` 属性 用于获取 PDF 文件的元数据信息，返回一个字典
+- `pages` 属性 用于获取 PDF 文件的所有页面，返回一个Page对象列表
+
+## 三、创建Page对象（核心类）
+
+PDF文档的每一页都是一个Page对象
+
+Page对象的属性和方法：
+
+- `close()` 方法 用于关闭某页PDF
+- `page_number` 属性 用于获取这个Page对象在PDF文档中的页码，Page对象在`pdf.pages`属性中的下标从0开始，但是页码从1开始
+- `width` 属性 用于获取这个Page对象的页面宽度
+- `height` 属性 用于获取这个Page对象的高度
+- `crop(bounding_box, relative=False, strict=True)` 方法 用于裁剪页面，返回裁剪后的Page对象。">
+<meta property="og:title" content="pdfplumber 处理PDF文档">
+<meta property="og:description" content="# pdfplumber 处理PDF文档
+
+[README.md](https://github.com/jsvine/pdfplumber)
+
+## Install
+
+    pip install pdfplumber
+
+## Import
+
+    import pdfplumber
+
+## 二、打开pdf文件，并创建一个pdf对象
+
+```py
+with pdfplumber.open(path) as pdf:
+```
+
+因为是对pdf文件的内容进行操作，所以通过`with open`语句可以避免忘记关闭文件
+
+`pdfplumber.open()` 返回一个PDF对象，函数的参数如下：
+
+- 第一个位置参数 文件路径或文件对象
+- `password` 参数 用于打开加密的 PDF 文件，传入密码即可
+
+PDF对象的属性和方法：
+
+- `metadata` 属性 用于获取 PDF 文件的元数据信息，返回一个字典
+- `pages` 属性 用于获取 PDF 文件的所有页面，返回一个Page对象列表
+
+## 三、创建Page对象（核心类）
+
+PDF文档的每一页都是一个Page对象
+
+Page对象的属性和方法：
+
+- `close()` 方法 用于关闭某页PDF
+- `page_number` 属性 用于获取这个Page对象在PDF文档中的页码，Page对象在`pdf.pages`属性中的下标从0开始，但是页码从1开始
+- `width` 属性 用于获取这个Page对象的页面宽度
+- `height` 属性 用于获取这个Page对象的高度
+- `crop(bounding_box, relative=False, strict=True)` 方法 用于裁剪页面，返回裁剪后的Page对象。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/78.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>pdfplumber 处理PDF文档</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">pdfplumber 处理PDF文档</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-08-15</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#3572a5;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><h1>pdfplumber 处理PDF文档</h1>
+<p><a href="https://github.com/jsvine/pdfplumber">README.md</a></p>
+<h2>Install</h2>
+<pre class="notranslate"><code class="notranslate">pip install pdfplumber
+</code></pre>
+<h2>Import</h2>
+<pre class="notranslate"><code class="notranslate">import pdfplumber
+</code></pre>
+<h2>二、打开pdf文件，并创建一个pdf对象</h2>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">with</span> <span class="pl-s1">pdfplumber</span>.<span class="pl-c1">open</span>(<span class="pl-s1">path</span>) <span class="pl-k">as</span> <span class="pl-s1">pdf</span>:</pre></div>
+<p>因为是对pdf文件的内容进行操作，所以通过<code class="notranslate">with open</code>语句可以避免忘记关闭文件</p>
+<p><code class="notranslate">pdfplumber.open()</code> 返回一个PDF对象，函数的参数如下：</p>
+<ul>
+<li>第一个位置参数 文件路径或文件对象</li>
+<li><code class="notranslate">password</code> 参数 用于打开加密的 PDF 文件，传入密码即可</li>
+</ul>
+<p>PDF对象的属性和方法：</p>
+<ul>
+<li><code class="notranslate">metadata</code> 属性 用于获取 PDF 文件的元数据信息，返回一个字典</li>
+<li><code class="notranslate">pages</code> 属性 用于获取 PDF 文件的所有页面，返回一个Page对象列表</li>
+</ul>
+<h2>三、创建Page对象（核心类）</h2>
+<p>PDF文档的每一页都是一个Page对象</p>
+<p>Page对象的属性和方法：</p>
+<ul>
+<li><code class="notranslate">close()</code> 方法 用于关闭某页PDF</li>
+<li><code class="notranslate">page_number</code> 属性 用于获取这个Page对象在PDF文档中的页码，Page对象在<code class="notranslate">pdf.pages</code>属性中的下标从0开始，但是页码从1开始</li>
+<li><code class="notranslate">width</code> 属性 用于获取这个Page对象的页面宽度</li>
+<li><code class="notranslate">height</code> 属性 用于获取这个Page对象的高度</li>
+<li><code class="notranslate">crop(bounding_box, relative=False, strict=True)</code> 方法 用于裁剪页面，返回裁剪后的Page对象。参数说明：
+<ul>
+<li><code class="notranslate">bounding_box</code> 矩形裁剪框，传入4元素元组 <code class="notranslate">(x0, top, x1, bottom)</code>。裁剪的页面保留至少部分位于边界框内的对象。{==元组四个元素分别是左上角角点和右下角角点的坐标，坐标的范围不能超出页面。==}如果对象仅部分落在裁剪框中，则将剖切其被边界框包含的部分。</li>
+<li>如果relative=True，则边界框计算为距页面左上角的偏移量，而不是绝对位置。</li>
+<li>当strict=True (默认值), 裁剪框必须在页面边界内部</li>
+</ul>
+</li>
+<li><code class="notranslate">within_bbox(bounding_box, relative=False)</code> 方法 类似<code class="notranslate">crop()</code>方法，但仅保留完全落在裁剪框内的对象</li>
+<li><code class="notranslate">outside_crop(bounding_box, relative=False)</code> 方法 类似<code class="notranslate">crop()</code> ，仅保留裁剪框外部的对象</li>
+<li><code class="notranslate">filter()</code> 方法 过滤页面，返回一个新的Page对象。返回页面内容，仅保留满足条件的对象</li>
+<li><code class="notranslate">.objects / .chars / .lines / .rects / .curves / .images</code> 这些属性都返回的是列表</li>
+</ul>
+<p>??? note "Page对象和PDF对象共有的属性和方法"<br>
+以下属性全都返回字典：</p>
+<ul>
+<li><code class="notranslate">chars</code> , 代表文本字符，返回一个字典列表，每个字典代表一个字符。</li>
+<li><code class="notranslate">lines</code> , 代表一条一维线.</li>
+<li><code class="notranslate">rects</code> , 代表单个二维矩形.</li>
+<li><code class="notranslate">curves</code> , 代表一序列 pdfminer.six 无法识别成线或矩形的连接点,.</li>
+<li><code class="notranslate">images</code> , 代表图像.</li>
+<li><code class="notranslate">annots</code> , 代表一个 PDF 批注</li>
+<li><code class="notranslate">hyperlinks</code> , 代表链接注释 Link 包含 URI 属性</li>
+</ul>
+<p>??? note "返回的字典的键及其含义"<br>
+- <code class="notranslate">page_number</code> 找到这个字符的页码。<br>
+- <code class="notranslate">text</code> 文本内容<br>
+- <code class="notranslate">fontname</code> 字符字体<br>
+- <code class="notranslate">size</code> 字号<br>
+- <code class="notranslate">adv</code> 等于 文本宽度 * 字体大小 * 缩放倍数 的值<br>
+- <code class="notranslate">upright</code> 字符是否直立<br>
+- <code class="notranslate">height</code> 字高<br>
+- <code class="notranslate">width</code> 字宽<br>
+- <code class="notranslate">linewidth</code> 线的厚度<br>
+- <code class="notranslate">x0</code> 字符左侧到页面左侧的水平距离<br>
+- <code class="notranslate">x1</code> 字符右侧到离页面左侧的水平距离<br>
+- <code class="notranslate">y0</code> 字符底部到页面底部的垂直距离<br>
+- <code class="notranslate">y1</code> 字符顶部到页面底部的垂直距离<br>
+- <code class="notranslate">top</code> 字符顶部到页面顶部的垂直距离<br>
+- <code class="notranslate">bottom</code> 字符底部的距离到页面顶部的垂直距离<br>
+- <code class="notranslate">doctop</code> 字符顶部到文档顶部的垂直距离<br>
+- <code class="notranslate">matrix</code> 这个字符的“当前变换矩阵”，矩阵控制字符的尺度、偏斜和位置翻译。旋转是尺度和偏斜的组合,但在大多数情况下可以被认为是等于X轴偏斜<br>
+- <code class="notranslate">ncs</code> TKTK<br>
+- <code class="notranslate">stroking_pattern</code> TKTK<br>
+- <code class="notranslate">non_stroking_pattern</code> TKTK<br>
+- <code class="notranslate">stroking_color</code> 字体轮廓颜色<br>
+- <code class="notranslate">non_stroking_color</code> 字体内部填充颜色<br>
+- <code class="notranslate">object_type</code> 对象类型char/line/rect/curve/image<br>
+- <code class="notranslate">mcid</code> 实验属性<br>
+- <code class="notranslate">tag</code> 实验属性<br>
+- <code class="notranslate">pts</code>  一个(x, top) 元组列表表示曲线上的点<br>
+- <code class="notranslate">path</code> 一个 (cmd, *(x, top)) 描述完整路径描述的元组列表,包括(例如)Bezier曲线中使用的控制点<br>
+- <code class="notranslate">fill</code> 曲线是否被填充<br>
+- <code class="notranslate">dash</code> 用<code class="notranslate">([dash_array], dash_phase)</code> 元组表示曲线的样式<br>
+- <code class="notranslate">srcsize</code> 图像原始尺寸，(width, height) 郁元组<br>
+- <code class="notranslate">colorspace</code> 图像的色域(例如RGB)<br>
+- <code class="notranslate">bits</code> 进制，例如GBA颜色是八进制<br>
+- <code class="notranslate">stream</code> 图像的像素值,作为 pdfminer.pdftypes.PDFStream 对象<br>
+- <code class="notranslate">imagemask</code> 一个空的布尔;如果 True “指定图像数据用作当前颜色绘画的模板掩码。<br>
+- <code class="notranslate">name</code> 图像名称</p>
+<h2>四、操作Page对象</h2>
+<h3>4.1 将页面Page对象转换为图片PageImage对象</h3>
+<p><code class="notranslate">page.to_image()</code> 方法可以将页面转换为Image对象，返回一个PageImage对象。可以对裁剪后的Page对象使用。可选参数如下：</p>
+<ul>
+<li><code class="notranslate">resolution</code> 传入整数，图片每英寸的像素，默认值:72，像素越大图片越清晰，但是体积越大</li>
+<li><code class="notranslate">width</code> 传入整数，图片宽度（像素px），默认值由resolution决定</li>
+<li><code class="notranslate">height</code> 传入整数，图片高度（像素px），默认值由resolution决定</li>
+<li><code class="notranslate">antialias</code> 传入布尔值，抗锯齿。默认值False，使用抗锯齿会增大图片的体积</li>
+<li><code class="notranslate">force_mediabox</code> 传入布尔值，使用页面 .mediabox 尺寸,而不是 .cropbox 尺寸。默认值: False</li>
+</ul>
+<p>PageImage对象的属性和方法：</p>
+<ul>
+<li><code class="notranslate">reset()</code> 	重置,清除已绘制的所有内容。</li>
+<li><code class="notranslate">copy()</code> 	将图像复制到新的“PageImage”对象。</li>
+<li><code class="notranslate">show()</code> 	使用本地图片查看器浏览图片</li>
+<li><code class="notranslate">save(path_or_fileobject, format="PNG")</code> 	保存已标记的图片</li>
+<li><code class="notranslate">save(path_or_fileobject, format="PNG", quantize=True, colors=256, bits=8)</code> 	将带有注释的图像保存为 PNG 文件。默认参数会将图像量化为一个包含 256 种颜色的调色板，并以 8 位色深保存 PNG 文件。如果想禁用量化，可以传递quantize=False参数；如果想调整颜色调色板的大小，可以传递colors=N参数，其中 N 表示颜色的数量</li>
+</ul>
+<h3>4.2 从Page对象中提取文本</h3>
+<ul>
+<li><code class="notranslate">extract_text(x_tolerance=3, x_tolerance_ratio=None, y_tolerance=3, layout=False, x_density=7.25, y_density=13, line_dir_render=None, char_dir_render=None, **kwargs)</code>方法 将页面的所有字符对象拼贴成单个字符串。
+<ul>
+<li>当 layout=False: 如果一个字符的x1与下一个字符的x0之间的差大于x_tolerance，则添加空格。(如果 x_tolerance_ratio 不是 None，提取器将使用等于 x_tolerance_ratio * previous_character["size"] 的动态 x_tolerance)。如果一个字符的doctop与下一个字符的doctop之间的差大于y_tolerance，则添加换行符。</li>
+<li>当 layout=True (实验性功能): 尝试模拟页面上文本的结构布局，使用x_density和y_density来确定每个"点"（PDF 的单位）所需的最小字符数/换行符数。所有剩余的**kwargs参数会传递给.extract_words(...)（见下文），这是计算布局的第一步</li>
+</ul>
+</li>
+<li><code class="notranslate">extract_text_simple(x_tolerance=3, y_tolerance=3)</code>方法 同上，简化版的<code class="notranslate">extract_text()</code>方法</li>
+</ul></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content=":material-pen-plus: `本文创建于2025-6-24`
+
+## 天正建筑 选项卡
+
+这个选项卡下的功能可以替代revit用于基本建筑建模的所有功能，是天正插件的核心内容。">
+<meta property="og:title" content="Revit 天正插件TR">
+<meta property="og:description" content=":material-pen-plus: `本文创建于2025-6-24`
+
+## 天正建筑 选项卡
+
+这个选项卡下的功能可以替代revit用于基本建筑建模的所有功能，是天正插件的核心内容。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/38.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>Revit 天正插件TR</title>
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">Revit 天正插件TR</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#cccccc;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Other">Other</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-6-24</code></p>
+<h2>天正建筑 选项卡</h2>
+<p>这个选项卡下的功能可以替代revit用于基本建筑建模的所有功能，是天正插件的核心内容。</p>
+<h3>标高</h3>
+<p><code class="notranslate">天正建筑</code> 选项卡 - <code class="notranslate">楼层标高</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9394b0a166aa0cb0131a4652cceeb1a24ca3b8caca4f5ae4a992125a7441cab1/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32342f6235797143345a314c6753504e76662e77656270"><img src="https://camo.githubusercontent.com/9394b0a166aa0cb0131a4652cceeb1a24ca3b8caca4f5ae4a992125a7441cab1/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32342f6235797143345a314c6753504e76662e77656270" alt="height.webp" data-canonical-src="https://s2.loli.net/2025/06/24/b5yqC4Z1LgSPNvf.webp" style="max-width: 100%;"></a></p>
+<h3>轴网</h3>
+<p><code class="notranslate">天正建筑</code> 选项卡 - <code class="notranslate">绘制轴网</code></p>
+<p>???+ success inline end "绘制轴网"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/b9e04266e1070bc26692849e748ffd87859c348a55e9030b8ab7ddadf6415a0b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32342f6765624d415346544c3878334263512e77656270"><img src="https://camo.githubusercontent.com/b9e04266e1070bc26692849e748ffd87859c348a55e9030b8ab7ddadf6415a0b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32342f6765624d415346544c3878334263512e77656270" alt="3.webp" data-canonical-src="https://s2.loli.net/2025/06/24/gebMASFTL8x3BcQ.webp" style="max-width: 100%;"></a></p>
+<p>绘制轴网时不需要设置 <code class="notranslate">轴网标注</code> ，绘制轴网时如果连续出现多个间距相同的可以使用 <code class="notranslate">n*l</code>的方式同时绘制多条轴线，n是等距数量，l是轴网间距，二者顺序不能弄反了，不同间距使用空格进行分隔</p>
+<p>???+ success inline end "轴网标注"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c285d08f43bc75e5362c9c259af5017551cde6708e68e4172b7b286350d26646/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32342f41644872317066733579696f6a58682e77656270"><img src="https://camo.githubusercontent.com/c285d08f43bc75e5362c9c259af5017551cde6708e68e4172b7b286350d26646/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32342f41644872317066733579696f6a58682e77656270" alt="4.webp" data-canonical-src="https://s2.loli.net/2025/06/24/AdHr1pfs5yiojXh.webp" style="max-width: 100%;"></a></p>
+<p><code class="notranslate">轴网标注</code> 如果绘制轴网时没有自动生成轴网编号，可以使用revit内置的编辑类型添加轴网编号，再使用天正插件的轴网尺寸，轴号重排功能进行尺寸标注，以及设置正确的轴号</p>
+<p>这些功能全都只要点击最左和最右侧的轴线（最下或最上方的轴线）即可设置成功</p>
+<p>???+ warning<br>
+轴网尺寸的顺序是从下往上，从左到右</p>
+<h3>绘制墙体</h3>
+<p>???+ success inline end "绘制墙体"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/108c14ffb3f99f9caf926407268d091002543e046f439acded7807182d2c5676/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f71437531557645636846564c486b4a2e77656270"><img src="https://camo.githubusercontent.com/108c14ffb3f99f9caf926407268d091002543e046f439acded7807182d2c5676/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f71437531557645636846564c486b4a2e77656270" alt="2.webp" data-canonical-src="https://s2.loli.net/2025/06/29/qCu1UvEchFVLHkJ.webp" style="max-width: 100%;"></a></p>
+<p>绘制墙体功能中有很多常用的墙的样式，并且可以快捷设置墙体的材料和尺寸，比revit原生的墙体功能更易于使用。</p>
+<h3>墙体编辑</h3>
+<ul>
+<li><code class="notranslate">墙体拆分</code> 将有多个层次的墙体按照层次拆分为多面墙体</li>
+<li><code class="notranslate">墙体合并</code> 是<code class="notranslate">墙体拆分</code>的逆向操作</li>
+<li><code class="notranslate">添加墙柱饰面</code> 快速为墙体添加装饰面，使用时使用 <code class="notranslate">点选</code> 或 <code class="notranslate">框选</code> 方式选择要添加装饰面的对象</li>
+</ul>
+<h3>墙体工具</h3>
+<p>???+ success inline end "墙体工具"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/93044fb42fe4b886719ca9d240839da74f34063a0e94c5db989c84b0178fe370/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f3447706b754b5a6a4a656f464c64772e77656270"><img src="https://camo.githubusercontent.com/93044fb42fe4b886719ca9d240839da74f34063a0e94c5db989c84b0178fe370/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f3447706b754b5a6a4a656f464c64772e77656270" alt="6.webp" data-canonical-src="https://s2.loli.net/2025/06/29/4GpkuKZjJeoFLdw.webp" style="max-width: 100%;"></a></p>
+<ul>
+<li><code class="notranslate">墙倒角</code> 将通过直角连接的墙，改为通过圆弧连接，类似于AutoCAD中的倒角</li>
+<li><code class="notranslate">墙体关系</code> 由于revit默认只要墙有连接部分，就会自动变成一面墙，这就造成了移动墙或删除墙的不便，通过墙体关系，点选中的墙会取消与其连接的墙的连接关系</li>
+<li><code class="notranslate">单墙切墙</code> 分别点击相交的两面墙，墙会沿着两面墙的交点切开</li>
+<li><code class="notranslate">柱切墙</code> 通过框选或点选某个柱，点击选项卡下面的 <code class="notranslate">完成</code> 可以将一个墙体以柱为断点切开成两端</li>
+</ul>
+<h3>柱</h3>
+<p>???+ success inline end "柱"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/daea260fd76d662e5ff7ce9dde552c418fd8d4ef0bd074b5c34523d230741e0c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f437670594e795452757231474667392e77656270"><img src="https://camo.githubusercontent.com/daea260fd76d662e5ff7ce9dde552c418fd8d4ef0bd074b5c34523d230741e0c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f437670594e795452757231474667392e77656270" alt="5.webp" data-canonical-src="https://s2.loli.net/2025/06/29/CvpYNyTRur1GFg9.webp" style="max-width: 100%;"></a></p>
+<p>除了点选方式之外，其他方式都是在轴线和轴线的交点处插入柱子，默认通过柱的中心点插入柱。</p>
+<p>快速放置柱，可以沿着某条轴线放置大量的柱，也可以框选一片区域，在被框选区域轴线的交点放置柱</p>
+<p>角柱：在墙面的转角处框选到这个转角，可以放置角柱</p>
+<h3>门/窗</h3>
+<p>???+ success inline end "门"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5d46fc1c720388549758d8d3cf42199997505376ff712006e9a09417a036c3a4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f34706f523748786e66657a72774c622e77656270"><img src="https://camo.githubusercontent.com/5d46fc1c720388549758d8d3cf42199997505376ff712006e9a09417a036c3a4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f34706f523748786e66657a72774c622e77656270" alt="7.webp" data-canonical-src="https://s2.loli.net/2025/06/29/4poR7HxnfezrwLb.webp" style="max-width: 100%;"></a></p>
+<p>点击门的图片可以选取门的样式。根据需要可以自行设置门的编号</p>
+<p>门和窗的操作完全相同</p>
+<hr>
+<h3>门窗工具</h3>
+<p>???+ success "门窗表"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/fd73a2b0eaf044790505f60f9757163ab6a0a7bfe223bc9457fd51c976175778/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f4e5979355532336d39676f535a68492e77656270"><img src="https://camo.githubusercontent.com/fd73a2b0eaf044790505f60f9757163ab6a0a7bfe223bc9457fd51c976175778/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f4e5979355532336d39676f535a68492e77656270" alt="8.webp" data-canonical-src="https://s2.loli.net/2025/06/29/NYy5U23m9goSZhI.webp" style="max-width: 100%;"></a></p>
+<ul>
+<li><code class="notranslate">门窗工具</code> - <code class="notranslate">门窗编号</code> 设置后框选，被框选到的门窗编号会全部修改为设置的门窗编号</li>
+<li><code class="notranslate">门窗工具</code> - <code class="notranslate">门窗表</code> 可以快速生成 <code class="notranslate">门窗表</code>，大多数情况使用默认设置即可</li>
+<li><code class="notranslate">门窗工具</code> - <code class="notranslate">门窗表刷新</code> 如果已经生成了门窗表之后有对模型中的门窗进行的修改，直接点击<code class="notranslate">门窗表刷新</code>就可以生成新的门窗表</li>
+</ul>
+<h3>楼梯</h3>
+<p>???+ success inline end "双跑楼梯"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4726022e858b6562a9ecbe2bcb05530be994cf1a26deb9605b7c1d323bf3b672/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f3673556671397532725638446861412e77656270"><img src="https://camo.githubusercontent.com/4726022e858b6562a9ecbe2bcb05530be994cf1a26deb9605b7c1d323bf3b672/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f3673556671397532725638446861412e77656270" alt="9.webp" data-canonical-src="https://s2.loli.net/2025/06/30/6sUfq9u2rV8DhaA.webp" style="max-width: 100%;"></a></p>
+<p>选择想要放置的楼梯类型之后，将 <code class="notranslate">楼梯高度</code> 改为 <code class="notranslate">当前层高</code>，点击 <code class="notranslate">梯间宽</code> 到楼层平面去分别点选楼梯间两面互相平行的墙，根据实际需要选择 <code class="notranslate">插入点</code></p>
+<h3>电梯</h3>
+<p>???+ success "电梯"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/702f2b9690b7f74aebe956b90b35ad49eeab8fff77dbf2cd88d96ff403a1099c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f5441463244386258374a52575168712e77656270"><img src="https://camo.githubusercontent.com/702f2b9690b7f74aebe956b90b35ad49eeab8fff77dbf2cd88d96ff403a1099c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f5441463244386258374a52575168712e77656270" alt="10.webp" data-canonical-src="https://s2.loli.net/2025/06/30/TAF2D8bX7JRWQhq.webp" style="max-width: 100%;"></a></p>
+<p>只有在四面都是墙的房间中才可以放置电梯，这个房间不能有门和窗，必须四面是墙。第一次点选这个四面是墙的房间的一面墙作为电梯门的放置位置，第二次点选房间中的任意一点，这样电梯就会放置在这个房间中。即电梯必须要独占一个房间的所有空间。</p>
+<h3>栏杆扶手</h3>
+<p>与revit原生操作类似。</p>
+<h3>阳台/绘制台阶/绘制散水</h3>
+<p>???+ success "阳台"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5d103cda6191fab411702d384a2c96e7d7aa6de830b7b65b793b252bfbb092c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f566e396a5473596d386849376c47452e77656270"><img src="https://camo.githubusercontent.com/5d103cda6191fab411702d384a2c96e7d7aa6de830b7b65b793b252bfbb092c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f566e396a5473596d386849376c47452e77656270" alt="11.webp" data-canonical-src="https://s2.loli.net/2025/06/30/Vn9jTsYm8hI7lGE.webp" style="max-width: 100%;"></a></p>
+<p>这三个操作都比较简单。</p>
+<p>阳台和绘制台阶都只需要分别点选两个点即可绘制，绘制散水只需选择 <code class="notranslate">自动搜索生成</code>，然后框选整个楼层平面即可自动绘制</p>
+<p>???+ success inline end "详图线"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/dd159e87b12adf0ee2faa152d9770eae63ebe83dfd14abde7f3d400605fcb62d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f6d6a7a616f6970426b6c4f747248432e77656270"><img src="https://camo.githubusercontent.com/dd159e87b12adf0ee2faa152d9770eae63ebe83dfd14abde7f3d400605fcb62d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f6d6a7a616f6970426b6c4f747248432e77656270" alt="13.webp" data-canonical-src="https://s2.loli.net/2025/06/30/mjzaoipBklOtrHC.webp" style="max-width: 100%;"></a></p>
+<p>???+ success inline end "绘制台阶"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c5a2b2ed7520f177b89d77b55fec3e6db5054090280e36f08c9afe6a56def321/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f7351326744376d4a4e797771317a6b2e77656270"><img src="https://camo.githubusercontent.com/c5a2b2ed7520f177b89d77b55fec3e6db5054090280e36f08c9afe6a56def321/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f7351326744376d4a4e797771317a6b2e77656270" alt="12.webp" data-canonical-src="https://s2.loli.net/2025/06/30/sQ2gD7mJNywq1zk.webp" style="max-width: 100%;"></a></p>
+<p>通过详图线绘制台阶：</p>
+<ol>
+<li>使用 <code class="notranslate">注释</code> - <code class="notranslate">详图线</code>，绘制一个闭合的曲线</li>
+<li><code class="notranslate">绘制台阶</code> 选择 <code class="notranslate">已有路径绘制</code></li>
+<li>框选前面绘制的闭合曲线，将会沿着这个闭合曲线绘制台阶</li>
+</ol>
+<h3>房间楼板</h3>
+<p>???+ success "房间楼板"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/a797d747fe724661940780f6853f0726084e07223e7425269c189adbfa489aec/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f6738426b4e694846533577345668662e77656270"><img src="https://camo.githubusercontent.com/a797d747fe724661940780f6853f0726084e07223e7425269c189adbfa489aec/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f6738426b4e694846533577345668662e77656270" alt="14.webp" data-canonical-src="https://s2.loli.net/2025/06/30/g8BkNiHFS5w4Vhf.webp" style="max-width: 100%;"></a></p>
+<p>实际上是两个功能，标记“房间”和房间面积，放置房间楼板</p>
+<ul>
+<li>标记“房间”和房间面积 勾选 <code class="notranslate">显示房间名称</code> 和 <code class="notranslate">标注面积</code> 两个复选框，框选一片区域，点击 <code class="notranslate">完成</code>，被框选到的房间将自动计算并分别标出这片区域所有房间的面积，以及“房间”</li>
+<li>放置房间楼板 同样使用框选选中一片区域，点击 <code class="notranslate">完成</code> ，这片区域的房间将放置楼板</li>
+</ul>
+<h3>入门坡道</h3>
+<p>???+ success inline end "入门坡道"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f83d8fb58f01ffcf37b7dc652b14583a6b2ad3bac9aecbab1cc1bb2fdeb34a65/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f724a33636b314150464247446437342e77656270"><img src="https://camo.githubusercontent.com/f83d8fb58f01ffcf37b7dc652b14583a6b2ad3bac9aecbab1cc1bb2fdeb34a65/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f724a33636b314150464247446437342e77656270" alt="15.webp" data-canonical-src="https://s2.loli.net/2025/06/30/rJ3ck1APFBGDd74.webp" style="max-width: 100%;"></a></p>
+<p>根据需要设置坡道相关参数，然后点选一个向外开的门。（必须是向外开的门）</p>
+<h3>无障碍坡道/无障碍坡道编辑</h3>
+<p>???+ success "无障碍坡道"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8910f181543447bf740e4428d12cbba0ec5470d1b105e2bbfb90928e568bc4a4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f413853435a756f674a4f33784d6b6a2e77656270"><img src="https://camo.githubusercontent.com/8910f181543447bf740e4428d12cbba0ec5470d1b105e2bbfb90928e568bc4a4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f413853435a756f674a4f33784d6b6a2e77656270" alt="16.webp" data-canonical-src="https://s2.loli.net/2025/06/30/A8SCZuogJO3xMkj.webp" style="max-width: 100%;"></a></p>
+<p>按照需求修改相关参数，点击楼层视图上面的点就可以插入无障碍坡道。</p>
+<h3>汽车坡道/汽车坡道编辑</h3>
+<p>???+ success "汽车坡道"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e20c994e0aec3471310121088ccddf9be3e5568d6aea3023ffc29ae204342f4b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f36386b744a64434857754e4951324d2e77656270"><img src="https://camo.githubusercontent.com/e20c994e0aec3471310121088ccddf9be3e5568d6aea3023ffc29ae204342f4b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f36386b744a64434857754e4951324d2e77656270" alt="17.webp" data-canonical-src="https://s2.loli.net/2025/06/30/68ktJdCHWuNIQ2M.webp" style="max-width: 100%;"></a></p>
+<ol>
+<li>通过 <code class="notranslate">注释</code> - <code class="notranslate">详图线</code> 绘制一段折线</li>
+<li><code class="notranslate">天正建筑</code> - <code class="notranslate">汽车坡道</code> ，框选这段折线，点击<code class="notranslate">完成</code></li>
+<li>设置汽车坡道相关参数</li>
+</ol>
+<h3>汽车坡道展开图</h3>
+<p>???+ success "汽车坡道展开图"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e20c994e0aec3471310121088ccddf9be3e5568d6aea3023ffc29ae204342f4b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f36386b744a64434857754e4951324d2e77656270"><img src="https://camo.githubusercontent.com/e20c994e0aec3471310121088ccddf9be3e5568d6aea3023ffc29ae204342f4b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f36386b744a64434857754e4951324d2e77656270" alt="17.webp" data-canonical-src="https://s2.loli.net/2025/06/30/68ktJdCHWuNIQ2M.webp" style="max-width: 100%;"></a></p>
+<ol>
+<li><code class="notranslate">天正建筑</code> - <code class="notranslate">汽车坡道展开图</code></li>
+<li>点选一个汽车坡道</li>
+<li>设置相关的参数</li>
+<li>在新视图中随便点击一下，即可完成汽车坡道展开图的绘制</li>
+</ol>
+<h3>方向箭头</h3>
+<p>这个操作非常简单，在结构平面上放置方向箭头。</p>
+<h3>车位布置</h3>
+<p>???+ success "车位布置"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/53d51a6d3a843cca0e9ad070849bdc2553a62bd13dab3565e5543bcde3b3c7b3/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f4e4136465164496b775645484f4d5a2e77656270"><img src="https://camo.githubusercontent.com/53d51a6d3a843cca0e9ad070849bdc2553a62bd13dab3565e5543bcde3b3c7b3/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f4e4136465164496b775645484f4d5a2e77656270" alt="19.webp" data-canonical-src="https://s2.loli.net/2025/06/30/NA6FQdIkwVEHOMZ.webp" style="max-width: 100%;"></a></p>
+<p>放置停车位。</p>
+<h2>标注出图 选项卡</h2>
+<h3>尺寸标注</h3>
+<p>???+ success "尺寸标注"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c25ec2667f414c97946ff924c3359037c9ba3dd934eb804330e86be132126011/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f643163444c65513639763252774a782e77656270"><img src="https://camo.githubusercontent.com/c25ec2667f414c97946ff924c3359037c9ba3dd934eb804330e86be132126011/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f643163444c65513639763252774a782e77656270" alt="20.webp" data-canonical-src="https://s2.loli.net/2025/06/30/d1cDLeQ69v2RwJx.webp" style="max-width: 100%;"></a></p>
+<p>所有尺寸标注用法大同小异。</p>
+<p><code class="notranslate">门窗标注</code> <code class="notranslate">墙厚标注</code> <code class="notranslate">内门标注</code> 都是画一条穿过门/墙/窗的线，然后自动添加尺寸标注</p>
+<p><code class="notranslate">楼梯标注</code> 是先点击某个楼梯</p>
+<p><code class="notranslate">层间标注</code> 需要切换到立面视图，然后框选标高线</p>
+<p><code class="notranslate">立面门窗标注</code> 点击之后自动为立面图的门窗添加尺寸标注</p>
+<h3>符号标注标注</h3>
+<p>???+ success "做法标注"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d8cc132159ed1f12d1a4a56ae1eb7a14c785ec76f3b50b5b05da3df26560e4c5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f686c345073356b6f5a7166334c46482e77656270"><img src="https://camo.githubusercontent.com/d8cc132159ed1f12d1a4a56ae1eb7a14c785ec76f3b50b5b05da3df26560e4c5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f686c345073356b6f5a7166334c46482e77656270" alt="21.webp" data-canonical-src="https://s2.loli.net/2025/06/30/hl4Ps5koZqf3LFH.webp" style="max-width: 100%;"></a></p>
+<ul>
+<li><code class="notranslate">标高标注</code> 操作非常简单，用来放置标高</li>
+<li><code class="notranslate">箭头引注</code> 绘制之后，点击鼠标右键，点击 <code class="notranslate">取消</code> 即可绘制完成</li>
+<li><code class="notranslate">引出标注</code> 操作简单，效果和箭头引注类似</li>
+<li><code class="notranslate">做法标注</code> 直接到词库中选取某些构建的详细做法，非常方便</li>
+<li><code class="notranslate">索引符号</code> <code class="notranslate">索引图名</code> 与前面的操作类似</li>
+<li><code class="notranslate">图名标注</code> 快速标注图名，非常方便</li>
+</ul>
+<h3>卫生间详图/楼梯间详图</h3>
+<p>???+ success inline end "详图索引"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/01f84449b3a3279597386a66ba9e64a8ea4d05c48c7b2998375b2120e19acdbd/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f4e4a5459575a76497973626d6f527a2e77656270"><img src="https://camo.githubusercontent.com/01f84449b3a3279597386a66ba9e64a8ea4d05c48c7b2998375b2120e19acdbd/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f4e4a5459575a76497973626d6f527a2e77656270" alt="22.webp" data-canonical-src="https://s2.loli.net/2025/06/30/NJTYWZvIysbmoRz.webp" style="max-width: 100%;"></a></p>
+<p>???+ success "楼梯间详图"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6fd12920ea2e0de220f1226d47667fe7aca65425a7ddb8d77f02f2faf0cbb6fb/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f7a5951654f45496d484379694777502e77656270"><img src="https://camo.githubusercontent.com/6fd12920ea2e0de220f1226d47667fe7aca65425a7ddb8d77f02f2faf0cbb6fb/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f7a5951654f45496d484379694777502e77656270" alt="23.webp" data-canonical-src="https://s2.loli.net/2025/06/30/zYQeOEImHCyiGwP.webp" style="max-width: 100%;"></a></p>
+<p>二者操作方法类似，以楼梯间详图为例进行说明：</p>
+<ol>
+<li><code class="notranslate">视图</code> - <code class="notranslate">详图索引</code>，在需要详图索引的区域绘制一个详图索引框</li>
+<li><code class="notranslate">标注出图</code> - <code class="notranslate">楼梯间详图</code> - <code class="notranslate">点选</code>，点选刚刚绘制的详图框，即可生成楼梯间详图</li>
+</ol>
+<h3>门窗图例</h3>
+<p>自动生成这个项目中所有门窗的图例</p>
+<h2>天正工具 选项卡</h2>
+<h3>楼层复制/批量复制</h3>
+<p>用于快速复制楼层，先框选某个楼层的所有，然后点击 <code class="notranslate">楼层复制</code> 根据需要选择需要复制到的楼层。比revit原生的 <code class="notranslate">筛选器</code> 和 <code class="notranslate">与选定标高对齐</code> 方便</p>
+<h3>链接多文件</h3>
+<p>用于合并多个revit模型</p>
+<h3>图纸创建/插入图框</h3>
+<p>???+ success "图纸创建"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3e84cb61e6908c6bdb359c4bec3b3d57ac848569e0e6b8e1a4842da6b0f0935b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f52445348416651334671686e676a792e77656270"><img src="https://camo.githubusercontent.com/3e84cb61e6908c6bdb359c4bec3b3d57ac848569e0e6b8e1a4842da6b0f0935b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f52445348416651334671686e676a792e77656270" alt="24.webp" data-canonical-src="https://s2.loli.net/2025/06/30/RDSHAfQ3Fqhngjy.webp" style="max-width: 100%;"></a></p>
+<p>必须先 <code class="notranslate">图纸创建</code> 才能 <code class="notranslate">插入图框</code></p>
+<p>进行 <code class="notranslate">图纸创建</code> 之后，可在 <code class="notranslate">项目浏览器</code> 的 <code class="notranslate">图纸</code> 中切换到图纸视图</p>
+<p>在图纸视图中可以 <code class="notranslate">插入图框</code></p>
+<h2>打开天正菜单侧边工具栏</h2>
+<p>???+ success inline end "天正菜单"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/b74040e8410c1e11486385d3eaf08ef1b1bd338990e5ee2aeb644b59fc5a326b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f4851634d74316d436b44505438364e2e77656270"><img src="https://camo.githubusercontent.com/b74040e8410c1e11486385d3eaf08ef1b1bd338990e5ee2aeb644b59fc5a326b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f4851634d74316d436b44505438364e2e77656270" alt="1.webp" data-canonical-src="https://s2.loli.net/2025/06/29/HQcMt1mCkDPT86N.webp" style="max-width: 100%;"></a></p>
+<p><code class="notranslate">天正工具</code> - <code class="notranslate">关于</code> - <code class="notranslate">开关菜单</code></p>
+<h3>三维浏览</h3>
+<p>???+ success inline end "三维浏览"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/65b639c761a6b0436340913f889563d12211f723561f1951bd6e4f1f87570c2d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f4c6b31586d6641424e72524d616c6a2e77656270"><img src="https://camo.githubusercontent.com/65b639c761a6b0436340913f889563d12211f723561f1951bd6e4f1f87570c2d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f4c6b31586d6641424e72524d616c6a2e77656270" alt="3.webp" data-canonical-src="https://s2.loli.net/2025/06/29/Lk1XmfABNrRMalj.webp" style="max-width: 100%;"></a></p>
+<p><code class="notranslate">天正工具</code> - <code class="notranslate">三维浏览</code></p>
+<ul>
+<li><code class="notranslate">三维浏览</code> revit原生的三维视图</li>
+<li><code class="notranslate">楼层三维</code> 某一个楼层的三维视图</li>
+<li><code class="notranslate">局部三维</code> 某一片区域的三维视图。在楼层平面中框选需要查看三维视图的一片区域，框选之后要点击选项卡下方的 <code class="notranslate">完成</code> 才会显示这片区域的三维视图，实际上是使用revit原生的剖面框来实现的，因此局部三维视图也可以拉伸剖面框的边界来显示更多或更少的内容</li>
+</ul>
+<p>???+ success "局部三维"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/49fcdcea2f9f3ae69544b4bb9676eeddcf934b63bbf34e878c5443717435fd8d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f3956434a684b59473272547a4450572e77656270"><img src="https://camo.githubusercontent.com/49fcdcea2f9f3ae69544b4bb9676eeddcf934b63bbf34e878c5443717435fd8d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f32392f3956434a684b59473272547a4450572e77656270" alt="4.webp" data-canonical-src="https://s2.loli.net/2025/06/29/9VCJhKYG2rTzDPW.webp" style="max-width: 100%;"></a></p>
+<h3>图例布置</h3>
+<p>操作非常简单，用于放置马桶、床、桌子等家具</p>
+<h3>视图联动</h3>
+<p>相当于分屏，同时显示多个视图，适合大屏幕的设备使用</p>
+<h3>导出为tgl</h3>
+<p><code class="notranslate">天正工具</code> - <code class="notranslate">数据中心</code> - <code class="notranslate">BIM导出</code></p>
+<h2>PDF 出图</h2>
+<ol>
+<li>
+<p>切换到图纸视图</p>
+</li>
+<li>
+<p>在图纸视图中调整</p>
+<p>???+ success "在图纸视图中调整"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6ed28edb495ccd1942a728d0a34f0bc0975ee4e7011b91cf9cb2683ec62bb06d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f4846664c714a546858366945416d702e77656270"><img src="https://camo.githubusercontent.com/6ed28edb495ccd1942a728d0a34f0bc0975ee4e7011b91cf9cb2683ec62bb06d/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f4846664c714a546858366945416d702e77656270" alt="25.webp" data-canonical-src="https://s2.loli.net/2025/06/30/HFfLqJThX6iEAmp.webp" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p><code class="notranslate">文件</code> - <code class="notranslate">打印</code></p>
+</li>
+<li>
+<p>打印设置</p>
+<p>???+ success "打印设置"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3dc41c85a317b09d7105c6c591ab96574aa351ea210be8ab798f401f36012704/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f47523569666b785a333149586f756e2e77656270"><img src="https://camo.githubusercontent.com/3dc41c85a317b09d7105c6c591ab96574aa351ea210be8ab798f401f36012704/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f33302f47523569666b785a333149586f756e2e77656270" alt="26.webp" data-canonical-src="https://s2.loli.net/2025/06/30/GR5ifkxZ31IXoun.webp" style="max-width: 100%;"></a></p>
+<pre class="notranslate"><code class="notranslate"> ![27.webp](https://s2.loli.net/2025/06/30/sptjEbYZIFw41PD.webp)
+</code></pre>
+</li>
+</ol>
+<p>打印之前先预览，再打印</p>
+<h2>使用天正AutoCAD插件T20打开TGL文件</h2>
+<p>T20插件全都位于AutoCAD侧栏</p>
+<h3>BIM导入</h3>
+<p>???+ success inline end "BIM导入"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6435d8320a9912e68a44d16e514983e7c96a6d03c2ce674aaaa1de2316354168/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30372f30312f6d34524458794c7269677557456c7a2e77656270"><img src="https://camo.githubusercontent.com/6435d8320a9912e68a44d16e514983e7c96a6d03c2ce674aaaa1de2316354168/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30372f30312f6d34524458794c7269677557456c7a2e77656270" alt="28.webp" data-canonical-src="https://s2.loli.net/2025/07/01/m4RDXyLriguWElz.webp" style="max-width: 100%;"></a></p>
+<p>???+ success inline end "整图导出"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9b59c1dbf2ab64a29f63316191c04d2f5d753bebd81813fd89fbe2ce9430ab22/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30372f30312f6b756d5945717946516753764b32502e77656270"><img src="https://camo.githubusercontent.com/9b59c1dbf2ab64a29f63316191c04d2f5d753bebd81813fd89fbe2ce9430ab22/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30372f30312f6b756d5945717946516753764b32502e77656270" alt="29.webp" data-canonical-src="https://s2.loli.net/2025/07/01/kumYEqyFQgSvK2P.webp" style="max-width: 100%;"></a></p>
+<ol>
+<li><code class="notranslate">数据中心</code> - <code class="notranslate">BIM导入</code>，选择从Revit中导出的 <code class="notranslate">.tgl</code> 文件</li>
+<li><code class="notranslate">文件布图</code> - <code class="notranslate">整图导出</code>，选择保存为较新版本的 T20 支持的 <code class="notranslate">.dwg</code> 文件</li>
+</ol>
+<p>???+ note<br>
+- 请注意Revit模型构建的连接关系，不要出现重合的柱，否则通过 <code class="notranslate">.tgl</code> 文件导入到AutoCAD时，将无法操作，导致软件卡死<br>
+- <code class="notranslate">.tgl</code> 文件实际上是将Revit模型文件转换为AutoCAD图形文件的中间文件</p></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

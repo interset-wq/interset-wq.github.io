@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content=":material-pen-plus: `本文创建于2025-5-10`
+
+## 一、常用命令
+
+- `RP` 放置参考平面
+- `HH` 隐藏
+- `HI` 隔离显示，只显示选中的图元
+- `HR` 全显示，取消隐藏
+- `DI` 尺寸标注
+- `EL` 高程标注
+- `LL` 绘制标高
+- `LI` 放置线
+- `TR` 修剪
+- `SL` 打断
+- `DL` 详图线
+
+## 二、绘制轴网
+
+参考这位大佬是视频：
+
+<iframe src='//player.bilibili.com/player.html?isOutside=true&aid=114846536306689&bvid=BV14FuNzcEeS&cid=31019960957&p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'></iframe>
+
+针对不同情况，有以下两种方式快速绘制：
+
+### 2.1 复制CO
+
+如果没有连续相同间距的轴线时，直接使用 `CO` 复制命令，并且勾选 `多个` 复选框。">
+<meta property="og:title" content="Revit 操作技巧">
+<meta property="og:description" content=":material-pen-plus: `本文创建于2025-5-10`
+
+## 一、常用命令
+
+- `RP` 放置参考平面
+- `HH` 隐藏
+- `HI` 隔离显示，只显示选中的图元
+- `HR` 全显示，取消隐藏
+- `DI` 尺寸标注
+- `EL` 高程标注
+- `LL` 绘制标高
+- `LI` 放置线
+- `TR` 修剪
+- `SL` 打断
+- `DL` 详图线
+
+## 二、绘制轴网
+
+参考这位大佬是视频：
+
+<iframe src='//player.bilibili.com/player.html?isOutside=true&aid=114846536306689&bvid=BV14FuNzcEeS&cid=31019960957&p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'></iframe>
+
+针对不同情况，有以下两种方式快速绘制：
+
+### 2.1 复制CO
+
+如果没有连续相同间距的轴线时，直接使用 `CO` 复制命令，并且勾选 `多个` 复选框。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/37.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>Revit 操作技巧</title>
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">Revit 操作技巧</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#cccccc;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Other">Other</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-5-10</code></p>
+<h2>一、常用命令</h2>
+<ul>
+<li><code class="notranslate">RP</code> 放置参考平面</li>
+<li><code class="notranslate">HH</code> 隐藏</li>
+<li><code class="notranslate">HI</code> 隔离显示，只显示选中的图元</li>
+<li><code class="notranslate">HR</code> 全显示，取消隐藏</li>
+<li><code class="notranslate">DI</code> 尺寸标注</li>
+<li><code class="notranslate">EL</code> 高程标注</li>
+<li><code class="notranslate">LL</code> 绘制标高</li>
+<li><code class="notranslate">LI</code> 放置线</li>
+<li><code class="notranslate">TR</code> 修剪</li>
+<li><code class="notranslate">SL</code> 打断</li>
+<li><code class="notranslate">DL</code> 详图线</li>
+</ul>
+<h2>二、绘制轴网</h2>
+<p>参考这位大佬是视频：</p>
+&lt;iframe src="//player.bilibili.com/player.html?isOutside=true&amp;aid=114846536306689&amp;bvid=BV14FuNzcEeS&amp;cid=31019960957&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt;&lt;/iframe&gt;
+<p>针对不同情况，有以下两种方式快速绘制：</p>
+<h3>2.1 复制CO</h3>
+<p>如果没有连续相同间距的轴线时，直接使用 <code class="notranslate">CO</code> 复制命令，并且勾选 <code class="notranslate">多个</code> 复选框。</p>
+<p>不要直接通过 ++ctrl+c++ 和 ++ctrl+v++ 进行复制粘贴，因为这样无法勾选 <code class="notranslate">多个</code> 复选框。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/26c0636977c063f3ab08182876c8e3314307f40c0c44528614ef2c0c012863a6/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254538254244254234254537254244253931312e346e3830336b626375772e77656270"><img src="https://camo.githubusercontent.com/26c0636977c063f3ab08182876c8e3314307f40c0c44528614ef2c0c012863a6/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254538254244254234254537254244253931312e346e3830336b626375772e77656270" alt="轴网1" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E8%BD%B4%E7%BD%911.4n803kbcuw.webp" style="max-width: 100%;"></a></p>
+<h3>2.2 阵列AR</h3>
+<p>如果有n个连续相同间距的轴线时，使用 <code class="notranslate">AR</code> 阵列命令，<strong>不要</strong>勾选 <code class="notranslate">成组并关联</code> 复选框，<code class="notranslate">项目数</code> 填 n+1</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ba094aed8522519004d1cbdde9fa44356d172ae743f7f1464f4afbec8c516da9/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254538254244254234254537254244253931322e6963657267653673392e77656270"><img src="https://camo.githubusercontent.com/ba094aed8522519004d1cbdde9fa44356d172ae743f7f1464f4afbec8c516da9/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254538254244254234254537254244253931322e6963657267653673392e77656270" alt="轴网2" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E8%BD%B4%E7%BD%912.icerge6s9.webp" style="max-width: 100%;"></a></p>
+<h2>三、尺寸标注DI</h2>
+<h3>3.1 轴网尺寸标注</h3>
+<ol>
+<li>
+<p>绘制矩形 <em>辅助外墙</em></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/11aabd261c35ddca20b035818f1c3ded9e2cad166dc6f079c078d342c2676218/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138312e37736e69326b3139316b2e77656270"><img src="https://camo.githubusercontent.com/11aabd261c35ddca20b035818f1c3ded9e2cad166dc6f079c078d342c2676218/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138312e37736e69326b3139316b2e77656270" alt="尺寸标注1" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E5%B0%BA%E5%AF%B8%E6%A0%87%E6%B3%A81.7sni2k191k.webp" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>设置 <code class="notranslate">DI</code> 尺寸标注命令相关参数，按图示勾选</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f79a99e01a55a8d60669c69ab255f2030e84d344ea976ca848230b1491d762ba/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138322e326135646d65743079302e77656270"><img src="https://camo.githubusercontent.com/f79a99e01a55a8d60669c69ab255f2030e84d344ea976ca848230b1491d762ba/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138322e326135646d65743079302e77656270" alt="尺寸标注2" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E5%B0%BA%E5%AF%B8%E6%A0%87%E6%B3%A82.2a5dmet0y0.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f047beae3f2d06ba2e2a9824d18a2a7b52796f4d4e17952a7e75605a3a8c35f6/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138332e3939746e3462356473392e77656270"><img src="https://camo.githubusercontent.com/f047beae3f2d06ba2e2a9824d18a2a7b52796f4d4e17952a7e75605a3a8c35f6/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138332e3939746e3462356473392e77656270" alt="尺寸标注3" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E5%B0%BA%E5%AF%B8%E6%A0%87%E6%B3%A83.99tn4b5ds9.webp" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>选取某面 <em>辅助墙</em></p>
+</li>
+<li>
+<p>尺寸标注完成后删除辅助墙</p>
+</li>
+</ol>
+<h3>3.2 门窗尺寸标注</h3>
+<p>操作与前面相同，只是 <code class="notranslate">DI</code> 尺寸标注命令的参数设置不相同，按图示勾选</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/0aa43a6b2c30b61f991d8978093b6d49ebd598336b4ad055bc6f148cb90d59cb/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138342e396464393231353573672e77656270"><img src="https://camo.githubusercontent.com/0aa43a6b2c30b61f991d8978093b6d49ebd598336b4ad055bc6f148cb90d59cb/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f254535254230254241254535254146254238254536254130253837254536254233254138342e396464393231353573672e77656270" alt="尺寸标注4" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E5%B0%BA%E5%AF%B8%E6%A0%87%E6%B3%A84.9dd92155sg.webp" style="max-width: 100%;"></a></p>
+<h2>四、楼梯绘制</h2>
+<p>参考这位大佬的视频</p>
+&lt;iframe src="//player.bilibili.com/player.html?isOutside=true&amp;aid=113781283756539&amp;bvid=BV1DPrjYzEpj&amp;cid=27732674616&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt;&lt;/iframe&gt;
+<h2>五、族——公制常规模型</h2>
+<p>参考这位大佬的视频：</p>
+&lt;iframe src="//player.bilibili.com/player.html?isOutside=true&amp;aid=112949016396889&amp;bvid=BV1U2eceFE3Z&amp;cid=500001647133567&amp;p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt;&lt;/iframe&gt;
+<h3>5.1 拉伸和空心拉伸</h3>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/84e7d0d1e6dd97f7b2fe09369e9b01b6f07af581f3967b3dbd5adb034028addd/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545362538422538392545342542432542382e3861646a7530727772372e77656270"><img src="https://camo.githubusercontent.com/84e7d0d1e6dd97f7b2fe09369e9b01b6f07af581f3967b3dbd5adb034028addd/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545362538422538392545342542432542382e3861646a7530727772372e77656270" alt="拉伸" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E6%8B%89%E4%BC%B8.8adju0rwr7.webp" style="max-width: 100%;"></a></p>
+<p>面动成体。</p>
+<p>点击 <code class="notranslate">拉伸</code> 在 <code class="notranslate">属性</code> 中设置好相关的参数，然后 <code class="notranslate">楼层平面-参照标高</code> 上面绘制截面，打对勾生成经过这个界面移动后形成的三维图形。例如，绘制的是圆形，通过 <code class="notranslate">拉伸</code> 得到的就是圆柱了。</p>
+<p><code class="notranslate">拉伸</code> 绘制截面时，除了绘制外边框，还可以在外边框内部继续绘制图形，这样可以挖去里面的结构。</p>
+<p>也可以通过 <code class="notranslate">空心形状-空心拉伸</code> 形成需要挖去的几何体，实体这个几何体相交的部分会被挖空。</p>
+<h3>5.2 融合</h3>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1af390a146959ffc671d337939ccaa832c26a965c758ad1e72da6c3c6af15afe/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545382539452538442545352539302538382e6d643574776774302e77656270"><img src="https://camo.githubusercontent.com/1af390a146959ffc671d337939ccaa832c26a965c758ad1e72da6c3c6af15afe/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545382539452538442545352539302538382e6d643574776774302e77656270" alt="融合" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E8%9E%8D%E5%90%88.md5twgt0.webp" style="max-width: 100%;"></a></p>
+<p>点击 <code class="notranslate">融合</code> 设置好相关参数之后，在 <code class="notranslate">楼层平面-参照标高</code> 上面绘制图形，点击 <code class="notranslate">编辑顶部</code> ，再次绘制图形，打对勾。通过 <code class="notranslate">融合</code> 可以绘制圆台等上下两个底面形状不同的几何体。</p>
+<h3>5.3 旋转</h3>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1b92879e2724a80404b69aa699f1e46ec5c3c900fb99c23c050f9c51ea46bcc3/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545362539372538422545382542442541432e3233323574773464736a2e77656270"><img src="https://camo.githubusercontent.com/1b92879e2724a80404b69aa699f1e46ec5c3c900fb99c23c050f9c51ea46bcc3/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545362539372538422545382542442541432e3233323574773464736a2e77656270" alt="旋转" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E6%97%8B%E8%BD%AC.2325tw4dsj.webp" style="max-width: 100%;"></a></p>
+<p>点击 <code class="notranslate">旋转</code> 设置好相关参数之后，在 <code class="notranslate">楼层平面-参照标高</code> 上面绘制图形，然后再绘制 <code class="notranslate">旋转轴</code> ，打对勾。例如：矩形旋转形成圆柱，三角形旋转形成圆锥</p>
+<h3>5.4 放样（常用）</h3>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/54f13bf30403b57fab1306076460f0098e5852dd78450864828e400dfd3a2056/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545362539342542452545362541302542372e346734736233746965672e77656270"><img src="https://camo.githubusercontent.com/54f13bf30403b57fab1306076460f0098e5852dd78450864828e400dfd3a2056/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545362539342542452545362541302542372e346734736233746965672e77656270" alt="放样" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E6%94%BE%E6%A0%B7.4g4sb3tieg.webp" style="max-width: 100%;"></a></p>
+<p>通过放样可以绘制各种复杂的台阶等。</p>
+<p>点击 <code class="notranslate">放样</code> 之后，在 <code class="notranslate">楼层平面-参照标高</code> 上面 <code class="notranslate">绘制路径</code>，打对勾，然后再 <code class="notranslate">编辑轮廓</code>，在弹出的对话框中选一个里面，绘制图形 ，打对勾。放样也是面动成体，只是这个面时沿着这条路径运动的，即路径上的每一个点的截面都是在立面中绘制的轮廓。</p>
+<h3>5.5 放样融合</h3>
+<p>放样和融合的结合，操作与放样和融合类似。</p>
+<h2>六、描图</h2>
+<p>可以直接在revit中导入图片，然后通过缩放 <code class="notranslate">RE</code> 使图片中的尺寸和revit中的尺寸一致，这样就可以描着图片绘制模型。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ba301d133631bbe8d5c999c325ca73443372be11aaf71471cd356744d0f1354e/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545352539422542452545372538392538372e737a386f68706d33782e77656270"><img src="https://camo.githubusercontent.com/ba301d133631bbe8d5c999c325ca73443372be11aaf71471cd356744d0f1354e/68747470733a2f2f643131316b632e6769746875622e696f2f706963782d696d616765732d686f7374696e672f72657669742f2545352539422542452545372538392538372e737a386f68706d33782e77656270" alt="图片" data-canonical-src="https://d111kc.github.io/picx-images-hosting/revit/%E5%9B%BE%E7%89%87.sz8ohpm3x.webp" style="max-width: 100%;"></a></p>
+<ol>
+<li><code class="notranslate">插入</code> - <code class="notranslate">图像</code>，将图像放置在平面视图中</li>
+<li>选中刚才放置的图像，使用 <code class="notranslate">RE</code> 缩放命令</li>
+<li>在图像上点击某个尺寸标记的两端，显然这时候显示的数值并不与图上标出的数值相同，此时直接输入图上的尺寸，图像就可完成缩放</li>
+</ol></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  
+</body>
+</html>

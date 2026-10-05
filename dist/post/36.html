@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content=":material-pen-plus: `本文创建于2025-5-10`
+
+<!-- ???+ quote 
+    本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF -->
+
+## 简介
+
+族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等
+
+项目样板: 相当于模板文件
+
+???+ warning
+    如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.
+
+### 无CAD图纸,根据PDF直接使用revit绘制图形的步骤
+
+1. 在revit立面视图绘制标高
+    - 根据revit立面视图自带的两个标高绘制
+    - 设置这两个默认标高的左右标记同时可见
+    - 将 `上标头` 的标高设置为PDF图纸中的大小,不必修改标高别名 `标高2`
+    - 使用 ++ctrl+c++ 复制 `上标头`
+    - 使用 ++ctrl+v++ 粘贴,放置, ++esc++
+    - 修改标高值
+    - 重复上述步骤
+    - 根据图纸修改标高的别名
+    - 由于使用了复制粘贴,revit不会将粘贴的标高显示在 `项目浏览器` 的 `结构平面` 中,需要手动调整
+
+        ![constract.png](https://s2.loli.net/2025/05/15/dgb48Qr2Ik3GtDZ.png)
+
+        按图示操作, 点击 `结构平面`, revit将弹出 `新建结构平面` 对话框,选取需要的标高(一般是全选), 点击 `确定`
+
+2. 绘制轴网(在CAD中也称为定位轴线)
+    - 随便绘制一根轴线(此处以横向轴线为例)
+    - 设置这根轴线的左右标记同时可见,修改标记的内容,绘制时按照数字和字母顺序绘制,以使用revit的某人标记
+    - 使用 ++ctrl+c++ 复制这根轴线
+    - 使用 ++ctrl+v++ 粘贴
+    - 键盘输入距离
+    - 键盘 ++esc++ 退出, 使用 ++ctrl+c++ 复制这根刚刚放置的轴线
+    - 重复上述步骤
+    - 纵向轴线画法相同
+    - 将轴网放置在四个观测记号的中央
+
+## 第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图
+
+使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 `.dwg`. 采用图形上面的图名作为文件名, 以便后续使用.
+
+???+ tip
+    实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.
+
+???+ success '操作步骤'
+    1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.
+    2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.
+
+        ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
+
+        ???+ warning
+            选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
+
+        ???+ tip 'FILETAB选项卡'
+            `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
+
+            ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
+
+??? tip '如何打开AutoCAD的左右两侧的绘图和修改工具栏'
+    step1 显示菜单栏
+
+    ![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
+
+    step2 打开菜单栏的 `工具` 选项卡
+
+    ![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
+
+## 第二步: 使用Revit创建一个结构模型
+
+新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)
+
+![newproj.png](https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png)
+
+???+ tip '如何打开项目选择器和属性'
+    ![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)
+
+### 2.1 绘制标高
+
+1. 随便选取一个立面,绘制标高,此处以'东'为例:
+
+    ![east.png](https://s2.loli.net/2025/05/11/VgCML3s1NQYex5H.png)
+
+2. 绘制标高
+
+    ![height1.png](https://s2.loli.net/2025/05/11/Smn6aLI5XYCc8Zq.png)
+
+3. 随意绘制几个标高,参考结构图将标高的数值改为结构图中的数值,并将'标高1'之类的默认名称改为结构图中的'一层'等名称,更改名称时会弹出提示框'是否希望重命名相应视图',选择'是'即可.
+
+    ![height.png](https://s2.loli.net/2025/05/11/enPMiSXwj7UfIuh.png)
+
+    ![alert.png](https://s2.loli.net/2025/05/11/HG7nX1KARaJf2su.png)
+
+4. 默认标高标注只显示右侧的,为了便于观察,往往需要同时显示左右两侧的标高标注. 在 `属性` 中点击 `编辑类型`, 勾选图示内容.
+
+    ![edit.png](https://s2.loli.net/2025/05/11/tyiwcDMS1LIx2sX.png)
+
+至此, 标高绘制完成.
+
+### 2.2 绘制轴网
+
+1. 将Revit视图切换到任意结构平面视图,将CAD图形导入Revit,注意:结构平面视图应与CAD图形一一对应,依次导入.
+
+    ![input.png](https://s2.loli.net/2025/05/11/qAjM1oTCSu385Gi.png)
+
+2. 绘制轴网,并移动方向标记使其靠近CAD图形,并使CAD图形大致位于四个方向标记的中间位置处.
+    
+    ![net.png](https://s2.loli.net/2025/05/11/zr4y7UVBoIP1pvK.png)
+
+    ![move.png](https://s2.loli.net/2025/05/11/6z8g2ojPf4tsump.png)
+
+3. 修改轴网的数字或字母编号,使其与定位轴线的编号一致.类似于标高标记,轴网标记也需要同时显示左右两侧的编号,二者操作类似.但是,轴网的轴线往往与定位轴线相重合,因此可以 `设置轴线中段为无` 将轴网的轴线隐藏,以免线条太多干扰视线.注意:轴线只需要在任意一个结构平面中绘制一次即可,因此绘制时建议选择线条较少的结构平面.
+
+    ![line.png](https://s2.loli.net/2025/05/11/Mb9LRvWnEtkdCih.png)
+
+4. 检查其他结构平面的定位轴线与轴网是否一致,如果不一致,请回到第一步重新拆分平面图.
+
+至此, 轴网绘制完成.
+
+### 2.3 在基础平面图中绘制垫层
+
+1. 通过结构图读出垫层的厚度和尺寸.
+
+    ![board0.png](https://s2.loli.net/2025/05/11/ZEeS51XKvptuQG8.png)
+
+2. 绘制垫层,把垫层视作楼板
+
+    ![board.png](https://s2.loli.net/2025/05/11/hjkfOSe7aHgP1Fy.png)
+
+    Revit会直接让我们使用系统族中的楼板, 往往我们需要修改其尺寸.为了保护系统族不会被篡改,往往复制系统族,重命名,然后修改尺寸.
+
+    ![board2.png](https://s2.loli.net/2025/05/11/PLwK2DyHb7fdtWh.png)
+
+    ![edit_board.png](https://s2.loli.net/2025/05/11/7c1DGpd9jgBiIC8.png)
+
+    ![diy_board.png](https://s2.loli.net/2025/05/11/IELi475VoahQqcP.png)
+
+3. 选择合适的方式绘制垫层, 绘制结束之后打对钩确认.
+
+    ![draw_board.png](https://s2.loli.net/2025/05/11/qOwlXsHu8FYetkW.png)
+
+至此, 垫层绘制完成.
+
+关闭此文件 `结构模型` `.rvt`
+
+### 2.4 新建条形基础族和放置条形基础
+
+1. 新建一个族
+
+    ![新建族.png](https://s2.loli.net/2025/05/13/rGKgIV64FtCvxl2.png)
+
+2. 通过 `放样` (面动成体) 绘制条形基础
+
+    ![放样.png](https://s2.loli.net/2025/05/13/TFAfjipRtQ6K9yE.png)
+
+    由于新建组时选取的模型 `基于线的公制常规模型` 自带线,所以通过`拾取路径`来绘制截面,绘制完成之后打对钩
+
+    ![拾取路径.png](https://s2.loli.net/2025/05/13/ezhRc4tZsAKXjP8.png)
+
+    - 识图,绘制基础轮廓,操作类似于AutoCAD
+
+        ![基础.png](https://s2.loli.net/2025/05/13/AKzEHoVlg6NnpTS.png)
+
+    - 由于图中的条形基础是对称结构,`编辑轮廓`时可以随便选取一个面,绘制结束之后打对钩
+  
+        ![编辑轮廓.png](https://s2.loli.net/2025/05/13/EZYV9jUcofAgysk.png)
+
+3. 至此,条形基础绘制结束.将这个族命名为 `条形基础` 保存 `.rfa`, 并关闭此文件
+4. 再次打开 `结构模型.rvt`
+5. 导入 `条形基础.rfa` 
+
+    ![载入.png](https://s2.loli.net/2025/05/13/sIEgGkDJtv5VqA1.png)
+
+    ???+ warning
+        进行此操作之后,revit并不会有任何反应,但是族文件已经导入到此项目中了.
+
+6. 放置条形基础(`基于线的公制常规模型` 属于 `构建`)
+
+    ![放置.png](https://s2.loli.net/2025/05/13/deEVSpTQZYDMCkc.png)
+
+    - 选择 `放置在工作平面上` , 根据图纸标高放置在垫层上
+
+        ![放置2.png](https://s2.loli.net/2025/05/13/nxdlCWhoyDtM3Fw.png)
+
+    - 通过快捷键 `hh` `临时隐藏/隔离` 2.3 步骤绘制的垫层,放置其遮挡CAD底图的线条
+    - 放置条形基础
+
+        ???+ note
+            放置时往往不能很好的对齐,因此放置结束之后使用对其命令 `al` 对齐,来调整基础防止的位置,操作类似于CAD
+
+            ![对齐.png](https://s2.loli.net/2025/05/13/lkHug6dGfQAB1wN.png)
+
+            放置时也不好把握基础的具体长度,也需要自行调整,操作类似于CAD
+
+7. 使用 `hr` 命令取消 `hh` 的隐藏功能,使垫层可见
+
+    ???+ note
+        如果在三维视图中查看感觉显示效果不好,可以在revit窗口左下角切换其他的 `视觉样式`
+
+        ![视觉样式.png](https://s2.loli.net/2025/05/13/879fDmpQhSXzV12.png)
+
+8. 切换到立面图查看,检查
+
+至此,放置基础完成.
+
+### 2.5 放置基础到一层的结构柱
+
+???+ note
+    使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.
+
+1. 由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.
+
+    将底图变为可选状态,点击revit右下角的 `选择锁定图元` 使其小图标右上角的×消失.
+
+    ![link.png](https://s2.loli.net/2025/05/14/vFpbnrgm2u8IthA.png)
+
+    选中底图,将其设置为 `前景`.
+
+    ![foreground.png](https://s2.loli.net/2025/05/14/JnhcRmxKbet9rVj.png)
+
+    再次点击revit右下角的 `选择锁定图元`,禁止选中底图
+
+2. 观察结构图中的柱结构, 如果同一个名字的柱有多种不同的配筋,应该加以区分.
+
+    ![domain.png](https://s2.loli.net/2025/05/14/Ym3P5wz7XuevRUj.png)
+
+3. 在revit中放置柱,并设置柱是向上延伸(高度)还是向下延伸(深度),以及要延伸到哪一层.
+
+    ![domain2.png](https://s2.loli.net/2025/05/14/DchtX6prVnSslg3.png)
+
+4. 默认柱直接防止在了基础底图的标高平面上,而柱应该防止在条形基础之上,因此需要设置柱的底部偏移.
+
+    ![domain3.png](https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png)
+
+???+ tip
+    改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动
+
+至此,基础层的柱放置完成.
+
+### 2.6 绘制基础和一层之间的的梁/板
+
+1. 将视图切换到 `一层` 调整 `视图范围`, 防止基础层线条对一层的干扰
+
+    ![range.png](https://s2.loli.net/2025/05/14/Mpk5vVPqYnjDRgQ.png)
+
+    ???+ note
+        由于视图切换到了 `一层` , 主要范围的 
+        
+        - `顶` 应该设置为 `标高之上(二层)`, 偏移量设置为 `0`,偏移量的单位是毫米
+        - `剖切面` 的 `偏移量` 的值应该设置为小于二层标高的数值
+        - `底` 应该设置为 `标高之上(一层)`, 偏移量设置为小于一层标高的一个数值
+
+        视图深度的 `标高` 可以直接采用主要范围的 `底` 的设置
+
+2. 放置梁,可以直接使用柱的中心点作为梁的起止点,然后使用 `al` 对齐命令对齐即可. `结构` - `梁`
+
+    ???+ note
+        revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,都会被自动截断,这也符合实际情况,因此放置梁时不必在意梁和柱的重合,因此可以直接使用柱的中心点作为梁的起止点.
+
+        revit放置构件时,不必在意配筋情况,只要注意宽高即可.但是,配筋情况不同的同名构件,要用不同的名称命名.
+
+3. 放置板(这个板实际上是基础层的天花板) `结构` - `楼板` - `楼板:结构` - `边界线` - `矩形`, 操作结束之后打对钩
+4. revit默认板会截断梁和柱,这明显与实际不符,因此需要改变二者的截断关系.
+
+    在三维视图中选中板 - `连接` - `切换链接顺序` - 勾选 `多个开关` - 再次选中板 - 使用鼠标左键拖动选择
+
+    ![board.png](https://s2.loli.net/2025/05/14/bTonxU4P9LYdfVR.png)
+
+    ![mul.png](https://s2.loli.net/2025/05/14/nIEqoGCMpuOQsJT.png)
+
+    ???+ tip
+        如果板无法选中,请开启revit右下角的 `按面选择图元`
+
+        ![tip.png](https://s2.loli.net/2025/05/14/YLQf5owJrk4UquN.png)
+
+5. 切换到立面图检查
+
+至此,梁和板放置完毕.
+
+基础层绘制完毕.
+
+### 2.7 放置一层到二层的柱(操作同 2.5)
+
+### 2.8 放置楼梯的柱和梁
+
+1. 分析结构图,计算柱高和梁的偏移高度
+
+    ![floor-info.png](https://s2.loli.net/2025/05/15/2E9lZIpgTzJDW1b.png)
+
+2. 切换到一层的平面视图, `结构` - `柱`, 直接设置柱高来放置柱
+
+    ![floor-domain.png](https://s2.loli.net/2025/05/15/A4fFoVnU3QYyrme.png)
+
+3. 计算梯梁距离一层的高度,设置 `Z轴偏移值`,再放置梁,可以使用 `al` 对齐命令辅助对齐.
+
+    ![floor-x.png](https://s2.loli.net/2025/05/15/t1RTPxIWsf6vDLw.png)
+
+    ???+ warning
+        必须先设置偏移值,再放置梁.
+
+4. 通过 `注释` 检查梁的标高和柱的标高
+
+    ![height.png](https://s2.loli.net/2025/05/15/cw7tGlBrb5mMON3.png)
+
+至此,楼梯的柱和梁放置完毕.
+
+### 2.9 放置二层的梁和板
+
+由于二层的梁比较多,因此可以使用 `hh` 隐藏二层平面布置图,导入二层梁平面配筋图.以此图为基准绘制梁和板
+
+### 2.10 放置二层到屋顶的柱
+
+### 2.11 放置屋顶的梁
+
+通过观察发现,屋顶的梁的布置和一层梁的布置大致相同,因此可以直接复制一层的梁,粘贴
+
+1. 使用鼠标在三维视图中框选,使用 `过滤器` 选中梁
+
+    ![copy.png](https://s2.loli.net/2025/05/16/ITawebnRE2L6GuY.png)
+
+2. 点击 `复制`, 再点击 `粘贴` - `与选定的标高对齐`
+
+    ![copy2.png](https://s2.loli.net/2025/05/16/I3hMTVkcARC4xuv.png)
+
+3. 在弹出的对话框中选择 `屋顶` - `确定`
+
+    ![copy3.png](https://s2.loli.net/2025/05/16/znpaxqkUrGCW9ub.png)
+
+4. 由于屋顶的梁和一层的梁并不相同,因此需要将复制的梁更换为屋顶的梁
+    - 新建一个梁, ++esc++
+    - 选中需要替换的梁, 切换为刚刚新建的梁
+
+至此,屋顶的梁放置完毕.
+
+### 2.12 绘制屋顶的板
+
+结构模型绘制完成.
+
+## 第三步: 使用Revit创建一个建筑模型
+
+新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)
+
+### 2.1 绘制标高 导入CAD图形 绘制轴网
+
+### 3.2 绘制一层建筑外墙
+
+如果墙不是承重构件(剪力墙),则使用 `墙:建筑`,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)
+
+![3-1.png](https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png)
+
+### 3.3 绘制一层内墙
+
+墙面有装饰需要参考 **建筑材料表** 或 **工程做法表**
+
+墙由 **主体结构** 和 **装饰层** 组成, 装饰层又由 **踢脚线墙裙线** 和 **墙面** 组层.
+
+???+ warning
+    **踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.
+
+以下以分割车库和卫生间的墙面为例说明:
+
+分析 **建筑材料表**:
+
+![3-2.png](https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png)
+
+![3-3.png](https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png)
+
+![3-4.png](https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png)
+
+这面墙的结构大致如下图所示(图示的墙结构中的 `墙` 指的是这面墙的 `主体结构` 和 `墙面`).
+
+![3-5.png](https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png)
+
+可将这面墙分成三段建模(从下往上):
+
+1. 第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖
+
+    ???+ info '第一段的建模'
+        新建一个 `墙:建筑`,对其进行修改,revit提供的材料无法满足需要时需要 `新建材质`
+
+        ![3-6.png](https://s2.loli.net/2025/05/22/dINtDvkZOUY451e.png)
+
+        参考 **建筑材料表** 计算并建模.
+
+        ![3-7.png](https://s2.loli.net/2025/05/22/Q85CNrnmdkG1thx.png)
+
+2. 第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖
+3. 第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖
+
+使用 `叠层墙` 将以上三部分合成为一面墙.
+
+在左侧 `属性` 中将墙切换到 `叠层墙`, 新建一个叠层墙,编辑类型
+
+将以上三部分添加到这个叠层墙中,根据实际情况建模
+
+![3-8.png](https://s2.loli.net/2025/05/22/UTBk4v2iNPIewRm.png)
+
+绘制时,根据实际情况选择绘制墙时的定位线
+
+![3-9.png](https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png)
+
+绘制楼梯间和卫生间的墙的操作同上.
+
+### 3.4 放置门
+
+???+ warning 
+    外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.
+
+先将CAD底图切换为 `前景`,根据建筑图CAD图纸确定门的尺寸.注意将 `类型标记` 修改为图纸上的标记.
+
+![3-10.png](https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png)
+
+![3-11.png](https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png)
+
+### 3.5 放置窗
+
+和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 `默认窗台高度`
+
+![3-14.png](https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png)
+
+???+ warning
+    放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.
+
+### 3.6 绘制外墙装饰层(内侧)
+
+思路:把装饰层看做是一面墙,并紧贴外墙
+
+![3-15.png](https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png)
+。">
+<meta property="og:title" content="Revit">
+<meta property="og:description" content=":material-pen-plus: `本文创建于2025-5-10`
+
+<!-- ???+ quote 
+    本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF -->
+
+## 简介
+
+族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等
+
+项目样板: 相当于模板文件
+
+???+ warning
+    如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.
+
+### 无CAD图纸,根据PDF直接使用revit绘制图形的步骤
+
+1. 在revit立面视图绘制标高
+    - 根据revit立面视图自带的两个标高绘制
+    - 设置这两个默认标高的左右标记同时可见
+    - 将 `上标头` 的标高设置为PDF图纸中的大小,不必修改标高别名 `标高2`
+    - 使用 ++ctrl+c++ 复制 `上标头`
+    - 使用 ++ctrl+v++ 粘贴,放置, ++esc++
+    - 修改标高值
+    - 重复上述步骤
+    - 根据图纸修改标高的别名
+    - 由于使用了复制粘贴,revit不会将粘贴的标高显示在 `项目浏览器` 的 `结构平面` 中,需要手动调整
+
+        ![constract.png](https://s2.loli.net/2025/05/15/dgb48Qr2Ik3GtDZ.png)
+
+        按图示操作, 点击 `结构平面`, revit将弹出 `新建结构平面` 对话框,选取需要的标高(一般是全选), 点击 `确定`
+
+2. 绘制轴网(在CAD中也称为定位轴线)
+    - 随便绘制一根轴线(此处以横向轴线为例)
+    - 设置这根轴线的左右标记同时可见,修改标记的内容,绘制时按照数字和字母顺序绘制,以使用revit的某人标记
+    - 使用 ++ctrl+c++ 复制这根轴线
+    - 使用 ++ctrl+v++ 粘贴
+    - 键盘输入距离
+    - 键盘 ++esc++ 退出, 使用 ++ctrl+c++ 复制这根刚刚放置的轴线
+    - 重复上述步骤
+    - 纵向轴线画法相同
+    - 将轴网放置在四个观测记号的中央
+
+## 第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图
+
+使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 `.dwg`. 采用图形上面的图名作为文件名, 以便后续使用.
+
+???+ tip
+    实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.
+
+???+ success '操作步骤'
+    1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.
+    2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.
+
+        ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
+
+        ???+ warning
+            选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
+
+        ???+ tip 'FILETAB选项卡'
+            `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
+
+            ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
+
+??? tip '如何打开AutoCAD的左右两侧的绘图和修改工具栏'
+    step1 显示菜单栏
+
+    ![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
+
+    step2 打开菜单栏的 `工具` 选项卡
+
+    ![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
+
+## 第二步: 使用Revit创建一个结构模型
+
+新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)
+
+![newproj.png](https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png)
+
+???+ tip '如何打开项目选择器和属性'
+    ![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)
+
+### 2.1 绘制标高
+
+1. 随便选取一个立面,绘制标高,此处以'东'为例:
+
+    ![east.png](https://s2.loli.net/2025/05/11/VgCML3s1NQYex5H.png)
+
+2. 绘制标高
+
+    ![height1.png](https://s2.loli.net/2025/05/11/Smn6aLI5XYCc8Zq.png)
+
+3. 随意绘制几个标高,参考结构图将标高的数值改为结构图中的数值,并将'标高1'之类的默认名称改为结构图中的'一层'等名称,更改名称时会弹出提示框'是否希望重命名相应视图',选择'是'即可.
+
+    ![height.png](https://s2.loli.net/2025/05/11/enPMiSXwj7UfIuh.png)
+
+    ![alert.png](https://s2.loli.net/2025/05/11/HG7nX1KARaJf2su.png)
+
+4. 默认标高标注只显示右侧的,为了便于观察,往往需要同时显示左右两侧的标高标注. 在 `属性` 中点击 `编辑类型`, 勾选图示内容.
+
+    ![edit.png](https://s2.loli.net/2025/05/11/tyiwcDMS1LIx2sX.png)
+
+至此, 标高绘制完成.
+
+### 2.2 绘制轴网
+
+1. 将Revit视图切换到任意结构平面视图,将CAD图形导入Revit,注意:结构平面视图应与CAD图形一一对应,依次导入.
+
+    ![input.png](https://s2.loli.net/2025/05/11/qAjM1oTCSu385Gi.png)
+
+2. 绘制轴网,并移动方向标记使其靠近CAD图形,并使CAD图形大致位于四个方向标记的中间位置处.
+    
+    ![net.png](https://s2.loli.net/2025/05/11/zr4y7UVBoIP1pvK.png)
+
+    ![move.png](https://s2.loli.net/2025/05/11/6z8g2ojPf4tsump.png)
+
+3. 修改轴网的数字或字母编号,使其与定位轴线的编号一致.类似于标高标记,轴网标记也需要同时显示左右两侧的编号,二者操作类似.但是,轴网的轴线往往与定位轴线相重合,因此可以 `设置轴线中段为无` 将轴网的轴线隐藏,以免线条太多干扰视线.注意:轴线只需要在任意一个结构平面中绘制一次即可,因此绘制时建议选择线条较少的结构平面.
+
+    ![line.png](https://s2.loli.net/2025/05/11/Mb9LRvWnEtkdCih.png)
+
+4. 检查其他结构平面的定位轴线与轴网是否一致,如果不一致,请回到第一步重新拆分平面图.
+
+至此, 轴网绘制完成.
+
+### 2.3 在基础平面图中绘制垫层
+
+1. 通过结构图读出垫层的厚度和尺寸.
+
+    ![board0.png](https://s2.loli.net/2025/05/11/ZEeS51XKvptuQG8.png)
+
+2. 绘制垫层,把垫层视作楼板
+
+    ![board.png](https://s2.loli.net/2025/05/11/hjkfOSe7aHgP1Fy.png)
+
+    Revit会直接让我们使用系统族中的楼板, 往往我们需要修改其尺寸.为了保护系统族不会被篡改,往往复制系统族,重命名,然后修改尺寸.
+
+    ![board2.png](https://s2.loli.net/2025/05/11/PLwK2DyHb7fdtWh.png)
+
+    ![edit_board.png](https://s2.loli.net/2025/05/11/7c1DGpd9jgBiIC8.png)
+
+    ![diy_board.png](https://s2.loli.net/2025/05/11/IELi475VoahQqcP.png)
+
+3. 选择合适的方式绘制垫层, 绘制结束之后打对钩确认.
+
+    ![draw_board.png](https://s2.loli.net/2025/05/11/qOwlXsHu8FYetkW.png)
+
+至此, 垫层绘制完成.
+
+关闭此文件 `结构模型` `.rvt`
+
+### 2.4 新建条形基础族和放置条形基础
+
+1. 新建一个族
+
+    ![新建族.png](https://s2.loli.net/2025/05/13/rGKgIV64FtCvxl2.png)
+
+2. 通过 `放样` (面动成体) 绘制条形基础
+
+    ![放样.png](https://s2.loli.net/2025/05/13/TFAfjipRtQ6K9yE.png)
+
+    由于新建组时选取的模型 `基于线的公制常规模型` 自带线,所以通过`拾取路径`来绘制截面,绘制完成之后打对钩
+
+    ![拾取路径.png](https://s2.loli.net/2025/05/13/ezhRc4tZsAKXjP8.png)
+
+    - 识图,绘制基础轮廓,操作类似于AutoCAD
+
+        ![基础.png](https://s2.loli.net/2025/05/13/AKzEHoVlg6NnpTS.png)
+
+    - 由于图中的条形基础是对称结构,`编辑轮廓`时可以随便选取一个面,绘制结束之后打对钩
+  
+        ![编辑轮廓.png](https://s2.loli.net/2025/05/13/EZYV9jUcofAgysk.png)
+
+3. 至此,条形基础绘制结束.将这个族命名为 `条形基础` 保存 `.rfa`, 并关闭此文件
+4. 再次打开 `结构模型.rvt`
+5. 导入 `条形基础.rfa` 
+
+    ![载入.png](https://s2.loli.net/2025/05/13/sIEgGkDJtv5VqA1.png)
+
+    ???+ warning
+        进行此操作之后,revit并不会有任何反应,但是族文件已经导入到此项目中了.
+
+6. 放置条形基础(`基于线的公制常规模型` 属于 `构建`)
+
+    ![放置.png](https://s2.loli.net/2025/05/13/deEVSpTQZYDMCkc.png)
+
+    - 选择 `放置在工作平面上` , 根据图纸标高放置在垫层上
+
+        ![放置2.png](https://s2.loli.net/2025/05/13/nxdlCWhoyDtM3Fw.png)
+
+    - 通过快捷键 `hh` `临时隐藏/隔离` 2.3 步骤绘制的垫层,放置其遮挡CAD底图的线条
+    - 放置条形基础
+
+        ???+ note
+            放置时往往不能很好的对齐,因此放置结束之后使用对其命令 `al` 对齐,来调整基础防止的位置,操作类似于CAD
+
+            ![对齐.png](https://s2.loli.net/2025/05/13/lkHug6dGfQAB1wN.png)
+
+            放置时也不好把握基础的具体长度,也需要自行调整,操作类似于CAD
+
+7. 使用 `hr` 命令取消 `hh` 的隐藏功能,使垫层可见
+
+    ???+ note
+        如果在三维视图中查看感觉显示效果不好,可以在revit窗口左下角切换其他的 `视觉样式`
+
+        ![视觉样式.png](https://s2.loli.net/2025/05/13/879fDmpQhSXzV12.png)
+
+8. 切换到立面图查看,检查
+
+至此,放置基础完成.
+
+### 2.5 放置基础到一层的结构柱
+
+???+ note
+    使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.
+
+1. 由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.
+
+    将底图变为可选状态,点击revit右下角的 `选择锁定图元` 使其小图标右上角的×消失.
+
+    ![link.png](https://s2.loli.net/2025/05/14/vFpbnrgm2u8IthA.png)
+
+    选中底图,将其设置为 `前景`.
+
+    ![foreground.png](https://s2.loli.net/2025/05/14/JnhcRmxKbet9rVj.png)
+
+    再次点击revit右下角的 `选择锁定图元`,禁止选中底图
+
+2. 观察结构图中的柱结构, 如果同一个名字的柱有多种不同的配筋,应该加以区分.
+
+    ![domain.png](https://s2.loli.net/2025/05/14/Ym3P5wz7XuevRUj.png)
+
+3. 在revit中放置柱,并设置柱是向上延伸(高度)还是向下延伸(深度),以及要延伸到哪一层.
+
+    ![domain2.png](https://s2.loli.net/2025/05/14/DchtX6prVnSslg3.png)
+
+4. 默认柱直接防止在了基础底图的标高平面上,而柱应该防止在条形基础之上,因此需要设置柱的底部偏移.
+
+    ![domain3.png](https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png)
+
+???+ tip
+    改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动
+
+至此,基础层的柱放置完成.
+
+### 2.6 绘制基础和一层之间的的梁/板
+
+1. 将视图切换到 `一层` 调整 `视图范围`, 防止基础层线条对一层的干扰
+
+    ![range.png](https://s2.loli.net/2025/05/14/Mpk5vVPqYnjDRgQ.png)
+
+    ???+ note
+        由于视图切换到了 `一层` , 主要范围的 
+        
+        - `顶` 应该设置为 `标高之上(二层)`, 偏移量设置为 `0`,偏移量的单位是毫米
+        - `剖切面` 的 `偏移量` 的值应该设置为小于二层标高的数值
+        - `底` 应该设置为 `标高之上(一层)`, 偏移量设置为小于一层标高的一个数值
+
+        视图深度的 `标高` 可以直接采用主要范围的 `底` 的设置
+
+2. 放置梁,可以直接使用柱的中心点作为梁的起止点,然后使用 `al` 对齐命令对齐即可. `结构` - `梁`
+
+    ???+ note
+        revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,都会被自动截断,这也符合实际情况,因此放置梁时不必在意梁和柱的重合,因此可以直接使用柱的中心点作为梁的起止点.
+
+        revit放置构件时,不必在意配筋情况,只要注意宽高即可.但是,配筋情况不同的同名构件,要用不同的名称命名.
+
+3. 放置板(这个板实际上是基础层的天花板) `结构` - `楼板` - `楼板:结构` - `边界线` - `矩形`, 操作结束之后打对钩
+4. revit默认板会截断梁和柱,这明显与实际不符,因此需要改变二者的截断关系.
+
+    在三维视图中选中板 - `连接` - `切换链接顺序` - 勾选 `多个开关` - 再次选中板 - 使用鼠标左键拖动选择
+
+    ![board.png](https://s2.loli.net/2025/05/14/bTonxU4P9LYdfVR.png)
+
+    ![mul.png](https://s2.loli.net/2025/05/14/nIEqoGCMpuOQsJT.png)
+
+    ???+ tip
+        如果板无法选中,请开启revit右下角的 `按面选择图元`
+
+        ![tip.png](https://s2.loli.net/2025/05/14/YLQf5owJrk4UquN.png)
+
+5. 切换到立面图检查
+
+至此,梁和板放置完毕.
+
+基础层绘制完毕.
+
+### 2.7 放置一层到二层的柱(操作同 2.5)
+
+### 2.8 放置楼梯的柱和梁
+
+1. 分析结构图,计算柱高和梁的偏移高度
+
+    ![floor-info.png](https://s2.loli.net/2025/05/15/2E9lZIpgTzJDW1b.png)
+
+2. 切换到一层的平面视图, `结构` - `柱`, 直接设置柱高来放置柱
+
+    ![floor-domain.png](https://s2.loli.net/2025/05/15/A4fFoVnU3QYyrme.png)
+
+3. 计算梯梁距离一层的高度,设置 `Z轴偏移值`,再放置梁,可以使用 `al` 对齐命令辅助对齐.
+
+    ![floor-x.png](https://s2.loli.net/2025/05/15/t1RTPxIWsf6vDLw.png)
+
+    ???+ warning
+        必须先设置偏移值,再放置梁.
+
+4. 通过 `注释` 检查梁的标高和柱的标高
+
+    ![height.png](https://s2.loli.net/2025/05/15/cw7tGlBrb5mMON3.png)
+
+至此,楼梯的柱和梁放置完毕.
+
+### 2.9 放置二层的梁和板
+
+由于二层的梁比较多,因此可以使用 `hh` 隐藏二层平面布置图,导入二层梁平面配筋图.以此图为基准绘制梁和板
+
+### 2.10 放置二层到屋顶的柱
+
+### 2.11 放置屋顶的梁
+
+通过观察发现,屋顶的梁的布置和一层梁的布置大致相同,因此可以直接复制一层的梁,粘贴
+
+1. 使用鼠标在三维视图中框选,使用 `过滤器` 选中梁
+
+    ![copy.png](https://s2.loli.net/2025/05/16/ITawebnRE2L6GuY.png)
+
+2. 点击 `复制`, 再点击 `粘贴` - `与选定的标高对齐`
+
+    ![copy2.png](https://s2.loli.net/2025/05/16/I3hMTVkcARC4xuv.png)
+
+3. 在弹出的对话框中选择 `屋顶` - `确定`
+
+    ![copy3.png](https://s2.loli.net/2025/05/16/znpaxqkUrGCW9ub.png)
+
+4. 由于屋顶的梁和一层的梁并不相同,因此需要将复制的梁更换为屋顶的梁
+    - 新建一个梁, ++esc++
+    - 选中需要替换的梁, 切换为刚刚新建的梁
+
+至此,屋顶的梁放置完毕.
+
+### 2.12 绘制屋顶的板
+
+结构模型绘制完成.
+
+## 第三步: 使用Revit创建一个建筑模型
+
+新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)
+
+### 2.1 绘制标高 导入CAD图形 绘制轴网
+
+### 3.2 绘制一层建筑外墙
+
+如果墙不是承重构件(剪力墙),则使用 `墙:建筑`,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)
+
+![3-1.png](https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png)
+
+### 3.3 绘制一层内墙
+
+墙面有装饰需要参考 **建筑材料表** 或 **工程做法表**
+
+墙由 **主体结构** 和 **装饰层** 组成, 装饰层又由 **踢脚线墙裙线** 和 **墙面** 组层.
+
+???+ warning
+    **踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.
+
+以下以分割车库和卫生间的墙面为例说明:
+
+分析 **建筑材料表**:
+
+![3-2.png](https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png)
+
+![3-3.png](https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png)
+
+![3-4.png](https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png)
+
+这面墙的结构大致如下图所示(图示的墙结构中的 `墙` 指的是这面墙的 `主体结构` 和 `墙面`).
+
+![3-5.png](https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png)
+
+可将这面墙分成三段建模(从下往上):
+
+1. 第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖
+
+    ???+ info '第一段的建模'
+        新建一个 `墙:建筑`,对其进行修改,revit提供的材料无法满足需要时需要 `新建材质`
+
+        ![3-6.png](https://s2.loli.net/2025/05/22/dINtDvkZOUY451e.png)
+
+        参考 **建筑材料表** 计算并建模.
+
+        ![3-7.png](https://s2.loli.net/2025/05/22/Q85CNrnmdkG1thx.png)
+
+2. 第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖
+3. 第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖
+
+使用 `叠层墙` 将以上三部分合成为一面墙.
+
+在左侧 `属性` 中将墙切换到 `叠层墙`, 新建一个叠层墙,编辑类型
+
+将以上三部分添加到这个叠层墙中,根据实际情况建模
+
+![3-8.png](https://s2.loli.net/2025/05/22/UTBk4v2iNPIewRm.png)
+
+绘制时,根据实际情况选择绘制墙时的定位线
+
+![3-9.png](https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png)
+
+绘制楼梯间和卫生间的墙的操作同上.
+
+### 3.4 放置门
+
+???+ warning 
+    外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.
+
+先将CAD底图切换为 `前景`,根据建筑图CAD图纸确定门的尺寸.注意将 `类型标记` 修改为图纸上的标记.
+
+![3-10.png](https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png)
+
+![3-11.png](https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png)
+
+### 3.5 放置窗
+
+和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 `默认窗台高度`
+
+![3-14.png](https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png)
+
+???+ warning
+    放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.
+
+### 3.6 绘制外墙装饰层(内侧)
+
+思路:把装饰层看做是一面墙,并紧贴外墙
+
+![3-15.png](https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png)
+。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/36.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>Revit</title>
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">Revit</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#cccccc;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Other">Other</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-5-10</code></p>
+
+<h2>简介</h2>
+<p>族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等</p>
+<p>项目样板: 相当于模板文件</p>
+<p>???+ warning<br>
+如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.</p>
+<h3>无CAD图纸,根据PDF直接使用revit绘制图形的步骤</h3>
+<ol>
+<li>
+<p>在revit立面视图绘制标高</p>
+<ul>
+<li>
+<p>根据revit立面视图自带的两个标高绘制</p>
+</li>
+<li>
+<p>设置这两个默认标高的左右标记同时可见</p>
+</li>
+<li>
+<p>将 <code class="notranslate">上标头</code> 的标高设置为PDF图纸中的大小,不必修改标高别名 <code class="notranslate">标高2</code></p>
+</li>
+<li>
+<p>使用 ++ctrl+c++ 复制 <code class="notranslate">上标头</code></p>
+</li>
+<li>
+<p>使用 ++ctrl+v++ 粘贴,放置, ++esc++</p>
+</li>
+<li>
+<p>修改标高值</p>
+</li>
+<li>
+<p>重复上述步骤</p>
+</li>
+<li>
+<p>根据图纸修改标高的别名</p>
+</li>
+<li>
+<p>由于使用了复制粘贴,revit不会将粘贴的标高显示在 <code class="notranslate">项目浏览器</code> 的 <code class="notranslate">结构平面</code> 中,需要手动调整</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/eefe45b2a6827d99253a9b49816400b9563d2ddf8d70d32943f2a3e1a3fcc8aa/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f6467623438517232496b334774445a2e706e67"><img src="https://camo.githubusercontent.com/eefe45b2a6827d99253a9b49816400b9563d2ddf8d70d32943f2a3e1a3fcc8aa/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f6467623438517232496b334774445a2e706e67" alt="constract.png" data-canonical-src="https://s2.loli.net/2025/05/15/dgb48Qr2Ik3GtDZ.png" style="max-width: 100%;"></a></p>
+<p>按图示操作, 点击 <code class="notranslate">结构平面</code>, revit将弹出 <code class="notranslate">新建结构平面</code> 对话框,选取需要的标高(一般是全选), 点击 <code class="notranslate">确定</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>绘制轴网(在CAD中也称为定位轴线)</p>
+<ul>
+<li>随便绘制一根轴线(此处以横向轴线为例)</li>
+<li>设置这根轴线的左右标记同时可见,修改标记的内容,绘制时按照数字和字母顺序绘制,以使用revit的某人标记</li>
+<li>使用 ++ctrl+c++ 复制这根轴线</li>
+<li>使用 ++ctrl+v++ 粘贴</li>
+<li>键盘输入距离</li>
+<li>键盘 ++esc++ 退出, 使用 ++ctrl+c++ 复制这根刚刚放置的轴线</li>
+<li>重复上述步骤</li>
+<li>纵向轴线画法相同</li>
+<li>将轴网放置在四个观测记号的中央</li>
+</ul>
+</li>
+</ol>
+<h2>第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图</h2>
+<p>使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 <code class="notranslate">.dwg</code>. 采用图形上面的图名作为文件名, 以便后续使用.</p>
+<p>???+ tip<br>
+实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.</p>
+<p>???+ success "操作步骤"<br>
+1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.<br>
+2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 <code class="notranslate">FILETAB</code> 选项卡 - ++ctrl+v++ - 在命令框中输入 <code class="notranslate">0,0</code> - 回车, 这个图形的基点将放置在坐标原点处.</p>
+<pre class="notranslate"><code class="notranslate">    ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
+
+    ???+ warning
+        选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
+
+    ???+ tip "FILETAB选项卡"
+        `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
+
+        ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
+</code></pre>
+<p>??? tip "如何打开AutoCAD的左右两侧的绘图和修改工具栏"<br>
+step1 显示菜单栏</p>
+<pre class="notranslate"><code class="notranslate">![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
+
+step2 打开菜单栏的 `工具` 选项卡
+
+![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
+</code></pre>
+<h2>第二步: 使用Revit创建一个结构模型</h2>
+<p>新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9e831e40e33772a422c38798e57a3b1b92d671f47cf2ac31c675c38b78c28f21/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f744c43686e4933474d54426c656b662e706e67"><img src="https://camo.githubusercontent.com/9e831e40e33772a422c38798e57a3b1b92d671f47cf2ac31c675c38b78c28f21/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f744c43686e4933474d54426c656b662e706e67" alt="newproj.png" data-canonical-src="https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png" style="max-width: 100%;"></a></p>
+<p>???+ tip "如何打开项目选择器和属性"<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/41a2ee63603a1bf579546c2fd8a928e6b4d5b693fa693e4bcedadbb1b22e4b68/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f594e346261686f6469476d7972586e2e706e67"><img src="https://camo.githubusercontent.com/41a2ee63603a1bf579546c2fd8a928e6b4d5b693fa693e4bcedadbb1b22e4b68/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f594e346261686f6469476d7972586e2e706e67" alt="如何打开项目选择器和属性.png" data-canonical-src="https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png" style="max-width: 100%;"></a></p>
+<h3>2.1 绘制标高</h3>
+<ol>
+<li>
+<p>随便选取一个立面,绘制标高,此处以"东"为例:</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4663b5a1f3cccd0681aa18a9c16f495acafe89cdfac3434254fbd073c69456fc/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f5667434d4c3373314e5159657835482e706e67"><img src="https://camo.githubusercontent.com/4663b5a1f3cccd0681aa18a9c16f495acafe89cdfac3434254fbd073c69456fc/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f5667434d4c3373314e5159657835482e706e67" alt="east.png" data-canonical-src="https://s2.loli.net/2025/05/11/VgCML3s1NQYex5H.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>绘制标高</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e146d7215d52c4f6aa8dd1ff55b27b12256cefc9943ccd46874601b5db4006c7/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f536d6e36614c493558594363385a712e706e67"><img src="https://camo.githubusercontent.com/e146d7215d52c4f6aa8dd1ff55b27b12256cefc9943ccd46874601b5db4006c7/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f536d6e36614c493558594363385a712e706e67" alt="height1.png" data-canonical-src="https://s2.loli.net/2025/05/11/Smn6aLI5XYCc8Zq.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>随意绘制几个标高,参考结构图将标高的数值改为结构图中的数值,并将"标高1"之类的默认名称改为结构图中的"一层"等名称,更改名称时会弹出提示框"是否希望重命名相应视图",选择"是"即可.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/93f4a4580dfd1b757ea6c349d8656fedab259d77d4757dda376c39b5f45f7c53/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f656e504d695358776a3755664975682e706e67"><img src="https://camo.githubusercontent.com/93f4a4580dfd1b757ea6c349d8656fedab259d77d4757dda376c39b5f45f7c53/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f656e504d695358776a3755664975682e706e67" alt="height.png" data-canonical-src="https://s2.loli.net/2025/05/11/enPMiSXwj7UfIuh.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/a3be8a24276dc9b132094f6eecdd3bbf29edef882fc478bfbf999aa7ce69ed29/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f4847376e58314b4152614a663273752e706e67"><img src="https://camo.githubusercontent.com/a3be8a24276dc9b132094f6eecdd3bbf29edef882fc478bfbf999aa7ce69ed29/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f4847376e58314b4152614a663273752e706e67" alt="alert.png" data-canonical-src="https://s2.loli.net/2025/05/11/HG7nX1KARaJf2su.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>默认标高标注只显示右侧的,为了便于观察,往往需要同时显示左右两侧的标高标注. 在 <code class="notranslate">属性</code> 中点击 <code class="notranslate">编辑类型</code>, 勾选图示内容.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f16410ff196fe0c1b96b9044e225529a6478b299e31f41892ff56a2a4de12c80/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f7479697763444d53314c49783273582e706e67"><img src="https://camo.githubusercontent.com/f16410ff196fe0c1b96b9044e225529a6478b299e31f41892ff56a2a4de12c80/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f7479697763444d53314c49783273582e706e67" alt="edit.png" data-canonical-src="https://s2.loli.net/2025/05/11/tyiwcDMS1LIx2sX.png" style="max-width: 100%;"></a></p>
+</li>
+</ol>
+<p>至此, 标高绘制完成.</p>
+<h3>2.2 绘制轴网</h3>
+<ol>
+<li>
+<p>将Revit视图切换到任意结构平面视图,将CAD图形导入Revit,注意:结构平面视图应与CAD图形一一对应,依次导入.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/69d390504ad12bb12e454c228fff6af30e5ce6da8b14e1a28f51737517d4b427/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f71416a4d316f5443537533383547692e706e67"><img src="https://camo.githubusercontent.com/69d390504ad12bb12e454c228fff6af30e5ce6da8b14e1a28f51737517d4b427/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f71416a4d316f5443537533383547692e706e67" alt="input.png" data-canonical-src="https://s2.loli.net/2025/05/11/qAjM1oTCSu385Gi.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>绘制轴网,并移动方向标记使其靠近CAD图形,并使CAD图形大致位于四个方向标记的中间位置处.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1d4fff5c3f239038dcdddaf0f8117a130ce4efd123c134e1a747c87a07eef226/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f7a723479375556426f49503170764b2e706e67"><img src="https://camo.githubusercontent.com/1d4fff5c3f239038dcdddaf0f8117a130ce4efd123c134e1a747c87a07eef226/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f7a723479375556426f49503170764b2e706e67" alt="net.png" data-canonical-src="https://s2.loli.net/2025/05/11/zr4y7UVBoIP1pvK.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/63408f5d587a72fa0a7e7a666602b69b369f3d98c62f47eab84cac17e06cf3c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f367a3867326f6a5066347473756d702e706e67"><img src="https://camo.githubusercontent.com/63408f5d587a72fa0a7e7a666602b69b369f3d98c62f47eab84cac17e06cf3c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f367a3867326f6a5066347473756d702e706e67" alt="move.png" data-canonical-src="https://s2.loli.net/2025/05/11/6z8g2ojPf4tsump.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>修改轴网的数字或字母编号,使其与定位轴线的编号一致.类似于标高标记,轴网标记也需要同时显示左右两侧的编号,二者操作类似.但是,轴网的轴线往往与定位轴线相重合,因此可以 <code class="notranslate">设置轴线中段为无</code> 将轴网的轴线隐藏,以免线条太多干扰视线.注意:轴线只需要在任意一个结构平面中绘制一次即可,因此绘制时建议选择线条较少的结构平面.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/a0179002ff1d0a37a7de6f9997decc9043467f9ce8cb6a8399ea38676649a56a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f4d62394c5276576e45746b644369682e706e67"><img src="https://camo.githubusercontent.com/a0179002ff1d0a37a7de6f9997decc9043467f9ce8cb6a8399ea38676649a56a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f4d62394c5276576e45746b644369682e706e67" alt="line.png" data-canonical-src="https://s2.loli.net/2025/05/11/Mb9LRvWnEtkdCih.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>检查其他结构平面的定位轴线与轴网是否一致,如果不一致,请回到第一步重新拆分平面图.</p>
+</li>
+</ol>
+<p>至此, 轴网绘制完成.</p>
+<h3>2.3 在基础平面图中绘制垫层</h3>
+<ol>
+<li>
+<p>通过结构图读出垫层的厚度和尺寸.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/da43d6ef6609c3901d91567f7bed6e34b5634a11b528b356734b882ac3b468dd/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f5a4565533531584b767074755147382e706e67"><img src="https://camo.githubusercontent.com/da43d6ef6609c3901d91567f7bed6e34b5634a11b528b356734b882ac3b468dd/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f5a4565533531584b767074755147382e706e67" alt="board0.png" data-canonical-src="https://s2.loli.net/2025/05/11/ZEeS51XKvptuQG8.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>绘制垫层,把垫层视作楼板</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ef335ffc0a986b6f365b991d68004501ffabd0c8b6bc05e18dfe433111448d83/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f686a6b664f536537614867503146792e706e67"><img src="https://camo.githubusercontent.com/ef335ffc0a986b6f365b991d68004501ffabd0c8b6bc05e18dfe433111448d83/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f686a6b664f536537614867503146792e706e67" alt="board.png" data-canonical-src="https://s2.loli.net/2025/05/11/hjkfOSe7aHgP1Fy.png" style="max-width: 100%;"></a></p>
+<p>Revit会直接让我们使用系统族中的楼板, 往往我们需要修改其尺寸.为了保护系统族不会被篡改,往往复制系统族,重命名,然后修改尺寸.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d818d009801430cbe648437e386ad8c47332ee3e740c03fee30924d750ccd821/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f504c774b32447948623766647457682e706e67"><img src="https://camo.githubusercontent.com/d818d009801430cbe648437e386ad8c47332ee3e740c03fee30924d750ccd821/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f504c774b32447948623766647457682e706e67" alt="board2.png" data-canonical-src="https://s2.loli.net/2025/05/11/PLwK2DyHb7fdtWh.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6235beca8e77128b486379679967175754b06d905400207b92c0338011c4ed97/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f37633144477064396a6742694943382e706e67"><img src="https://camo.githubusercontent.com/6235beca8e77128b486379679967175754b06d905400207b92c0338011c4ed97/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f37633144477064396a6742694943382e706e67" alt="edit_board.png" data-canonical-src="https://s2.loli.net/2025/05/11/7c1DGpd9jgBiIC8.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9fdced01890177ae31148ab3936d3eede9ce4424bea556a6a7a0dcde4c1bb3df/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f49454c69343735566f6168517163502e706e67"><img src="https://camo.githubusercontent.com/9fdced01890177ae31148ab3936d3eede9ce4424bea556a6a7a0dcde4c1bb3df/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f49454c69343735566f6168517163502e706e67" alt="diy_board.png" data-canonical-src="https://s2.loli.net/2025/05/11/IELi475VoahQqcP.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>选择合适的方式绘制垫层, 绘制结束之后打对钩确认.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4ca20e4f19fb7f3aabb1c7d1e2c3bd0f5ae38088b09b0e45750858526670fd90/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f714f776c5873487538465965746b572e706e67"><img src="https://camo.githubusercontent.com/4ca20e4f19fb7f3aabb1c7d1e2c3bd0f5ae38088b09b0e45750858526670fd90/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f714f776c5873487538465965746b572e706e67" alt="draw_board.png" data-canonical-src="https://s2.loli.net/2025/05/11/qOwlXsHu8FYetkW.png" style="max-width: 100%;"></a></p>
+</li>
+</ol>
+<p>至此, 垫层绘制完成.</p>
+<p>关闭此文件 <code class="notranslate">结构模型</code> <code class="notranslate">.rvt</code></p>
+<h3>2.4 新建条形基础族和放置条形基础</h3>
+<ol>
+<li>
+<p>新建一个族</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9598b8dea9796760f4953fb68319fd9844ca1fdbe9ecda1bd1c928def342c308/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f72474b674956363446744376786c322e706e67"><img src="https://camo.githubusercontent.com/9598b8dea9796760f4953fb68319fd9844ca1fdbe9ecda1bd1c928def342c308/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f72474b674956363446744376786c322e706e67" alt="新建族.png" data-canonical-src="https://s2.loli.net/2025/05/13/rGKgIV64FtCvxl2.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>通过 <code class="notranslate">放样</code> (面动成体) 绘制条形基础</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/dae84b011ab97d1578108ae00a1ed95bd6f46ba19fe27c51f758916dbf31cf4e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f544641666a6970527451364b3979452e706e67"><img src="https://camo.githubusercontent.com/dae84b011ab97d1578108ae00a1ed95bd6f46ba19fe27c51f758916dbf31cf4e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f544641666a6970527451364b3979452e706e67" alt="放样.png" data-canonical-src="https://s2.loli.net/2025/05/13/TFAfjipRtQ6K9yE.png" style="max-width: 100%;"></a></p>
+<p>由于新建组时选取的模型 <code class="notranslate">基于线的公制常规模型</code> 自带线,所以通过<code class="notranslate">拾取路径</code>来绘制截面,绘制完成之后打对钩</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d3c23110c12d197dc1fe9217f1e1d49f3ebfdc5350ef1358f98e1b5d6a11782a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f657a68526334745a73414b586a50382e706e67"><img src="https://camo.githubusercontent.com/d3c23110c12d197dc1fe9217f1e1d49f3ebfdc5350ef1358f98e1b5d6a11782a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f657a68526334745a73414b586a50382e706e67" alt="拾取路径.png" data-canonical-src="https://s2.loli.net/2025/05/13/ezhRc4tZsAKXjP8.png" style="max-width: 100%;"></a></p>
+<ul>
+<li>
+<p>识图,绘制基础轮廓,操作类似于AutoCAD</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/892a348fef03b2148c5bcc895cc2607a8124b11e142ae678b8ecc19e439cec74/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f414b7a45486f566c67364e6e7054532e706e67"><img src="https://camo.githubusercontent.com/892a348fef03b2148c5bcc895cc2607a8124b11e142ae678b8ecc19e439cec74/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f414b7a45486f566c67364e6e7054532e706e67" alt="基础.png" data-canonical-src="https://s2.loli.net/2025/05/13/AKzEHoVlg6NnpTS.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>由于图中的条形基础是对称结构,<code class="notranslate">编辑轮廓</code>时可以随便选取一个面,绘制结束之后打对钩</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1f87685344a2e0ca84b38ae3e61e61a0f67b2e5580a00254b428ca7cebb543b8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f455a5956396a55636f66416779736b2e706e67"><img src="https://camo.githubusercontent.com/1f87685344a2e0ca84b38ae3e61e61a0f67b2e5580a00254b428ca7cebb543b8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f455a5956396a55636f66416779736b2e706e67" alt="编辑轮廓.png" data-canonical-src="https://s2.loli.net/2025/05/13/EZYV9jUcofAgysk.png" style="max-width: 100%;"></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>至此,条形基础绘制结束.将这个族命名为 <code class="notranslate">条形基础</code> 保存 <code class="notranslate">.rfa</code>, 并关闭此文件</p>
+</li>
+<li>
+<p>再次打开 <code class="notranslate">结构模型.rvt</code></p>
+</li>
+<li>
+<p>导入 <code class="notranslate">条形基础.rfa</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/dc66e566e4eec1be79c6e6cb26ade0456168c3cfa9c28933c3364b7627a77978/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f73494567476b444a747635567141312e706e67"><img src="https://camo.githubusercontent.com/dc66e566e4eec1be79c6e6cb26ade0456168c3cfa9c28933c3364b7627a77978/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f73494567476b444a747635567141312e706e67" alt="载入.png" data-canonical-src="https://s2.loli.net/2025/05/13/sIEgGkDJtv5VqA1.png" style="max-width: 100%;"></a></p>
+<p>???+ warning<br>
+进行此操作之后,revit并不会有任何反应,但是族文件已经导入到此项目中了.</p>
+</li>
+<li>
+<p>放置条形基础(<code class="notranslate">基于线的公制常规模型</code> 属于 <code class="notranslate">构建</code>)</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7c5725b7b8b6fdf61ce280ac6d002727b3970aa277d51b16b0efbe04606e01a6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f64654556537054515a59444d436b632e706e67"><img src="https://camo.githubusercontent.com/7c5725b7b8b6fdf61ce280ac6d002727b3970aa277d51b16b0efbe04606e01a6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f64654556537054515a59444d436b632e706e67" alt="放置.png" data-canonical-src="https://s2.loli.net/2025/05/13/deEVSpTQZYDMCkc.png" style="max-width: 100%;"></a></p>
+<ul>
+<li>
+<p>选择 <code class="notranslate">放置在工作平面上</code> , 根据图纸标高放置在垫层上</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/68fe4cc2568b0caea9a26e009465ef2c890db1eb6bf2108050f2ae28e642e018/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f6e78646c4357686f7944744d3346772e706e67"><img src="https://camo.githubusercontent.com/68fe4cc2568b0caea9a26e009465ef2c890db1eb6bf2108050f2ae28e642e018/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31332f6e78646c4357686f7944744d3346772e706e67" alt="放置2.png" data-canonical-src="https://s2.loli.net/2025/05/13/nxdlCWhoyDtM3Fw.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>通过快捷键 <code class="notranslate">hh</code> <code class="notranslate">临时隐藏/隔离</code> 2.3 步骤绘制的垫层,放置其遮挡CAD底图的线条</p>
+</li>
+<li>
+<p>放置条形基础</p>
+<p>???+ note<br>
+放置时往往不能很好的对齐,因此放置结束之后使用对其命令 <code class="notranslate">al</code> 对齐,来调整基础防止的位置,操作类似于CAD</p>
+<pre class="notranslate"><code class="notranslate">  ![对齐.png](https://s2.loli.net/2025/05/13/lkHug6dGfQAB1wN.png)
+
+  放置时也不好把握基础的具体长度,也需要自行调整,操作类似于CAD
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>使用 <code class="notranslate">hr</code> 命令取消 <code class="notranslate">hh</code> 的隐藏功能,使垫层可见</p>
+<p>???+ note<br>
+如果在三维视图中查看感觉显示效果不好,可以在revit窗口左下角切换其他的 <code class="notranslate">视觉样式</code></p>
+<pre class="notranslate"><code class="notranslate"> ![视觉样式.png](https://s2.loli.net/2025/05/13/879fDmpQhSXzV12.png)
+</code></pre>
+</li>
+<li>
+<p>切换到立面图查看,检查</p>
+</li>
+</ol>
+<p>至此,放置基础完成.</p>
+<h3>2.5 放置基础到一层的结构柱</h3>
+<p>???+ note<br>
+使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.</p>
+<ol>
+<li>
+<p>由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.</p>
+<p>将底图变为可选状态,点击revit右下角的 <code class="notranslate">选择锁定图元</code> 使其小图标右上角的×消失.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2af9c42c213a5f9f5e877c9c5edb4bfd01ecc7e4457b42fb268e1476d7a9bbbf/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f764670626e72676d327538497468412e706e67"><img src="https://camo.githubusercontent.com/2af9c42c213a5f9f5e877c9c5edb4bfd01ecc7e4457b42fb268e1476d7a9bbbf/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f764670626e72676d327538497468412e706e67" alt="link.png" data-canonical-src="https://s2.loli.net/2025/05/14/vFpbnrgm2u8IthA.png" style="max-width: 100%;"></a></p>
+<p>选中底图,将其设置为 <code class="notranslate">前景</code>.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6fb4643c3c02392c3fc099b8bab76972eb886f700ae186f815b727c0e3120071/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f4a6e6863526d784b6265743972566a2e706e67"><img src="https://camo.githubusercontent.com/6fb4643c3c02392c3fc099b8bab76972eb886f700ae186f815b727c0e3120071/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f4a6e6863526d784b6265743972566a2e706e67" alt="foreground.png" data-canonical-src="https://s2.loli.net/2025/05/14/JnhcRmxKbet9rVj.png" style="max-width: 100%;"></a></p>
+<p>再次点击revit右下角的 <code class="notranslate">选择锁定图元</code>,禁止选中底图</p>
+</li>
+<li>
+<p>观察结构图中的柱结构, 如果同一个名字的柱有多种不同的配筋,应该加以区分.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5fc6068f952e94f5848c9547e04c8902024c8e2f99a5a6adcd733ec4f8644fc5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f596d335035777a375875657652556a2e706e67"><img src="https://camo.githubusercontent.com/5fc6068f952e94f5848c9547e04c8902024c8e2f99a5a6adcd733ec4f8644fc5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f596d335035777a375875657652556a2e706e67" alt="domain.png" data-canonical-src="https://s2.loli.net/2025/05/14/Ym3P5wz7XuevRUj.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>在revit中放置柱,并设置柱是向上延伸(高度)还是向下延伸(深度),以及要延伸到哪一层.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/340dc981260defc42ed697e64d3101b7c2974c3fbfb5431f5402fd06329b47da/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f4463687458367072566e53736c67332e706e67"><img src="https://camo.githubusercontent.com/340dc981260defc42ed697e64d3101b7c2974c3fbfb5431f5402fd06329b47da/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f4463687458367072566e53736c67332e706e67" alt="domain2.png" data-canonical-src="https://s2.loli.net/2025/05/14/DchtX6prVnSslg3.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>默认柱直接防止在了基础底图的标高平面上,而柱应该防止在条形基础之上,因此需要设置柱的底部偏移.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/be0b8146e59427b5f76e780ed2c03f247894528b92bdc810c2fff4cd68401caf/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f544f62466176755034446a316f64552e706e67"><img src="https://camo.githubusercontent.com/be0b8146e59427b5f76e780ed2c03f247894528b92bdc810c2fff4cd68401caf/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f544f62466176755034446a316f64552e706e67" alt="domain3.png" data-canonical-src="https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png" style="max-width: 100%;"></a></p>
+</li>
+</ol>
+<p>???+ tip<br>
+改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动</p>
+<p>至此,基础层的柱放置完成.</p>
+<h3>2.6 绘制基础和一层之间的的梁/板</h3>
+<ol>
+<li>
+<p>将视图切换到 <code class="notranslate">一层</code> 调整 <code class="notranslate">视图范围</code>, 防止基础层线条对一层的干扰</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bf47db50078da6a800b9dc98eb7407460d2c31e65dbd47053c4acd537a77978c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f4d706b3576565071596e6a445267512e706e67"><img src="https://camo.githubusercontent.com/bf47db50078da6a800b9dc98eb7407460d2c31e65dbd47053c4acd537a77978c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f4d706b3576565071596e6a445267512e706e67" alt="range.png" data-canonical-src="https://s2.loli.net/2025/05/14/Mpk5vVPqYnjDRgQ.png" style="max-width: 100%;"></a></p>
+<p>???+ note<br>
+由于视图切换到了 <code class="notranslate">一层</code> , 主要范围的</p>
+<pre class="notranslate"><code class="notranslate"> - `顶` 应该设置为 `标高之上(二层)`, 偏移量设置为 `0`,偏移量的单位是毫米
+ - `剖切面` 的 `偏移量` 的值应该设置为小于二层标高的数值
+ - `底` 应该设置为 `标高之上(一层)`, 偏移量设置为小于一层标高的一个数值
+
+ 视图深度的 `标高` 可以直接采用主要范围的 `底` 的设置
+</code></pre>
+</li>
+<li>
+<p>放置梁,可以直接使用柱的中心点作为梁的起止点,然后使用 <code class="notranslate">al</code> 对齐命令对齐即可. <code class="notranslate">结构</code> - <code class="notranslate">梁</code></p>
+<p>???+ note<br>
+revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,都会被自动截断,这也符合实际情况,因此放置梁时不必在意梁和柱的重合,因此可以直接使用柱的中心点作为梁的起止点.</p>
+<pre class="notranslate"><code class="notranslate"> revit放置构件时,不必在意配筋情况,只要注意宽高即可.但是,配筋情况不同的同名构件,要用不同的名称命名.
+</code></pre>
+</li>
+<li>
+<p>放置板(这个板实际上是基础层的天花板) <code class="notranslate">结构</code> - <code class="notranslate">楼板</code> - <code class="notranslate">楼板:结构</code> - <code class="notranslate">边界线</code> - <code class="notranslate">矩形</code>, 操作结束之后打对钩</p>
+</li>
+<li>
+<p>revit默认板会截断梁和柱,这明显与实际不符,因此需要改变二者的截断关系.</p>
+<p>在三维视图中选中板 - <code class="notranslate">连接</code> - <code class="notranslate">切换链接顺序</code> - 勾选 <code class="notranslate">多个开关</code> - 再次选中板 - 使用鼠标左键拖动选择</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/69c8d5b3512ce281201d5fafaef13ae6d869265729669665bf8d4773ac185fd6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f62546f6e78553450394c59646656522e706e67"><img src="https://camo.githubusercontent.com/69c8d5b3512ce281201d5fafaef13ae6d869265729669665bf8d4773ac185fd6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f62546f6e78553450394c59646656522e706e67" alt="board.png" data-canonical-src="https://s2.loli.net/2025/05/14/bTonxU4P9LYdfVR.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/53c8a8da31522043e39df782ad4ccf30e8146231fd8397e9debc0271488bcce5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f6e4945716f47434d70754f51734a542e706e67"><img src="https://camo.githubusercontent.com/53c8a8da31522043e39df782ad4ccf30e8146231fd8397e9debc0271488bcce5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f6e4945716f47434d70754f51734a542e706e67" alt="mul.png" data-canonical-src="https://s2.loli.net/2025/05/14/nIEqoGCMpuOQsJT.png" style="max-width: 100%;"></a></p>
+<p>???+ tip<br>
+如果板无法选中,请开启revit右下角的 <code class="notranslate">按面选择图元</code></p>
+<pre class="notranslate"><code class="notranslate"> ![tip.png](https://s2.loli.net/2025/05/14/YLQf5owJrk4UquN.png)
+</code></pre>
+</li>
+<li>
+<p>切换到立面图检查</p>
+</li>
+</ol>
+<p>至此,梁和板放置完毕.</p>
+<p>基础层绘制完毕.</p>
+<h3>2.7 放置一层到二层的柱(操作同 2.5)</h3>
+<h3>2.8 放置楼梯的柱和梁</h3>
+<ol>
+<li>
+<p>分析结构图,计算柱高和梁的偏移高度</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/0d242f2ed15c7280dc9c4ca3de00a87bfebe91fb0abba47337810ee0f47dff29/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f3245396c5a497067547a4a445731622e706e67"><img src="https://camo.githubusercontent.com/0d242f2ed15c7280dc9c4ca3de00a87bfebe91fb0abba47337810ee0f47dff29/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f3245396c5a497067547a4a445731622e706e67" alt="floor-info.png" data-canonical-src="https://s2.loli.net/2025/05/15/2E9lZIpgTzJDW1b.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>切换到一层的平面视图, <code class="notranslate">结构</code> - <code class="notranslate">柱</code>, 直接设置柱高来放置柱</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f54ddce0bbcc7609f071b4b19740a7cd7f4b47fa13df1db9d36c60e518244191/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f413466466f566e5533515979726d652e706e67"><img src="https://camo.githubusercontent.com/f54ddce0bbcc7609f071b4b19740a7cd7f4b47fa13df1db9d36c60e518244191/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f413466466f566e5533515979726d652e706e67" alt="floor-domain.png" data-canonical-src="https://s2.loli.net/2025/05/15/A4fFoVnU3QYyrme.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>计算梯梁距离一层的高度,设置 <code class="notranslate">Z轴偏移值</code>,再放置梁,可以使用 <code class="notranslate">al</code> 对齐命令辅助对齐.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/17d2c1b174c007de17a7225cdd92bedd510d5c760f780590ab212a440a6aa455/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f743152545078495773663676444c772e706e67"><img src="https://camo.githubusercontent.com/17d2c1b174c007de17a7225cdd92bedd510d5c760f780590ab212a440a6aa455/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f743152545078495773663676444c772e706e67" alt="floor-x.png" data-canonical-src="https://s2.loli.net/2025/05/15/t1RTPxIWsf6vDLw.png" style="max-width: 100%;"></a></p>
+<p>???+ warning<br>
+必须先设置偏移值,再放置梁.</p>
+</li>
+<li>
+<p>通过 <code class="notranslate">注释</code> 检查梁的标高和柱的标高</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/465d91bc72050b689cb1145bb0853c2044eab0de02b5ffc076eb80cf9b0053f6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f63773774476c427262356d4d4f4e332e706e67"><img src="https://camo.githubusercontent.com/465d91bc72050b689cb1145bb0853c2044eab0de02b5ffc076eb80cf9b0053f6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31352f63773774476c427262356d4d4f4e332e706e67" alt="height.png" data-canonical-src="https://s2.loli.net/2025/05/15/cw7tGlBrb5mMON3.png" style="max-width: 100%;"></a></p>
+</li>
+</ol>
+<p>至此,楼梯的柱和梁放置完毕.</p>
+<h3>2.9 放置二层的梁和板</h3>
+<p>由于二层的梁比较多,因此可以使用 <code class="notranslate">hh</code> 隐藏二层平面布置图,导入二层梁平面配筋图.以此图为基准绘制梁和板</p>
+<h3>2.10 放置二层到屋顶的柱</h3>
+<h3>2.11 放置屋顶的梁</h3>
+<p>通过观察发现,屋顶的梁的布置和一层梁的布置大致相同,因此可以直接复制一层的梁,粘贴</p>
+<ol>
+<li>
+<p>使用鼠标在三维视图中框选,使用 <code class="notranslate">过滤器</code> 选中梁</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/68783ef1c62fdaa91562bb4887dd5dfbe54376f08b194f13e956f3c66d751436/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31362f4954617765626e5245324c364775592e706e67"><img src="https://camo.githubusercontent.com/68783ef1c62fdaa91562bb4887dd5dfbe54376f08b194f13e956f3c66d751436/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31362f4954617765626e5245324c364775592e706e67" alt="copy.png" data-canonical-src="https://s2.loli.net/2025/05/16/ITawebnRE2L6GuY.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>点击 <code class="notranslate">复制</code>, 再点击 <code class="notranslate">粘贴</code> - <code class="notranslate">与选定的标高对齐</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/cffb7046b5b42e99fd1cc12bf6a0f038a4971fe1062e4fbf3a49b5b023e2f2c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31362f4933684d54566b63415243347875762e706e67"><img src="https://camo.githubusercontent.com/cffb7046b5b42e99fd1cc12bf6a0f038a4971fe1062e4fbf3a49b5b023e2f2c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31362f4933684d54566b63415243347875762e706e67" alt="copy2.png" data-canonical-src="https://s2.loli.net/2025/05/16/I3hMTVkcARC4xuv.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>在弹出的对话框中选择 <code class="notranslate">屋顶</code> - <code class="notranslate">确定</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4520e8c14be7835752c90ba1bd938582fc5d781b283b076cf8a27b54fccc5d8b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31362f7a6e706178716b55724743573975622e706e67"><img src="https://camo.githubusercontent.com/4520e8c14be7835752c90ba1bd938582fc5d781b283b076cf8a27b54fccc5d8b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31362f7a6e706178716b55724743573975622e706e67" alt="copy3.png" data-canonical-src="https://s2.loli.net/2025/05/16/znpaxqkUrGCW9ub.png" style="max-width: 100%;"></a></p>
+</li>
+<li>
+<p>由于屋顶的梁和一层的梁并不相同,因此需要将复制的梁更换为屋顶的梁</p>
+<ul>
+<li>新建一个梁, ++esc++</li>
+<li>选中需要替换的梁, 切换为刚刚新建的梁</li>
+</ul>
+</li>
+</ol>
+<p>至此,屋顶的梁放置完毕.</p>
+<h3>2.12 绘制屋顶的板</h3>
+<p>结构模型绘制完成.</p>
+<h2>第三步: 使用Revit创建一个建筑模型</h2>
+<p>新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)</p>
+<h3>2.1 绘制标高 导入CAD图形 绘制轴网</h3>
+<h3>3.2 绘制一层建筑外墙</h3>
+<p>如果墙不是承重构件(剪力墙),则使用 <code class="notranslate">墙:建筑</code>,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d57dcaa1beb464b2bb7ef3757cb35822a91ec41d6313f8558921f815ee70f6ca/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f58316d7869634b553241384467534e2e706e67"><img src="https://camo.githubusercontent.com/d57dcaa1beb464b2bb7ef3757cb35822a91ec41d6313f8558921f815ee70f6ca/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f58316d7869634b553241384467534e2e706e67" alt="3-1.png" data-canonical-src="https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png" style="max-width: 100%;"></a></p>
+<h3>3.3 绘制一层内墙</h3>
+<p>墙面有装饰需要参考 <strong>建筑材料表</strong> 或 <strong>工程做法表</strong></p>
+<p>墙由 <strong>主体结构</strong> 和 <strong>装饰层</strong> 组成, 装饰层又由 <strong>踢脚线墙裙线</strong> 和 <strong>墙面</strong> 组层.</p>
+<p>???+ warning<br>
+<strong>踢脚线墙裙线</strong> 位于 <strong>墙面</strong> 之上,因此有关 <strong>踢脚线墙裙线</strong> 的建模都需要考虑 <strong>墙面</strong> 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 <strong>水泥砂浆</strong> 作为材料.</p>
+<p>以下以分割车库和卫生间的墙面为例说明:</p>
+<p>分析 <strong>建筑材料表</strong>:</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e06501881b4897adc14e0fdfe31b805057e614abd0ceac18e3952d1a649447f5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f474e6e61376b50326953336c676a682e706e67"><img src="https://camo.githubusercontent.com/e06501881b4897adc14e0fdfe31b805057e614abd0ceac18e3952d1a649447f5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f474e6e61376b50326953336c676a682e706e67" alt="3-2.png" data-canonical-src="https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bd28e8d2a811c849e01b3914bf08d615720ec7752cfa12e1b182f0b937c1ef2b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f354862327a70466f315149714e66522e706e67"><img src="https://camo.githubusercontent.com/bd28e8d2a811c849e01b3914bf08d615720ec7752cfa12e1b182f0b937c1ef2b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f354862327a70466f315149714e66522e706e67" alt="3-3.png" data-canonical-src="https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/893ce2a2b721c5a691bc4087bdda39c20b564141c3d30f6222b55b814684fbd8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f49794c52737868657a55436f3159352e706e67"><img src="https://camo.githubusercontent.com/893ce2a2b721c5a691bc4087bdda39c20b564141c3d30f6222b55b814684fbd8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f49794c52737868657a55436f3159352e706e67" alt="3-4.png" data-canonical-src="https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png" style="max-width: 100%;"></a></p>
+<p>这面墙的结构大致如下图所示(图示的墙结构中的 <code class="notranslate">墙</code> 指的是这面墙的 <code class="notranslate">主体结构</code> 和 <code class="notranslate">墙面</code>).</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f94be95a354529b4413fc4ecb8943a6d4390b2b33138ce085259b2fa57ff036c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f59637957336f3854446d466e62554e2e706e67"><img src="https://camo.githubusercontent.com/f94be95a354529b4413fc4ecb8943a6d4390b2b33138ce085259b2fa57ff036c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f59637957336f3854446d466e62554e2e706e67" alt="3-5.png" data-canonical-src="https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png" style="max-width: 100%;"></a></p>
+<p>可将这面墙分成三段建模(从下往上):</p>
+<ol>
+<li>
+<p>第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖</p>
+<p>???+ info "第一段的建模"<br>
+新建一个 <code class="notranslate">墙:建筑</code>,对其进行修改,revit提供的材料无法满足需要时需要 <code class="notranslate">新建材质</code></p>
+<pre class="notranslate"><code class="notranslate"> ![3-6.png](https://s2.loli.net/2025/05/22/dINtDvkZOUY451e.png)
+
+ 参考 **建筑材料表** 计算并建模.
+
+ ![3-7.png](https://s2.loli.net/2025/05/22/Q85CNrnmdkG1thx.png)
+</code></pre>
+</li>
+<li>
+<p>第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖</p>
+</li>
+<li>
+<p>第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖</p>
+</li>
+</ol>
+<p>使用 <code class="notranslate">叠层墙</code> 将以上三部分合成为一面墙.</p>
+<p>在左侧 <code class="notranslate">属性</code> 中将墙切换到 <code class="notranslate">叠层墙</code>, 新建一个叠层墙,编辑类型</p>
+<p>将以上三部分添加到这个叠层墙中,根据实际情况建模</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/a30e8012bc65a821b93091598c9eef48ea5f15060db1f8c504e4dc64b67798c7/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f5554426b347632694e50496577526d2e706e67"><img src="https://camo.githubusercontent.com/a30e8012bc65a821b93091598c9eef48ea5f15060db1f8c504e4dc64b67798c7/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f5554426b347632694e50496577526d2e706e67" alt="3-8.png" data-canonical-src="https://s2.loli.net/2025/05/22/UTBk4v2iNPIewRm.png" style="max-width: 100%;"></a></p>
+<p>绘制时,根据实际情况选择绘制墙时的定位线</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/cc53d2c6b332304639811cb11b67384b782c982a6ab80ed9811d66b064904cc0/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f3150393365457a75684c3769326d412e706e67"><img src="https://camo.githubusercontent.com/cc53d2c6b332304639811cb11b67384b782c982a6ab80ed9811d66b064904cc0/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f3150393365457a75684c3769326d412e706e67" alt="3-9.png" data-canonical-src="https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png" style="max-width: 100%;"></a></p>
+<p>绘制楼梯间和卫生间的墙的操作同上.</p>
+<h3>3.4 放置门</h3>
+<p>???+ warning<br>
+外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.</p>
+<p>先将CAD底图切换为 <code class="notranslate">前景</code>,根据建筑图CAD图纸确定门的尺寸.注意将 <code class="notranslate">类型标记</code> 修改为图纸上的标记.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/47033b2c1475284f2e08133218f5e99289f3aa98f1345df8a61e7949fdc9162a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f45434e617553373635324c65695a782e706e67"><img src="https://camo.githubusercontent.com/47033b2c1475284f2e08133218f5e99289f3aa98f1345df8a61e7949fdc9162a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f45434e617553373635324c65695a782e706e67" alt="3-10.png" data-canonical-src="https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/be0778137e80362911f4692cddb2e3bcb009a54a06be190cd564f25b759deeb6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f564a50446d6b71687242625a3432762e706e67"><img src="https://camo.githubusercontent.com/be0778137e80362911f4692cddb2e3bcb009a54a06be190cd564f25b759deeb6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f564a50446d6b71687242625a3432762e706e67" alt="3-11.png" data-canonical-src="https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png" style="max-width: 100%;"></a></p>
+<h3>3.5 放置窗</h3>
+<p>和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 <code class="notranslate">默认窗台高度</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bbaf7a4135ffcc1cc324d741f7e28e16d2978c13390edb09a0939079e3340fce/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f56647850614e474f69366c6e4238442e706e67"><img src="https://camo.githubusercontent.com/bbaf7a4135ffcc1cc324d741f7e28e16d2978c13390edb09a0939079e3340fce/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f56647850614e474f69366c6e4238442e706e67" alt="3-14.png" data-canonical-src="https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png" style="max-width: 100%;"></a></p>
+<p>???+ warning<br>
+放置窗时如果看不到窗,可能是因为 <code class="notranslate">视图范围</code>, 此时需要调整一下视图范围,使窗可见.</p>
+<h3>3.6 绘制外墙装饰层(内侧)</h3>
+<p>思路:把装饰层看做是一面墙,并紧贴外墙</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6836b0704c757031149becd5d5ac1946de282db80d4557cd634f8568815163a5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f625a675943354d4e533248636e55692e706e67"><img src="https://camo.githubusercontent.com/6836b0704c757031149becd5d5ac1946de282db80d4557cd634f8568815163a5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f625a675943354d4e533248636e55692e706e67" alt="3-15.png" data-canonical-src="https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png" style="max-width: 100%;"></a></p></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

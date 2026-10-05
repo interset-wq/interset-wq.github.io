@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="数据可视化PNG图像">
+<meta property="og:title" content="matplotlib">
+<meta property="og:description" content="数据可视化PNG图像">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/41.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>matplotlib</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">matplotlib</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#3572a5;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-5-16</code></p>
+<p><a href="https://matplotlib.org/stable/users/index.html" rel="nofollow">matplotlib官方文档</a>{ .md-button .md-button--primary }</p>
+<h2>第三方库matplotlib</h2>
+<h3>折线图plot</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<span class="pl-s1">squares</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">9</span>, <span class="pl-c1">16</span>, <span class="pl-c1">25</span>]
+<span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
+<span class="pl-s1">ax</span>.<span class="pl-c1">plot</span>(<span class="pl-s1">squares</span>) <span class="pl-c"># 绘图</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">show</span>() <span class="pl-c"># 显示图像</span></pre></div>
+<p>subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot）。变量 fig 表示由生成的一系列绘图构成的整个图形。变量 ax 表示图形中的绘图，在大多数情况下，使用这个变量来定义和定制绘图。</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<span class="pl-s1">squares</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">9</span>, <span class="pl-c1">16</span>, <span class="pl-c1">25</span>]
+<span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
+<span class="pl-s1">ax</span>.<span class="pl-c1">plot</span>(<span class="pl-s1">squares</span>, <span class="pl-s1">linewidth</span><span class="pl-c1">=</span><span class="pl-c1">3</span>)<span class="pl-c"># 设置图线线宽</span>
+<span class="pl-c"># 设置图题并给坐标轴加上标签</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_title</span>(<span class="pl-s">"Square Numbers"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">24</span>)<span class="pl-c"># 图像标题</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_xlabel</span>(<span class="pl-s">"Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># x坐标名称</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_ylabel</span>(<span class="pl-s">"Square of Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># y坐标名称</span>
+<span class="pl-c"># 设置刻度标记的样式</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">tick_params</span>(<span class="pl-s1">labelsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># 设置坐标轴刻度标记字号</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()</pre></div>
+<p>plot()方法默认为x轴从0开始。上面的图线有问题，需要纠正</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<span class="pl-s1">input_values</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>]
+<span class="pl-s1">squares</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">9</span>, <span class="pl-c1">16</span>, <span class="pl-c1">25</span>]
+<span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
+<span class="pl-s1">ax</span>.<span class="pl-c1">plot</span>(<span class="pl-s1">input_values</span>, <span class="pl-s1">squares</span>, <span class="pl-s1">linewidth</span><span class="pl-c1">=</span><span class="pl-c1">3</span>)
+<span class="pl-c"># 设置图题并给坐标轴加上标签</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_title</span>(<span class="pl-s">"Square Numbers"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">24</span>)<span class="pl-c"># 图像标题</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_xlabel</span>(<span class="pl-s">"Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># x坐标名称</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_ylabel</span>(<span class="pl-s">"Square of Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># y坐标名称</span>
+<span class="pl-c"># 设置刻度标记的样式</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">tick_params</span>(<span class="pl-s1">labelsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># 设置坐标轴刻度标记字号</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()</pre></div>
+<p>Matplotlib有很多内置样式：</p>
+<div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> import matplotlib.pyplot as plt
+<span class="pl-k">&gt;&gt;&gt;</span> plt.style.available
+['Solarize_Light2', '_classic_test_patch', '_mpl-gallery', '_mpl-gallery-nogrid', 'bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-v0_8', 'seaborn-v0_8-bright', 'seaborn-v0_8-colorblind', 'seaborn-v0_8-dark', 'seaborn-v0_8-dark-palette', 'seaborn-v0_8-darkgrid', 'seaborn-v0_8-deep', 'seaborn-v0_8-muted', 'seaborn-v0_8-notebook', 'seaborn-v0_8-paper', 'seaborn-v0_8-pastel', 'seaborn-v0_8-poster', 'seaborn-v0_8-talk', 'seaborn-v0_8-ticks', 'seaborn-v0_8-white', 'seaborn-v0_8-whitegrid', 'tableau-colorblind10']</pre></div>
+<p>使用内置样式seaborn-v0_8</p>
+<pre class="notranslate"><code class="notranslate">import matplotlib.pyplot as plt
+input_values = [1, 2, 3, 4, 5]
+squares = [1, 4, 9, 16, 25]
+plt.style.use('seaborn-v0_8')
+fig, ax = plt.subplots()
+ax.plot(input_values, squares, linewidth=3)
+# 设置图题并给坐标轴加上标签
+ax.set_title("Square Numbers", fontsize=24)# 图像标题
+ax.set_xlabel("Value", fontsize=14)# x坐标名称
+ax.set_ylabel("Square of Value", fontsize=14)# y坐标名称
+# 设置刻度标记的样式
+ax.tick_params(labelsize=14)# 设置坐标轴刻度标记字号
+plt.show()
+</code></pre>
+<h3>散点图scatter</h3>
+<p>绘制一个点</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">style</span>.<span class="pl-c1">use</span>(<span class="pl-s">'seaborn-v0_8'</span>)
+<span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
+<span class="pl-s1">ax</span>.<span class="pl-c1">scatter</span>(<span class="pl-c1">2</span>, <span class="pl-c1">4</span>, <span class="pl-s1">s</span><span class="pl-c1">=</span><span class="pl-c1">200</span>)<span class="pl-c"># 参数分别为x坐标，y坐标，点的大小</span>
+<span class="pl-c"># 设置图题并给坐标轴加上标签</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_title</span>(<span class="pl-s">"Square Numbers"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">24</span>)<span class="pl-c"># 图像标题</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_xlabel</span>(<span class="pl-s">"Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># x标签</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_ylabel</span>(<span class="pl-s">"Square of Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># y标签</span>
+<span class="pl-c"># 设置刻度标记的样式</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">tick_params</span>(<span class="pl-s1">labelsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># 设置刻度标记字号</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()</pre></div>
+<p>绘制一系列点</p>
+<pre class="notranslate"><code class="notranslate">import matplotlib.pyplot as plt
+x_values = [1, 2, 3, 4, 5]
+y_values = [1, 4, 9, 16, 25]
+plt.style.use('seaborn-v0_8')
+fig, ax = plt.subplots()
+ax.scatter(x_values, y_values, s=100)# 参数分别为x坐标列表，y坐标列表，点的大小
+# 设置图题并给坐标轴加上标签
+ax.set_title("Square Numbers", fontsize=24)# 图像标题
+ax.set_xlabel("Value", fontsize=14)# x标签
+ax.set_ylabel("Square of Value", fontsize=14)# y标签
+# 设置刻度标记的样式
+ax.tick_params(labelsize=14)# 设置刻度标记字号
+plt.show()
+</code></pre>
+<p>使用列表推导式绘制更多点</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<span class="pl-s1">x_values</span> <span class="pl-c1">=</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-c1">1001</span>)
+<span class="pl-s1">y_values</span> <span class="pl-c1">=</span> [<span class="pl-s1">x</span><span class="pl-c1">**</span><span class="pl-c1">2</span> <span class="pl-k">for</span> <span class="pl-s1">x</span> <span class="pl-c1">in</span> <span class="pl-s1">x_values</span>]<span class="pl-c"># 列表推导式</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">style</span>.<span class="pl-c1">use</span>(<span class="pl-s">'seaborn-v0_8'</span>)
+<span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
+<span class="pl-c"># ax.scatter(x_values, y_values, s=10)# 参数分别为x坐标列表，y坐标列表，点的大小</span>
+<span class="pl-c"># ax.scatter(x_values, y_values, color='red', s=10)# 自定义颜色</span>
+<span class="pl-c"># ax.scatter(x_values, y_values, color=(0, 0.8, 0), s=10)# 自定义颜色rgb表示法</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">scatter</span>(<span class="pl-s1">x_values</span>, <span class="pl-s1">y_values</span>, <span class="pl-s1">c</span><span class="pl-c1">=</span><span class="pl-s1">y_values</span>, <span class="pl-s1">cmap</span><span class="pl-c1">=</span><span class="pl-s1">plt</span>.<span class="pl-c1">cm</span>.<span class="pl-c1">Blues</span>, <span class="pl-s1">s</span><span class="pl-c1">=</span><span class="pl-c1">10</span>)<span class="pl-c"># 使用颜色映射，数值越大，颜色越深</span>
+<span class="pl-c"># 设置图题并给坐标轴加上标签</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_title</span>(<span class="pl-s">"Square Numbers"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">24</span>)<span class="pl-c"># 图像标题</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_xlabel</span>(<span class="pl-s">"Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># x标签</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_ylabel</span>(<span class="pl-s">"Square of Value"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># y标签</span>
+<span class="pl-c"># 设置刻度标记的样式</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">tick_params</span>(<span class="pl-s1">labelsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># 设置刻度标记字号</span>
+<span class="pl-c"># 设置每个坐标轴的取值范围</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">axis</span>([<span class="pl-c1">0</span>, <span class="pl-c1">1100</span>, <span class="pl-c1">0</span>, <span class="pl-c1">1_100_000</span>])
+<span class="pl-s1">ax</span>.<span class="pl-c1">ticklabel_format</span>(<span class="pl-s1">style</span><span class="pl-c1">=</span><span class="pl-s">'plain'</span>)<span class="pl-c"># 不使用科学计数法</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()
+<span class="pl-c"># plt.savefig('squares_plot.png', bbox_inches='tight')</span>
+<span class="pl-s">"""第一个实参指定要以什么文件名保存绘图，这个文件将被存储到py文件所</span>
+<span class="pl-s">在的目录中。第二个实参指定将绘图多余的空白区域裁剪掉。如果要保留绘图周围多</span>
+<span class="pl-s">余的空白区域，只需省略这个实参即可。你还可以在调用 savefig() 时使用 Path</span>
+<span class="pl-s">对象，将输出文件存储到系统上的任何地方。"""</span></pre></div>
+<p>在刻度标记表示的数足够大时，Matplotlib 将默认使用科学记数法。</p>
+<h3>随机游走</h3>
+<p>创建关于随机游走的类</p>
+<p>random_walk.py</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">random</span> <span class="pl-k">import</span> <span class="pl-s1">choice</span>
+
+
+<span class="pl-k">class</span> <span class="pl-v">RandomWalk</span>:
+    <span class="pl-s">"""一个生成随机游走数据的类"""</span>
+    <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">num_points</span><span class="pl-c1">=</span><span class="pl-c1">5000</span>):<span class="pl-c"># 默认点数5000</span>
+        <span class="pl-s">"""初始化随机游走的属性"""</span>
+        <span class="pl-s1">self</span>.<span class="pl-c1">num_points</span> <span class="pl-c1">=</span> <span class="pl-s1">num_points</span>
+        <span class="pl-c"># 所有随机游走都始于(0, 0)</span>
+        <span class="pl-s1">self</span>.<span class="pl-c1">x_values</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>]
+        <span class="pl-s1">self</span>.<span class="pl-c1">y_values</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>]
+
+    <span class="pl-k">def</span> <span class="pl-en">fill_walk</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s">"""计算随机游走包含的所有点"""</span>
+        <span class="pl-c"># 不断游走，直到列表达到指定的长度</span>
+        <span class="pl-k">while</span> <span class="pl-en">len</span>(<span class="pl-s1">self</span>.<span class="pl-c1">x_values</span>) <span class="pl-c1">&lt;</span> <span class="pl-s1">self</span>.<span class="pl-c1">num_points</span>:
+            <span class="pl-c"># 决定前进的方向以及沿这个方向前进的距离</span>
+            <span class="pl-s1">x_direction</span> <span class="pl-c1">=</span> <span class="pl-en">choice</span>([<span class="pl-c1">1</span>, <span class="pl-c1">-</span><span class="pl-c1">1</span>])<span class="pl-c"># 在x方向向左或向右</span>
+            <span class="pl-s1">x_distance</span> <span class="pl-c1">=</span> <span class="pl-en">choice</span>([<span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>])<span class="pl-c"># 每次移动的距离</span>
+            <span class="pl-s1">x_step</span> <span class="pl-c1">=</span> <span class="pl-s1">x_direction</span> <span class="pl-c1">*</span> <span class="pl-s1">x_distance</span><span class="pl-c"># x方向移动的距离</span>
+            <span class="pl-s1">y_direction</span> <span class="pl-c1">=</span> <span class="pl-en">choice</span>([<span class="pl-c1">1</span>, <span class="pl-c1">-</span><span class="pl-c1">1</span>])<span class="pl-c"># 在y方向向上或向下</span>
+            <span class="pl-s1">y_distance</span> <span class="pl-c1">=</span> <span class="pl-en">choice</span>([<span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>])<span class="pl-c"># 每次移动的距离</span>
+            <span class="pl-s1">y_step</span> <span class="pl-c1">=</span> <span class="pl-s1">y_direction</span> <span class="pl-c1">*</span> <span class="pl-s1">y_distance</span><span class="pl-c"># y方向移动的距离</span>
+            <span class="pl-c"># 拒绝原地踏步</span>
+            <span class="pl-k">if</span> <span class="pl-s1">x_step</span> <span class="pl-c1">==</span> <span class="pl-c1">0</span> <span class="pl-c1">and</span> <span class="pl-s1">y_step</span> <span class="pl-c1">==</span> <span class="pl-c1">0</span>:
+                <span class="pl-k">continue</span>
+            <span class="pl-c"># 计算下一个点的 x 坐标值和 y 坐标值</span>
+            <span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-s1">self</span>.<span class="pl-c1">x_values</span>[<span class="pl-c1">-</span><span class="pl-c1">1</span>] <span class="pl-c1">+</span> <span class="pl-s1">x_step</span>
+            <span class="pl-s1">y</span> <span class="pl-c1">=</span> <span class="pl-s1">self</span>.<span class="pl-c1">y_values</span>[<span class="pl-c1">-</span><span class="pl-c1">1</span>] <span class="pl-c1">+</span> <span class="pl-s1">y_step</span>
+            <span class="pl-s1">self</span>.<span class="pl-c1">x_values</span>.<span class="pl-c1">append</span>(<span class="pl-s1">x</span>)
+            <span class="pl-s1">self</span>.<span class="pl-c1">y_values</span>.<span class="pl-c1">append</span>(<span class="pl-s1">y</span>)</pre></div>
+<p>导入类，进行随机游走</p>
+<p>rw_visual.py</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+
+<span class="pl-k">from</span> <span class="pl-s1">random_walk</span> <span class="pl-k">import</span> <span class="pl-v">RandomWalk</span>
+
+
+<span class="pl-c"># 只要程序处于活动状态，就不断地模拟随机游走</span>
+<span class="pl-k">while</span> <span class="pl-c1">True</span>:
+    <span class="pl-c"># 创建一个 RandomWalk 实例</span>
+    <span class="pl-c"># rw = RandomWalk()# 点数使用默认值</span>
+    <span class="pl-s1">rw</span> <span class="pl-c1">=</span> <span class="pl-en">RandomWalk</span>(<span class="pl-c1">50_000</span>)<span class="pl-c"># 自定义点数</span>
+    <span class="pl-s1">rw</span>.<span class="pl-c1">fill_walk</span>()<span class="pl-c"># 使用此方法随机游走</span>
+    <span class="pl-c"># 将所有的点都绘制出来</span>
+    <span class="pl-s1">plt</span>.<span class="pl-c1">style</span>.<span class="pl-c1">use</span>(<span class="pl-s">'classic'</span>)<span class="pl-c"># 使用内置样式classic</span>
+    <span class="pl-c"># fig, ax = plt.subplots()</span>
+    <span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>(<span class="pl-s1">figsize</span><span class="pl-c1">=</span>(<span class="pl-c1">10</span>, <span class="pl-c1">6</span>), <span class="pl-s1">dpi</span><span class="pl-c1">=</span><span class="pl-c1">128</span>)<span class="pl-c"># 调整绘图窗口尺寸（英寸）和分辨率dpi(像素，默认100)</span>
+    <span class="pl-s1">point_numbers</span> <span class="pl-c1">=</span> <span class="pl-en">range</span>(<span class="pl-s1">rw</span>.<span class="pl-c1">num_points</span>)<span class="pl-c"># 创建点数列表（点数默认5000）</span>
+    <span class="pl-c"># ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)# 对参数c颜色使用颜色映射，edgecolors删除点的轮廓</span>
+    <span class="pl-s1">ax</span>.<span class="pl-c1">scatter</span>(<span class="pl-s1">rw</span>.<span class="pl-c1">x_values</span>, <span class="pl-s1">rw</span>.<span class="pl-c1">y_values</span>, <span class="pl-s1">c</span><span class="pl-c1">=</span><span class="pl-s1">point_numbers</span>, 
+               <span class="pl-s1">cmap</span><span class="pl-c1">=</span><span class="pl-s1">plt</span>.<span class="pl-c1">cm</span>.<span class="pl-c1">Blues</span>, <span class="pl-s1">edgecolors</span><span class="pl-c1">=</span><span class="pl-s">'none'</span>, <span class="pl-s1">s</span><span class="pl-c1">=</span><span class="pl-c1">1</span>)<span class="pl-c"># 自点数50_000适当减小点的大小</span>
+    <span class="pl-s1">ax</span>.<span class="pl-c1">set_aspect</span>(<span class="pl-s">'equal'</span>)<span class="pl-c"># 指定两条轴上刻度的间距必须相等</span>
+    <span class="pl-c"># 突出起点和终点</span>
+    <span class="pl-s1">ax</span>.<span class="pl-c1">scatter</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-s1">c</span><span class="pl-c1">=</span><span class="pl-s">'green'</span>, <span class="pl-s1">edgecolors</span><span class="pl-c1">=</span><span class="pl-s">'none'</span>, <span class="pl-s1">s</span><span class="pl-c1">=</span><span class="pl-c1">100</span>)<span class="pl-c"># 重绘起点，绿色，无轮廓</span>
+    <span class="pl-s1">ax</span>.<span class="pl-c1">scatter</span>(<span class="pl-s1">rw</span>.<span class="pl-c1">x_values</span>[<span class="pl-c1">-</span><span class="pl-c1">1</span>], <span class="pl-s1">rw</span>.<span class="pl-c1">y_values</span>[<span class="pl-c1">-</span><span class="pl-c1">1</span>], <span class="pl-s1">c</span><span class="pl-c1">=</span><span class="pl-s">'red'</span>, <span class="pl-s1">edgecolors</span><span class="pl-c1">=</span><span class="pl-s">'none'</span>, <span class="pl-s1">s</span><span class="pl-c1">=</span><span class="pl-c1">100</span>)<span class="pl-c"># 重绘终点</span>
+    <span class="pl-c"># 隐藏坐标轴</span>
+    <span class="pl-s1">ax</span>.<span class="pl-c1">get_xaxis</span>().<span class="pl-c1">set_visible</span>(<span class="pl-c1">False</span>)
+    <span class="pl-s1">ax</span>.<span class="pl-c1">get_yaxis</span>().<span class="pl-c1">set_visible</span>(<span class="pl-c1">False</span>)
+    <span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()
+    <span class="pl-c"># 是否继续随机游走</span>
+    <span class="pl-s1">keep_running</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"是否创建另一次随机游走? (y/n): "</span>)
+    <span class="pl-k">if</span> <span class="pl-s1">keep_running</span> <span class="pl-c1">==</span> <span class="pl-s">'n'</span>:
+        <span class="pl-k">break</span></pre></div>
+<h2>使用 Plotly 模拟掷骰子</h2>
+<p>安装plotly库和pandas库，因为plotly需要依赖pandas<br>
+plotly库绘制图形后使用浏览器显示，支持中文字体<br>
+创建Die类<br>
+die.py</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">random</span> <span class="pl-k">import</span> <span class="pl-s1">randint</span><span class="pl-c"># randint包括左右端点</span>
+
+
+<span class="pl-k">class</span> <span class="pl-v">Die</span>:
+    <span class="pl-s">"""表示一个骰子的类"""</span>
+    <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">num_sides</span><span class="pl-c1">=</span><span class="pl-c1">6</span>):
+        <span class="pl-s">"""骰子默认为 6 面的 D6"""</span>
+        <span class="pl-s1">self</span>.<span class="pl-c1">num_sides</span> <span class="pl-c1">=</span> <span class="pl-s1">num_sides</span>
+    <span class="pl-k">def</span> <span class="pl-en">roll</span>(<span class="pl-s1">self</span>):<span class="pl-c"># 掷骰子</span>
+        <span class="pl-s">""""返回一个介于 1 和骰子面数之间的随机值"""</span>
+        <span class="pl-k">return</span> <span class="pl-en">randint</span>(<span class="pl-c1">1</span>, <span class="pl-s1">self</span>.<span class="pl-c1">num_sides</span>)</pre></div>
+<h3>投掷一枚六面骰子D6</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span> <span class="pl-c"># 此库使用默认浏览器打开图像，支持中文字体</span>
+
+<span class="pl-k">from</span> <span class="pl-s1">die</span> <span class="pl-k">import</span> <span class="pl-v">Die</span>
+
+
+ <span class="pl-c"># 创建一个 D6</span>
+<span class="pl-s1">die</span> <span class="pl-c1">=</span> <span class="pl-en">Die</span>()
+<span class="pl-c"># 掷几次骰子并将结果存储在一个列表中</span>
+<span class="pl-s1">results</span> <span class="pl-c1">=</span> []
+<span class="pl-k">for</span> <span class="pl-s1">roll_num</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1000</span>):
+    <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-s1">die</span>.<span class="pl-c1">roll</span>()
+    <span class="pl-s1">results</span>.<span class="pl-c1">append</span>(<span class="pl-s1">result</span>)
+<span class="pl-c"># 分析结果</span>
+<span class="pl-s1">frequencies</span> <span class="pl-c1">=</span> []<span class="pl-c"># 每种点数出现的次数的列表</span>
+<span class="pl-s1">poss_results</span> <span class="pl-c1">=</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-s1">die</span>.<span class="pl-c1">num_sides</span><span class="pl-c1">+</span><span class="pl-c1">1</span>)
+<span class="pl-k">for</span> <span class="pl-s1">value</span> <span class="pl-c1">in</span> <span class="pl-s1">poss_results</span>:
+    <span class="pl-s1">frequency</span> <span class="pl-c1">=</span> <span class="pl-s1">results</span>.<span class="pl-c1">count</span>(<span class="pl-s1">value</span>)<span class="pl-c"># 计算某个点数出现的次数</span>
+    <span class="pl-s1">frequencies</span>.<span class="pl-c1">append</span>(<span class="pl-s1">frequency</span>)
+<span class="pl-c"># 对结果进行可视化</span>
+<span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s">"投掷D6骰子1000次的结果"</span> <span class="pl-c"># 图像标题</span>
+<span class="pl-s1">labels</span> <span class="pl-c1">=</span> {<span class="pl-s">'x'</span>: <span class="pl-s">'点数'</span>, <span class="pl-s">'y'</span>: <span class="pl-s">'点数出现次数'</span>} <span class="pl-c"># 坐标轴标签</span>
+<span class="pl-s1">fig</span> <span class="pl-c1">=</span> <span class="pl-s1">px</span>.<span class="pl-c1">bar</span>(<span class="pl-s1">x</span><span class="pl-c1">=</span><span class="pl-s1">poss_results</span>, <span class="pl-s1">y</span><span class="pl-c1">=</span><span class="pl-s1">frequencies</span>, <span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s1">title</span>, <span class="pl-s1">labels</span><span class="pl-c1">=</span><span class="pl-s1">labels</span>)<span class="pl-c"># bar()直方图</span>
+<span class="pl-c"># fig = px.scatter(x=poss_results, y=frequencies)# scatter()散点图</span>
+<span class="pl-c"># fig = px.line(x=poss_results, y=frequencies)# line()折线图</span>
+<span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
+<h3>投掷2个D6</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span> <span class="pl-c"># 此库使用默认浏览器打开图像，支持中文字体</span>
+
+<span class="pl-k">from</span> <span class="pl-s1">die</span> <span class="pl-k">import</span> <span class="pl-v">Die</span>
+
+
+<span class="pl-c"># 创建两个 D6</span>
+<span class="pl-s1">die_1</span> <span class="pl-c1">=</span> <span class="pl-en">Die</span>()
+<span class="pl-s1">die_2</span> <span class="pl-c1">=</span> <span class="pl-en">Die</span>()<span class="pl-c"># 掷几次骰子并将结果存储在一个列表中</span>
+<span class="pl-s1">results</span> <span class="pl-c1">=</span> []
+<span class="pl-k">for</span> <span class="pl-s1">roll_num</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1000</span>):
+    <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-s1">die_1</span>.<span class="pl-c1">roll</span>() <span class="pl-c1">+</span> <span class="pl-s1">die_2</span>.<span class="pl-c1">roll</span>()
+    <span class="pl-s1">results</span>.<span class="pl-c1">append</span>(<span class="pl-s1">result</span>)
+<span class="pl-c"># 分析结果</span>
+<span class="pl-s1">frequencies</span> <span class="pl-c1">=</span> []<span class="pl-c"># 每种点数出现的次数的列表</span>
+<span class="pl-s1">max_result</span> <span class="pl-c1">=</span> <span class="pl-s1">die_1</span>.<span class="pl-c1">num_sides</span> <span class="pl-c1">+</span> <span class="pl-s1">die_2</span>.<span class="pl-c1">num_sides</span>
+<span class="pl-s1">poss_results</span> <span class="pl-c1">=</span> <span class="pl-en">range</span>(<span class="pl-c1">2</span>, <span class="pl-s1">max_result</span><span class="pl-c1">+</span><span class="pl-c1">1</span>)
+<span class="pl-k">for</span> <span class="pl-s1">value</span> <span class="pl-c1">in</span> <span class="pl-s1">poss_results</span>:
+    <span class="pl-s1">frequency</span> <span class="pl-c1">=</span> <span class="pl-s1">results</span>.<span class="pl-c1">count</span>(<span class="pl-s1">value</span>)<span class="pl-c"># 计算某个点数出现的次数</span>
+    <span class="pl-s1">frequencies</span>.<span class="pl-c1">append</span>(<span class="pl-s1">frequency</span>)
+<span class="pl-c"># 对结果进行可视化</span>
+<span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s">"投掷2个D6骰子1000次的结果"</span> <span class="pl-c"># 图像标题</span>
+<span class="pl-s1">labels</span> <span class="pl-c1">=</span> {<span class="pl-s">'x'</span>: <span class="pl-s">'点数'</span>, <span class="pl-s">'y'</span>: <span class="pl-s">'点数出现次数'</span>} <span class="pl-c"># 坐标轴标签</span>
+<span class="pl-s1">fig</span> <span class="pl-c1">=</span> <span class="pl-s1">px</span>.<span class="pl-c1">bar</span>(<span class="pl-s1">x</span><span class="pl-c1">=</span><span class="pl-s1">poss_results</span>, <span class="pl-s1">y</span><span class="pl-c1">=</span><span class="pl-s1">frequencies</span>, <span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s1">title</span>, <span class="pl-s1">labels</span><span class="pl-c1">=</span><span class="pl-s1">labels</span>)<span class="pl-c"># bar()直方图</span>
+<span class="pl-c"># 进一步定制图形</span>
+<span class="pl-s1">fig</span>.<span class="pl-c1">update_layout</span>(<span class="pl-s1">xaxis_dtick</span><span class="pl-c1">=</span><span class="pl-c1">1</span>)<span class="pl-c"># 设置x轴刻度标签间隔</span>
+<span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()
+<span class="pl-c"># fig.write_html('dice_visual_d6d10.html') # 保存绘制的图像</span></pre></div>
+<h2>使用csv文件作为数据源</h2>
+<h3>内置库csv</h3>
+<p>要在文本文件中存储数据，最简单的方式是将数据组织为一系列以逗号分隔的值（comma-separated values，CSV）并写入文件。这样的文件称为 CSV 文件。</p>
+<h3>datetime</h3>
+<div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> from datetime import datetime
+<span class="pl-k">&gt;&gt;&gt;</span> first_date = datetime.strptime('2021-07-01', '<span class="pl-smi">%Y-%</span>m-%d')
+<span class="pl-k">&gt;&gt;&gt;</span> print(first_date)
+2021-07-01 00:00:00</pre></div>
+<p>首先导入 datetime 模块中的 datetime 类，再调用 strptime() 方法来设置时间格式，并将包含日期的字符串作为第一个实参。第二个实参告诉 Python 如何设置日期的格式。在这里，'%Y-' 让 Python 将字符串中第一个连字符前面的部分视为四位数的年份，'%m-'让 Python 将第二个连字符前面的部分视为表示月份的两位数，'%d' 让 Python 将字符串的最后一部分视为月份中的一天（1～31）。strptime() 方法的第二个实参可接受各种以 % 打头的参数，并根据它们来决定如何解读日期。</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%A</td>
+<td>星期几，如 Monday</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>月份名，如 January</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>用数表示的月份（01～12）</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>用数表示的月份中的一天（01～31）</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>四位数的年份，如 2019</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>两位数的年份，如 19</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>24 小时制的小时数（00～23）</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>12 小时制的小时数（01～12）</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>am 或 pm</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>分钟数（00～59）</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>秒数（00～61）</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h3>某地最高温度和最低温度数据可视化</h3>
+<p>death_valley_highs_lows.py.py</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<span class="pl-k">import</span> <span class="pl-s1">csv</span>
+<span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<span class="pl-k">from</span> <span class="pl-s1">datetime</span> <span class="pl-k">import</span> <span class="pl-s1">datetime</span>
+
+
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'death_valley_2021_simple.csv'</span>)
+<span class="pl-c"># splitlines()获取包含文件中各行的列表，如果文件中有中文，应使用utf-8</span>
+<span class="pl-s1">lines</span> <span class="pl-c1">=</span> <span class="pl-s1">path</span>.<span class="pl-c1">read_text</span>(<span class="pl-s1">encoding</span><span class="pl-c1">=</span><span class="pl-s">'utf-8'</span>).<span class="pl-c1">splitlines</span>() 
+<span class="pl-s1">reader</span> <span class="pl-c1">=</span> <span class="pl-s1">csv</span>.<span class="pl-c1">reader</span>(<span class="pl-s1">lines</span>)<span class="pl-c"># 创建一个 reader 对象</span>
+<span class="pl-c"># 函数 next() 返回文件中的下一行（从文件开头开始）,首次调用时返回第一行列表（表头列表）</span>
+<span class="pl-s1">header_row</span> <span class="pl-c1">=</span> <span class="pl-en">next</span>(<span class="pl-s1">reader</span>)
+<span class="pl-s">"""</span>
+<span class="pl-s"># 在循环中，对列表调用 enumerate() 来获取每个元素的索引及其值</span>
+<span class="pl-s">for index, column_header in enumerate(header_row):</span>
+<span class="pl-s">    print(index, column_header)</span>
+<span class="pl-s">"""</span>
+<span class="pl-c"># 提取日期和最高温度</span>
+<span class="pl-s1">dates</span>, <span class="pl-s1">highs</span>, <span class="pl-s1">lows</span> <span class="pl-c1">=</span> [], [], []
+<span class="pl-c"># 遍历文件中余下的各行,已经使用函数 next()读取了第一行，之后reader对象从第二行开始读取</span>
+<span class="pl-k">for</span> <span class="pl-s1">row</span> <span class="pl-c1">in</span> <span class="pl-s1">reader</span>:
+    <span class="pl-s1">current_date</span> <span class="pl-c1">=</span> <span class="pl-s1">datetime</span>.<span class="pl-c1">strptime</span>(<span class="pl-s1">row</span>[<span class="pl-c1">2</span>], <span class="pl-s">'%Y-%m-%d'</span>)<span class="pl-c"># 将日期格式设置为2025-01-11</span>
+    <span class="pl-c"># 防止csv文件有些数据缺失导致报错（忽略有数据缺失的数据）</span>
+    <span class="pl-k">try</span>:
+        <span class="pl-s1">high</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-s1">row</span>[<span class="pl-c1">3</span>])
+        <span class="pl-s1">low</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-s1">row</span>[<span class="pl-c1">4</span>])
+    <span class="pl-k">except</span> <span class="pl-v">ValueError</span>:
+        <span class="pl-en">print</span>(<span class="pl-s">f"<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">current_date</span><span class="pl-kos">}</span></span>有数据缺失"</span>)
+    <span class="pl-k">else</span>:
+        <span class="pl-s1">dates</span>.<span class="pl-c1">append</span>(<span class="pl-s1">current_date</span>)
+        <span class="pl-s1">highs</span>.<span class="pl-c1">append</span>(<span class="pl-s1">high</span>)
+        <span class="pl-s1">lows</span>.<span class="pl-c1">append</span>(<span class="pl-s1">low</span>)
+<span class="pl-c"># 根据数据绘图</span>
+<span class="pl-s1">plt</span>.<span class="pl-c1">style</span>.<span class="pl-c1">use</span>(<span class="pl-s">'seaborn-v0_8'</span>)
+<span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
+<span class="pl-s1">ax</span>.<span class="pl-c1">plot</span>(<span class="pl-s1">dates</span>, <span class="pl-s1">highs</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'red'</span>, <span class="pl-s1">alpha</span><span class="pl-c1">=</span><span class="pl-c1">0.5</span>) <span class="pl-c"># 最高温度折线图，alpha设置透明度，0完全透明，1完全不透明</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">plot</span>(<span class="pl-s1">dates</span>, <span class="pl-s1">lows</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'blue'</span>, <span class="pl-s1">alpha</span><span class="pl-c1">=</span><span class="pl-c1">0.5</span>) <span class="pl-c"># 最低温度折线图</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">fill_between</span>(<span class="pl-s1">dates</span>, <span class="pl-s1">highs</span>, <span class="pl-s1">lows</span>, <span class="pl-s1">facecolor</span><span class="pl-c1">=</span><span class="pl-s">'blue'</span>, <span class="pl-s1">alpha</span><span class="pl-c1">=</span><span class="pl-c1">0.1</span>) <span class="pl-c"># 填充区域，x坐标，y坐标，y坐标</span>
+<span class="pl-c"># 设置绘图的格式</span>
+<span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s">"Daily High and Low Temperatures, 2021<span class="pl-cce">\n</span>Death Valley, CA"</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_title</span>(<span class="pl-s1">title</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">20</span>)
+<span class="pl-s1">fig</span>.<span class="pl-c1">autofmt_xdate</span>()<span class="pl-c"># 绘制倾斜的日期标签，以免它们彼此重叠</span>
+<span class="pl-s1">ax</span>.<span class="pl-c1">set_ylabel</span>(<span class="pl-s">"Temperature (F)"</span>, <span class="pl-s1">fontsize</span><span class="pl-c1">=</span><span class="pl-c1">16</span>)
+<span class="pl-s1">ax</span>.<span class="pl-c1">tick_params</span>(<span class="pl-s1">labelsize</span><span class="pl-c1">=</span><span class="pl-c1">16</span>)
+<span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()</pre></div>
+<h2>使用json文件作为数据源</h2>
+<p>绘制散点图</p>
+<p>eq_explore_data.py</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<span class="pl-k">import</span> <span class="pl-s1">json</span>
+<span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
+
+
+<span class="pl-c"># 将数据作为字符串读取并转换为 Python 对象</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'eq_data_1_day_m1.geojson'</span>)
+<span class="pl-s1">contents</span> <span class="pl-c1">=</span> <span class="pl-s1">path</span>.<span class="pl-c1">read_text</span>()
+<span class="pl-s1">all_eq_data</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">loads</span>(<span class="pl-s1">contents</span>)
+<span class="pl-c"># 将数据文件转换为更易于阅读的版本</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'readable_eq_data.geojson'</span>)
+<span class="pl-s1">readable_contents</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">dumps</span>(<span class="pl-s1">all_eq_data</span>, <span class="pl-s1">indent</span><span class="pl-c1">=</span><span class="pl-c1">4</span>)<span class="pl-c"># 可选参数indent，指定数据结构中嵌套元素的缩进量</span>
+<span class="pl-s1">path</span>.<span class="pl-c1">write_text</span>(<span class="pl-s1">readable_contents</span>)
+<span class="pl-c"># 查看数据集中的所有地震</span>
+<span class="pl-s1">all_eq_dicts</span> <span class="pl-c1">=</span> <span class="pl-s1">all_eq_data</span>[<span class="pl-s">'features'</span>] <span class="pl-c"># 与地震信息相关的列表，里面嵌套某次地震的信息</span>
+<span class="pl-c"># print(len(all_eq_dicts))</span>
+<span class="pl-s1">mags</span>, <span class="pl-s1">titles</span>, <span class="pl-s1">lons</span>, <span class="pl-s1">lats</span> <span class="pl-c1">=</span> [], [], [], [] 
+<span class="pl-k">for</span> <span class="pl-s1">eq_dict</span> <span class="pl-c1">in</span> <span class="pl-s1">all_eq_dicts</span>:
+    <span class="pl-s1">mag</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'mag'</span>] <span class="pl-c"># 震级</span>
+    <span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'title'</span>] <span class="pl-c"># 地震地点名称</span>
+    <span class="pl-s1">lon</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">0</span>] <span class="pl-c"># 坐标：经度</span>
+    <span class="pl-s1">lat</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">1</span>] <span class="pl-c"># 坐标：纬度</span>
+    <span class="pl-s1">mags</span>.<span class="pl-c1">append</span>(<span class="pl-s1">mag</span>)
+    <span class="pl-s1">titles</span>.<span class="pl-c1">append</span>(<span class="pl-s1">title</span>)
+    <span class="pl-s1">lons</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lon</span>)
+    <span class="pl-s1">lats</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lat</span>)
+<span class="pl-s1">fig</span> <span class="pl-c1">=</span> <span class="pl-s1">px</span>.<span class="pl-c1">scatter</span>(
+    <span class="pl-s1">x</span><span class="pl-c1">=</span><span class="pl-s1">lons</span>,
+    <span class="pl-s1">y</span><span class="pl-c1">=</span><span class="pl-s1">lats</span>,
+    <span class="pl-s1">labels</span><span class="pl-c1">=</span>{<span class="pl-s">'x'</span>: <span class="pl-s">'经度'</span>, <span class="pl-s">'y'</span>: <span class="pl-s">'纬度'</span>},<span class="pl-c"># 坐标轴标题</span>
+    <span class="pl-s1">range_x</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">200</span>, <span class="pl-c1">200</span>],<span class="pl-c"># x坐标范围</span>
+    <span class="pl-s1">range_y</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">90</span>, <span class="pl-c1">90</span>],<span class="pl-c"># y坐标范围</span>
+    <span class="pl-s1">width</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 在屏幕上的显示宽度</span>
+    <span class="pl-s1">height</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 显示高度</span>
+    <span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s">'全球地震散点图'</span>,<span class="pl-c"># 图像标题</span>
+)
+<span class="pl-c"># fig.write_html('global_earthquakes.html')# 保存图像</span>
+<span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
+<p>另一种表示方法<br>
+eq_explore_data.py</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<span class="pl-k">import</span> <span class="pl-s1">json</span>
+<span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
+<span class="pl-k">import</span> <span class="pl-s1">pandas</span> <span class="pl-k">as</span> <span class="pl-s1">pd</span>
+
+
+<span class="pl-c"># 将数据作为字符串读取并转换为 Python 对象</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'eq_data_1_day_m1.geojson'</span>)
+<span class="pl-s1">contents</span> <span class="pl-c1">=</span> <span class="pl-s1">path</span>.<span class="pl-c1">read_text</span>()
+<span class="pl-s1">all_eq_data</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">loads</span>(<span class="pl-s1">contents</span>)
+<span class="pl-c"># 将数据文件转换为更易于阅读的版本</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'readable_eq_data.geojson'</span>)
+<span class="pl-s1">readable_contents</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">dumps</span>(<span class="pl-s1">all_eq_data</span>, <span class="pl-s1">indent</span><span class="pl-c1">=</span><span class="pl-c1">4</span>)<span class="pl-c"># 可选参数indent，指定数据结构中嵌套元素的缩进量</span>
+<span class="pl-s1">path</span>.<span class="pl-c1">write_text</span>(<span class="pl-s1">readable_contents</span>)
+<span class="pl-c"># 查看数据集中的所有地震</span>
+<span class="pl-s1">all_eq_dicts</span> <span class="pl-c1">=</span> <span class="pl-s1">all_eq_data</span>[<span class="pl-s">'features'</span>] <span class="pl-c"># 与地震信息相关的列表，里面嵌套某次地震的信息</span>
+<span class="pl-c"># print(len(all_eq_dicts))</span>
+<span class="pl-s1">mags</span>, <span class="pl-s1">titles</span>, <span class="pl-s1">lons</span>, <span class="pl-s1">lats</span> <span class="pl-c1">=</span> [], [], [], [] 
+<span class="pl-k">for</span> <span class="pl-s1">eq_dict</span> <span class="pl-c1">in</span> <span class="pl-s1">all_eq_dicts</span>:
+    <span class="pl-s1">mag</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'mag'</span>] <span class="pl-c"># 震级</span>
+    <span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'title'</span>] <span class="pl-c"># 地震地点名称</span>
+    <span class="pl-s1">lon</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">0</span>] <span class="pl-c"># 坐标：经度</span>
+    <span class="pl-s1">lat</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">1</span>] <span class="pl-c"># 坐标：纬度</span>
+    <span class="pl-s1">mags</span>.<span class="pl-c1">append</span>(<span class="pl-s1">mag</span>)
+    <span class="pl-s1">titles</span>.<span class="pl-c1">append</span>(<span class="pl-s1">title</span>)
+    <span class="pl-s1">lons</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lon</span>)
+    <span class="pl-s1">lats</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lat</span>)
+    
+<span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">pd</span>.<span class="pl-c1">DataFrame</span>(<span class="pl-s1">data</span><span class="pl-c1">=</span><span class="pl-en">zip</span>(<span class="pl-s1">lons</span>, <span class="pl-s1">lats</span>, <span class="pl-s1">titles</span>, <span class="pl-s1">mags</span>), <span class="pl-s1">columns</span><span class="pl-c1">=</span>[<span class="pl-s">'经度'</span>, <span class="pl-s">'纬度'</span>, <span class="pl-s">'位置'</span>, <span class="pl-s">'震级'</span>])
+<span class="pl-s1">data</span>.<span class="pl-c1">head</span>()
+
+<span class="pl-s1">fig</span> <span class="pl-c1">=</span> <span class="pl-s1">px</span>.<span class="pl-c1">scatter</span>(
+    <span class="pl-s1">data</span>,
+    <span class="pl-s1">x</span><span class="pl-c1">=</span><span class="pl-s">'经度'</span>,
+    <span class="pl-s1">y</span><span class="pl-c1">=</span><span class="pl-s">'纬度'</span>,
+    <span class="pl-s1">labels</span><span class="pl-c1">=</span>{<span class="pl-s">'x'</span>: <span class="pl-s">'经度'</span>, <span class="pl-s">'y'</span>: <span class="pl-s">'纬度'</span>},<span class="pl-c"># 坐标轴标题</span>
+    <span class="pl-s1">range_x</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">200</span>, <span class="pl-c1">200</span>],<span class="pl-c"># x坐标范围</span>
+    <span class="pl-s1">range_y</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">90</span>, <span class="pl-c1">90</span>],<span class="pl-c"># y坐标范围</span>
+    <span class="pl-s1">width</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 在屏幕上的显示宽度</span>
+    <span class="pl-s1">height</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 显示高度</span>
+    <span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s">'全球地震散点图'</span>,<span class="pl-c"># 图像标题</span>
+)
+<span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
+<p>进一步美化图像</p>
+<p>eq_explore_data.py</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<span class="pl-k">import</span> <span class="pl-s1">json</span>
+<span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
+<span class="pl-k">import</span> <span class="pl-s1">pandas</span> <span class="pl-k">as</span> <span class="pl-s1">pd</span>
+
+
+<span class="pl-c"># 将数据作为字符串读取并转换为 Python 对象</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'eq_data_1_day_m1.geojson'</span>)
+<span class="pl-s1">contents</span> <span class="pl-c1">=</span> <span class="pl-s1">path</span>.<span class="pl-c1">read_text</span>()
+<span class="pl-s1">all_eq_data</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">loads</span>(<span class="pl-s1">contents</span>)
+<span class="pl-c"># 将数据文件转换为更易于阅读的版本</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'readable_eq_data.geojson'</span>)
+<span class="pl-s1">readable_contents</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">dumps</span>(<span class="pl-s1">all_eq_data</span>, <span class="pl-s1">indent</span><span class="pl-c1">=</span><span class="pl-c1">4</span>)<span class="pl-c"># 可选参数indent，指定数据结构中嵌套元素的缩进量</span>
+<span class="pl-s1">path</span>.<span class="pl-c1">write_text</span>(<span class="pl-s1">readable_contents</span>)
+<span class="pl-c"># 查看数据集中的所有地震</span>
+<span class="pl-s1">all_eq_dicts</span> <span class="pl-c1">=</span> <span class="pl-s1">all_eq_data</span>[<span class="pl-s">'features'</span>] <span class="pl-c"># 与地震信息相关的列表，里面嵌套某次地震的信息</span>
+<span class="pl-c"># print(len(all_eq_dicts))</span>
+<span class="pl-s1">mags</span>, <span class="pl-s1">titles</span>, <span class="pl-s1">lons</span>, <span class="pl-s1">lats</span> <span class="pl-c1">=</span> [], [], [], [] 
+<span class="pl-k">for</span> <span class="pl-s1">eq_dict</span> <span class="pl-c1">in</span> <span class="pl-s1">all_eq_dicts</span>:
+    <span class="pl-s1">mag</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'mag'</span>] <span class="pl-c"># 震级</span>
+    <span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'title'</span>] <span class="pl-c"># 地震地点名称</span>
+    <span class="pl-s1">lon</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">0</span>] <span class="pl-c"># 坐标：经度</span>
+    <span class="pl-s1">lat</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">1</span>] <span class="pl-c"># 坐标：纬度</span>
+    <span class="pl-s1">mags</span>.<span class="pl-c1">append</span>(<span class="pl-s1">mag</span>)
+    <span class="pl-s1">titles</span>.<span class="pl-c1">append</span>(<span class="pl-s1">title</span>)
+    <span class="pl-s1">lons</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lon</span>)
+    <span class="pl-s1">lats</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lat</span>)
+
+<span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">pd</span>.<span class="pl-c1">DataFrame</span>(<span class="pl-s1">data</span><span class="pl-c1">=</span><span class="pl-en">zip</span>(<span class="pl-s1">lons</span>, <span class="pl-s1">lats</span>, <span class="pl-s1">titles</span>, <span class="pl-s1">mags</span>), <span class="pl-s1">columns</span><span class="pl-c1">=</span>[<span class="pl-s">'经度'</span>, <span class="pl-s">'纬度'</span>, <span class="pl-s">'位置'</span>, <span class="pl-s">'震级'</span>])
+<span class="pl-s1">data</span>.<span class="pl-c1">head</span>()
+
+<span class="pl-s1">fig</span> <span class="pl-c1">=</span> <span class="pl-s1">px</span>.<span class="pl-c1">scatter</span>(
+    <span class="pl-s1">data</span>,
+    <span class="pl-s1">x</span><span class="pl-c1">=</span><span class="pl-s">'经度'</span>,
+    <span class="pl-s1">y</span><span class="pl-c1">=</span><span class="pl-s">'纬度'</span>,
+    <span class="pl-s1">labels</span><span class="pl-c1">=</span>{<span class="pl-s">'x'</span>: <span class="pl-s">'经度'</span>, <span class="pl-s">'y'</span>: <span class="pl-s">'纬度'</span>},<span class="pl-c"># 坐标轴标题</span>
+    <span class="pl-s1">range_x</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">200</span>, <span class="pl-c1">200</span>],<span class="pl-c"># x坐标范围</span>
+    <span class="pl-s1">range_y</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">90</span>, <span class="pl-c1">90</span>],<span class="pl-c"># y坐标范围</span>
+    <span class="pl-s1">width</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 在屏幕上的显示宽度</span>
+    <span class="pl-s1">height</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 显示高度</span>
+    <span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s">'全球地震散点图'</span>,<span class="pl-c"># 图像标题</span>
+    <span class="pl-c"># 震级越大，点越大</span>
+    <span class="pl-s1">size</span><span class="pl-c1">=</span><span class="pl-s">'震级'</span>,<span class="pl-c"># 以震级参数为参考设置点的大小</span>
+    <span class="pl-s1">size_max</span><span class="pl-c1">=</span><span class="pl-c1">10</span>,<span class="pl-c"># 设置点的大小</span>
+)
+<span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
+<p>使用更多数据的json文件</p>
+<p>数据可视化</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<span class="pl-k">import</span> <span class="pl-s1">json</span>
+<span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
+<span class="pl-k">import</span> <span class="pl-s1">pandas</span> <span class="pl-k">as</span> <span class="pl-s1">pd</span>
+
+
+<span class="pl-c"># 将数据作为字符串读取并转换为 Python 对象</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'eq_data_30_day_m1.geojson'</span>)
+<span class="pl-k">try</span>:
+    <span class="pl-s1">contents</span> <span class="pl-c1">=</span> <span class="pl-s1">path</span>.<span class="pl-c1">read_text</span>()
+<span class="pl-k">except</span>:
+    <span class="pl-s1">contents</span> <span class="pl-c1">=</span> <span class="pl-s1">path</span>.<span class="pl-c1">read_text</span>(<span class="pl-s1">encoding</span><span class="pl-c1">=</span><span class="pl-s">'utf-8'</span>)
+<span class="pl-s1">all_eq_data</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">loads</span>(<span class="pl-s1">contents</span>)
+<span class="pl-c"># 将数据文件转换为更易于阅读的版本</span>
+<span class="pl-s1">path</span> <span class="pl-c1">=</span> <span class="pl-en">Path</span>(<span class="pl-s">'readable_eq_data.geojson'</span>)
+<span class="pl-s1">readable_contents</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-c1">dumps</span>(<span class="pl-s1">all_eq_data</span>, <span class="pl-s1">indent</span><span class="pl-c1">=</span><span class="pl-c1">4</span>)<span class="pl-c"># 可选参数indent，指定数据结构中嵌套元素的缩进量</span>
+<span class="pl-s1">path</span>.<span class="pl-c1">write_text</span>(<span class="pl-s1">readable_contents</span>)
+<span class="pl-c"># 查看数据集中的所有地震</span>
+<span class="pl-s1">all_eq_dicts</span> <span class="pl-c1">=</span> <span class="pl-s1">all_eq_data</span>[<span class="pl-s">'features'</span>] <span class="pl-c"># 与地震信息相关的列表，里面嵌套某次地震的信息</span>
+<span class="pl-c"># print(len(all_eq_dicts))</span>
+<span class="pl-s1">mags</span>, <span class="pl-s1">titles</span>, <span class="pl-s1">lons</span>, <span class="pl-s1">lats</span> <span class="pl-c1">=</span> [], [], [], [] 
+<span class="pl-k">for</span> <span class="pl-s1">eq_dict</span> <span class="pl-c1">in</span> <span class="pl-s1">all_eq_dicts</span>:
+    <span class="pl-s1">mag</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'mag'</span>] <span class="pl-c"># 震级</span>
+    <span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'properties'</span>][<span class="pl-s">'title'</span>] <span class="pl-c"># 地震地点名称</span>
+    <span class="pl-s1">lon</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">0</span>] <span class="pl-c"># 坐标：经度</span>
+    <span class="pl-s1">lat</span> <span class="pl-c1">=</span> <span class="pl-s1">eq_dict</span>[<span class="pl-s">'geometry'</span>][<span class="pl-s">'coordinates'</span>][<span class="pl-c1">1</span>] <span class="pl-c"># 坐标：纬度</span>
+    <span class="pl-s1">mags</span>.<span class="pl-c1">append</span>(<span class="pl-s1">mag</span>)
+    <span class="pl-s1">titles</span>.<span class="pl-c1">append</span>(<span class="pl-s1">title</span>)
+    <span class="pl-s1">lons</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lon</span>)
+    <span class="pl-s1">lats</span>.<span class="pl-c1">append</span>(<span class="pl-s1">lat</span>)
+
+<span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">pd</span>.<span class="pl-c1">DataFrame</span>(<span class="pl-s1">data</span><span class="pl-c1">=</span><span class="pl-en">zip</span>(<span class="pl-s1">lons</span>, <span class="pl-s1">lats</span>, <span class="pl-s1">titles</span>, <span class="pl-s1">mags</span>), <span class="pl-s1">columns</span><span class="pl-c1">=</span>[<span class="pl-s">'经度'</span>, <span class="pl-s">'纬度'</span>, <span class="pl-s">'位置'</span>, <span class="pl-s">'震级'</span>])
+<span class="pl-s1">data</span>.<span class="pl-c1">head</span>()
+
+<span class="pl-s1">fig</span> <span class="pl-c1">=</span> <span class="pl-s1">px</span>.<span class="pl-c1">scatter</span>(
+    <span class="pl-s1">data</span>,
+    <span class="pl-s1">x</span><span class="pl-c1">=</span><span class="pl-s">'经度'</span>,
+    <span class="pl-s1">y</span><span class="pl-c1">=</span><span class="pl-s">'纬度'</span>,
+    <span class="pl-s1">labels</span><span class="pl-c1">=</span>{<span class="pl-s">'x'</span>: <span class="pl-s">'经度'</span>, <span class="pl-s">'y'</span>: <span class="pl-s">'纬度'</span>},<span class="pl-c"># 坐标轴标题</span>
+    <span class="pl-s1">range_x</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">200</span>, <span class="pl-c1">200</span>],<span class="pl-c"># x坐标范围</span>
+    <span class="pl-s1">range_y</span><span class="pl-c1">=</span>[<span class="pl-c1">-</span><span class="pl-c1">90</span>, <span class="pl-c1">90</span>],<span class="pl-c"># y坐标范围</span>
+    <span class="pl-s1">width</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 在屏幕上的显示宽度</span>
+    <span class="pl-s1">height</span><span class="pl-c1">=</span><span class="pl-c1">800</span>,<span class="pl-c"># 显示高度</span>
+    <span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s">'全球地震散点图'</span>,<span class="pl-c"># 图像标题</span>
+    <span class="pl-c"># 震级越大，点越大</span>
+    <span class="pl-s1">size</span><span class="pl-c1">=</span><span class="pl-s">'震级'</span>,<span class="pl-c"># 以震级参数为参考设置点的大小</span>
+    <span class="pl-s1">size_max</span><span class="pl-c1">=</span><span class="pl-c1">10</span>,<span class="pl-c"># 设置点的大小</span>
+    <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'震级'</span>,<span class="pl-c"># 以震级参数为参考设置点的颜色，默认变色范围是从蓝色到红色再到黄色</span>
+    <span class="pl-s1">hover_name</span><span class="pl-c1">=</span><span class="pl-s">'位置'</span>,<span class="pl-c"># 添加鼠标悬停文本</span>
+)
+<span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
+<p>其他渐变色</p>
+<div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> import plotly.express as px
+<span class="pl-k">&gt;&gt;&gt;</span> px.colors.named_colorscales()
+['aggrnyl', 'agsunset', 'blackbody', 'bluered', 'blues', 'blugrn', 'bluyl', 'brwnyl', 'bugn', 'bupu', 'burg', 'burgyl', 'cividis', 'darkmint', 'electric', 'emrld', 'gnbu', 'greens', 'greys', 'hot', 'inferno', 'jet', 'magenta', 'magma', 'mint', 'orrd', 'oranges', 'oryel', 'peach', 'pinkyl', 'plasma', 'plotly3', 'pubu', 'pubugn', 'purd', 'purp', 'purples', 'purpor', 'rainbow', 'rdbu', 'rdpu', 'redor', 'reds', 'sunset', 'sunsetdark', 'teal', 'tealgrn', 'turbo', 'viridis', 'ylgn', 'ylgnbu', 'ylorbr', 'ylorrd', 'algae', 'amp', 'deep', 'dense', 'gray', 'haline', 'ice', 'matter', 'solar', 'speed', 'tempo', 'thermal', 'turbid', 'armyrose', 'brbg', 'earth', 'fall', 'geyser', 'prgn', 'piyg', 'picnic', 'portland', 'puor', 'rdgy', 'rdylbu', 'rdylgn', 'spectral', 'tealrose', 'temps', 'tropic', 'balance', 'curl', 'delta', 'oxy', 'edge', 'hsv', 'icefire', 'phase', 'twilight', 'mrybm', 'mygbm']</pre></div>
+<h2>使用GitHub API对GitHub的数据可视化</h2>
+<p>API 是网站的一部分，用于与程序进行交互。这些程序使用非常具体的 URL 请求特定的信息，而这种请求称为 API 调用。请求的数据将以程序易于处理的格式（如 JSON或 CSV）返回。使用外部数据源的应用程序（如集成了社交媒体网站的应用程序）大多依赖 API 调用。<br>
+<a href="https://api.github.com/search/repositories?q=language:python+sort:stars">https://api.github.com/search/repositories?q=language:python+sort:stars</a><br>
+这个 API 调用返回 GitHub 当前托管了多少个 Python 项目，以及有关最受欢迎的Python 仓库的信息。下面来仔细地研究这个 API 调用。开头的<a href="https://api.github.com/">https://api.github.com/</a> 是 GitHub 的 API 地址。接下来的search/repositories 让 API 搜索 GitHub 上的所有仓库。repositories 后面的问号指出需要传递一个参数。参数 q 表示查询，而等号（=）让我们能够开始指定查询（q=）。接着，通过 language:python 指出只想获取主要语言为 Python 的仓库的信息。最后的 +sort:stars 指定将项目按星数排序。<br>
+大多数 API 存在速率限制，即在特定时间内可执行的请求数存在限制。要获悉是否接近了 GitHub 的限制，请在浏览器中输入 <a href="https://api.github.com/rate_limit">https://api.github.com/rate_limit</a><br>
+注意：很多 API 要求，在通过注册获得 API 密钥（访问令牌）后，才能执行 API调用。GitHub 没有这样的要求，但获得访问令牌后，配额将高得多。</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
+
+
+<span class="pl-c"># 执行 API 调用并查看响应</span>
+<span class="pl-s1">url</span> <span class="pl-c1">=</span> <span class="pl-s">"https://api.github.com/search/repositories"</span>
+<span class="pl-s1">url</span> <span class="pl-c1">+=</span> <span class="pl-s">"?q=language:python+sort:stars+stars:&gt;10000"</span> <span class="pl-c"># 只查找获得超过 10 000 颗星的 Python 仓库</span>
+<span class="pl-s1">headers</span> <span class="pl-c1">=</span> {<span class="pl-s">"Accept"</span>: <span class="pl-s">"application/vnd.github.v3+json"</span>}<span class="pl-c"># 通过指定 headers 显式地要求使用第三版的GitHub API</span>
+<span class="pl-s1">r</span> <span class="pl-c1">=</span> <span class="pl-s1">requests</span>.<span class="pl-c1">get</span>(<span class="pl-s1">url</span>, <span class="pl-s1">headers</span><span class="pl-c1">=</span><span class="pl-s1">headers</span>)
+<span class="pl-en">print</span>(<span class="pl-s">f"Status code: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">r</span>.<span class="pl-c1">status_code</span><span class="pl-kos">}</span></span>"</span>)<span class="pl-c"># 指出请求是否成功（状态码 200表示请求成功）</span>
+<span class="pl-c"># 将响应转换为字典</span>
+<span class="pl-s1">response_dict</span> <span class="pl-c1">=</span> <span class="pl-s1">r</span>.<span class="pl-c1">json</span>()
+<span class="pl-en">print</span>(<span class="pl-s">f"Complete results: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-c1">not</span> <span class="pl-s1">response_dict</span>[<span class="pl-s">'incomplete_results'</span>]<span class="pl-kos">}</span></span>"</span>)
+<span class="pl-c"># 处理有关仓库的信息</span>
+<span class="pl-s1">repo_dicts</span> <span class="pl-c1">=</span> <span class="pl-s1">response_dict</span>[<span class="pl-s">'items'</span>]
+<span class="pl-s1">repo_links</span>, <span class="pl-s1">stars</span>, <span class="pl-s1">hover_texts</span> <span class="pl-c1">=</span> [], [], [] <span class="pl-c"># 带链接的仓库名称列表，stars列表,鼠标悬停文本列表</span>
+<span class="pl-k">for</span> <span class="pl-s1">repo_dict</span> <span class="pl-c1">in</span> <span class="pl-s1">repo_dicts</span>:
+    <span class="pl-c"># 将仓库名转换为链接</span>
+    <span class="pl-s1">repo_name</span> <span class="pl-c1">=</span> <span class="pl-s1">repo_dict</span>[<span class="pl-s">'name'</span>]
+    <span class="pl-s1">repo_url</span> <span class="pl-c1">=</span> <span class="pl-s1">repo_dict</span>[<span class="pl-s">'html_url'</span>]
+    <span class="pl-s1">repo_link</span> <span class="pl-c1">=</span> <span class="pl-s">f"&lt;a href='<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">repo_url</span><span class="pl-kos">}</span></span>'&gt;<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">repo_name</span><span class="pl-kos">}</span></span>&lt;/a&gt;"</span> <span class="pl-c"># 插入链接</span>
+    <span class="pl-s1">repo_links</span>.<span class="pl-c1">append</span>(<span class="pl-s1">repo_link</span>)
+    <span class="pl-s1">stars</span>.<span class="pl-c1">append</span>(<span class="pl-s1">repo_dict</span>[<span class="pl-s">'stargazers_count'</span>])
+    <span class="pl-c"># 创建悬停文本</span>
+    <span class="pl-s1">owner</span> <span class="pl-c1">=</span> <span class="pl-s1">repo_dict</span>[<span class="pl-s">'owner'</span>][<span class="pl-s">'login'</span>]
+    <span class="pl-s1">description</span> <span class="pl-c1">=</span> <span class="pl-s1">repo_dict</span>[<span class="pl-s">'description'</span>]
+    <span class="pl-s1">hover_text</span> <span class="pl-c1">=</span> <span class="pl-s">f"<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">owner</span><span class="pl-kos">}</span></span>&lt;br /&gt;<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">description</span><span class="pl-kos">}</span></span>"</span> <span class="pl-c"># 在仓库和描述之间添加换行符&lt;br /&gt;</span>
+    <span class="pl-s1">hover_texts</span>.<span class="pl-c1">append</span>(<span class="pl-s1">hover_text</span>)
+<span class="pl-c"># 可视化</span>
+<span class="pl-s1">title</span> <span class="pl-c1">=</span> <span class="pl-s">"GitHub上面最受欢迎的python项目"</span> <span class="pl-c"># 图像标题</span>
+<span class="pl-s1">labels</span> <span class="pl-c1">=</span> {<span class="pl-s">'x'</span>: <span class="pl-s">'仓库'</span>, <span class="pl-s">'y'</span>: <span class="pl-s">'Stars'</span>} <span class="pl-c"># 坐标轴标题</span>
+<span class="pl-s1">fig</span> <span class="pl-c1">=</span> <span class="pl-s1">px</span>.<span class="pl-c1">bar</span>(<span class="pl-s1">x</span><span class="pl-c1">=</span><span class="pl-s1">repo_links</span>, <span class="pl-s1">y</span><span class="pl-c1">=</span><span class="pl-s1">stars</span>, <span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s1">title</span>, <span class="pl-s1">labels</span><span class="pl-c1">=</span><span class="pl-s1">labels</span>, <span class="pl-s1">hover_name</span><span class="pl-c1">=</span><span class="pl-s1">hover_texts</span>)
+<span class="pl-c"># 设置字体大小</span>
+<span class="pl-s1">fig</span>.<span class="pl-c1">update_layout</span>(<span class="pl-s1">title_font_size</span><span class="pl-c1">=</span><span class="pl-c1">28</span>, <span class="pl-s1">xaxis_title_font_size</span><span class="pl-c1">=</span><span class="pl-c1">20</span>, <span class="pl-s1">yaxis_title_font_size</span><span class="pl-c1">=</span><span class="pl-c1">20</span>)
+<span class="pl-c"># 自定义颜色和不透明度</span>
+<span class="pl-s1">fig</span>.<span class="pl-c1">update_traces</span>(<span class="pl-s1">marker_color</span><span class="pl-c1">=</span><span class="pl-s">'SteelBlue'</span>, <span class="pl-s1">marker_opacity</span><span class="pl-c1">=</span><span class="pl-c1">0.6</span>)
+<span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

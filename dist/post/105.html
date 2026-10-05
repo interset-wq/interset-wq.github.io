@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="# 知识点整理
+
+## 第3章 Linux 系统使用基础
+
+### 3.3 常用Linux 命令
+
+#### 3.3.1 Linux 命令的基本格式
+
+1. 打开shell 方式:'开始'菜单中选择应用程序-附件-终端,命令提示符格式:`[root@localhost:~]#`
+   - `root`:当前登录用户;
+   - `localhost`:当前系统的简写主机名(完整名localhost.localdommain);
+   - `~`:用户当前所在目录;
+   - `#`:命令提示符(root用户为#,普通用户为$)｡
+2. 家目录(主目录):用户登录后的初始位置,超级用户家目录为`/root`,普通用户家目录为`/home/用户名`;初始登录状态下,用户创建的文件默认放入家目录;切换目录命令是cd｡
+3. Linux 命令的基本格式: `命令 [选项] [参数]`
+   - 选项:分为短格式选项(-l,英文简写)和长格式选项(--all,完整英文单词),用于调整命令执行方式;
+   - 参数:命令的操作对象｡
+
+#### 3.3.2 Linux 简单命令
+
+##### 3.3.2.1 w 和who 命令
+
+1. 功能:均用于查看服务器上已登陆的用户信息;区别是w 命令还能显示每个用户执行任务的情况｡
+2. w 命令基本格式: `w [选项] [用户名]`
+   - 仅跟用户名:只显示该用户信息;
+   - 选项:-h(不显示输出标题)､-l(详细格式输出)､-s(简洁格式输出)｡
+3. who 命令基本格式: `who [选项] [file]`
+   - 无指定文件:默认通过/var/run/utmp 文件获取登录用户信息;
+   - 选项:-a(列出所有信息,相当于所有选项)､-b(列出系统最近启动时间)､-l(列出所有可登录终端信息)､-m(仅列出当前终端信息,相当于who am I)､-s(仅显示名称､线路和时间字段,默认选项)｡
+
+``` bash
+$ w
+ 23:03:55 up 3 min,  1 user,  load average: 0.02, 0.06, 0.02
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+d111kc   pts/1    -                23:02    1:49   0.02s  0.01s -bash
+$ who
+d111kc   pts/1        2025-09-15 23:02
+```
+
+##### 3.3.2.2 echo 命令
+
+1. 功能:将命令行中的参数显示到标准输出(屏幕)上｡
+2. 命令格式: `echo [选项] [输出内容]`
+3. 选项:
+   - -n:取消输出后行末的换行符号(内容输出后不换行);
+   - -e:使用转义字符
+4. -e 选项支持的控制字符:
+   - \\:输出\本身;
+   - \a:输出警告音;
+   - \b:退格键(向左删除键);
+   - \c:取消输出行末的换行符(同-n);
+   - \e:Esc 键;
+   - \f:换页符;
+   - \n:换行符;
+   - \r:回车键;
+   - \t:制表符(Tab 键);
+   - \v:垂直制表符;
+   - \0nnn:按八进制ASCII 码表输出字符;
+   - \xhh:按十六进制ASCII 码表输出字符｡
+
+``` bash
+$ echo -e 'hello\nworld'
+hello
+world
+$ echo 'hello\nworld'
+hello\nworld
+```
+
+##### 3.3.2.3 date 命令
+
+1. 功能:显示或设定系统的日期与时间｡
+2. 设定时间格式: `date -s 时间值` (仅root 权限可设置)｡
+
+``` bash
+$ date
+Mon Sep 15 23:05:50 CST 2025
+```
+
+##### 3.3.2.4 passwd 命令
+
+1. 功能:密码配置指令｡
+2. 基本格式: `passwd [选项] 用户名`
+3. 权限规则:
+   - 普通用户:仅能修改自己的密码,需先输入旧密码;
+   - 超级用户(root):可修改自己和普通用户的密码,无需输入旧密码｡
+
+``` bash
+$ passwd
+Changing password for d111kc.
+Current password:
+New password:
+Retype new password:
+passwd: password updated successfully
+```
+
+### 3.4 软件包
+
+1. Linux 的软件包分类:源码包和二进制包｡
+2. 源码包:因常用打包压缩格式为'tar.gz',故又称Tarball(Tarball 是打包工具)｡
+3. 二进制包管理系统:两大主流——RPM 包管理系统､DPKG 包管理系统｡
+
+### 3.5 本地软件安装､运行与卸载
+
+#### 3.5.1 RPM 包安装､卸载和升级
+
+在 Linux 系统中，rpm 是 Red-Hat Package Manager（红帽包管理器） 的缩写，是一种用于管理软件包的工具和文件格式，主要应用于基于 Red Hat 架构的 Linux 发行版（如 CentOS、Fedora、RHEL 等）。">
+<meta property="og:title" content="知识点整理">
+<meta property="og:description" content="# 知识点整理
+
+## 第3章 Linux 系统使用基础
+
+### 3.3 常用Linux 命令
+
+#### 3.3.1 Linux 命令的基本格式
+
+1. 打开shell 方式:'开始'菜单中选择应用程序-附件-终端,命令提示符格式:`[root@localhost:~]#`
+   - `root`:当前登录用户;
+   - `localhost`:当前系统的简写主机名(完整名localhost.localdommain);
+   - `~`:用户当前所在目录;
+   - `#`:命令提示符(root用户为#,普通用户为$)｡
+2. 家目录(主目录):用户登录后的初始位置,超级用户家目录为`/root`,普通用户家目录为`/home/用户名`;初始登录状态下,用户创建的文件默认放入家目录;切换目录命令是cd｡
+3. Linux 命令的基本格式: `命令 [选项] [参数]`
+   - 选项:分为短格式选项(-l,英文简写)和长格式选项(--all,完整英文单词),用于调整命令执行方式;
+   - 参数:命令的操作对象｡
+
+#### 3.3.2 Linux 简单命令
+
+##### 3.3.2.1 w 和who 命令
+
+1. 功能:均用于查看服务器上已登陆的用户信息;区别是w 命令还能显示每个用户执行任务的情况｡
+2. w 命令基本格式: `w [选项] [用户名]`
+   - 仅跟用户名:只显示该用户信息;
+   - 选项:-h(不显示输出标题)､-l(详细格式输出)､-s(简洁格式输出)｡
+3. who 命令基本格式: `who [选项] [file]`
+   - 无指定文件:默认通过/var/run/utmp 文件获取登录用户信息;
+   - 选项:-a(列出所有信息,相当于所有选项)､-b(列出系统最近启动时间)､-l(列出所有可登录终端信息)､-m(仅列出当前终端信息,相当于who am I)､-s(仅显示名称､线路和时间字段,默认选项)｡
+
+``` bash
+$ w
+ 23:03:55 up 3 min,  1 user,  load average: 0.02, 0.06, 0.02
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+d111kc   pts/1    -                23:02    1:49   0.02s  0.01s -bash
+$ who
+d111kc   pts/1        2025-09-15 23:02
+```
+
+##### 3.3.2.2 echo 命令
+
+1. 功能:将命令行中的参数显示到标准输出(屏幕)上｡
+2. 命令格式: `echo [选项] [输出内容]`
+3. 选项:
+   - -n:取消输出后行末的换行符号(内容输出后不换行);
+   - -e:使用转义字符
+4. -e 选项支持的控制字符:
+   - \\:输出\本身;
+   - \a:输出警告音;
+   - \b:退格键(向左删除键);
+   - \c:取消输出行末的换行符(同-n);
+   - \e:Esc 键;
+   - \f:换页符;
+   - \n:换行符;
+   - \r:回车键;
+   - \t:制表符(Tab 键);
+   - \v:垂直制表符;
+   - \0nnn:按八进制ASCII 码表输出字符;
+   - \xhh:按十六进制ASCII 码表输出字符｡
+
+``` bash
+$ echo -e 'hello\nworld'
+hello
+world
+$ echo 'hello\nworld'
+hello\nworld
+```
+
+##### 3.3.2.3 date 命令
+
+1. 功能:显示或设定系统的日期与时间｡
+2. 设定时间格式: `date -s 时间值` (仅root 权限可设置)｡
+
+``` bash
+$ date
+Mon Sep 15 23:05:50 CST 2025
+```
+
+##### 3.3.2.4 passwd 命令
+
+1. 功能:密码配置指令｡
+2. 基本格式: `passwd [选项] 用户名`
+3. 权限规则:
+   - 普通用户:仅能修改自己的密码,需先输入旧密码;
+   - 超级用户(root):可修改自己和普通用户的密码,无需输入旧密码｡
+
+``` bash
+$ passwd
+Changing password for d111kc.
+Current password:
+New password:
+Retype new password:
+passwd: password updated successfully
+```
+
+### 3.4 软件包
+
+1. Linux 的软件包分类:源码包和二进制包｡
+2. 源码包:因常用打包压缩格式为'tar.gz',故又称Tarball(Tarball 是打包工具)｡
+3. 二进制包管理系统:两大主流——RPM 包管理系统､DPKG 包管理系统｡
+
+### 3.5 本地软件安装､运行与卸载
+
+#### 3.5.1 RPM 包安装､卸载和升级
+
+在 Linux 系统中，rpm 是 Red-Hat Package Manager（红帽包管理器） 的缩写，是一种用于管理软件包的工具和文件格式，主要应用于基于 Red Hat 架构的 Linux 发行版（如 CentOS、Fedora、RHEL 等）。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/105.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>知识点整理</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">知识点整理</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-09-10</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1d76db;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Linux">Linux</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><h1>知识点整理</h1>
+<h2>第3章 Linux 系统使用基础</h2>
+<h3>3.3 常用Linux 命令</h3>
+<h4>3.3.1 Linux 命令的基本格式</h4>
+<ol>
+<li>打开shell 方式:"开始"菜单中选择应用程序-附件-终端,命令提示符格式:<code class="notranslate">[root@localhost:~]#</code>
+<ul>
+<li><code class="notranslate">root</code>:当前登录用户;</li>
+<li><code class="notranslate">localhost</code>:当前系统的简写主机名(完整名localhost.localdommain);</li>
+<li><code class="notranslate">~</code>:用户当前所在目录;</li>
+<li><code class="notranslate">#</code>:命令提示符(root用户为#,普通用户为$)｡</li>
+</ul>
+</li>
+<li>家目录(主目录):用户登录后的初始位置,超级用户家目录为<code class="notranslate">/root</code>,普通用户家目录为<code class="notranslate">/home/用户名</code>;初始登录状态下,用户创建的文件默认放入家目录;切换目录命令是cd｡</li>
+<li>Linux 命令的基本格式: <code class="notranslate">命令 [选项] [参数]</code>
+<ul>
+<li>选项:分为短格式选项(-l,英文简写)和长格式选项(--all,完整英文单词),用于调整命令执行方式;</li>
+<li>参数:命令的操作对象｡</li>
+</ul>
+</li>
+</ol>
+<h4>3.3.2 Linux 简单命令</h4>
+<h5>3.3.2.1 w 和who 命令</h5>
+<ol>
+<li>功能:均用于查看服务器上已登陆的用户信息;区别是w 命令还能显示每个用户执行任务的情况｡</li>
+<li>w 命令基本格式: <code class="notranslate">w [选项] [用户名]</code>
+<ul>
+<li>仅跟用户名:只显示该用户信息;</li>
+<li>选项:-h(不显示输出标题)､-l(详细格式输出)､-s(简洁格式输出)｡</li>
+</ul>
+</li>
+<li>who 命令基本格式: <code class="notranslate">who [选项] [file]</code>
+<ul>
+<li>无指定文件:默认通过/var/run/utmp 文件获取登录用户信息;</li>
+<li>选项:-a(列出所有信息,相当于所有选项)､-b(列出系统最近启动时间)､-l(列出所有可登录终端信息)､-m(仅列出当前终端信息,相当于who am I)､-s(仅显示名称､线路和时间字段,默认选项)｡</li>
+</ul>
+</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ w
+ 23:03:55 up 3 min,  1 user,  load average: 0.02, 0.06, 0.02
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+d111kc   pts/1    -                23:02    1:49   0.02s  0.01s -bash
+$ who
+d111kc   pts/1        2025-09-15 23:02</pre></div>
+<h5>3.3.2.2 echo 命令</h5>
+<ol>
+<li>功能:将命令行中的参数显示到标准输出(屏幕)上｡</li>
+<li>命令格式: <code class="notranslate">echo [选项] [输出内容]</code></li>
+<li>选项:
+<ul>
+<li>-n:取消输出后行末的换行符号(内容输出后不换行);</li>
+<li>-e:使用转义字符</li>
+</ul>
+</li>
+<li>-e 选项支持的控制字符:
+<ul>
+<li>\:输出\本身;</li>
+<li>\a:输出警告音;</li>
+<li>\b:退格键(向左删除键);</li>
+<li>\c:取消输出行末的换行符(同-n);</li>
+<li>\e:Esc 键;</li>
+<li>\f:换页符;</li>
+<li>\n:换行符;</li>
+<li>\r:回车键;</li>
+<li>\t:制表符(Tab 键);</li>
+<li>\v:垂直制表符;</li>
+<li>\0nnn:按八进制ASCII 码表输出字符;</li>
+<li>\xhh:按十六进制ASCII 码表输出字符｡</li>
+</ul>
+</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> -e <span class="pl-s"><span class="pl-pds">"</span>hello\nworld<span class="pl-pds">"</span></span>
+hello
+world
+$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>hello\nworld<span class="pl-pds">"</span></span>
+hello<span class="pl-cce">\n</span>world</pre></div>
+<h5>3.3.2.3 date 命令</h5>
+<ol>
+<li>功能:显示或设定系统的日期与时间｡</li>
+<li>设定时间格式: <code class="notranslate">date -s 时间值</code> (仅root 权限可设置)｡</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ date
+Mon Sep 15 23:05:50 CST 2025</pre></div>
+<h5>3.3.2.4 passwd 命令</h5>
+<ol>
+<li>功能:密码配置指令｡</li>
+<li>基本格式: <code class="notranslate">passwd [选项] 用户名</code></li>
+<li>权限规则:
+<ul>
+<li>普通用户:仅能修改自己的密码,需先输入旧密码;</li>
+<li>超级用户(root):可修改自己和普通用户的密码,无需输入旧密码｡</li>
+</ul>
+</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ passwd
+Changing password <span class="pl-k">for</span> d111kc.
+Current password:
+New password:
+Retype new password:
+passwd: password updated successfully</pre></div>
+<h3>3.4 软件包</h3>
+<ol>
+<li>Linux 的软件包分类:源码包和二进制包｡</li>
+<li>源码包:因常用打包压缩格式为"tar.gz",故又称Tarball(Tarball 是打包工具)｡</li>
+<li>二进制包管理系统:两大主流——RPM 包管理系统､DPKG 包管理系统｡</li>
+</ol>
+<h3>3.5 本地软件安装､运行与卸载</h3>
+<h4>3.5.1 RPM 包安装､卸载和升级</h4>
+<p>在 Linux 系统中，rpm 是 Red-Hat Package Manager（红帽包管理器） 的缩写，是一种用于管理软件包的工具和文件格式，主要应用于基于 Red Hat 架构的 Linux 发行版（如 CentOS、Fedora、RHEL 等）。</p>
+<p>RPM二进制包的命名须遵守统一的命名规则，用户通过名称就可以直接获取这类包的版本、适用平台等信息。</p>
+<p>RPM二进制包命名的一般格式如下：<code class="notranslate">包名-版本号-发布次数.发行商.Linux平台.适合的硬件平台.包扩展名</code></p>
+<p>例如，RPM包的全名是 <code class="notranslate">httpd-2.2.15-15.el6.centos.1.i686.rpm</code></p>
+<ol>
+<li>RPM 包默认安装路径:<code class="notranslate">/etc/</code>､<code class="notranslate">/usr/bin/</code>､<code class="notranslate">/usr/lib/</code>､<code class="notranslate">/usr/share/doc/</code>､<code class="notranslate">/usr/share/man/</code>(建议不手动指定安装路径)｡</li>
+<li>RPM 包安装命令格式: <code class="notranslate">rpm -ivh 包全名</code>
+<ul>
+<li>选项含义:-i(安装,install)､-v(显示详细信息,verbose)､-h(显示安装进度,hash);</li>
+<li>批量安装:空格分隔多个包,如 <code class="notranslate">rpm -ivh a.rpm b.rpm c.rpm</code></li>
+</ul>
+</li>
+<li>安装后启动服务: <code class="notranslate">service 服务名 start | stop | restart | status</code>
+<ul>
+<li>参数含义:start(启动)､stop(停止)､restart(重启)､status(查看状态)｡</li>
+</ul>
+</li>
+<li>RPM 包升级:
+<ul>
+<li><code class="notranslate">rpm -Uvh 包全名</code>:若软件未安装则直接安装,若已安装则升级至最新版本(-U 选项);</li>
+<li><code class="notranslate">rpm -Fvh 包全名</code>:仅升级已安装的软件,未安装则不操作(-F 选项)｡</li>
+</ul>
+</li>
+<li>RPM 包卸载:
+<ul>
+<li>注意事项:需考虑包之间的依赖性(如先装httpd,后装mod_ssl,卸载时需先卸mod_ssl,再卸httpd);</li>
+<li>命令格式: <code class="notranslate">rpm -e 包名</code> (-e:卸载,erase);</li>
+<li>可选选项:"-nocteps":不检测依赖性直接卸载(不推荐)｡</li>
+</ul>
+</li>
+<li>软件包查询:
+<ul>
+<li>命令格式: <code class="notranslate">rpm 选项 查询对象</code></li>
+<li>常用选项:
+<ul>
+<li>-q 包名:查询是否安装(querry);</li>
+<li>-qa:查询所有已安装软件包(可搭配管道符,如 rpm -qa | grep httpd);</li>
+<li>-qi 包名:查询已安装软件包的详细信息(-i:information);</li>
+<li>-qip 包全名:查询未安装软件包的详细信息(-p:package,需指定绝对路径+包全名);</li>
+<li>-ql 包名:查询已安装软件包包含的所有文件及安装位置(-l:list);</li>
+<li>-qlp 包全名:查询未安装软件包包含的文件及计划安装路径;</li>
+<li>-qf 系统文件名:反向查询文件所属的RPM 包(-f:file,仅RPM 安装的文件可用),如 rpm -qf /bin/ls｡</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2>第4章 shell 脚本编程基础</h2>
+<h3>4.1 shell 编程概述</h3>
+<ol>
+<li>shell 本质:用C 语言编写的程序,是连接用户和UNIX/Linux 内核的桥梁｡</li>
+<li>脚本头部标识:<code class="notranslate">#!/bin/bash</code>:放在脚本第一行,指定脚本使用的shell,用于调用相应解释程序执行｡</li>
+<li>注释符:#:单行注释符,用于说明程序功能､结构､算法和变量作用,增加可读性｡</li>
+<li>脚本执行前提:Linux 中创建文件默认不可执行,需修改文件权限(增加可执行权限)后,在命令行输入相对路径<code class="notranslate">./文件名</code>运行｡</li>
+<li>创建文件命令: <code class="notranslate">touch 文件名</code></li>
+<li>查看shell 种类: <code class="notranslate">cat /etc/shells</code></li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/shells 
+<span class="pl-c"><span class="pl-c">#</span> /etc/shells: valid login shells</span>
+/bin/sh
+/usr/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/dash
+/usr/bin/tmux</pre></div>
+<ol start="7">
+<li>命令/脚本执行与PATH 环境变量的关系:
+<ul>
+<li>PATH 环境变量的作用:决定shell 到哪些目录中寻找命令或可执行程序;</li>
+<li>运行命令/程序时,shell 按PATH 目录顺序依次搜寻｡</li>
+</ul>
+</li>
+<li>脚本运行3 种方式:
+<ul>
+<li>脚本权限设为可执行,提示符下直接运行;</li>
+<li>将脚本名作为参数传递给shell 程序;</li>
+<li>将脚本以输入重定向的方式传递给bash｡</li>
+</ul>
+</li>
+</ol>
+<h3>4.2 shell 基础</h3>
+<h4>4.2.1 通配符</h4>
+<ol>
+<li>通配(Globbing):文件名的扩展功能｡</li>
+<li>常用通配符:
+<ul>
+<li><code class="notranslate">*</code>:匹配任意字符的0 次或多次出现;</li>
+<li><code class="notranslate">?</code>:匹配任意单个字符;</li>
+<li><code class="notranslate">[ ]</code>:匹配该字符组限定的任何一个字符;</li>
+<li><code class="notranslate">[^ ]</code> 或<code class="notranslate">[! ]</code>:匹配不在该字符组中的任何一个字符;</li>
+<li><code class="notranslate">{string1,string2,...}</code>:匹配其中一个指定的字符串｡</li>
+</ul>
+</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls
+chapter  chapter1  chapter123  oschapter1
+$ ls chapter[0-9]<span class="pl-k">*</span>
+chapter1:
+
+chapter123:</pre></div>
+<h4>4.2.2 引号与转义字符</h4>
+<ol>
+<li>转义字符"":按下前,特殊字符按特殊含义执行;按下后,特殊字符按普通含义执行｡</li>
+<li>shell 中的3 种引用字符:
+<ul>
+<li>单引号:引用的所有字符均为普通字符,无特殊含义;</li>
+<li>双引号:保留"$"(引用变量值)､""(转义)和倒引号"`"(引用命令)的特殊含义;</li>
+<li>倒引号:引用的字符被解释为命令行,shell 先执行该命令,并以输出结果取代倒引号部分｡</li>
+</ul>
+</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">`</span>pwd<span class="pl-pds">`</span></span>
+/mnt/e/MyNoteRepo/linux/temp</pre></div>
+<h4>4.2.3 输入/输出重定向符</h4>
+<p>输入/输出方向:数据的流动方向｡</p>
+<h5>4.2.3.1 标准输入重定向</h5>
+<ul>
+<li><code class="notranslate">command &lt; file</code>:将文件作为命令的输入</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 19:27 ../
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:31 .git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 .vscode/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 JavaScript/
+-rwxrwxrwx 1 d111kc d111kc   29 Aug 13 11:52 README.md<span class="pl-k">*</span>
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 algo/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep  6 20:45 c/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 english/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 h5/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:34 linux/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 math/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 other/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 powershell/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 python/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:30 reference/
+$ wc -l <span class="pl-k">&lt;</span> hello.txt 
+18</pre></div>
+<ul>
+<li>
+<ol start="2">
+<li><code class="notranslate">command &lt;&lt; 分界符</code>:从标准输入读入,直到遇见分界符停止(替代默认的Ctrl+D 结束输入)｡</li>
+</ol>
+</li>
+</ul>
+<h5>4.2.3.2 标准输出重定向</h5>
+<ul>
+<li><code class="notranslate">command &gt; file</code>:以覆盖方式,将command 的正确输出写入file(文件不存在则创建,存在则覆盖原内容)</li>
+<li><code class="notranslate">command &gt;&gt; file</code>:以追加方式,将command 的正确输出写入file｡</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> hello <span class="pl-k">&gt;</span> file1
+$ <span class="pl-c1">echo</span> world <span class="pl-k">&gt;</span> file2
+$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>hello linux<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> file2
+$ cat file1 file2 <span class="pl-k">&gt;</span> file3
+$ cat file1
+hello
+$ cat file2
+world
+hello linux
+$ cat file3
+hello
+world
+hello linux</pre></div>
+<h5>4.2.3.3 文件描述符</h5>
+<ul>
+<li>定义:输出重定向完整写法为fd&gt;file 或fd&gt;&gt;file,fd 为文件描述符,默认不写为1;</li>
+<li>常用文件描述符:
+<ul>
+<li>标准输入(stdin):0;</li>
+<li>标准输出(stdout):1;</li>
+<li>错误输出(stderr):2;</li>
+</ul>
+</li>
+<li>示例:
+<ul>
+<li>grep li si file 2&gt; errfile(将错误输出写入errfile);</li>
+<li>grep li si file &gt; file1 2&gt;&amp;1(正确和错误输出均写入file1,注意2&gt;&amp; 之间无空格);</li>
+<li>ls -l &gt; /dev/null(输出重定向到/dev/null,数据被丢弃,无法恢复)｡</li>
+</ul>
+</li>
+</ul>
+<h4>4.2.4 命令执行操作符</h4>
+<ol>
+<li>顺序执行:用";"连接多条命令,依次执行｡</li>
+<li>逻辑与("&amp;&amp;"):仅当前一条命令正确执行时,后一条命令才执行｡</li>
+<li>逻辑或("||"):仅当前一条命令执行错误时,后一条命令才执行｡</li>
+</ol>
+<h4>4.2.5 小括号和大括号</h4>
+<ol>
+<li>shell 类型:
+<ul>
+<li>交互shell:启动后等待用户输入命令,执行完显示提示符;</li>
+<li>非交互shell:运行外部命令或脚本时,交互shell 创建的子shell,运行结束后子shell 进程结束｡</li>
+</ul>
+</li>
+<li>命令组合:小括号()和大括号{}均可将若干命令括起,逻辑上视为一条命令｡</li>
+<li>后台进程:运行过程中不响应用户输入和终端控制信号,但结果仍可能输出到显示器｡</li>
+</ol>
+<h2>第5章 用户管理</h2>
+<h3>5.1 用户与用户组管理</h3>
+<ol>
+<li>用户名和ID 对应关系存储文件:/etc/passwd</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:996:996:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus:x:101:101::/nonexistent:/usr/sbin/nologin
+syslog:x:102:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:991:991:systemd Resolver:/:/usr/sbin/nologin
+uuidd:x:103:103::/run/uuidd:/usr/sbin/nologin
+landscape:x:104:105::/var/lib/landscape:/usr/sbin/nologin
+polkitd:x:990:990:User <span class="pl-k">for</span> polkitd:/:/usr/sbin/nologin
+d111kc:x:1000:1000:,,,:/home/d111kc:/bin/bash
+postgres:x:105:109:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+postfix:x:106:110::/var/spool/postfix:/usr/sbin/nologin
+sshd:x:107:65534::/run/sshd:/usr/sbin/nologin</pre></div>
+<ol start="2">
+<li>用户主目录创建规则:默认情况下,管理员创建用户时,在<code class="notranslate">/home</code> 目录下创建用户主目录｡</li>
+<li>用户密码信息存储目录:/etc</li>
+</ol>
+<h3>5.2 用户和用户组管理相关的文件</h3>
+<p>文件权限:</p>
+<ul>
+<li>/etc/passwd(用户基本信息):权限为rw-r--r--</li>
+<li>/etc/shadow(用户密码信息):权限为rw-------</li>
+</ul>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ sudo cat /etc/shadow
+[sudo] password <span class="pl-k">for</span> d111kc: 
+root:<span class="pl-smi">$y$j9T$p3soBj08aYrVMxMB60k9Q</span>.<span class="pl-smi">$FTWVh8JDB45bJnCbewcKfz7XtnZM17yyqzVTEYS6KN</span>/:20313:0:99999:7:::
+daemon:<span class="pl-k">*</span>:20094:0:99999:7:::
+bin:<span class="pl-k">*</span>:20094:0:99999:7:::
+sys:<span class="pl-k">*</span>:20094:0:99999:7:::
+sync:<span class="pl-k">*</span>:20094:0:99999:7:::
+games:<span class="pl-k">*</span>:20094:0:99999:7:::
+man:<span class="pl-k">*</span>:20094:0:99999:7:::
+lp:<span class="pl-k">*</span>:20094:0:99999:7:::
+mail:<span class="pl-k">*</span>:20094:0:99999:7:::
+news:<span class="pl-k">*</span>:20094:0:99999:7:::
+uucp:<span class="pl-k">*</span>:20094:0:99999:7:::
+proxy:<span class="pl-k">*</span>:20094:0:99999:7:::
+www-data:<span class="pl-k">*</span>:20094:0:99999:7:::
+backup:<span class="pl-k">*</span>:20094:0:99999:7:::
+list:<span class="pl-k">*</span>:20094:0:99999:7:::
+irc:<span class="pl-k">*</span>:20094:0:99999:7:::
+_apt:<span class="pl-k">*</span>:20094:0:99999:7:::
+nobody:<span class="pl-k">*</span>:20094:0:99999:7:::
+systemd-network:<span class="pl-k">!</span><span class="pl-k">*</span>:20094::::::
+systemd-timesync:<span class="pl-k">!</span><span class="pl-k">*</span>:20094::::::
+dhcpcd:<span class="pl-k">!</span>:20094::::::
+messagebus:<span class="pl-k">!</span>:20094::::::
+syslog:<span class="pl-k">!</span>:20094::::::
+systemd-resolve:<span class="pl-k">!</span><span class="pl-k">*</span>:20094::::::
+uuidd:<span class="pl-k">!</span>:20094::::::
+landscape:<span class="pl-k">!</span>:20094::::::
+polkitd:<span class="pl-k">!</span><span class="pl-k">*</span>:20094::::::
+d111kc:<span class="pl-smi">$y$j9T$ozJT7Pr6nfn8l1rFCo</span>.yW1<span class="pl-smi">$5</span>XIWHKWz2GQrmbZiuLdyl/4ljpgRvYLb48NxTv5l5F/:20313:0:99999:7:::
+postgres:<span class="pl-k">!</span>:20337::::::
+postfix:<span class="pl-k">!</span>:20341::::::
+sshd:<span class="pl-k">!</span>:20341::::::</pre></div>
+<h3>5.3 用户和用户组管理的命令</h3>
+<h4>5.3.1 用户的添加</h4>
+<ol>
+<li>命令格式: <code class="notranslate">useradd 用户名</code></li>
+<li>创建过程:
+<ul>
+<li>系统读取/etc/login.defs 和/etc/default/useradd 配置文件;</li>
+<li>在/etc/passwd､/etc/shadow､/etc/group､/etc/gshadow 文件中添加用户数据;</li>
+<li>在/etc/default/useradd 设定目录下建立用户主目录;</li>
+<li>复制/etc/skel 目录所有文件到用户主目录｡</li>
+</ul>
+</li>
+<li>/etc/passwd 文件结构:每行7 个字段,格式为"用户名:密码:UID:GID:描述性信息:主目录:默认shell"，例如 <code class="notranslate">root:x:0:0:root:/root:/bin/bash</code>
+<ul>
+<li>用户名:字符序列;</li>
+<li>密码:x 表示设密码,实际密码存于/etc/shadow;</li>
+<li>UID:取值0-65535(0 为root,1-499 为系统用户,500+为普通用户);</li>
+<li>GID:初始组仅1 个,附加组可多个;</li>
+<li>主目录:root 主目录为 <code class="notranslate">/root</code>,普通用户主目录为<code class="notranslate">/home/用户名</code>;</li>
+<li>默认shell:一般为<code class="notranslate">/bin/bash</code>｡</li>
+</ul>
+</li>
+</ol>
+<h4>5.3.2 密码配置命令</h4>
+<ol>
+<li>命令格式: <code class="notranslate">passwd 用户名</code></li>
+<li>权限规则:
+<ul>
+<li>普通用户:仅能修改自己的密码;</li>
+<li>超级用户(root):可修改自己和其他用户的密码｡</li>
+</ul>
+</li>
+</ol>
+<h4>5.3.3 修改用户信息命令</h4>
+<ol>
+<li>命令格式: <code class="notranslate">usermod [选项] 用户名</code></li>
+<li>常用选项:
+<ul>
+<li>-L:临时锁定用户(Lock);</li>
+<li>-U:解锁用户(Unlock)｡</li>
+</ul>
+</li>
+</ol>
+<h4>5.3.4 修改用户密码状态命令</h4>
+<p>命令格式: <code class="notranslate">change 用户名</code></p>
+<h4>5.3.5 删除用户命令</h4>
+<ol>
+<li>命令格式: <code class="notranslate">userdel -r 用户名</code> (仅root 可用)｡</li>
+<li>选项含义:-r:删除用户的同时删除其家目录｡</li>
+<li>用户个人文件路径:
+<ul>
+<li>主目录:/home/用户名;</li>
+<li>邮箱:/var/spool/mail/用户名｡</li>
+</ul>
+</li>
+</ol>
+<h4>5.3.7 用户间切换命令</h4>
+<ol>
+<li>命令格式: <code class="notranslate">su [-] 用户名</code></li>
+<li>选项含义:
+<ul>
+<li><code class="notranslate">-</code>:切换用户身份的同时,切换工作环境(包括PATH 变量､MAIL 变量等);省略用户名时,默认切换为root</li>
+</ul>
+</li>
+</ol>
+<h4>5.3.8 用户组管理命令</h4>
+<ol>
+<li>添加用户组: <code class="notranslate">groupadd [选项] 组名</code></li>
+<li>修改用户组信息: <code class="notranslate">groupmod [选项] 组名</code></li>
+<li>删除用户组:<code class="notranslate">groupdel 组名</code>(仅删除非用户初始组的组)</li>
+<li>组管理员设置(代替root 管理组): <code class="notranslate">gpasswd [选项] 组名</code>
+<ul>
+<li>无选项:为组设置密码(仅root 可用);</li>
+<li>-a user:将user 用户加入组;</li>
+<li>-d user:将user 用户从组移除｡</li>
+</ul>
+</li>
+</ol>
+<h2>第6章 文件管理</h2>
+<h3>6.1 文件系统</h3>
+<ol>
+<li>文件定义:文件系统中存储数据的命名对象,是用户最小的逻辑存储单元｡</li>
+<li>Linux 文件系统结构:所有文件和目录组织成从根节点"/"开始的倒置树状结构,按名访问文件｡</li>
+</ol>
+<h4>6.1.2 文件结构和类型</h4>
+<ol>
+<li>文件组成:所有文件由数据项和文件控制块(索引节点)组成｡</li>
+<li>文件分类:
+<ul>
+<li>按数据项结构:无结构文件(字符流文件)､有结构文件(如目录文件);</li>
+<li>常用分类:普通文件､目录文件､链接文件及设备文件｡</li>
+</ul>
+</li>
+<li>路径表示方法:
+<ul>
+<li>绝对路径:从根目录(/)开始的文件/目录名称;</li>
+<li>相对路径:相对于当前路径的文件/目录名称｡</li>
+</ul>
+</li>
+</ol>
+<h3>6.2 文件与目录操作</h3>
+<h4>6.2.1 文件操作命令</h4>
+<h5>6.2.1.1 cat 命令</h5>
+<ol>
+<li>功能:显示文件内容或连接合并文件｡</li>
+<li>命令格式:
+<ul>
+<li>显示内容: <code class="notranslate">cat [选项] 文件名</code></li>
+<li>合并文件: <code class="notranslate">cat 文件1 文件2 &gt; 文件3</code>(覆盖文件3 内容,不存在则创建)｡</li>
+</ul>
+</li>
+<li>常用选项:
+<ul>
+<li>-n:对输出的所有行编号;</li>
+<li>-b:仅对非空行编号｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.1.2 more 命令</h5>
+<ol>
+<li>功能:分页显示文本文件内容，空格键翻页｡</li>
+<li>命令格式: <code class="notranslate">more 文件名</code></li>
+</ol>
+<h5>6.2.1.3 head 命令</h5>
+<ol>
+<li>功能:显示文件的前若干行内容｡</li>
+<li>命令格式: <code class="notranslate">head [选项] 文件名</code></li>
+<li>选项:<code class="notranslate">-n k</code>:显示前k 行内容(默认显示10 行)｡</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ more hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 19:27 ../
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:31 .git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 .vscode/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 JavaScript/
+-rwxrwxrwx 1 d111kc d111kc   29 Aug 13 11:52 README.md<span class="pl-k">*</span>
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 algo/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep  6 20:45 c/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 english/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 h5/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:34 linux/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 math/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 other/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 powershell/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 python/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:30 reference/
+$ head -n 2 hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+$ head hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 19:27 ../
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:31 .git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 .vscode/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 JavaScript/
+-rwxrwxrwx 1 d111kc d111kc   29 Aug 13 11:52 README.md<span class="pl-k">*</span>
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 algo/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep  6 20:45 c/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 english/</pre></div>
+<h5>6.2.1.4 tail 命令</h5>
+<ol>
+<li>功能:查看文件末尾的数据｡</li>
+<li>命令格式: <code class="notranslate">tail [选项] 文件名</code></li>
+<li>选项:
+<ul>
+<li><code class="notranslate">-n k</code>:显示后k 行内容;</li>
+<li><code class="notranslate">-f</code>:监听文件新增内容(中止按Ctrl+C)｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.1.5 touch 命令</h5>
+<ol>
+<li>功能:创建文件或修改文件时间参数｡</li>
+<li>命令格式: <code class="notranslate">touch [选项] 文件名</code></li>
+<li>选项:-a:仅修改文件访问时间｡</li>
+</ol>
+<h5>6.2.1.6 grep 命令</h5>
+<ol>
+<li>功能:在一个或多个文件中搜索特定字符模式(正则表达式),模式可为字符､字符串､单词或句子｡</li>
+<li>正则表达式基础(与通配符含义不同):
+<ul>
+<li><code class="notranslate">c*</code>:匹配0 个或多个字符c;</li>
+<li><code class="notranslate">.</code>:匹配任意一个字符;</li>
+<li><code class="notranslate">[xyz]</code>:匹配方括号中任意一个字符;</li>
+<li><code class="notranslate">[^xyz]</code>:匹配方括号中字符外的所有字符;</li>
+<li><code class="notranslate">^</code>:行首定位符;</li>
+<li><code class="notranslate">$</code>:行尾定位符｡</li>
+</ul>
+</li>
+<li>命令格式: <code class="notranslate">grep [选项] 文件名</code></li>
+<li>常用选项:-n:在每一行最前面列出行号｡</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat file3
+hello
+world
+hello linux
+$ grep world file3
+world
+$ grep linux file3
+hello linux
+$ cat file3 <span class="pl-k">|</span> grep linux
+hello linux</pre></div>
+<h5>6.2.1.7 sed 命令</h5>
+<ol>
+<li>功能:自动编辑一个或多个文件,简化文件反复操作,编写转换程序｡</li>
+<li>命令格式: sed [选项] sed 命令文件名｡</li>
+<li>选项:
+<ul>
+<li>-n:仅显示匹配处理的行;</li>
+<li>-e:执行多个编辑命令(一般用";"代替);</li>
+<li>-i:直接在文件中修改(不输出到显示器);</li>
+<li>-f:从脚本文件读取命令执行(每行一个命令,无需";")｡</li>
+</ul>
+</li>
+<li>常用sed 编辑命令:
+<ul>
+<li>p:打印匹配行(print);</li>
+<li>d:删除指定行(delete);</li>
+<li>a:在匹配行后追加(append);</li>
+<li>i:在匹配行前插入(insert);</li>
+<li>c:整行替换;</li>
+<li>r:读取文件内容;</li>
+<li>w:将文本写入文件;</li>
+<li>s:字符串替换(匹配正则表达式,substitution)｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.1.8 awk 命令</h5>
+<ol>
+<li>功能:格式化文本,进行复杂格式处理,擅长处理文本文件中的数据｡</li>
+<li>命令格式: awk [选项] ‘匹配规则|执行命令|’ 文件名｡</li>
+<li>数据字段变量(默认以空白字符为分隔符):
+<ul>
+<li>$0:代表整个文本行;</li>
+<li>$1:代表第1 个数据字段;</li>
+<li>$2:代表第2 个数据字段;</li>
+<li>$n:代表第n 个数据字段｡</li>
+</ul>
+</li>
+<li>自定义分隔符:用-F 选项指定,如 awk -F ',' '{print $1}' file｡</li>
+<li>示例:
+<ul>
+<li>awk '{print $1}' file(打印每行第1 个字段);</li>
+<li>awk 'BEGIN {print "The File Contents:"} {print $0} END {print "End of File"}' file(添加文件首尾提示)｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.1.9 cp 命令</h5>
+<ol>
+<li>功能:复制文件和目录,支持复制整个目录｡</li>
+<li>命令格式: <code class="notranslate">cp [选项] 源文件 目标文件</code></li>
+<li>常用选项:
+<ul>
+<li>-a:相当于-d､-p､-r 选项的集合;</li>
+<li>-d:源文件为软链接时,复制的目标文件也为软链接;</li>
+<li>-i:目标文件存在时,询问是否覆盖;</li>
+<li>-l:创建源文件的硬链接(非复制文件);</li>
+<li>-s:创建源文件的软链接(非复制文件);</li>
+<li>-p:复制后保留原文件属性;</li>
+<li>-r:递归复制(用于复制目录)｡</li>
+</ul>
+</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls
+file1  folder
+$ cp file1 folder
+$ find
+<span class="pl-c1">.</span>
+./file1
+./folder
+./folder/file1
+$ cp file1 folder/file2
+$ find
+<span class="pl-c1">.</span>
+./file1
+./folder
+./folder/file1
+./folder/file2</pre></div>
+<h5>6.2.1.10 rm 命令</h5>
+<ol>
+<li>功能:永久性删除文件或目录，root用户谨慎使用这个命令｡</li>
+<li>命令格式: <code class="notranslate">rm [选项] 文件或目录</code></li>
+<li>常用选项:
+<ul>
+<li>-f:强制删除(force);</li>
+<li>-i:删除前询问;</li>
+<li>-r:递归删除(用于删除目录,含目录内所有内容)｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.1.11 mv 命令</h5>
+<ol>
+<li>功能:移动文件/目录,或对文件/目录重命名｡</li>
+<li>命令格式: <code class="notranslate">mv [选项] 源文件 目标文件</code></li>
+<li>常用选项:
+<ul>
+<li>-f:强制覆盖;</li>
+<li>-i:目标文件存在时,询问是否覆盖(默认);</li>
+<li>-n:目标文件存在时,不覆盖且不询问;</li>
+<li>-v:显示移动过程;</li>
+<li>-u:目标文件存在且源文件更新时,升级目标文件｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.1.12 sort 命令</h5>
+<ol>
+<li>功能:对文本排序,默认按ASCII 码值升序输出｡</li>
+<li>常用选项:-r:反向排序｡</li>
+</ol>
+<h5>6.2.1.13 wc 命令</h5>
+<ol>
+<li>功能:统计文本的行数､单词数或字符数｡</li>
+<li>常用选项:
+<ul>
+<li>-l:仅统计行数;</li>
+<li>-w:仅统计单词数;</li>
+<li>-m:仅统计字符数｡</li>
+</ul>
+</li>
+</ol>
+<h4>6.2.2 目录操作命令</h4>
+<h5>6.2.2.1 mkdir 命令</h5>
+<ol>
+<li>功能:创建目录(make directories)｡</li>
+<li>命令格式: <code class="notranslate">mkdir [选项] 目录名</code></li>
+<li>常用选项:
+<ul>
+<li>-m:手动配置目录权限(不使用默认权限);</li>
+<li>-p:递归创建所有目录(如创建多级目录)｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.2.2 rmdir 命令</h5>
+<ol>
+<li>功能:删除空目录｡</li>
+<li>常用选项:-p:递归删除空目录｡</li>
+</ol>
+<h5>6.2.2.3 cd 命令</h5>
+<ol>
+<li>功能:切换工作目录(change directory)｡</li>
+<li>特殊符号含义:
+<ul>
+<li>~:代表当前登录用户的主目录;</li>
+<li>-:代表上次所在目录;</li>
+<li>.:代表当前目录;</li>
+<li>..:代表上级目录｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.2.2.4 pwd 命令</h5>
+<p>功能:显示当前所在目录(print working directory)｡</p>
+<h5>6.2.2.5 ls 命令</h5>
+<ol>
+<li>功能:显示当前目录下的内容｡</li>
+<li>默认行为:仅显示非隐藏文件名称,按文件名排序｡</li>
+<li>常用选项:-a:显示全部文件(包括开头为"."的隐藏文件)｡</li>
+</ol>
+<h5>6.2.2.6 ln 命令</h5>
+<ol>
+<li>功能:创建链接文件｡</li>
+<li>命令格式: <code class="notranslate">ln [选项] 源文件 目标文件</code></li>
+<li>选项:-s:创建软链接(不加则创建硬链接)｡</li>
+<li>硬链接与软链接的区别:
+<ul>
+<li>硬链接:修改源文件或硬链接,另一方数据均改变;不能跨文件系统(分区)建立,不能链接目录;</li>
+<li>软链接:相当于快捷方式;可跨分区,可链接目录;若删除源文件,软链接无法访问数据｡</li>
+</ul>
+</li>
+</ol>
+<h3>6.3 访问权限管理</h3>
+<p>查看权限命令:<code class="notranslate">ls -al</code>(显示文件和目录的权限信息)</p>
+<h4>6.3.2 权限位</h4>
+<ol>
+<li>权限类型:对文件的读(r)､写(w)､执行(x)权限｡</li>
+<li>权限位格式:共10 位,第1 位表示文件类型,后9 位分3 组(每组3 位),分别对应所有者(u)､所属组(g)､其他人(o)的权限｡</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls -l
+total 0
+-rwxrwxrwx 1 d111kc d111kc    0 Sep 11 12:49 file1
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 12:50 folder</pre></div>
+<h4>6.3.2 修改权限位的命令</h4>
+<h5>6.3.2.1 chmod 命令</h5>
+<ol>
+<li>权限与数字对应关系:r=4､w=2､x=1｡</li>
+<li>数字方式修改权限:
+<ul>
+<li>命令格式:<code class="notranslate">chmod 权限值 文件名</code></li>
+<li>选项:-R:连同子目录中所有文件一起修改权限｡</li>
+</ul>
+</li>
+<li>符号方式修改权限:
+<ul>
+<li>格式:chmod 用户身份+/-/=权限 文件名;</li>
+<li>用户身份:u(所有者)､g(所属组)､o(其他人)､a(所有身份);</li>
+<li>操作符:+（添加权限）､-（移除权限）､=（设置权限）;</li>
+<li>示例:<code class="notranslate">chmod go+rwx file</code>(给所属组和其他人添加读､写､执行权限)｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.3.2.2 umask 命令</h5>
+<ol>
+<li>功能:设置新建文件和目录的默认权限｡</li>
+<li>默认umask 值:0022(第1 位为特殊权限,后3 位为实际掩码值,对应权限----w--w-)｡</li>
+<li>初始权限计算方式:文件(或目录)的初始权限=最大默认权限-umask 权限(按字母形式减法)｡
+<ul>
+<li>文件最大默认权限:666(rw-rw-rw-);</li>
+<li>目录最大默认权限:777(rwxrwxrwx);</li>
+<li>示例:666-033=644(rw-r--r--)｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.3.2.3 chown 命令</h5>
+<ol>
+<li>功能:修改文件(或目录)的所有者｡</li>
+<li>命令格式:
+<ul>
+<li>修改所有者:chown 所有者 文件或目录;</li>
+<li>同时修改所有者和所属组:chown 所有者:所属组 文件或目录;</li>
+<li>选项:-R:连同子目录中所有文件一起修改｡</li>
+</ul>
+</li>
+</ol>
+<h5>6.3.2.4 chgrp 命令</h5>
+<ol>
+<li>功能:修改文件(或目录)的所属组｡</li>
+<li>命令格式:chgrp 所属组 文件名(或目录名)｡</li>
+</ol>
+<h2>第7章 进程管理</h2>
+<p>进程管理的3 个核心作用:</p>
+<ul>
+<li>判断服务器的健康状态;</li>
+<li>查看系统中所有进程;</li>
+<li>杀死进程｡</li>
+</ul>
+<h3>7.2 进程监控</h3>
+<h4>7.2.1 ps 命令</h4>
+<ol>
+<li>功能:查看系统中运行进程的详细信息(缺乏时效性,但最常用)｡</li>
+<li>常用选项:
+<ul>
+<li>-a:显示一个终端的所有进程(除会话引线外);</li>
+<li>-u:显示进程的归属用户及内存使用情况;</li>
+<li>-x:显示没有控制终端的进程;</li>
+<li>-l:以长格式显示详细信息;</li>
+<li>-e:显示所有进程｡</li>
+</ul>
+</li>
+<li>推荐固定选项组合:
+<ul>
+<li>ps -aux:查看系统中所有进程;</li>
+<li>ps -le:查看所有进程,并显示父进程PID 和进程优先级;</li>
+<li>ps -l:仅查看当前shell 产生的进程｡</li>
+</ul>
+</li>
+<li>僵尸进程:因进程非正常停止或程序编写错误,子进程先于父进程结束,且父进程未正确回收子进程,导致子进程长期存在于内存中｡</li>
+</ol>
+<h4>7.2.2 pstree 命令</h4>
+<p>功能:以树形结构显示程序和进程之间的关系｡</p>
+<h4>7.2.3 top 命令</h4>
+<ol>
+<li>功能:动态持续监听进程运行状态,提供交互界面,支持定制输出｡</li>
+<li>默认行为:每隔3 秒刷新一次输出｡</li>
+<li>缓存与缓冲的区别:
+<ul>
+<li>缓存:读取硬盘数据时,将常用数据存入内存缓存区,后续读取直接从缓存获取,加快读取速度;</li>
+<li>缓冲:写入硬盘数据时,先将数据放入缓冲区,再集中写入硬盘,减少磁盘碎片和寻道次数,加快写入速度｡</li>
+</ul>
+</li>
+</ol>
+<h4>7.2.4 lsof 命令</h4>
+<ol>
+<li>功能:list opened files,查询进程调用的文件(ps 命令可查进程, lsof 可查进程关联的文件)｡</li>
+<li>常用选项:
+<ul>
+<li>-c 字符串:仅列出以该字符串开头的进程打开的文件;</li>
+<li>-p PID:列出指定PID 进程打开的文件｡</li>
+</ul>
+</li>
+</ol>
+<h3>7.3 结束进程</h3>
+<ol>
+<li>进程信号:进程管理(关闭､重启)依赖信号,可用"kill -l"查询系统识别的信号｡</li>
+<li>常见进程信号:
+<ul>
+<li>1(SIGHUP):进程立即关闭,重新读取配置文件后重启;</li>
+<li>9(SIGKILL):立即结束程序运行,不可被阻塞､处理和忽略,用于强制终止进程;</li>
+<li>15(SIGTERM):正常结束进程的默认信号,若进程异常则无法终止,需用SIGKILL(信号9)｡</li>
+</ul>
+</li>
+<li>强制终止高资源消耗进程:最合适的信号值是9｡</li>
+</ol>
+<h3>7.4 进程优先级</h3>
+<ol>
+<li>优先级参数:Linux 中用PRI 和NI 表示进程优先级,数值越小,进程越优先被CPU 处理｡
+<ul>
+<li>PRI:由内核动态调整,用户不能直接修改;</li>
+<li>NI:用户可修改,通过调整NI 间接影响PRI;</li>
+<li>关系:PRI(最终值)=PRI(原始值)+NI｡</li>
+</ul>
+</li>
+<li>修改NI 值的注意事项:
+<ul>
+<li>NI 范围:-20~19;</li>
+<li>普通用户:仅能调整自己的进程,且NI 值范围为0~19(只能调高,不能调低);</li>
+<li>root 用户:可设定NI 为负值,并调整任何用户的进程;</li>
+<li>默认NI 值:0｡</li>
+</ul>
+</li>
+<li>调整优先级的命令:
+<ul>
+<li>nice 命令:给待启动的进程赋予NI 值,不能修改已运行进程｡格式: nice [-n NI 值] 命令;</li>
+<li>renice 命令:修改已运行进程的NI 值｡格式: renice [优先级] PID｡</li>
+</ul>
+</li>
+</ol>
+<h2>第8章 存储管理</h2>
+<h3>8.1 存储设备的查看</h3>
+<h4>8.1.1 硬盘分类与结构</h4>
+<ol>
+<li>硬盘按存储介质分类:
+<ul>
+<li>机械硬盘(HDD):采用磁性碟片存储数据;</li>
+<li>固态硬盘(SSD):通过闪存颗粒存储数据｡</li>
+</ul>
+</li>
+<li>机械硬盘:
+<ul>
+<li>逻辑结构:磁道､扇区和柱面;</li>
+<li>接口类型:IDE(电子集成驱动器)､SATA(串口)､SCSI(小型计算机系统接口);</li>
+<li>最小存储单位:扇区｡</li>
+</ul>
+</li>
+<li>固态硬盘与机械硬盘的区别:
+<ul>
+<li>优势:低能耗､无噪声､抗震动､低散热､体积小､速度快;</li>
+<li>劣势:价格更高,使用寿命有限｡</li>
+</ul>
+</li>
+</ol>
+<h4>8.1.3 存储设备的挂载</h4>
+<ol>
+<li>挂载定义:将硬件设备的文件系统与Linux 系统的文件系统,通过指定目录(挂载点)关联,硬件设备需挂载后才能使用｡</li>
+<li>自动挂载与手动挂载:
+<ul>
+<li>自动挂载:部分设备(如硬盘)系统启动时自动挂载;</li>
+<li>手动挂载:部分设备(如U盘､光盘)需手动操作｡</li>
+</ul>
+</li>
+</ol>
+<h5>8.1.3.1 mount 命令</h5>
+<ol>
+<li>查看挂载信息:
+<ul>
+<li>mount:显示已挂载设备信息;</li>
+<li>mount -l:额外显示卷标名称｡</li>
+</ul>
+</li>
+<li>自动挂载遗漏设备: mount -a:检查/etc/fstab 文件,自动挂载未挂载设备(/etc/fstab 为系统开机自动挂载配置文件)｡</li>
+<li>手动挂载格式: mount [-t 系统类型] [-L 卷标名] [-o 特殊选项] [-n] 设备文件名 挂载点｡
+<ul>
+<li>选项含义:
+<ul>
+<li>-t 系统类型:指定文件系统类型(如EXT2､EXT3､EXT4､iso9660､vfat);</li>
+<li>-L 卷标名:通过卷标名挂载(替代设备文件名);</li>
+<li>-n:不将挂载情况写入/etc/mtab 文件(如单人维护模式);</li>
+<li>-o 特殊选项:指定额外选项(如读写权限､同步/异步)｡</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h5>8.1.3.2 卸载命令</h5>
+<p>命令:umount 设备文件名或挂载点｡</p>
+<h5>8.1.3.3 具体设备挂载示例</h5>
+<ol>
+<li>挂载光盘:
+<ul>
+<li>创建挂载点: mkdir /mnt/cdrom/;</li>
+<li>挂载命令: mount /dev/cdrom /mnt/cdrom/｡</li>
+</ul>
+</li>
+<li>挂载U盘:
+<ul>
+<li>查看设备文件名: fdisk -l(假设为sda1);</li>
+<li>创建挂载点: mkdir /mnt/usb;</li>
+<li>挂载命令: mount -t vfat /dev/sda1 /mnt/usb/｡</li>
+</ul>
+</li>
+<li>自动挂载配置:root 身份在/etc/fstab 文件中添加设备信息,实现开机自动挂载｡</li>
+</ol>
+<h3>8.2 分区管理</h3>
+<p>分区命令:fdisk 和parted｡</p>
+<ul>
+<li>fdisk:常用,不支持大于2TB 的分区;</li>
+<li>parted:支持大于2TB 的分区,也可分配小分区｡</li>
+</ul>
+<h4>8.2.1 fdisk 命令</h4>
+<ol>
+<li>查询硬盘和分区: fdisk -l｡</li>
+<li>给硬盘分区: fdisk 设备文件名(注意:不要在当前系统硬盘上尝试,会删除系统)｡</li>
+<li>建立主分区过程:fdisk 硬盘名→n(新建)→p(建立主分区)→l(指定分区号)→按Enter(默认从柱面1 开始)→+5G(指定分区大小)｡</li>
+<li>分区规则:
+<ul>
+<li>主分区+扩展分区最多4 个;</li>
+<li>扩展分区最多1 个｡</li>
+</ul>
+</li>
+<li>分区生效:
+<ul>
+<li>保存退出:w 命令;</li>
+<li>不保存退出:q 命令;</li>
+<li>不重启刷新分区表:partprobe 命令｡</li>
+</ul>
+</li>
+</ol>
+<h4>8.2.2 parted 命令</h4>
+<ol>
+<li>交互模式进入: parted 硬盘设备文件名｡</li>
+<li>交互模式帮助:输入help 查看支持的命令｡</li>
+<li>格式化限制:parted 交互命令格式化仅支持ext2 文件系统,其他格式需用系统mkfs 命令｡</li>
+<li>注意事项:parted 所有操作立即生效,无需保存｡</li>
+</ol>
+<h3>8.3 磁盘管理工具</h3>
+<h4>8.3.1 df 命令</h4>
+<ol>
+<li>功能:显示Linux 系统中各文件系统的硬盘使用情况(总容量､已用容量､剩余容量等),数据来源于超级块(Super Block)｡</li>
+<li>命令格式: df [选项] [目录或文件名]｡</li>
+<li>常用选项:
+<ul>
+<li>-a:显示所有文件系统信息(包括/proc､/sysfs 等);</li>
+<li>-h:用MB/GB 等习惯单位显示;</li>
+<li>-i:显示inode 数量(不显示硬盘容量);</li>
+<li>无选项:默认以KB 为单位显示｡</li>
+</ul>
+</li>
+<li>目录关联:df 后加目录名,自动分析目录所在分区并显示该分区信息｡</li>
+</ol>
+<h4>8.3.2 du 命令</h4>
+<ol>
+<li>功能:统计目录或文件所占磁盘空间容量｡</li>
+<li>命令格式: du [选项] [目录或文件名]｡</li>
+<li>常用选项:
+<ul>
+<li>-a:显示所有子目录和子文件的磁盘占用量;</li>
+<li>-h:用习惯单位显示;</li>
+<li>-s:仅统计总磁盘占用量(不列出子目录/子文件);</li>
+<li>无选项:统计当前目录总占用量及所有子目录占用量(默认KB,不统计子文件)｡</li>
+</ul>
+</li>
+<li>文件删除特点:删除文件后,需所有程序不再使用该文件,系统才释放空间;df 命令会统计已删除但未释放的空间,更精确｡</li>
+</ol>
+<h4>8.3.3 fsck 命令</h4>
+<ol>
+<li>功能:检查文件系统并尝试修复错误｡</li>
+<li>命令格式: fsck [选项] 分区设备文件名｡</li>
+<li>常用选项:
+<ul>
+<li>-a:自动修复,无提示;</li>
+<li>-r:交互式修复,修改前询问用户｡</li>
+</ul>
+</li>
+<li>丢失文件恢复:修复后若有文件丢失,可到"lost+found"目录查找,用file 命令查看文件类型判断用途｡</li>
+</ol>
+<h2>第9章 设备管理</h2>
+<h3>9.1 设备文件</h3>
+<ol>
+<li>Linux 设备管理方式:通过设备文件统一管理硬件设备,隐藏硬件特性和管理细节,实现用户程序与设备无关性(用户使用设备与使用普通文件一致)｡</li>
+<li>设备文件位置:/dev 目录,每个设备对应一个设备文件｡</li>
+</ol>
+<h4>9.1.1 设备命名规则</h4>
+<ol>
+<li>设备文件名组成:主设备号+次设备号｡
+<ul>
+<li>主设备号:代表设备类型(如hd=IDE 硬盘､sd=SCSI 硬盘､tty=终端);</li>
+<li>次设备号:代表同类设备中的序号｡</li>
+</ul>
+</li>
+<li>常见设备文件名:
+<ul>
+<li>IDE 硬盘:/dev/hda､/dev/hdb､/dev/hdc､/dev/hdd(最多4 个),hda1 表示hda 的第一个主分区;</li>
+<li>SCSI 硬盘:/dev/sda､/dev/sdb 等;</li>
+<li>软盘:/dev/fd0;</li>
+<li>磁带机:/dev/st*(自动回卷)､/dev/nst*(不自动回卷,常用),序号越小越靠前(如nst0 为第一个);</li>
+<li>硬盘分区编号:主分区/扩展分区1-4,逻辑分区5+;</li>
+<li>硬盘数量标识:系统用a~p 代表16 块不同硬盘｡</li>
+</ul>
+</li>
+</ol>
+<h4>9.1.2 硬盘第一个扇区</h4>
+<ol>
+<li>组成:主引导记录(446 字节)+分区表(64 字节)+结束符(2 字节)｡</li>
+<li>分区表限制:每个分区信息占16 字节,最多记录4 个分区(即4 个主分区)｡</li>
+</ol>
+<h4>9.1.3 特殊设备文件</h4>
+<ol>
+<li>/dev/null:空设备,只写文件,写入内容永久丢失,读取返回空｡</li>
+<li>/dev/zero:伪输入设备,用于创建指定长度的初始化空文件｡</li>
+<li>/dev/full:特殊设备文件,写入时返回"设备无剩余空间"(错误码ENPOSPC),读取返回无限二进制流,用于测试程序磁盘满时的行为｡</li>
+<li>/dev/random/urandom:随机数发生器/伪随机数发生器｡</li>
+</ol>
+<h4>9.1.4 设备分类</h4>
+<p>按是否对应物理实体:物理设备､虚拟设备｡</p>
+<h3>9.2 常用的设备命令</h3>
+<p>系统硬件检测:启动时检测硬件并加载驱动程序(模块),检测结果记录在/proc 目录｡</p>
+<h4>9.2.1 查看CPU 信息的命令</h4>
+<p>lscpu 命令:查看CPU 和处理单元的信息｡</p>
+<h4>9.2.2 查看内存信息的命令</h4>
+<h5>9.2.2.1 free 命令</h5>
+<ol>
+<li>功能:显示系统内存状态(空闲/已用物理内存､swap 内存､内核使用的缓冲区)｡</li>
+<li>命令格式: free [选项]｡</li>
+<li>常用选项:
+<ul>
+<li>-k:以KB 为单位(默认);</li>
+<li>-b:以字节为单位;</li>
+<li>-m:以MB 为单位;</li>
+<li>-g:以GB 为单位;</li>
+<li>-t:输出内存和swap 分区总量;</li>
+<li>-o:不显示系统缓冲区列;</li>
+<li>-s 间隔秒数:按指定间隔持续显示｡</li>
+</ul>
+</li>
+<li>swap:交换分区,即虚拟内存｡</li>
+</ol>
+<h5>9.2.2.2 vmstat 命令</h5>
+<ol>
+<li>功能:Virtual Memory Statistics,统计虚拟内存,Linux 内存管理通过"调页(Paging)"和"交换(Swapping)"实现｡</li>
+<li>相关概念:
+<ul>
+<li>Page-Out:页面写入磁盘;</li>
+<li>Page-In:页面从磁盘回到内存;</li>
+<li>页面错误(Page Fault):内核需要的页面不在物理内存中(因Page-Out);</li>
+<li>颠簸(Thrashing):pageout 频繁发生,内核管理分页时间超过运行程序时间,系统性能急剧下降或暂停｡</li>
+</ul>
+</li>
+</ol>
+<h4>9.2.3 查看块设备的命令</h4>
+<h5>9.2.3.1 dmesg 命令</h5>
+<ol>
+<li>功能:查看Linux 系统启动信息,常用于查看硬件信息｡</li>
+<li>启动信息文件:/var/log/dmesg(也可通过该文件查看)｡</li>
+</ol>
+<h5>9.2.3.2 lsblk 命令</h5>
+<ol>
+<li>功能:列出系统中所有可用块设备信息及依赖关系(不列出RAM 盘)｡</li>
+<li>块设备定义:按可寻址块为单位I/O,一次操作固定大小数据块,通过缓冲区读写,允许随机访问,适用于大量信息传输(如硬盘､闪存盘､CD-ROM)｡</li>
+</ol>
+<h4>9.2.4 磁盘配额的命令</h4>
+<h5>9.2.4.1 quota 命令</h5>
+<ol>
+<li>功能:查询磁盘空间限制及已使用空间｡</li>
+<li>命令格式:
+<ul>
+<li>quota [选项] 用户名;</li>
+<li>quota [选项] 群组名｡</li>
+</ul>
+</li>
+</ol>
+<h5>9.2.4.2 quotacheck 命令</h5>
+<ol>
+<li>功能:扫描含挂载参数usrquota 和grpquota 的文件系统,建立磁盘配额记录文件｡</li>
+<li>命令格式:quotacheck [选项] 文件系统｡</li>
+</ol>
+<h5>9.2.4.3 quotaon 命令</h5>
+<p>功能:启动磁盘配额服务｡</p>
+<h5>9.2.4.4 quotaoff 命令</h5>
+<p>功能:关闭磁盘配额服务｡</p>
+<h2>第10章 网络管理</h2>
+<h3>10.1 管理网络接口</h3>
+<h4>10.1.1 计算机基本网络参数</h4>
+<ol>
+<li>IP 地址:标识一块网卡接口,由网络号和主机号组成｡</li>
+<li>子网掩码:与IP 地址成对出现,确定网络部分位数(对应子网掩码为1 的位为网络部分)｡</li>
+<li>网关:实现跨区域通信｡</li>
+<li>DNS:实现域名与IP 地址的映射｡</li>
+</ol>
+<h4>10.1.2 Linux 联网配置步骤</h4>
+<ol>
+<li>为每个网络接口分配IP 地址和子网掩码(Netmask);</li>
+<li>配置默认网关(Gateway);</li>
+<li>配置一个或多个DNS 服务器｡</li>
+</ol>
+<h4>10.1.3 网络接口卡(NIC)</h4>
+<ol>
+<li>功能:实现联网操作的PCI 设备｡</li>
+<li>内核检测:Linux 内核可检测所有连接的PCI 设备,用lspci 命令验证｡</li>
+</ol>
+<h4>10.1.4 网络接口</h4>
+<ol>
+<li>访问方式:Linux 内核不允许将NIC 作为文件访问,/dev 目录无NIC 设备节点,通过网络接口访问NIC｡</li>
+<li>常用网络接口名称及类型:
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eth0</td>
+<td>以太网</td>
+</tr>
+<tr>
+<td>lo</td>
+<td>(虚拟)回环设备</td>
+</tr>
+<tr>
+<td>ppp0</td>
+<td>使用PPP 协议的串口设备(调制解调器)</td>
+</tr>
+<tr>
+<td>tr0</td>
+<td>令牌环(token ring)</td>
+</tr>
+<tr>
+<td>fddi0</td>
+<td>光纤</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+</li>
+</ol>
+<h4>10.1.5 网络接口检测与配置</h4>
+<ol>
+<li>检测所有接口:ifconfig -a(显示已识别的所有网络接口信息);</li>
+<li>检测活跃接口:ifconfig(不加选项,仅显示活跃接口)｡</li>
+<li>接口配置文件:
+<ul>
+<li>激活脚本:/etc/init.d/network;</li>
+<li>配置文件目录:/etc/sysconfig/network-scripts;</li>
+<li>配置文件命名:以ifcfg- 命名(如ifcfg-eth0)｡</li>
+</ul>
+</li>
+<li>回环接口默认配置:IP 地址127.0.0.1,子网掩码255.0.0.0｡</li>
+</ol>
+<h3>10.2 基本IP 路由和网关</h3>
+<ol>
+<li>IP 地址结构:每个IP 地址包括网络部分和主机部分｡</li>
+<li>子网掩码对应网络类型:
+<ul>
+<li>A 类网络:子网掩码255.0.0.0(网络地址含第1 个IP 字段);</li>
+<li>B 类网络:子网掩码255.255.0.0(网络地址含前2 个IP 字段);</li>
+<li>C 类网络:子网掩码255.255.255.0(网络地址含前3 个IP 字段)｡</li>
+</ul>
+</li>
+<li>以太网地址:
+<ul>
+<li>每个以太网接口有两个地址:IP 地址(用于跨网络主机通信)､MAC 地址(用于同一IP 网络内主机通信)｡</li>
+</ul>
+</li>
+<li>本地网络通信过程:
+<ul>
+<li>确认目标主机与本机在同一网络;</li>
+<li>通过ARP 协议(地址解析协议)获取目标主机的MAC 地址;</li>
+<li>保存IP 地址/MAC 地址对到ARP 缓存(用arp -a 检测缓存,arp -n 查看IP 与MAC 映射表)｡</li>
+</ul>
+</li>
+<li>ARP 协议作用:将以太网MAC 地址与IP 地址关联｡</li>
+</ol>
+<h3>10.3 配置DNS 客户机</h3>
+<h4>10.3.1 域名系统(DNS)</h4>
+<ol>
+<li>功能:分布式数据库,将复杂的IP 地址转换为简明的域名,实现主机名与IP 地址的转换,在TCP/IP 网络中至关重要｡</li>
+<li>/etc/hosts 文件:早期实现IP 与主机名对应的静态表｡</li>
+</ol>
+<h4>10.3.2 DNS 查询方式</h4>
+<ol>
+<li>静态查询:通过/etc/hosts 文件查询;</li>
+<li>动态查询:通过/etc/resolv.conf 文件中列出的域名服务器查询｡</li>
+<li>resolve 库解析流程:先执行静态查询,再通过/etc/resolv.conf 中的域名服务器进行动态查询｡</li>
+</ol>
+<h3>10.4 DHCP 配置详解</h3>
+<ol>
+<li>DHCP 定义:Dynamic Host Configuration Protocol(动态主机配置协议),局域网网络管理协议｡</li>
+<li>DHCP 工作方式:
+<ul>
+<li>客户端无固定IP 地址,接口启用(ifup)时动态获取IP,接口停用(ifdown)时释放IP;</li>
+<li>客户端配置:接口配置文件中BOOTPROTO 变量设为dhcp;</li>
+<li>dhclient 守护进程:管理DHCP 通信,自动应用接收的信息(添加默认网关到路由表､写入DNS 服务器到/etc/resolv.conf､设定NIS 域)｡</li>
+</ul>
+</li>
+</ol>
+<h3>10.5 配置Web 服务器</h3>
+<ol>
+<li>HTTP 协议:Hyper Text Transfer Protocol(超文本传输协议),用于客户端和服务器之间的通信｡</li>
+<li>Apache 应用程序:实现WWW 服务器功能,为用户提供Web 浏览服务｡</li>
+</ol>
+<h3>10.6 配置Telnet</h3>
+<p>(文档中未提及详细内容,暂略,仅提及为远程控制Web 服务器的常用方法之一)</p>
+<h3>10.7 其他网络设置</h3>
+<h4>10.7.1 分配主机名</h4>
+<ol>
+<li>hostname 命令:检验机器主机名,或动态分配主机名｡</li>
+</ol>
+<h4>10.7.2 /etc/sysconfig/network 文件</h4>
+<ol>
+<li>功能:记录通用联网配置信息,定义整合到启动过程中的shell 变量｡</li>
+</ol>
+<h4>10.7.3 网络配置作为service 管理</h4>
+<ol>
+<li>命令格式:service network stop/start/restart(管理网络服务的启动/停止/重启)｡</li>
+</ol>
+<h3>10.8 网络诊断工具</h3>
+<h4>10.8.1 常用诊断命令</h4>
+<h5>10.8.1.1 ping 命令</h5>
+<ol>
+<li>功能:测试本机与远程主机的底层IP 连通性｡</li>
+<li>用法:接受主机名或IP 地址作为参数,如 ping <a href="http://www.baidu.com%EF%BD%A1" rel="nofollow">www.baidu.com｡</a></li>
+</ol>
+<h5>10.8.1.2 host 命令</h5>
+<ol>
+<li>功能:直接执行DNS 查询｡</li>
+<li>用法:默认使用/etc/resolv.conf 中的域名服务器,如 host <a href="http://www.baidu.com%EF%BD%A1" rel="nofollow">www.baidu.com｡</a></li>
+</ol>
+<h5>10.8.1.3 traceroute 命令</h5>
+<ol>
+<li>功能:显示数据包从本机到目标主机的路由器路径｡</li>
+</ol>
+<h4>10.8.2 tcpdump 命令</h4>
+<ol>
+<li>功能:监视网络,显示独立数据包信息概要,持续执行直到Ctrl+C 取消｡</li>
+<li>示例:截取HTTP 协议(端口80)数据并以二进制格式保存到http.capture: tcpdump -p 80 &gt; http.capture｡</li>
+</ol>
+<h4>10.8.3 常见网络配置问题与答案</h4>
+<ol>
+<li>列出所有当前活跃网络接口的命令:ifconfig｡</li>
+<li>回环接口默认IP 和子网掩码:127.0.0.1/255.0.0.0｡</li>
+<li>定义本地主机名和IP 地址转换的文件:/etc/hosts｡</li>
+<li>动态设置主机名为station.example.com 的命令:hostname station.example.com｡</li>
+<li>定义主机名并在启动时自动设定的文件:/etc/hosts｡</li>
+<li>启用Linux 机器路由功能的配置文件:/etc/sysctl.conf(内核配置文件)｡</li>
+<li>启用路由功能的参数:net.ipv4.ip_forward(设为1 启用,0 禁用)｡</li>
+<li>直接执行DNS 主机名解析的程序:system-config-network-tui｡</li>
+<li>ifconfig 与修改配置文件的区别:ifconfig 暂时修改网络参数,不写入配置文件,重启后恢复配置文件设置｡</li>
+</ol>
+<h2>第11章 系统服务与日志</h2>
+<h3>11.1 Linux 系统服务</h3>
+<ol>
+<li>服务定义:又称守护程序,系统启动时自动加载,系统退出时自动停止的系统服务｡</li>
+</ol>
+<h3>11.2 启动和关闭服务</h3>
+<ol>
+<li>守护程序分类:
+<ul>
+<li>独立启动服务(stand alone):可独立启动;</li>
+<li>总管程序管理服务(super daemon):通过总管程序统一管理｡</li>
+</ul>
+</li>
+<li>独立服务启动方式:
+<ul>
+<li>使用/etc/init.d/目录中的启动脚本;</li>
+<li>使用service 服务命令｡</li>
+</ul>
+</li>
+</ol>
+<h3>11.3 查看日志</h3>
+<ol>
+<li>日志管理服务:绝大多数系统日志由rsyslogd 服务统一管理｡</li>
+<li>Apache 服务日志:由Apache 软件自行产生,日志格式与系统默认日志一致｡</li>
+<li>日志文件位置:/var/log/目录( /var/ 目录用于保存系统动态数据)｡</li>
+</ol>
+<h3>11.4 管理日志</h3>
+<ol>
+<li>rsyslogd 服务配置文件:/etc/rsyslogd.conf,定义各服务不同等级日志的记录位置｡</li>
+</ol>
+<h2>第12章 VI 编辑器</h2>
+<h3>12.2 工作模式</h3>
+<p>VI 编辑器有3 种工作模式:命令模式､文本编辑模式和末行模式｡</p>
+<h3>12.3 进入和退出VI</h3>
+<h4>12.3.1 进入VI</h4>
+<ol>
+<li>常用进入方式:
+<ul>
+<li>vi:直接进入VI;</li>
+<li>vi 文件名:文件不存在则创建,存在则打开;</li>
+<li>vi+ 文件名:进入后光标停在文件最后一行开始处;</li>
+<li>vi+n 文件名:进入后光标停在文件第n 行开始处;</li>
+<li>vi+/字符串 文件名:进入后光标停在文件中指定字符串第一次出现的行首｡</li>
+</ul>
+</li>
+</ol>
+<h4>12.3.2 保存文件或退出VI</h4>
+<ol>
+<li>命令模式:按两次Z 键,保存文件并退出VI｡</li>
+<li>末行模式(常用命令):
+<ul>
+<li>w:保存文件,不退出VI(write);</li>
+<li>q:不保存,直接退出VI(quit),文件有未保存改动时出错;</li>
+<li>q!:强行退出VI,丢弃未保存改动(恢复文件原始内容);</li>
+<li>wq:保存并退出VI(同ZZ)</li>
+</ul>
+</li>
+</ol></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

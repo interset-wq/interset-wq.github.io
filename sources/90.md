@@ -1,0 +1,34 @@
+# 标准库
+
+- os 操作系统接口
+- shutil 日常文件管理
+- glob 文件通配符
+- sys 命令行参数 错误输出重定向 终止程序
+- argparse 命令行参数
+- re 正则表达式
+- math 浮点数运算
+- random 随机数
+- statistics 统计（均值，中位数，方差等）
+- urllib.request 访问互联网
+- smtplib 发送邮件
+- datatime 日期和时间
+- zlib gzip bz2 lzma zipfile tarfile 文件压缩
+- timeit 性能测试
+- doctest 质量控制
+- unittest 单元测试
+- email 电子邮件
+- json 处理json文件
+- csv 处理csv文件
+- sqlite3 数据库
+- reprlib pprint textwrap local 格式化输出 
+- string 模板
+- struct 二进制数据
+- threading 多线程
+- logging 日志
+- weakref 弱引用
+- array
+- collections
+- bisect
+- heapq
+- demical 十进制浮点数
+- 

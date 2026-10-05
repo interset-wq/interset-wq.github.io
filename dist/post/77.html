@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="# DrissionPage 浏览器自动化操作
+
+[DrissionPage官方文档](https://drissionpage.cn/)
+
+## 两个核心的类
+
+- `ChromiumPage` 用于操作浏览器
+- `SessionPage` 
+
+## 使用ChromiumPage类操作浏览器
+
+### 第一步：导入模块
+
+    from DrissionPage import Chromium
+
+### 第二步：创建浏览器driver对象，并打开浏览器
+
+    driver = Chromium()
+
+??? note 'driver对象的一些方法和属性'
+    - `latest_tab`属性  获取激活的Tab对象，即当前使用的标签页或打开浏览器时自动打开的标签页
+    - `quit()`方法 关闭浏览器，程序运行结束时不会自动关闭浏览器
+    - `tabs_count`属性 返回当前打开的标签页数量
+    - `tab_ids`属性 返回所有标签页id的列表
+    - `new_tab()`方法 新建一个标签页，传入了url参数是新建一个标签页并访问网址，url为None时新建一个空白标签页
+    - `activate_tab()`方法 激活指定的标签页
+    - `close_tabs()`方法 关闭指定的标签页
+    - `set_timeout()`方法 设置超时时间，单位为秒
+    - `set.load_mode.normal()`方法 等待所有资源加载完毕的模式
+    - `set.load_mode.eager()`方法 等待文档加载完即停止加载的模式
+    - `set.load_mode.none()`方法 不会主动停止加载的模式
+    - `set.retry_times()`方法 用于设置页面连接失败重连次数
+    - `set.retry_interval()`方法 用于设置连接失败重连间隔（秒）
+    - `set.cookies()`方法 用于设置一个或多个 cookie
+
+### 第三步：创建标签页Tab对象
+
+    tab = browser.latest_tab # 获取最新打开的标签页
+
+???+ note '其他创建Tab对象的方法'
+    - `tab = browser.new_tab()`  传入URL，新建一个标签页并访问网址
+    - `tab = browser.get_tab()` 有多个标签页时，按条件获取一个标签页对象，模糊匹配
+    - `tab = browser.get_tabs()` 有多个标签页时，按条件获取多个标签页对象，模糊匹配
+  
+
+### 第四步：通过Tab对象访问网页
+
+    tab.get(url) # 传入网页地址，访问网页，相当于`requests.get()`方法
+
+???+ note '访问网页的其他方法'
+    - `tab.post()`方法 发送POST请求，相当于`requests.post()`方法，返回`requests.Response`对象
+
+??? note 'Tab对象的页面交互相关方法'
+    - `back()`方法 传入整数，用于在浏览历史中后退若干步
+    - `forward()`方法 传入整数，用于在浏览历史中前进若干步
+    - `refresh()`方法 刷新当前页面
+    - `stop_loading()`方法 停止加载当前页面
+    - `set.blocked_urls()`方法 用于设置页面加载过程中需要屏蔽的 URL 列表，传入一个列表，列表中每个元素为一个 URL 字符串
+        - `tab.set.blocked_urls('*.css*')` 设置不加载css文件
+
+??? note 'Tab对象的获取网页信息相关方法和属性'
+    - `html`属性 获取当前页面的HTML文本，获取到的html中不包括iframe元素中的内容
+    - `json`属性 获取当前页面的JSON数据
+    - `title`属性 获取当前页面的标题
+    - `user_agent`属性 获取当前页面的User-Agent
+    - `save()`方法 将当前页面保存为文件，参数如下：
+        - `path` 保存文件的路径
+        - `name` 保存文件的名称，默认为当前页面的标题
+        - `as_pdf` 是否将页面保存为PDF格式，默认为False
+        - `**kwargs` 其他参数，用于设置PDF格式的参数，如：
+    - `url`属性 返回当前访问的URL
+    - `tab_id`属性 返回当前标签页的ID
+    - `states.is_loading`属性 判断当前页面是否正在加载
+    - `states.is_alive`属性 判断当前标签页是否已关闭
+    - `states.ready_state`属性 返回页面当前加载状态，值为：
+        - `complete` 页面加载完成
+        - `loading` 页面正在加载
+        - `interactive` DOM 已加载，但资源未加载完成
+        - `connecting` 网页连接中
+    - `url_avaiable`属性 判断当前链接是否可用
+    - `states.has_alert`属性 判断当前页面是否有弹窗
+
+### 第五步：使用Tab对象操作浏览器
+
+#### 5.1 定位元素并操作
+
+Tab对象常用的方法：
+
+- `ele()` 通过css、xpath等定位元素，返回Element对象，可以使用类似于bs4的简写法，即把对象名看作是函数
+- `eles()` 同上，返回Slement对象的列表
+- `get_frame()` 针对iframe和frame标签，用法与ele()类似
+- `get_frames()` 同上，不建议使用
+- `s_ele()` 用法和ele()类似，将所有元素转换为静态的，这样可以加快获取速度
+- `s_eles()` 同上
+
+DrissionPage支持的元素定位法
+
+- CSS选择器 `ele('css: 选择器')`，可简写为`ele('c: 选择器')`，`css:`与`css=`效果一致，没有`css^`和`css$`语法
+
+    ```py
+    ele = tab.ele('css:.div')  # 查找 div 元素
+    ele = tab.ele('css:>div')  # 查找 div 子元素元素，这个写法是本库特有，原生不支持
+    ```
+
+- XPath `ele('xpath: 选择器')`，可简写为`ele('x: 选择器')`，`xpath:`与`xpath=`效果一致，没有`xpath^`和`xpath$`语法
+
+    ```py
+    ele2 = ele1.ele('xpath:.//div')  # 查找后代中第一个 div 元素
+    ele2 = ele1.ele('xpath://div')  # 和上面一行一样，查找元素的后代时，// 前面的 . 可以省略
+    ele_class_str = ele1.ele('xpath://div/@class')  # 使用xpath获取div元素的class属性（selenium页面元素无此功能）
+    ```
+
+- selenium By对象 `from DrissionPage.common import By` 用法和selenium相同
+- id选择器`#`，相当于当属性定位`@id=id值`
+
+    ```python
+    ele = tab.ele('#one')  # 查找id='one'的元素
+    ele = tab.ele('#=one')  # 同上
+    ele = tab.ele('#:ne')  # 查找id属性包含ne的元素
+    ele = tab.ele('#^on')  # 查找id属性以on开头的元素
+    ele = tab.ele('#$ne')  # 查找id属性以ne结尾的元素
+    ```
+
+- 类选择器`.`，相当于单属性定位'@class=属性值'，和id选择器用法类似。">
+<meta property="og:title" content="DrissionPage 浏览器自动化操作">
+<meta property="og:description" content="# DrissionPage 浏览器自动化操作
+
+[DrissionPage官方文档](https://drissionpage.cn/)
+
+## 两个核心的类
+
+- `ChromiumPage` 用于操作浏览器
+- `SessionPage` 
+
+## 使用ChromiumPage类操作浏览器
+
+### 第一步：导入模块
+
+    from DrissionPage import Chromium
+
+### 第二步：创建浏览器driver对象，并打开浏览器
+
+    driver = Chromium()
+
+??? note 'driver对象的一些方法和属性'
+    - `latest_tab`属性  获取激活的Tab对象，即当前使用的标签页或打开浏览器时自动打开的标签页
+    - `quit()`方法 关闭浏览器，程序运行结束时不会自动关闭浏览器
+    - `tabs_count`属性 返回当前打开的标签页数量
+    - `tab_ids`属性 返回所有标签页id的列表
+    - `new_tab()`方法 新建一个标签页，传入了url参数是新建一个标签页并访问网址，url为None时新建一个空白标签页
+    - `activate_tab()`方法 激活指定的标签页
+    - `close_tabs()`方法 关闭指定的标签页
+    - `set_timeout()`方法 设置超时时间，单位为秒
+    - `set.load_mode.normal()`方法 等待所有资源加载完毕的模式
+    - `set.load_mode.eager()`方法 等待文档加载完即停止加载的模式
+    - `set.load_mode.none()`方法 不会主动停止加载的模式
+    - `set.retry_times()`方法 用于设置页面连接失败重连次数
+    - `set.retry_interval()`方法 用于设置连接失败重连间隔（秒）
+    - `set.cookies()`方法 用于设置一个或多个 cookie
+
+### 第三步：创建标签页Tab对象
+
+    tab = browser.latest_tab # 获取最新打开的标签页
+
+???+ note '其他创建Tab对象的方法'
+    - `tab = browser.new_tab()`  传入URL，新建一个标签页并访问网址
+    - `tab = browser.get_tab()` 有多个标签页时，按条件获取一个标签页对象，模糊匹配
+    - `tab = browser.get_tabs()` 有多个标签页时，按条件获取多个标签页对象，模糊匹配
+  
+
+### 第四步：通过Tab对象访问网页
+
+    tab.get(url) # 传入网页地址，访问网页，相当于`requests.get()`方法
+
+???+ note '访问网页的其他方法'
+    - `tab.post()`方法 发送POST请求，相当于`requests.post()`方法，返回`requests.Response`对象
+
+??? note 'Tab对象的页面交互相关方法'
+    - `back()`方法 传入整数，用于在浏览历史中后退若干步
+    - `forward()`方法 传入整数，用于在浏览历史中前进若干步
+    - `refresh()`方法 刷新当前页面
+    - `stop_loading()`方法 停止加载当前页面
+    - `set.blocked_urls()`方法 用于设置页面加载过程中需要屏蔽的 URL 列表，传入一个列表，列表中每个元素为一个 URL 字符串
+        - `tab.set.blocked_urls('*.css*')` 设置不加载css文件
+
+??? note 'Tab对象的获取网页信息相关方法和属性'
+    - `html`属性 获取当前页面的HTML文本，获取到的html中不包括iframe元素中的内容
+    - `json`属性 获取当前页面的JSON数据
+    - `title`属性 获取当前页面的标题
+    - `user_agent`属性 获取当前页面的User-Agent
+    - `save()`方法 将当前页面保存为文件，参数如下：
+        - `path` 保存文件的路径
+        - `name` 保存文件的名称，默认为当前页面的标题
+        - `as_pdf` 是否将页面保存为PDF格式，默认为False
+        - `**kwargs` 其他参数，用于设置PDF格式的参数，如：
+    - `url`属性 返回当前访问的URL
+    - `tab_id`属性 返回当前标签页的ID
+    - `states.is_loading`属性 判断当前页面是否正在加载
+    - `states.is_alive`属性 判断当前标签页是否已关闭
+    - `states.ready_state`属性 返回页面当前加载状态，值为：
+        - `complete` 页面加载完成
+        - `loading` 页面正在加载
+        - `interactive` DOM 已加载，但资源未加载完成
+        - `connecting` 网页连接中
+    - `url_avaiable`属性 判断当前链接是否可用
+    - `states.has_alert`属性 判断当前页面是否有弹窗
+
+### 第五步：使用Tab对象操作浏览器
+
+#### 5.1 定位元素并操作
+
+Tab对象常用的方法：
+
+- `ele()` 通过css、xpath等定位元素，返回Element对象，可以使用类似于bs4的简写法，即把对象名看作是函数
+- `eles()` 同上，返回Slement对象的列表
+- `get_frame()` 针对iframe和frame标签，用法与ele()类似
+- `get_frames()` 同上，不建议使用
+- `s_ele()` 用法和ele()类似，将所有元素转换为静态的，这样可以加快获取速度
+- `s_eles()` 同上
+
+DrissionPage支持的元素定位法
+
+- CSS选择器 `ele('css: 选择器')`，可简写为`ele('c: 选择器')`，`css:`与`css=`效果一致，没有`css^`和`css$`语法
+
+    ```py
+    ele = tab.ele('css:.div')  # 查找 div 元素
+    ele = tab.ele('css:>div')  # 查找 div 子元素元素，这个写法是本库特有，原生不支持
+    ```
+
+- XPath `ele('xpath: 选择器')`，可简写为`ele('x: 选择器')`，`xpath:`与`xpath=`效果一致，没有`xpath^`和`xpath$`语法
+
+    ```py
+    ele2 = ele1.ele('xpath:.//div')  # 查找后代中第一个 div 元素
+    ele2 = ele1.ele('xpath://div')  # 和上面一行一样，查找元素的后代时，// 前面的 . 可以省略
+    ele_class_str = ele1.ele('xpath://div/@class')  # 使用xpath获取div元素的class属性（selenium页面元素无此功能）
+    ```
+
+- selenium By对象 `from DrissionPage.common import By` 用法和selenium相同
+- id选择器`#`，相当于当属性定位`@id=id值`
+
+    ```python
+    ele = tab.ele('#one')  # 查找id='one'的元素
+    ele = tab.ele('#=one')  # 同上
+    ele = tab.ele('#:ne')  # 查找id属性包含ne的元素
+    ele = tab.ele('#^on')  # 查找id属性以on开头的元素
+    ele = tab.ele('#$ne')  # 查找id属性以ne结尾的元素
+    ```
+
+- 类选择器`.`，相当于单属性定位'@class=属性值'，和id选择器用法类似。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/77.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>DrissionPage 浏览器自动化操作</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">DrissionPage 浏览器自动化操作</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-08-08</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#3572a5;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><h1>DrissionPage 浏览器自动化操作</h1>
+<p><a href="https://drissionpage.cn/" rel="nofollow">DrissionPage官方文档</a></p>
+<h2>两个核心的类</h2>
+<ul>
+<li><code class="notranslate">ChromiumPage</code> 用于操作浏览器</li>
+<li><code class="notranslate">SessionPage</code></li>
+</ul>
+<h2>使用ChromiumPage类操作浏览器</h2>
+<h3>第一步：导入模块</h3>
+<pre class="notranslate"><code class="notranslate">from DrissionPage import Chromium
+</code></pre>
+<h3>第二步：创建浏览器driver对象，并打开浏览器</h3>
+<pre class="notranslate"><code class="notranslate">driver = Chromium()
+</code></pre>
+<p>??? note "driver对象的一些方法和属性"<br>
+- <code class="notranslate">latest_tab</code>属性  获取激活的Tab对象，即当前使用的标签页或打开浏览器时自动打开的标签页<br>
+- <code class="notranslate">quit()</code>方法 关闭浏览器，程序运行结束时不会自动关闭浏览器<br>
+- <code class="notranslate">tabs_count</code>属性 返回当前打开的标签页数量<br>
+- <code class="notranslate">tab_ids</code>属性 返回所有标签页id的列表<br>
+- <code class="notranslate">new_tab()</code>方法 新建一个标签页，传入了url参数是新建一个标签页并访问网址，url为None时新建一个空白标签页<br>
+- <code class="notranslate">activate_tab()</code>方法 激活指定的标签页<br>
+- <code class="notranslate">close_tabs()</code>方法 关闭指定的标签页<br>
+- <code class="notranslate">set_timeout()</code>方法 设置超时时间，单位为秒<br>
+- <code class="notranslate">set.load_mode.normal()</code>方法 等待所有资源加载完毕的模式<br>
+- <code class="notranslate">set.load_mode.eager()</code>方法 等待文档加载完即停止加载的模式<br>
+- <code class="notranslate">set.load_mode.none()</code>方法 不会主动停止加载的模式<br>
+- <code class="notranslate">set.retry_times()</code>方法 用于设置页面连接失败重连次数<br>
+- <code class="notranslate">set.retry_interval()</code>方法 用于设置连接失败重连间隔（秒）<br>
+- <code class="notranslate">set.cookies()</code>方法 用于设置一个或多个 cookie</p>
+<h3>第三步：创建标签页Tab对象</h3>
+<pre class="notranslate"><code class="notranslate">tab = browser.latest_tab # 获取最新打开的标签页
+</code></pre>
+<p>???+ note "其他创建Tab对象的方法"<br>
+- <code class="notranslate">tab = browser.new_tab()</code>  传入URL，新建一个标签页并访问网址<br>
+- <code class="notranslate">tab = browser.get_tab()</code> 有多个标签页时，按条件获取一个标签页对象，模糊匹配<br>
+- <code class="notranslate">tab = browser.get_tabs()</code> 有多个标签页时，按条件获取多个标签页对象，模糊匹配</p>
+<h3>第四步：通过Tab对象访问网页</h3>
+<pre class="notranslate"><code class="notranslate">tab.get(url) # 传入网页地址，访问网页，相当于`requests.get()`方法
+</code></pre>
+<p>???+ note "访问网页的其他方法"<br>
+- <code class="notranslate">tab.post()</code>方法 发送POST请求，相当于<code class="notranslate">requests.post()</code>方法，返回<code class="notranslate">requests.Response</code>对象</p>
+<p>??? note "Tab对象的页面交互相关方法"<br>
+- <code class="notranslate">back()</code>方法 传入整数，用于在浏览历史中后退若干步<br>
+- <code class="notranslate">forward()</code>方法 传入整数，用于在浏览历史中前进若干步<br>
+- <code class="notranslate">refresh()</code>方法 刷新当前页面<br>
+- <code class="notranslate">stop_loading()</code>方法 停止加载当前页面<br>
+- <code class="notranslate">set.blocked_urls()</code>方法 用于设置页面加载过程中需要屏蔽的 URL 列表，传入一个列表，列表中每个元素为一个 URL 字符串<br>
+- <code class="notranslate">tab.set.blocked_urls('*.css*')</code> 设置不加载css文件</p>
+<p>??? note "Tab对象的获取网页信息相关方法和属性"<br>
+- <code class="notranslate">html</code>属性 获取当前页面的HTML文本，获取到的html中不包括iframe元素中的内容<br>
+- <code class="notranslate">json</code>属性 获取当前页面的JSON数据<br>
+- <code class="notranslate">title</code>属性 获取当前页面的标题<br>
+- <code class="notranslate">user_agent</code>属性 获取当前页面的User-Agent<br>
+- <code class="notranslate">save()</code>方法 将当前页面保存为文件，参数如下：<br>
+- <code class="notranslate">path</code> 保存文件的路径<br>
+- <code class="notranslate">name</code> 保存文件的名称，默认为当前页面的标题<br>
+- <code class="notranslate">as_pdf</code> 是否将页面保存为PDF格式，默认为False<br>
+- <code class="notranslate">**kwargs</code> 其他参数，用于设置PDF格式的参数，如：<br>
+- <code class="notranslate">url</code>属性 返回当前访问的URL<br>
+- <code class="notranslate">tab_id</code>属性 返回当前标签页的ID<br>
+- <code class="notranslate">states.is_loading</code>属性 判断当前页面是否正在加载<br>
+- <code class="notranslate">states.is_alive</code>属性 判断当前标签页是否已关闭<br>
+- <code class="notranslate">states.ready_state</code>属性 返回页面当前加载状态，值为：<br>
+- <code class="notranslate">complete</code> 页面加载完成<br>
+- <code class="notranslate">loading</code> 页面正在加载<br>
+- <code class="notranslate">interactive</code> DOM 已加载，但资源未加载完成<br>
+- <code class="notranslate">connecting</code> 网页连接中<br>
+- <code class="notranslate">url_avaiable</code>属性 判断当前链接是否可用<br>
+- <code class="notranslate">states.has_alert</code>属性 判断当前页面是否有弹窗</p>
+<h3>第五步：使用Tab对象操作浏览器</h3>
+<h4>5.1 定位元素并操作</h4>
+<p>Tab对象常用的方法：</p>
+<ul>
+<li><code class="notranslate">ele()</code> 通过css、xpath等定位元素，返回Element对象，可以使用类似于bs4的简写法，即把对象名看作是函数</li>
+<li><code class="notranslate">eles()</code> 同上，返回Slement对象的列表</li>
+<li><code class="notranslate">get_frame()</code> 针对iframe和frame标签，用法与ele()类似</li>
+<li><code class="notranslate">get_frames()</code> 同上，不建议使用</li>
+<li><code class="notranslate">s_ele()</code> 用法和ele()类似，将所有元素转换为静态的，这样可以加快获取速度</li>
+<li><code class="notranslate">s_eles()</code> 同上</li>
+</ul>
+<p>DrissionPage支持的元素定位法</p>
+<ul>
+<li>
+<p>CSS选择器 <code class="notranslate">ele('css: 选择器')</code>，可简写为<code class="notranslate">ele('c: 选择器')</code>，<code class="notranslate">css:</code>与<code class="notranslate">css=</code>效果一致，没有<code class="notranslate">css^</code>和<code class="notranslate">css$</code>语法</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'css:.div'</span>)  <span class="pl-c"># 查找 div 元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'css:&gt;div'</span>)  <span class="pl-c"># 查找 div 子元素元素，这个写法是本库特有，原生不支持</span></pre></div>
+</li>
+<li>
+<p>XPath <code class="notranslate">ele('xpath: 选择器')</code>，可简写为<code class="notranslate">ele('x: 选择器')</code>，<code class="notranslate">xpath:</code>与<code class="notranslate">xpath=</code>效果一致，没有<code class="notranslate">xpath^</code>和<code class="notranslate">xpath$</code>语法</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele2</span> <span class="pl-c1">=</span> <span class="pl-s1">ele1</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'xpath:.//div'</span>)  <span class="pl-c"># 查找后代中第一个 div 元素</span>
+<span class="pl-s1">ele2</span> <span class="pl-c1">=</span> <span class="pl-s1">ele1</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'xpath://div'</span>)  <span class="pl-c"># 和上面一行一样，查找元素的后代时，// 前面的 . 可以省略</span>
+<span class="pl-s1">ele_class_str</span> <span class="pl-c1">=</span> <span class="pl-s1">ele1</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'xpath://div/@class'</span>)  <span class="pl-c"># 使用xpath获取div元素的class属性（selenium页面元素无此功能）</span></pre></div>
+</li>
+<li>
+<p>selenium By对象 <code class="notranslate">from DrissionPage.common import By</code> 用法和selenium相同</p>
+</li>
+<li>
+<p>id选择器<code class="notranslate">#</code>，相当于当属性定位<code class="notranslate">@id=id值</code></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#one'</span>)  <span class="pl-c"># 查找id="one"的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#=one'</span>)  <span class="pl-c"># 同上</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#:ne'</span>)  <span class="pl-c"># 查找id属性包含ne的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#^on'</span>)  <span class="pl-c"># 查找id属性以on开头的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#$ne'</span>)  <span class="pl-c"># 查找id属性以ne结尾的元素</span></pre></div>
+</li>
+<li>
+<p>类选择器<code class="notranslate">.</code>，相当于单属性定位"<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/Class/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/Class">@Class</a>=属性值"，和id选择器用法类似。如果一个元素有多个class属性，将其看做是一个属性</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.p_cls'</span>)  <span class="pl-c"># 查找class属性为p_cls的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.=p_cls'</span>)  <span class="pl-c"># 与上一行一致</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.:_cls'</span>)  <span class="pl-c"># 查找class属性包含_cls的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.^p_'</span>)  <span class="pl-c"># 查找class属性以p_开头的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.$_cls'</span>)  <span class="pl-c"># 查找class属性以_cls结尾的元素</span></pre></div>
+</li>
+<li>
+<p>文本匹配<code class="notranslate">text</code>，可简写为<code class="notranslate">tx</code>，相当于单属性定位"<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/text/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/text">@text</a>()=文本"，如果文本中包含html实体，需要使用转义字符将html实体转换为十六进制形式</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'text=第二行'</span>)  <span class="pl-c"># 查找文本为“第二行”的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'text:第二'</span>)  <span class="pl-c"># 查找文本包含“第二”的元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'第二'</span>)  <span class="pl-c"># 与上一行一致</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'第<span class="pl-cce">\u00A0</span>二'</span>)  <span class="pl-c"># 匹配包含&amp;nbsp;文本的元素，需将&amp;nbsp;转为\u00A0</span></pre></div>
+</li>
+<li>
+<p>类型匹配<code class="notranslate">tag</code>，可简写为<code class="notranslate">t</code>，相当于单属性查找<code class="notranslate">@tag()=标签名</code>，相当于元素选择器，<code class="notranslate">tag:</code>与<code class="notranslate">tag=</code>效果一致，没有<code class="notranslate">tag^</code>和<code class="notranslate">tag$</code>语法</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:div'</span>)  <span class="pl-c"># 查找第一个div元素</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:p@class=p_cls'</span>)  <span class="pl-c"># 与单属性查找配合使用，相当于css选择器 p &gt; .p_cls</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:p@@class=p_cls'</span>)  <span class="pl-c"># 与单属性查找配合使用，相当于css选择器 p .p_cls</span>
+<span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:p@@class=p_cls@@text()=第二行'</span>)  <span class="pl-c"># 与多属性查找配合使用，相当于匹配css选择器 p .p_cls 且文本内容为“第二行”的元素</span></pre></div>
+</li>
+<li>
+<p>DrissionPage原生</p>
+</li>
+</ul>
+<p>???+ note "DrissionPage原生元素定位法"<br>
+- 单属性定位 <code class="notranslate">@</code>，这种方法只能通过标签名、属性名、文本内容三者之一进行定位，不能同时使用多种</p>
+<pre class="notranslate"><code class="notranslate">    - `@tag()`，可简写为`t()`，相当于元素选择器
+    - `@元素属性名` 通过html标签的属性名定位元素
+    - `@text()`，可简写为`tx()`，通过元素的文本内容定位元素，`@@text()技巧`，此处省略
+
+    ```python
+    tab.ele('@tag()=div')  # 获取第一个div元素
+    tab.ele('@id=one')  # 获取第一个`id="one"`的元素
+    tab.ele('@id')  # 获取第一个有`id`属性的元素
+    tab.ele('@text()=第一行')  # 获取第一个文本为“第一行”的元素
+    ```
+
+- 多属性定位且 `@@`，这种方法可以同时使用标签名、属性名、文本内容等多种条件进行定位，用法和`@`相同，只是把`@`换成`@@`
+
+    ```python
+    ele = tab.ele('@@id=one')  # 查找id="one"的元素
+    ele = tab.ele('@@class=demo@@text()=第三行')  # 查找class="demo"且文本为“第三行”的元素
+    ```
+
+- 多属性定位或 `@|`，用法与`@@`相似
+
+    ```python   
+    eles = tab.eles('@|id=row1@|id=row2')  # 查找所有id="row1"或id="row2"的元素
+    ```
+
+- 多属性定位非 `@!`，用法与`@@`相似
+
+    ```
+    ele = tab.ele('@!id=one')  # 获取第一个id不等于“one”的元素
+    ele = tab.ele('@!class')  # 匹配没有class属性的元素
+    ```
+
+- 且`@@`、或`@|`不能同时出现的查找语句中，非`@!`则可与两者混合使用。
+
+匹配模式（类似于正则表达式）
+
+- 精确匹配 `=`，用于匹配属性值完全等于指定值的元素
+
+    ```py
+    ele = tab.ele('@id=row1')  # 获取id='row1'的元素
+    ```
+
+- 模糊匹配 `:`，用于匹配属性值包含指定值的元素
+
+    ```py
+    ele = tab.ele('@id:ow')  # 获取id属性包含'ow'的元素
+    ```
+
+- 开头匹配 `^`，用于匹配属性值以指定值开头的元素
+
+    ```py
+    ele = tab.ele('@id^row')  # 获取id属性以'row'开头的元素
+    ```
+
+- 结尾匹配 `$`，用于匹配属性值以指定值结尾的元素
+
+    ```py 
+    ele = tab.ele('@id$w1')  # 获取id属性以'w1'结尾的元素
+    ```
+</code></pre>
+</div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  
+</body>
+</html>

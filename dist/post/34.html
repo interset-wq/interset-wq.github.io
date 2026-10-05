@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content=":material-pen-plus: `本文创建于2025-5-31`
+
+???+ abstract
+    主要介绍一些AutoCAD常用命令
+
+## 一、概述
+
+### 1.1 修改坐标系图标样式
+
+为了便于请区分绘制图形的线条和坐标系十字标记(UCS图标, User Coordinate System), 可以更改坐标系十字标记的样式. 操作步骤:
+
+`视图(V)` - `显示` - `UCS图标` - `特性`
+
+![ucs.jpg](https://s2.loli.net/2025/05/31/58m4oaeTFwrjpJD.jpg)
+
+也可以隐藏 UCS图标. 操作步骤:
+
+`视图(V)` - `显示` - `UCS图标` - `开`
+
+### 1.2 打开工具栏
+
+- 如果之前没有打开过任何工具栏, 操作步骤: `工具(T)` - `工具栏` - `AutoCAD` ,勾选自己需要使用的工具栏, 推荐勾选 `修改`  `绘图` `标准`
+- 如果之前打开过工具栏, 可以将鼠标悬停在工具栏上, 单击鼠标右键
+
+### 1.3 新建dwg文件 `NEW`
+
+在命令行输入 `NEW` 可新建dwg文件, 样板文件推荐选择 `acad.dwt` 或 `acadiso.dwt` ,也可以不使用样板文件新建dwg文件
+
+### 1.4 打开文件 `OPEN`
+
+### 1.5 在命令行输入坐标
+
+- 绝对直角坐标, 相对于 USC坐标系 原点的坐标, `x,y`
+- 相对直角坐标, 相对于上一个点的坐标, `@x,y`, x和y表示相对于上一个点在X和Y方向坐标的增量
+- 绝对极坐标, 相对于 USC坐标系 原点的极坐标, `距离<角度`. 距离表示绘制点到原点的距离,角度表示角度表示从x轴逆时针旋转到连线的角度(如果是顺时针旋转,角度表示为负值)
+- 相对极坐标, 相对于上一点的极坐标, `@距离<角度`
+
+### 1.6 视图缩放 `ZOOM`
+
+视图缩放并不会改变图形的尺寸.
+
+- 方法一: `视图(V)` - `缩放`
+- 方法二: 命令行输入 `ZOOM` 命令
+- 方法三: 如果打开了标准工具栏, 可以在标准工具栏快捷使用 `实时缩放` `窗口缩放` `缩放上一个`
+
+???+ info '常用的缩放'
+    - 实时缩放: 开启之后,鼠标光标变为放大镜,通过鼠标滚轮可以缩放图形(或者按住左键并移动鼠标)
+    - 窗口缩放: 输入矩形两个对角顶点的左边,或框选出一个矩形区域,以这个区域为中心缩放图形
+    - 范围缩放: 尽可能大的显示图形
+    - 动态缩放
+    - 全部缩放
+    - 比例缩放
+
+### 1.7 视图平移 `PAN`
+
+- 方法一: 在命令行输入 `PAN`, 鼠标光标将变为小手
+- 方法二: 如果打开了标准工具栏, 可以在标准工具栏快捷使用 `实时平移`
+- 方法三: `视图(V)` - `平移`
+- 方法四: 按住鼠标中键,并拖动鼠标
+
+## 二、绘图环境
+
+### 2.1 设置图形界限 `LIMITS`
+
+- 方法一: 在命令行输入 `LIMITS`, 此时会依次提示输入左下角点和右上角点的坐标,左下角点一般不输入,直接使用默认值坐标原点
+- 方法二: `格式(O)` - `图形界限`
+
+???+ note
+    使用CAD绘图时,遵从 1:1 绘制的原则, 因此绘图时是否使用图形界限取决于个人需要.
+
+### 2.2 设置绘图单位 `UNITS`
+
+绘图之前,往往需要设置单位的精度和使用的单位.
+
+- 方法一: 在命令行输入 `UNITS`
+- 方法二: `格式(O)` - `单位`
+
+![units.jpg](https://s2.loli.net/2025/05/31/53Pa1WvjRiLKFVp.jpg)
+
+## 三、右下角状态栏
+
+### 3.1 栅格、捕捉模式和草图设置 `DSETTINGS`
+
+显示为格子纸样式,图形打印时,并不会打印栅格. 通过以下方法可以打开`草图设置`对话框
+
+- 方法一: 鼠标右键单击 右下角状态栏 `显示图形栅格` - `网格设置`. 如果需要启用栅格只需要鼠标左键单击 `显示图形栅格`
+- 方法二: 命令行输入 `DSETTINGS`
+
+![shange.webp](https://s2.loli.net/2025/05/31/N2ZqGArWBJShwpL.webp)
+
+???+ warning
+    右下角状态栏 `显示图形栅格` 右侧的 `捕捉模式` 后绘图时只能点击到栅格上的点, 可以通过 ++f9++ 快速开启 `捕捉模式`
+
+### 3.2 正交模式
+
+在右下角状态栏打开 `正交限制光标` 之后,移动光标时,水平轴或垂直轴哪个离光标最近,拖引线将沿着该轴移动.
+
+输入坐标或者指定对象捕捉时会忽视正交.
+
+按住 ++shift++ 可以临时打开或关闭正交.
+
+### 3.3 对象捕捉
+
+对象捕捉就是利用已经绘制了的图形的几何特征点来定位点的方法. 点击右下角状态栏的 `将光标捕捉到二维参照点` 或 通过 ++f3++ 开启对象捕捉.
+
+???+ warning
+    `捕捉模式` 和 `对象捕捉` 有很大区别,请不要混淆.
+
+    `捕捉模式` 捕捉的时栅格(格子纸)上的点
+
+    `对象捕捉` 或 `将光标捕捉到二维参照点` 捕捉的是已经绘制图形的几何特征点.
+
+    ![catch.webp](https://s2.loli.net/2025/05/31/fltmEeALukcFsDz.webp)
+
+### 3.4 极轴追踪
+
+点击右下角状态栏的 `按指定角度限制光标` 或 通过 ++f10++ 打开极轴追踪. 打开极轴追踪后,光标将按照指定角度移动. `极轴追踪` 和 `正交模式` 二者不能同时打开, 会自动关闭另一个.
+
+## 四、图层管理
+
+绘图时往往将不同的部分绘制在不同的图层中，通过这种方法可以方便的调整线条的宽度等,而且当图形比较复杂时,可以隐藏一些图层,便于观察.
+
+### 4.1 创建图层 `LAYER`
+
+通过以下方法可以打开 `图层特性管理器`
+
+- 方法一: `默认` - `图层特性`
+- 方法二: `格式(O)` - `图层`
+- 方法三: 命令行输入 `LAYER`
+
+![layer.webp](https://s2.loli.net/2025/05/31/wUKp3jFgc4BtCZe.webp)
+
+一般图形文件都要创建 轴线(在revit中也称为轴网) 、墙体 、门窗 、标注 等图层.
+
+轴线使用 `单点长划线`. `全局比例因子` 一般设置为 0.2~0.5 , 比例因子用于控制点划线之间的间距.
+
+![itscale.webp](https://s2.loli.net/2025/05/31/6falVxD8jA9JTeY.webp)
+
+也可以在命令行输入 `LTSCALE` 设置比例因子
+
+### 4.2 图层操作
+
+可以设置每个图层的线型和线宽, 以及设置不同图层的线条颜色,用于区分.
+
+一般情况下, `轴线` 图层设置为红色, `墙体` 图层设置为白色, `门窗` 图层设置为青色, `家具` 图层设置为蓝色, `标注` 图层设置为绿色.
+
+![layer2.webp](https://s2.loli.net/2025/05/31/jKP6kDoGOfZnlHt.webp)
+
+图层的状态/开关/冻结/锁定:
+
+- 状态: 当前图层的状态显示为 对钩
+- 开: 关闭图层后,该图层图形将不可见
+- 冻结
+- 锁定: 锁定后的图层可见,但是不可修改,可以对上面的线条使用对象捕捉来定位几何特征点.
+
+## 五、二维图形的绘制
+
+### 5.1 点 `POINT`
+
+绘制点时必须先设置点样式,否则点太小而不便于观察. 通过以下方法设置点样式:
+
+- 方法一: `格式(O)` - `点样式`
+- 方法二: 命令行输入 `DDPTYPE` 或 `PTYPE`
+
+![ptype.webp](https://s2.loli.net/2025/05/31/oMu6VZXNUsK7359.webp)
+
+在命令行输入 `POINT` 绘制点
+
+### 5.2 定数等分点 `DIV` `DIVIDE`
+
+### 5.3 定距等分点 `ME` `MEASURE`
+
+### 5.4 直线 `LINE`
+
+### 5.5 多线 `MLINE`
+
+#### 5.5.1 绘制多线 `MLIME`
+
+多线实际上是双线,绘制的线条都是成对的平行线,常用于绘制墙.
+
+正对(J) 以下三种情况的多线的起点都是坐标原点(0,0)
+
+=== '上(T)'
+    上(T), 即top,绘制多线时以顶线为基准.
+
+    ![top.webp](https://s2.loli.net/2025/06/01/Mtu6FwmZrA49HVY.webp)
+
+=== '无(Z)'
+    绘制多线时,以两条平行线的中线为基准.
+
+    ![z.webp](https://s2.loli.net/2025/06/01/8GgIkEp1CzbqZTU.webp)
+
+=== '下(B)'
+    下(B),即bottom,以底线为基准.
+
+    ![bottom.webp](https://s2.loli.net/2025/06/01/gXefnvCzDhZsy4j.webp)
+
+比例(S) 即scale,可以理解为多线两条平行线间的距离,默认为20
+
+样式(ST) 即style,多线的样式,默认为STANDARD,距离1. 多线两条线之间的距离实际上是样式距离与比例的乘积.
+
+#### 5.5.2 定义多线样式 `MLSTYLE`
+
+- 方法一: `格式(O)` - `多线样式`
+- 方法二: 命令行输入 `MLSTYLE`
+
+![new_mline.webp](https://s2.loli.net/2025/06/01/1uDIPtJgZXRKBHo.webp)
+
+![new_milne2.webp](https://s2.loli.net/2025/06/01/PD2SLiV5c1vZg6o.webp)
+
+???+ note
+    大多数情况下,使用双线就已经足够了,没有必要使用多线.
+
+### 5.6 多段线 `PLINE`
+
+通过 `宽度(W)` 分别设置起点宽度为0和端点宽度为90, 用于绘制箭头
+
+### 5.7 圆 `CIRCLE`
+
+### 5.8 圆弧 `ARC`
+
+### 5.9 圆环 `DONUT`
+
+绘制圆环之前要先通过 `FILL` 命令来设置是否填充圆环区域.
+
+![donut.webp](https://s2.loli.net/2025/06/01/mXYVgdE7sy5rlBp.webp)
+
+### 5.10 椭圆/椭圆弧 `ELLIPSE`
+
+### 5.11 矩形 `RECTANG` `REC`
+
+如果需要使用线宽(W), 矩形绘制前也需要使用 `FILL` 命令来设置是否填充.
+
+![rec.webp](https://s2.loli.net/2025/06/01/2VGDjlvsXcxmUCL.webp)
+
+### 5.12 正多边形 `POLYGON`
+
+### 5.13 图案填充/渐变色填充  `H` `BHATCH` `HATCH` `GRADIENT`
+
+- 方法一: `绘图(D)` - `图案填充`
+- 方法二: 命令行输入 `HATCH` 或 `BHATCH`, `GRADIENT`特指渐变色填充
+
+填充图案的编辑:
+
+- 方法一: `修改(M)` - `对象` - `图案填充`
+- 方法二: 命令行输入 `HATCHEDIT`
+
+## 六、信息查询
+
+通用方法: `工具(T)` - `查询`
+
+### 6.1 查询点的坐标 `ID`
+
+### 6.2 查询距离 `DIST` `MEASUREGEOM`
+
+### 6.3 查询面积和周长 `AREA`
+
+### 6.4 查询几何特征和对象特征 `LIST`
+
+### 6.5 查询文件状态 `STATUS`
+
+### 6.6 查询文件时间 `TIME`
+
+## 七、块
+
+将多个对象合成为一个整体,这个整体就是块.
+
+### 7.1 创建块 `BLOCK`
+
+- 方法一: `绘图(D)` - `块` - `创建`
+- 方法二: 命令行输入 `BLOCK`
+
+![block.webp](https://s2.loli.net/2025/06/01/FtY32Pq9nSZcB1g.webp)
+
+如果需要使用刚刚创建的块,只需要点击 `默认` - `块` - `插入`
+
+???+ note
+    使用这种方法创建的块,只能在这个dwg文件中使用.
+
+### 7.2 外部块 `WBLOCK`
+
+通过写块 `WBLOCK` 命令可以创建外部块.
+
+![wblock.webp](https://s2.loli.net/2025/06/01/3pC4OyserK9NQMm.webp)
+
+使用此功能创建的块会另存为一个dwg文件. 如果需要使用刚刚创建的块,只需要点击 `默认` - `块` - `插入` - `浏览` 选取这个dwg文件的路径. 任何图形都可以导入外部块.
+
+### 7.3 块属性
+
+块属性是块带有的一些文字属性.
+
+- 方法一: `绘图(D)` - `块` - `定义属性`
+- 方法二: 命令行输入 `ATTDEF`
+
+### 7.4 创建带属性的块
+
+以标高符号为例.
+
+第一步: 绘制标高符号
+
+第二步: 命令行输入 `ATTDEF` 创建块属性,并放置在想要放置的位置
+
+![def.webp](https://s2.loli.net/2025/06/01/FDfRywh1IK3AsZT.webp)
+
+![def2.webp](https://s2.loli.net/2025/06/01/OtgmqTIhzoNA37f.webp)
+
+第三步: 命令行输入 `BLOCK` 创建块
+
+![def3.webp](https://s2.loli.net/2025/06/01/5HlcChgBEj9MiAv.webp)
+
+![def4.webp](https://s2.loli.net/2025/06/01/D6M3cfZaqxKwTES.webp)
+
+第四步: 命令行输入 `INSERT` 插入块, 如果标高值输错了,可以双击这个图形修改
+
+![def5.webp](https://s2.loli.net/2025/06/01/3Df9Kk8ExYnT4Mv.webp)
+
+## 八、二维图形的修改
+
+### 8.1 对象选择方式
+
+- 单选: 鼠标左键点击选取
+- 窗口方式(W方式): 从左上到右下的框选, 全部被框选到才被选中
+- 交互方式(C方式): 从右下到左上的框选, 只要有一部分被框中就选中
+- 全选(ALL方式): ++ctrl+c++ 或 `编辑(E)` - `全部选择`
+- 窗口多边形(WP方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `WP` 可以使用窗口多边形方式选取, 全部被框选到才会被选中
+- 交叉多边形(CP方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `CP` 可以使用交叉多边形方式选取, 只要有一部分被框中就选中
+- 栏选(F方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `F` 可以使用栏选, 栏选通过多段线选择, 画出的多段线只要与对象相交就选中
+- 单选取消: 按住 ++shift++ , 鼠标左键单击
+- 快速选择: 命令行输入 `QSELECT` 根据对象的特性进行选择
+- 设置对象选择模式: 命令行输入 `OPTIONS`
+
+### 8.2 删除对象 `ERASE`
+
+- 方法一: 选中 ++delete++
+- 方法二: 命令行输入 `ERASE`
+
+### 8.3 复制对象 `COPY`
+
+### 8.4 镜像对象 `MIRROR`
+
+对文字使用镜像时, 镜像效果与 `MIRRTEXT` 有关. 在命令行输入 `MIRRTEXT` , 输入值为 0 时镜像无法对文字生效, 输入值为1时镜像才会对文字生效
+
+### 8.5 偏移对象 `OFFSET`
+
+可以通过 `删除(E)` 设置偏移对象时是否删除原对象
+
+### 8.6 阵列对象 `ARRAY`
+
+### 8.7 移动对象 `MOVE`
+
+### 8.8 旋转对象 `ROTATE`
+
+输入的数值单位默认是度, 值为正数时逆时针旋转, 为负数时顺时针旋转
+
+### 8.9 缩放对象 `SCALE`
+
+### 8.10 拉伸对象 `STRETCH`
+
+选择对象时必须使用交互方式(C方式)或交叉多边形方式(CP方式), 即只能从右下到左上选择. 如果从左上到右下选择, 则相当于 `MOVE`
+
+选择对象时, 请不要将要拉伸的对象全部选中, 只需选中一部分才可以进行拉伸. 全部选中相当于 `MOVE`
+
+### 8.11 拉长对象 `LENGTHEN`
+
+### 8.12 修剪对象 `TRIM`
+
+修剪时,使用栏选(F方式)和窗交(W方式), 可以快速修剪
+
+如果要修剪的对象和剪切边不相交, 按住 ++shift++ ,并在被修剪对象上单击, 可以将被修剪对象延伸到与剪切边相交.
+
+### 8.13 延伸对象 `EXTEND`
+
+如果按住 ++shift++ , 相当于修剪 `TRIM`
+
+### 8.14 打断对象 `BREAK`
+
+第二个点输入 `@` 时, 相当于第二个点和第一个点的位置相同, 即直接将直线一分为二
+
+### 8.15 倒角 `CHAMFER`
+
+如果没有设置 `距离(D)` 图形相邻的两条边之间不能使用倒角. 多段线和直线绘制成的图形倒角的效果并不相同.
+
+![chamfer.webp](https://s2.loli.net/2025/06/01/BfwuEp2FQhk81z4.webp)
+
+通过 `距离(D)` 设置: 两条不相交的直线, 如果倒角距离都为0, 那么倒角就相当于同时延长或缩短这两条线,使它们相交
+
+通过 `修剪(T)` 设置: 是否保留倒角前后多余的线条
+
+![chamfer2.webp](https://s2.loli.net/2025/06/01/O2xAbznZSH6DClq.webp)
+
+### 8.16 圆角 `FILLET`
+
+和倒角用法类似
+
+### 8.17 分解对象 `EXPLODE`
+
+将多段线,块等复杂对象分解为线等简单对象.
+
+### 8.18 对象特性管理器 `PROPERTIES`
+
+### 8.19 特性匹配 `MATCHPROP`
+
+类似于 Word 中的格式刷
+
+## 九、文字
+
+### 9.1 定义文字样式 `STYLE`
+
+- 方法一: `格式(O)` - `文字样式`
+- 方法二: 命令行输入 `STYLE`
+
+由于土木工程图纸文字要求使用长仿宋体, 因此在CAD中只能使用 `gbenor.shx` `gbeitc.shx` `gbcbig.shx`, 并且必须勾选 `使用大字体`
+
+![style.webp](https://s2.loli.net/2025/06/01/7PgTUJQdzjrFoOM.webp)
+
+### 9.2 单行文字 `DTEXT`
+
+### 9.3 多行文字 `MTEXT`
+
+### 9.4 输入特殊字符
+
+AutoCAD通过 `%%` 开头的控制码输入特殊符号.
+
+| 控制码 | 特殊符号 |
+| ------ | ------- |
+| %%O | 开启或关闭文字上划线 |
+| %%U | 开启或关闭文字下划线 |
+| %%D | 角度符号 $\degree$ |
+| %%P | 正负号 $\pm$ |
+| %%C | 直径符号 $\varPhi$ |
+
+![sp.webp](https://s2.loli.net/2025/06/01/7LKPYcAmDSBNyn9.webp)
+
+### 9.5 编辑文字 `DDEDIT`
+
+- 方法一: 命令行输入 `DDEDIT`
+- 方法二: 选中文字对象 - 单击鼠标右键 - `特性`
+- 方法三: `修改(M)` - `特性`
+- 方法四: 标准工具栏 - `特性`
+- 方法五: 命令行输入 `PROPERTIES` 或 `DDMODIFY`
+
+## 十、表格
+
+### 10.1 表格样式 `TABLESTYLE`
+
+- 方法一: 命令行输入 `TABLESTYLE`
+- 方法二: `格式(O)` - `表格样式`
+
+![tstyle.webp](https://s2.loli.net/2025/06/01/QDCjlOT8fBA5HtK.webp)
+
+![tstyle2.webp](https://s2.loli.net/2025/06/01/FAmZhpBPNuEceJb.webp)
+
+### 10.2 创建表格 `TABLE`
+
+- 方法一: 命令行输入 `TABLE`
+- 方法二: `绘图(D)` - `表格`
+
+![table.webp](https://s2.loli.net/2025/06/01/VuWBr9YfGtSADUR.webp)
+
+在表格中输入时,类似于Excel可以使用箭头键切换单元格,双击可以更改单元格中的内容
+
+使用鼠标右键可以进行合并单元格等操作.
+
+## 十一、尺寸标注
+
+### 11.1 概述
+
+尺寸标注规则:
+
+- 绘图时 1: 1 绘图, 因为尺寸标注要求标注实际的尺寸
+- 建筑平面图以 `mm` 为单位. 建筑平面图和建筑立面图以及剖面图的标高, 使用 `m` 为单位. 尺寸标注不需要写单位
+
+尺寸标注的组成:
+
+- 尺寸线
+- 尺寸界限
+- 尺寸起止符号
+- 尺寸文本
+
+### 11.2 尺寸标注样式 `D`
+
+- 方法一: `标注(N)` - `标注样式`
+- 方法二: `格式(O)`- `标注样式`
+- 方法三: 命令行输入 `DIMSTYLE` `D` `DST` `DDIM` `DIMSTY`
+
+![d.webp](https://s2.loli.net/2025/06/01/RJusoEb2rt8SO5m.webp)
+
+主要使用前五个选项卡进行设置,最后两个在土木工程中用不到.
+
+![d1.webp](https://s2.loli.net/2025/06/01/gLsdmVwQxqz2pWc.webp)
+
+![d2.webp](https://s2.loli.net/2025/06/01/zrW1aDEBv653McC.webp)
+
+![d3.webp](https://s2.loli.net/2025/06/01/1NB8WVdtRCzlqoi.webp)
+
+![d4.webp](https://s2.loli.net/2025/06/01/YpCEtGRK7czafiT.webp)
+
+![d5.webp](https://s2.loli.net/2025/06/01/naFAwRoOLXhN4W6.webp)
+
+### 11.3 替代尺寸标注样式
+
+替代尺寸标注样式是设置某一尺寸标注样式的临时替代
+
+![re.webp](https://s2.loli.net/2025/06/02/9VKLqE8m7HT5fMa.webp)
+
+### 11.4 创建尺寸标注 
+
+常用的尺寸标注有线性标注, 对齐标注, 基线标注, 连续标注, 快速标注
+
+#### 11.4.1 线性标注 `DIMLINEAR` `DIMLIN`
+
+主要用于水平或垂直方向的标注
+
+- 方法一: `标注(N)` - `线性标注`
+- 方法二: 命令行输入 `DIMLINEAR` `DIMLIN`
+
+![dimlin.webp](https://s2.loli.net/2025/06/02/EAbtHrB6cVMJNx2.webp)
+
+#### 11.4.2 对齐标注 `DIMALIGNED` `DIMALI`
+
+用于倾斜线条的标注
+
+- 方法一: `标注(N)` - `对齐`
+- 方法二: 命令行输入 `DIMALIGNED` `DIMALI`
+
+![dimali.webp](https://s2.loli.net/2025/06/02/XsNCRiLkF7q2p4Z.webp)
+
+#### 11.4.3 基线标注 `DIMBASELINE` `DIMBASE`
+
+以线性标注的一侧为基准进行标注. 使用基线标注之前,必须要有一个线性标注.
+
+- 方法一: `标注(N)` - `基线`
+- 方法二: 命令行输入 `DIMBASELINE` `DIMBASE`
+
+![dimbase.webp](https://s2.loli.net/2025/06/02/dUO3NAv2GnxlJty.webp)
+
+#### 11.4.4 连续标注 `DIMCONTINUE` `DIMCONT`
+
+类似于基线标注.
+
+- 方法一: `标注(N)` - `连续`
+- 方法二: 命令行输入 `DIMCONTINUE` `DIMCONT`
+
+![dimcont.webp](https://s2.loli.net/2025/06/02/qe6pkwhsjX4FEVP.webp)
+
+#### 11.4.5 快速标注 `QDIM`
+
+选中图形即可快速进行连续标注和基线标注, 非常好用.
+
+- 方法一: `标注(N)` - `快速标注`
+- 方法二: 命令行输入 `QDIM`
+
+### 11.5 编辑尺寸标注 `DIMEDIT`
+
+### 11.6 编辑尺寸标注文字 `DIMTEDIT`
+
+双击可直接修改尺寸标注文字的内容
+
+### 11.7 更新尺寸标注 `-DIMSTYLE`
+
+如果切换了尺寸标注样式,可以使用此方法批量替换样式.
+
+- 方法一: `标注(N)` - `更新`
+- 方法二: 命令行输入 `-DIMSTYLE`
+
+## 十二、输出图形为PDF
+
+{==AutoCAD绘图基本原则: 始终以1:1绘图, 绘图时的长度即为实际长度==}
+
+### 12.1 模型和布局 `TILEMODE`
+
+AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和布局.
+
+- 模型, 就是绘图时使用的选项卡
+- 布局, 就是绘图结束, 用来输出图形的选项卡
+
+可以在命令行输入 `TILEMODE` 切换模型和布局选项卡, 输入值为1时切换为模型, 输入值为0时切换为布局.
+
+### 12.2 创建布局 `LAYOUT` `LAYOUTWIZARD`
+
+`LAYOUT` `LAYOUTWIZARD`两个命令并不相同, `LAYOUT` 通过模版创建新布局, `LAYOUTWIZARD` 通过对话框创建新布局. 此处主要介绍 `LAYOUTWIZARD`.
+
+- 方法一: 命令行输入 `LAYOUTWIZARD`
+- 方法二: `插入(I)` - `布局` - `创建布局向导`
+
+第一步: 命令行输入 `LAYOUTWIZARD`, 打开布局向导
+
+![l1.webp](https://s2.loli.net/2025/06/02/cGe2Iagduq96yiz.webp)
+
+第二步: 选择打印机, 建议选MS打印机
+
+![l2.webp](https://s2.loli.net/2025/06/02/sT6GI7BvMePlfNc.webp)
+
+第三步: 设置图纸尺寸
+
+![l3.webp](https://s2.loli.net/2025/06/02/f2XgshLoPuzwJaN.webp)
+
+第四步: 选择图纸方向
+
+第五步: 是否使用AutoCAD内置标题栏
+
+第六步: 定义视口
+
+![l4.webp](https://s2.loli.net/2025/06/02/5viAzrFBZ9oPMwJ.webp)
+
+第七部: 拾取设置
+
+![l5.webp](https://s2.loli.net/2025/06/02/nAWVjJs1E9pNSL3.webp)
+
+第八步: 完成并关闭向导. 创建的布局如下图所示
+
+![l6.webp](https://s2.loli.net/2025/06/02/XhQMAxUnONBHCDJ.webp)
+
+### 12.3 设置布局参数 `PAGESETUP`
+
+如果不需要使用样式表, 请忽略此步骤.
+
+- 方法一: `文件(F)` - `页面设置管理器`
+- 方法二: 命令行输入 `PAGESETUP`
+
+![set1.webp](https://s2.loli.net/2025/06/02/3bHlDeLcCyOQhg5.webp)
+
+![set2.webp](https://s2.loli.net/2025/06/02/Y6CgB1J85FH739K.webp)
+
+
+### 12.4 将布局输出为PDF `PLOT`
+
+输出之前先使用 `文件(I)` - `打印预览` 查看效果
+
+再通过 `文件(I)` - `打印` 或在命令行输入 `PLOT` 将图形输出为PDF
+
+## 十三、脚本 `SCRIPT`
+
+通过 `.scr` 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.。">
+<meta property="og:title" content="AutoCAD">
+<meta property="og:description" content=":material-pen-plus: `本文创建于2025-5-31`
+
+???+ abstract
+    主要介绍一些AutoCAD常用命令
+
+## 一、概述
+
+### 1.1 修改坐标系图标样式
+
+为了便于请区分绘制图形的线条和坐标系十字标记(UCS图标, User Coordinate System), 可以更改坐标系十字标记的样式. 操作步骤:
+
+`视图(V)` - `显示` - `UCS图标` - `特性`
+
+![ucs.jpg](https://s2.loli.net/2025/05/31/58m4oaeTFwrjpJD.jpg)
+
+也可以隐藏 UCS图标. 操作步骤:
+
+`视图(V)` - `显示` - `UCS图标` - `开`
+
+### 1.2 打开工具栏
+
+- 如果之前没有打开过任何工具栏, 操作步骤: `工具(T)` - `工具栏` - `AutoCAD` ,勾选自己需要使用的工具栏, 推荐勾选 `修改`  `绘图` `标准`
+- 如果之前打开过工具栏, 可以将鼠标悬停在工具栏上, 单击鼠标右键
+
+### 1.3 新建dwg文件 `NEW`
+
+在命令行输入 `NEW` 可新建dwg文件, 样板文件推荐选择 `acad.dwt` 或 `acadiso.dwt` ,也可以不使用样板文件新建dwg文件
+
+### 1.4 打开文件 `OPEN`
+
+### 1.5 在命令行输入坐标
+
+- 绝对直角坐标, 相对于 USC坐标系 原点的坐标, `x,y`
+- 相对直角坐标, 相对于上一个点的坐标, `@x,y`, x和y表示相对于上一个点在X和Y方向坐标的增量
+- 绝对极坐标, 相对于 USC坐标系 原点的极坐标, `距离<角度`. 距离表示绘制点到原点的距离,角度表示角度表示从x轴逆时针旋转到连线的角度(如果是顺时针旋转,角度表示为负值)
+- 相对极坐标, 相对于上一点的极坐标, `@距离<角度`
+
+### 1.6 视图缩放 `ZOOM`
+
+视图缩放并不会改变图形的尺寸.
+
+- 方法一: `视图(V)` - `缩放`
+- 方法二: 命令行输入 `ZOOM` 命令
+- 方法三: 如果打开了标准工具栏, 可以在标准工具栏快捷使用 `实时缩放` `窗口缩放` `缩放上一个`
+
+???+ info '常用的缩放'
+    - 实时缩放: 开启之后,鼠标光标变为放大镜,通过鼠标滚轮可以缩放图形(或者按住左键并移动鼠标)
+    - 窗口缩放: 输入矩形两个对角顶点的左边,或框选出一个矩形区域,以这个区域为中心缩放图形
+    - 范围缩放: 尽可能大的显示图形
+    - 动态缩放
+    - 全部缩放
+    - 比例缩放
+
+### 1.7 视图平移 `PAN`
+
+- 方法一: 在命令行输入 `PAN`, 鼠标光标将变为小手
+- 方法二: 如果打开了标准工具栏, 可以在标准工具栏快捷使用 `实时平移`
+- 方法三: `视图(V)` - `平移`
+- 方法四: 按住鼠标中键,并拖动鼠标
+
+## 二、绘图环境
+
+### 2.1 设置图形界限 `LIMITS`
+
+- 方法一: 在命令行输入 `LIMITS`, 此时会依次提示输入左下角点和右上角点的坐标,左下角点一般不输入,直接使用默认值坐标原点
+- 方法二: `格式(O)` - `图形界限`
+
+???+ note
+    使用CAD绘图时,遵从 1:1 绘制的原则, 因此绘图时是否使用图形界限取决于个人需要.
+
+### 2.2 设置绘图单位 `UNITS`
+
+绘图之前,往往需要设置单位的精度和使用的单位.
+
+- 方法一: 在命令行输入 `UNITS`
+- 方法二: `格式(O)` - `单位`
+
+![units.jpg](https://s2.loli.net/2025/05/31/53Pa1WvjRiLKFVp.jpg)
+
+## 三、右下角状态栏
+
+### 3.1 栅格、捕捉模式和草图设置 `DSETTINGS`
+
+显示为格子纸样式,图形打印时,并不会打印栅格. 通过以下方法可以打开`草图设置`对话框
+
+- 方法一: 鼠标右键单击 右下角状态栏 `显示图形栅格` - `网格设置`. 如果需要启用栅格只需要鼠标左键单击 `显示图形栅格`
+- 方法二: 命令行输入 `DSETTINGS`
+
+![shange.webp](https://s2.loli.net/2025/05/31/N2ZqGArWBJShwpL.webp)
+
+???+ warning
+    右下角状态栏 `显示图形栅格` 右侧的 `捕捉模式` 后绘图时只能点击到栅格上的点, 可以通过 ++f9++ 快速开启 `捕捉模式`
+
+### 3.2 正交模式
+
+在右下角状态栏打开 `正交限制光标` 之后,移动光标时,水平轴或垂直轴哪个离光标最近,拖引线将沿着该轴移动.
+
+输入坐标或者指定对象捕捉时会忽视正交.
+
+按住 ++shift++ 可以临时打开或关闭正交.
+
+### 3.3 对象捕捉
+
+对象捕捉就是利用已经绘制了的图形的几何特征点来定位点的方法. 点击右下角状态栏的 `将光标捕捉到二维参照点` 或 通过 ++f3++ 开启对象捕捉.
+
+???+ warning
+    `捕捉模式` 和 `对象捕捉` 有很大区别,请不要混淆.
+
+    `捕捉模式` 捕捉的时栅格(格子纸)上的点
+
+    `对象捕捉` 或 `将光标捕捉到二维参照点` 捕捉的是已经绘制图形的几何特征点.
+
+    ![catch.webp](https://s2.loli.net/2025/05/31/fltmEeALukcFsDz.webp)
+
+### 3.4 极轴追踪
+
+点击右下角状态栏的 `按指定角度限制光标` 或 通过 ++f10++ 打开极轴追踪. 打开极轴追踪后,光标将按照指定角度移动. `极轴追踪` 和 `正交模式` 二者不能同时打开, 会自动关闭另一个.
+
+## 四、图层管理
+
+绘图时往往将不同的部分绘制在不同的图层中，通过这种方法可以方便的调整线条的宽度等,而且当图形比较复杂时,可以隐藏一些图层,便于观察.
+
+### 4.1 创建图层 `LAYER`
+
+通过以下方法可以打开 `图层特性管理器`
+
+- 方法一: `默认` - `图层特性`
+- 方法二: `格式(O)` - `图层`
+- 方法三: 命令行输入 `LAYER`
+
+![layer.webp](https://s2.loli.net/2025/05/31/wUKp3jFgc4BtCZe.webp)
+
+一般图形文件都要创建 轴线(在revit中也称为轴网) 、墙体 、门窗 、标注 等图层.
+
+轴线使用 `单点长划线`. `全局比例因子` 一般设置为 0.2~0.5 , 比例因子用于控制点划线之间的间距.
+
+![itscale.webp](https://s2.loli.net/2025/05/31/6falVxD8jA9JTeY.webp)
+
+也可以在命令行输入 `LTSCALE` 设置比例因子
+
+### 4.2 图层操作
+
+可以设置每个图层的线型和线宽, 以及设置不同图层的线条颜色,用于区分.
+
+一般情况下, `轴线` 图层设置为红色, `墙体` 图层设置为白色, `门窗` 图层设置为青色, `家具` 图层设置为蓝色, `标注` 图层设置为绿色.
+
+![layer2.webp](https://s2.loli.net/2025/05/31/jKP6kDoGOfZnlHt.webp)
+
+图层的状态/开关/冻结/锁定:
+
+- 状态: 当前图层的状态显示为 对钩
+- 开: 关闭图层后,该图层图形将不可见
+- 冻结
+- 锁定: 锁定后的图层可见,但是不可修改,可以对上面的线条使用对象捕捉来定位几何特征点.
+
+## 五、二维图形的绘制
+
+### 5.1 点 `POINT`
+
+绘制点时必须先设置点样式,否则点太小而不便于观察. 通过以下方法设置点样式:
+
+- 方法一: `格式(O)` - `点样式`
+- 方法二: 命令行输入 `DDPTYPE` 或 `PTYPE`
+
+![ptype.webp](https://s2.loli.net/2025/05/31/oMu6VZXNUsK7359.webp)
+
+在命令行输入 `POINT` 绘制点
+
+### 5.2 定数等分点 `DIV` `DIVIDE`
+
+### 5.3 定距等分点 `ME` `MEASURE`
+
+### 5.4 直线 `LINE`
+
+### 5.5 多线 `MLINE`
+
+#### 5.5.1 绘制多线 `MLIME`
+
+多线实际上是双线,绘制的线条都是成对的平行线,常用于绘制墙.
+
+正对(J) 以下三种情况的多线的起点都是坐标原点(0,0)
+
+=== '上(T)'
+    上(T), 即top,绘制多线时以顶线为基准.
+
+    ![top.webp](https://s2.loli.net/2025/06/01/Mtu6FwmZrA49HVY.webp)
+
+=== '无(Z)'
+    绘制多线时,以两条平行线的中线为基准.
+
+    ![z.webp](https://s2.loli.net/2025/06/01/8GgIkEp1CzbqZTU.webp)
+
+=== '下(B)'
+    下(B),即bottom,以底线为基准.
+
+    ![bottom.webp](https://s2.loli.net/2025/06/01/gXefnvCzDhZsy4j.webp)
+
+比例(S) 即scale,可以理解为多线两条平行线间的距离,默认为20
+
+样式(ST) 即style,多线的样式,默认为STANDARD,距离1. 多线两条线之间的距离实际上是样式距离与比例的乘积.
+
+#### 5.5.2 定义多线样式 `MLSTYLE`
+
+- 方法一: `格式(O)` - `多线样式`
+- 方法二: 命令行输入 `MLSTYLE`
+
+![new_mline.webp](https://s2.loli.net/2025/06/01/1uDIPtJgZXRKBHo.webp)
+
+![new_milne2.webp](https://s2.loli.net/2025/06/01/PD2SLiV5c1vZg6o.webp)
+
+???+ note
+    大多数情况下,使用双线就已经足够了,没有必要使用多线.
+
+### 5.6 多段线 `PLINE`
+
+通过 `宽度(W)` 分别设置起点宽度为0和端点宽度为90, 用于绘制箭头
+
+### 5.7 圆 `CIRCLE`
+
+### 5.8 圆弧 `ARC`
+
+### 5.9 圆环 `DONUT`
+
+绘制圆环之前要先通过 `FILL` 命令来设置是否填充圆环区域.
+
+![donut.webp](https://s2.loli.net/2025/06/01/mXYVgdE7sy5rlBp.webp)
+
+### 5.10 椭圆/椭圆弧 `ELLIPSE`
+
+### 5.11 矩形 `RECTANG` `REC`
+
+如果需要使用线宽(W), 矩形绘制前也需要使用 `FILL` 命令来设置是否填充.
+
+![rec.webp](https://s2.loli.net/2025/06/01/2VGDjlvsXcxmUCL.webp)
+
+### 5.12 正多边形 `POLYGON`
+
+### 5.13 图案填充/渐变色填充  `H` `BHATCH` `HATCH` `GRADIENT`
+
+- 方法一: `绘图(D)` - `图案填充`
+- 方法二: 命令行输入 `HATCH` 或 `BHATCH`, `GRADIENT`特指渐变色填充
+
+填充图案的编辑:
+
+- 方法一: `修改(M)` - `对象` - `图案填充`
+- 方法二: 命令行输入 `HATCHEDIT`
+
+## 六、信息查询
+
+通用方法: `工具(T)` - `查询`
+
+### 6.1 查询点的坐标 `ID`
+
+### 6.2 查询距离 `DIST` `MEASUREGEOM`
+
+### 6.3 查询面积和周长 `AREA`
+
+### 6.4 查询几何特征和对象特征 `LIST`
+
+### 6.5 查询文件状态 `STATUS`
+
+### 6.6 查询文件时间 `TIME`
+
+## 七、块
+
+将多个对象合成为一个整体,这个整体就是块.
+
+### 7.1 创建块 `BLOCK`
+
+- 方法一: `绘图(D)` - `块` - `创建`
+- 方法二: 命令行输入 `BLOCK`
+
+![block.webp](https://s2.loli.net/2025/06/01/FtY32Pq9nSZcB1g.webp)
+
+如果需要使用刚刚创建的块,只需要点击 `默认` - `块` - `插入`
+
+???+ note
+    使用这种方法创建的块,只能在这个dwg文件中使用.
+
+### 7.2 外部块 `WBLOCK`
+
+通过写块 `WBLOCK` 命令可以创建外部块.
+
+![wblock.webp](https://s2.loli.net/2025/06/01/3pC4OyserK9NQMm.webp)
+
+使用此功能创建的块会另存为一个dwg文件. 如果需要使用刚刚创建的块,只需要点击 `默认` - `块` - `插入` - `浏览` 选取这个dwg文件的路径. 任何图形都可以导入外部块.
+
+### 7.3 块属性
+
+块属性是块带有的一些文字属性.
+
+- 方法一: `绘图(D)` - `块` - `定义属性`
+- 方法二: 命令行输入 `ATTDEF`
+
+### 7.4 创建带属性的块
+
+以标高符号为例.
+
+第一步: 绘制标高符号
+
+第二步: 命令行输入 `ATTDEF` 创建块属性,并放置在想要放置的位置
+
+![def.webp](https://s2.loli.net/2025/06/01/FDfRywh1IK3AsZT.webp)
+
+![def2.webp](https://s2.loli.net/2025/06/01/OtgmqTIhzoNA37f.webp)
+
+第三步: 命令行输入 `BLOCK` 创建块
+
+![def3.webp](https://s2.loli.net/2025/06/01/5HlcChgBEj9MiAv.webp)
+
+![def4.webp](https://s2.loli.net/2025/06/01/D6M3cfZaqxKwTES.webp)
+
+第四步: 命令行输入 `INSERT` 插入块, 如果标高值输错了,可以双击这个图形修改
+
+![def5.webp](https://s2.loli.net/2025/06/01/3Df9Kk8ExYnT4Mv.webp)
+
+## 八、二维图形的修改
+
+### 8.1 对象选择方式
+
+- 单选: 鼠标左键点击选取
+- 窗口方式(W方式): 从左上到右下的框选, 全部被框选到才被选中
+- 交互方式(C方式): 从右下到左上的框选, 只要有一部分被框中就选中
+- 全选(ALL方式): ++ctrl+c++ 或 `编辑(E)` - `全部选择`
+- 窗口多边形(WP方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `WP` 可以使用窗口多边形方式选取, 全部被框选到才会被选中
+- 交叉多边形(CP方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `CP` 可以使用交叉多边形方式选取, 只要有一部分被框中就选中
+- 栏选(F方式): 只对一部分命令有效, 例如: 命令行输入 `MOVE` 开启移动命令, 此时输入 `F` 可以使用栏选, 栏选通过多段线选择, 画出的多段线只要与对象相交就选中
+- 单选取消: 按住 ++shift++ , 鼠标左键单击
+- 快速选择: 命令行输入 `QSELECT` 根据对象的特性进行选择
+- 设置对象选择模式: 命令行输入 `OPTIONS`
+
+### 8.2 删除对象 `ERASE`
+
+- 方法一: 选中 ++delete++
+- 方法二: 命令行输入 `ERASE`
+
+### 8.3 复制对象 `COPY`
+
+### 8.4 镜像对象 `MIRROR`
+
+对文字使用镜像时, 镜像效果与 `MIRRTEXT` 有关. 在命令行输入 `MIRRTEXT` , 输入值为 0 时镜像无法对文字生效, 输入值为1时镜像才会对文字生效
+
+### 8.5 偏移对象 `OFFSET`
+
+可以通过 `删除(E)` 设置偏移对象时是否删除原对象
+
+### 8.6 阵列对象 `ARRAY`
+
+### 8.7 移动对象 `MOVE`
+
+### 8.8 旋转对象 `ROTATE`
+
+输入的数值单位默认是度, 值为正数时逆时针旋转, 为负数时顺时针旋转
+
+### 8.9 缩放对象 `SCALE`
+
+### 8.10 拉伸对象 `STRETCH`
+
+选择对象时必须使用交互方式(C方式)或交叉多边形方式(CP方式), 即只能从右下到左上选择. 如果从左上到右下选择, 则相当于 `MOVE`
+
+选择对象时, 请不要将要拉伸的对象全部选中, 只需选中一部分才可以进行拉伸. 全部选中相当于 `MOVE`
+
+### 8.11 拉长对象 `LENGTHEN`
+
+### 8.12 修剪对象 `TRIM`
+
+修剪时,使用栏选(F方式)和窗交(W方式), 可以快速修剪
+
+如果要修剪的对象和剪切边不相交, 按住 ++shift++ ,并在被修剪对象上单击, 可以将被修剪对象延伸到与剪切边相交.
+
+### 8.13 延伸对象 `EXTEND`
+
+如果按住 ++shift++ , 相当于修剪 `TRIM`
+
+### 8.14 打断对象 `BREAK`
+
+第二个点输入 `@` 时, 相当于第二个点和第一个点的位置相同, 即直接将直线一分为二
+
+### 8.15 倒角 `CHAMFER`
+
+如果没有设置 `距离(D)` 图形相邻的两条边之间不能使用倒角. 多段线和直线绘制成的图形倒角的效果并不相同.
+
+![chamfer.webp](https://s2.loli.net/2025/06/01/BfwuEp2FQhk81z4.webp)
+
+通过 `距离(D)` 设置: 两条不相交的直线, 如果倒角距离都为0, 那么倒角就相当于同时延长或缩短这两条线,使它们相交
+
+通过 `修剪(T)` 设置: 是否保留倒角前后多余的线条
+
+![chamfer2.webp](https://s2.loli.net/2025/06/01/O2xAbznZSH6DClq.webp)
+
+### 8.16 圆角 `FILLET`
+
+和倒角用法类似
+
+### 8.17 分解对象 `EXPLODE`
+
+将多段线,块等复杂对象分解为线等简单对象.
+
+### 8.18 对象特性管理器 `PROPERTIES`
+
+### 8.19 特性匹配 `MATCHPROP`
+
+类似于 Word 中的格式刷
+
+## 九、文字
+
+### 9.1 定义文字样式 `STYLE`
+
+- 方法一: `格式(O)` - `文字样式`
+- 方法二: 命令行输入 `STYLE`
+
+由于土木工程图纸文字要求使用长仿宋体, 因此在CAD中只能使用 `gbenor.shx` `gbeitc.shx` `gbcbig.shx`, 并且必须勾选 `使用大字体`
+
+![style.webp](https://s2.loli.net/2025/06/01/7PgTUJQdzjrFoOM.webp)
+
+### 9.2 单行文字 `DTEXT`
+
+### 9.3 多行文字 `MTEXT`
+
+### 9.4 输入特殊字符
+
+AutoCAD通过 `%%` 开头的控制码输入特殊符号.
+
+| 控制码 | 特殊符号 |
+| ------ | ------- |
+| %%O | 开启或关闭文字上划线 |
+| %%U | 开启或关闭文字下划线 |
+| %%D | 角度符号 $\degree$ |
+| %%P | 正负号 $\pm$ |
+| %%C | 直径符号 $\varPhi$ |
+
+![sp.webp](https://s2.loli.net/2025/06/01/7LKPYcAmDSBNyn9.webp)
+
+### 9.5 编辑文字 `DDEDIT`
+
+- 方法一: 命令行输入 `DDEDIT`
+- 方法二: 选中文字对象 - 单击鼠标右键 - `特性`
+- 方法三: `修改(M)` - `特性`
+- 方法四: 标准工具栏 - `特性`
+- 方法五: 命令行输入 `PROPERTIES` 或 `DDMODIFY`
+
+## 十、表格
+
+### 10.1 表格样式 `TABLESTYLE`
+
+- 方法一: 命令行输入 `TABLESTYLE`
+- 方法二: `格式(O)` - `表格样式`
+
+![tstyle.webp](https://s2.loli.net/2025/06/01/QDCjlOT8fBA5HtK.webp)
+
+![tstyle2.webp](https://s2.loli.net/2025/06/01/FAmZhpBPNuEceJb.webp)
+
+### 10.2 创建表格 `TABLE`
+
+- 方法一: 命令行输入 `TABLE`
+- 方法二: `绘图(D)` - `表格`
+
+![table.webp](https://s2.loli.net/2025/06/01/VuWBr9YfGtSADUR.webp)
+
+在表格中输入时,类似于Excel可以使用箭头键切换单元格,双击可以更改单元格中的内容
+
+使用鼠标右键可以进行合并单元格等操作.
+
+## 十一、尺寸标注
+
+### 11.1 概述
+
+尺寸标注规则:
+
+- 绘图时 1: 1 绘图, 因为尺寸标注要求标注实际的尺寸
+- 建筑平面图以 `mm` 为单位. 建筑平面图和建筑立面图以及剖面图的标高, 使用 `m` 为单位. 尺寸标注不需要写单位
+
+尺寸标注的组成:
+
+- 尺寸线
+- 尺寸界限
+- 尺寸起止符号
+- 尺寸文本
+
+### 11.2 尺寸标注样式 `D`
+
+- 方法一: `标注(N)` - `标注样式`
+- 方法二: `格式(O)`- `标注样式`
+- 方法三: 命令行输入 `DIMSTYLE` `D` `DST` `DDIM` `DIMSTY`
+
+![d.webp](https://s2.loli.net/2025/06/01/RJusoEb2rt8SO5m.webp)
+
+主要使用前五个选项卡进行设置,最后两个在土木工程中用不到.
+
+![d1.webp](https://s2.loli.net/2025/06/01/gLsdmVwQxqz2pWc.webp)
+
+![d2.webp](https://s2.loli.net/2025/06/01/zrW1aDEBv653McC.webp)
+
+![d3.webp](https://s2.loli.net/2025/06/01/1NB8WVdtRCzlqoi.webp)
+
+![d4.webp](https://s2.loli.net/2025/06/01/YpCEtGRK7czafiT.webp)
+
+![d5.webp](https://s2.loli.net/2025/06/01/naFAwRoOLXhN4W6.webp)
+
+### 11.3 替代尺寸标注样式
+
+替代尺寸标注样式是设置某一尺寸标注样式的临时替代
+
+![re.webp](https://s2.loli.net/2025/06/02/9VKLqE8m7HT5fMa.webp)
+
+### 11.4 创建尺寸标注 
+
+常用的尺寸标注有线性标注, 对齐标注, 基线标注, 连续标注, 快速标注
+
+#### 11.4.1 线性标注 `DIMLINEAR` `DIMLIN`
+
+主要用于水平或垂直方向的标注
+
+- 方法一: `标注(N)` - `线性标注`
+- 方法二: 命令行输入 `DIMLINEAR` `DIMLIN`
+
+![dimlin.webp](https://s2.loli.net/2025/06/02/EAbtHrB6cVMJNx2.webp)
+
+#### 11.4.2 对齐标注 `DIMALIGNED` `DIMALI`
+
+用于倾斜线条的标注
+
+- 方法一: `标注(N)` - `对齐`
+- 方法二: 命令行输入 `DIMALIGNED` `DIMALI`
+
+![dimali.webp](https://s2.loli.net/2025/06/02/XsNCRiLkF7q2p4Z.webp)
+
+#### 11.4.3 基线标注 `DIMBASELINE` `DIMBASE`
+
+以线性标注的一侧为基准进行标注. 使用基线标注之前,必须要有一个线性标注.
+
+- 方法一: `标注(N)` - `基线`
+- 方法二: 命令行输入 `DIMBASELINE` `DIMBASE`
+
+![dimbase.webp](https://s2.loli.net/2025/06/02/dUO3NAv2GnxlJty.webp)
+
+#### 11.4.4 连续标注 `DIMCONTINUE` `DIMCONT`
+
+类似于基线标注.
+
+- 方法一: `标注(N)` - `连续`
+- 方法二: 命令行输入 `DIMCONTINUE` `DIMCONT`
+
+![dimcont.webp](https://s2.loli.net/2025/06/02/qe6pkwhsjX4FEVP.webp)
+
+#### 11.4.5 快速标注 `QDIM`
+
+选中图形即可快速进行连续标注和基线标注, 非常好用.
+
+- 方法一: `标注(N)` - `快速标注`
+- 方法二: 命令行输入 `QDIM`
+
+### 11.5 编辑尺寸标注 `DIMEDIT`
+
+### 11.6 编辑尺寸标注文字 `DIMTEDIT`
+
+双击可直接修改尺寸标注文字的内容
+
+### 11.7 更新尺寸标注 `-DIMSTYLE`
+
+如果切换了尺寸标注样式,可以使用此方法批量替换样式.
+
+- 方法一: `标注(N)` - `更新`
+- 方法二: 命令行输入 `-DIMSTYLE`
+
+## 十二、输出图形为PDF
+
+{==AutoCAD绘图基本原则: 始终以1:1绘图, 绘图时的长度即为实际长度==}
+
+### 12.1 模型和布局 `TILEMODE`
+
+AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和布局.
+
+- 模型, 就是绘图时使用的选项卡
+- 布局, 就是绘图结束, 用来输出图形的选项卡
+
+可以在命令行输入 `TILEMODE` 切换模型和布局选项卡, 输入值为1时切换为模型, 输入值为0时切换为布局.
+
+### 12.2 创建布局 `LAYOUT` `LAYOUTWIZARD`
+
+`LAYOUT` `LAYOUTWIZARD`两个命令并不相同, `LAYOUT` 通过模版创建新布局, `LAYOUTWIZARD` 通过对话框创建新布局. 此处主要介绍 `LAYOUTWIZARD`.
+
+- 方法一: 命令行输入 `LAYOUTWIZARD`
+- 方法二: `插入(I)` - `布局` - `创建布局向导`
+
+第一步: 命令行输入 `LAYOUTWIZARD`, 打开布局向导
+
+![l1.webp](https://s2.loli.net/2025/06/02/cGe2Iagduq96yiz.webp)
+
+第二步: 选择打印机, 建议选MS打印机
+
+![l2.webp](https://s2.loli.net/2025/06/02/sT6GI7BvMePlfNc.webp)
+
+第三步: 设置图纸尺寸
+
+![l3.webp](https://s2.loli.net/2025/06/02/f2XgshLoPuzwJaN.webp)
+
+第四步: 选择图纸方向
+
+第五步: 是否使用AutoCAD内置标题栏
+
+第六步: 定义视口
+
+![l4.webp](https://s2.loli.net/2025/06/02/5viAzrFBZ9oPMwJ.webp)
+
+第七部: 拾取设置
+
+![l5.webp](https://s2.loli.net/2025/06/02/nAWVjJs1E9pNSL3.webp)
+
+第八步: 完成并关闭向导. 创建的布局如下图所示
+
+![l6.webp](https://s2.loli.net/2025/06/02/XhQMAxUnONBHCDJ.webp)
+
+### 12.3 设置布局参数 `PAGESETUP`
+
+如果不需要使用样式表, 请忽略此步骤.
+
+- 方法一: `文件(F)` - `页面设置管理器`
+- 方法二: 命令行输入 `PAGESETUP`
+
+![set1.webp](https://s2.loli.net/2025/06/02/3bHlDeLcCyOQhg5.webp)
+
+![set2.webp](https://s2.loli.net/2025/06/02/Y6CgB1J85FH739K.webp)
+
+
+### 12.4 将布局输出为PDF `PLOT`
+
+输出之前先使用 `文件(I)` - `打印预览` 查看效果
+
+再通过 `文件(I)` - `打印` 或在命令行输入 `PLOT` 将图形输出为PDF
+
+## 十三、脚本 `SCRIPT`
+
+通过 `.scr` 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/34.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>AutoCAD</title>
+  
+</head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">AutoCAD</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
+      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#cccccc;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Other">Other</a>
+      </span>
+    </div>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-5-31</code></p>
+<p>???+ abstract<br>
+主要介绍一些AutoCAD常用命令</p>
+<h2>一、概述</h2>
+<h3>1.1 修改坐标系图标样式</h3>
+<p>为了便于请区分绘制图形的线条和坐标系十字标记(UCS图标, User Coordinate System), 可以更改坐标系十字标记的样式. 操作步骤:</p>
+<p><code class="notranslate">视图(V)</code> - <code class="notranslate">显示</code> - <code class="notranslate">UCS图标</code> - <code class="notranslate">特性</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/fb01a51ffecc334968c19d69a335bcbf1ec58d890878f9496f9b394783d1b375/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f35386d346f6165544677726a704a442e6a7067"><img src="https://camo.githubusercontent.com/fb01a51ffecc334968c19d69a335bcbf1ec58d890878f9496f9b394783d1b375/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f35386d346f6165544677726a704a442e6a7067" alt="ucs.jpg" data-canonical-src="https://s2.loli.net/2025/05/31/58m4oaeTFwrjpJD.jpg" style="max-width: 100%;"></a></p>
+<p>也可以隐藏 UCS图标. 操作步骤:</p>
+<p><code class="notranslate">视图(V)</code> - <code class="notranslate">显示</code> - <code class="notranslate">UCS图标</code> - <code class="notranslate">开</code></p>
+<h3>1.2 打开工具栏</h3>
+<ul>
+<li>如果之前没有打开过任何工具栏, 操作步骤: <code class="notranslate">工具(T)</code> - <code class="notranslate">工具栏</code> - <code class="notranslate">AutoCAD</code> ,勾选自己需要使用的工具栏, 推荐勾选 <code class="notranslate">修改</code>  <code class="notranslate">绘图</code> <code class="notranslate">标准</code></li>
+<li>如果之前打开过工具栏, 可以将鼠标悬停在工具栏上, 单击鼠标右键</li>
+</ul>
+<h3>1.3 新建dwg文件 <code class="notranslate">NEW</code></h3>
+<p>在命令行输入 <code class="notranslate">NEW</code> 可新建dwg文件, 样板文件推荐选择 <code class="notranslate">acad.dwt</code> 或 <code class="notranslate">acadiso.dwt</code> ,也可以不使用样板文件新建dwg文件</p>
+<h3>1.4 打开文件 <code class="notranslate">OPEN</code></h3>
+<h3>1.5 在命令行输入坐标</h3>
+<ul>
+<li>绝对直角坐标, 相对于 USC坐标系 原点的坐标, <code class="notranslate">x,y</code></li>
+<li>相对直角坐标, 相对于上一个点的坐标, <code class="notranslate">@x,y</code>, x和y表示相对于上一个点在X和Y方向坐标的增量</li>
+<li>绝对极坐标, 相对于 USC坐标系 原点的极坐标, <code class="notranslate">距离&lt;角度</code>. 距离表示绘制点到原点的距离,角度表示角度表示从x轴逆时针旋转到连线的角度(如果是顺时针旋转,角度表示为负值)</li>
+<li>相对极坐标, 相对于上一点的极坐标, <code class="notranslate">@距离&lt;角度</code></li>
+</ul>
+<h3>1.6 视图缩放 <code class="notranslate">ZOOM</code></h3>
+<p>视图缩放并不会改变图形的尺寸.</p>
+<ul>
+<li>方法一: <code class="notranslate">视图(V)</code> - <code class="notranslate">缩放</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">ZOOM</code> 命令</li>
+<li>方法三: 如果打开了标准工具栏, 可以在标准工具栏快捷使用 <code class="notranslate">实时缩放</code> <code class="notranslate">窗口缩放</code> <code class="notranslate">缩放上一个</code></li>
+</ul>
+<p>???+ info "常用的缩放"<br>
+- 实时缩放: 开启之后,鼠标光标变为放大镜,通过鼠标滚轮可以缩放图形(或者按住左键并移动鼠标)<br>
+- 窗口缩放: 输入矩形两个对角顶点的左边,或框选出一个矩形区域,以这个区域为中心缩放图形<br>
+- 范围缩放: 尽可能大的显示图形<br>
+- 动态缩放<br>
+- 全部缩放<br>
+- 比例缩放</p>
+<h3>1.7 视图平移 <code class="notranslate">PAN</code></h3>
+<ul>
+<li>方法一: 在命令行输入 <code class="notranslate">PAN</code>, 鼠标光标将变为小手</li>
+<li>方法二: 如果打开了标准工具栏, 可以在标准工具栏快捷使用 <code class="notranslate">实时平移</code></li>
+<li>方法三: <code class="notranslate">视图(V)</code> - <code class="notranslate">平移</code></li>
+<li>方法四: 按住鼠标中键,并拖动鼠标</li>
+</ul>
+<h2>二、绘图环境</h2>
+<h3>2.1 设置图形界限 <code class="notranslate">LIMITS</code></h3>
+<ul>
+<li>方法一: 在命令行输入 <code class="notranslate">LIMITS</code>, 此时会依次提示输入左下角点和右上角点的坐标,左下角点一般不输入,直接使用默认值坐标原点</li>
+<li>方法二: <code class="notranslate">格式(O)</code> - <code class="notranslate">图形界限</code></li>
+</ul>
+<p>???+ note<br>
+使用CAD绘图时,遵从 1:1 绘制的原则, 因此绘图时是否使用图形界限取决于个人需要.</p>
+<h3>2.2 设置绘图单位 <code class="notranslate">UNITS</code></h3>
+<p>绘图之前,往往需要设置单位的精度和使用的单位.</p>
+<ul>
+<li>方法一: 在命令行输入 <code class="notranslate">UNITS</code></li>
+<li>方法二: <code class="notranslate">格式(O)</code> - <code class="notranslate">单位</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/138817136c892af3e4bf8956161498b7e398974870df0c55350154ace814f113/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f353350613157766a52694c4b4656702e6a7067"><img src="https://camo.githubusercontent.com/138817136c892af3e4bf8956161498b7e398974870df0c55350154ace814f113/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f353350613157766a52694c4b4656702e6a7067" alt="units.jpg" data-canonical-src="https://s2.loli.net/2025/05/31/53Pa1WvjRiLKFVp.jpg" style="max-width: 100%;"></a></p>
+<h2>三、右下角状态栏</h2>
+<h3>3.1 栅格、捕捉模式和草图设置 <code class="notranslate">DSETTINGS</code></h3>
+<p>显示为格子纸样式,图形打印时,并不会打印栅格. 通过以下方法可以打开<code class="notranslate">草图设置</code>对话框</p>
+<ul>
+<li>方法一: 鼠标右键单击 右下角状态栏 <code class="notranslate">显示图形栅格</code> - <code class="notranslate">网格设置</code>. 如果需要启用栅格只需要鼠标左键单击 <code class="notranslate">显示图形栅格</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">DSETTINGS</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/a7aa5e180e06f40e050280cff528e57a066f7304569844ba6fc4864f752d12fc/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f4e325a7147417257424a536877704c2e77656270"><img src="https://camo.githubusercontent.com/a7aa5e180e06f40e050280cff528e57a066f7304569844ba6fc4864f752d12fc/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f4e325a7147417257424a536877704c2e77656270" alt="shange.webp" data-canonical-src="https://s2.loli.net/2025/05/31/N2ZqGArWBJShwpL.webp" style="max-width: 100%;"></a></p>
+<p>???+ warning<br>
+右下角状态栏 <code class="notranslate">显示图形栅格</code> 右侧的 <code class="notranslate">捕捉模式</code> 后绘图时只能点击到栅格上的点, 可以通过 ++f9++ 快速开启 <code class="notranslate">捕捉模式</code></p>
+<h3>3.2 正交模式</h3>
+<p>在右下角状态栏打开 <code class="notranslate">正交限制光标</code> 之后,移动光标时,水平轴或垂直轴哪个离光标最近,拖引线将沿着该轴移动.</p>
+<p>输入坐标或者指定对象捕捉时会忽视正交.</p>
+<p>按住 ++shift++ 可以临时打开或关闭正交.</p>
+<h3>3.3 对象捕捉</h3>
+<p>对象捕捉就是利用已经绘制了的图形的几何特征点来定位点的方法. 点击右下角状态栏的 <code class="notranslate">将光标捕捉到二维参照点</code> 或 通过 ++f3++ 开启对象捕捉.</p>
+<p>???+ warning<br>
+<code class="notranslate">捕捉模式</code> 和 <code class="notranslate">对象捕捉</code> 有很大区别,请不要混淆.</p>
+<pre class="notranslate"><code class="notranslate">`捕捉模式` 捕捉的时栅格(格子纸)上的点
+
+`对象捕捉` 或 `将光标捕捉到二维参照点` 捕捉的是已经绘制图形的几何特征点.
+
+![catch.webp](https://s2.loli.net/2025/05/31/fltmEeALukcFsDz.webp)
+</code></pre>
+<h3>3.4 极轴追踪</h3>
+<p>点击右下角状态栏的 <code class="notranslate">按指定角度限制光标</code> 或 通过 ++f10++ 打开极轴追踪. 打开极轴追踪后,光标将按照指定角度移动. <code class="notranslate">极轴追踪</code> 和 <code class="notranslate">正交模式</code> 二者不能同时打开, 会自动关闭另一个.</p>
+<h2>四、图层管理</h2>
+<p>绘图时往往将不同的部分绘制在不同的图层中，通过这种方法可以方便的调整线条的宽度等,而且当图形比较复杂时,可以隐藏一些图层,便于观察.</p>
+<h3>4.1 创建图层 <code class="notranslate">LAYER</code></h3>
+<p>通过以下方法可以打开 <code class="notranslate">图层特性管理器</code></p>
+<ul>
+<li>方法一: <code class="notranslate">默认</code> - <code class="notranslate">图层特性</code></li>
+<li>方法二: <code class="notranslate">格式(O)</code> - <code class="notranslate">图层</code></li>
+<li>方法三: 命令行输入 <code class="notranslate">LAYER</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/726cbea83571369933e30a466b10f84cfcb705e5624346fffd09d1849fc0b95f/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f77554b70336a466763344274435a652e77656270"><img src="https://camo.githubusercontent.com/726cbea83571369933e30a466b10f84cfcb705e5624346fffd09d1849fc0b95f/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f77554b70336a466763344274435a652e77656270" alt="layer.webp" data-canonical-src="https://s2.loli.net/2025/05/31/wUKp3jFgc4BtCZe.webp" style="max-width: 100%;"></a></p>
+<p>一般图形文件都要创建 轴线(在revit中也称为轴网) 、墙体 、门窗 、标注 等图层.</p>
+<p>轴线使用 <code class="notranslate">单点长划线</code>. <code class="notranslate">全局比例因子</code> 一般设置为 0.2~0.5 , 比例因子用于控制点划线之间的间距.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/93cebd0b70726264440a0256e1be31a6874cf34396c9e831277fc7a9ef40cb54/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f3666616c567844386a41394a5465592e77656270"><img src="https://camo.githubusercontent.com/93cebd0b70726264440a0256e1be31a6874cf34396c9e831277fc7a9ef40cb54/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f3666616c567844386a41394a5465592e77656270" alt="itscale.webp" data-canonical-src="https://s2.loli.net/2025/05/31/6falVxD8jA9JTeY.webp" style="max-width: 100%;"></a></p>
+<p>也可以在命令行输入 <code class="notranslate">LTSCALE</code> 设置比例因子</p>
+<h3>4.2 图层操作</h3>
+<p>可以设置每个图层的线型和线宽, 以及设置不同图层的线条颜色,用于区分.</p>
+<p>一般情况下, <code class="notranslate">轴线</code> 图层设置为红色, <code class="notranslate">墙体</code> 图层设置为白色, <code class="notranslate">门窗</code> 图层设置为青色, <code class="notranslate">家具</code> 图层设置为蓝色, <code class="notranslate">标注</code> 图层设置为绿色.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c071b1286f788e167a29c038a49372d27c668b21701c6edebba2d80046fe046e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f6a4b50366b446f474f665a6e6c48742e77656270"><img src="https://camo.githubusercontent.com/c071b1286f788e167a29c038a49372d27c668b21701c6edebba2d80046fe046e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f6a4b50366b446f474f665a6e6c48742e77656270" alt="layer2.webp" data-canonical-src="https://s2.loli.net/2025/05/31/jKP6kDoGOfZnlHt.webp" style="max-width: 100%;"></a></p>
+<p>图层的状态/开关/冻结/锁定:</p>
+<ul>
+<li>状态: 当前图层的状态显示为 对钩</li>
+<li>开: 关闭图层后,该图层图形将不可见</li>
+<li>冻结</li>
+<li>锁定: 锁定后的图层可见,但是不可修改,可以对上面的线条使用对象捕捉来定位几何特征点.</li>
+</ul>
+<h2>五、二维图形的绘制</h2>
+<h3>5.1 点 <code class="notranslate">POINT</code></h3>
+<p>绘制点时必须先设置点样式,否则点太小而不便于观察. 通过以下方法设置点样式:</p>
+<ul>
+<li>方法一: <code class="notranslate">格式(O)</code> - <code class="notranslate">点样式</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">DDPTYPE</code> 或 <code class="notranslate">PTYPE</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8c58bf050142ef348ba2145501191d5c6cd45bc039ebc5edbbc73e8d1557bc9e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f6f4d7536565a584e55734b373335392e77656270"><img src="https://camo.githubusercontent.com/8c58bf050142ef348ba2145501191d5c6cd45bc039ebc5edbbc73e8d1557bc9e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f33312f6f4d7536565a584e55734b373335392e77656270" alt="ptype.webp" data-canonical-src="https://s2.loli.net/2025/05/31/oMu6VZXNUsK7359.webp" style="max-width: 100%;"></a></p>
+<p>在命令行输入 <code class="notranslate">POINT</code> 绘制点</p>
+<h3>5.2 定数等分点 <code class="notranslate">DIV</code> <code class="notranslate">DIVIDE</code></h3>
+<h3>5.3 定距等分点 <code class="notranslate">ME</code> <code class="notranslate">MEASURE</code></h3>
+<h3>5.4 直线 <code class="notranslate">LINE</code></h3>
+<h3>5.5 多线 <code class="notranslate">MLINE</code></h3>
+<h4>5.5.1 绘制多线 <code class="notranslate">MLIME</code></h4>
+<p>多线实际上是双线,绘制的线条都是成对的平行线,常用于绘制墙.</p>
+<p>正对(J) 以下三种情况的多线的起点都是坐标原点(0,0)</p>
+<p>=== "上(T)"<br>
+上(T), 即top,绘制多线时以顶线为基准.</p>
+<pre class="notranslate"><code class="notranslate">![top.webp](https://s2.loli.net/2025/06/01/Mtu6FwmZrA49HVY.webp)
+</code></pre>
+<p>=== "无(Z)"<br>
+绘制多线时,以两条平行线的中线为基准.</p>
+<pre class="notranslate"><code class="notranslate">![z.webp](https://s2.loli.net/2025/06/01/8GgIkEp1CzbqZTU.webp)
+</code></pre>
+<p>=== "下(B)"<br>
+下(B),即bottom,以底线为基准.</p>
+<pre class="notranslate"><code class="notranslate">![bottom.webp](https://s2.loli.net/2025/06/01/gXefnvCzDhZsy4j.webp)
+</code></pre>
+<p>比例(S) 即scale,可以理解为多线两条平行线间的距离,默认为20</p>
+<p>样式(ST) 即style,多线的样式,默认为STANDARD,距离1. 多线两条线之间的距离实际上是样式距离与比例的乘积.</p>
+<h4>5.5.2 定义多线样式 <code class="notranslate">MLSTYLE</code></h4>
+<ul>
+<li>方法一: <code class="notranslate">格式(O)</code> - <code class="notranslate">多线样式</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">MLSTYLE</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8ab3c5626b10a7efed94c3b438a52e5a6e01a72832289790877e7d9d0b9ec0c1/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f3175444950744a675a58524b42486f2e77656270"><img src="https://camo.githubusercontent.com/8ab3c5626b10a7efed94c3b438a52e5a6e01a72832289790877e7d9d0b9ec0c1/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f3175444950744a675a58524b42486f2e77656270" alt="new_mline.webp" data-canonical-src="https://s2.loli.net/2025/06/01/1uDIPtJgZXRKBHo.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4b98b7315cf641372be34fdcddfaab6d8f9a36de357684b14e367b158d0af553/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f504432534c6956356331765a67366f2e77656270"><img src="https://camo.githubusercontent.com/4b98b7315cf641372be34fdcddfaab6d8f9a36de357684b14e367b158d0af553/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f504432534c6956356331765a67366f2e77656270" alt="new_milne2.webp" data-canonical-src="https://s2.loli.net/2025/06/01/PD2SLiV5c1vZg6o.webp" style="max-width: 100%;"></a></p>
+<p>???+ note<br>
+大多数情况下,使用双线就已经足够了,没有必要使用多线.</p>
+<h3>5.6 多段线 <code class="notranslate">PLINE</code></h3>
+<p>通过 <code class="notranslate">宽度(W)</code> 分别设置起点宽度为0和端点宽度为90, 用于绘制箭头</p>
+<h3>5.7 圆 <code class="notranslate">CIRCLE</code></h3>
+<h3>5.8 圆弧 <code class="notranslate">ARC</code></h3>
+<h3>5.9 圆环 <code class="notranslate">DONUT</code></h3>
+<p>绘制圆环之前要先通过 <code class="notranslate">FILL</code> 命令来设置是否填充圆环区域.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c575c2f7ba1e94c10a168f8817b8be1df4e7f83491b5bb9a67987ac530b131f3/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f6d58595667644537737935726c42702e77656270"><img src="https://camo.githubusercontent.com/c575c2f7ba1e94c10a168f8817b8be1df4e7f83491b5bb9a67987ac530b131f3/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f6d58595667644537737935726c42702e77656270" alt="donut.webp" data-canonical-src="https://s2.loli.net/2025/06/01/mXYVgdE7sy5rlBp.webp" style="max-width: 100%;"></a></p>
+<h3>5.10 椭圆/椭圆弧 <code class="notranslate">ELLIPSE</code></h3>
+<h3>5.11 矩形 <code class="notranslate">RECTANG</code> <code class="notranslate">REC</code></h3>
+<p>如果需要使用线宽(W), 矩形绘制前也需要使用 <code class="notranslate">FILL</code> 命令来设置是否填充.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/24a6558f94f694e5c0ec38e737f3ed4d3f8eadfbac1bf012a4f561a27a340ad6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f325647446a6c76735863786d55434c2e77656270"><img src="https://camo.githubusercontent.com/24a6558f94f694e5c0ec38e737f3ed4d3f8eadfbac1bf012a4f561a27a340ad6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f325647446a6c76735863786d55434c2e77656270" alt="rec.webp" data-canonical-src="https://s2.loli.net/2025/06/01/2VGDjlvsXcxmUCL.webp" style="max-width: 100%;"></a></p>
+<h3>5.12 正多边形 <code class="notranslate">POLYGON</code></h3>
+<h3>5.13 图案填充/渐变色填充  <code class="notranslate">H</code> <code class="notranslate">BHATCH</code> <code class="notranslate">HATCH</code> <code class="notranslate">GRADIENT</code></h3>
+<ul>
+<li>方法一: <code class="notranslate">绘图(D)</code> - <code class="notranslate">图案填充</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">HATCH</code> 或 <code class="notranslate">BHATCH</code>, <code class="notranslate">GRADIENT</code>特指渐变色填充</li>
+</ul>
+<p>填充图案的编辑:</p>
+<ul>
+<li>方法一: <code class="notranslate">修改(M)</code> - <code class="notranslate">对象</code> - <code class="notranslate">图案填充</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">HATCHEDIT</code></li>
+</ul>
+<h2>六、信息查询</h2>
+<p>通用方法: <code class="notranslate">工具(T)</code> - <code class="notranslate">查询</code></p>
+<h3>6.1 查询点的坐标 <code class="notranslate">ID</code></h3>
+<h3>6.2 查询距离 <code class="notranslate">DIST</code> <code class="notranslate">MEASUREGEOM</code></h3>
+<h3>6.3 查询面积和周长 <code class="notranslate">AREA</code></h3>
+<h3>6.4 查询几何特征和对象特征 <code class="notranslate">LIST</code></h3>
+<h3>6.5 查询文件状态 <code class="notranslate">STATUS</code></h3>
+<h3>6.6 查询文件时间 <code class="notranslate">TIME</code></h3>
+<h2>七、块</h2>
+<p>将多个对象合成为一个整体,这个整体就是块.</p>
+<h3>7.1 创建块 <code class="notranslate">BLOCK</code></h3>
+<ul>
+<li>方法一: <code class="notranslate">绘图(D)</code> - <code class="notranslate">块</code> - <code class="notranslate">创建</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">BLOCK</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/735986ad35bce955faad07c24e7217a4baad980486b1e739f8ada925ac1aa3a5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f46745933325071396e535a634231672e77656270"><img src="https://camo.githubusercontent.com/735986ad35bce955faad07c24e7217a4baad980486b1e739f8ada925ac1aa3a5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f46745933325071396e535a634231672e77656270" alt="block.webp" data-canonical-src="https://s2.loli.net/2025/06/01/FtY32Pq9nSZcB1g.webp" style="max-width: 100%;"></a></p>
+<p>如果需要使用刚刚创建的块,只需要点击 <code class="notranslate">默认</code> - <code class="notranslate">块</code> - <code class="notranslate">插入</code></p>
+<p>???+ note<br>
+使用这种方法创建的块,只能在这个dwg文件中使用.</p>
+<h3>7.2 外部块 <code class="notranslate">WBLOCK</code></h3>
+<p>通过写块 <code class="notranslate">WBLOCK</code> 命令可以创建外部块.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/33dbe55b934f17aeb5761039f1cfe6b9ff6a93ca0587fd0c7c880272129cd9b4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f337043344f797365724b394e514d6d2e77656270"><img src="https://camo.githubusercontent.com/33dbe55b934f17aeb5761039f1cfe6b9ff6a93ca0587fd0c7c880272129cd9b4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f337043344f797365724b394e514d6d2e77656270" alt="wblock.webp" data-canonical-src="https://s2.loli.net/2025/06/01/3pC4OyserK9NQMm.webp" style="max-width: 100%;"></a></p>
+<p>使用此功能创建的块会另存为一个dwg文件. 如果需要使用刚刚创建的块,只需要点击 <code class="notranslate">默认</code> - <code class="notranslate">块</code> - <code class="notranslate">插入</code> - <code class="notranslate">浏览</code> 选取这个dwg文件的路径. 任何图形都可以导入外部块.</p>
+<h3>7.3 块属性</h3>
+<p>块属性是块带有的一些文字属性.</p>
+<ul>
+<li>方法一: <code class="notranslate">绘图(D)</code> - <code class="notranslate">块</code> - <code class="notranslate">定义属性</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">ATTDEF</code></li>
+</ul>
+<h3>7.4 创建带属性的块</h3>
+<p>以标高符号为例.</p>
+<p>第一步: 绘制标高符号</p>
+<p>第二步: 命令行输入 <code class="notranslate">ATTDEF</code> 创建块属性,并放置在想要放置的位置</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/83ec7028166c3219552c07e4b4d714167653aecfc0f4470bef525f0e131cc056/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f4644665279776831494b3341735a542e77656270"><img src="https://camo.githubusercontent.com/83ec7028166c3219552c07e4b4d714167653aecfc0f4470bef525f0e131cc056/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f4644665279776831494b3341735a542e77656270" alt="def.webp" data-canonical-src="https://s2.loli.net/2025/06/01/FDfRywh1IK3AsZT.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/52c766cfdc655f18be72d3a1fb4606a9df3feb1268724d4370535587416ecd76/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f4f74676d715449687a6f4e413337662e77656270"><img src="https://camo.githubusercontent.com/52c766cfdc655f18be72d3a1fb4606a9df3feb1268724d4370535587416ecd76/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f4f74676d715449687a6f4e413337662e77656270" alt="def2.webp" data-canonical-src="https://s2.loli.net/2025/06/01/OtgmqTIhzoNA37f.webp" style="max-width: 100%;"></a></p>
+<p>第三步: 命令行输入 <code class="notranslate">BLOCK</code> 创建块</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/93dc231842de925b5c25497216e7d5e177c93fd99d234e07f80a9d3c089ffba9/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f35486c6343686742456a394d6941762e77656270"><img src="https://camo.githubusercontent.com/93dc231842de925b5c25497216e7d5e177c93fd99d234e07f80a9d3c089ffba9/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f35486c6343686742456a394d6941762e77656270" alt="def3.webp" data-canonical-src="https://s2.loli.net/2025/06/01/5HlcChgBEj9MiAv.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d1aace3f1d3a968466a633bd33294f4f8b0d564481fa9427a82d93c260597645/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f44364d3363665a6171784b775445532e77656270"><img src="https://camo.githubusercontent.com/d1aace3f1d3a968466a633bd33294f4f8b0d564481fa9427a82d93c260597645/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f44364d3363665a6171784b775445532e77656270" alt="def4.webp" data-canonical-src="https://s2.loli.net/2025/06/01/D6M3cfZaqxKwTES.webp" style="max-width: 100%;"></a></p>
+<p>第四步: 命令行输入 <code class="notranslate">INSERT</code> 插入块, 如果标高值输错了,可以双击这个图形修改</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5237e8d65c2480fd37b4f98acf0ed5e77e9bc3402d75538406d592f9fa68e130/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f334466394b6b384578596e54344d762e77656270"><img src="https://camo.githubusercontent.com/5237e8d65c2480fd37b4f98acf0ed5e77e9bc3402d75538406d592f9fa68e130/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f334466394b6b384578596e54344d762e77656270" alt="def5.webp" data-canonical-src="https://s2.loli.net/2025/06/01/3Df9Kk8ExYnT4Mv.webp" style="max-width: 100%;"></a></p>
+<h2>八、二维图形的修改</h2>
+<h3>8.1 对象选择方式</h3>
+<ul>
+<li>单选: 鼠标左键点击选取</li>
+<li>窗口方式(W方式): 从左上到右下的框选, 全部被框选到才被选中</li>
+<li>交互方式(C方式): 从右下到左上的框选, 只要有一部分被框中就选中</li>
+<li>全选(ALL方式): ++ctrl+c++ 或 <code class="notranslate">编辑(E)</code> - <code class="notranslate">全部选择</code></li>
+<li>窗口多边形(WP方式): 只对一部分命令有效, 例如: 命令行输入 <code class="notranslate">MOVE</code> 开启移动命令, 此时输入 <code class="notranslate">WP</code> 可以使用窗口多边形方式选取, 全部被框选到才会被选中</li>
+<li>交叉多边形(CP方式): 只对一部分命令有效, 例如: 命令行输入 <code class="notranslate">MOVE</code> 开启移动命令, 此时输入 <code class="notranslate">CP</code> 可以使用交叉多边形方式选取, 只要有一部分被框中就选中</li>
+<li>栏选(F方式): 只对一部分命令有效, 例如: 命令行输入 <code class="notranslate">MOVE</code> 开启移动命令, 此时输入 <code class="notranslate">F</code> 可以使用栏选, 栏选通过多段线选择, 画出的多段线只要与对象相交就选中</li>
+<li>单选取消: 按住 ++shift++ , 鼠标左键单击</li>
+<li>快速选择: 命令行输入 <code class="notranslate">QSELECT</code> 根据对象的特性进行选择</li>
+<li>设置对象选择模式: 命令行输入 <code class="notranslate">OPTIONS</code></li>
+</ul>
+<h3>8.2 删除对象 <code class="notranslate">ERASE</code></h3>
+<ul>
+<li>方法一: 选中 ++delete++</li>
+<li>方法二: 命令行输入 <code class="notranslate">ERASE</code></li>
+</ul>
+<h3>8.3 复制对象 <code class="notranslate">COPY</code></h3>
+<h3>8.4 镜像对象 <code class="notranslate">MIRROR</code></h3>
+<p>对文字使用镜像时, 镜像效果与 <code class="notranslate">MIRRTEXT</code> 有关. 在命令行输入 <code class="notranslate">MIRRTEXT</code> , 输入值为 0 时镜像无法对文字生效, 输入值为1时镜像才会对文字生效</p>
+<h3>8.5 偏移对象 <code class="notranslate">OFFSET</code></h3>
+<p>可以通过 <code class="notranslate">删除(E)</code> 设置偏移对象时是否删除原对象</p>
+<h3>8.6 阵列对象 <code class="notranslate">ARRAY</code></h3>
+<h3>8.7 移动对象 <code class="notranslate">MOVE</code></h3>
+<h3>8.8 旋转对象 <code class="notranslate">ROTATE</code></h3>
+<p>输入的数值单位默认是度, 值为正数时逆时针旋转, 为负数时顺时针旋转</p>
+<h3>8.9 缩放对象 <code class="notranslate">SCALE</code></h3>
+<h3>8.10 拉伸对象 <code class="notranslate">STRETCH</code></h3>
+<p>选择对象时必须使用交互方式(C方式)或交叉多边形方式(CP方式), 即只能从右下到左上选择. 如果从左上到右下选择, 则相当于 <code class="notranslate">MOVE</code></p>
+<p>选择对象时, 请不要将要拉伸的对象全部选中, 只需选中一部分才可以进行拉伸. 全部选中相当于 <code class="notranslate">MOVE</code></p>
+<h3>8.11 拉长对象 <code class="notranslate">LENGTHEN</code></h3>
+<h3>8.12 修剪对象 <code class="notranslate">TRIM</code></h3>
+<p>修剪时,使用栏选(F方式)和窗交(W方式), 可以快速修剪</p>
+<p>如果要修剪的对象和剪切边不相交, 按住 ++shift++ ,并在被修剪对象上单击, 可以将被修剪对象延伸到与剪切边相交.</p>
+<h3>8.13 延伸对象 <code class="notranslate">EXTEND</code></h3>
+<p>如果按住 ++shift++ , 相当于修剪 <code class="notranslate">TRIM</code></p>
+<h3>8.14 打断对象 <code class="notranslate">BREAK</code></h3>
+<p>第二个点输入 <code class="notranslate">@</code> 时, 相当于第二个点和第一个点的位置相同, 即直接将直线一分为二</p>
+<h3>8.15 倒角 <code class="notranslate">CHAMFER</code></h3>
+<p>如果没有设置 <code class="notranslate">距离(D)</code> 图形相邻的两条边之间不能使用倒角. 多段线和直线绘制成的图形倒角的效果并不相同.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3b5fe5fa59047a911e7243b94b19029f0af7b4f383b7ac6d0df2dec07f0d4339/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f426677754570324651686b38317a342e77656270"><img src="https://camo.githubusercontent.com/3b5fe5fa59047a911e7243b94b19029f0af7b4f383b7ac6d0df2dec07f0d4339/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f426677754570324651686b38317a342e77656270" alt="chamfer.webp" data-canonical-src="https://s2.loli.net/2025/06/01/BfwuEp2FQhk81z4.webp" style="max-width: 100%;"></a></p>
+<p>通过 <code class="notranslate">距离(D)</code> 设置: 两条不相交的直线, 如果倒角距离都为0, 那么倒角就相当于同时延长或缩短这两条线,使它们相交</p>
+<p>通过 <code class="notranslate">修剪(T)</code> 设置: 是否保留倒角前后多余的线条</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8bcfc7c4b0b2b5d246818223e892452459d288b9c82a203f42abb1ab3f5dc952/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f4f327841627a6e5a53483644436c712e77656270"><img src="https://camo.githubusercontent.com/8bcfc7c4b0b2b5d246818223e892452459d288b9c82a203f42abb1ab3f5dc952/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f4f327841627a6e5a53483644436c712e77656270" alt="chamfer2.webp" data-canonical-src="https://s2.loli.net/2025/06/01/O2xAbznZSH6DClq.webp" style="max-width: 100%;"></a></p>
+<h3>8.16 圆角 <code class="notranslate">FILLET</code></h3>
+<p>和倒角用法类似</p>
+<h3>8.17 分解对象 <code class="notranslate">EXPLODE</code></h3>
+<p>将多段线,块等复杂对象分解为线等简单对象.</p>
+<h3>8.18 对象特性管理器 <code class="notranslate">PROPERTIES</code></h3>
+<h3>8.19 特性匹配 <code class="notranslate">MATCHPROP</code></h3>
+<p>类似于 Word 中的格式刷</p>
+<h2>九、文字</h2>
+<h3>9.1 定义文字样式 <code class="notranslate">STYLE</code></h3>
+<ul>
+<li>方法一: <code class="notranslate">格式(O)</code> - <code class="notranslate">文字样式</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">STYLE</code></li>
+</ul>
+<p>由于土木工程图纸文字要求使用长仿宋体, 因此在CAD中只能使用 <code class="notranslate">gbenor.shx</code> <code class="notranslate">gbeitc.shx</code> <code class="notranslate">gbcbig.shx</code>, 并且必须勾选 <code class="notranslate">使用大字体</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2583b038dfe8a877c354d2f567192491c021aa171c445cffd5fcd2d007d69cbe/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f37506754554a51647a6a72466f4f4d2e77656270"><img src="https://camo.githubusercontent.com/2583b038dfe8a877c354d2f567192491c021aa171c445cffd5fcd2d007d69cbe/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f37506754554a51647a6a72466f4f4d2e77656270" alt="style.webp" data-canonical-src="https://s2.loli.net/2025/06/01/7PgTUJQdzjrFoOM.webp" style="max-width: 100%;"></a></p>
+<h3>9.2 单行文字 <code class="notranslate">DTEXT</code></h3>
+<h3>9.3 多行文字 <code class="notranslate">MTEXT</code></h3>
+<h3>9.4 输入特殊字符</h3>
+<p>AutoCAD通过 <code class="notranslate">%%</code> 开头的控制码输入特殊符号.</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>控制码</th>
+<th>特殊符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%%O</td>
+<td>开启或关闭文字上划线</td>
+</tr>
+<tr>
+<td>%%U</td>
+<td>开启或关闭文字下划线</td>
+</tr>
+<tr>
+<td>%%D</td>
+<td>角度符号 $\degree$
+</td>
+</tr>
+<tr>
+<td>%%P</td>
+<td>正负号 $\pm$
+</td>
+</tr>
+<tr>
+<td>%%C</td>
+<td>直径符号 $\varPhi$
+</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ca6b6060f880156c033dc49fd26fd1c3c7ed4594de607be13ca222f375d1431a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f374c4b505963416d4453424e796e392e77656270"><img src="https://camo.githubusercontent.com/ca6b6060f880156c033dc49fd26fd1c3c7ed4594de607be13ca222f375d1431a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f374c4b505963416d4453424e796e392e77656270" alt="sp.webp" data-canonical-src="https://s2.loli.net/2025/06/01/7LKPYcAmDSBNyn9.webp" style="max-width: 100%;"></a></p>
+<h3>9.5 编辑文字 <code class="notranslate">DDEDIT</code></h3>
+<ul>
+<li>方法一: 命令行输入 <code class="notranslate">DDEDIT</code></li>
+<li>方法二: 选中文字对象 - 单击鼠标右键 - <code class="notranslate">特性</code></li>
+<li>方法三: <code class="notranslate">修改(M)</code> - <code class="notranslate">特性</code></li>
+<li>方法四: 标准工具栏 - <code class="notranslate">特性</code></li>
+<li>方法五: 命令行输入 <code class="notranslate">PROPERTIES</code> 或 <code class="notranslate">DDMODIFY</code></li>
+</ul>
+<h2>十、表格</h2>
+<h3>10.1 表格样式 <code class="notranslate">TABLESTYLE</code></h3>
+<ul>
+<li>方法一: 命令行输入 <code class="notranslate">TABLESTYLE</code></li>
+<li>方法二: <code class="notranslate">格式(O)</code> - <code class="notranslate">表格样式</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c12f38b75ff0f0384805e88b47413b560f0329fd11230b409b19ebc6d7e33600/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f5144436a6c4f54386642413548744b2e77656270"><img src="https://camo.githubusercontent.com/c12f38b75ff0f0384805e88b47413b560f0329fd11230b409b19ebc6d7e33600/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f5144436a6c4f54386642413548744b2e77656270" alt="tstyle.webp" data-canonical-src="https://s2.loli.net/2025/06/01/QDCjlOT8fBA5HtK.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/890eb105e5f238f9abcdab7b65955c5c0e2f0677ff53ea1c0180d46bf066e22c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f46416d5a687042504e754563654a622e77656270"><img src="https://camo.githubusercontent.com/890eb105e5f238f9abcdab7b65955c5c0e2f0677ff53ea1c0180d46bf066e22c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f46416d5a687042504e754563654a622e77656270" alt="tstyle2.webp" data-canonical-src="https://s2.loli.net/2025/06/01/FAmZhpBPNuEceJb.webp" style="max-width: 100%;"></a></p>
+<h3>10.2 创建表格 <code class="notranslate">TABLE</code></h3>
+<ul>
+<li>方法一: 命令行输入 <code class="notranslate">TABLE</code></li>
+<li>方法二: <code class="notranslate">绘图(D)</code> - <code class="notranslate">表格</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ec3ade396ad3ac5d3227e2cf9abca002c047102121d4dbf8100f36fd848aa9fa/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f5675574272395966477453414455522e77656270"><img src="https://camo.githubusercontent.com/ec3ade396ad3ac5d3227e2cf9abca002c047102121d4dbf8100f36fd848aa9fa/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f5675574272395966477453414455522e77656270" alt="table.webp" data-canonical-src="https://s2.loli.net/2025/06/01/VuWBr9YfGtSADUR.webp" style="max-width: 100%;"></a></p>
+<p>在表格中输入时,类似于Excel可以使用箭头键切换单元格,双击可以更改单元格中的内容</p>
+<p>使用鼠标右键可以进行合并单元格等操作.</p>
+<h2>十一、尺寸标注</h2>
+<h3>11.1 概述</h3>
+<p>尺寸标注规则:</p>
+<ul>
+<li>绘图时 1: 1 绘图, 因为尺寸标注要求标注实际的尺寸</li>
+<li>建筑平面图以 <code class="notranslate">mm</code> 为单位. 建筑平面图和建筑立面图以及剖面图的标高, 使用 <code class="notranslate">m</code> 为单位. 尺寸标注不需要写单位</li>
+</ul>
+<p>尺寸标注的组成:</p>
+<ul>
+<li>尺寸线</li>
+<li>尺寸界限</li>
+<li>尺寸起止符号</li>
+<li>尺寸文本</li>
+</ul>
+<h3>11.2 尺寸标注样式 <code class="notranslate">D</code></h3>
+<ul>
+<li>方法一: <code class="notranslate">标注(N)</code> - <code class="notranslate">标注样式</code></li>
+<li>方法二: <code class="notranslate">格式(O)</code>- <code class="notranslate">标注样式</code></li>
+<li>方法三: 命令行输入 <code class="notranslate">DIMSTYLE</code> <code class="notranslate">D</code> <code class="notranslate">DST</code> <code class="notranslate">DDIM</code> <code class="notranslate">DIMSTY</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/0500dccbb2c4e848e8c5b9fc6f575799efd2f09e9bc12ac32bb3205df950ef1b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f524a75736f456232727438534f356d2e77656270"><img src="https://camo.githubusercontent.com/0500dccbb2c4e848e8c5b9fc6f575799efd2f09e9bc12ac32bb3205df950ef1b/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f524a75736f456232727438534f356d2e77656270" alt="d.webp" data-canonical-src="https://s2.loli.net/2025/06/01/RJusoEb2rt8SO5m.webp" style="max-width: 100%;"></a></p>
+<p>主要使用前五个选项卡进行设置,最后两个在土木工程中用不到.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ed5484295020bbdf39b7617680dbbcf562ac81bacd995cfd5215ba22159f849e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f674c73646d56775178717a327057632e77656270"><img src="https://camo.githubusercontent.com/ed5484295020bbdf39b7617680dbbcf562ac81bacd995cfd5215ba22159f849e/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f674c73646d56775178717a327057632e77656270" alt="d1.webp" data-canonical-src="https://s2.loli.net/2025/06/01/gLsdmVwQxqz2pWc.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6dd538c9123a69959dad4d6dacfe9eed72e6a1d6b4f9e56514688bf33a77e3ce/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f7a72573161444542763635334d63432e77656270"><img src="https://camo.githubusercontent.com/6dd538c9123a69959dad4d6dacfe9eed72e6a1d6b4f9e56514688bf33a77e3ce/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f7a72573161444542763635334d63432e77656270" alt="d2.webp" data-canonical-src="https://s2.loli.net/2025/06/01/zrW1aDEBv653McC.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/0513c7b6b17c4799c0d74e8b860782c4ea32eb6b6bc0035eaab7331cd4124750/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f314e42385756647452437a6c716f692e77656270"><img src="https://camo.githubusercontent.com/0513c7b6b17c4799c0d74e8b860782c4ea32eb6b6bc0035eaab7331cd4124750/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f314e42385756647452437a6c716f692e77656270" alt="d3.webp" data-canonical-src="https://s2.loli.net/2025/06/01/1NB8WVdtRCzlqoi.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c9320407a8f40916d90213c06456cb4a8311bd07d67a753195f0eb561a7e9e76/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f597043457447524b37637a616669542e77656270"><img src="https://camo.githubusercontent.com/c9320407a8f40916d90213c06456cb4a8311bd07d67a753195f0eb561a7e9e76/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f597043457447524b37637a616669542e77656270" alt="d4.webp" data-canonical-src="https://s2.loli.net/2025/06/01/YpCEtGRK7czafiT.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/560d5e357179885a906132c1805697623583a5b252dcff6eb23378026c3c5fc1/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f6e61464177526f4f4c58684e3457362e77656270"><img src="https://camo.githubusercontent.com/560d5e357179885a906132c1805697623583a5b252dcff6eb23378026c3c5fc1/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30312f6e61464177526f4f4c58684e3457362e77656270" alt="d5.webp" data-canonical-src="https://s2.loli.net/2025/06/01/naFAwRoOLXhN4W6.webp" style="max-width: 100%;"></a></p>
+<h3>11.3 替代尺寸标注样式</h3>
+<p>替代尺寸标注样式是设置某一尺寸标注样式的临时替代</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e5a7f7f4010d5b912c5e6e30a8c113d8e420bb5ec761a503d80d50857a522208/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f39564b4c7145386d37485435664d612e77656270"><img src="https://camo.githubusercontent.com/e5a7f7f4010d5b912c5e6e30a8c113d8e420bb5ec761a503d80d50857a522208/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f39564b4c7145386d37485435664d612e77656270" alt="re.webp" data-canonical-src="https://s2.loli.net/2025/06/02/9VKLqE8m7HT5fMa.webp" style="max-width: 100%;"></a></p>
+<h3>11.4 创建尺寸标注</h3>
+<p>常用的尺寸标注有线性标注, 对齐标注, 基线标注, 连续标注, 快速标注</p>
+<h4>11.4.1 线性标注 <code class="notranslate">DIMLINEAR</code> <code class="notranslate">DIMLIN</code></h4>
+<p>主要用于水平或垂直方向的标注</p>
+<ul>
+<li>方法一: <code class="notranslate">标注(N)</code> - <code class="notranslate">线性标注</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">DIMLINEAR</code> <code class="notranslate">DIMLIN</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/051093f56a306025ba70f9a8b9d0493b3b52014948227d379d0ffe3da0ed8fa5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f454162744872423663564d4a4e78322e77656270"><img src="https://camo.githubusercontent.com/051093f56a306025ba70f9a8b9d0493b3b52014948227d379d0ffe3da0ed8fa5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f454162744872423663564d4a4e78322e77656270" alt="dimlin.webp" data-canonical-src="https://s2.loli.net/2025/06/02/EAbtHrB6cVMJNx2.webp" style="max-width: 100%;"></a></p>
+<h4>11.4.2 对齐标注 <code class="notranslate">DIMALIGNED</code> <code class="notranslate">DIMALI</code></h4>
+<p>用于倾斜线条的标注</p>
+<ul>
+<li>方法一: <code class="notranslate">标注(N)</code> - <code class="notranslate">对齐</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">DIMALIGNED</code> <code class="notranslate">DIMALI</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3b5c2954af2296e60e58c0592c74ace754860d9a1b48a8ac88c9324baf63d09c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f58734e4352694c6b4637713270345a2e77656270"><img src="https://camo.githubusercontent.com/3b5c2954af2296e60e58c0592c74ace754860d9a1b48a8ac88c9324baf63d09c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f58734e4352694c6b4637713270345a2e77656270" alt="dimali.webp" data-canonical-src="https://s2.loli.net/2025/06/02/XsNCRiLkF7q2p4Z.webp" style="max-width: 100%;"></a></p>
+<h4>11.4.3 基线标注 <code class="notranslate">DIMBASELINE</code> <code class="notranslate">DIMBASE</code></h4>
+<p>以线性标注的一侧为基准进行标注. 使用基线标注之前,必须要有一个线性标注.</p>
+<ul>
+<li>方法一: <code class="notranslate">标注(N)</code> - <code class="notranslate">基线</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">DIMBASELINE</code> <code class="notranslate">DIMBASE</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c5b4dc05649ba952b33aed82650de5aeab6d95508d74021ae7bf25a4901ba9cd/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f64554f334e417632476e786c4a74792e77656270"><img src="https://camo.githubusercontent.com/c5b4dc05649ba952b33aed82650de5aeab6d95508d74021ae7bf25a4901ba9cd/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f64554f334e417632476e786c4a74792e77656270" alt="dimbase.webp" data-canonical-src="https://s2.loli.net/2025/06/02/dUO3NAv2GnxlJty.webp" style="max-width: 100%;"></a></p>
+<h4>11.4.4 连续标注 <code class="notranslate">DIMCONTINUE</code> <code class="notranslate">DIMCONT</code></h4>
+<p>类似于基线标注.</p>
+<ul>
+<li>方法一: <code class="notranslate">标注(N)</code> - <code class="notranslate">连续</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">DIMCONTINUE</code> <code class="notranslate">DIMCONT</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e5a6bce3a7307845fe36257f32b5dc6fb846af427d27d17fbf41e326567da368/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f716536706b7768736a5834464556502e77656270"><img src="https://camo.githubusercontent.com/e5a6bce3a7307845fe36257f32b5dc6fb846af427d27d17fbf41e326567da368/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f716536706b7768736a5834464556502e77656270" alt="dimcont.webp" data-canonical-src="https://s2.loli.net/2025/06/02/qe6pkwhsjX4FEVP.webp" style="max-width: 100%;"></a></p>
+<h4>11.4.5 快速标注 <code class="notranslate">QDIM</code></h4>
+<p>选中图形即可快速进行连续标注和基线标注, 非常好用.</p>
+<ul>
+<li>方法一: <code class="notranslate">标注(N)</code> - <code class="notranslate">快速标注</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">QDIM</code></li>
+</ul>
+<h3>11.5 编辑尺寸标注 <code class="notranslate">DIMEDIT</code></h3>
+<h3>11.6 编辑尺寸标注文字 <code class="notranslate">DIMTEDIT</code></h3>
+<p>双击可直接修改尺寸标注文字的内容</p>
+<h3>11.7 更新尺寸标注 <code class="notranslate">-DIMSTYLE</code></h3>
+<p>如果切换了尺寸标注样式,可以使用此方法批量替换样式.</p>
+<ul>
+<li>方法一: <code class="notranslate">标注(N)</code> - <code class="notranslate">更新</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">-DIMSTYLE</code></li>
+</ul>
+<h2>十二、输出图形为PDF</h2>
+<p>{==AutoCAD绘图基本原则: 始终以1:1绘图, 绘图时的长度即为实际长度==}</p>
+<h3>12.1 模型和布局 <code class="notranslate">TILEMODE</code></h3>
+<p>AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和布局.</p>
+<ul>
+<li>模型, 就是绘图时使用的选项卡</li>
+<li>布局, 就是绘图结束, 用来输出图形的选项卡</li>
+</ul>
+<p>可以在命令行输入 <code class="notranslate">TILEMODE</code> 切换模型和布局选项卡, 输入值为1时切换为模型, 输入值为0时切换为布局.</p>
+<h3>12.2 创建布局 <code class="notranslate">LAYOUT</code> <code class="notranslate">LAYOUTWIZARD</code></h3>
+<p><code class="notranslate">LAYOUT</code> <code class="notranslate">LAYOUTWIZARD</code>两个命令并不相同, <code class="notranslate">LAYOUT</code> 通过模版创建新布局, <code class="notranslate">LAYOUTWIZARD</code> 通过对话框创建新布局. 此处主要介绍 <code class="notranslate">LAYOUTWIZARD</code>.</p>
+<ul>
+<li>方法一: 命令行输入 <code class="notranslate">LAYOUTWIZARD</code></li>
+<li>方法二: <code class="notranslate">插入(I)</code> - <code class="notranslate">布局</code> - <code class="notranslate">创建布局向导</code></li>
+</ul>
+<p>第一步: 命令行输入 <code class="notranslate">LAYOUTWIZARD</code>, 打开布局向导</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/77bde847612116e7479293b1bb219b83324d8414a32029092dba36e345ba46be/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f63476532496167647571393679697a2e77656270"><img src="https://camo.githubusercontent.com/77bde847612116e7479293b1bb219b83324d8414a32029092dba36e345ba46be/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f63476532496167647571393679697a2e77656270" alt="l1.webp" data-canonical-src="https://s2.loli.net/2025/06/02/cGe2Iagduq96yiz.webp" style="max-width: 100%;"></a></p>
+<p>第二步: 选择打印机, 建议选MS打印机</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9ff0f4a67e2c9076a674b1efeb6913ca3b5de8cd8b3facb8903632e9afa5f2a6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f73543647493742764d65506c664e632e77656270"><img src="https://camo.githubusercontent.com/9ff0f4a67e2c9076a674b1efeb6913ca3b5de8cd8b3facb8903632e9afa5f2a6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f73543647493742764d65506c664e632e77656270" alt="l2.webp" data-canonical-src="https://s2.loli.net/2025/06/02/sT6GI7BvMePlfNc.webp" style="max-width: 100%;"></a></p>
+<p>第三步: 设置图纸尺寸</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d566ba8b1962d11126f7580cab205d54532ccadeda540193798c4abd2868dec7/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f6632586773684c6f50757a774a614e2e77656270"><img src="https://camo.githubusercontent.com/d566ba8b1962d11126f7580cab205d54532ccadeda540193798c4abd2868dec7/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f6632586773684c6f50757a774a614e2e77656270" alt="l3.webp" data-canonical-src="https://s2.loli.net/2025/06/02/f2XgshLoPuzwJaN.webp" style="max-width: 100%;"></a></p>
+<p>第四步: 选择图纸方向</p>
+<p>第五步: 是否使用AutoCAD内置标题栏</p>
+<p>第六步: 定义视口</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8d2308f701f991d92d650100e69d92439aaed22372e69856b97d21fa2f2b2361/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f357669417a7246425a396f504d774a2e77656270"><img src="https://camo.githubusercontent.com/8d2308f701f991d92d650100e69d92439aaed22372e69856b97d21fa2f2b2361/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f357669417a7246425a396f504d774a2e77656270" alt="l4.webp" data-canonical-src="https://s2.loli.net/2025/06/02/5viAzrFBZ9oPMwJ.webp" style="max-width: 100%;"></a></p>
+<p>第七部: 拾取设置</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d0a3a0278fafb03585c498905b902bbfed677c7c770b845fab1fd9de88bf4bf5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f6e4157566a4a73314539704e534c332e77656270"><img src="https://camo.githubusercontent.com/d0a3a0278fafb03585c498905b902bbfed677c7c770b845fab1fd9de88bf4bf5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f6e4157566a4a73314539704e534c332e77656270" alt="l5.webp" data-canonical-src="https://s2.loli.net/2025/06/02/nAWVjJs1E9pNSL3.webp" style="max-width: 100%;"></a></p>
+<p>第八步: 完成并关闭向导. 创建的布局如下图所示</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f076ac0b2a05ad52f4edec35e6fea02695f3df8e96763fee34c190b8ee8acd9c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f5868514d4178556e4f4e424843444a2e77656270"><img src="https://camo.githubusercontent.com/f076ac0b2a05ad52f4edec35e6fea02695f3df8e96763fee34c190b8ee8acd9c/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f5868514d4178556e4f4e424843444a2e77656270" alt="l6.webp" data-canonical-src="https://s2.loli.net/2025/06/02/XhQMAxUnONBHCDJ.webp" style="max-width: 100%;"></a></p>
+<h3>12.3 设置布局参数 <code class="notranslate">PAGESETUP</code></h3>
+<p>如果不需要使用样式表, 请忽略此步骤.</p>
+<ul>
+<li>方法一: <code class="notranslate">文件(F)</code> - <code class="notranslate">页面设置管理器</code></li>
+<li>方法二: 命令行输入 <code class="notranslate">PAGESETUP</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/23f30e1d38bacf48b2681d9070428bd65f74754406aa4235537056c848403cbe/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f3362486c44654c6343794f516867352e77656270"><img src="https://camo.githubusercontent.com/23f30e1d38bacf48b2681d9070428bd65f74754406aa4235537056c848403cbe/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f3362486c44654c6343794f516867352e77656270" alt="set1.webp" data-canonical-src="https://s2.loli.net/2025/06/02/3bHlDeLcCyOQhg5.webp" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/80a73be2bbc0aa40149baf92712496d1bd3a8a036df9c8ac1e20cbc33268c0c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f5936436742314a383546483733394b2e77656270"><img src="https://camo.githubusercontent.com/80a73be2bbc0aa40149baf92712496d1bd3a8a036df9c8ac1e20cbc33268c0c8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f30322f5936436742314a383546483733394b2e77656270" alt="set2.webp" data-canonical-src="https://s2.loli.net/2025/06/02/Y6CgB1J85FH739K.webp" style="max-width: 100%;"></a></p>
+<h3>12.4 将布局输出为PDF <code class="notranslate">PLOT</code></h3>
+<p>输出之前先使用 <code class="notranslate">文件(I)</code> - <code class="notranslate">打印预览</code> 查看效果</p>
+<p>再通过 <code class="notranslate">文件(I)</code> - <code class="notranslate">打印</code> 或在命令行输入 <code class="notranslate">PLOT</code> 将图形输出为PDF</p>
+<h2>十三、脚本 <code class="notranslate">SCRIPT</code></h2>
+<p>通过 <code class="notranslate">.scr</code> 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.</p></div>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section></main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">
+  <a class="in-nav-btn" href="https://interset-wq.github.io/rss.xml" title="RSS" target="_blank" aria-label="RSS Feed"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill-rule="evenodd"></path></svg></a>
+  <a class="in-nav-btn" href="https://github.com/interset-wq/interset-wq.github.io" title="GitHub" target="_blank" aria-label="GitHub Repository"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill-rule="evenodd"></path></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  <script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
