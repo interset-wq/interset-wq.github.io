@@ -44,175 +44,388 @@
   <main class="in-site-main" id="content">  <p class="in-site-subtitle">My notes on everything</p>
   <ul class="in-post-list">
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/97.html">
+      <a class="in-post-card-link" href="post/87.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>OOP面向对象</span>
+          <span>re 正则表达式Regular Expression</span>
         </div>
-        <p class="in-post-card-desc"># OOP面向对象
+        <p class="in-post-card-desc"># re 正则表达式Regular Expression
 
-要使用tkinter进行GUI设计，就不得不用到**面向对象**的编程思想。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/96.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>syntax4-文件和异常</span>
-        </div>
-        <p class="in-post-card-desc">## 七、文件操作
+[re官方文档](https://docs.python.org/zh-cn/3/library/re.html)
 
-### 7.1 文件操作基本流程
+[正则表达式指南](https://docs.python.org/zh-cn/3/howto/regex.html)
 
-1. 打开文件
-2. 读写文件
-3. 关闭文件
+## 正则表达式匹配模式
 
-### 7.2 通过open函数操作文件
+- `[]` 匹配其中之一,例如 `ma[dnt]` 匹配 `mad` , `man` 或 `mat`, `[a-d3-6]` 表示 `[a-d]` 和 `[3-6]` 的结合,即 `[abcd3456]`
+- `-` 到,例如 `a-d` 相当于 `abcd`, `0-9` 相当于 `0123456789`
+- `^` 否定,例如 `[^abc]`匹配不在方括号内的任意字符
+- `.` 任意单个字符(换行符除外)
+- `+` 匹配一次或多次前面的分组
+- `\` 转义字符,要匹配 `+`,需要使用 `\+`
+- `r` 纯字符串(raw string),用法类似于f-string,并且可以和f-string一起使用,纯字符串情况下,所有特殊字符被当作普通字符看待,此时不需要使用转义字符
+- ?匹配零次或一次前面的分组.
+- *匹配零次或多次前面的分组.
+- {n}匹配n次前面的分组.
+- {n,}匹配n次或更多前面的分组.
+- {,m}匹配零次到m次前面的分组.
+- {n,m}匹配至少n次、至多m次前面的分组.
+- {n,m}?或*?或+?对前面的分组进行非贪心匹配.
+- ^spam意味着字符串必须以spam开始.
+- spam$意味着字符串必须以spam结束.
 
-1. 打开文件
-   - `open(file, mode, encoding)` 函数，返回文件对象，用于打开文件或创建文件
-   - file参数 文件路径字符串
-   - mode参数 文件访问模式
-   - encoding参数 编码方式，推荐使用utf-8
+## 常用缩写
 
-    mode参数的可选值
+- `\d` 单个数字字符,相当于 `[0-9]`
+- `\D` 单个非数字字符,相当于 `[^0-9]`
+- `\w` 单个字母/数字/下划线字符,相当于 `[a-zA-Z0-9_]`
+- `\W` 单个非字母/数字/下划线的字符,相当于 `[^a-zA-Z0-9_]`
+- `\s` 单个空白字符,相当于 `[ \t\n\r\v\f]`
+- `\S` 单个非空白字符,相当于 `[^ \t\n\r\v\f]`
 
-    - 'r' 只读模式（默认）
-    - 'w' 覆写模式，覆盖文件原有内容，写入新内容。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/95.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>syntax3-语句和函数</span>
-        </div>
-        <p class="in-post-card-desc">## 五、判断语句和循环语句
+## 函数式编程和面向对象编程
 
-### 5.1 判断语句 
+search和findall可以使用函数,也可以使用方法进行匹配.两种写法差别不大,代码量也没有很大区别.
 
-判断语句if，和布尔数以及比较运算符一起使用。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/94.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>syntax2-基本数据类型</span>
-        </div>
-        <p class="in-post-card-desc">## 四、数据类型
+- search 只匹配第一个符合匹配模式的字符串,返回Match对象
+- findall 匹配所有符合匹配模式的字符串,返回 `list[str]` 对象
 
-基本数据类型有 `整型int` `浮点数float` `布尔数bool -> True/False` `字符串str` `复数complex` `空NoneType -> None` `列表list` `集合set` `元组tuple` `字典dict`。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/93.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>Python基础语法</span>
-        </div>
-        <p class="in-post-card-desc"># Python基础语法
+绝大多数情况下,findall明显比search更好用
 
-[Python官方文档](https://docs.python.org/zh-cn/3/)
+search和findall的函数式写法和方法式写法并没有太大的差别,只是采用了不同的编程思想——函数式编程和面向对象编程.
 
-python解释器可以使用Tab不全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行
+### search
 
-pass常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错
+=== '方法'
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = re.compile('ma')
+    match = pattern.search(my_str)
+    print(match) # <re.Match object; span=(39, 41), match='ma'>
+    print(match.group()) # ma
+    ```
 
-enum库 定义常量
+    - `re.compile()` 函数,传入一个字符串,返回一个Pattern对象,表示正则表达式的匹配模式,用pattren表示这个变量名
+    - Pattern对象的 `pattern.search()` 方法,在search方法传入的字符串中寻找满足条件的字符串,返回Match对象,用match表示这个变量名
+    - Match对象的 `match.group()`方法,返回查找字符串中实际匹配的文本
 
+=== '函数'
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = 'ma'
+    match = re.search(pattern, my_str)
+    print(match) # <re.Match object; span=(39, 41), match='ma'>
+    print(match.group()) # ma
+    ```
 
-## 一、注释和变量命名规范
+### findall
 
-### 1.1 注释
+=== '方法'
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = re.compile('ma')
+    match = pattern.findall(my_str)
+    print(match) # ['ma', 'ma']
+    ```
+=== '函数'
+    ```python
+    import re
+    my_str = 'Math is intresting, and I like learing mathmatics.'
+    pattern = 'ma'
+    match = re.findall(pattern, my_str)
+    print(match) # ['ma','ma']
+    ```
+    
+### sub
 
-- 单行注释 `#`
-- 多行注释 三重引号
-- 特殊注释 类似于shell脚本指定shell和字符编码
+正则表达式不仅能找到文本模式,而且能够用新的文本替换掉这些模式. Pattern对象的sub()方法需要传入两个参数.第一个参数是一个字符串,用于取代发现的匹配.第二个参数是一个字符串,返回替换完成后的字符串.
 
-``` py
-#!/usr/bin/env python3
-# -*- coding: cp1252 -*-
+=== '方法'
+    ```python
+    import re
+    my_str = 'Hello World!'
+    pattern = re.compile(r'World')
+    new_str = pattern.sub('Python', my_str)
+    print(new_str) # Hello Python!
+    ```
+
+=== '函数'
+    ```py
+    import re
+    my_str = 'Hello World!'
+    pattern = 'World'
+    new_str = re.sub(pattern, 'Python', my_str)
+    print(new_str) # Hello Python!
+    ```
+
+有时候,你可能需要使用匹配的文本本身,作为替换的一部分.在sub()的第一个参数中,可以输入\1、\2、\3…….表示“在替换中输入分组1、2、3……的文本”.
+
+```python
+import re
+my_str = 'My email is d111kc@foxmail.com, his email is jerry@example.com'
+pattern = re.compile(r'(\w)\w*@')
+new_str = pattern.sub(r'\1****@', my_str)
+print(new_str) # My email is d****@foxmail.com, his email is j****@example.com
 ```
 
-### 1.2 变量命名规则
+字符串中的 `\1` 将由分组1匹配的文本所替代,也就是正则表达式的 `(\w)` 分组.
 
-- 只能包含数字、字母、下划线，且不能以数字开头
-- 区分大小写，变量一般使用小写
-- 变量、函数名使用蛇形命名法
-- 类名使用大驼峰命名法
-- 常量命名时字母全大写
-- 见名知意
-- 命名时谨慎使用小写字母l和大写字母O，以免和数字混淆
-- 不能和python关键字重名
+## 正则表达式的特殊符号
 
-## 二、内置函数
+### 利用小括号 `()` 分组
 
-- `print()`函数
-- `input()`函数 返回用户输入的字符串
-- `type()`函数 返回数据类型
-- `range()`函数 生成等差数列，左闭右开区间，返回range对象，这是一个可迭代对象iterable
-    - `range(num)` 返回0到num之间的整数序列
-    - `range(num1,num2)` 返回两个数字之间的整数序列
-    - `range(num1,num2,step)` 返回两个数字之间的整数序列，通过step指定间隔大小
-- 类型转换函数
-    - `int()` 函数 转换为整型,不是四舍五入，而是舍弃小数点之后的部分
-    - `float()` 转换成小数
-    - `str()` 转换成字符串
-    - `list()` 函数
-    - `str()` 函数
-    - `tuple()` 函数
-    - `set()` 函数
+=== 'search方法'
+    ```python
+    import re
+    my_str = 'My phone num is 123-456-7890.'
+    pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+    match = pattern.search(my_str)
+    print(match.group()) # 123-456-7890
+    print(match.group(0)) # 123-456-7890
+    print(match.group(1)) # 123
+    print(match.group(2)) # 456-7890
+    print(match.groups()) # ('123', '456-7890')
+    ```
 
-## 三、运算符
+=== 'search函数'
+    ```python
+    import re
+    my_str = 'My phone num is 123-456-7890.'
+    pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
+    match = re.search(pattern, my_str)
+    print(match.group()) # 123-456-7890
+    print(match.group(0)) # 123-456-7890
+    print(match.group(1)) # 123
+    print(match.group(2)) # 456-7890
+    print(match.groups()) # ('123', '456-7890')
+    ```
 
-### 3.1 算术运算符和数学计算
+Pattern对象中的第一对括号是第1组,第二对括号是第2组(这与list等序列的下标从0开始不同,分组是从1开始)
 
-- `+` 加
-- `-` 减
-- `*` 乘
-- `/`除 计算结果是浮点数
-- `//` 整除
-- `%` 取余
-- `**` 乘方
+Match对象的 `.group()` 方法 和 `.groups()` 方法
 
-如果参与运算的数字中有浮点数，返回的结果也一定是浮点数
+- `match.group()` 或 `match.group(0)` 无视分组,返回符合匹配文本
+- `match.group()` 传入组号,返回对应分组的文本
+- `match.groups()` 获取所有分组的文本,返回 `tuple[str]` 对象
 
-交互模式下，上次输出的表达式会赋给变量 `_`
+---
 
-``` py
->>> 2+3
-5
->>> 10 + _
-15
+=== 'findall方法'
+    ```py
+    import re
+    my_str = 'My phone num is 123-456-7890.'
+    pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+    match = pattern.findall(my_str)
+    print(match) # [('123', '456-7890')]
+    ```
+
+=== 'findall函数'
+    ```py
+    import re
+    my_str = 'My phone num is 123-456-7890.'
+    pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
+    match = re.findall(pattern, my_str)
+    print(match) # [('123', '456-7890')]
+    ```
+
+面对分组时,findall的返回值是 `list[tuple]`,每个分组就是元组的元素
+
+### 使用管道 `|` 匹配多个分组
+
+字符“|”称为“管道”,表示“或”.如果有多个符合匹配的文本,则第一个出现的作为match对象返回.
+
+```py
+import re
+pattern = re.compile('Tom|Jerry') # 匹配Tom或Jerry字符串
+match1 = pattern.search('Tom and Jerry')
+print(match1.group()) # Tom
+match2 = pattern.search('Jerry and Tom')
+print(match2.group()) # Jerry
 ```
 
-除了 int 和 float，Python 还支持其他数字类型，例如 Decimal 或 Fraction。</p>
+```py
+import re
+pattern = re.compile(r'He(y|llo|ro)')
+match = pattern.search('Hello world.')
+print(match.group()) # Hello （无视分组）
+print(match.group(1)) # llo （第1组）
+```
+
+### 用问号 `?` 实现可选匹配
+
+字符?表示它前面的分组在这个匹配模式中是可选的,即匹配问号之前的分组一次或零次.
+
+```python
+import re
+pattern = re.compile(r'(py)?torch')
+match1 = pattern.search('I want to learn pytorch this week.')
+print(match1.group()) # pytorch
+match2 = pattern.search('I want to learn torch this week.')
+print(match2.group()) # torch
+```
+
+### 用星号 `*` 匹配任意次
+
+星号之前的分组,可以在文本中出现任意次.
+
+```python
+import re
+pattern = re.compile(r'Bat(wo)*man')
+match1 = pattern.search('the adventure of Batman')
+print(match1.group()) # Batman
+match2 = pattern.search('the adventure of Batwoman')
+print(match2.group()) # Batwoman
+match3 = pattern.search('the adventure of Batwowowowoman')
+print(match3.group()) # Batwowowowoman
+```
+
+从这个例子也可以看出正则表达式默认执行贪心匹配
+
+### 用加号 `+` 匹配一次或多次
+
+加号前面的分组至少出现一次.
+
+### 用花括号 `{}` 匹配特定次数
+
+如果想要一个分组重复特定次数,就在正则表达式中该分组的后面,跟上花括号包围的数字.除了一个数字,还可以指定一个范围,即在花括号内写下一个最小值、逗号、最大值.例如正则表达式(ha){3,5}匹配'hahaha','hahahaha','hahahahaha'.也可以不写花括号中的第一个或第二个数字,表示不限定最小值或最大值.
+
+### 非贪心匹配 `?`
+
+Python的正则表达式默认是贪心匹配,这表示在有二义的情况下,它们会尽可能匹配最长的字符串.花括号的“非贪心”版本匹配尽可能最短的字符串,即在结束的花括号后跟着一个问号.
+
+```python
+import re
+greed_pattern = re.compile(r'(Ha){3,5}')
+mo1 = greed_pattern.search('HaHaHaHaHa')
+print(mo1.group()) # HaHaHaHaHa
+nongreed_pattern = re.compile(r'(Ha){3,5}?')
+mo2 = nongreed_pattern.search('HaHaHaHaHa')
+print(mo2.group()) # HaHaHa
+```
+
+### 使用方括号 `[]` 建立字符分类
+
+可以用方括号定义自己的字符分类.例如,字符分类 `[aeiouAEIOU]` 将匹配所有元音字符,不论大小写.
+
+```python
+import re
+pattern = r'[aeiouAEIOU]'
+my_str = 'Python is VERY interesting.'
+my_list = re.findall(pattern, my_str)
+print(my_list) # ['o', 'i', 'E', 'i', 'e', 'e', 'i']
+```
+
+也可以使用连字符 `-` 表示字母或数字的范围.例如,字符分类 `[a-zA-Z0-9]` 将匹配所有小写字母、大写字母和数字.
+
+注意,在方括号 `[]` 内,普通的正则表达式符号不会被解释.你不需要前面加上倒斜杠转义`.`、`*`、`?`或`()`字符.例如,字符分类将匹配数字0到5和一个句点,则需要将它写成[0-5.] .通过在字符分类的左方括号后加上一个插入字符 `^`,就可以得到“非字符类”.非字符类将匹配不在这个字符类中的所有字符.
+
+```python
+import re
+pattern = r'[^aeiouAEIOU]'
+my_str = 'Python'
+my_list = re.findall(pattern, my_str)
+print(my_list) # ['P', 'y', 't', 'h', 'n']
+```
+### 插入字符 `^` 和美元字符 `$`
+
+可以在正则表达式的开始处使用插入符号 `^`,表明匹配必须发生在被查找文本开始处.类似地,可以再正则表达式的末尾加上美元符号 `$`,表示该字符串必须以这个正则表达式的模式结束.可以同时使用 `^` 和 `$`,表明整个字符串必须匹配该模式,也就是说,只匹配该字符串的某个子集是不够的.
+
+### 通配符 `.`
+
+在正则表达式中,句点字符 `.` 称为“通配符”.它匹配除了换行之外的所有字符.
+
+```python
+import re
+pattern = r'.at'
+my_str = 'The cat in the hat sat on the flat mat.'
+my_list = re.findall(pattern, my_str)
+print(my_list) # ['cat', 'hat', 'sat', 'lat', 'mat']
+```
+
+要记住,句点字符只匹配一个字符,所以,对于文本 `flat` ,只匹配 `lat.` 要匹配真正的句点,就是用倒斜杠转义.
+
+### 用点星 `.*` `.*?` 匹配所有字符
+
+可以用点星(.*)表示“任意文本”.句点字符表示“除换行外所有单个字符”,星号字符表示“前面字符出现零次或多次”.
+
+```python
+import re
+my_str = 'Hello world!'
+pattern = re.compile(r'(.*) world')
+match = pattern.search(my_str)
+print(match.group()) # Hello world!
+print(match.group(1)) # Hello
+```
+
+点星 `.*` 使用贪心匹配.要用非贪心模式匹配所有文本,就使用点星问 `.*?` .像和花括号一起使用时那样,问号告诉Python用非贪心模式匹配.
+
+```python
+import re
+my_str = '<Hello> <World>'
+# 非贪心匹配
+nongreddy_pattern = re.compile(r'<.*?>')
+match1 = nongreddy_pattern.search(my_str)
+print(match1.group()) # 输出结果 <Hello>
+# 贪心匹配
+greedy_regex = re.compile(r'<.*>')
+match2 = greedy_regex.search(my_str)
+print(match2.group()) # 输出结果 <Hello> <World>
+```
+## `re.compile()` 的可选参数
+
+### 用句点字符匹配换行 `re.DOTALL` (不建议使用)
+
+点-星将匹配除换行外的所有字符.通过传入 `re.DOTALL` 作为 `re.compile()` 的第二个参数,可以让句点字符匹配所有字符,包括换行字符.
+
+### 不区分大小写的匹配 `re.I` `re.IGNORECASE`
+
+通常,正则表达式默认区分大小写.要让正则表达式不区分大小写,可以向 `re.compile()` 传入 `re.IGNORECASE` 或 `re.I` ,作为第二个参数.
+
+```python 
+import re
+pattern = re.compile(r'hello', re.I)
+my_str1 = 'Hello World!'
+match1 = pattern.search(my_str1)
+print(match1.group()) # Hello
+my_str2 = 'HELLO World!'
+match2 = pattern.search(my_str2)
+print(match2.group()) # HELLO
+my_str3 = 'hello World!'
+match3 = pattern.search(my_str3)
+print(match3.group()) # hello
+```
+
+### 正则表达式中编写注释 `re.VERBOSE`
+
+可以向`re.compile()`传入变量`re.VERBOSE`,作为第二个参数.忽略正则表达式字符串中的空白符和注释.
+
+```python
+pattern = re.compile(r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}(\s*(ext|x|ext.)\s*\d{2,5})?)')# 这个正则表达式难以阅读,可以添加注释简化阅读
+# 三重引号表示多行字符串,也可表示注释
+pattern = re.compile(r'''(
+    (\d{3}|\(\d{3}\))? # 区号
+    (\s|-|\.)? # 分隔符
+    \d{3} # 3个数字
+    (\s|-|\.) # 分隔符
+    \d{4} # 4个数字
+    (\s*(ext|x|ext.)\s*\d{2,5})? # 扩展
+    )''', re.VERBOSE)
+```
+
+使用了三重引号(''),创建了一个多行字符串.这样就可以将正则表达式定义放在多行中,让它更可读.正则表达式字符串中的注释规则,与普通的Python代码一样：#符号和它后面直到行末的内容,都被忽略.而且,表示正则表达式的多行字符串中,多余的空白字符也不认为是要匹配的文本模式的一部分.
+
+### 使用管道 `|` 组合使用 `re.IGNORECASE` `re.DOTALL`和 `re.VERBOSE`(不推荐使用)
+
+如果你希望在正则表达式中使用re.VERBOSE来编写注释,还希望使用re.IGNORECASE来忽略大小写,该怎么办？遗憾的是,re.compile()函数只接受一个值作为它的第二参数.可以使用管道字符(|)将变量组合起来,从而绕过这个限制.管道字符在这里称为“按位或”操作符.所以,如果希望正则表达式不区分大小写,并且句点字符匹配换行,就可以这样构造re.compile()调用：
+
+```python
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL)
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
+```
+。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#3572a5">Python</span>
@@ -222,158 +435,246 @@ enum库 定义常量
       </a>
     </li>
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/92.html">
+      <a class="in-post-card-link" href="post/86.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>turtle</span>
+          <span>os 操作系统接口</span>
         </div>
-        <p class="in-post-card-desc">海龟绘图, 海龟的爬行足迹</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/91.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>pathlib 和 os.path文件操作</span>
-        </div>
-        <p class="in-post-card-desc"># pathlib 和 os.path文件操作
+        <p class="in-post-card-desc"># os 操作系统接口
 
-[os.path官方文档](https://docs.python.org/zh-cn/3/library/os.path.html)
-
-[pathlib官方文档](https://docs.python.org/zh-cn/3/library/pathlib.html)
-
-## 第一步：导入pathlib和os.path
-
-    from pathlib import Path
-    import os.path
-
-## 第二步：创建Path对象
-
-Path类：
-
-`Path(*pathsegments)` 传入文件路径或路径片段，路径之间使用逗号分隔，默认值是当前目录
-
-## 第二步：对Path对象进行操作
-
-### 2.1 path对象路径常用属性和方法
-
-- `parts` 将路径拆分，返回路径片段的元组
-- `drive` 返回盘符
-- `parents` 返回祖先路径
-- `parent` 返回父路径，相当于 `os.path.dirname()`函数
-- `name` 返回最末尾的路径（文件名或文件夹名），相当于 `os.path.basename()` 函数
-- `suffix` 返回文件后缀名（文件扩展名），相当于 `os.path.splitext()` 函数
-- `suffixes` 返回文件扩展名列表，主要针对文件后缀名中有多个 `.` 的后缀名
-- `stem` 返回去除后缀名的最末尾路径（不包含后缀名的文件名或文件夹名），相当于 `os.path.splitext()` 函数
-- `as_posix()` 返回使用 `/` 的文件路径，主要用于将windows路径的 `\\` 路径转换为 `/` 路径
-- `is_absolute()` 判断是否是绝对路径，相当于 `os.path.isabs()` 函数
-- `is_relative_to(other)` 判断此路径是否是相对于 other 的路径
-- `joinpath(*pathsegments)` 将传入的路径片段与path对象的路径组和，相当于 `os.path.join()` 函数
-- `with_name(name)` 返回一个新的路径并修改 name。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/90.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>标准库</span>
-        </div>
-        <p class="in-post-card-desc"># 标准库
-
-- os 操作系统接口
-- shutil 日常文件管理
-- glob 文件通配符
-- sys 命令行参数 错误输出重定向 终止程序
-- argparse 命令行参数
-- re 正则表达式
-- math 浮点数运算
-- random 随机数
-- statistics 统计（均值，中位数，方差等）
-- urllib.request 访问互联网
-- smtplib 发送邮件
-- datatime 日期和时间
-- zlib gzip bz2 lzma zipfile tarfile 文件压缩
-- timeit 性能测试
-- doctest 质量控制
-- unittest 单元测试
-- email 电子邮件
-- json 处理json文件
-- csv 处理csv文件
-- sqlite3 数据库
-- reprlib pprint textwrap local 格式化输出 
-- string 模板
-- struct 二进制数据
-- threading 多线程
-- logging 日志
-- weakref 弱引用
-- array
-- collections
-- bisect
-- heapq
-- demical 十进制浮点数
-- 。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/89.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>sys 和 argparse</span>
-        </div>
-        <p class="in-post-card-desc"># sys 和 argparse
-
-## sys 
-
-### 命令行参数
-
-一般的工具脚本常常需要处理命令行参数。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#3572a5">Python</span>
-          </span>
-          <span class="in-post-card-date">2025-09-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/88.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>shutil 日常文件管理操作</span>
-        </div>
-        <p class="in-post-card-desc"># shutil 日常文件管理操作
+提供用于与操作系统交互的函数
 
 ## 导入
 
-    import shutil
+    import os
 
-## 常用函数
-
-- shutil.copyfile(src, dst) 将src路径处的文件复制到dst路径
-- shutil.move(src, dst) 移动文件。</p>
+一定要使用 import os 而不是 from os import * 。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#3572a5">Python</span>
           </span>
           <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/85.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>数学相关库</span>
+        </div>
+        <p class="in-post-card-desc"># 数学相关库
+
+## math 浮点数数学运算
+
+## random 随机数
+
+## statistics 统计
+
+statistics 模块计算数值数据的基本统计属性（均值，中位数，方差等）。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#3572a5">Python</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/84.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>glob 文件通配符</span>
+        </div>
+        <p class="in-post-card-desc"># glob 文件通配符
+
+glob 模块提供了一个在目录中使用通配符搜索创建文件列表的函数
+
+## 导入
+
+    import glob
+
+。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#3572a5">Python</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/83.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>datetime 日期和时间</span>
+        </div>
+        <p class="in-post-card-desc"># datetime 日期和时间
+
+datetime 模块提供了以简单和复杂的方式操作日期和时间的类。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#3572a5">Python</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/82.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>Note</span>
+        </div>
+        <p class="in-post-card-desc"># Note
+
+## 使用C语言的7个步骤
+
+1. 定义程序的目标
+2. 设计程序
+3. 编写代码
+4. 编译
+5. 运行程序
+6. 测试和调试程序
+7. 维护和修改程序
+
+## 变量命名规则
+
+- 可以用小写字母、大写字母、数字和下划线（_）来命名。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#555555">C</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/81.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>JavaScript进阶语法</span>
+        </div>
+        <p class="in-post-card-desc">:material-pen-plus: `本文创建于2025-5-28`
+
+## 一、作用域
+
+作用域（scope）规定了变量能够被访问的“范围”，离开了这个“范围”变量便不能被访问，作用域分为：
+
+- 局部作用域
+    - 函数作用域
+    - 块作用域
+- 全局作用域
+
+### 1.1 局部作用域
+
+局部作用域分为函数作用域和块作用域。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#f1e05a">JavaScript</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/80.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>JavaScript基础语法</span>
+        </div>
+        <p class="in-post-card-desc"># JavaScript基础语法
+
+[MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+
+## 一、JavaScript简介
+
+### 1.1 JavaScript 代码的书写位置
+
+#### 1.1.1 内部js代码
+
+直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `</body>`的位置。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#f1e05a">JavaScript</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/79.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>README</span>
+        </div>
+        <p class="in-post-card-desc">## 一、JavaScript简介
+
+## 1.1 JavaScript 代码的书写位置
+
+### 1.1.1 内部js代码
+
+直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `</body>`的位置。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#f1e05a">JavaScript</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/78.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>pdfplumber 处理PDF文档</span>
+        </div>
+        <p class="in-post-card-desc"># pdfplumber 处理PDF文档
+
+[README.md](https://github.com/jsvine/pdfplumber)
+
+## Install
+
+    pip install pdfplumber
+
+## Import
+
+    import pdfplumber
+
+## 二、打开pdf文件，并创建一个pdf对象
+
+```py
+with pdfplumber.open(path) as pdf:
+```
+
+因为是对pdf文件的内容进行操作，所以通过`with open`语句可以避免忘记关闭文件
+
+`pdfplumber.open()` 返回一个PDF对象，函数的参数如下：
+
+- 第一个位置参数 文件路径或文件对象
+- `password` 参数 用于打开加密的 PDF 文件，传入密码即可
+
+PDF对象的属性和方法：
+
+- `metadata` 属性 用于获取 PDF 文件的元数据信息，返回一个字典
+- `pages` 属性 用于获取 PDF 文件的所有页面，返回一个Page对象列表
+
+## 三、创建Page对象（核心类）
+
+PDF文档的每一页都是一个Page对象
+
+Page对象的属性和方法：
+
+- `close()` 方法 用于关闭某页PDF
+- `page_number` 属性 用于获取这个Page对象在PDF文档中的页码，Page对象在`pdf.pages`属性中的下标从0开始，但是页码从1开始
+- `width` 属性 用于获取这个Page对象的页面宽度
+- `height` 属性 用于获取这个Page对象的高度
+- `crop(bounding_box, relative=False, strict=True)` 方法 用于裁剪页面，返回裁剪后的Page对象。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#3572a5">Python</span>
+          </span>
+          <span class="in-post-card-date">2025-08-15</span>
         </div>
       </a>
     </li>

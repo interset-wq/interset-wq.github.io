@@ -44,228 +44,16 @@
   <main class="in-site-main" id="content">  <p class="in-site-subtitle">My notes on everything</p>
   <ul class="in-post-list">
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/67.html">
+      <a class="in-post-card-link" href="post/57.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 5 使用提供程序</span>
+          <span>设备管理</span>
         </div>
-        <p class="in-post-card-desc"># DAY 5 使用提供程序
+        <p class="in-post-card-desc"># 设备管理
 
-## 提供程序PSProvider
+## 设备文件
 
-一个PowerShell的提供程序，即PSProvider，本质上是一个适配器。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/66.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 4 运行命令</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 4 运行命令
-
-## 剖析一个命令
-
-``` powershell
-> Get-EventLog -LogName Security -ComputerName WIN8,Server1 -Verbose
-```
-
-> [!NOTE]
-> 这个命令在新版powershell中的写法已经发生了改变，与这种写法有较大差异
-
-分析这个命令：
-
-- `Get-EventLog` 是cmdlet，powershell cmdlet总是以 **动词+名词** 形式命令
-- `-LogName Security` 是参数1，参数名是 `-LogName`，赋值为 `Security`，如果赋值的字符串中有空格需要使用引号包裹
-- `-ComputerName WIN8,Server1` 是参数2，参数名是 `ComputerName`，以分隔列表的方式给它赋了2个值，`WIN8` 和 `Server1`
-- `-Verbose` 是开关参数，无需赋值，只需要指定参数即可
-
-> [!IMPORTANT]
-> - cmdlet与参数1之间必须要有空格分隔
-> - 参数名总是以 `-` 开头
-> - 参数名之间需要使用空格分隔，多个参数值之间也必须有空格
-> - `-` 与参数名之间没有空格
-> - powershell不区分大小写
-
-## 相关术语
-
-- cmdlet，即command-let，是一个原生的powershell命令行工具，这是powershell专用术语，表示powershell中的命令
-- 函数，和cmdlet类似，但不以 `.NET` 语言编写，而是以powershell脚本编写而成
-- 工作流，是指嵌入powershell的工作流执行系统的一类特殊函数
-- 应用程序，是任意类型的外部可执行程序，包括 `PING` `Ipconfig` 等命令行工具
-- 命令，是一个通用术语，上面介绍的cmdlet，函数，工作流，应用程序都可以称为命令
-
-## 命名规范
-
-以 `动词-名词单数` 的格式命名，使用的动词需要在 `Get-Verb` 返回的列表中，以保证命名的规范性，名词随意
-
-## 命令的别名（命令的昵称）
-
-别名一般是命令的缩写形式，有些命令实在是太长了，因此别名可以解决命令太长容易输入错误的问题。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/65.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 3 使用帮助系统</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 3 使用帮助系统
-
-命令行接口，即CLIs(command-line interfaces)
-
-RTFM(Read The Friendly Manual)帮助文档
-
-Cmdlet，即powershell独有的概念，绝大多数powershell命令都可以看作是cmdlet
-
-## 通过help查看某条命令的帮助文档
-
-``` powershell
-PS C:\Users\86183> help Get-Service
-
-名称
-    Get-Service
-
-语法
-    Get-Service [[-Name] <string[]>]  [<CommonParameters>]
-
-    Get-Service  [<CommonParameters>]
-
-    Get-Service  [<CommonParameters>]
-
-
-别名
-    gsv
-
-
-备注
-    Get-Help 在此计算机上找不到该 cmdlet 的帮助文件。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/64.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 2 初识PowerShell</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 2 初识PowerShell
-
-在32位操作系统x86中，最多只有两个powershell图标，分别是
-
-- Windows PowerShell 32位控制台
-- Windows PowerShell ISE 32位图形化控制台
-
-在64位操作系统x64中，最多有4个powershell图标，分别是
-
-- Windows PowerShell 64位和32位控制台
-- Windows PowerShell ISE 64位和32位图形化控制台
-- Windows PowerShell(x86) 64位系统上的32位控制台
-- Windows PowerShell ISE(x86) 34位系统上的32位图形化控制台
-
-即32位操作系统仅有32位的powershell，而64位操作系统可以同时有32位和64位两个版本的powershell，32位版本的会在末尾注明 `(x86)`
-
-## 通过终端powershell控制台打开ISE
-
-``` powershell
-PS C:\Users\86183> ise
-```
-
-回车之后会自动打开集成脚本环境（Windows PowerShell ISE）
-
-## 四种方式的Tab键补全
-
-PowerShell控制台和集成脚本环境（ISE）都支持4中Tab补全以减少输入错误：
-
-- 补全命令：输入 `Get-S`，通过Tab键，或shift+tab组合键可以循环显示以 `Get-S` 开头的命令
-- 补全路径：输入 `Dir`，按空格，输入 `C:\`，再按Tab，会补全该目录内文件或目录的路径
-- 补全选项：输入 `Dir -`，按Tab键，循环显示这个命令支持的选项
-- 补全参数：在补全选项的基础上，再输入一个空格，通过按Tab键，可以循环显示这个命令的参数的合法值。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/63.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 1 背景介绍</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 1 背景介绍
-
-用户图形化界面（GUI）是Windows的最大特点
-
-名词解释：
-
-- 64位操作系统 x64
-- 32位操作系统 x86
-- 图形化powershell集成脚本环境，即ISE
-
-反引号`之后不要随意添加空格等空白字符
-
-## 检查powershell版本
-
-``` powershell
-PS C:\Users\86183> $PSVersionTable
-
-Name                           Value
-----                           -----
-PSVersion                      5.1.26100.4202
-PSEdition                      Desktop
-PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
-BuildVersion                   10.0.26100.4202
-CLRVersion                     4.0.30319.42000
-WSManStackVersion              3.0
-PSRemotingProtocolVersion      2.3
-SerializationVersion           1.1.0.1
-```
-
-## PowerShell的两个组件
-
-- 基于文本的标准控制台powershell.exe，即终端命令行
-- 集成了命令行环境的图形化界面powershell_ise.exe，即ISE
-
-
-。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/62.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>Web 服务器搭建、应用开发与部署</span>
-        </div>
-        <p class="in-post-card-desc"># Web 服务器搭建、应用开发与部署
-
-Linux 下，采用 Eclipse 开发工具，基于 MVC 的 Java Web 开发，使用当下较为流行的 SSM
-框架进行演示。</p>
+Linux 中，用户是通过文件系统与设备连接的。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#1d76db">Linux</span>
@@ -275,14 +63,14 @@ Linux 下，采用 Eclipse 开发工具，基于 MVC 的 Java Web 开发，使�
       </a>
     </li>
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/61.html">
+      <a class="in-post-card-link" href="post/56.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>OpenSSH</span>
+          <span>存储管理</span>
         </div>
-        <p class="in-post-card-desc"># OpenSSH
+        <p class="in-post-card-desc"># 存储管理
 
-OpenSSH 是安全 shell 协议（secure shell，简称 SSH）的免费开源实现。</p>
+在Linux系统中“一切皆文件”，所有文件都放置在以根目录为树根的树形目录结构中。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#1d76db">Linux</span>
@@ -292,84 +80,209 @@ OpenSSH 是安全 shell 协议（secure shell，简称 SSH）的免费开源实�
       </a>
     </li>
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/60.html">
+      <a class="in-post-card-link" href="post/55.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>Emacs 编辑器</span>
+          <span>进程管理</span>
         </div>
-        <p class="in-post-card-desc"># Emacs 编辑器
+        <p class="in-post-card-desc"># 进程管理
 
-## 安装
+有 3 个作用：
+1.判断服务器的健康状态；2.查看系统中所有进程；3.杀死进程
 
-centos
+## 进程监控
+
+### ps 命令
+缺乏时效性最常用进程监控命令，可查看系统中所有运行进程的详细信息。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/54.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>文件管理</span>
+        </div>
+        <p class="in-post-card-desc"># 文件管理
+
+## 文件系统
+
+Linux文件系统中的文件是数据的集合，文件系统不仅包含着文件中的数据而且包含文件系统的结构，所有Linux用户和程序看到的文件、目录及文件保护信息等都存储在文件系统中。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/53.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>用户管理</span>
+        </div>
+        <p class="in-post-card-desc"># 用户管理
+
+## 用户与用户组管理
+
+用户和用户组管理，就是添加用户和用户组、更改密码和设定权限等操作。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/52.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>VI编辑器</span>
+        </div>
+        <p class="in-post-card-desc"># VI编辑器
+
+Linux系统支持多种行编辑器和全屏编辑器，用户可以方便地创建、修改、删除文件。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-03</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/51.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>shell 脚本编程基础</span>
+        </div>
+        <p class="in-post-card-desc"># shell 脚本编程基础
+
+## shell 编程概述
+
+shell 本身是一个用 C 语言编写的程序，是连接 用户 和 UNIX/Linux 内核 的桥梁。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-03</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/50.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>常用Linux命令</span>
+        </div>
+        <p class="in-post-card-desc"># 常用Linux命令
+
+## Linux 命令提示符
+
+- root用户 `[root@localhost ~]#`
+- 普通用户 `[d111kc@localhost Desktop]$`
+
+命令提示符的说明：
+
+- `root` 和 `d11kc` 表示当前的登陆用户
+- `@` 是分隔符号，没有特殊含义
+- `localhost` 当前系统的主机名（`localhost`完整名 `localhost.localdommain`），主机名是电脑的设备名，自定义设备名之后显示的不是`localhost`
+- `~` 和 `Desktop` 当前所在目录 `~` 特指用户文件夹（家目录/主目录），root用户的用户文件夹是 `/root`，普通用户的用户文件夹是 `/home/<username>`，打开终端时默认进入的是家目录
+- `#` 和 `$` 命令提示符，root用户是 `#`，普通用户是 `$`
+
+## Linux 命令的基本格式
+
+`$ 命令 [选项] [参数]`
+
+Linux 选项：
+
+- 短格式选项 为英文简写，以 `-` 开头
+- 长格式选项 为完整英文单词，以 `--` 开头
 
 ``` bash
-$ yum install emacs
+[d111kc@localhost ~]$ ls
+Desktop    Downloads  Pictures  Templates
+Documents  Music      Public    Videos
+[d111kc@localhost ~]$ ls -l
+总用量 0
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Desktop
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Documents
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Downloads
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Music
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Pictures
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Public
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Templates
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Videos
+[d111kc@localhost ~]$ ls --all
+.              .bashrc  Desktop    .ICEauthority  Pictures
+..             .cache   Documents  .local         Public
+.bash_logout   .config  Downloads  .mozilla       Templates
+.bash_profile  .dbus    .esd_auth  Music          Videos
 ```
 
-## Emacs 的操作
+`ls` 可以不传参，是因为它有默认参数，那就是当前所在目录
 
-### Emacs 的启动
-
-emacs使用图形化界面编辑文件，并不使用类似于vim的命令行界面
-
-打开emacs
-
-``` bash
-$ emacs
-```
-
-通过emacs打开文件，文件不存在时，创建新文件：
-
-``` bash
-$ emacs hello.txt
-```
-
-模式行是emacs界面倒数第二行。</p>
+命令的选项用于调整命令的执行方式，而命令的参数是这个命令的操作对象。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#1d76db">Linux</span>
           </span>
-          <span class="in-post-card-date">2025-08-06</span>
+          <span class="in-post-card-date">2025-08-03</span>
         </div>
       </a>
     </li>
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/59.html">
+      <a class="in-post-card-link" href="post/49.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>系统服务与日志</span>
+          <span>介绍</span>
         </div>
-        <p class="in-post-card-desc"># 系统服务与日志
+        <p class="in-post-card-desc"># 介绍
 
-## Linux 系统服务
+## 计算机体系结构与操作系统
 
-Linux系统服务有时也称为守护程序，是在Linux系统启动时自动加载并在Linux系统退出时自动停止的系统任务。</p>
+冯诺依曼体系的结构要点：计算机数制采用二进制，程序指令和数据统一存储，计算机应按照程序顺序执行。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#1d76db">Linux</span>
           </span>
-          <span class="in-post-card-date">2025-08-06</span>
+          <span class="in-post-card-date">2025-08-03</span>
         </div>
       </a>
     </li>
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/58.html">
+      <a class="in-post-card-link" href="post/111.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>网络管理</span>
+          <span>threading</span>
         </div>
-        <p class="in-post-card-desc"># 网络管理
+        <p class="in-post-card-desc">:material-pen-plus: `本文创建于2025-4-17`
 
-## 管理网络接口
+[:simple-python: threading官方文档](https://docs.python.org/zh-cn/3/library/threading.html){ .md-button .md-button--primary }
 
-计算机的基本网络参数包括那些？
-1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。</p>
+## 导入threading
+
+    from threading import Thread
+
+## 第一步：创建thread对象
+
+Thread类：
+
+`Thread(group, target, name, args, kwargs, daemon)`
+
+创建thread对象时必须使用关键字参数传参，禁止使用位置参数。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+            <span class="in-badge" style="background-color:#3572a5">Python</span>
           </span>
-          <span class="in-post-card-date">2025-08-06</span>
+          <span class="in-post-card-date">2025-07-31</span>
         </div>
       </a>
     </li>
