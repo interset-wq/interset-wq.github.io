@@ -24,6 +24,3 @@ repo = "interset-wq/interset-wq.github.io"  # 评论存储的仓库（需开启 
 repo_id = "R_kgDOTWqpPQ"
 category = "Announcements"
 category_id = "DIC_kwDOTWqpPc4DBFW-"
-
-[features]
-visit_counter = "busuanzi"   # off | vercount | busuanzi
