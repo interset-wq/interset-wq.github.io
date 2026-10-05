@@ -16,7 +16,7 @@ name: build Internote
 on:
   workflow_dispatch:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, closed]
 
 jobs:
   build:
