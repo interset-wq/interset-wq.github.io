@@ -3,7 +3,7 @@
 
 [site]
 title = "InterNote"
-sub_title = "My notes on everything.
+sub_title = "My notes on everything."
 language = "CN"              # CN | EN
 utc = 8                      # 时区偏移（小时）
 
