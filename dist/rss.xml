@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 14:36:20 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>+++&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 14:37:04 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>+++&#13;
 date = 2025-08-06T20:38:14+08:00&#13;
 +++&#13;
 &#13;
@@ -214,12 +214,7 @@ Linux某些程序的运行，如果想要强制停止它，可以使用快捷键
 
 可以通过快捷键：`ctrl`+`r` ，输入内容去匹配历史命令
 
-如果搜索到的内容是你需要的，那么：回车键可以直接执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/106.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux 用户和权限</title><link>https://interset-wq.github.io/post/107.html</link><description># Linux 用户和权限
-
-
-## 一、超级管理员——root用户
-
-无论是Windows、MacOS、Linux均采用多用户的管理模式进行权限管理。</description><guid isPermaLink="true">https://interset-wq.github.io/post/107.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux文件操作</title><link>https://interset-wq.github.io/post/99.html</link><description># Linux文件操作
+如果搜索到的内容是你需要的，那么：回车键可以直接执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/106.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux文件操作</title><link>https://interset-wq.github.io/post/99.html</link><description># Linux文件操作
 
 Linux严格区分大小写，所有目录和文件名都要区分大小写
 
