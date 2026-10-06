@@ -4,7 +4,7 @@
 [site]
 title = "InterNote"
 sub_title = "My notes on everything"
-avatar_url = "https://github.githubassets.com/favicons/favicon.svg"
+avatar_url = "https://github.com/interset-wq.png"
 # home_url = ""             # 留空则自动推导（GitHub Pages 地址）
 language = "CN"              # CN | EN
 utc = 8                      # 时区偏移（小时）
