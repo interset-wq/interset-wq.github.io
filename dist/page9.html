@@ -44,60 +44,6 @@
   <main class="in-site-main" id="content">  <p class="in-site-subtitle">My notes on everything</p>
   <ul class="in-post-list">
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/35.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>使用 Excel 处理角度</span>
-        </div>
-        <p class="in-post-card-desc">:material-pen-plus: `本文创建于2025-5-28`
-
-众所周知电脑并不能直接对角度制表示的角度进行计算, 使用计算机对角度进行计算时,往往要先化角度制为弧度制.
-
-Excel 可以通过一些公式进行角度制角度的计算, 思路是 {==先将角度制转换为弧度制, 然后再将弧度制转换成角度制==}, 为了实现这个运算,往往需要用到以下公式:
-
-- `PI()` 常数 π
-- `INT()` 取整函数,对传入的数值进行取整,舍弃小数位
-- `RADIANS()` 传入数值,单位默认为°, 将角度制转换为弧度制
-- `DEGREES()` 传入数值,单位默认为rad, 将弧度制转换成角度制
-- `ROUND(num,num-digits)` 四舍五入函数,传入数值,和需要保留的位数,对数值进行四舍五入
-
-有些时候我们并不喜欢使用小数表示角度制角度,例如 $45.5 \degree$, 而是使用度分秒表示角度, 如 $45 \degree 30' 00''$, 在由于角度制角度是60进制,因此计算显得非常麻烦.
-
-![e.jpg](https://s2.loli.net/2025/05/28/DboYRuHE1QOpJha.jpg)
-
-使用度分秒为单位时,应分别将度分秒写在不同的单元格中(如上表所示).以下通过`ROW 3`进行说明
-
-- `D3` 单元格 通过公式 `=RADIANS(A3+B3/60+C3/3600)` 将 $180 \degree 45' 12''$ 转化为 3.154740801 rad
-- `E3` 单元格 通过公式 `=DEGREES(D3)` 将 3.154740801 rad 转化为 $180.7533333 \degree$, 也可以通过公式 `=A3+B3/60+C3/3600` 将 $180 \degree 45' 12''$ 转换为 $180.7533333 \degree$
-- `F3` 单元格 通过公式 `=INT(E3)` 对以度为单位的角度取整,从而获取以度分秒为单位时的度数
-- `G3` 单元格 通过公式 `=INT((E3-F3)*60)` 先获取以度为单位角度的小数位,再乘以60获得有小数位分数,再取整获得以度分秒为单位时的分数
-- `H3` 单元格 通过公式 `=(E3-F3-G3/60)*3600` 依次减去以度分秒为单位的度数,和化为度数的分数,得到剩余的度数,再乘以3600,将度数化为秒数,从而得到以度分秒为单位的秒数
-
-???+ tip
-    可以将度分秒统一转换为秒进行计算.
-
-    - 度数 = INT(总秒数/3600)
-    - 分数 = INT(总秒数 - 度数*60)
-    - 秒数 = 总秒数 - 3600*度数 - 60*分数
-
-???+ tip
-    对精度有要求时,应该使用 `ROUND()` 函数来控制精度.
-
-???+ warning
-    计算时可能会出现精度问题,例如 `G6` 和 `H6` 单元格 就出现了精度问题.
-
-
-
-。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#cccccc">Other</span>
-          </span>
-          <span class="in-post-card-date">2025-07-31</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
       <a class="in-post-card-link" href="post/34.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
@@ -896,10 +842,104 @@ Git 使用用户名将提交与身份关联。</p>
         </div>
       </a>
     </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/23.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>chinadaily</span>
+        </div>
+        <p class="in-post-card-desc">## 2025
+
+### July 11
+
+- [x] designate v.指定，指派 adj.尚未就职的
+- [ ] reproductive adj.生殖的，繁殖的
+- [x] profound adj.意义深远的，彻底的
+- [ ] demographic adj.人口(统计)学的 n.人口统计数据
+- [ ] fertility n.富饶，可繁殖性
+- [ ] depopulation n.人口减少，灭绝
+- [x] respondent n.调查对象，被告
+- [x] constraint n.限制，约束
+- [ ] socioeconomic adj.社会经济的
+- [ ] disparity n.差异，差距
+- [x] aspiration n.渴望，抱负，志向
+- [ ] encompass v.包含，涉及
+- [ ] subsidy n.补贴
+    - [ ] subsidize v.资助，补助
+- [x] initiative n.倡议
+- [ ] maternity n.怀孕
+- [ ] maternal adj.母亲的
+- [x] inclusive adj.包括在内的，范围广泛的
+- [ ] exclude v.排除，不包括，防止……进入
+- [ ] incentive adj.激励，鼓励，刺激
+- [x] eliminate v.消除
+- [x] stereotype n.刻板印象
+- [ ] spouse n.配偶
+- [ ] discard v.抛弃，丢弃
+
+---
+
+### July 12
+
+- [ ] epic adj.史诗，惊人之举 adj.宏大的，壮丽的
+- [ ] trudge v.费力地走
+- [ ] dusty adj.布满灰尘的
+- [ ] suspend v.暂停，终止，推迟
+- [ ] asphalt v.&n.(铺)沥青
+- [ ] emblematic adj.典型的，象征的
+- [ ] microcosm n.缩影
+- [x] alleviation n.减轻，缓和
+- [ ] portray v.描绘
+- [ ] anthropologist n.人类学家
+- [ ] methodology n.方法(论)，原则
+- [ ] gaunt adj.&v.(使)憔悴(的)，破败的
+- [ ] stoop v.俯身，弯腰
+- [ ] barometer n.晴雨表，指标，气压计
+- [ ] metamorphosis n.变形，质变
+- [ ] dwelling n.住宅，公寓
+- [x] external n.&adj.外部(的)
+
+---
+
+### July 13
+
+- [ ] pave v.铺路 n.铺路的材料
+- [ ] witty adj.机智的，妙趣横生的
+- [ ] prevail v.盛行，战胜，压倒，被接受
+- [ ] proceeding adj.前面的
+- [ ] prudent adj.谨慎的，节俭的
+- [ ] mobility n.流动性
+    - [ ] mobilize v.动员，调用，组织
+- [ ] revival n.复兴，重演，再流行
+- [ ] stake n.股份 v.以……打赌
+- [x] diminish v.减少，降低
+- [x] fetch v.拿来，请来
+- [ ] perception n.感知，看法，见解
+- [ ] hierarchical adj.等级制的，按等级划分的
+- [ ] multistory adj.多层的 n.多层建筑
+- [ ] obsession n.痴迷，困扰
+- [ ] nurture v.培养，支持
+- [ ] unleash v.使爆发，发泄，突然释放
+- [ ] rigid adj.坚硬的，刻板的，严格的，精确的
+
+--- 
+
+### July 14
+
+- [x] legacy n.遗产，后遗症 adj.已停产的
+- [ ] proportion n。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#9c6ade">English</span>
+          </span>
+          <span class="in-post-card-date">2025-07-31</span>
+        </div>
+      </a>
+    </li>
   </ul>
   <nav class="in-pagination" aria-label="Pagination">
     <a rel="previous" href="https://interset-wq.github.io/page8.html" aria-label="Previous Page">上一页</a>
-    <a rel="next" href="https://interset-wq.github.io/page10.html" aria-label="Next Page">下一页</a>
+    <span class="in-disabled" aria-disabled="true">下一页</span>
   </nav>
 </main>
   <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons">

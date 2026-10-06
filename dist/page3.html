@@ -44,58 +44,6 @@
   <main class="in-site-main" id="content">  <p class="in-site-subtitle">My notes on everything</p>
   <ul class="in-post-list">
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/99.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>Linux文件操作</span>
-        </div>
-        <p class="in-post-card-desc"># Linux文件操作
-
-Linux严格区分大小写，所有目录和文件名都要区分大小写
-
-## Linux的目录结构
-
-![image-20221027214128453](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027214128.png)
-
-- `/` 叫做根目录，是最顶级的目录
-- Linux只有一个顶级目录：根目录`/`，而Windows有多个顶级目录，如C盘、D盘等，Linux不分盘
-- 路径描述的层次关系同样适用`/`来表示，Windows用`\`表示目录的层次关系
-- `/home/note/a.txt`，表示根目录下的 `home` 文件夹内有 `note` 文件夹，内有 `a.txt`，第一个 `/` 表示根目录，其他的 `/` 表示不同目录层次的分隔符号
-
-## 当前工作目录和HOME目录
-
-- HOME目录指：用户在系统内的专属目录，类似于Windows的用户文件夹
-- Linux终端（命令行）启动后默认将HOME目录作为当前工作的目录，类似于Windows powershell和cmd打开后命令提示符显示的路径是用户文件夹
-
-## Linux命令的基本格式
-
-`command [-options] [parameter]`
-
-## ls命令
-
-功能：列出文件夹信息
-
-语法：`ls [-l -h -a] [参数]`
-
-- 选项：
-    - `-l`，以列表形式查看，竖向显示
-    - `-h`，配合`-l`，以易于阅读的形式，列出文件大小，如显示K、M、G等单位，而不是默认不显示单位
-    - `-a`，显示隐藏文件
-    - 同时使用多个选项，例如：`ls -l -a` `ls -la` `ls -al` 上述三种写法没有区别，表示同时应用`-l`和`-a`选项
-- 参数：被查看的文件夹的路径，不提供参数，表示查看当前工作目录
-
-### 隐藏文件、文件夹
-
-在Linux中以`.`开头的，均是隐藏的。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#1d76db">Linux</span>
-          </span>
-          <span class="in-post-card-date">2025-09-10</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
       <a class="in-post-card-link" href="post/112.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
@@ -772,6 +720,29 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 ## statistics 统计
 
 statistics 模块计算数值数据的基本统计属性（均值，中位数，方差等）。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#3572a5">Python</span>
+          </span>
+          <span class="in-post-card-date">2025-09-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/84.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>glob 文件通配符</span>
+        </div>
+        <p class="in-post-card-desc"># glob 文件通配符
+
+glob 模块提供了一个在目录中使用通配符搜索创建文件列表的函数
+
+## 导入
+
+    import glob
+
+。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#3572a5">Python</span>
