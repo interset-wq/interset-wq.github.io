@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 14:23:45 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 14:28:02 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
 
 这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>第三篇测试：多标签文章</title><link>https://interset-wq.github.io/post/3.html</link><description>第三篇测试：多标签文章
 
@@ -4253,38 +4253,7 @@ SerializationVersion           1.1.0.1
 - 集成了命令行环境的图形化界面powershell_ise.exe，即ISE
 
 
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/63.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>DAY 2 初识PowerShell</title><link>https://interset-wq.github.io/post/64.html</link><description># DAY 2 初识PowerShell
-
-在32位操作系统x86中，最多只有两个powershell图标，分别是
-
-- Windows PowerShell 32位控制台
-- Windows PowerShell ISE 32位图形化控制台
-
-在64位操作系统x64中，最多有4个powershell图标，分别是
-
-- Windows PowerShell 64位和32位控制台
-- Windows PowerShell ISE 64位和32位图形化控制台
-- Windows PowerShell(x86) 64位系统上的32位控制台
-- Windows PowerShell ISE(x86) 34位系统上的32位图形化控制台
-
-即32位操作系统仅有32位的powershell，而64位操作系统可以同时有32位和64位两个版本的powershell，32位版本的会在末尾注明 `(x86)`
-
-## 通过终端powershell控制台打开ISE
-
-``` powershell
-PS C:\Users\86183&gt; ise
-```
-
-回车之后会自动打开集成脚本环境（Windows PowerShell ISE）
-
-## 四种方式的Tab键补全
-
-PowerShell控制台和集成脚本环境（ISE）都支持4中Tab补全以减少输入错误：
-
-- 补全命令：输入 `Get-S`，通过Tab键，或shift+tab组合键可以循环显示以 `Get-S` 开头的命令
-- 补全路径：输入 `Dir`，按空格，输入 `C:\`，再按Tab，会补全该目录内文件或目录的路径
-- 补全选项：输入 `Dir -`，按Tab键，循环显示这个命令支持的选项
-- 补全参数：在补全选项的基础上，再输入一个空格，通过按Tab键，可以循环显示这个命令的参数的合法值。</description><guid isPermaLink="true">https://interset-wq.github.io/post/64.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>DAY 3 使用帮助系统</title><link>https://interset-wq.github.io/post/65.html</link><description># DAY 3 使用帮助系统
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/63.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>DAY 3 使用帮助系统</title><link>https://interset-wq.github.io/post/65.html</link><description># DAY 3 使用帮助系统
 
 命令行接口，即CLIs(command-line interfaces)
 
