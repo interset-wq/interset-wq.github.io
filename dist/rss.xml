@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 15:33:35 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>+++&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 16:13:49 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>+++&#13;
 date = 2025-09-06T23:15:30+08:00&#13;
 +++&#13;
 # 内置函数&#13;
@@ -6188,84 +6188,7 @@ date = 2025-07-31T10:18:38+08:00&#13;
 &#13;
 ## STEP1 在 Git 中设置用户名和邮箱&#13;
 &#13;
-Git 使用用户名将提交与身份关联。</description><guid isPermaLink="true">https://interset-wq.github.io/post/27.html</guid><pubDate>Mon, 05 Oct 2026 15:07:44 +0000</pubDate></item><item><title>First Contributions</title><link>https://interset-wq.github.io/post/26.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = 'Git协作'&#13;
-+++&#13;
-✏️ `本文创建于2025-5-16`&#13;
-&#13;
-[:simple-github: First Contributions](https://github.com/firstcontributions/first-contributions)&#13;
-&#13;
-## STEP1 Fork other's repo &#13;
-&#13;
-Fork repo [first-contributions](https://github.com/firstcontributions/first-contributions)&#13;
-&#13;
-## STEP2 Clone my repo forked from others&#13;
-&#13;
-```bash&#13;
-$ git clone https://github.com/interset-wq/first-contributions.git&#13;
-```&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;note&lt;/summary&gt;&#13;
-&#13;
-此处使用的是HTTPS,也可以使用SSH&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-## STEP3 创建一个新分支&#13;
-&#13;
-1. 切换目录到 clone 到本地的 repo 的目录中&#13;
-2. 使用 `git switch` 命令新建一个代码分支&#13;
-&#13;
-    ```bash&#13;
-    $ git switch -c &lt;新分支的名称&gt;&#13;
-    ```&#13;
-&#13;
-    此处创建一个add-myname分支:&#13;
-&#13;
-    ```bash&#13;
-    $ git switch -c add-interset-wq&#13;
-    ```&#13;
-&#13;
-## STEP4 修改代码, Commint 修改&#13;
-&#13;
-1. 修改 `Contributors.md` 中的内容&#13;
-2. 检查状态(可选, 输出信息中,被修改的文件的文件名会被标红)&#13;
-&#13;
-    ```bash&#13;
-    $ git status&#13;
-    ```&#13;
-&#13;
-3. 添加改动&#13;
-&#13;
-    ```bash&#13;
-    $ git add Contributors.md&#13;
-    ```&#13;
-&#13;
-4. 检查状态(可选,输出信息中,刚才标红的文件名现在标绿)&#13;
-5. 提交修改&#13;
-&#13;
-    ```bash&#13;
-    $ git commit -m 'Add interset-wq to Contributors list'&#13;
-    ```&#13;
-&#13;
-6. Push 到 GitHub repo&#13;
-&#13;
-    ```bash&#13;
-    $ git push origin &lt;分支的名称&gt;&#13;
-    ```&#13;
-&#13;
-    此处推送的分支为前面新建的分支add-interset-wq&#13;
-    ```bash&#13;
-    $ git push origin add-interset-wq&#13;
-    ```&#13;
-&#13;
-## STEP5 Pull Request(PR)&#13;
-&#13;
-1. 刚刚从别人那里fork的repo上方出现 `Compare &amp; pull request` 的按钮,点击此按钮&#13;
-2. 点击 `Create pull request` 按钮，正式提交 pull request&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/26.html</guid><pubDate>Mon, 05 Oct 2026 15:07:37 +0000</pubDate></item><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
+Git 使用用户名将提交与身份关联。</description><guid isPermaLink="true">https://interset-wq.github.io/post/27.html</guid><pubDate>Mon, 05 Oct 2026 15:07:44 +0000</pubDate></item><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
 
 这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>第三篇测试：多标签文章</title><link>https://interset-wq.github.io/post/3.html</link><description>第三篇测试：多标签文章
 
@@ -6644,7 +6567,81 @@ soup对象的属性和方法：
 ???+ warning
     创建 repo 时,一定要创建 `README.md` `.gitignore` 和 `LICENSE` 文件,减少不必要的麻烦
 
-`git init` 初始化一个全新的 Git 存储库并开始跟踪现有目录。</description><guid isPermaLink="true">https://interset-wq.github.io/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>jieba 中文分词结巴</title><link>https://interset-wq.github.io/post/40.html</link><description># jieba 中文分词结巴
+`git init` 初始化一个全新的 Git 存储库并开始跟踪现有目录。</description><guid isPermaLink="true">https://interset-wq.github.io/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>First Contributions</title><link>https://interset-wq.github.io/post/26.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+&#13;
+[:simple-github: First Contributions](https://github.com/firstcontributions/first-contributions)&#13;
+&#13;
+## STEP1 Fork other's repo &#13;
+&#13;
+Fork repo [first-contributions](https://github.com/firstcontributions/first-contributions)&#13;
+&#13;
+## STEP2 Clone my repo forked from others&#13;
+&#13;
+```bash&#13;
+$ git clone https://github.com/interset-wq/first-contributions.git&#13;
+```&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;note&lt;/summary&gt;&#13;
+&#13;
+此处使用的是HTTPS,也可以使用SSH&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+## STEP3 创建一个新分支&#13;
+&#13;
+1. 切换目录到 clone 到本地的 repo 的目录中&#13;
+2. 使用 `git switch` 命令新建一个代码分支&#13;
+&#13;
+    ```bash&#13;
+    $ git switch -c &lt;新分支的名称&gt;&#13;
+    ```&#13;
+&#13;
+    此处创建一个add-myname分支:&#13;
+&#13;
+    ```bash&#13;
+    $ git switch -c add-interset-wq&#13;
+    ```&#13;
+&#13;
+## STEP4 修改代码, Commint 修改&#13;
+&#13;
+1. 修改 `Contributors.md` 中的内容&#13;
+2. 检查状态(可选, 输出信息中,被修改的文件的文件名会被标红)&#13;
+&#13;
+    ```bash&#13;
+    $ git status&#13;
+    ```&#13;
+&#13;
+3. 添加改动&#13;
+&#13;
+    ```bash&#13;
+    $ git add Contributors.md&#13;
+    ```&#13;
+&#13;
+4. 检查状态(可选,输出信息中,刚才标红的文件名现在标绿)&#13;
+5. 提交修改&#13;
+&#13;
+    ```bash&#13;
+    $ git commit -m 'Add interset-wq to Contributors list'&#13;
+    ```&#13;
+&#13;
+6. Push 到 GitHub repo&#13;
+&#13;
+    ```bash&#13;
+    $ git push origin &lt;分支的名称&gt;&#13;
+    ```&#13;
+&#13;
+    此处推送的分支为前面新建的分支add-interset-wq&#13;
+    ```bash&#13;
+    $ git push origin add-interset-wq&#13;
+    ```&#13;
+&#13;
+## STEP5 Pull Request(PR)&#13;
+&#13;
+1. 刚刚从别人那里fork的repo上方出现 `Compare &amp; pull request` 的按钮,点击此按钮&#13;
+2. 点击 `Create pull request` 按钮，正式提交 pull request&#13;
+
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/26.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>jieba 中文分词结巴</title><link>https://interset-wq.github.io/post/40.html</link><description># jieba 中文分词结巴
 
 [README.md](https://github.com/fxsjy/jieba){ .md-button .md-button--primary }
 
