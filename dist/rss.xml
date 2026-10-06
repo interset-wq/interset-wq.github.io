@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/interset-wq.png</url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 02:01:55 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>测试④：默认行为</title><link>https://interset-wq.github.io/post/22.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/interset-wq.png</url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 02:05:40 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>测试④：默认行为</title><link>https://interset-wq.github.io/post/22.html</link><description>
 这篇不带 front matter，验证默认行为：有评论区、按日期排序。</description><guid isPermaLink="true">https://interset-wq.github.io/post/22.html</guid><pubDate>Mon, 05 Oct 2026 13:54:07 +0000</pubDate></item><item><title>测试③：置顶并关闭评论</title><link>https://interset-wq.github.io/post/21.html</link><description>
 这篇验证两者组合：置顶且无评论区。</description><guid isPermaLink="true">https://interset-wq.github.io/post/21.html</guid><pubDate>Mon, 05 Oct 2026 13:52:30 +0000</pubDate></item><item><title>测试②：置顶</title><link>https://interset-wq.github.io/post/20.html</link><description>
 这篇验证 pinned = true：列表应排最前并带置顶图标。</description><guid isPermaLink="true">https://interset-wq.github.io/post/20.html</guid><pubDate>Mon, 05 Oct 2026 13:50:53 +0000</pubDate></item><item><title>测试①：关闭评论</title><link>https://interset-wq.github.io/post/18.html</link><description>
@@ -154,45 +154,7 @@ Linux某些程序的运行，如果想要强制停止它，可以使用快捷键
 
 ## 操作系统的概念、功能、组成和基本原理
 
-操作系统管理着整个计算机系统的软硬件资源，并提供用户与计算机系统交互的操作界面。</description><guid isPermaLink="true">https://interset-wq.github.io/post/113.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux 练习题</title><link>https://interset-wq.github.io/post/114.html</link><description>
-# 选择题
-
-1. 将Windows C:盘（hda1）安装在Linux文件系统的/winsys目录下，命令是（ ）
-    - [ ] A root@l04.edu.cn:~#mount dev/had1 /winsys
-    - [x] B root@l04.edu.cn:~#mount /dev/had1 /winsys
-    - [ ] C root@l04.edu.cn:~#mount /dev/had1 winsys
-    - [ ] D root@l04.edu.cn:~#mount dev/had1 winsys
-    答案：B
-
-2. 设超级用户root当前所在目录为：/usr/local，键入cd命令后，用户当前所在目录为（ ）
-    - [ ] A /home
-    - [x] B /root
-    - [ ] C /home/root
-    - [ ] D /usr/local
-    答案：B
-
-3. 字符设备文件类型的标志是（ ）
-    - [ ] A p
-    - [x] B c
-    - [ ] C s
-    - [ ] D l
-    答案：B
-
-4. 将光盘CD-ROM（hdc）安装到文件系统的/mnt/cdrom目录下的命令是（ ）
-    - [ ] A mount /mnt/cdrom
-    - [ ] B mount /mnt/cdrom /dev/hdc
-    - [x] C mount /dev/hdc /mnt/cdrom
-    - [ ] D mount /dev/hdc
-    答案：C
-
-5. 将光盘/dev/hdc卸载的命令是（ ）
-    - [x] A umount /dev/hdc
-    - [ ] B unmount /dev/hdc
-    - [ ] C umount /mnt/cdrom /dev/hdc
-    - [ ] D unmount /mnt/cdrom /dev/hdc
-    答案：A
-
-6. 在/home/stud1/wang目录下有一文件file，使用（ ）可实现在后台执行命令，此命令将file文件中的内容输出到file.copy文件中。</description><guid isPermaLink="true">https://interset-wq.github.io/post/114.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux文件操作</title><link>https://interset-wq.github.io/post/99.html</link><description># Linux文件操作
+操作系统管理着整个计算机系统的软硬件资源，并提供用户与计算机系统交互的操作界面。</description><guid isPermaLink="true">https://interset-wq.github.io/post/113.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux文件操作</title><link>https://interset-wq.github.io/post/99.html</link><description># Linux文件操作
 
 Linux严格区分大小写，所有目录和文件名都要区分大小写
 

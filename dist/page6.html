@@ -44,50 +44,6 @@
   <main class="in-site-main" id="content">  <p class="in-site-subtitle">My notes on everything</p>
   <ul class="in-post-list">
     <li class="in-post-card">
-      <a class="in-post-card-link" href="post/65.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 3 使用帮助系统</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 3 使用帮助系统
-
-命令行接口，即CLIs(command-line interfaces)
-
-RTFM(Read The Friendly Manual)帮助文档
-
-Cmdlet，即powershell独有的概念，绝大多数powershell命令都可以看作是cmdlet
-
-## 通过help查看某条命令的帮助文档
-
-``` powershell
-PS C:\Users\86183> help Get-Service
-
-名称
-    Get-Service
-
-语法
-    Get-Service [[-Name] <string[]>]  [<CommonParameters>]
-
-    Get-Service  [<CommonParameters>]
-
-    Get-Service  [<CommonParameters>]
-
-
-别名
-    gsv
-
-
-备注
-    Get-Help 在此计算机上找不到该 cmdlet 的帮助文件。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
       <a class="in-post-card-link" href="post/64.html">
         <div class="in-post-card-title">
           <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
@@ -328,6 +284,29 @@ Linux 中，用户是通过文件系统与设备连接的。</p>
         <p class="in-post-card-desc"># 存储管理
 
 在Linux系统中“一切皆文件”，所有文件都放置在以根目录为树根的树形目录结构中。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/55.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>进程管理</span>
+        </div>
+        <p class="in-post-card-desc"># 进程管理
+
+有 3 个作用：
+1.判断服务器的健康状态；2.查看系统中所有进程；3.杀死进程
+
+## 进程监控
+
+### ps 命令
+缺乏时效性最常用进程监控命令，可查看系统中所有运行进程的详细信息。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#1d76db">Linux</span>
