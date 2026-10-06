@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
   
   <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
-  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link rel="icon" href="https://github.com/interset-wq.png">
   <script>
     // Resolve the stored theme before first paint, otherwise a dark-mode
     // visitor sees a white flash. theme.js takes over once loaded.
@@ -25,12 +25,12 @@
 <meta property="og:description" content="My notes on everything">
 <meta property="og:type" content="blog">
 <meta property="og:url" content="https://interset-wq.github.io">
-<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<meta property="og:image" content="https://github.com/interset-wq.png">
 <title>InterNote</title>
 </head>
 <body>
   <header class="in-site-header" id="header">  <div class="in-site-branding">
-  <img src="https://github.githubassets.com/favicons/favicon.svg" class="in-site-avatar" alt="InterNote avatar">
+  <img src="https://github.com/interset-wq.png" class="in-site-avatar" alt="InterNote avatar">
   <a class="in-site-title" href="https://interset-wq.github.io">InterNote</a>
 </div>
 <nav class="in-site-nav" aria-label="Site navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
@@ -43,79 +43,6 @@
 </nav></header>
   <main class="in-site-main" id="content">  <p class="in-site-subtitle">My notes on everything</p>
   <ul class="in-post-list">
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/67.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 5 使用提供程序</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 5 使用提供程序
-
-## 提供程序PSProvider
-
-一个PowerShell的提供程序，即PSProvider，本质上是一个适配器。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
-    <li class="in-post-card">
-      <a class="in-post-card-link" href="post/66.html">
-        <div class="in-post-card-title">
-          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
-          <span>DAY 4 运行命令</span>
-        </div>
-        <p class="in-post-card-desc"># DAY 4 运行命令
-
-## 剖析一个命令
-
-``` powershell
-> Get-EventLog -LogName Security -ComputerName WIN8,Server1 -Verbose
-```
-
-> [!NOTE]
-> 这个命令在新版powershell中的写法已经发生了改变，与这种写法有较大差异
-
-分析这个命令：
-
-- `Get-EventLog` 是cmdlet，powershell cmdlet总是以 **动词+名词** 形式命令
-- `-LogName Security` 是参数1，参数名是 `-LogName`，赋值为 `Security`，如果赋值的字符串中有空格需要使用引号包裹
-- `-ComputerName WIN8,Server1` 是参数2，参数名是 `ComputerName`，以分隔列表的方式给它赋了2个值，`WIN8` 和 `Server1`
-- `-Verbose` 是开关参数，无需赋值，只需要指定参数即可
-
-> [!IMPORTANT]
-> - cmdlet与参数1之间必须要有空格分隔
-> - 参数名总是以 `-` 开头
-> - 参数名之间需要使用空格分隔，多个参数值之间也必须有空格
-> - `-` 与参数名之间没有空格
-> - powershell不区分大小写
-
-## 相关术语
-
-- cmdlet，即command-let，是一个原生的powershell命令行工具，这是powershell专用术语，表示powershell中的命令
-- 函数，和cmdlet类似，但不以 `.NET` 语言编写，而是以powershell脚本编写而成
-- 工作流，是指嵌入powershell的工作流执行系统的一类特殊函数
-- 应用程序，是任意类型的外部可执行程序，包括 `PING` `Ipconfig` 等命令行工具
-- 命令，是一个通用术语，上面介绍的cmdlet，函数，工作流，应用程序都可以称为命令
-
-## 命名规范
-
-以 `动词-名词单数` 的格式命名，使用的动词需要在 `Get-Verb` 返回的列表中，以保证命名的规范性，名词随意
-
-## 命令的别名（命令的昵称）
-
-别名一般是命令的缩写形式，有些命令实在是太长了，因此别名可以解决命令太长容易输入错误的问题。</p>
-        <div class="in-post-card-meta">
-          <span class="in-post-card-labels">
-            <span class="in-badge" style="background-color:#012456">PowerShell</span>
-          </span>
-          <span class="in-post-card-date">2025-08-06</span>
-        </div>
-      </a>
-    </li>
     <li class="in-post-card">
       <a class="in-post-card-link" href="post/65.html">
         <div class="in-post-card-title">
@@ -365,6 +292,42 @@ Linux系统服务有时也称为守护程序，是在Linux系统启动时自动�
 
 计算机的基本网络参数包括那些？
 1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/57.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>设备管理</span>
+        </div>
+        <p class="in-post-card-desc"># 设备管理
+
+## 设备文件
+
+Linux 中，用户是通过文件系统与设备连接的。</p>
+        <div class="in-post-card-meta">
+          <span class="in-post-card-labels">
+            <span class="in-badge" style="background-color:#1d76db">Linux</span>
+          </span>
+          <span class="in-post-card-date">2025-08-06</span>
+        </div>
+      </a>
+    </li>
+    <li class="in-post-card">
+      <a class="in-post-card-link" href="post/56.html">
+        <div class="in-post-card-title">
+          <svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1 0-1.5Z" fill-rule="evenodd"></path></svg>
+          <span>存储管理</span>
+        </div>
+        <p class="in-post-card-desc"># 存储管理
+
+在Linux系统中“一切皆文件”，所有文件都放置在以根目录为树根的树形目录结构中。</p>
         <div class="in-post-card-meta">
           <span class="in-post-card-labels">
             <span class="in-badge" style="background-color:#1d76db">Linux</span>

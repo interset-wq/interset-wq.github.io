@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Mon, 05 Oct 2026 15:35:27 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>测试④：默认行为</title><link>https://interset-wq.github.io/post/22.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/interset-wq.png</url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 02:01:55 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>测试④：默认行为</title><link>https://interset-wq.github.io/post/22.html</link><description>
 这篇不带 front matter，验证默认行为：有评论区、按日期排序。</description><guid isPermaLink="true">https://interset-wq.github.io/post/22.html</guid><pubDate>Mon, 05 Oct 2026 13:54:07 +0000</pubDate></item><item><title>测试③：置顶并关闭评论</title><link>https://interset-wq.github.io/post/21.html</link><description>
 这篇验证两者组合：置顶且无评论区。</description><guid isPermaLink="true">https://interset-wq.github.io/post/21.html</guid><pubDate>Mon, 05 Oct 2026 13:52:30 +0000</pubDate></item><item><title>测试②：置顶</title><link>https://interset-wq.github.io/post/20.html</link><description>
 这篇验证 pinned = true：列表应排最前并带置顶图标。</description><guid isPermaLink="true">https://interset-wq.github.io/post/20.html</guid><pubDate>Mon, 05 Oct 2026 13:50:53 +0000</pubDate></item><item><title>测试①：关闭评论</title><link>https://interset-wq.github.io/post/18.html</link><description>
@@ -118,11 +118,7 @@ A footnote can also have multiple lines[^2].
 。</description><guid isPermaLink="true">https://interset-wq.github.io/post/108.html</guid><pubDate>Thu, 11 Sep 2025 01:52:35 +0000</pubDate></item><item><title>样题</title><link>https://interset-wq.github.io/post/100.html</link><description># 样题
 
 ## 一、单项选择题
-1. 操作系统负责管理计算机系统的______，其中包括处理机、存储器、设备和文件。</description><guid isPermaLink="true">https://interset-wq.github.io/post/100.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>shell脚本</title><link>https://interset-wq.github.io/post/102.html</link><description># shell脚本
-
-1. 用Shell编程，判断一文件是不是字符设备文件，如果是将其拷贝到/dev目录下。</description><guid isPermaLink="true">https://interset-wq.github.io/post/102.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>填空题（加粗的文字为该题的答案）</title><link>https://interset-wq.github.io/post/103.html</link><description># 填空题（加粗的文字为该题的答案）
-
-1. 在Linux系统中，以**文件**方式访问设备。</description><guid isPermaLink="true">https://interset-wq.github.io/post/103.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux 常用操作</title><link>https://interset-wq.github.io/post/106.html</link><description># Linux 常用操作
+1. 操作系统负责管理计算机系统的______，其中包括处理机、存储器、设备和文件。</description><guid isPermaLink="true">https://interset-wq.github.io/post/100.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux 常用操作</title><link>https://interset-wq.github.io/post/106.html</link><description># Linux 常用操作
 
 ## 一、快捷键
 
