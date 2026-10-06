@@ -20,10 +20,13 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content=":material-pen-plus: `本文创建于2025-5-10`
+  <meta name="description" content="+++
+date = 2025-07-31T10:18:38+08:00
++++
+✏️ `本文创建于2025-5-10`
 
 <!-- ???+ quote 
-    本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF -->
+    本文提供PDF下载, 点击标题旁边的 📥 图标下载本文PDF -->
 
 ## 简介
 
@@ -31,8 +34,12 @@
 
 项目样板: 相当于模板文件
 
-???+ warning
-    如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.
+<details>
+<summary>warning</summary>
+
+如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.
+
+</details>
 
 ### 无CAD图纸,根据PDF直接使用revit绘制图形的步骤
 
@@ -66,31 +73,43 @@
 
 使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 `.dwg`. 采用图形上面的图名作为文件名, 以便后续使用.
 
-???+ tip
-    实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.
+<details>
+<summary>tip</summary>
 
-???+ success '操作步骤'
-    1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.
-    2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.
+实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.
 
-        ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
+</details>
 
-        ???+ warning
-            选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
+<details>
+<summary>操作步骤</summary>
 
-        ???+ tip 'FILETAB选项卡'
-            `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
+1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.
+2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.
 
-            ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
+    ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
 
-??? tip '如何打开AutoCAD的左右两侧的绘图和修改工具栏'
-    step1 显示菜单栏
+    ???+ warning
+        选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
 
-    ![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
+    ???+ tip 'FILETAB选项卡'
+        `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
 
-    step2 打开菜单栏的 `工具` 选项卡
+        ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
 
-    ![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
+</details>
+
+<details>
+<summary>如何打开AutoCAD的左右两侧的绘图和修改工具栏</summary>
+
+step1 显示菜单栏
+
+![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
+
+step2 打开菜单栏的 `工具` 选项卡
+
+![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
+
+</details>
 
 ## 第二步: 使用Revit创建一个结构模型
 
@@ -98,8 +117,12 @@
 
 ![newproj.png](https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png)
 
-???+ tip '如何打开项目选择器和属性'
-    ![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)
+<details>
+<summary>如何打开项目选择器和属性</summary>
+
+![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)
+
+</details>
 
 ### 2.1 绘制标高
 
@@ -231,8 +254,12 @@
 
 ### 2.5 放置基础到一层的结构柱
 
-???+ note
-    使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.
+<details>
+<summary>note</summary>
+
+使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.
+
+</details>
 
 1. 由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.
 
@@ -258,8 +285,12 @@
 
     ![domain3.png](https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png)
 
-???+ tip
-    改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动
+<details>
+<summary>tip</summary>
+
+改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动
+
+</details>
 
 至此,基础层的柱放置完成.
 
@@ -380,8 +411,12 @@
 
 墙由 **主体结构** 和 **装饰层** 组成, 装饰层又由 **踢脚线墙裙线** 和 **墙面** 组层.
 
-???+ warning
-    **踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.
+<details>
+<summary>warning</summary>
+
+**踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.
+
+</details>
 
 以下以分割车库和卫生间的墙面为例说明:
 
@@ -429,8 +464,12 @@
 
 ### 3.4 放置门
 
-???+ warning 
-    外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.
+<details>
+<summary>warning</summary>
+
+外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.
+
+</details>
 
 先将CAD底图切换为 `前景`,根据建筑图CAD图纸确定门的尺寸.注意将 `类型标记` 修改为图纸上的标记.
 
@@ -444,8 +483,12 @@
 
 ![3-14.png](https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png)
 
-???+ warning
-    放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.
+<details>
+<summary>warning</summary>
+
+放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.
+
+</details>
 
 ### 3.6 绘制外墙装饰层(内侧)
 
@@ -454,10 +497,13 @@
 ![3-15.png](https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png)
 。">
 <meta property="og:title" content="Revit">
-<meta property="og:description" content=":material-pen-plus: `本文创建于2025-5-10`
+<meta property="og:description" content="+++
+date = 2025-07-31T10:18:38+08:00
++++
+✏️ `本文创建于2025-5-10`
 
 <!-- ???+ quote 
-    本文提供PDF下载, 点击标题旁边的 :material-file-download-outline: 图标下载本文PDF -->
+    本文提供PDF下载, 点击标题旁边的 📥 图标下载本文PDF -->
 
 ## 简介
 
@@ -465,8 +511,12 @@
 
 项目样板: 相当于模板文件
 
-???+ warning
-    如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.
+<details>
+<summary>warning</summary>
+
+如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.
+
+</details>
 
 ### 无CAD图纸,根据PDF直接使用revit绘制图形的步骤
 
@@ -500,31 +550,43 @@
 
 使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 `.dwg`. 采用图形上面的图名作为文件名, 以便后续使用.
 
-???+ tip
-    实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.
+<details>
+<summary>tip</summary>
 
-???+ success '操作步骤'
-    1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.
-    2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.
+实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.
 
-        ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
+</details>
 
-        ???+ warning
-            选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
+<details>
+<summary>操作步骤</summary>
 
-        ???+ tip 'FILETAB选项卡'
-            `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
+1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.
+2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.
 
-            ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
+    ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
 
-??? tip '如何打开AutoCAD的左右两侧的绘图和修改工具栏'
-    step1 显示菜单栏
+    ???+ warning
+        选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
 
-    ![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
+    ???+ tip 'FILETAB选项卡'
+        `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
 
-    step2 打开菜单栏的 `工具` 选项卡
+        ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
 
-    ![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
+</details>
+
+<details>
+<summary>如何打开AutoCAD的左右两侧的绘图和修改工具栏</summary>
+
+step1 显示菜单栏
+
+![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
+
+step2 打开菜单栏的 `工具` 选项卡
+
+![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
+
+</details>
 
 ## 第二步: 使用Revit创建一个结构模型
 
@@ -532,8 +594,12 @@
 
 ![newproj.png](https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png)
 
-???+ tip '如何打开项目选择器和属性'
-    ![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)
+<details>
+<summary>如何打开项目选择器和属性</summary>
+
+![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)
+
+</details>
 
 ### 2.1 绘制标高
 
@@ -665,8 +731,12 @@
 
 ### 2.5 放置基础到一层的结构柱
 
-???+ note
-    使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.
+<details>
+<summary>note</summary>
+
+使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.
+
+</details>
 
 1. 由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.
 
@@ -692,8 +762,12 @@
 
     ![domain3.png](https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png)
 
-???+ tip
-    改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动
+<details>
+<summary>tip</summary>
+
+改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动
+
+</details>
 
 至此,基础层的柱放置完成.
 
@@ -814,8 +888,12 @@
 
 墙由 **主体结构** 和 **装饰层** 组成, 装饰层又由 **踢脚线墙裙线** 和 **墙面** 组层.
 
-???+ warning
-    **踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.
+<details>
+<summary>warning</summary>
+
+**踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.
+
+</details>
 
 以下以分割车库和卫生间的墙面为例说明:
 
@@ -863,8 +941,12 @@
 
 ### 3.4 放置门
 
-???+ warning 
-    外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.
+<details>
+<summary>warning</summary>
+
+外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.
+
+</details>
 
 先将CAD底图切换为 `前景`,根据建筑图CAD图纸确定门的尺寸.注意将 `类型标记` 修改为图纸上的标记.
 
@@ -878,8 +960,12 @@
 
 ![3-14.png](https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png)
 
-???+ warning
-    放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.
+<details>
+<summary>warning</summary>
+
+放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.
+
+</details>
 
 ### 3.6 绘制外墙装饰层(内侧)
 
@@ -905,20 +991,25 @@
 </nav></header>
   <main class="in-site-main" id="content">  <article>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">更新 2026-10-06</span>
       <span class="Label" style="background-color:#cccccc;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#Other">Other</a>
       </span>
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
-    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-5-10</code></p>
+    <div class="in-post-body markdown-body"><p>+++<br>
+date = 2025-07-31T10:18:38+08:00<br>
++++<br>
+✏️ <code class="notranslate">本文创建于2025-5-10</code></p>
 
 <h2>简介</h2>
 <p>族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等</p>
 <p>项目样板: 相当于模板文件</p>
-<p>???+ warning<br>
-如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.</p>
+<details>
+<summary>warning</summary>
+<p>如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.</p>
+</details>
 <h3>无CAD图纸,根据PDF直接使用revit绘制图形的步骤</h3>
 <ol>
 <li>
@@ -972,34 +1063,42 @@
 </ol>
 <h2>第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图</h2>
 <p>使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 <code class="notranslate">.dwg</code>. 采用图形上面的图名作为文件名, 以便后续使用.</p>
-<p>???+ tip<br>
-实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.</p>
-<p>???+ success "操作步骤"<br>
-1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.<br>
-2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 <code class="notranslate">FILETAB</code> 选项卡 - ++ctrl+v++ - 在命令框中输入 <code class="notranslate">0,0</code> - 回车, 这个图形的基点将放置在坐标原点处.</p>
-<pre class="notranslate"><code class="notranslate">    ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)
-
-    ???+ warning
-        选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.
-
-    ???+ tip "FILETAB选项卡"
-        `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.
-
-        ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
+<details>
+<summary>tip</summary>
+<p>实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.</p>
+</details>
+<details>
+<summary>操作步骤</summary>
+<ol>
+<li>
+<p>如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.</p>
+</li>
+<li>
+<p>选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 <code class="notranslate">FILETAB</code> 选项卡 - ++ctrl+v++ - 在命令框中输入 <code class="notranslate">0,0</code> - 回车, 这个图形的基点将放置在坐标原点处.</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c82342133fd4a2283a3fabac5860b3df5a61f56839da948cf44954801ce08eb8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f655732756637523934384c545358742e706e67"><img src="https://camo.githubusercontent.com/c82342133fd4a2283a3fabac5860b3df5a61f56839da948cf44954801ce08eb8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f655732756637523934384c545358742e706e67" alt=".png" data-canonical-src="https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png" style="max-width: 100%;"></a></p>
+<p>???+ warning<br>
+选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.</p>
+<p>???+ tip "FILETAB选项卡"<br>
+<code class="notranslate">FILETAB</code> 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.</p>
+<pre class="notranslate"><code class="notranslate"> ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)
 </code></pre>
-<p>??? tip "如何打开AutoCAD的左右两侧的绘图和修改工具栏"<br>
-step1 显示菜单栏</p>
-<pre class="notranslate"><code class="notranslate">![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)
-
-step2 打开菜单栏的 `工具` 选项卡
-
-![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)
-</code></pre>
+</li>
+</ol>
+</details>
+<details>
+<summary>如何打开AutoCAD的左右两侧的绘图和修改工具栏</summary>
+<p>step1 显示菜单栏</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/d5513cd545bbe925eca47875b12bfc0b78c9f04d9f4f4edf337aa1216bab5ba4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f7269663477426579396b577a37356e2e706e67"><img src="https://camo.githubusercontent.com/d5513cd545bbe925eca47875b12bfc0b78c9f04d9f4f4edf337aa1216bab5ba4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f7269663477426579396b577a37356e2e706e67" alt="step1.png" data-canonical-src="https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png" style="max-width: 100%;"></a></p>
+<p>step2 打开菜单栏的 <code class="notranslate">工具</code> 选项卡</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6b7fc0745d10775ac9d4061a7a65ba1a1c7fea6798c7e754cb5dfadc1dea5be2/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f6772684a7477507a633879654f374b2e706e67"><img src="https://camo.githubusercontent.com/6b7fc0745d10775ac9d4061a7a65ba1a1c7fea6798c7e754cb5dfadc1dea5be2/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f6772684a7477507a633879654f374b2e706e67" alt="step2.png" data-canonical-src="https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png" style="max-width: 100%;"></a></p>
+</details>
 <h2>第二步: 使用Revit创建一个结构模型</h2>
 <p>新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9e831e40e33772a422c38798e57a3b1b92d671f47cf2ac31c675c38b78c28f21/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f744c43686e4933474d54426c656b662e706e67"><img src="https://camo.githubusercontent.com/9e831e40e33772a422c38798e57a3b1b92d671f47cf2ac31c675c38b78c28f21/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f744c43686e4933474d54426c656b662e706e67" alt="newproj.png" data-canonical-src="https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png" style="max-width: 100%;"></a></p>
-<p>???+ tip "如何打开项目选择器和属性"<br>
-<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/41a2ee63603a1bf579546c2fd8a928e6b4d5b693fa693e4bcedadbb1b22e4b68/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f594e346261686f6469476d7972586e2e706e67"><img src="https://camo.githubusercontent.com/41a2ee63603a1bf579546c2fd8a928e6b4d5b693fa693e4bcedadbb1b22e4b68/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f594e346261686f6469476d7972586e2e706e67" alt="如何打开项目选择器和属性.png" data-canonical-src="https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png" style="max-width: 100%;"></a></p>
+<details>
+<summary>如何打开项目选择器和属性</summary>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/41a2ee63603a1bf579546c2fd8a928e6b4d5b693fa693e4bcedadbb1b22e4b68/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f594e346261686f6469476d7972586e2e706e67"><img src="https://camo.githubusercontent.com/41a2ee63603a1bf579546c2fd8a928e6b4d5b693fa693e4bcedadbb1b22e4b68/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31312f594e346261686f6469476d7972586e2e706e67" alt="如何打开项目选择器和属性.png" data-canonical-src="https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png" style="max-width: 100%;"></a></p>
+</details>
 <h3>2.1 绘制标高</h3>
 <ol>
 <li>
@@ -1131,8 +1230,10 @@ step2 打开菜单栏的 `工具` 选项卡
 </ol>
 <p>至此,放置基础完成.</p>
 <h3>2.5 放置基础到一层的结构柱</h3>
-<p>???+ note<br>
-使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.</p>
+<details>
+<summary>note</summary>
+<p>使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.</p>
+</details>
 <ol>
 <li>
 <p>由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.</p>
@@ -1155,8 +1256,10 @@ step2 打开菜单栏的 `工具` 选项卡
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/be0b8146e59427b5f76e780ed2c03f247894528b92bdc810c2fff4cd68401caf/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f544f62466176755034446a316f64552e706e67"><img src="https://camo.githubusercontent.com/be0b8146e59427b5f76e780ed2c03f247894528b92bdc810c2fff4cd68401caf/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f31342f544f62466176755034446a316f64552e706e67" alt="domain3.png" data-canonical-src="https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png" style="max-width: 100%;"></a></p>
 </li>
 </ol>
-<p>???+ tip<br>
-改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动</p>
+<details>
+<summary>tip</summary>
+<p>改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动</p>
+</details>
 <p>至此,基础层的柱放置完成.</p>
 <h3>2.6 绘制基础和一层之间的的梁/板</h3>
 <ol>
@@ -1259,8 +1362,10 @@ revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,�
 <h3>3.3 绘制一层内墙</h3>
 <p>墙面有装饰需要参考 <strong>建筑材料表</strong> 或 <strong>工程做法表</strong></p>
 <p>墙由 <strong>主体结构</strong> 和 <strong>装饰层</strong> 组成, 装饰层又由 <strong>踢脚线墙裙线</strong> 和 <strong>墙面</strong> 组层.</p>
-<p>???+ warning<br>
-<strong>踢脚线墙裙线</strong> 位于 <strong>墙面</strong> 之上,因此有关 <strong>踢脚线墙裙线</strong> 的建模都需要考虑 <strong>墙面</strong> 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 <strong>水泥砂浆</strong> 作为材料.</p>
+<details>
+<summary>warning</summary>
+<p><strong>踢脚线墙裙线</strong> 位于 <strong>墙面</strong> 之上,因此有关 <strong>踢脚线墙裙线</strong> 的建模都需要考虑 <strong>墙面</strong> 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 <strong>水泥砂浆</strong> 作为材料.</p>
+</details>
 <p>以下以分割车库和卫生间的墙面为例说明:</p>
 <p>分析 <strong>建筑材料表</strong>:</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e06501881b4897adc14e0fdfe31b805057e614abd0ceac18e3952d1a649447f5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f474e6e61376b50326953336c676a682e706e67"><img src="https://camo.githubusercontent.com/e06501881b4897adc14e0fdfe31b805057e614abd0ceac18e3952d1a649447f5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32312f474e6e61376b50326953336c676a682e706e67" alt="3-2.png" data-canonical-src="https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png" style="max-width: 100%;"></a></p>
@@ -1296,16 +1401,20 @@ revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,�
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/cc53d2c6b332304639811cb11b67384b782c982a6ab80ed9811d66b064904cc0/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f3150393365457a75684c3769326d412e706e67"><img src="https://camo.githubusercontent.com/cc53d2c6b332304639811cb11b67384b782c982a6ab80ed9811d66b064904cc0/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f3150393365457a75684c3769326d412e706e67" alt="3-9.png" data-canonical-src="https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png" style="max-width: 100%;"></a></p>
 <p>绘制楼梯间和卫生间的墙的操作同上.</p>
 <h3>3.4 放置门</h3>
-<p>???+ warning<br>
-外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.</p>
+<details>
+<summary>warning</summary>
+<p>外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.</p>
+</details>
 <p>先将CAD底图切换为 <code class="notranslate">前景</code>,根据建筑图CAD图纸确定门的尺寸.注意将 <code class="notranslate">类型标记</code> 修改为图纸上的标记.</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/47033b2c1475284f2e08133218f5e99289f3aa98f1345df8a61e7949fdc9162a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f45434e617553373635324c65695a782e706e67"><img src="https://camo.githubusercontent.com/47033b2c1475284f2e08133218f5e99289f3aa98f1345df8a61e7949fdc9162a/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f45434e617553373635324c65695a782e706e67" alt="3-10.png" data-canonical-src="https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png" style="max-width: 100%;"></a></p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/be0778137e80362911f4692cddb2e3bcb009a54a06be190cd564f25b759deeb6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f564a50446d6b71687242625a3432762e706e67"><img src="https://camo.githubusercontent.com/be0778137e80362911f4692cddb2e3bcb009a54a06be190cd564f25b759deeb6/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f564a50446d6b71687242625a3432762e706e67" alt="3-11.png" data-canonical-src="https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png" style="max-width: 100%;"></a></p>
 <h3>3.5 放置窗</h3>
 <p>和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 <code class="notranslate">默认窗台高度</code></p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bbaf7a4135ffcc1cc324d741f7e28e16d2978c13390edb09a0939079e3340fce/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f56647850614e474f69366c6e4238442e706e67"><img src="https://camo.githubusercontent.com/bbaf7a4135ffcc1cc324d741f7e28e16d2978c13390edb09a0939079e3340fce/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f56647850614e474f69366c6e4238442e706e67" alt="3-14.png" data-canonical-src="https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png" style="max-width: 100%;"></a></p>
-<p>???+ warning<br>
-放置窗时如果看不到窗,可能是因为 <code class="notranslate">视图范围</code>, 此时需要调整一下视图范围,使窗可见.</p>
+<details>
+<summary>warning</summary>
+<p>放置窗时如果看不到窗,可能是因为 <code class="notranslate">视图范围</code>, 此时需要调整一下视图范围,使窗可见.</p>
+</details>
 <h3>3.6 绘制外墙装饰层(内侧)</h3>
 <p>思路:把装饰层看做是一面墙,并紧贴外墙</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6836b0704c757031149becd5d5ac1946de282db80d4557cd634f8568815163a5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f625a675943354d4e533248636e55692e706e67"><img src="https://camo.githubusercontent.com/6836b0704c757031149becd5d5ac1946de282db80d4557cd634f8568815163a5/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32322f625a675943354d4e533248636e55692e706e67" alt="3-15.png" data-canonical-src="https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png" style="max-width: 100%;"></a></p></div>

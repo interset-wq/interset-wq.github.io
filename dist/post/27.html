@@ -20,19 +20,25 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content=":material-pen-plus: `本文创建于2025-5-16`
+  <meta name="description" content="+++
+date = 2025-07-31T10:18:38+08:00
++++
+✏️ `本文创建于2025-5-16`
 
-[:simple-git: Git官方文档](https://git-scm.com/doc){ .md-button .md-button--primary }
-[:simple-github: GitHub官方文档](https://docs.github.com/zh){ .md-button }
+[:simple-git: Git官方文档](https://git-scm.com/doc)
+[:simple-github: GitHub官方文档](https://docs.github.com/zh)
 
 ## STEP1 在 Git 中设置用户名和邮箱
 
 Git 使用用户名将提交与身份关联。">
 <meta property="og:title" content="快速开始">
-<meta property="og:description" content=":material-pen-plus: `本文创建于2025-5-16`
+<meta property="og:description" content="+++
+date = 2025-07-31T10:18:38+08:00
++++
+✏️ `本文创建于2025-5-16`
 
-[:simple-git: Git官方文档](https://git-scm.com/doc){ .md-button .md-button--primary }
-[:simple-github: GitHub官方文档](https://docs.github.com/zh){ .md-button }
+[:simple-git: Git官方文档](https://git-scm.com/doc)
+[:simple-github: GitHub官方文档](https://docs.github.com/zh)
 
 ## STEP1 在 Git 中设置用户名和邮箱
 
@@ -41,6 +47,7 @@ Git 使用用户名将提交与身份关联。">
 <meta property="og:url" content="https://interset-wq.github.io/post/27.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
 <title>快速开始</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
   
 </head>
 <body>
@@ -55,16 +62,19 @@ Git 使用用户名将提交与身份关联。">
 </nav></header>
   <main class="in-site-main" id="content">  <article>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">更新 2026-10-06</span>
       <span class="Label" style="background-color:#f14e32;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#Git">Git</a>
       </span>
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
-    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-5-16</code></p>
-<p><a href="https://git-scm.com/doc" rel="nofollow">:simple-git: Git官方文档</a>{ .md-button .md-button--primary }<br>
-<a href="https://docs.github.com/zh">:simple-github: GitHub官方文档</a>{ .md-button }</p>
+    <div class="in-post-body markdown-body"><p>+++<br>
+date = 2025-07-31T10:18:38+08:00<br>
++++<br>
+✏️ <code class="notranslate">本文创建于2025-5-16</code></p>
+<p><a href="https://git-scm.com/doc" rel="nofollow">:simple-git: Git官方文档</a><br>
+<a href="https://docs.github.com/zh">:simple-github: GitHub官方文档</a></p>
 <h2>STEP1 在 Git 中设置用户名和邮箱</h2>
 <p>Git 使用用户名将提交与身份关联。 {==Git 用户名与 GitHub 用户名不同==}, 可以使用任意文本作为 Git 用户名, 此用户名只用来显示 repo 的提交信息.</p>
 <p>为每个 repo 设置全局用户名global user.name和全局邮箱global user.email</p>
@@ -77,23 +87,26 @@ user name
 $ git config --global user.email
 email@example.com
 </code></pre>
-<p>???+ info "单独为某个 repo 设置用户名和邮箱"<br>
-1. 切换目录到本地库<br>
-2. 为这个 repo 专门设置git用户名和邮箱</p>
-<pre class="notranslate"><code class="notranslate">    ```bash
-    $ git config user.name "user name"
-    $ git config user.name "email@example.com"
-    ```
-
-3. 检查用户名是否设置成功
-
-    ```bash
-    $ git config --user.name
-    user name
-    $ git config --user.email
-    email@example.com
-    ```
-</code></pre>
+<details>
+<summary>单独为某个 repo 设置用户名和邮箱</summary>
+<ol>
+<li>
+<p>切换目录到本地库</p>
+</li>
+<li>
+<p>为这个 repo 专门设置git用户名和邮箱</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ git config user.name <span class="pl-s"><span class="pl-pds">"</span>user name<span class="pl-pds">"</span></span>
+$ git config user.name <span class="pl-s"><span class="pl-pds">"</span>email@example.com<span class="pl-pds">"</span></span></pre></div>
+</li>
+<li>
+<p>检查用户名是否设置成功</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ git config --user.name
+user name
+$ git config --user.email
+email@example.com</pre></div>
+</li>
+</ol>
+</details>
 <h2>STEP2 通过 Git 向 GitHub 进行身份验证</h2>
 <p>从 Git 连接到 GitHub 仓库时，需要使用 HTTPS 或 SSH 向 GitHub 进行身份验证。</p>
 <p>通过HTTPS连接比较简便,推荐使用</p></div>

@@ -20,7 +20,10 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content=":material-pen-plus: `本文创建于2025-5-28`
+  <meta name="description" content="+++
+date = 2025-09-06T23:15:30+08:00
++++
+✏️ `本文创建于2025-5-28`
 
 ## 一、作用域
 
@@ -35,7 +38,10 @@
 
 局部作用域分为函数作用域和块作用域。">
 <meta property="og:title" content="JavaScript进阶语法">
-<meta property="og:description" content=":material-pen-plus: `本文创建于2025-5-28`
+<meta property="og:description" content="+++
+date = 2025-09-06T23:15:30+08:00
++++
+✏️ `本文创建于2025-5-28`
 
 ## 一、作用域
 
@@ -68,14 +74,17 @@
 </nav></header>
   <main class="in-site-main" id="content">  <article>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-09-06</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">更新 2026-10-06</span>
       <span class="Label" style="background-color:#f1e05a;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#JavaScript">JavaScript</a>
       </span>
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
-    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-5-28</code></p>
+    <div class="in-post-body markdown-body"><p>+++<br>
+date = 2025-09-06T23:15:30+08:00<br>
++++<br>
+✏️ <code class="notranslate">本文创建于2025-5-28</code></p>
 <h2>一、作用域</h2>
 <p>作用域（scope）规定了变量能够被访问的“范围”，离开了这个“范围”变量便不能被访问，作用域分为：</p>
 <ul>
@@ -90,29 +99,45 @@
 <h3>1.1 局部作用域</h3>
 <p>局部作用域分为函数作用域和块作用域。</p>
 <p>函数作用域：在函数内部声明的变量只能在函数内部被访问，外部无法直接访问。</p>
-<p>???+ note<br>
-- 函数内部声明的变量，在函数外部无法被访问<br>
-- 函数的参数也是函数内部的局部变量<br>
-- 不同函数内部声明的变量无法互相访问<br>
-- 函数执行完毕后，函数内部的变量实际被清空了</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>函数内部声明的变量，在函数外部无法被访问</li>
+<li>函数的参数也是函数内部的局部变量</li>
+<li>不同函数内部声明的变量无法互相访问</li>
+<li>函数执行完毕后，函数内部的变量实际被清空了</li>
+</ul>
+</details>
 <p>块作用域：在 JavaScript 中使用 <code class="notranslate">{ }</code> 包裹的代码称为代码块，代码块内部声明的变量外部将 <strong>有可能</strong> 无法被访问。</p>
-<p>???+ note<br>
-- <code class="notranslate">let</code> 声明的变量会产生块作用域， <code class="notranslate">var</code> 不会产生块作用域<br>
-- <code class="notranslate">const</code> 声明的常量也会产生块作用域<br>
-- 不同代码块之间的变量无法互相访问<br>
-- 推荐使用 <code class="notranslate">let</code> 或 <code class="notranslate">const</code></p>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">let</code> 声明的变量会产生块作用域， <code class="notranslate">var</code> 不会产生块作用域</li>
+<li><code class="notranslate">const</code> 声明的常量也会产生块作用域</li>
+<li>不同代码块之间的变量无法互相访问</li>
+<li>推荐使用 <code class="notranslate">let</code> 或 <code class="notranslate">const</code></li>
+</ul>
+</details>
 <h3>1.2 全局作用域</h3>
 <p><code class="notranslate">&lt;script&gt;</code> 标签 和 <code class="notranslate">.js</code> 文件 的 <strong>最外层</strong> 就是全局作用域，在此声明的变量在函数内部也可以被访问。全局作用域中声明的变量，任何其它作用域都可以被访问</p>
-<p>???+ warning<br>
-- 为 <code class="notranslate">window</code> 对象动态添加的属性默认也是全局的，不推荐<br>
-- 函数中未使用任何关键字声明的变量为全局变量，不推荐<br>
-- 尽可能少的声明全局变量，防止全局变量被污染</p>
+<details>
+<summary>warning</summary>
+<ul>
+<li>为 <code class="notranslate">window</code> 对象动态添加的属性默认也是全局的，不推荐</li>
+<li>函数中未使用任何关键字声明的变量为全局变量，不推荐</li>
+<li>尽可能少的声明全局变量，防止全局变量被污染</li>
+</ul>
+</details>
 <h3>1.3 作用域链</h3>
 <p>作用域链本质上是底层的变量查找机制。在函数被执行时，会优先查找当前函数作用域中查找变量. 如果当前作用域查找不到则会依次逐级查找父级作用域直到全局作用域</p>
-<p>???+ note<br>
-- 嵌套关系的作用域串联起来形成了作用域链<br>
-- 相同作用域链中按着从小到大的规则查找变量<br>
-- 子作用域能够访问父作用域，父级作用域无法访问子级作用域</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>嵌套关系的作用域串联起来形成了作用域链</li>
+<li>相同作用域链中按着从小到大的规则查找变量</li>
+<li>子作用域能够访问父作用域，父级作用域无法访问子级作用域</li>
+</ul>
+</details>
 <h3>1.4 JS垃圾回收机制</h3>
 <p>垃圾回收机制(Garbage Collection) 简称 GC.</p>
 <p>JS中内存的分配和回收都是自动完成的，内存在不使用的时候会被垃圾回收器自动回收。正因为垃圾回收器的存在，许多人认为JS不用太关心内存管理的问题.但如果不了解JS的内存管理机制，我们同样非常容易成内存泄漏（内存无法被回收）的情况.不再用到的内存，没有及时释放，就叫做内存泄漏</p>
@@ -123,11 +148,17 @@
 <li>内存使用：即读写内存，也就是使用变量、函数等</li>
 <li>内存回收：使用完毕，由垃圾回收自动回收不再使用的内存</li>
 </ol>
-<p>???+ note<br>
-- 全局变量一般不会回收(关闭页面回收)；<br>
-- 一般情况下局部变量的值, 不用了, 会被自动回收掉</p>
-<p>??? info "JS垃圾回收机制算法"<br>
-堆栈空间分配区别：</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>全局变量一般不会回收(关闭页面回收)；</li>
+<li>一般情况下局部变量的值, 不用了, 会被自动回收掉</li>
+</ul>
+</details>
+<details>
+<summary>JS垃圾回收机制算法</summary>
+</details>
+堆栈空间分配区别：
 <ul>
 <li>栈（操作系统）: 由操作系统自动分配释放函数的参数值、局部变量等，基本数据类型放到栈里面。</li>
 <li>堆（操作系统）: 一般由程序员分配释放，若程序员不释放，由垃圾回收机制回收。复杂数据类型放到堆里面。</li>
@@ -213,10 +244,11 @@
 
 <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">100</span>
 <span class="pl-s1">result</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 函数被调用了3次</span></pre></div>
-<p>???+ note<br>
-闭包的作用: 封闭数据，实现数据私有，外部也可以访问函数内部的变量. 闭包很有用，因为它允许将函数与其所操作的某些数据（环境）关联起来</p>
-<pre class="notranslate"><code class="notranslate">闭包可能引起的问题: 内存泄漏
-</code></pre>
+<details>
+<summary>note</summary>
+<p>闭包的作用: 封闭数据，实现数据私有，外部也可以访问函数内部的变量. 闭包很有用，因为它允许将函数与其所操作的某些数据（环境）关联起来</p>
+<p>闭包可能引起的问题: 内存泄漏</p>
+</details>
 <h3>1.6 变量提升</h3>
 <p>变量提升是 JavaScript 中比较“奇怪”的现象，它允许在变量声明之前即被访问（仅存在于var声明变量）</p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用 var 声明变量,可以先使用变量,再声明变量</span>
@@ -228,20 +260,26 @@
 <span class="pl-c">// var msg</span>
 <span class="pl-c">// console.log(msg + ' world!') // 输出结果 undefined world!</span>
 <span class="pl-c">// msg = 'Hello'</span></pre></div>
-<p>???+ warning<br>
-- 变量在未声明即被访问时会报语法错误<br>
-- 变量在var声明之前即被访问，变量的值为 undefined<br>
-- let/const 声明的变量不存在变量提升<br>
-- 变量提升出现在相同作用域当中<br>
-- 实际开发中推荐先声明再访问变量</p>
-<p>???+ note<br>
-使用 <code class="notranslate">var</code> 关键字声明变量会有变量提升, 因此不建议使用 <code class="notranslate">var</code> 声明变量</p>
-<pre class="notranslate"><code class="notranslate">变量提升的流程:
-
-- 先把var 变量提升到当前作用域于最前面
-- 只提升变量声明， 不提升变量赋值
-- 然后依次执行代码
-</code></pre>
+<details>
+<summary>warning</summary>
+<ul>
+<li>变量在未声明即被访问时会报语法错误</li>
+<li>变量在var声明之前即被访问，变量的值为 undefined</li>
+<li>let/const 声明的变量不存在变量提升</li>
+<li>变量提升出现在相同作用域当中</li>
+<li>实际开发中推荐先声明再访问变量</li>
+</ul>
+</details>
+<details>
+<summary>note</summary>
+<p>使用 <code class="notranslate">var</code> 关键字声明变量会有变量提升, 因此不建议使用 <code class="notranslate">var</code> 声明变量</p>
+<p>变量提升的流程:</p>
+<ul>
+<li>先把var 变量提升到当前作用域于最前面</li>
+<li>只提升变量声明， 不提升变量赋值</li>
+<li>然后依次执行代码</li>
+</ul>
+</details>
 <h2>二、函数</h2>
 <h3>2.1 函数提升</h3>
 <p>函数提升与变量提升比较类似，是指函数在声明之前即可被调用(Python函数只能先声明再调用)。</p>
@@ -286,10 +324,14 @@
 <span class="pl-kos">}</span>
 
 <span class="pl-en">print_sum</span><span class="pl-kos">(</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 3</span></pre></div>
-<p>???+ note<br>
-- <code class="notranslate">arguments</code> 是一个伪数组，只存在于函数中<br>
-- <code class="notranslate">arguments</code> 的作用是动态获取函数的实参<br>
-- 可以通过for循环依次得到传递过来的实参</p>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">arguments</code> 是一个伪数组，只存在于函数中</li>
+<li><code class="notranslate">arguments</code> 的作用是动态获取函数的实参</li>
+<li>可以通过for循环依次得到传递过来的实参</li>
+</ul>
+</details>
 <p><strong>剩余参数:</strong></p>
 <p>剩余参数允许我们将一个不定数量的参数表示为一个数组, 用法与 Python 不定长参数几乎完全相同</p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">print_args</span><span class="pl-kos">(</span>...<span class="pl-s1">other</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
@@ -297,92 +339,101 @@
 <span class="pl-kos">}</span>
 
 <span class="pl-en">print_args</span><span class="pl-kos">(</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">5</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">)</span> <span class="pl-c">// 输出传入实参的数组(并不是伪数组)</span></pre></div>
-<p>???+ note<br>
-- <code class="notranslate">...</code> 是语法符号，置于最末函数形参之前，用于获取多余的实参, 和python中的 <code class="notranslate">*</code> 类似<br>
-- 借助 <code class="notranslate">...</code> 获取的剩余实参，是个真数组<br>
-- 开发中，在可以使用动态参数和剩余参数时优先使用 <strong>剩余参数</strong></p>
-<p>=== "JS"<br>
-<code class="notranslate">js let nums = [1, 2, 3] console.log(...nums) // 输出结果 1 2 3 </code></p>
-<p>=== "Python"<br>
-<code class="notranslate">py nums = [1, 2, 3] print(*nums) # 输出结果 1 2 3 </code></p>
-<p>???+ info "展开运算符..."<br>
-展开运算符(…),将一个数组进行展开, 不会修改原数组. 典型运用场景： 求数组最大值(最小值)、合并数组等</p>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">...</code> 是语法符号，置于最末函数形参之前，用于获取多余的实参, 和python中的 <code class="notranslate">*</code> 类似</li>
+<li>借助 <code class="notranslate">...</code> 获取的剩余实参，是个真数组</li>
+<li>开发中，在可以使用动态参数和剩余参数时优先使用 <strong>剩余参数</strong></li>
+</ul>
+</details>
+<p><strong>JS</strong></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">nums</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">]</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span>...<span class="pl-s1">nums</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 1 2 3</span></pre></div>
+<p><strong>Python</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">nums</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
+<span class="pl-en">print</span>(<span class="pl-c1">*</span><span class="pl-s1">nums</span>) <span class="pl-c"># 输出结果 1 2 3</span></pre></div>
+<details>
+<summary>展开运算符...</summary>
+</details>
+展开运算符(…),将一个数组进行展开, 不会修改原数组. 典型运用场景： 求数组最大值(最小值)、合并数组等
 <p>剩余参数：函数参数使用，得到真数组. 展开运算符：数组中使用，数组展开</p>
-<p>=== "求数组最值"<br>
-<code class="notranslate">js let arr = [8, 4, 6, 9, 1] let max = Math.max(...arr) let min = Math.min(...arr) console.log(`数组最大值为${max}`) // 数组最大值为9 console.log(`数组最小值为${min}`) // 数组最大值为1 </code></p>
-<p>=== "合并数组"<br>
-<code class="notranslate">js let arr1 = ['py', 'c', 'cpp'] let arr2 = ['html', 'css', 'js'] let arr = [...arr1, ...arr2] console.log(arr) // ['py', 'c', 'cpp', 'html', 'css', 'js'] </code></p>
+<p><strong>求数组最值</strong></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">8</span><span class="pl-kos">,</span> <span class="pl-c1">4</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">,</span> <span class="pl-c1">9</span><span class="pl-kos">,</span> <span class="pl-c1">1</span><span class="pl-kos">]</span>
+<span class="pl-k">let</span> <span class="pl-s1">max</span> <span class="pl-c1">=</span> <span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-en">max</span><span class="pl-kos">(</span>...<span class="pl-s1">arr</span><span class="pl-kos">)</span>
+<span class="pl-k">let</span> <span class="pl-s1">min</span> <span class="pl-c1">=</span> <span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-en">min</span><span class="pl-kos">(</span>...<span class="pl-s1">arr</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`数组最大值为<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">max</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// 数组最大值为9</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`数组最小值为<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">min</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// 数组最大值为1</span></pre></div>
+<p><strong>合并数组</strong></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr1</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'cpp'</span><span class="pl-kos">]</span>
+<span class="pl-k">let</span> <span class="pl-s1">arr2</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">]</span>
+<span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span>...<span class="pl-s1">arr1</span><span class="pl-kos">,</span> ...<span class="pl-s1">arr2</span><span class="pl-kos">]</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// ['py', 'c', 'cpp', 'html', 'css', 'js']</span></pre></div>
 <h3>2.3 箭头函数</h3>
 <p>引入箭头函数的目的是更简短的函数写法并且不绑定this，箭头函数的语法比函数表达式更简洁. 使用场景：箭头函数更适用于那些本来需要匿名函数的地方</p>
 <h4>2.3.1 箭头函数基本语法</h4>
-<p>=== "基本写法"<br>
-```js<br>
-// 普通函数<br>
-// function fn() {<br>
-//     console.log('Hello world!')<br>
-// }</p>
-<pre class="notranslate"><code class="notranslate">// 箭头函数
-const fn = () =&gt; {
-    console.log('Hello world!')
-}
-fn() // 输出结果 Hello world!
-```
-</code></pre>
-<p>=== "省略小括号"<br>
+<p><strong>基本写法</strong></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数</span>
+<span class="pl-c">// function fn() {</span>
+<span class="pl-c">//     console.log('Hello world!')</span>
+<span class="pl-c">// }</span>
+
+<span class="pl-c">// 箭头函数</span>
+<span class="pl-k">const</span> <span class="pl-en">fn</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Hello world!'</span><span class="pl-kos">)</span>
+<span class="pl-kos">}</span>
+<span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 Hello world!</span></pre></div>
+<p><strong>省略小括号</strong><br>
 只有一个参数可以省略小括号</p>
-<pre class="notranslate"><code class="notranslate">```js
-//  普通函数
-// function fn(x) {
-//     return x + x
-// }
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">//  普通函数</span>
+<span class="pl-c">// function fn(x) {</span>
+<span class="pl-c">//     return x + x</span>
+<span class="pl-c">// }</span>
 
-// 箭头函数
-// const fn = (x) =&gt; {
-//     return x + x
-// }
+<span class="pl-c">// 箭头函数</span>
+<span class="pl-c">// const fn = (x) =&gt; {</span>
+<span class="pl-c">//     return x + x</span>
+<span class="pl-c">// }</span>
 
-// 箭头函数(只有一个参数时可以省略括号)
-const fn = x =&gt; {
-    return x + x
-}
+<span class="pl-c">// 箭头函数(只有一个参数时可以省略括号)</span>
+<span class="pl-k">const</span> <span class="pl-en">fn</span> <span class="pl-c1">=</span> <span class="pl-s1">x</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+    <span class="pl-k">return</span> <span class="pl-s1">x</span> <span class="pl-c1">+</span> <span class="pl-s1">x</span>
+<span class="pl-kos">}</span>
 
-const result = fn(5)
-console.log(result) // 输出结果 10
-```
-</code></pre>
-<p>=== "省略return"<br>
+<span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-c1">5</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 10</span></pre></div>
+<p><strong>省略return</strong><br>
 如果函数体只有一行代码(return语句)，可以写到一行上，并且无需写 return 直接返回值</p>
-<pre class="notranslate"><code class="notranslate">```js
-// 普通函数
-// function fn(x, y) {
-//     return x + y
-// }
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数</span>
+<span class="pl-c">// function fn(x, y) {</span>
+<span class="pl-c">//     return x + y</span>
+<span class="pl-c">// }</span>
 
-// 箭头函数
-// const fn = (x, y) =&gt; {
-//     return x + y
-// }
+<span class="pl-c">// 箭头函数</span>
+<span class="pl-c">// const fn = (x, y) =&gt; {</span>
+<span class="pl-c">//     return x + y</span>
+<span class="pl-c">// }</span>
 
-// 箭头函数(函数体只用return语句时,可以省略花括号和return)
-const fn = (x, y) =&gt; x + y
+<span class="pl-c">// 箭头函数(函数体只用return语句时,可以省略花括号和return)</span>
+<span class="pl-k">const</span> <span class="pl-en">fn</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-s1">x</span><span class="pl-kos">,</span> <span class="pl-s1">y</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-s1">x</span> <span class="pl-c1">+</span> <span class="pl-s1">y</span>
 
-const result = fn(4, 7)
-console.log(result) // 输出结果 11
-```
-</code></pre>
-<p>=== "返回对象的箭头函数"<br>
-```js<br>
-// 箭头函数(返回值是对象数据类型时,要使用小括号包裹对象的花括号,用以区分函数体的花括号)<br>
-const fn = uname =&gt; ({ name: uname })</p>
-<pre class="notranslate"><code class="notranslate">const result = fn('wq')
-console.log(result) // 输出结果 {name: 'wq'}
-```
-</code></pre>
-<p>???+ note<br>
-- 箭头函数属于表达式函数，因此不存在函数提升<br>
-- 箭头函数只有一个参数时可以省略圆括号 ()<br>
-- 箭头函数函数体只有一行代码时可以省略花括号 {}，并自动做为返回值被返回<br>
-- 加括号的函数体返回对象字面量表达式</p>
+<span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-c1">4</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 11</span></pre></div>
+<p><strong>返回对象的箭头函数</strong></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 箭头函数(返回值是对象数据类型时,要使用小括号包裹对象的花括号,用以区分函数体的花括号)</span>
+<span class="pl-k">const</span> <span class="pl-en">fn</span> <span class="pl-c1">=</span> <span class="pl-s1">uname</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">name</span>: <span class="pl-s1">uname</span> <span class="pl-kos">}</span><span class="pl-kos">)</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-s">'wq'</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 {name: 'wq'}</span></pre></div>
+<details>
+<summary>note</summary>
+<ul>
+<li>箭头函数属于表达式函数，因此不存在函数提升</li>
+<li>箭头函数只有一个参数时可以省略圆括号 ()</li>
+<li>箭头函数函数体只有一行代码时可以省略花括号 {}，并自动做为返回值被返回</li>
+<li>加括号的函数体返回对象字面量表达式</li>
+</ul>
+</details>
 <h4>2.3.2 箭头函数参数</h4>
 <p>普通函数有 <code class="notranslate">arguments</code> 动态参数, 但是箭头函数没有 <code class="notranslate">arguments</code> 动态参数，有 剩余参数 <code class="notranslate">..args</code></p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数使用动态参数</span>
@@ -474,22 +525,23 @@ console.log(result) // 输出结果 {name: 'wq'}
 <span class="pl-k">let</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">7</span><span class="pl-kos">;</span> <span class="pl-c">// 此处的";"必不可少,因为当方括号位于句首时,前面必须要有结束符号";",否则会报错</span>
 <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">a</span><span class="pl-kos">]</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`a=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">a</span><span class="pl-kos">}</span></span>, b=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">b</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// a=7, b=5</span></pre></div>
-<p>???+ info "js 前面必须加分号情况"<br>
-- 立即执行函数</p>
-<pre class="notranslate"><code class="notranslate">    ```js
-    // 写法一
-    (function fn() {})();
+<details>
+<summary>js 前面必须加分号情况</summary>
+<ul>
+<li>
+<p>立即执行函数</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法一</span>
+<span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span><span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-    // 写法二
-    ;(function fn() {})()
-    ```
-
-- 数组解构
-
-    ```js
-    ;[a, b] = [b, a]
-    ```
-</code></pre>
+<span class="pl-c">// 写法二</span>
+<span class="pl-kos">;</span><span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span><span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">(</span><span class="pl-kos">)</span></pre></div>
+</li>
+<li>
+<p>数组解构</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">;</span><span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">a</span><span class="pl-kos">]</span></pre></div>
+</li>
+</ul>
+</details>
 <p>变量的数量大于数组元素值数量时，多余的变量将被赋值为 <code class="notranslate">undefined</code></p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">]</span>
 <span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
@@ -638,30 +690,46 @@ console.log(result) // 输出结果 {name: 'wq'}
 
 <span class="pl-k">const</span> <span class="pl-s1">person2</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Person</span><span class="pl-kos">(</span><span class="pl-s">'jerry'</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">)</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">person2</span><span class="pl-kos">)</span> <span class="pl-c">// {name: 'jerry', age: 20}</span></pre></div>
-<p>???+ note<br>
-- 它们的命名以大写字母开头, 大驼峰命名法<br>
-- 它们只能由 <code class="notranslate">new</code> 操作符来执行<br>
-- 使用 <code class="notranslate">new</code> 关键字调用函数的行为被称为实例化<br>
-- 实例化构造函数时没有参数时可以省略 <code class="notranslate">()</code><br>
-- 构造函数内部无需写 <code class="notranslate">return</code>，返回值即为新创建的对象<br>
-- 构造函数内部的 <code class="notranslate">return</code> 返回的值无效，所以不要写 <code class="notranslate">return</code><br>
-- <code class="notranslate">new Object()</code> <code class="notranslate">new Date()</code> 也是实例化构造函数</p>
-<p>??? info "实例化执行过程"<br>
-- 创建新对象<br>
-- 构造函数this指向新对象<br>
-- 执行构造函数代码，修改this，添加新的属性<br>
-- 返回新对象</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>它们的命名以大写字母开头, 大驼峰命名法</li>
+<li>它们只能由 <code class="notranslate">new</code> 操作符来执行</li>
+<li>使用 <code class="notranslate">new</code> 关键字调用函数的行为被称为实例化</li>
+<li>实例化构造函数时没有参数时可以省略 <code class="notranslate">()</code></li>
+<li>构造函数内部无需写 <code class="notranslate">return</code>，返回值即为新创建的对象</li>
+<li>构造函数内部的 <code class="notranslate">return</code> 返回的值无效，所以不要写 <code class="notranslate">return</code></li>
+<li><code class="notranslate">new Object()</code> <code class="notranslate">new Date()</code> 也是实例化构造函数</li>
+</ul>
+</details>
+<details>
+<summary>实例化执行过程</summary>
+<ul>
+<li>创建新对象</li>
+<li>构造函数this指向新对象</li>
+<li>执行构造函数代码，修改this，添加新的属性</li>
+<li>返回新对象</li>
+</ul>
+</details>
 <h3>4.3 实例成员和静态成员</h3>
 <p>实例成员：通过构造函数创建的对象称为实例对象，实例对象中的属性和方法称为实例成员。类似于 Python 中的实例属性和实例方法.</p>
-<p>???+ note<br>
-- 实例对象的属性和方法即为实例成员<br>
-- 为构造函数传入参数，动态创建结构相同但值不同的对象<br>
-- 构造函数创建的实例对象彼此独立互不影响。</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>实例对象的属性和方法即为实例成员</li>
+<li>为构造函数传入参数，动态创建结构相同但值不同的对象</li>
+<li>构造函数创建的实例对象彼此独立互不影响。</li>
+</ul>
+</details>
 <p>静态成员：构造函数的属性和方法被称为静态成员. 类似于 Python 类属性和类方法.</p>
-<p>???+ note<br>
-- 构造函数的属性和方法被称为静态成员<br>
-- 一般公共特征的属性或方法静态成员设置为静态成员<br>
-- 静态成员方法中的 this 指向构造函数本身</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>构造函数的属性和方法被称为静态成员</li>
+<li>一般公共特征的属性或方法静态成员设置为静态成员</li>
+<li>静态成员方法中的 this 指向构造函数本身</li>
+</ul>
+</details>
 <h3>4.4 内置构造函数</h3>
 <div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">flowchart</span> <span class="pl-c1">LR</span>
     <span class="pl-ent">A</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>JavaScript的6中主要基本数据类型<span class="pl-pds"><span class="pl-sg">]</span></span></span> <span class="pl-k">--&gt;</span>  <span class="pl-ent">B</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>基本数据类型/包装类型<span class="pl-pds"><span class="pl-sg">]</span></span></span>
@@ -950,9 +1018,13 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </ul>
 <h3>5.2 构造函数</h3>
 <p>封装是面向对象思想中比较重要的一部分，js面向对象可以通过构造函数实现的封装。 同样的将变量和函数组合到了一起并能通过 this 实现数据的共享，所不同的是借助构造函数创建出来的实例对象之间是彼此不影响的, 因此存在浪费内存的问题</p>
-<p>???+ note<br>
-- 构造函数体现了面向对象的封装特性<br>
-- 构造函数实例创建的对象彼此独立、互不影响</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>构造函数体现了面向对象的封装特性</li>
+<li>构造函数实例创建的对象彼此独立、互不影响</li>
+</ul>
+</details>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">=</span> <span class="pl-s1">name</span><span class="pl-kos">,</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-s1">age</span>
@@ -1011,15 +1083,23 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <h4>5.3.3 对象原型 <code class="notranslate">__proto__</code></h4>
 <p>构造函数可以创建实例对象，构造函数还有一个原型对象，一些公共的属性或者方法放到这个原型对象身上.</p>
 <p>对象都会有一个属性 <code class="notranslate">__proto__</code> 指向构造函数的 <code class="notranslate">prototype</code> 原型对象，之所以我们对象可以使用构造函数 <code class="notranslate">prototype</code> 原型对象的属性和方法，就是因为对象有 <code class="notranslate">__proto__</code> 原型的存在</p>
-<p>???+ note<br>
-- <code class="notranslate">__proto__</code> 是JS非标准属性<br>
-- <code class="notranslate">[[prototype]]</code>和<code class="notranslate">__proto__</code>意义相同<br>
-- 用来表明当前实例对象指向哪个原型对象 <code class="notranslate">prototype</code><br>
-- <code class="notranslate">__proto__</code> 对象原型里面也有一个 <code class="notranslate">constructor</code> 属性，指向创建该实例对象的构造函数</p>
-<p>???+ note<br>
-- <code class="notranslate">prototype</code> 是 <strong>原型(原型对象)</strong> ,构造函数都自动有原型<br>
-- <code class="notranslate">prototype</code> 原型 和 对象原型 <code class="notranslate">__proto__</code> 里面都有 <code class="notranslate">constructor</code> 属性, 这个属性都指向创建实例对象/原型的构造函数<br>
-- <code class="notranslate">__proto__</code> 属性在实例对象里面,指向原型 <code class="notranslate">prototype</code></p>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">__proto__</code> 是JS非标准属性</li>
+<li><code class="notranslate">[[prototype]]</code>和<code class="notranslate">__proto__</code>意义相同</li>
+<li>用来表明当前实例对象指向哪个原型对象 <code class="notranslate">prototype</code></li>
+<li><code class="notranslate">__proto__</code> 对象原型里面也有一个 <code class="notranslate">constructor</code> 属性，指向创建该实例对象的构造函数</li>
+</ul>
+</details>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">prototype</code> 是 <strong>原型(原型对象)</strong> ,构造函数都自动有原型</li>
+<li><code class="notranslate">prototype</code> 原型 和 对象原型 <code class="notranslate">__proto__</code> 里面都有 <code class="notranslate">constructor</code> 属性, 这个属性都指向创建实例对象/原型的构造函数</li>
+<li><code class="notranslate">__proto__</code> 属性在实例对象里面,指向原型 <code class="notranslate">prototype</code></li>
+</ul>
+</details>
 <h4>5.3.4 原型继承</h4>
 <p>继承是面向对象编程的另一个特征，通过继承进一步提升代码封装的程度，JavaScript 中大多是借助原型对象实现继承的特性。</p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">Dog</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
@@ -1037,13 +1117,17 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <span class="pl-kos">}</span></pre></div>
 <h4>5.3.5 原型链</h4>
 <p>基于原型对象的继承使得不同构造函数的原型对象关联在一起，并且这种关联的关系是一种链状的结构，我们将原型对象的链状结构关系称为原型链</p>
-<p>???+ note "原型链-查找规则"<br>
-- 当访问一个对象的属性（包括方法）时，首先查找这个对象自身有没有该属性。<br>
-- 如果没有就查找它的原型（也就是 <code class="notranslate">__proto__</code> 指向的 <code class="notranslate">prototype</code> 原型对象）<br>
-- 如果还没有就查找原型对象的原型（<code class="notranslate">Object</code>的原型对象）<br>
-- 依此类推一直找到 <code class="notranslate">Object</code> 为止（null）<br>
-- <code class="notranslate">__proto__</code> 对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线<br>
-- 可以使用 <code class="notranslate">instanceof</code> 运算符用于检测构造函数的 <code class="notranslate">prototype</code> 属性是否出现在某个实例对象的原型链上</p>
+<details>
+<summary>原型链-查找规则</summary>
+<ul>
+<li>当访问一个对象的属性（包括方法）时，首先查找这个对象自身有没有该属性。</li>
+<li>如果没有就查找它的原型（也就是 <code class="notranslate">__proto__</code> 指向的 <code class="notranslate">prototype</code> 原型对象）</li>
+<li>如果还没有就查找原型对象的原型（<code class="notranslate">Object</code>的原型对象）</li>
+<li>依此类推一直找到 <code class="notranslate">Object</code> 为止（null）</li>
+<li><code class="notranslate">__proto__</code> 对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线</li>
+<li>可以使用 <code class="notranslate">instanceof</code> 运算符用于检测构造函数的 <code class="notranslate">prototype</code> 属性是否出现在某个实例对象的原型链上</li>
+</ul>
+</details>
 <h2>六、技巧</h2>
 <h3>6.1 拷贝</h3>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
@@ -1102,11 +1186,17 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <span class="pl-s1">arr2</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-c1">9</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr1</span><span class="pl-kos">,</span> <span class="pl-s1">arr2</span><span class="pl-kos">)</span> <span class="pl-c">// [1, 2, 3] [9, 2, 3]</span></pre></div>
 <p>但是对于嵌套的数组和对象,浅拷贝也无济于事.</p>
-<p>???+ note "直接赋值和浅拷贝的区别"<br>
-- 直接赋值的方法，只要是对象，都会相互影响，因为是直接拷贝对象栈里面的地址<br>
-- 浅拷贝如果是一层对象，不相互影响，如果出现多层对象拷贝还会相互影响</p>
-<p>???+ note<br>
-拷贝对象之后，里面的属性值是简单数据类型直接拷贝值. 如果属性值是引用数据类型则拷贝的是地址</p>
+<details>
+<summary>直接赋值和浅拷贝的区别</summary>
+<ul>
+<li>直接赋值的方法，只要是对象，都会相互影响，因为是直接拷贝对象栈里面的地址</li>
+<li>浅拷贝如果是一层对象，不相互影响，如果出现多层对象拷贝还会相互影响</li>
+</ul>
+</details>
+<details>
+<summary>note</summary>
+<p>拷贝对象之后，里面的属性值是简单数据类型直接拷贝值. 如果属性值是引用数据类型则拷贝的是地址</p>
+</details>
 <h4>6.1.2 深拷贝</h4>
 <p>深拷贝：拷贝的是对象，不是地址</p>
 <p>常见的实现深拷贝的方法：</p>
@@ -1115,24 +1205,34 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <li>js库lodash</li>
 <li>通过 <code class="notranslate">JSON.stringify()</code> 实现 (推荐) 先将对象转换为JSON,再把JSON字符串转换为对象</li>
 </ul>
-<p>???+ info "递归"<br>
-如果一个函数在内部可以调用其本身，那么这个函数就是递归函数. 简单理解:函数内部自己调用自己, 这个函数就是递归函数, 递归函数的作用和循环效果类似, 由于递归很容易发生“栈溢出”错误（stack overflow），所以必须要加退出条件 <code class="notranslate">return</code>, 此时的 <code class="notranslate">return</code> 类似于 循环中的 <code class="notranslate">break</code></p>
-<pre class="notranslate"><code class="notranslate">```js
-let i = 1
-function fn() {
-    console.log(i)
-    if (i &gt;= 3) {
-        return
-    }
-    i ++
-    fn()
-}
+<details>
+<summary>递归</summary>
+<p>如果一个函数在内部可以调用其本身，那么这个函数就是递归函数. 简单理解:函数内部自己调用自己, 这个函数就是递归函数, 递归函数的作用和循环效果类似, 由于递归很容易发生“栈溢出”错误（stack overflow），所以必须要加退出条件 <code class="notranslate">return</code>, 此时的 <code class="notranslate">return</code> 类似于 循环中的 <code class="notranslate">break</code></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
+<span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">i</span><span class="pl-kos">)</span>
+    <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">i</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">3</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+        <span class="pl-k">return</span>
+    <span class="pl-kos">}</span>
+    <span class="pl-s1">i</span> <span class="pl-c1">++</span>
+    <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+<span class="pl-kos">}</span>
 
-fn() // 这是一个递归函数
-```
-</code></pre>
-<p>???+ tip "通过JSON实现深拷贝"<br>
-<code class="notranslate">js const user1 = { name: 'wq', age: 18, hobby: { langs: ['python', 'javascript'], sport: 'walking' } } const user2 = JSON.parse(JSON.stringify(user1)) console.log(user2) </code></p>
+<span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 这是一个递归函数</span></pre></div>
+</details>
+<details>
+<summary>通过JSON实现深拷贝</summary>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span><span class="pl-kos">,</span>
+    <span class="pl-c1">hobby</span>: <span class="pl-kos">{</span>
+        <span class="pl-c1">langs</span>: <span class="pl-kos">[</span><span class="pl-s">'python'</span><span class="pl-kos">,</span> <span class="pl-s">'javascript'</span><span class="pl-kos">]</span><span class="pl-kos">,</span>
+        <span class="pl-c1">sport</span>: <span class="pl-s">'walking'</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span>
+<span class="pl-k">const</span> <span class="pl-s1">user2</span> <span class="pl-c1">=</span> <span class="pl-c1">JSON</span><span class="pl-kos">.</span><span class="pl-en">parse</span><span class="pl-kos">(</span><span class="pl-c1">JSON</span><span class="pl-kos">.</span><span class="pl-en">stringify</span><span class="pl-kos">(</span><span class="pl-s1">user1</span><span class="pl-kos">)</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">user2</span><span class="pl-kos">)</span></pre></div>
+</details>
 <h3>6.2 异常处理</h3>
 <p>异常处理是指预估代码执行过程中可能发生的错误，然后最大程度的避免错误的发生导致整个程序无法继续运行.</p>
 <h4>6.2.1 抛出异常</h4>
@@ -1151,11 +1251,15 @@ fn() // 这是一个递归函数
 <span class="pl-en">getSum</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 报错</span></pre></div>
 <h4>6.2.2 捕获异常</h4>
 <p>我们可以通过try / catch 捕获错误信息（浏览器提供的错误信息） try 试试 catch 拦住 finally 最后</p>
-<p>???+ note<br>
-- <code class="notranslate">try</code> <code class="notranslate">catch</code> 用于捕获错误信息<br>
-- 将预估可能发生错误的代码写在 <code class="notranslate">try</code> 代码段中<br>
-- 如果 <code class="notranslate">try</code> 代码段中出现错误后，会执行 <code class="notranslate">catch</code> 代码段，并截获到错误信息, 程序不终止<br>
-- <code class="notranslate">finally</code> 不管是否有错误，都会执行</p>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">try</code> <code class="notranslate">catch</code> 用于捕获错误信息</li>
+<li>将预估可能发生错误的代码写在 <code class="notranslate">try</code> 代码段中</li>
+<li>如果 <code class="notranslate">try</code> 代码段中出现错误后，会执行 <code class="notranslate">catch</code> 代码段，并截获到错误信息, 程序不终止</li>
+<li><code class="notranslate">finally</code> 不管是否有错误，都会执行</li>
+</ul>
+</details>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-k">try</span> <span class="pl-kos">{</span>
         <span class="pl-c">// 可能发送错误的代码 要写到 try</span>
@@ -1187,9 +1291,13 @@ fn() // 这是一个递归函数
 <li>箭头函数中的this引用的就是最近作用域中的this</li>
 <li>向外层作用域中，一层一层查找this，直到有this的定义</li>
 </ul>
-<p>???+ warning<br>
-- 在开发中【使用箭头函数前需要考虑函数中 this 的值】，事件回调函数使用箭头函数时，this 为全局的 window . 因此DOM事件回调函数如果里面需要DOM对象的this，则不推荐使用箭头函数. 事件监听不推荐使用箭头函数<br>
-- 同样由于箭头函数 this 的原因，基于原型的面向对象也不推荐采用箭头函数. 对象中的函数不推荐使用箭头函数</p>
+<details>
+<summary>warning</summary>
+<ul>
+<li>在开发中【使用箭头函数前需要考虑函数中 this 的值】，事件回调函数使用箭头函数时，this 为全局的 window . 因此DOM事件回调函数如果里面需要DOM对象的this，则不推荐使用箭头函数. 事件监听不推荐使用箭头函数</li>
+<li>同样由于箭头函数 this 的原因，基于原型的面向对象也不推荐采用箭头函数. 对象中的函数不推荐使用箭头函数</li>
+</ul>
+</details>
 <h4>6.3.3 改变this指向</h4>
 <p>JavaScript 中还允许指定函数中 this 的指向，有 3 个方法可以动态指定普通函数中 this 的指向</p>
 <ul>
@@ -1274,16 +1382,26 @@ bind() 方法不会调用函数。但是能改变函数内部this 指向</p>
 </code></pre>
 </li>
 </ul>
-<p>???+ note "call apply bind 总结"<br>
-- 相同点: 都可以改变函数内部的this指向.<br>
-- 区别点:<br>
-- <code class="notranslate">call</code> 和 <code class="notranslate">apply</code> 会调用函数, 并且改变函数内部this指向.<br>
-- <code class="notranslate">call</code> 和 <code class="notranslate">apply</code> 传递的参数不一样<br>
-- <code class="notranslate">bind</code> 不会调用函数, 可以改变函数内部this指向.<br>
-- 主要应用场景:<br>
-- <code class="notranslate">call</code> 调用函数并且可以传递参数<br>
-- <code class="notranslate">apply</code> 经常跟数组有关系. 比如借助于数学对象实现数组最大值最小值<br>
-- <code class="notranslate">bind</code> 不调用函数,但是还想改变this指向. 比如改变定时器内部的this指向</p>
+<details>
+<summary>call apply bind 总结</summary>
+<ul>
+<li>相同点: 都可以改变函数内部的this指向.</li>
+<li>区别点:
+<ul>
+<li><code class="notranslate">call</code> 和 <code class="notranslate">apply</code> 会调用函数, 并且改变函数内部this指向.</li>
+<li><code class="notranslate">call</code> 和 <code class="notranslate">apply</code> 传递的参数不一样</li>
+<li><code class="notranslate">bind</code> 不会调用函数, 可以改变函数内部this指向.</li>
+</ul>
+</li>
+<li>主要应用场景:
+<ul>
+<li><code class="notranslate">call</code> 调用函数并且可以传递参数</li>
+<li><code class="notranslate">apply</code> 经常跟数组有关系. 比如借助于数学对象实现数组最大值最小值</li>
+<li><code class="notranslate">bind</code> 不调用函数,但是还想改变this指向. 比如改变定时器内部的this指向</li>
+</ul>
+</li>
+</ul>
+</details>
 <h3>6.4 性能优化</h3>
 <ul>
 <li>
@@ -1295,12 +1413,20 @@ bind() 方法不会调用函数。但是能改变函数内部this 指向</p>
 <p>所谓防抖，就是指触发事件后在 n 秒内函数只能执行一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间(只执行最后一次触发的函数). 类似于王者荣耀回城时被打断又要重新计时</p>
 </li>
 </ul>
-<p>???+ note "节流和防抖的区别"<br>
-- 节流: 就是指连续触发事件但是在 n 秒中只执行一次函数,比如可以利用节流实现 1s之内 只能触发一次鼠标移动事件<br>
-- 防抖：如果在 n 秒内又触发了事件，则会重新计算函数执行时间</p>
-<p>???+ note "节流和防抖的使用场景"<br>
-- 节流: 鼠标移动，页面尺寸发生变化，滚动条滚动等开销比较大的情况下<br>
-- 防抖: 搜索框输入，设定每次输入完毕n秒后发送请求，如果期间还有输入，则从新计算时间</p></div>
+<details>
+<summary>节流和防抖的区别</summary>
+<ul>
+<li>节流: 就是指连续触发事件但是在 n 秒中只执行一次函数,比如可以利用节流实现 1s之内 只能触发一次鼠标移动事件</li>
+<li>防抖：如果在 n 秒内又触发了事件，则会重新计算函数执行时间</li>
+</ul>
+</details>
+<details>
+<summary>节流和防抖的使用场景</summary>
+<ul>
+<li>节流: 鼠标移动，页面尺寸发生变化，滚动条滚动等开销比较大的情况下</li>
+<li>防抖: 搜索框输入，设定每次输入完毕n秒后发送请求，如果期间还有输入，则从新计算时间</li>
+</ul>
+</details></div>
   </article>
 <section class="in-comments-section">
   <div class="in-comments-container" id="comments">

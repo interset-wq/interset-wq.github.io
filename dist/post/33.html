@@ -20,9 +20,31 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="JavaScript进阶语法">
+  <meta name="description" content="+++
+date = 2025-07-31T10:18:38+08:00
+description = 'JavaScript进阶语法'
++++
+✏️ `本文创建于2025-4-18`
+
+## 一、Web APIs 简介
+
+<details>
+<summary>变量声明</summary>
+
+常用 `const` 和 `let` 关键字进行变量声明，在两者都可以使用的情况下，优先使用 `const` 进行变量声明。">
 <meta property="og:title" content="Web APIs">
-<meta property="og:description" content="JavaScript进阶语法">
+<meta property="og:description" content="+++
+date = 2025-07-31T10:18:38+08:00
+description = 'JavaScript进阶语法'
++++
+✏️ `本文创建于2025-4-18`
+
+## 一、Web APIs 简介
+
+<details>
+<summary>变量声明</summary>
+
+常用 `const` 和 `let` 关键字进行变量声明，在两者都可以使用的情况下，优先使用 `const` 进行变量声明。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://interset-wq.github.io/post/33.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
@@ -42,21 +64,30 @@
 </nav></header>
   <main class="in-site-main" id="content">  <article>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-07-31</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">更新 2026-10-06</span>
       <span class="Label" style="background-color:#e34c26;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#H5">H5</a>
       </span>
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
-    <div class="in-post-body markdown-body"><p>:material-pen-plus: <code class="notranslate">本文创建于2025-4-18</code></p>
+    <div class="in-post-body markdown-body"><p>+++<br>
+date = 2025-07-31T10:18:38+08:00<br>
+description = "JavaScript进阶语法"<br>
++++<br>
+✏️ <code class="notranslate">本文创建于2025-4-18</code></p>
 <h2>一、Web APIs 简介</h2>
-<p>???+ note "变量声明"<br>
-常用 <code class="notranslate">const</code> 和 <code class="notranslate">let</code> 关键字进行变量声明，在两者都可以使用的情况下，优先使用 <code class="notranslate">const</code> 进行变量声明。因为js中很多变量声明之后就不会再更改了，使用 <code class="notranslate">const</code> 声明变量语义化更好。</p>
-<pre class="notranslate"><code class="notranslate">???+ tip 
-    - 数组和对象建议使用 `const` 进行声明，虽然数组和对象可以使用方法进行修改，但是修改时并不会改变他们的地址，因此可以使用const声明
-    - for循环条件中的变量需要使用let声明
-</code></pre>
+<details>
+<summary>变量声明</summary>
+<p>常用 <code class="notranslate">const</code> 和 <code class="notranslate">let</code> 关键字进行变量声明，在两者都可以使用的情况下，优先使用 <code class="notranslate">const</code> 进行变量声明。因为js中很多变量声明之后就不会再更改了，使用 <code class="notranslate">const</code> 声明变量语义化更好。</p>
+<details>
+<summary>tip</summary>
+<ul>
+<li>数组和对象建议使用 <code class="notranslate">const</code> 进行声明，虽然数组和对象可以使用方法进行修改，但是修改时并不会改变他们的地址，因此可以使用const声明</li>
+<li>for循环条件中的变量需要使用let声明</li>
+</ul>
+</details>
+</details>
 <div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">flowchart</span> <span class="pl-c1">TD</span>
     <span class="pl-ent">A</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>JavaScript<span class="pl-pds"><span class="pl-sg">]</span></span></span> <span class="pl-k">--&gt;</span>  <span class="pl-ent">B</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>JS语言基础ECMAScript<span class="pl-pds"><span class="pl-sg">]</span></span></span>
     <span class="pl-ent">A</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">C</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>Web APIs<span class="pl-pds"><span class="pl-sg">]</span></span></span>
@@ -83,10 +114,14 @@
 </ul>
 </li>
 </ul>
-<p>??? info "其他获取DOM元素的方法（不推荐使用）"<br>
-- <code class="notranslate">document.getElementById()</code> 传入元素id值，通过id获取匹配到的第一个元素<br>
-- <code class="notranslate">document.getElementByTagName()</code> 传入html标签名，通过元素选择器获取匹配到的所有元素<br>
-- <code class="notranslate">document.getElementByClassName()</code> 传入类名，通过类选择器获取匹配到的所有元素</p>
+<details>
+<summary>其他获取DOM元素的方法（不推荐使用）</summary>
+<ul>
+<li><code class="notranslate">document.getElementById()</code> 传入元素id值，通过id获取匹配到的第一个元素</li>
+<li><code class="notranslate">document.getElementByTagName()</code> 传入html标签名，通过元素选择器获取匹配到的所有元素</li>
+<li><code class="notranslate">document.getElementByClassName()</code> 传入类名，通过类选择器获取匹配到的所有元素</li>
+</ul>
+</details>
 <h3>1.3 操作元素文本内容</h3>
 <ul>
 <li><code class="notranslate">对象.innerText</code> 属性 修改html标签的文本内容，显示纯文本，不解析html标签</li>
@@ -96,14 +131,16 @@
 <p><strong>操作常用属性</strong></p>
 <p><code class="notranslate">对象.属性名 = 值</code> 直接通过属性名修改元素属性值，最常见的属性比如： href、title、src 等</p>
 <p><strong>操作元素样式</strong></p>
-<p>=== "直接通过style修改"<br>
+<p><strong>直接通过style修改</strong><br>
 <code class="notranslate">对象.style.样式属性 = 值</code> 样式属性就是CSS的属性，由于CSS属性名是使用<code class="notranslate">-</code>来命名的，在JS中使用时统一使用小驼峰格式的命名表示CSS属性名。实际上生成的是行内样式</p>
-<p>=== "使用类名className修改"<br>
+<p><strong>使用类名className修改</strong><br>
 <code class="notranslate">对象.className = 值</code> 先使用CSS在style标签中创建一个类选择器的样式表，再将这个类的类名赋值给此对象的className属性，如果该对象原先也有类名，则会被替换，多个类名看做一个处理，值应该传入类名，而不是类选择器。</p>
-<p>=== "使用classList修改（推荐）"<br>
-- <code class="notranslate">对象.classList.add(类名)</code> 添加类名，值应该传入类名，而不是类选择器，不会替换原有类名，而是会添加到原有类名后面<br>
-- <code class="notranslate">对象.classList.remove(类名)</code> 删除传入的类名<br>
-- <code class="notranslate">对象.classList.toggle(类名)</code> 切换对象的一个类名，如果对象原先有这个类名，则会移除，如果对象原先没有这个类名，则会添加</p>
+<p><strong>使用classList修改（推荐）</strong></p>
+<ul>
+<li><code class="notranslate">对象.classList.add(类名)</code> 添加类名，值应该传入类名，而不是类选择器，不会替换原有类名，而是会添加到原有类名后面</li>
+<li><code class="notranslate">对象.classList.remove(类名)</code> 删除传入的类名</li>
+<li><code class="notranslate">对象.classList.toggle(类名)</code> 切换对象的一个类名，如果对象原先有这个类名，则会移除，如果对象原先没有这个类名，则会添加</li>
+</ul>
 <p><strong>操作表单属性</strong></p>
 <ul>
 <li>与<strong>操作常用属性</strong>用法类似，但是表单属性比较特殊，表单属性一般都是通过<code class="notranslate">对象.属性名</code>来获取</li>
@@ -130,10 +167,11 @@
 <h2>二、事件</h2>
 <h3>2.1 事件监听（事件绑定）</h3>
 <p><code class="notranslate">对象.addEventListener(事件类型, 函数名或匿名函数)</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数，这个函数也被称为回调函数。这种绑定事件的方法称为 <code class="notranslate">L2</code> 级事件绑定</p>
-<p>???+ note "回调函数"<br>
-如果将函数 A 做为参数传递给函数 B 时，我们称函数 A 为回调函数。简单理解： 当一个函数当做参数来传递给另外一个函数的时候，这个函数就是回调函数。</p>
-<pre class="notranslate"><code class="notranslate">`setInterval(函数名或匿名函数, 间隔时间)`和`对象.addEventListener(事件类型, 函数名或匿名函数)`都是将函数作为参数传递给另外一个函数，这个函数就是回调函数。
-</code></pre>
+<details>
+<summary>回调函数</summary>
+<p>如果将函数 A 做为参数传递给函数 B 时，我们称函数 A 为回调函数。简单理解： 当一个函数当做参数来传递给另外一个函数的时候，这个函数就是回调函数。</p>
+<p><code class="notranslate">setInterval(函数名或匿名函数, 间隔时间)</code>和<code class="notranslate">对象.addEventListener(事件类型, 函数名或匿名函数)</code>都是将函数作为参数传递给另外一个函数，这个函数就是回调函数。</p>
+</details>
 <p><code class="notranslate">对象.on事件类型 = 函数名或匿名函数</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数，这种方式不推荐使用，因为会覆盖原有的事件处理函数。这种绑定事件的方法称为 <code class="notranslate">L0</code> 级事件绑定</p>
 <p>事件监听三要素：</p>
 <ul>
@@ -160,7 +198,7 @@
   ???+ info "移动端事件"
       移动端事件（M端事件），针对手机平板等触屏设备。触屏事件 `touch` ，touch 对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可响应用户手指（或触控笔）对屏幕或者触控板操作。M端事件一般使用JS插件完成，例如swiper插件
 
-      [Swiper官网](https://www.swiper.com.cn/){ .md-button .md-button--primary }
+      [Swiper官网](https://www.swiper.com.cn/)
       
       常见的触屏事件：
 
@@ -177,11 +215,15 @@
 <p>事件对象：事件触发时，浏览器会自动创建一个事件对象，这个事件对象会作为参数传递给事件处理函数，我们可以在事件处理函数中使用这个事件对象，来获取事件的详细信息</p>
 <p>一般命名为 <code class="notranslate">event</code> <code class="notranslate">ev</code> <code class="notranslate">e</code>，以下用 <code class="notranslate">e</code> 表示事件对象</p>
 <p><code class="notranslate">对象.addEventListener(事件类型, function (e) {})</code> 为对象绑定一个事件，当对象触发这个事件时，会执行函数。在事件绑定的回调函数的第一个参数 <code class="notranslate">e</code> 就是事件对象</p>
-<p>???+ tip "事件对象常用属性"<br>
-- <code class="notranslate">type</code> 获取当前的事件类型，即<code class="notranslate">addEventListener()</code>的第一个参数<br>
-- <code class="notranslate">clientX</code> <code class="notranslate">clientY</code> 获取光标相对于浏览器可见窗口左上角的位置<br>
-- <code class="notranslate">offsetX</code> <code class="notranslate">offsetY</code> 获取光标相对于当前DOM元素左上角的位置<br>
-- <code class="notranslate">key</code> 用户按下的键盘键的值，比如<code class="notranslate">Enter</code>、<code class="notranslate">Space</code>、<code class="notranslate">ArrowUp</code>、<code class="notranslate">ArrowDown</code>、<code class="notranslate">ArrowLeft</code>、<code class="notranslate">ArrowRight</code>等</p>
+<details>
+<summary>事件对象常用属性</summary>
+<ul>
+<li><code class="notranslate">type</code> 获取当前的事件类型，即<code class="notranslate">addEventListener()</code>的第一个参数</li>
+<li><code class="notranslate">clientX</code> <code class="notranslate">clientY</code> 获取光标相对于浏览器可见窗口左上角的位置</li>
+<li><code class="notranslate">offsetX</code> <code class="notranslate">offsetY</code> 获取光标相对于当前DOM元素左上角的位置</li>
+<li><code class="notranslate">key</code> 用户按下的键盘键的值，比如<code class="notranslate">Enter</code>、<code class="notranslate">Space</code>、<code class="notranslate">ArrowUp</code>、<code class="notranslate">ArrowDown</code>、<code class="notranslate">ArrowLeft</code>、<code class="notranslate">ArrowRight</code>等</li>
+</ul>
+</details>
 <h3>2.3 环境对象this</h3>
 <p>环境对象：指的是函数内部特殊的变量 <code class="notranslate">this</code> ，它代表着当前函数运行时所处的环境，类似于python类的 <code class="notranslate">self</code>。弄清楚this的指向，可以让我们代码更简洁</p>
 <ul>
@@ -189,8 +231,15 @@
 <li>粗略判断this的指向：谁调用， this 就是谁</li>
 <li>直接调用函数，其实相当于是 window.函数，所以 this 指向 window</li>
 </ul>
-<p>???+ example<br>
-<code class="notranslate">js const btn = document.querySelector('button') btn.addEventListener('click', function (e) { btn.style.backgroundColor = 'red' // 此处this指向对象btn，因此上面的代码也可写成： this.style.backgroundColor = 'red' }) </code></p>
+<details>
+<summary>example</summary>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">btn</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'button'</span><span class="pl-kos">)</span>
+<span class="pl-s1">btn</span><span class="pl-kos">.</span><span class="pl-en">addEventListener</span><span class="pl-kos">(</span><span class="pl-s">'click'</span><span class="pl-kos">,</span> <span class="pl-k">function</span> <span class="pl-kos">(</span><span class="pl-s1">e</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-s1">btn</span><span class="pl-kos">.</span><span class="pl-c1">style</span><span class="pl-kos">.</span><span class="pl-c1">backgroundColor</span> <span class="pl-c1">=</span> <span class="pl-s">'red'</span>
+    <span class="pl-c">// 此处this指向对象btn，因此上面的代码也可写成：</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">style</span><span class="pl-kos">.</span><span class="pl-c1">backgroundColor</span> <span class="pl-c1">=</span> <span class="pl-s">'red'</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
+</details>
 <h3>2.4 事件流</h3>
 <p>事件流：事件流指的是事件完整执行过程中的流动路径。当触发事件时，会经历两个阶段，分别是捕获阶段、冒泡阶段</p>
 <ul>
@@ -211,25 +260,19 @@
 <h3>2.5 解绑事件</h3>
 <p><code class="notranslate">对象.on事件类型 = null</code> 适用于 L0 事件，直接使用null覆盖原有事件处理函数，将事件处理函数解绑</p>
 <p><code class="notranslate">removeEventListener(事件类型, 事件处理函数, [获取捕获true或者冒泡阶段false])</code> 适用于 L2 事件，移除对象的事件监听，第一个参数为事件类型，第二个参数为事件处理函数名。匿名函数无法被解绑，所以需要解绑时，<code class="notranslate">addEventListener()</code>绑定事件时不能使用匿名函数</p>
-<p>??? info "L0和L2事件绑定的区别"</p>
-<ul>
-<li>传统on注册（L0）
-<ul>
-<li>同一个对象,后面注册的事件会覆盖前面注册(同一个事件)</li>
-<li>直接使用null覆盖偶就可以实现事件的解绑</li>
-<li>都是冒泡阶段执行的</li>
-</ul>
-</li>
-<li>事件监听注册（L2）
-<ul>
-<li>语法: <code class="notranslate">addEventListener(事件类型, 事件处理函数, 是否使用捕获)</code></li>
-<li>后面注册的事件不会覆盖前面注册的事件(同一个事件)</li>
-<li>可以通过第三个参数去确定是在冒泡或者捕获阶段执行</li>
-<li>解绑必须使用<code class="notranslate">removeEventListener(事件类型, 事件处理函数, 获取捕获或者冒泡阶段)</code></li>
-<li>匿名函数无法被解绑</li>
-</ul>
-</li>
-</ul>
+<details>
+<summary>L0和L2事件绑定的区别</summary>
+</details>
+- 传统on注册（L0）
+    - 同一个对象,后面注册的事件会覆盖前面注册(同一个事件)
+    - 直接使用null覆盖偶就可以实现事件的解绑
+    - 都是冒泡阶段执行的
+- 事件监听注册（L2）
+    - 语法: `addEventListener(事件类型, 事件处理函数, 是否使用捕获)`
+    - 后面注册的事件不会覆盖前面注册的事件(同一个事件)
+    - 可以通过第三个参数去确定是在冒泡或者捕获阶段执行
+    - 解绑必须使用`removeEventListener(事件类型, 事件处理函数, 获取捕获或者冒泡阶段)`
+    - 匿名函数无法被解绑
 <h3>2.6 事件委托</h3>
 <p>事件委托是利用事件流的特征解决一些开发需求的知识技巧</p>
 <ul>
@@ -237,9 +280,26 @@
 <li>原理：事件委托其实是利用事件冒泡的特点。给父元素注册事件，当我们触发子元素的时候，会冒泡到父元素身上，从而触发父元素的事件</li>
 <li>实现：<code class="notranslate">e.target.tagName</code> 可以获得真正触发事件的元素的标签名（标签名采用全大写），<code class="notranslate">e</code> 表示事件对象，<code class="notranslate">e.target</code> 表示真正触发事件的元素（对象）</li>
 </ul>
-<p>???+ example "事件委托"<br>
-<code class="notranslate">html &lt;ul&gt; &lt;li&gt;事件1&lt;/li&gt; &lt;li&gt;事件2&lt;/li&gt; &lt;li&gt;事件3&lt;/li&gt; &lt;li&gt;事件4&lt;/li&gt; &lt;li&gt;事件5&lt;/li&gt; &lt;p&gt;事件6&lt;/p&gt; &lt;/ul&gt; &lt;script&gt; const ul = document.querySelector('ul') ul.addEventListener('click', function(e){ if(e.target.tagName === 'LI'){ e.target.style.color = 'red' } }) &lt;/script&gt; </code><br>
-点击每个li标签，都会变成红色，但是点击p标签不会变成红色，因为p标签不是li标签，所以不会触发事件，使用这种写法可以避免为每个li标签都绑定事件，提高程序性能</p>
+<details>
+<summary>事件委托</summary>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">ul</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>事件1<span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>事件2<span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>事件3<span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>事件4<span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>事件5<span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+    <span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>事件6<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">ul</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span>
+    <span class="pl-k">const</span> <span class="pl-s1">ul</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'ul'</span><span class="pl-kos">)</span>
+    <span class="pl-s1">ul</span><span class="pl-kos">.</span><span class="pl-en">addEventListener</span><span class="pl-kos">(</span><span class="pl-s">'click'</span><span class="pl-kos">,</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">e</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+        <span class="pl-k">if</span><span class="pl-kos">(</span><span class="pl-s1">e</span><span class="pl-kos">.</span><span class="pl-c1">target</span><span class="pl-kos">.</span><span class="pl-c1">tagName</span> <span class="pl-c1">===</span> <span class="pl-s">'LI'</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+            <span class="pl-s1">e</span><span class="pl-kos">.</span><span class="pl-c1">target</span><span class="pl-kos">.</span><span class="pl-c1">style</span><span class="pl-kos">.</span><span class="pl-c1">color</span> <span class="pl-c1">=</span> <span class="pl-s">'red'</span>
+        <span class="pl-kos">}</span>
+    <span class="pl-kos">}</span><span class="pl-kos">)</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span></pre></div>
+<p>点击每个li标签，都会变成红色，但是点击p标签不会变成红色，因为p标签不是li标签，所以不会触发事件，使用这种写法可以避免为每个li标签都绑定事件，提高程序性能</p>
+</details>
 <h3>2.7 页面加载事件</h3>
 <p>加载外部资源（如图片、外联CSS和JavaScript等）加载完毕时触发的事件</p>
 <ol>
@@ -269,8 +329,10 @@
 <p>获取位置 <code class="notranslate">对象.getBoundingClientRect()</code>方法 返回元素的大小及其相对于视口的位置</p>
 <h2>三、日期对象</h2>
 <p>日期对象：用来表示时间的对象。作用：可以得到当前系统时间</p>
-<p>???+ note "实例化"<br>
-在代码中使用 new 关键字，一般将这个操作称为实例化</p>
+<details>
+<summary>实例化</summary>
+<p>在代码中使用 new 关键字，一般将这个操作称为实例化</p>
+</details>
 <p>创建一个时间对象并获取时间：</p>
 <ul>
 <li><code class="notranslate">new Date()</code> 不传参，获取的是当前时间</li>
@@ -344,11 +406,15 @@
 <h3>5.2 定时器-延时函数</h3>
 <p><code class="notranslate">setTimeout(函数名或匿名函数, 间隔时间)</code> 让代码延迟执行的函数，类似于 <code class="notranslate">setInterval(函数名或匿名函数, 间隔时间)</code> ，但回调函数仅仅只执行一次，所以可以理解为就是把一段代码延迟执行, 平时省略window</p>
 <p><code class="notranslate">clearTimeout()</code> 清除延时函数</p>
-<p>???+ warning<br>
-- 延时器需要等待,所以后面的代码先执行<br>
-- 每一次调用延时器都会产生一个新的延时器<br>
-- 延时函数<code class="notranslate">setTimeout(函数名或匿名函数, 间隔时间)</code>: 执行一次<br>
-- 间歇函数<code class="notranslate">setInterval(函数名或匿名函数, 间隔时间)</code>:每隔一段时间就执行一次,除非手动清除</p>
+<details>
+<summary>warning</summary>
+<ul>
+<li>延时器需要等待,所以后面的代码先执行</li>
+<li>每一次调用延时器都会产生一个新的延时器</li>
+<li>延时函数<code class="notranslate">setTimeout(函数名或匿名函数, 间隔时间)</code>: 执行一次</li>
+<li>间歇函数<code class="notranslate">setInterval(函数名或匿名函数, 间隔时间)</code>:每隔一段时间就执行一次,除非手动清除</li>
+</ul>
+</details>
 <h3>5.3 JS执行机制</h3>
 <p>JavaScript 语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。这是因为 Javascript 这门脚本语言诞生的使命所致——JavaScript 是为处理页面中用户的交互，以及操作DOM 而诞生的。比如我们对某个 DOM 元素进行添加和删除操作，不能同时进行。 应该先进行添加，之后再删除。单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。这样所导致的问题是：如果 JS 执行的时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉。</p>
 <p>为了解决这个问题，利用多核 CPU 的计算能力，HTML5 提出 Web Worker 标准，允许 JavaScript 脚本创建多个线程。于是，JS 中出现了同步和异步（二者的本质区别是执行顺序不同）：</p>
@@ -407,24 +473,30 @@
 <li>设置、读取方便、甚至页面刷新不丢失数据</li>
 <li>容量较大，本地存储分为 <code class="notranslate">sessionStorage</code> 和 <code class="notranslate">localStorage</code>, 存储的内容约 5Mb 左右</li>
 </ul>
-<p>???+ info "localStorage"<br>
-可以将数据永久存储在本地(用户的电脑), 除非手动删除，否则关闭页面也会存在</p>
-<pre class="notranslate"><code class="notranslate">- 存储数据 `localStorage.setItem('键', '值')` 存储的数据在 `开发者工具` 的 `应用Application` 选项卡 中查看
-- 获取数据 `localStorage.getItem('键')` 类似于python字典通过键获取值
-- 删除数据 `localStorage.removeItem('键')` 通过键删除键值对
-
-特性：
-
-- 可以多窗口（页面）共享（同一浏览器可以共享）
-- 以键值对的形式存储使用
-</code></pre>
-<p>???+ info "sessionStorage"<br>
-特性：</p>
-<pre class="notranslate"><code class="notranslate">- 生命周期为关闭浏览器窗口
-- 在同一个窗口(页面)下数据可以共享
-- 以键值对的形式存储使用
-- 用法跟 `localStorage` 基本相同, 不常用
-</code></pre>
+<details>
+<summary>localStorage</summary>
+<p>可以将数据永久存储在本地(用户的电脑), 除非手动删除，否则关闭页面也会存在</p>
+<ul>
+<li>存储数据 <code class="notranslate">localStorage.setItem('键', '值')</code> 存储的数据在 <code class="notranslate">开发者工具</code> 的 <code class="notranslate">应用Application</code> 选项卡 中查看</li>
+<li>获取数据 <code class="notranslate">localStorage.getItem('键')</code> 类似于python字典通过键获取值</li>
+<li>删除数据 <code class="notranslate">localStorage.removeItem('键')</code> 通过键删除键值对</li>
+</ul>
+<p>特性：</p>
+<ul>
+<li>可以多窗口（页面）共享（同一浏览器可以共享）</li>
+<li>以键值对的形式存储使用</li>
+</ul>
+</details>
+<details>
+<summary>sessionStorage</summary>
+<p>特性：</p>
+<ul>
+<li>生命周期为关闭浏览器窗口</li>
+<li>在同一个窗口(页面)下数据可以共享</li>
+<li>以键值对的形式存储使用</li>
+<li>用法跟 <code class="notranslate">localStorage</code> 基本相同, 不常用</li>
+</ul>
+</details>
 <h3>5.8 用本地存储存储复杂数据类型(对象)</h3>
 <p>本地只能存储字符串,无法存储复杂数据类型(对象等). 如果复杂数据类型需要使用本地存储,需要先把复杂数据类型转换成JSON字符串(JSON字符串的键和值都使用双引号包裹)</p>
 <ul>
@@ -434,8 +506,10 @@
 <p>存储数据 <code class="notranslate">localStorage.setItem('键', JSON.stringify(对象))</code></p>
 <p>获取数据 <code class="notranslate">localStorage.getItem('键')</code> 获取键对应的JSON字符串,并不是对象,还需要对其返回值使用 <code class="notranslate">JSON.parse(JSON字符串)</code> 才能获取到对象</p>
 <h2>六、正则表达式</h2>
-<p>???+ error<br>
-所有正则表达式都不要随便加空格,符合之间不需要任何空格</p>
+<details>
+<summary>error</summary>
+<p>所有正则表达式都不要随便加空格,符合之间不需要任何空格</p>
+</details>
 <h3>6.1 简介</h3>
 <p>正则表达式（Regular Expression）是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象通常用来查找、替换那些符合正则表达式的文本，许多语言都支持正则表达式。</p>
 <p>正则表达式在 JavaScript中的使用场景：</p>
@@ -447,8 +521,10 @@
 <h3>6.2 语法</h3>
 <p>使用正则表达式,首先需要定义规则(创建正则表达式对象)</p>
 <p><code class="notranslate">const regExp = /正则表达式/</code></p>
-<p>???+ warning<br>
-两个 <code class="notranslate">/</code> 之间的正则表达式不需要使用引号包裹, <code class="notranslate">/</code> 与 正则表达式之间不要随便加空格</p>
+<details>
+<summary>warning</summary>
+<p>两个 <code class="notranslate">/</code> 之间的正则表达式不需要使用引号包裹, <code class="notranslate">/</code> 与 正则表达式之间不要随便加空格</p>
+</details>
 <ul>
 <li><code class="notranslate">regExp.test(字符串)</code> 判断字符串中是否有符合匹配的内容,返回布尔值</li>
 <li><code class="notranslate">regExp.exec(字符串)</code> 检索符合匹配的内容, 返回元组, 如果没有符合匹配的内容,则返回 <code class="notranslate">null</code></li>
@@ -456,8 +532,8 @@
 <h3>6.3 元字符</h3>
 <p>普通字符: 大多数的字符仅能够描述它们本身，这些字符称作普通字符，例如所有的字母和数字。也就是说普通字符只能够匹配字符串中与它们相同的字符。例如 <code class="notranslate">/hello/</code> 这个正则表达式使用的就是普通字符</p>
 <p>元字符(特殊字符) 是一些具有特殊含义的字符，可以极大提高了灵活性和强大的匹配功能。比如，规定用户只能输入英文26个英文字母，普通字符的话<code class="notranslate">/abcdefghijklmnopqrstuvwxyz/</code>, 但是换成元字符写法： <code class="notranslate">[a-z]</code></p>
-<p>参考文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions" rel="nofollow">MDN正则表达式文档</a>{ .md-button .md-button--primary }<br>
-<a href="http://tool.oschina.net/regex" rel="nofollow">开源中国正则测试工具</a>{ .md-button }</p>
+<p>参考文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions" rel="nofollow">MDN正则表达式文档</a><br>
+<a href="http://tool.oschina.net/regex" rel="nofollow">开源中国正则测试工具</a></p>
 <p>元字符分为以下三类:</p>
 <ul>
 <li>

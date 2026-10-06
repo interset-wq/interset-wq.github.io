@@ -20,7 +20,10 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="# re 正则表达式Regular Expression
+  <meta name="description" content="+++
+date = 2025-09-06T23:15:30+08:00
++++
+# re 正则表达式Regular Expression
 
 [re官方文档](https://docs.python.org/zh-cn/3/library/re.html)
 
@@ -67,70 +70,70 @@ search和findall的函数式写法和方法式写法并没有太大的差别,只
 
 ### search
 
-=== '方法'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = re.compile('ma')
-    match = pattern.search(my_str)
-    print(match) # <re.Match object; span=(39, 41), match='ma'>
-    print(match.group()) # ma
-    ```
+**方法**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = re.compile('ma')
+match = pattern.search(my_str)
+print(match) # <re.Match object; span=(39, 41), match='ma'>
+print(match.group()) # ma
+```
 
-    - `re.compile()` 函数,传入一个字符串,返回一个Pattern对象,表示正则表达式的匹配模式,用pattren表示这个变量名
-    - Pattern对象的 `pattern.search()` 方法,在search方法传入的字符串中寻找满足条件的字符串,返回Match对象,用match表示这个变量名
-    - Match对象的 `match.group()`方法,返回查找字符串中实际匹配的文本
+- `re.compile()` 函数,传入一个字符串,返回一个Pattern对象,表示正则表达式的匹配模式,用pattren表示这个变量名
+- Pattern对象的 `pattern.search()` 方法,在search方法传入的字符串中寻找满足条件的字符串,返回Match对象,用match表示这个变量名
+- Match对象的 `match.group()`方法,返回查找字符串中实际匹配的文本
 
-=== '函数'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = 'ma'
-    match = re.search(pattern, my_str)
-    print(match) # <re.Match object; span=(39, 41), match='ma'>
-    print(match.group()) # ma
-    ```
+**函数**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = 'ma'
+match = re.search(pattern, my_str)
+print(match) # <re.Match object; span=(39, 41), match='ma'>
+print(match.group()) # ma
+```
 
 ### findall
 
-=== '方法'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = re.compile('ma')
-    match = pattern.findall(my_str)
-    print(match) # ['ma', 'ma']
-    ```
-=== '函数'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = 'ma'
-    match = re.findall(pattern, my_str)
-    print(match) # ['ma','ma']
-    ```
+**方法**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = re.compile('ma')
+match = pattern.findall(my_str)
+print(match) # ['ma', 'ma']
+```
+**函数**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = 'ma'
+match = re.findall(pattern, my_str)
+print(match) # ['ma','ma']
+```
     
 ### sub
 
 正则表达式不仅能找到文本模式,而且能够用新的文本替换掉这些模式. Pattern对象的sub()方法需要传入两个参数.第一个参数是一个字符串,用于取代发现的匹配.第二个参数是一个字符串,返回替换完成后的字符串.
 
-=== '方法'
-    ```python
-    import re
-    my_str = 'Hello World!'
-    pattern = re.compile(r'World')
-    new_str = pattern.sub('Python', my_str)
-    print(new_str) # Hello Python!
-    ```
+**方法**
+```python
+import re
+my_str = 'Hello World!'
+pattern = re.compile(r'World')
+new_str = pattern.sub('Python', my_str)
+print(new_str) # Hello Python!
+```
 
-=== '函数'
-    ```py
-    import re
-    my_str = 'Hello World!'
-    pattern = 'World'
-    new_str = re.sub(pattern, 'Python', my_str)
-    print(new_str) # Hello Python!
-    ```
+**函数**
+```py
+import re
+my_str = 'Hello World!'
+pattern = 'World'
+new_str = re.sub(pattern, 'Python', my_str)
+print(new_str) # Hello Python!
+```
 
 有时候,你可能需要使用匹配的文本本身,作为替换的一部分.在sub()的第一个参数中,可以输入\1、\2、\3…….表示“在替换中输入分组1、2、3……的文本”.
 
@@ -148,31 +151,31 @@ print(new_str) # My email is d****@foxmail.com, his email is j****@example.com
 
 ### 利用小括号 `()` 分组
 
-=== 'search方法'
-    ```python
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
-    match = pattern.search(my_str)
-    print(match.group()) # 123-456-7890
-    print(match.group(0)) # 123-456-7890
-    print(match.group(1)) # 123
-    print(match.group(2)) # 456-7890
-    print(match.groups()) # ('123', '456-7890')
-    ```
+**search方法**
+```python
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+match = pattern.search(my_str)
+print(match.group()) # 123-456-7890
+print(match.group(0)) # 123-456-7890
+print(match.group(1)) # 123
+print(match.group(2)) # 456-7890
+print(match.groups()) # ('123', '456-7890')
+```
 
-=== 'search函数'
-    ```python
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
-    match = re.search(pattern, my_str)
-    print(match.group()) # 123-456-7890
-    print(match.group(0)) # 123-456-7890
-    print(match.group(1)) # 123
-    print(match.group(2)) # 456-7890
-    print(match.groups()) # ('123', '456-7890')
-    ```
+**search函数**
+```python
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
+match = re.search(pattern, my_str)
+print(match.group()) # 123-456-7890
+print(match.group(0)) # 123-456-7890
+print(match.group(1)) # 123
+print(match.group(2)) # 456-7890
+print(match.groups()) # ('123', '456-7890')
+```
 
 Pattern对象中的第一对括号是第1组,第二对括号是第2组(这与list等序列的下标从0开始不同,分组是从1开始)
 
@@ -184,23 +187,23 @@ Match对象的 `.group()` 方法 和 `.groups()` 方法
 
 ---
 
-=== 'findall方法'
-    ```py
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
-    match = pattern.findall(my_str)
-    print(match) # [('123', '456-7890')]
-    ```
+**findall方法**
+```py
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+match = pattern.findall(my_str)
+print(match) # [('123', '456-7890')]
+```
 
-=== 'findall函数'
-    ```py
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
-    match = re.findall(pattern, my_str)
-    print(match) # [('123', '456-7890')]
-    ```
+**findall函数**
+```py
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
+match = re.findall(pattern, my_str)
+print(match) # [('123', '456-7890')]
+```
 
 面对分组时,findall的返回值是 `list[tuple]`,每个分组就是元组的元素
 
@@ -398,7 +401,10 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 ```
 。">
 <meta property="og:title" content="re 正则表达式Regular Expression">
-<meta property="og:description" content="# re 正则表达式Regular Expression
+<meta property="og:description" content="+++
+date = 2025-09-06T23:15:30+08:00
++++
+# re 正则表达式Regular Expression
 
 [re官方文档](https://docs.python.org/zh-cn/3/library/re.html)
 
@@ -445,70 +451,70 @@ search和findall的函数式写法和方法式写法并没有太大的差别,只
 
 ### search
 
-=== '方法'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = re.compile('ma')
-    match = pattern.search(my_str)
-    print(match) # <re.Match object; span=(39, 41), match='ma'>
-    print(match.group()) # ma
-    ```
+**方法**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = re.compile('ma')
+match = pattern.search(my_str)
+print(match) # <re.Match object; span=(39, 41), match='ma'>
+print(match.group()) # ma
+```
 
-    - `re.compile()` 函数,传入一个字符串,返回一个Pattern对象,表示正则表达式的匹配模式,用pattren表示这个变量名
-    - Pattern对象的 `pattern.search()` 方法,在search方法传入的字符串中寻找满足条件的字符串,返回Match对象,用match表示这个变量名
-    - Match对象的 `match.group()`方法,返回查找字符串中实际匹配的文本
+- `re.compile()` 函数,传入一个字符串,返回一个Pattern对象,表示正则表达式的匹配模式,用pattren表示这个变量名
+- Pattern对象的 `pattern.search()` 方法,在search方法传入的字符串中寻找满足条件的字符串,返回Match对象,用match表示这个变量名
+- Match对象的 `match.group()`方法,返回查找字符串中实际匹配的文本
 
-=== '函数'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = 'ma'
-    match = re.search(pattern, my_str)
-    print(match) # <re.Match object; span=(39, 41), match='ma'>
-    print(match.group()) # ma
-    ```
+**函数**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = 'ma'
+match = re.search(pattern, my_str)
+print(match) # <re.Match object; span=(39, 41), match='ma'>
+print(match.group()) # ma
+```
 
 ### findall
 
-=== '方法'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = re.compile('ma')
-    match = pattern.findall(my_str)
-    print(match) # ['ma', 'ma']
-    ```
-=== '函数'
-    ```python
-    import re
-    my_str = 'Math is intresting, and I like learing mathmatics.'
-    pattern = 'ma'
-    match = re.findall(pattern, my_str)
-    print(match) # ['ma','ma']
-    ```
+**方法**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = re.compile('ma')
+match = pattern.findall(my_str)
+print(match) # ['ma', 'ma']
+```
+**函数**
+```python
+import re
+my_str = 'Math is intresting, and I like learing mathmatics.'
+pattern = 'ma'
+match = re.findall(pattern, my_str)
+print(match) # ['ma','ma']
+```
     
 ### sub
 
 正则表达式不仅能找到文本模式,而且能够用新的文本替换掉这些模式. Pattern对象的sub()方法需要传入两个参数.第一个参数是一个字符串,用于取代发现的匹配.第二个参数是一个字符串,返回替换完成后的字符串.
 
-=== '方法'
-    ```python
-    import re
-    my_str = 'Hello World!'
-    pattern = re.compile(r'World')
-    new_str = pattern.sub('Python', my_str)
-    print(new_str) # Hello Python!
-    ```
+**方法**
+```python
+import re
+my_str = 'Hello World!'
+pattern = re.compile(r'World')
+new_str = pattern.sub('Python', my_str)
+print(new_str) # Hello Python!
+```
 
-=== '函数'
-    ```py
-    import re
-    my_str = 'Hello World!'
-    pattern = 'World'
-    new_str = re.sub(pattern, 'Python', my_str)
-    print(new_str) # Hello Python!
-    ```
+**函数**
+```py
+import re
+my_str = 'Hello World!'
+pattern = 'World'
+new_str = re.sub(pattern, 'Python', my_str)
+print(new_str) # Hello Python!
+```
 
 有时候,你可能需要使用匹配的文本本身,作为替换的一部分.在sub()的第一个参数中,可以输入\1、\2、\3…….表示“在替换中输入分组1、2、3……的文本”.
 
@@ -526,31 +532,31 @@ print(new_str) # My email is d****@foxmail.com, his email is j****@example.com
 
 ### 利用小括号 `()` 分组
 
-=== 'search方法'
-    ```python
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
-    match = pattern.search(my_str)
-    print(match.group()) # 123-456-7890
-    print(match.group(0)) # 123-456-7890
-    print(match.group(1)) # 123
-    print(match.group(2)) # 456-7890
-    print(match.groups()) # ('123', '456-7890')
-    ```
+**search方法**
+```python
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+match = pattern.search(my_str)
+print(match.group()) # 123-456-7890
+print(match.group(0)) # 123-456-7890
+print(match.group(1)) # 123
+print(match.group(2)) # 456-7890
+print(match.groups()) # ('123', '456-7890')
+```
 
-=== 'search函数'
-    ```python
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
-    match = re.search(pattern, my_str)
-    print(match.group()) # 123-456-7890
-    print(match.group(0)) # 123-456-7890
-    print(match.group(1)) # 123
-    print(match.group(2)) # 456-7890
-    print(match.groups()) # ('123', '456-7890')
-    ```
+**search函数**
+```python
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
+match = re.search(pattern, my_str)
+print(match.group()) # 123-456-7890
+print(match.group(0)) # 123-456-7890
+print(match.group(1)) # 123
+print(match.group(2)) # 456-7890
+print(match.groups()) # ('123', '456-7890')
+```
 
 Pattern对象中的第一对括号是第1组,第二对括号是第2组(这与list等序列的下标从0开始不同,分组是从1开始)
 
@@ -562,23 +568,23 @@ Match对象的 `.group()` 方法 和 `.groups()` 方法
 
 ---
 
-=== 'findall方法'
-    ```py
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
-    match = pattern.findall(my_str)
-    print(match) # [('123', '456-7890')]
-    ```
+**findall方法**
+```py
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+match = pattern.findall(my_str)
+print(match) # [('123', '456-7890')]
+```
 
-=== 'findall函数'
-    ```py
-    import re
-    my_str = 'My phone num is 123-456-7890.'
-    pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
-    match = re.findall(pattern, my_str)
-    print(match) # [('123', '456-7890')]
-    ```
+**findall函数**
+```py
+import re
+my_str = 'My phone num is 123-456-7890.'
+pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
+match = re.findall(pattern, my_str)
+print(match) # [('123', '456-7890')]
+```
 
 面对分组时,findall的返回值是 `list[tuple]`,每个分组就是元组的元素
 
@@ -794,14 +800,17 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 </nav></header>
   <main class="in-site-main" id="content">  <article>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-09-06</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">更新 2026-10-06</span>
       <span class="Label" style="background-color:#3572a5;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
       </span>
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
-    <div class="in-post-body markdown-body"><h1>re 正则表达式Regular Expression</h1>
+    <div class="in-post-body markdown-body"><p>+++<br>
+date = 2025-09-06T23:15:30+08:00<br>
++++</p>
+<h1>re 正则表达式Regular Expression</h1>
 <p><a href="https://docs.python.org/zh-cn/3/library/re.html" rel="nofollow">re官方文档</a></p>
 <p><a href="https://docs.python.org/zh-cn/3/howto/regex.html" rel="nofollow">正则表达式指南</a></p>
 <h2>正则表达式匹配模式</h2>
@@ -841,25 +850,52 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>绝大多数情况下,findall明显比search更好用</p>
 <p>search和findall的函数式写法和方法式写法并没有太大的差别,只是采用了不同的编程思想——函数式编程和面向对象编程.</p>
 <h3>search</h3>
-<p>=== "方法"<br>
-<code class="notranslate">python import re my_str = 'Math is intresting, and I like learing mathmatics.' pattern = re.compile('ma') match = pattern.search(my_str) print(match) # &lt;re.Match object; span=(39, 41), match='ma'&gt; print(match.group()) # ma </code></p>
-<pre class="notranslate"><code class="notranslate">- `re.compile()` 函数,传入一个字符串,返回一个Pattern对象,表示正则表达式的匹配模式,用pattren表示这个变量名
-- Pattern对象的 `pattern.search()` 方法,在search方法传入的字符串中寻找满足条件的字符串,返回Match对象,用match表示这个变量名
-- Match对象的 `match.group()`方法,返回查找字符串中实际匹配的文本
-</code></pre>
-<p>=== "函数"<br>
-<code class="notranslate">python import re my_str = 'Math is intresting, and I like learing mathmatics.' pattern = 'ma' match = re.search(pattern, my_str) print(match) # &lt;re.Match object; span=(39, 41), match='ma'&gt; print(match.group()) # ma </code></p>
+<p><strong>方法</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'ma'</span>)
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># &lt;re.Match object; span=(39, 41), match='ma'&gt;</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># ma</span></pre></div>
+<ul>
+<li><code class="notranslate">re.compile()</code> 函数,传入一个字符串,返回一个Pattern对象,表示正则表达式的匹配模式,用pattren表示这个变量名</li>
+<li>Pattern对象的 <code class="notranslate">pattern.search()</code> 方法,在search方法传入的字符串中寻找满足条件的字符串,返回Match对象,用match表示这个变量名</li>
+<li>Match对象的 <code class="notranslate">match.group()</code>方法,返回查找字符串中实际匹配的文本</li>
+</ul>
+<p><strong>函数</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'ma'</span>
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">search</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># &lt;re.Match object; span=(39, 41), match='ma'&gt;</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># ma</span></pre></div>
 <h3>findall</h3>
-<p>=== "方法"<br>
-<code class="notranslate">python import re my_str = 'Math is intresting, and I like learing mathmatics.' pattern = re.compile('ma') match = pattern.findall(my_str) print(match) # ['ma', 'ma'] </code><br>
-=== "函数"<br>
-<code class="notranslate">python import re my_str = 'Math is intresting, and I like learing mathmatics.' pattern = 'ma' match = re.findall(pattern, my_str) print(match) # ['ma','ma'] </code></p>
+<p><strong>方法</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'ma'</span>)
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># ['ma', 'ma']</span></pre></div>
+<p><strong>函数</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'ma'</span>
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># ['ma','ma']</span></pre></div>
 <h3>sub</h3>
 <p>正则表达式不仅能找到文本模式,而且能够用新的文本替换掉这些模式. Pattern对象的sub()方法需要传入两个参数.第一个参数是一个字符串,用于取代发现的匹配.第二个参数是一个字符串,返回替换完成后的字符串.</p>
-<p>=== "方法"<br>
-<code class="notranslate">python import re my_str = 'Hello World!' pattern = re.compile(r'World') new_str = pattern.sub('Python', my_str) print(new_str) # Hello Python! </code></p>
-<p>=== "函数"<br>
-<code class="notranslate">py import re my_str = 'Hello World!' pattern = 'World' new_str = re.sub(pattern, 'Python', my_str) print(new_str) # Hello Python! </code></p>
+<p><strong>方法</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'World'</span>)
+<span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">sub</span>(<span class="pl-s">'Python'</span>, <span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">new_str</span>) <span class="pl-c"># Hello Python!</span></pre></div>
+<p><strong>函数</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'World'</span>
+<span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">sub</span>(<span class="pl-s1">pattern</span>, <span class="pl-s">'Python'</span>, <span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">new_str</span>) <span class="pl-c"># Hello Python!</span></pre></div>
 <p>有时候,你可能需要使用匹配的文本本身,作为替换的一部分.在sub()的第一个参数中,可以输入\1、\2、\3…….表示“在替换中输入分组1、2、3……的文本”.</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My email is d111kc@foxmail.com, his email is jerry@example.com'</span>
@@ -869,10 +905,26 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>字符串中的 <code class="notranslate">\1</code> 将由分组1匹配的文本所替代,也就是正则表达式的 <code class="notranslate">(\w)</code> 分组.</p>
 <h2>正则表达式的特殊符号</h2>
 <h3>利用小括号 <code class="notranslate">()</code> 分组</h3>
-<p>=== "search方法"<br>
-<code class="notranslate">python import re my_str = 'My phone num is 123-456-7890.' pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)') match = pattern.search(my_str) print(match.group()) # 123-456-7890 print(match.group(0)) # 123-456-7890 print(match.group(1)) # 123 print(match.group(2)) # 456-7890 print(match.groups()) # ('123', '456-7890') </code></p>
-<p>=== "search函数"<br>
-<code class="notranslate">python import re my_str = 'My phone num is 123-456-7890.' pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)' match = re.search(pattern, my_str) print(match.group()) # 123-456-7890 print(match.group(0)) # 123-456-7890 print(match.group(1)) # 123 print(match.group(2)) # 456-7890 print(match.groups()) # ('123', '456-7890') </code></p>
+<p><strong>search方法</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>)
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># 123-456-7890</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">0</span>)) <span class="pl-c"># 123-456-7890</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">1</span>)) <span class="pl-c"># 123</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">2</span>)) <span class="pl-c"># 456-7890</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">groups</span>()) <span class="pl-c"># ('123', '456-7890')</span></pre></div>
+<p><strong>search函数</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">search</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># 123-456-7890</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">0</span>)) <span class="pl-c"># 123-456-7890</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">1</span>)) <span class="pl-c"># 123</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">2</span>)) <span class="pl-c"># 456-7890</span>
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">groups</span>()) <span class="pl-c"># ('123', '456-7890')</span></pre></div>
 <p>Pattern对象中的第一对括号是第1组,第二对括号是第2组(这与list等序列的下标从0开始不同,分组是从1开始)</p>
 <p>Match对象的 <code class="notranslate">.group()</code> 方法 和 <code class="notranslate">.groups()</code> 方法</p>
 <ul>
@@ -881,10 +933,18 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <li><code class="notranslate">match.groups()</code> 获取所有分组的文本,返回 <code class="notranslate">tuple[str]</code> 对象</li>
 </ul>
 <hr>
-<p>=== "findall方法"<br>
-<code class="notranslate">py import re my_str = 'My phone num is 123-456-7890.' pattern = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)') match = pattern.findall(my_str) print(match) # [('123', '456-7890')] </code></p>
-<p>=== "findall函数"<br>
-<code class="notranslate">py import re my_str = 'My phone num is 123-456-7890.' pattern = r'(\d\d\d)-(\d\d\d-\d\d\d\d)' match = re.findall(pattern, my_str) print(match) # [('123', '456-7890')] </code></p>
+<p><strong>findall方法</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>)
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># [('123', '456-7890')]</span></pre></div>
+<p><strong>findall函数</strong></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
+<span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>
+<span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
+<span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># [('123', '456-7890')]</span></pre></div>
 <p>面对分组时,findall的返回值是 <code class="notranslate">list[tuple]</code>,每个分组就是元组的元素</p>
 <h3>使用管道 <code class="notranslate">|</code> 匹配多个分组</h3>
 <p>字符“|”称为“管道”,表示“或”.如果有多个符合匹配的文本,则第一个出现的作为match对象返回.</p>
