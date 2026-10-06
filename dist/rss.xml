@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 15:32:49 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>+++&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 15:33:35 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>+++&#13;
 date = 2025-09-06T23:15:30+08:00&#13;
 +++&#13;
-&#13;
 # 内置函数&#13;
 &#13;
 [Python官方文档](https://docs.python.org/zh-cn/3/)&#13;
