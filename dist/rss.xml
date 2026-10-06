@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 14:32:29 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>+++&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 14:36:20 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>+++&#13;
 date = 2025-08-06T20:38:14+08:00&#13;
 +++&#13;
 &#13;
@@ -4301,54 +4301,7 @@ Linux 下，采用 Eclipse 开发工具，基于 MVC 的 Java Web 开发，使�
 
 ## 计算机体系结构与操作系统
 
-冯诺依曼体系的结构要点：计算机数制采用二进制，程序指令和数据统一存储，计算机应按照程序顺序执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/49.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>常用Linux命令</title><link>https://interset-wq.github.io/post/50.html</link><description># 常用Linux命令
-
-## Linux 命令提示符
-
-- root用户 `[root@localhost ~]#`
-- 普通用户 `[d111kc@localhost Desktop]$`
-
-命令提示符的说明：
-
-- `root` 和 `d11kc` 表示当前的登陆用户
-- `@` 是分隔符号，没有特殊含义
-- `localhost` 当前系统的主机名（`localhost`完整名 `localhost.localdommain`），主机名是电脑的设备名，自定义设备名之后显示的不是`localhost`
-- `~` 和 `Desktop` 当前所在目录 `~` 特指用户文件夹（家目录/主目录），root用户的用户文件夹是 `/root`，普通用户的用户文件夹是 `/home/&lt;username&gt;`，打开终端时默认进入的是家目录
-- `#` 和 `$` 命令提示符，root用户是 `#`，普通用户是 `$`
-
-## Linux 命令的基本格式
-
-`$ 命令 [选项] [参数]`
-
-Linux 选项：
-
-- 短格式选项 为英文简写，以 `-` 开头
-- 长格式选项 为完整英文单词，以 `--` 开头
-
-``` bash
-[d111kc@localhost ~]$ ls
-Desktop    Downloads  Pictures  Templates
-Documents  Music      Public    Videos
-[d111kc@localhost ~]$ ls -l
-总用量 0
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Desktop
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Documents
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Downloads
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Music
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Pictures
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Public
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Templates
-drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Videos
-[d111kc@localhost ~]$ ls --all
-.              .bashrc  Desktop    .ICEauthority  Pictures
-..             .cache   Documents  .local         Public
-.bash_logout   .config  Downloads  .mozilla       Templates
-.bash_profile  .dbus    .esd_auth  Music          Videos
-```
-
-`ls` 可以不传参，是因为它有默认参数，那就是当前所在目录
-
-命令的选项用于调整命令的执行方式，而命令的参数是这个命令的操作对象。</description><guid isPermaLink="true">https://interset-wq.github.io/post/50.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>shell 脚本编程基础</title><link>https://interset-wq.github.io/post/51.html</link><description># shell 脚本编程基础
+冯诺依曼体系的结构要点：计算机数制采用二进制，程序指令和数据统一存储，计算机应按照程序顺序执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/49.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>shell 脚本编程基础</title><link>https://interset-wq.github.io/post/51.html</link><description># shell 脚本编程基础
 
 ## shell 编程概述
 
