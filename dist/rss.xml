@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 14:37:04 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>+++&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 15:01:29 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>+++&#13;
 date = 2025-08-06T20:38:14+08:00&#13;
 +++&#13;
 &#13;
@@ -74,7 +74,17 @@ PowerShell控制台和集成脚本环境（ISE）都支持4中Tab补全以减少
 - 补全命令：输入 `Get-S`，通过Tab键，或shift+tab组合键可以循环显示以 `Get-S` 开头的命令&#13;
 - 补全路径：输入 `Dir`，按空格，输入 `C:\`，再按Tab，会补全该目录内文件或目录的路径&#13;
 - 补全选项：输入 `Dir -`，按Tab键，循环显示这个命令支持的选项&#13;
-- 补全参数：在补全选项的基础上，再输入一个空格，通过按Tab键，可以循环显示这个命令的参数的合法值。</description><guid isPermaLink="true">https://interset-wq.github.io/post/63.html</guid><pubDate>Mon, 05 Oct 2026 15:10:11 +0000</pubDate></item><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
+- 补全参数：在补全选项的基础上，再输入一个空格，通过按Tab键，可以循环显示这个命令的参数的合法值。</description><guid isPermaLink="true">https://interset-wq.github.io/post/63.html</guid><pubDate>Mon, 05 Oct 2026 15:10:11 +0000</pubDate></item><item><title>Linux 学习笔记（上：基础篇）</title><link>https://interset-wq.github.io/post/49.html</link><description>+++&#13;
+date = 2025-08-03T10:22:37+08:00&#13;
++++&#13;
+&#13;
+## 49 原文&#13;
+&#13;
+# 介绍&#13;
+&#13;
+## 计算机体系结构与操作系统&#13;
+&#13;
+冯诺依曼体系的结构要点：计算机数制采用二进制，程序指令和数据统一存储，计算机应按照程序顺序执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/49.html</guid><pubDate>Mon, 05 Oct 2026 15:09:24 +0000</pubDate></item><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
 
 这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>第三篇测试：多标签文章</title><link>https://interset-wq.github.io/post/3.html</link><description>第三篇测试：多标签文章
 
@@ -188,70 +198,7 @@ A footnote can also have multiple lines[^2].
 
 
 
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/108.html</guid><pubDate>Thu, 11 Sep 2025 01:52:35 +0000</pubDate></item><item><title>Linux 常用操作</title><link>https://interset-wq.github.io/post/106.html</link><description># Linux 常用操作
-
-## 一、快捷键
-
-这些快捷键绝大多数在Windows中也同样适用
-
-### 1.1 ctrl+c 强制停止
-
-Linux某些程序的运行，如果想要强制停止它，可以使用快捷键 `ctrl`+`c`
-
-命令输入错误，也可以通过快捷键 `ctrl`+`c` ，退出当前输入，重新输入
-
-`ctrl`+`c` 强制结束某个命令，和Windows中的用法类似
-
-### 1.2 ctrl+d 退出和登出
-
-可以通过快捷键：`ctrl`+`d` ，退出账户的登录，类似于exit命令，退出Linux用户
-
-或者退出某些特定程序的专属页面，例如退出python命令行，类似于exit()命令
-
-不能用于退出vi/vim
-
-### 1.3 ctrl r 搜索历史命令
-
-可以通过快捷键：`ctrl`+`r` ，输入内容去匹配历史命令
-
-如果搜索到的内容是你需要的，那么：回车键可以直接执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/106.html</guid><pubDate>Wed, 10 Sep 2025 08:22:02 +0000</pubDate></item><item><title>Linux文件操作</title><link>https://interset-wq.github.io/post/99.html</link><description># Linux文件操作
-
-Linux严格区分大小写，所有目录和文件名都要区分大小写
-
-## Linux的目录结构
-
-![image-20221027214128453](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027214128.png)
-
-- `/` 叫做根目录，是最顶级的目录
-- Linux只有一个顶级目录：根目录`/`，而Windows有多个顶级目录，如C盘、D盘等，Linux不分盘
-- 路径描述的层次关系同样适用`/`来表示，Windows用`\`表示目录的层次关系
-- `/home/note/a.txt`，表示根目录下的 `home` 文件夹内有 `note` 文件夹，内有 `a.txt`，第一个 `/` 表示根目录，其他的 `/` 表示不同目录层次的分隔符号
-
-## 当前工作目录和HOME目录
-
-- HOME目录指：用户在系统内的专属目录，类似于Windows的用户文件夹
-- Linux终端（命令行）启动后默认将HOME目录作为当前工作的目录，类似于Windows powershell和cmd打开后命令提示符显示的路径是用户文件夹
-
-## Linux命令的基本格式
-
-`command [-options] [parameter]`
-
-## ls命令
-
-功能：列出文件夹信息
-
-语法：`ls [-l -h -a] [参数]`
-
-- 选项：
-    - `-l`，以列表形式查看，竖向显示
-    - `-h`，配合`-l`，以易于阅读的形式，列出文件大小，如显示K、M、G等单位，而不是默认不显示单位
-    - `-a`，显示隐藏文件
-    - 同时使用多个选项，例如：`ls -l -a` `ls -la` `ls -al` 上述三种写法没有区别，表示同时应用`-l`和`-a`选项
-- 参数：被查看的文件夹的路径，不提供参数，表示查看当前工作目录
-
-### 隐藏文件、文件夹
-
-在Linux中以`.`开头的，均是隐藏的。</description><guid isPermaLink="true">https://interset-wq.github.io/post/99.html</guid><pubDate>Wed, 10 Sep 2025 01:47:05 +0000</pubDate></item><item><title>README</title><link>https://interset-wq.github.io/post/79.html</link><description>## 一、JavaScript简介
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/108.html</guid><pubDate>Thu, 11 Sep 2025 01:52:35 +0000</pubDate></item><item><title>README</title><link>https://interset-wq.github.io/post/79.html</link><description>## 一、JavaScript简介
 
 ## 1.1 JavaScript 代码的书写位置
 
@@ -4172,137 +4119,7 @@ i i
     由于 $\chi ^2 \approx 23.31 &lt; \chi _{0.95} ^2 (24) = 36.42$
 
     所以应该接受 $H_0$ ,  即这批保险丝符合要求．
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/75.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>Linux 应用程序开发技术</title><link>https://interset-wq.github.io/post/73.html</link><description># Linux 应用程序开发技术
-
-## centos配置C语言环境
-
-安装 wget
-
-``` bash
-$ yum -y install wget
-```
-
-检查wget是否安装成功：
-
-``` bash
-$ wget --version
-```
-
-检查gcc是否已安装：
-
-``` bash
-$ gcc --version
-```
-
-安装gcc：
-
-``` bash
-$ yum install gcc
-```
-
-检查是否安装 gdb：
-
-``` bash
-$ gdb --version
-```
-
-安装gdb：
-
-``` bash
-$ yum install gdb
-```
-
-检查是否安装make：
-
-``` bash
-$ make --version
-```
-
-安装make：
-
-``` bash
-$ yum install make
-```
-
-安装完这些之后，C语言环境配置完成。</description><guid isPermaLink="true">https://interset-wq.github.io/post/73.html</guid><pubDate>Wed, 06 Aug 2025 13:49:08 +0000</pubDate></item><item><title>用户管理</title><link>https://interset-wq.github.io/post/53.html</link><description># 用户管理
-
-## 用户与用户组管理
-
-用户和用户组管理，就是添加用户和用户组、更改密码和设定权限等操作。</description><guid isPermaLink="true">https://interset-wq.github.io/post/53.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>文件管理</title><link>https://interset-wq.github.io/post/54.html</link><description># 文件管理
-
-## 文件系统
-
-Linux文件系统中的文件是数据的集合，文件系统不仅包含着文件中的数据而且包含文件系统的结构，所有Linux用户和程序看到的文件、目录及文件保护信息等都存储在文件系统中。</description><guid isPermaLink="true">https://interset-wq.github.io/post/54.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>进程管理</title><link>https://interset-wq.github.io/post/55.html</link><description># 进程管理
-
-有 3 个作用：
-1.判断服务器的健康状态；2.查看系统中所有进程；3.杀死进程
-
-## 进程监控
-
-### ps 命令
-缺乏时效性最常用进程监控命令，可查看系统中所有运行进程的详细信息。</description><guid isPermaLink="true">https://interset-wq.github.io/post/55.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>存储管理</title><link>https://interset-wq.github.io/post/56.html</link><description># 存储管理
-
-在Linux系统中“一切皆文件”，所有文件都放置在以根目录为树根的树形目录结构中。</description><guid isPermaLink="true">https://interset-wq.github.io/post/56.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>设备管理</title><link>https://interset-wq.github.io/post/57.html</link><description># 设备管理
-
-## 设备文件
-
-Linux 中，用户是通过文件系统与设备连接的。</description><guid isPermaLink="true">https://interset-wq.github.io/post/57.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>网络管理</title><link>https://interset-wq.github.io/post/58.html</link><description># 网络管理
-
-## 管理网络接口
-
-计算机的基本网络参数包括那些？
-1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。</description><guid isPermaLink="true">https://interset-wq.github.io/post/58.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>系统服务与日志</title><link>https://interset-wq.github.io/post/59.html</link><description># 系统服务与日志
-
-## Linux 系统服务
-
-Linux系统服务有时也称为守护程序，是在Linux系统启动时自动加载并在Linux系统退出时自动停止的系统任务。</description><guid isPermaLink="true">https://interset-wq.github.io/post/59.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>Emacs 编辑器</title><link>https://interset-wq.github.io/post/60.html</link><description># Emacs 编辑器
-
-## 安装
-
-centos
-
-``` bash
-$ yum install emacs
-```
-
-## Emacs 的操作
-
-### Emacs 的启动
-
-emacs使用图形化界面编辑文件，并不使用类似于vim的命令行界面
-
-打开emacs
-
-``` bash
-$ emacs
-```
-
-通过emacs打开文件，文件不存在时，创建新文件：
-
-``` bash
-$ emacs hello.txt
-```
-
-模式行是emacs界面倒数第二行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/60.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>OpenSSH</title><link>https://interset-wq.github.io/post/61.html</link><description># OpenSSH
-
-OpenSSH 是安全 shell 协议（secure shell，简称 SSH）的免费开源实现。</description><guid isPermaLink="true">https://interset-wq.github.io/post/61.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>Web 服务器搭建、应用开发与部署</title><link>https://interset-wq.github.io/post/62.html</link><description># Web 服务器搭建、应用开发与部署
-
-Linux 下，采用 Eclipse 开发工具，基于 MVC 的 Java Web 开发，使用当下较为流行的 SSM
-框架进行演示。</description><guid isPermaLink="true">https://interset-wq.github.io/post/62.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>对象：数据的另一个名称</title><link>https://interset-wq.github.io/post/70.html</link><description># 对象：数据的另一个名称
-
-## 对象
-
-运行PowerShell中的`Get-Process`。</description><guid isPermaLink="true">https://interset-wq.github.io/post/70.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>介绍</title><link>https://interset-wq.github.io/post/49.html</link><description># 介绍
-
-## 计算机体系结构与操作系统
-
-冯诺依曼体系的结构要点：计算机数制采用二进制，程序指令和数据统一存储，计算机应按照程序顺序执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/49.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>shell 脚本编程基础</title><link>https://interset-wq.github.io/post/51.html</link><description># shell 脚本编程基础
-
-## shell 编程概述
-
-shell 本身是一个用 C 语言编写的程序，是连接 用户 和 UNIX/Linux 内核 的桥梁。</description><guid isPermaLink="true">https://interset-wq.github.io/post/51.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>VI编辑器</title><link>https://interset-wq.github.io/post/52.html</link><description># VI编辑器
-
-Linux系统支持多种行编辑器和全屏编辑器，用户可以方便地创建、修改、删除文件。</description><guid isPermaLink="true">https://interset-wq.github.io/post/52.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>chinadaily</title><link>https://interset-wq.github.io/post/23.html</link><description>## 2025
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/75.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>chinadaily</title><link>https://interset-wq.github.io/post/23.html</link><description>## 2025
 
 ### July 11
 
