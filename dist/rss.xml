@@ -1,104 +1,189 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Wed, 07 Oct 2026 02:05:52 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>+++&#13;
-date = 2025-09-06T23:15:30+08:00&#13;
-+++&#13;
-# 内置函数&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Wed, 07 Oct 2026 02:09:18 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
+
+这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>第三篇测试：多标签文章</title><link>https://interset-wq.github.io/post/3.html</link><description>第三篇测试：多标签文章
+
+(触发一次自动构建验证 issues.edited)。</description><guid isPermaLink="true">https://interset-wq.github.io/post/3.html</guid><pubDate>Wed, 30 Sep 2026 01:24:30 +0000</pubDate></item><item><title>GitHub Favored Markdown</title><link>https://interset-wq.github.io/post/108.html</link><description>
+# GitHub Favored Markdown
+
+[GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+## 文本样式
+
+- 粗体 `**bold**` 或 `__bold__` ctrl+b
+- 斜体 `*italic*` 或 `_italic_` ctrl+i
+- 粗体和斜体可以嵌套
+- 粗斜体 `***bold italic***`
+- 删除线 `~~strikethrough~~` 或 `~strikethrough~`
+- 下标 `&lt;sub&gt;subscript&lt;/sub&gt;`
+- 上标 `&lt;sup&gt;superscript&lt;/sup&gt;`
+- 下划线 `&lt;ins&gt;underline&lt;/ins&gt;`
+
+## 单行代码
+
+ctrl+e
+
+## 颜色
+
+使用单行代码包裹rgb,hex,hsl颜色
+
+## 链接
+
+ctrl+k
+
+也可以通过这种方法链接到仓库中的其他文件
+
+## 图片
+
+`![]()`
+
+也可以通过这种方法链接仓库中的图片
+
+还可以使用HTML的 `picture` 标签
+
+## 任务列表
+
+``` md
+- [ ] unfinished
+- [x] finished
+```
+
+## emojis
+
+https://github.com/ikatyang/emoji-cheat-sheet/blob/github-actions-auto-update/README.md#github-custom-emoji
+
+## 脚注
+
+``` md
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.  This is a second line.
+```
+
+## 告诫
+
+``` md
+&gt; [!NOTE]
+&gt; Useful information that users should know, even when skimming content.
+
+&gt; [!TIP]
+&gt; Helpful advice for doing things better or more easily.
+
+&gt; [!IMPORTANT]
+&gt; Key information users need to know to achieve their goal.
+
+&gt; [!WARNING]
+&gt; Urgent info that needs immediate user attention to avoid problems.
+
+&gt; [!CAUTION]
+&gt; Advises about risks or negative outcomes of certain actions.
+```
+
+&gt; [!NOTE]
+&gt; Useful information that users should know, even when skimming content.
+
+&gt; [!TIP]
+&gt; Helpful advice for doing things better or more easily.
+
+&gt; [!IMPORTANT]
+&gt; Key information users need to know to achieve their goal.
+
+&gt; [!WARNING]
+&gt; Urgent info that needs immediate user attention to avoid problems.
+
+&gt; [!CAUTION]
+&gt; Advises about risks or negative outcomes of certain actions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/108.html</guid><pubDate>Thu, 11 Sep 2025 01:52:35 +0000</pubDate></item><item><title>README</title><link>https://interset-wq.github.io/post/79.html</link><description>## 一、JavaScript简介&#13;
 &#13;
-[Python官方文档](https://docs.python.org/zh-cn/3/)&#13;
+## 1.1 JavaScript 代码的书写位置&#13;
 &#13;
-python解释器可以使用Tab不全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行&#13;
+### 1.1.1 内部js代码&#13;
 &#13;
-pass常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错&#13;
+直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `&lt;/body&gt;`的位置。</description><guid isPermaLink="true">https://interset-wq.github.io/post/79.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>JavaScript基础语法</title><link>https://interset-wq.github.io/post/80.html</link><description># JavaScript基础语法&#13;
 &#13;
-enum库 定义常量&#13;
+[MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)&#13;
 &#13;
+## 一、JavaScript简介&#13;
 &#13;
-## 一、注释和变量命名规范&#13;
+### 1.1 JavaScript 代码的书写位置&#13;
 &#13;
-### 1.1 注释&#13;
+#### 1.1.1 内部js代码&#13;
 &#13;
-- 单行注释 `#`&#13;
-- 多行注释 三重引号&#13;
-- 特殊注释 类似于shell脚本指定shell和字符编码&#13;
+直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `&lt;/body&gt;`的位置。</description><guid isPermaLink="true">https://interset-wq.github.io/post/80.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>JavaScript进阶语法</title><link>https://interset-wq.github.io/post/81.html</link><description>✏️ `本文创建于2025-5-28`&#13;
 &#13;
-``` py&#13;
-#!/usr/bin/env python3&#13;
-# -*- coding: cp1252 -*-&#13;
-```&#13;
+## 一、作用域&#13;
 &#13;
-### 1.2 变量命名规则&#13;
+作用域（scope）规定了变量能够被访问的“范围”，离开了这个“范围”变量便不能被访问，作用域分为：&#13;
 &#13;
-- 只能包含数字、字母、下划线，且不能以数字开头&#13;
-- 区分大小写，变量一般使用小写&#13;
-- 变量、函数名使用蛇形命名法&#13;
-- 类名使用大驼峰命名法&#13;
-- 常量命名时字母全大写&#13;
-- 见名知意&#13;
-- 命名时谨慎使用小写字母l和大写字母O，以免和数字混淆&#13;
-- 不能和python关键字重名&#13;
+- 局部作用域&#13;
+    - 函数作用域&#13;
+    - 块作用域&#13;
+- 全局作用域&#13;
 &#13;
-## 二、内置函数&#13;
+### 1.1 局部作用域&#13;
 &#13;
-- `print()`函数&#13;
-- `input()`函数 返回用户输入的字符串&#13;
-- `type()`函数 返回数据类型&#13;
-- `range()`函数 生成等差数列，左闭右开区间，返回range对象，这是一个可迭代对象iterable&#13;
-    - `range(num)` 返回0到num之间的整数序列&#13;
-    - `range(num1,num2)` 返回两个数字之间的整数序列&#13;
-    - `range(num1,num2,step)` 返回两个数字之间的整数序列，通过step指定间隔大小&#13;
-- 类型转换函数&#13;
-    - `int()` 函数 转换为整型,不是四舍五入，而是舍弃小数点之后的部分&#13;
-    - `float()` 转换成小数&#13;
-    - `str()` 转换成字符串&#13;
-    - `list()` 函数&#13;
-    - `str()` 函数&#13;
-    - `tuple()` 函数&#13;
-    - `set()` 函数&#13;
-&#13;
-## 三、运算符&#13;
-&#13;
-### 3.1 算术运算符和数学计算&#13;
-&#13;
-- `+` 加&#13;
-- `-` 减&#13;
-- `*` 乘&#13;
-- `/`除 计算结果是浮点数&#13;
-- `//` 整除&#13;
-- `%` 取余&#13;
-- `**` 乘方&#13;
-&#13;
-如果参与运算的数字中有浮点数，返回的结果也一定是浮点数&#13;
-&#13;
-交互模式下，上次输出的表达式会赋给变量 `_`&#13;
-&#13;
-``` py&#13;
-&gt;&gt;&gt; 2+3&#13;
-5&#13;
-&gt;&gt;&gt; 10 + _&#13;
-15&#13;
-```&#13;
-&#13;
-除了 int 和 float，Python 还支持其他数字类型，例如 Decimal 或 Fraction。</description><guid isPermaLink="true">https://interset-wq.github.io/post/112.html</guid><pubDate>Mon, 05 Oct 2026 15:28:59 +0000</pubDate></item><item><title>threading</title><link>https://interset-wq.github.io/post/111.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-4-17`&#13;
-&#13;
-[:simple-python: threading官方文档](https://docs.python.org/zh-cn/3/library/threading.html)&#13;
-&#13;
-## 导入threading&#13;
-&#13;
-    from threading import Thread&#13;
-&#13;
-## 第一步：创建thread对象&#13;
-&#13;
-Thread类：&#13;
-&#13;
-`Thread(group, target, name, args, kwargs, daemon)`&#13;
-&#13;
-创建thread对象时必须使用关键字参数传参，禁止使用位置参数。</description><guid isPermaLink="true">https://interset-wq.github.io/post/111.html</guid><pubDate>Mon, 05 Oct 2026 15:12:53 +0000</pubDate></item><item><title>re 正则表达式Regular Expression</title><link>https://interset-wq.github.io/post/87.html</link><description>+++&#13;
-date = 2025-09-06T23:15:30+08:00&#13;
-+++&#13;
-# re 正则表达式Regular Expression&#13;
+局部作用域分为函数作用域和块作用域。</description><guid isPermaLink="true">https://interset-wq.github.io/post/81.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>Note</title><link>https://interset-wq.github.io/post/82.html</link><description># Note
+
+## 使用C语言的7个步骤
+
+1. 定义程序的目标
+2. 设计程序
+3. 编写代码
+4. 编译
+5. 运行程序
+6. 测试和调试程序
+7. 维护和修改程序
+
+## 变量命名规则
+
+- 可以用小写字母、大写字母、数字和下划线（_）来命名。</description><guid isPermaLink="true">https://interset-wq.github.io/post/82.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>datetime 日期和时间</title><link>https://interset-wq.github.io/post/83.html</link><description># datetime 日期和时间
+
+datetime 模块提供了以简单和复杂的方式操作日期和时间的类。</description><guid isPermaLink="true">https://interset-wq.github.io/post/83.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>glob 文件通配符</title><link>https://interset-wq.github.io/post/84.html</link><description># glob 文件通配符
+
+glob 模块提供了一个在目录中使用通配符搜索创建文件列表的函数
+
+## 导入
+
+    import glob
+
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/84.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>数学相关库</title><link>https://interset-wq.github.io/post/85.html</link><description># 数学相关库
+
+## math 浮点数数学运算
+
+## random 随机数
+
+## statistics 统计
+
+statistics 模块计算数值数据的基本统计属性（均值，中位数，方差等）。</description><guid isPermaLink="true">https://interset-wq.github.io/post/85.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>os 操作系统接口</title><link>https://interset-wq.github.io/post/86.html</link><description># os 操作系统接口
+
+提供用于与操作系统交互的函数
+
+## 导入
+
+    import os
+
+一定要使用 import os 而不是 from os import * 。</description><guid isPermaLink="true">https://interset-wq.github.io/post/86.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>re 正则表达式Regular Expression</title><link>https://interset-wq.github.io/post/87.html</link><description># re 正则表达式Regular Expression&#13;
 &#13;
 [re官方文档](https://docs.python.org/zh-cn/3/library/re.html)&#13;
 &#13;
@@ -474,48 +559,188 @@ pattern = re.compile(r'''(&#13;
 someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL)&#13;
 someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)&#13;
 ```&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/87.html</guid><pubDate>Mon, 05 Oct 2026 15:11:24 +0000</pubDate></item><item><title>JavaScript进阶语法</title><link>https://interset-wq.github.io/post/81.html</link><description>+++&#13;
-date = 2025-09-06T23:15:30+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-5-28`&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/87.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>shutil 日常文件管理操作</title><link>https://interset-wq.github.io/post/88.html</link><description># shutil 日常文件管理操作
+
+## 导入
+
+    import shutil
+
+## 常用函数
+
+- shutil.copyfile(src, dst) 将src路径处的文件复制到dst路径
+- shutil.move(src, dst) 移动文件。</description><guid isPermaLink="true">https://interset-wq.github.io/post/88.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>sys 和 argparse</title><link>https://interset-wq.github.io/post/89.html</link><description># sys 和 argparse
+
+## sys 
+
+### 命令行参数
+
+一般的工具脚本常常需要处理命令行参数。</description><guid isPermaLink="true">https://interset-wq.github.io/post/89.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>标准库</title><link>https://interset-wq.github.io/post/90.html</link><description># 标准库
+
+- os 操作系统接口
+- shutil 日常文件管理
+- glob 文件通配符
+- sys 命令行参数 错误输出重定向 终止程序
+- argparse 命令行参数
+- re 正则表达式
+- math 浮点数运算
+- random 随机数
+- statistics 统计（均值，中位数，方差等）
+- urllib.request 访问互联网
+- smtplib 发送邮件
+- datatime 日期和时间
+- zlib gzip bz2 lzma zipfile tarfile 文件压缩
+- timeit 性能测试
+- doctest 质量控制
+- unittest 单元测试
+- email 电子邮件
+- json 处理json文件
+- csv 处理csv文件
+- sqlite3 数据库
+- reprlib pprint textwrap local 格式化输出 
+- string 模板
+- struct 二进制数据
+- threading 多线程
+- logging 日志
+- weakref 弱引用
+- array
+- collections
+- bisect
+- heapq
+- demical 十进制浮点数
+- 。</description><guid isPermaLink="true">https://interset-wq.github.io/post/90.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>pathlib 和 os.path文件操作</title><link>https://interset-wq.github.io/post/91.html</link><description># pathlib 和 os.path文件操作
+
+[os.path官方文档](https://docs.python.org/zh-cn/3/library/os.path.html)
+
+[pathlib官方文档](https://docs.python.org/zh-cn/3/library/pathlib.html)
+
+## 第一步：导入pathlib和os.path
+
+    from pathlib import Path
+    import os.path
+
+## 第二步：创建Path对象
+
+Path类：
+
+`Path(*pathsegments)` 传入文件路径或路径片段，路径之间使用逗号分隔，默认值是当前目录
+
+## 第二步：对Path对象进行操作
+
+### 2.1 path对象路径常用属性和方法
+
+- `parts` 将路径拆分，返回路径片段的元组
+- `drive` 返回盘符
+- `parents` 返回祖先路径
+- `parent` 返回父路径，相当于 `os.path.dirname()`函数
+- `name` 返回最末尾的路径（文件名或文件夹名），相当于 `os.path.basename()` 函数
+- `suffix` 返回文件后缀名（文件扩展名），相当于 `os.path.splitext()` 函数
+- `suffixes` 返回文件扩展名列表，主要针对文件后缀名中有多个 `.` 的后缀名
+- `stem` 返回去除后缀名的最末尾路径（不包含后缀名的文件名或文件夹名），相当于 `os.path.splitext()` 函数
+- `as_posix()` 返回使用 `/` 的文件路径，主要用于将windows路径的 `\\` 路径转换为 `/` 路径
+- `is_absolute()` 判断是否是绝对路径，相当于 `os.path.isabs()` 函数
+- `is_relative_to(other)` 判断此路径是否是相对于 other 的路径
+- `joinpath(*pathsegments)` 将传入的路径片段与path对象的路径组和，相当于 `os.path.join()` 函数
+- `with_name(name)` 返回一个新的路径并修改 name。</description><guid isPermaLink="true">https://interset-wq.github.io/post/91.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>turtle</title><link>https://interset-wq.github.io/post/92.html</link><description>[turtle官方文档](https://docs.python.org/zh-cn/3.13/library/turtle.html#module-turtle)
+
+## 导入
+
+    import turtle as t
+
+## 海龟移动和方向
+
+海龟的起始位置是坐标原点, 数学平面直角坐标系. 海龟在图形中用三角箭头表示, 箭头的指向就是海龟前进的方向
+
+- `t.forward(distance)` 函数 传入数字float类型,单位是像素 海龟前进(海龟的初始方向是X轴正方向)
+- `t.backward(distance)` 函数 传入数字float类型,单位是像素 海龟后退
+- `t.left(angle)` 函数 传入数字float类型,单位角度 海龟朝逆时针方向转向
+- `t.right(angle)` 函数 传入数字float类型,单位角度 海龟朝顺时针方向转向
+- `t.color()` 传入表示颜色的字符串，切换爬行路径的颜色
+- `t.width()` 传入整数，调整线宽
+- `t.up()` 抬起画笔，不绘制路径
+- `t.down()` 放下画笔，继续绘制路径
+- `t.home()` 走直线回到起点
+- `t.pos()` 返回当前位置的坐标
+- `t.clearscreen()` 清空足迹，回到起点
+- `t.fillcolor()` 传入颜色，设置填充色
+- `t.begin_fill()` 开始使用填充色
+- `t.end_fill()` 结束使用填充色
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/92.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description># 内置函数&#13;
 &#13;
-## 一、作用域&#13;
+[Python官方文档](https://docs.python.org/zh-cn/3/)&#13;
 &#13;
-作用域（scope）规定了变量能够被访问的“范围”，离开了这个“范围”变量便不能被访问，作用域分为：&#13;
+python解释器可以使用Tab不全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行&#13;
 &#13;
-- 局部作用域&#13;
-    - 函数作用域&#13;
-    - 块作用域&#13;
-- 全局作用域&#13;
+pass常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错&#13;
 &#13;
-### 1.1 局部作用域&#13;
+enum库 定义常量&#13;
 &#13;
-局部作用域分为函数作用域和块作用域。</description><guid isPermaLink="true">https://interset-wq.github.io/post/81.html</guid><pubDate>Mon, 05 Oct 2026 15:11:02 +0000</pubDate></item><item><title>JavaScript基础语法</title><link>https://interset-wq.github.io/post/80.html</link><description>+++&#13;
-date = 2025-09-06T23:15:30+08:00&#13;
-+++&#13;
-# JavaScript基础语法&#13;
 &#13;
-[MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)&#13;
+## 一、注释和变量命名规范&#13;
 &#13;
-## 一、JavaScript简介&#13;
+### 1.1 注释&#13;
 &#13;
-### 1.1 JavaScript 代码的书写位置&#13;
+- 单行注释 `#`&#13;
+- 多行注释 三重引号&#13;
+- 特殊注释 类似于shell脚本指定shell和字符编码&#13;
 &#13;
-#### 1.1.1 内部js代码&#13;
+``` py&#13;
+#!/usr/bin/env python3&#13;
+# -*- coding: cp1252 -*-&#13;
+```&#13;
 &#13;
-直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `&lt;/body&gt;`的位置。</description><guid isPermaLink="true">https://interset-wq.github.io/post/80.html</guid><pubDate>Mon, 05 Oct 2026 15:10:59 +0000</pubDate></item><item><title>README</title><link>https://interset-wq.github.io/post/79.html</link><description>+++&#13;
-date = 2025-09-06T23:15:30+08:00&#13;
-+++&#13;
-## 一、JavaScript简介&#13;
+### 1.2 变量命名规则&#13;
 &#13;
-## 1.1 JavaScript 代码的书写位置&#13;
+- 只能包含数字、字母、下划线，且不能以数字开头&#13;
+- 区分大小写，变量一般使用小写&#13;
+- 变量、函数名使用蛇形命名法&#13;
+- 类名使用大驼峰命名法&#13;
+- 常量命名时字母全大写&#13;
+- 见名知意&#13;
+- 命名时谨慎使用小写字母l和大写字母O，以免和数字混淆&#13;
+- 不能和python关键字重名&#13;
 &#13;
-### 1.1.1 内部js代码&#13;
+## 二、内置函数&#13;
 &#13;
-直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `&lt;/body&gt;`的位置。</description><guid isPermaLink="true">https://interset-wq.github.io/post/79.html</guid><pubDate>Mon, 05 Oct 2026 15:10:57 +0000</pubDate></item><item><title>pdfplumber 处理PDF文档</title><link>https://interset-wq.github.io/post/78.html</link><description>+++&#13;
-date = 2025-08-15T06:55:22+08:00&#13;
-+++&#13;
-# pdfplumber 处理PDF文档&#13;
+- `print()`函数&#13;
+- `input()`函数 返回用户输入的字符串&#13;
+- `type()`函数 返回数据类型&#13;
+- `range()`函数 生成等差数列，左闭右开区间，返回range对象，这是一个可迭代对象iterable&#13;
+    - `range(num)` 返回0到num之间的整数序列&#13;
+    - `range(num1,num2)` 返回两个数字之间的整数序列&#13;
+    - `range(num1,num2,step)` 返回两个数字之间的整数序列，通过step指定间隔大小&#13;
+- 类型转换函数&#13;
+    - `int()` 函数 转换为整型,不是四舍五入，而是舍弃小数点之后的部分&#13;
+    - `float()` 转换成小数&#13;
+    - `str()` 转换成字符串&#13;
+    - `list()` 函数&#13;
+    - `str()` 函数&#13;
+    - `tuple()` 函数&#13;
+    - `set()` 函数&#13;
+&#13;
+## 三、运算符&#13;
+&#13;
+### 3.1 算术运算符和数学计算&#13;
+&#13;
+- `+` 加&#13;
+- `-` 减&#13;
+- `*` 乘&#13;
+- `/`除 计算结果是浮点数&#13;
+- `//` 整除&#13;
+- `%` 取余&#13;
+- `**` 乘方&#13;
+&#13;
+如果参与运算的数字中有浮点数，返回的结果也一定是浮点数&#13;
+&#13;
+交互模式下，上次输出的表达式会赋给变量 `_`&#13;
+&#13;
+``` py&#13;
+&gt;&gt;&gt; 2+3&#13;
+5&#13;
+&gt;&gt;&gt; 10 + _&#13;
+15&#13;
+```&#13;
+&#13;
+除了 int 和 float，Python 还支持其他数字类型，例如 Decimal 或 Fraction。</description><guid isPermaLink="true">https://interset-wq.github.io/post/112.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>pdfplumber 处理PDF文档</title><link>https://interset-wq.github.io/post/78.html</link><description># pdfplumber 处理PDF文档&#13;
 &#13;
 [README.md](https://github.com/jsvine/pdfplumber)&#13;
 &#13;
@@ -555,10 +780,56 @@ Page对象的属性和方法：&#13;
 - `page_number` 属性 用于获取这个Page对象在PDF文档中的页码，Page对象在`pdf.pages`属性中的下标从0开始，但是页码从1开始&#13;
 - `width` 属性 用于获取这个Page对象的页面宽度&#13;
 - `height` 属性 用于获取这个Page对象的高度&#13;
-- `crop(bounding_box, relative=False, strict=True)` 方法 用于裁剪页面，返回裁剪后的Page对象。</description><guid isPermaLink="true">https://interset-wq.github.io/post/78.html</guid><pubDate>Mon, 05 Oct 2026 15:10:54 +0000</pubDate></item><item><title>DrissionPage 浏览器自动化操作</title><link>https://interset-wq.github.io/post/77.html</link><description>+++&#13;
-date = 2025-08-08T18:42:39+08:00&#13;
-+++&#13;
-# DrissionPage 浏览器自动化操作&#13;
+- `crop(bounding_box, relative=False, strict=True)` 方法 用于裁剪页面，返回裁剪后的Page对象。</description><guid isPermaLink="true">https://interset-wq.github.io/post/78.html</guid><pubDate>Thu, 14 Aug 2025 22:55:22 +0000</pubDate></item><item><title>bs4 解析网页</title><link>https://interset-wq.github.io/post/76.html</link><description># bs4 解析网页
+
+[bs4官方文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)
+
+## 安装
+
+    pip install beautifulsoup4
+
+## 第一步：创建soup对象
+
+`BeautifulSoup()` 类
+
+- 第一个参数是html格式的文本，常传入 `res.text`
+- 第二个位置参数是解析器，常使用 `'lxml'`
+- 关键字参数 `multi_valued_attributes` （默认按照html语法规范解析，不推荐使用此参数修改配置）
+    - `multi_valued_attributes=None` ，将所有html标签的属性当做是单值属性解析
+    - `multi_valued_attributes=class_is_multi` ，将所有属性当做多值属性解析
+
+
+常用的解析器：
+
+- html.parser解析器（属于python标准库） `BeautifulSoup(res.text, 'html.parser')`
+    - Python的内置标准库
+    - 执行速度较快
+    - 容错能力强
+    - 速度没有 lxml 快，容错没有 html5lib强
+- lxml HTML解析器（第三方库，推荐使用） `BeautifulSoup(res.text, 'lxml')`
+    - 速度快
+    - 容错能力强	
+    - 额外的 C 依赖
+- lxml XML解析器（第三方库） `BeautifulSoup(markup, ['lxml-xml'])` 或 `BeautifulSoup(markup, 'xml')`
+    - 速度快
+    - 唯一支持 XML 的解析器	
+    - 额外的 C 依赖
+    - 使用此解析器，所有属性当做是单值属性解析
+- html5lib解析器（第三方库） `BeautifulSoup(markup, 'html5lib')`
+    - 最好的容错性
+    - 以浏览器的方式解析文档
+    - 生成 HTML5 格式的文档
+    - 速度慢
+    - 额外的 Python 依赖
+
+## 第二步：对soup对象进行操作
+
+soup对象的属性和方法：
+
+- 所有html标签都可以看做是soup对象的属性，`soup.标签` 相当于对soup对象使用了元素选择器，且只选中 {==第一个==} 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）
+    
+    ???+ note '子节点'
+        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</description><guid isPermaLink="true">https://interset-wq.github.io/post/76.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>DrissionPage 浏览器自动化操作</title><link>https://interset-wq.github.io/post/77.html</link><description># DrissionPage 浏览器自动化操作&#13;
 &#13;
 [DrissionPage官方文档](https://drissionpage.cn/)&#13;
 &#13;
@@ -701,1172 +972,7 @@ DrissionPage支持的元素定位法&#13;
     ele = tab.ele('#$ne')  # 查找id属性以ne结尾的元素&#13;
     ```&#13;
 &#13;
-- 类选择器`.`，相当于单属性定位'@class=属性值'，和id选择器用法类似。</description><guid isPermaLink="true">https://interset-wq.github.io/post/77.html</guid><pubDate>Mon, 05 Oct 2026 15:10:52 +0000</pubDate></item><item><title>概率统计-数理统计</title><link>https://interset-wq.github.io/post/75.html</link><description>+++&#13;
-date = 2025-08-06T22:08:41+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-6-8`&#13;
-&#13;
-## 第六章 样本及抽样分布 &#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;abstract&lt;/summary&gt;&#13;
-&#13;
-- **数理统计** 研究如何合理的获得随机现象的数据资料,  建立有效的数学方法,  对所考察的问题作出推断或预测．&#13;
-- **研究方法** 部分 $\rightarrow$ 总体&#13;
-- **主要内容**&#13;
-&#13;
-    ```mermaid&#13;
-    flowchart TD&#13;
-        A[统计推断] --&gt;  B[估计理论]&#13;
-        A --&gt; C[假设检验]&#13;
-        B --&gt; D[参数估计]&#13;
-        B --&gt; E[非参数估计]&#13;
-    ```&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 6.1 随机样本 &#13;
-&#13;
-#### 6.1.1 总体与个体&#13;
-&#13;
-- **总体** 研究对象(数量指标)的全体．&#13;
-- **个体** 总体中的每个元素．&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;example&lt;/summary&gt;&#13;
-&#13;
-- 某工厂生产的灯泡的寿命 $X$ 是一个总体,  每个灯泡的寿命是一个个体；&#13;
-- 全校所有同学的身高和体重 $(X ,  Y )$ 是一个二维总体,  每个同学的身高和体重是一个个体． &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-#### 6.1.2 样本与统计量&#13;
-&#13;
-- **样本** 从某一总体 $X$ 中随机地、独立地抽取的 $n$ 个个体 $X _1,  X_2 ,  ...,  X_n$ 称为$X$ 的一个样本容量为 $n$ 的样本,  其对应的观测值 $X _1 ,  X_2 ,  ...,  X_n$ 称为样本值．&#13;
-- **统计量** 不含任何未知参数的样本的函数 $\varphi (X_1 ,  X_2 ,  ...,  X _n)$ 称为统计量．&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;example&lt;/summary&gt;&#13;
-&#13;
-设总体 $X \sim N(\mu,  \sigma ^2)$,  其中 $\mu$ 已知,  $\sigma ^2$ 未知,  则 $X_1 + X_2 + \mu$ 是统计量,  $\sum _{i=1} ^3 \frac{X_i ^2}{\sigma ^2}$ 不是统计量．&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-#### 6.1.3 样本的联合分布&#13;
-&#13;
-设总体 $X$ 的分布函数为$F (x),  X_1 ,  X_2 ,  ...,  X_n$ 是来自总体的一个样本(独立同分布),  则 $X_1 ,  X_2 ,  ...,  X_n$ 的联合分布函数为&#13;
-&#13;
-$$&#13;
-F ^* (x_1 ,  x_2 ,  ...,  x_n) = \prod _{i=1} ^n F (x_i )&#13;
-$$&#13;
-&#13;
-若 $X$ 的密度函数为 $f (x)$,  则样本的联合概率密度函数为&#13;
-&#13;
-$$&#13;
-f ^* (x_1 ,  x_2 ,  ...,  x_n) = \prod _{i=1} ^n f (x_i )&#13;
-$$&#13;
-&#13;
-若 $X$ 的分布律为 $p(x)$,  则样本的联合分布律为&#13;
-&#13;
-$$&#13;
-p ^* (x_1 ,  x_2 ,  ...,  x_n) = \prod _{i=1} ^n p (x_i )&#13;
-$$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;样本的联合分布&lt;/summary&gt;&#13;
-&#13;
-设总体 $X \sim N(12,  4)$ ,  从中抽取容量为5的样本 $(X_1,  X_2,  X_3,  X_4,  X_5)$,  求 $P\{max(X_1,  X_2,  X_3,  X_4,  X_5) &gt;15\}$ ．&#13;
-&#13;
-**解** $P\{max(X_1,  X_2,  X_3,  X_4,  X_5) &gt; 15\} = 1- P\{max(X_1,  X_2,  X_3,  X_4,  X_5) \leq 15\} = 1- P\{X_1 \leq 15,  X_2 \leq 15,  ...,  X_5 \leq 15\} = 1- P \set{X_1 \leq 15} P \set{X_2 \leq 15} \cdots P \set{X_5 \leq 15} = 1- \varPhi ^5 (\frac{15-12}{2}) = 1- \varPhi ^5 (1.5) \approx 0.2923$&#13;
-&#13;
-&gt; 需要查表&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 6.2 样本的数字特征 &#13;
-&#13;
-#### 6.2.1 总体矩&#13;
-&#13;
-- 称 $m_k = E(X ^k )$ (假设存在)为总体 $X$ 的 $k$ 阶原点矩&#13;
-- 称 $\mu _k = E[X - E(X )] ^k$ 为 $X$ 的 $k$ 阶中心矩&#13;
-- 特别地,  $m_1 = E(X ),  \mu _2 = D(X )$．&#13;
-&#13;
-&gt; 总体矩是一个常数． &#13;
-&#13;
-#### 6.2.2 样本矩&#13;
-&#13;
-设 $X_1 ,  X_2 ,  ...,  X_n$ 是总体 $X$ 的一样本,  &#13;
-&#13;
-- 称 $\bar{X} = \frac{1}{n} \sum _{i=1} ^n X_i$ 为样本均值,  &#13;
-- $S ^2 = \frac{1}{n-1} \sum _{i=1} ^n (X_i - \bar{X} ) ^2$ 为样本方差．&#13;
-- 而称 $A_k = \frac{1}{n} \sum _{i=1} ^n X_i ^k$ 为样本 $k$ 阶原点矩,  &#13;
-- 称 $B_k = \frac{1}{n} \sum _{i=1} ^n (X_i - \bar{X} ) ^k$ 为样本 $k$ 阶中心矩．&#13;
-- 特别地,  $A_1 = \bar{X},  B_2 = \frac{n-1}{n} S ^2$ &#13;
-- $B_2$ 由于和 $S ^2$ 很接近,  经常记为  $\tilde{S} ^2$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;样本矩&lt;/summary&gt;&#13;
-&#13;
-从某班数学期末考试成绩中,  随机抽取10名同学的成绩分别为100,  85,  70,  65,  90,  95,  63,  50,  77,  86．试写出总体,  样本,  样本容量,  样本值；写出样本的经验分布函数；&#13;
-求样本均值,  样本方差及样本二阶中心矩的观测值．&#13;
-&#13;
-**解** &#13;
-&#13;
-- 总体：该班数学期末考试成绩 X&#13;
-- 样本：$X_1 ,  X_2 ,  ...,  X_{10} $&#13;
-- 样本容量：n = 10&#13;
-- 样本值：100,  85,  70,  65,  90,  95,  63,  50,  77,  86． &#13;
-&#13;
----&#13;
-&#13;
-将样本观测值 $x_1 ,  x_2 ,  ...,  x_{10}$ 按照从小到大的顺序排列为 50,  63,  65,  70,  77,  85,  86,  90,  95,  100 则样本的经验分布函数为&#13;
-&#13;
-$$&#13;
-F_{10} (x) = &#13;
-\begin{cases} &#13;
-0 , \space x &lt; 50 \\&#13;
-\frac{1}{10} , \space 50 \le x &lt; 63 \\&#13;
-\frac{2}{10} , \space 63 \le x &lt; 65 \\&#13;
-\vdots \\&#13;
-0 , \space 其他&#13;
-\end{cases}&#13;
-$$&#13;
-&#13;
-&gt; 经验分布函数类似于直方图, 落在每一段的样本要均分&#13;
-&#13;
----&#13;
-&#13;
-- 样本均值 $\bar{x} = \frac{1}{n} \sum x_i = \frac{1}{10} (50 + 63 +...+100) = 78.1$&#13;
-- 样本方差 $S^2 = \frac{1}{n-1} \sum (x_i - \bar{x})^2 = \frac{1}{9} [(-28.1)^2 + \cdots + 21.9^2 ] = 252.54$&#13;
-- 样本二阶中心矩 $b_2 = \frac{1}{n} \sum(x_i - \bar(x))^2 = \frac{1}{10} [(-28.1)^2 + \cdots + 21.9^2 ] = 227.29．$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 6.3 抽样分布 &#13;
-&#13;
-#### 6.3.1 正态分布 $U \sim N(0, 1)$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![正态分布.png](https://s2.loli.net/2025/05/09/U91ThMJHEIWQ2be.png)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-$$&#13;
-f (x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \space ,  \space x \in \R&#13;
-$$&#13;
-&#13;
-- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$ 的一个样本,  $\bar{X} = \frac{1}{n} \sum _{i=1} ^n X_i$ 为样本均值,  则 $\bar{X} \sim N(\mu,  \frac{\sigma ^2}{n})$ ,  从而可得统计量 $U = \frac{\bar{X} - \mu}{\sigma} \sqrt{n} \sim N(0, 1)$&#13;
-&#13;
-- 设 $X_1 ,  X _2,  ...,  X_m$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma _1 ^2)$ 和 $N(\mu _2,  \sigma _2 ^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则&#13;
-&#13;
-    $$&#13;
-    U = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{\sigma _1 ^2}{m} + \frac{\sigma _2 ^2}{n}}} \sim N(0, 1)&#13;
-    $$&#13;
-&#13;
-    其中 $\bar{X} = \frac{1}{m} \sum _{i=1} ^m X_i \space,  \bar{Y} = \frac{1}{n} \sum _{i=1} ^n Y_i$&#13;
-&#13;
-#### 6.3.2 $\chi ^2$ 分布 $\chi ^2 \sim \chi ^2 (n)$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![k.webp](https://s2.loli.net/2025/06/08/CbAQR8xnWoY2zpE.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-**定义** 设 $X _1,  X _2,  ...,  X_n$ 相互独立且均服从 $N(0,  1)$,  则称统计量 $\chi ^2 = X _1 ^2 +...+ X_n ^2$ 服从自由度为 $n$ 的 $\chi ^2$ 分布,  记作 $\chi ^2 \sim \chi ^2 (n)$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;$\chi ^2$ 分布的性质&lt;/summary&gt;&#13;
-&#13;
-- 若 $\chi ^2 \sim \chi ^2 (n)$,  则 $E( \chi ^2) = n$,   $D( \chi ^2) = 2n$&#13;
-- 设 $\chi _1 ^2 \sim \chi ^2(n_1 ),   \chi _2 ^2 \sim \chi ^2 (n_2)$,  且 $\chi _1 ^2,  \chi _2 ^2$ 相互独立,  则有 $\chi _1 ^2 + \chi _2 ^2 \sim \chi ^2(n_1 + n_2 )$． (可加性)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则统计量&#13;
-&#13;
-    $$&#13;
-    \chi ^2 = \frac{1}{\sigma ^2} \sum _{i=1} ^n (X_i - \mu) ^2 \sim \chi ^2 (n)&#13;
-    $$&#13;
-&#13;
-- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则样本均值$\bar{X}$与样本方差 $S^2$ 相互独立,  且统计量&#13;
-&#13;
-    $$&#13;
-    \frac{(n-1) S^2}{\sigma ^2} = \frac{1}{\sigma ^2} \sum _{i=1} ^n (X_i - \mu) ^2 \sim \chi ^2 (n-1)&#13;
-    $$&#13;
-&#13;
-#### 6.3.3 $t$ 分布 (学生 $t$ 分布) $T \sim t(n)$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![t.webp](https://s2.loli.net/2025/06/08/dKYBvRqUOMwQDt6.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-**定义** 设 $X \sim N(0,  1),  Y \sim \chi ^2 (n)$,  且 $X$ 与 $Y$ 相互独立,  则称统计量 &#13;
-&#13;
-$$&#13;
-T = \frac{X}{\sqrt{\frac{Y}{n}}} = \frac{X}{\sqrt{Y}} \sqrt{n}&#13;
-$$ &#13;
-&#13;
-服从自由度为 $n$ 的 $t$ 分布,  记作 $T \sim t(n)$．&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;$t$ 分布的性质&lt;/summary&gt;&#13;
-&#13;
-- $f_t (x)$ 关于 $y$ 轴对称&#13;
-- 当 $n \to \infty$ 时,  $t$ 分布 $\to N(0,  1)$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则统计量&#13;
-&#13;
-    - $T = \frac{\bar{X} - \mu}{S} \sqrt{n} \sim t(n-1)$ 学生 $t$ 分布 &#13;
-&#13;
-        &gt; 其中 $S ^2 = \frac{1}{n-1} \sum _{i=1} ^n (X_i - \bar{X} ) ^2$&#13;
-&#13;
-    - $U = \frac{\bar{X} - \mu}{\sigma} \sqrt{n} \sim N(0, 1)$  正态分布&#13;
-&#13;
-- 设 $X_1 ,  X _2,  ...,  X_n$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma ^2)$ 和 $N(\mu _2,  \sigma ^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则&#13;
-&#13;
-    $$&#13;
-    T = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{S_w ^2}{m} + \frac{S_w ^2}{n}}} \sim t(m+n-2) \space \text{学生t分布} \\&#13;
-    \space \\&#13;
-    U = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{\sigma _1 ^2}{m} + \frac{\sigma _2 ^2}{n}}} \sim N(0, 1) \space \text{正态分布}&#13;
-    $$&#13;
-&#13;
-    其中&#13;
-&#13;
-    $$&#13;
-    S_1 ^2 = \frac{1}{m-1} \sum _{i=1} ^m (X_i - \bar{X} ) ^2 \\&#13;
-    \space \\&#13;
-    S_2 ^2 = \frac{1}{n-1} \sum _{j=1} ^n (Y_j - \bar{Y} ) ^2 \\&#13;
-    \space \\&#13;
-    S_w ^2 = \frac{(m-1) S_1 ^2 + (n-1) S_2 ^2}{m+n-2} \space \text{复合样本方差}&#13;
-    $$&#13;
-&#13;
-#### 6.3.4 $F$ 分布 $F \sim F(m,  n)$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![f.webp](https://s2.loli.net/2025/06/08/d9khm8P2zreZXID.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-**定义** 设 $X \sim \chi ^2 (m)$,  $Y \sim \chi ^2 (n)$,  且 $X$ 与 $Y$ 相互独立,  则称统计量&#13;
-&#13;
-$$&#13;
-F = \frac{X/m}{Y/n}&#13;
-$$&#13;
-&#13;
-服从第一自由度为 $m$,  第二自由度为 $n$ 的 $F$ 分布,  记作 $F \sim F(m,  n)$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;$F$ 分布的性质&lt;/summary&gt;&#13;
-&#13;
-- 若 $F \sim F(m,  n)$,  则$\frac{1}{F} \sim F(n,  m)$&#13;
-- 若 $T \sim t(n)$,  则 $T ^2 \sim F(1,  n)$ &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-- 设 $X_1 ,  X _2,  ...,  X_n$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma _1^2)$ 和 $N(\mu _2,  \sigma _2^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则&#13;
-&#13;
-    $$&#13;
-    F = \frac{S_1 ^2 / S_2 ^2}{\sigma _1 ^2 / \sigma _2 ^2} \sim F(m-1,  n-1)&#13;
-    $$&#13;
-&#13;
-- 统计量&#13;
-&#13;
-    $$&#13;
-    F = \frac{\bar{S}_1 ^2 / \bar{S}_2 ^2}{\sigma _1 ^2 / \sigma _2 ^2} \sim F(m,  n)&#13;
-    $$&#13;
-&#13;
-    其中&#13;
-&#13;
-    $$&#13;
-    \bar{S}_1 ^2 = \frac{1}{m} \sum _{i=1} ^m (X_i - \mu _1 ) ^2 \\&#13;
-    \space \\&#13;
-    \bar{S}_2 ^2 = \frac{1}{n} \sum _{j=1} ^n (Y_j - \mu _2 ) ^2&#13;
-    $$&#13;
-&#13;
-#### 6.3.5 分位数&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end '常用分布的分位数图示'&lt;/summary&gt;&#13;
-&#13;
-![img1.png](https://s2.loli.net/2025/05/10/zWaw5cB2I1bUH4h.png)&#13;
-&#13;
-![img2.png](https://s2.loli.net/2025/05/10/KyXGHahqdtTglW6.png)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-**定义** 设 $X \sim F(x),  \alpha \in(0,  1)$为一常数,  若对于某一 实数 $x _{\alpha}$ 满足 $P\{X \leq x_{\alpha} \}  = F(x_{\alpha} ) = \alpha$ ,  则称 $x_{\alpha}$ 为 $X$ 的下侧 $\alpha$ 分位数．&#13;
-&#13;
-**常用分布的分位数**&#13;
-&#13;
-- $N (0,  1)$的下侧 $\alpha$ 分位数 $u_{\alpha}$ 满足 &#13;
-&#13;
-    $P \{U \leq u_{\alpha} \} = \int _{- \infty} ^{u _{\alpha}} \varphi(x)dx = \alpha$&#13;
-    &#13;
-    &gt; 由对称性 $-u_{\alpha} = u_{1 - \alpha}$&#13;
-&#13;
-- $\chi ^2(n)$的下侧 $\alpha$ 分位数 $\chi ^2_{\alpha} (n)$ 满足 &#13;
-  &#13;
-    $P \{ \chi ^2 \leq \chi ^2_{\alpha} (n) \} = \alpha$&#13;
-&#13;
-- $t(n)$的下侧 $\alpha$ 分位数 $t_{\alpha} (n)$ 满足 &#13;
-  &#13;
-    $P \{ t \leq t_{\alpha} (n) \} = \alpha$&#13;
-    &#13;
-    &gt; 由对称性 $-t_{\alpha} (n) = t_{1 - \alpha} (n)$&#13;
-&#13;
-- $F(m,  n)$的下侧 $\alpha$ 分位数 $F_{\alpha} (m, n)$ 满足 &#13;
-    - $P \{ F \leq F_{\alpha} (m, n) \} = \alpha$&#13;
-    - $F_{\alpha} (m, n) = \frac{1}{F_{1 - \alpha} (n, m)}$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;分位数&lt;/summary&gt;&#13;
-&#13;
-设 $X_1 ,  X_2 ,  ...,  X_{10}$ 是来自总体 $N(0,  0.3^2)$的样本,  求 $P \set{\sum _{i=1} ^{10} X_i ^2 &gt; 1.44}$ ．&#13;
-&#13;
-**解** 因为 $\sum _{i=1} ^{10} (\frac{X_i - \mu}{\sigma})^2 = \sum _{i=1} ^{10} \frac{X_i ^2}{0.3^2} \sim \chi ^2(10)$,  所以&#13;
-&#13;
-$$&#13;
-P \set{\sum _{i=1} ^{10} X_i ^2 &gt; 1.44} = P \set{\sum _{i=1} ^{10} \frac{X_i ^2}{0.3^2} &gt; \frac{1.44}{0.3^2}} \\&#13;
-= P \set{\chi ^2(10) &gt; 16} = 1- P \set{\chi ^2(10) \leq 16} = 1- 0.9 = 0.1&#13;
-$$&#13;
-&#13;
-&gt; 需要查表&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-## 第七章 参数估计 &#13;
-&#13;
-### 7.1  参数估计的概念 &#13;
-&#13;
-```mermaid&#13;
-flowchart TD&#13;
-    A[统计推断的目的] --&gt;  B[总体的具体分布-比较困难]&#13;
-    A --&gt; C[总体的某些参数-数字特征]&#13;
-    C --&gt; D[参数估计]&#13;
-    D --&gt; E[点估计]&#13;
-    D --&gt; F[区间估计]&#13;
-```&#13;
-&#13;
-参数估计的分类&#13;
-&#13;
-- 点估计：给出未知参数的估计值&#13;
-- 区间估计：给出未知参数的取值范围 &#13;
-&#13;
-### 7.2 点估计量的求法 &#13;
-&#13;
-#### 7.3.1 点估计的概念&#13;
-&#13;
-设总体 $X$ 中含有未知参数 $\theta,  X_1 ,  X_2 ,  ...,  X_n $为 $X$ 的一样本．点估计就是要构造适当的统计量 $\hat{\theta} (X_1 ,  X_2 ,  ...,  X_n)$,  用其观测值 $\hat{\theta} (x_1 ,  x_2 ,  ...,  x_n)$ 作为 $\theta$ 的估计值．&#13;
-&#13;
-点估计方法:&#13;
-&#13;
-- 矩估计&#13;
-- 最大似然估计 (极大似然估计) &#13;
-&#13;
-#### 7.3.2 矩估计&#13;
-&#13;
-假设 $\theta = (\theta _1 ,  \theta _2,  ...,  \theta _l) $ 为总体 $X$ 的待估参数, 令样本矩等于总体矩：&#13;
-&#13;
-$$&#13;
-\begin{cases} &#13;
-A_1 = m_1 \\&#13;
-A_2 = m_2 \\&#13;
-\vdots \\&#13;
-A_l = m_l&#13;
-\end{cases}&#13;
-$$&#13;
-&#13;
-用方程组的解 $\hat{\theta _1} ,  \hat{\theta _2} ,  ...,  \hat{\theta _l}$ 分别作为$\theta _1 ,  \theta _2,  ...,  \theta _l$ 的估计量,  则称该估计量为矩估计量,  相应的观察值称为矩估计值．&#13;
-&#13;
-&gt; 具体求解中只需掌握 $l = 1,  2$ 的情形． &#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;note&lt;/summary&gt;&#13;
-&#13;
-原理 $A_k \xrightarrow{P} m_k$&#13;
-&#13;
-- 样本矩 $A_k = \frac{1}{n} \sum _{i=1} ^n X_i ^k$&#13;
-- 总体矩 $m_k = E(X^k)$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;矩估计-记住此题结论&lt;/summary&gt;&#13;
-&#13;
-设 $X_1 ,  X_2 ,  ...,  X_n$ 为总体 $X$ 的一样本,  而 $X$ 的期望 $\mu$ 和方差 $\sigma ^2$ 都存在但未知,  试求 $\mu$ 和 $\sigma ^2$ 的矩估计量．&#13;
-&#13;
-**解** 令 &#13;
-&#13;
-$$&#13;
-\begin{cases} &#13;
-A_1 = m_1 \\&#13;
-A_2 = m_2&#13;
-\end{cases}&#13;
-$$&#13;
-&#13;
-而 $A_1 = \frac{1}{n} \sum X_i = \bar{X} ,  A_2 = \frac{1}{n} \sum X_i ^2$&#13;
-&#13;
-$m_1 = E(X ) = \mu,   m_2 = E(X ^2) = D(X ) + E^2(X ) = \sigma ^2 + \mu ^2$&#13;
-&#13;
-所以得&#13;
-&#13;
-$$&#13;
-\begin{cases} &#13;
-\hat{\mu} = \bar{X} = A_1 \\&#13;
-\hat{\sigma} ^2 = A_2 - \mu ^2 = \frac{1}{n} \sum X_i ^2 - \bar{X} ^2 = \frac{1}{n} \sum (X_i - \bar{X}) ^2 = \tilde{S} ^2&#13;
-\end{cases}&#13;
-$$&#13;
-&#13;
-&gt; 上述结果表明,  总体期望的矩估计量为样本的均值,  总体方差的矩估计量为样本的二阶中心矩． &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;矩估计&lt;/summary&gt;&#13;
-&#13;
-设总体 $X \sim P(\lambda)$,  $\lambda$ 未知,  $X_1 ,  X_2 ,  ...,  X_n$ 是 X$ 的一个样本,  求 $\lambda$ 的矩估计量．&#13;
-解 因为 $E(X ) = \lambda ,  D(X ) = \lambda$ ,  由上一题的结论：&#13;
-&#13;
-- 总体期望的矩估计量为样本的均值,  从而可得 $\hat{\lambda} = \bar{X}$ ,  &#13;
-- 总体方差的矩估计量为样本的二阶中心矩,  从而可得 $\hat{\lambda} = \frac{1}{n} \sum (X_i - \bar{X}) ^2 = \tilde{S} ^2 $&#13;
-&#13;
-即该待估参数有两个不同的矩估计量． &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;矩估计&lt;/summary&gt;&#13;
-&#13;
-设总体 $X \sim U[a,  b]$,  其中$a,  b$ 为未知参数,  试求 $a,  b$ 的矩估计量．&#13;
-&#13;
-**解** 由结论得&#13;
-&#13;
-$$&#13;
-\begin{cases} &#13;
-\frac{\hat{a} + \hat{b}}{2} = \bar{X} \\&#13;
-\\&#13;
-\frac{(\hat{b} - \hat{a})^2}{12}  = \tilde{S} ^2&#13;
-\end{cases}&#13;
-\implies&#13;
-\begin{cases} &#13;
-\hat{a} = \bar{X} - \sqrt{3} \tilde{S} \\&#13;
-\hat{b} = \bar{X} + \sqrt{3} \tilde{S}&#13;
-\end{cases}&#13;
-$$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-#### 7.3.3 最大似然估计&#13;
-&#13;
-原理：大概率事件易发生&#13;
-&#13;
-设总体X 的密度函数为 $f (x；\theta )$ (或分布律为 $p(x；\hat{\theta} )$),  $\theta = ( \theta _1, \theta _2, \cdots, \theta _l)$ 为待估参数,  称样本 $X_1 ,  X_2 ,  ...,  X_n$ 的联合密度函数(或联合分布律)为似然函数,  记为 $L(\theta )$,   即&#13;
-&#13;
-$$&#13;
-L(\theta) = f(x_1, x_2, \cdots, x_n ; \theta) = \prod _{i=1} ^n f (x_i；\theta ) , \space \theta \in \Theta \\&#13;
-L(\theta) = p(x_1, x_2, \cdots, x_n ; \theta) = \prod _{i=1} ^n p (x_i；\theta ) , \space \theta \in \Theta&#13;
-$$&#13;
-&#13;
-求出 $L(\theta)$ 的最大值点 $\hat{\theta}$,  则称 $\hat{\theta}$ 为 $\theta$ 的最大似然估计值． &#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;最大似然估计&lt;/summary&gt;&#13;
-&#13;
-设总体 $X \sim B(1,  p),  p$未知,  求 $p$ 的最大似然估计量．&#13;
-&#13;
-**解** 因 $X \sim P \set{X = x} = p^x (1- p)^{1-x},  x = 0,  1,  $ 则似然函数&#13;
-&#13;
-$$&#13;
-L(p) = \prod _{i=1} ^n p (x_i；p) = \prod _{i=1} ^n p^{x_i} (1- p)^{1-x_i} = p^{\sum x_i} (1- p)^{n - \sum x_i}&#13;
-$$&#13;
-&#13;
-取对数 $ln L( p) = (\sum x_i) ln p + (n - \sum x_i) ln(1- p)$&#13;
-&#13;
-令 $\frac{d ln L( p)}{dp} = 0 \implies p = \frac{1}{n} \sum x_i$ &#13;
-&#13;
-所以 $p$ 的最大似然估计量为 $\hat{p} = \frac{1}{n} \sum x_i = \bar{X}$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;!-- 例5 设总体X \sim P(\lambda),  \lambda未知,  求 \lambda 的最大似然估计量．&#13;
-\lambdax&#13;
-解 因 X \sim P{X = x} = e-\lambda,  x = 0,  1,  2,  ...,   则似然函数&#13;
-x!&#13;
-n&#13;
-\sum&#13;
-x&#13;
-i&#13;
-n n \lambdaxi \lambdai=1&#13;
-L(\lambda) =  p(x ；\lambda) =  e-\lambda= e-n\lambda,  &#13;
-i&#13;
-x ! x !\cdot  x !...x !&#13;
-i=1 i=1 i 1 2 n&#13;
- n  n&#13;
-取对数 ln L(\lambda) = \sum x ln \lambda - n\lambda - \sumln(x !),  &#13;
- &#13;
-i i&#13;
- &#13;
-i=1 i=1&#13;
-dln L(\lambda) 1 n 1 n&#13;
-令 = \sum x - n = 0  \lambda = \sum x ,  &#13;
-d\lambda \lambda i n i&#13;
-i=1 i=1&#13;
-1 n&#13;
-&#13;
-所以 \lambda 的最大似然估计量为 \lambda = \sum X = X ．&#13;
-i&#13;
-n&#13;
-i=1  --&gt;&#13;
-&#13;
-离散型随机变量的最大似然估计的难点主要是似然函数的构造,  假如样本值已知,  似然函数有一个非常简单的构造法．设总体 $X$ 的分布律为:&#13;
-&#13;
-$$&#13;
-\begin{array}{c|cccc}&#13;
-X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\&#13;
-\hline&#13;
-P &amp; p_1 (\theta) &amp; p_2 (\theta) &amp; \cdots &amp; p_n (\theta)&#13;
-\end{array}&#13;
-$$&#13;
-&#13;
-$X_1 ,  X_2 ,  ...,  X_n$ 是 $X$ 的一个样本,  且样本值已知,  已知样本值中 $x_1 ,  x_2 ,  ...,  x_k$ 分别出现了$n_1 ,  n_2 ,  ...,  n_k $ 次,  则似然函数为：&#13;
-&#13;
-$L(\theta) = [p_1(\theta)] ^{n_1} [p_2(\theta)] ^{n_2} \cdots [p_k(\theta)] ^{n_k}$&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;最大似然估计-离散型&lt;/summary&gt;&#13;
-&#13;
-设总体 $X$ 的分布律为&#13;
-&#13;
-$$&#13;
-\begin{array}{c|cccc}&#13;
-X &amp; 1 &amp; 2 &amp; 3 \\&#13;
-\hline&#13;
-P &amp; \theta ^2 &amp; 2 \theta (1 - \theta) &amp; (1 - \theta)^2&#13;
-\end{array}&#13;
-$$&#13;
-&#13;
-(1,  2,  1) 为来自总体的一个样本,  求 $\theta$ 的最大似然估计．&#13;
-&#13;
-**解** 样本中出现了2个1,  1个2,  0个3,  即 $n_1 = 2,  n_2 = 1,  n_3 = 0$&#13;
-&#13;
-$L(\theta) = [\theta ^2] ^2 \cdot [2 \theta (1 - \theta)] ^1 \cdot [(1 - \theta)^2] ^0 = 2 \theta ^5 - 2 \theta ^6$&#13;
-&#13;
-$L'(\theta) = 10 \theta ^4 - 12 \theta ^5 = 0$&#13;
-&#13;
-解得 $\hat{\theta} = 0$ (舍去), $\hat{\theta} = \frac{5}{6}$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;!-- &#13;
-例7 设总体 X 的分布律为 0 &lt; p &lt;&#13;
- &#13;
-P p2 2p(1- p) p2 1- 2p  2 &#13;
-(1,  3,  0,  2,  3,  3,  1,  3) 为来自总体的一个样本,  求 p 的最大似然估计．&#13;
-解 n = 1,  n = 2,  n = 1,  n = 4&#13;
-0 1 2 3&#13;
-L( p) =  p2 1 \cdot 2 p(1- p)2 \cdot   p2 1 \cdot 1- 2 p4= 4 p6(1- p)2(1- 2 p)4&#13;
-   &#13;
-ln L( p) = ln 4 + 6ln p + 2ln(1- p) + 4ln(1- 2 p)&#13;
-dln L( p) 6 2 8 7 - 13&#13;
-= - - = 0,  得 12 p2 -14 p + 3 = 0,  p =  0.2829&#13;
-dp p 1- p 1- 2 p 12 &#13;
-例8 设总体X \sim E(\lambda),  \lambda未知,  求 \lambda 的最大似然估计量．&#13;
-\lambdae-\lambdax,   x \ge 0,  &#13;
-解 因 X \sim f (x；\lambda) =  则似然函数&#13;
-0,   x &lt; 0,  &#13;
-&#13;
-  n &#13;
-n \lambdan exp -\lambda\sum x ,   x ,  ...,  x \ge 0,  &#13;
-  &#13;
-L(\lambda) =  f (x ；\lambda) = i 1 n&#13;
-  &#13;
-i i=1&#13;
-i=1 &#13;
-0,   其它,  &#13;
-&#13;
-dln L(\lambda) n 1&#13;
-两边取对数并令 = 0  \lambda = n \sum x = ,  &#13;
-i&#13;
-d\lambda x&#13;
-i=1&#13;
-n 1&#13;
-&#13;
-所以\lambda 的最大似然估计量为 \lambda = n \sum X = ．&#13;
-i&#13;
-X&#13;
-i=1 &#13;
-例9 设总体X \sim N(\mu,  \sigma 2),  \mu,  \sigma 2 未知,  求 \mu,  \sigma 2的最大似然估计量．&#13;
-2&#13;
-1 (x-\mu)&#13;
--&#13;
-解 因 X \sim f (x; \mu,  \sigma 2) = e 2 ,   x \in \R,  &#13;
-2\sigma &#13;
-2\pi\sigma &#13;
-n  1 n &#13;
-则似然函数 L(\mu,  \sigma 2) =  f (x ; \mu,  \sigma 2) = (2\pi\sigma 2)-n exp - \sum(x - \mu)2 ,  &#13;
-2  &#13;
-i 2\sigma 2 i&#13;
- &#13;
-i=1 i=1&#13;
-n 1 n&#13;
-取对数 ln L(\mu,  \sigma 2) = - (ln 2\pi + ln \sigma 2) - \sum(x - \mu)2,  &#13;
-2 2\sigma 2 i&#13;
-i=1 &#13;
-&#13;
-例9 设总体X \sim N(\mu,  \sigma 2),  \mu,  \sigma 2 未知,  求 \mu,  \sigma 2的最大似然估计量．&#13;
-  1 n&#13;
-[ln L(\mu,  \sigma 2)] = \sum(x - \mu) = 0,   (1)&#13;
-&#13;
-2 i&#13;
-\mu \sigma &#13;
-&#13;
-i=1&#13;
-令 &#13;
- n 1 n&#13;
-&#13;
-[ln L(\mu,  \sigma 2)] = - + \sum(x - \mu)2 = 0,  &#13;
-(2)&#13;
- \sigma 2 2\sigma 2 2\sigma 4 i&#13;
-&#13;
-i=1&#13;
-1 n 1 n&#13;
-由(1)式得 \mu = \sum x = x,  代入(2)得 \sigma 2 = \sum(x - x)2,  &#13;
-i&#13;
-n i&#13;
-n&#13;
-i=1&#13;
-i=1&#13;
-1 n 1 n&#13;
-&#13;
-\mu = \sum X = X ,   \sigma 2 = \sum(X - X )2 = S2 ．&#13;
-所以&#13;
-i i&#13;
-n n&#13;
-i=1 i=1 &#13;
-&#13;
-e-(x-\hat{\theta} ),   x \ge\hat{\theta} ,  &#13;
-例10 设总体 X \sim f (x;\hat{\theta} ) = \theta 未知,  求 \theta 的最大似然&#13;
-&#13;
-0,   x &lt;\hat{\theta} ,  &#13;
-&#13;
-估计量．&#13;
- n&#13;
-\sum&#13;
-n  n\hat{\theta} - xi&#13;
-解 似然函数 L(\theta) =  f (x ;\theta) = e i=1 ,   x ,  ...,  x \ge\hat{\theta} ,  &#13;
-&#13;
-1 n&#13;
-i&#13;
-&#13;
-i=1 0,   其它,  &#13;
-&#13;
- n&#13;
-\sum&#13;
-n\hat{\theta} - x&#13;
-n i&#13;
-&#13;
-e ,   \hat{\theta} \leq min{x },  &#13;
-L(\theta) =  f (x ;\theta) = i=1&#13;
- i&#13;
-i 1\leqi\leqn&#13;
-&#13;
-i=1&#13;
-0,   其它,  &#13;
-&#13;
-要使 L(\hat{\theta} ) 达到最大,  只需取\hat{\theta} = min{x ,  x ,  ...,  x },  所以 \theta 的最大似然&#13;
-1 2 n&#13;
-&#13;
-估计量为\hat{\theta} = min{X ,  X ,  ...,  X }．&#13;
-1 2 n &#13;
-&#13;
-例11 设 X \sim U[a,  b],  a,  b 未知,  求 a,  b 的最大似然估计量．&#13;
-1 (b - a),   a \leq x \leq b,  &#13;
-解 因 X \sim f (x；a,  b) = 则似然函数&#13;
-&#13;
-0,   其它,  &#13;
-&#13;
- 1&#13;
-n ,   a \leq x ,  ...,  x \leq b,  &#13;
-&#13;
-L(a,  b) =  f (x ；a,  b) = (b - a)n 1 n&#13;
-&#13;
-i&#13;
-i=1 &#13;
-0,   其它,  &#13;
- &#13;
-&#13;
-例11 设 X \sim U[a,  b],  a,  b 未知,  求 a,  b 的最大似然估计量．&#13;
-1 (b - a),   a \leq x \leq b,  &#13;
-解 因 X \sim f (x；a,  b) = 则似然函数&#13;
-&#13;
-0,   其它,  &#13;
-&#13;
- 1&#13;
-n ,   a \leq min{x },  b \ge max{x },  &#13;
-&#13;
-L(a,  b) =  f (x ；a,  b) = (b - a)n 1\leqi\leqn i 1\leqi\leqn i&#13;
-i&#13;
-i=1 &#13;
-0,   其它,  &#13;
-&#13;
-记 x = min{x },  x = max{x },  则对满足 a \leq x ,  x \leq b 的任意 a,  b 有&#13;
-i (n) i (n)&#13;
-1\leqi\leqn 1\leqi\leqn&#13;
-1 1&#13;
-L(a,  b) = \leq ,  &#13;
-(b - a)n (x - x )n&#13;
-(n) (1)&#13;
-&#13;
-a,  b 的最大似然估计为 a = min{X },  b = max{X }．&#13;
-i i&#13;
-1\leqi\leqn 1\leqi\leqn  --&gt;&#13;
-&#13;
-### 7.3  估计量的评选标准 &#13;
-&#13;
-- **无偏性** 设 $\hat{\theta}$ 是参数 $\theta$ 的估计量,  若 $E(\hat{\theta} ) = \theta$ ,  则称 $\hat{\theta}$  是 $\theta$的无偏估计量．&#13;
-- **有效性** 设$\hat{\theta _1}$  与$\hat{\theta _2}$  都是 $\theta$ 的无偏估计量,  若 $D(\hat{\theta _1}  ) &lt; D(\hat{\theta _2}  )$,   则称$\hat{\theta _1}$  比$\hat{\theta _2}$  更有效．&#13;
-- **相合性** 设$\hat{\theta}$ 是 $\theta$ 的估计量,  若$\hat{\theta} \xrightarrow{p} \theta \space  (n \to \infty)$,   则称 $\hat{\theta}$  是 $\theta$ 的相合估计量． &#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;无偏性&lt;/summary&gt;&#13;
-&#13;
-证明：样本均值 $\bar{X}$ 是总体期望 $\mu$ 的无偏估计量,  样本方差 $S^2$ 是总体方差 $\sigma ^2$ 的无偏估计量．&#13;
-&#13;
-**证** 因为 $E( \bar{X} ) = E( \frac{1}{n} \sum X_i) = \frac{1}{n} \cdot  n \mu = \mu$,  所以 $\bar{X}$ 是 $\mu$ 的无偏估计量．&#13;
-&#13;
-又 $E(S^2) = E \large[ \frac{1}{n - 1} \sum (X_i - \bar{X} ) ^2  \large] = \frac{1}{n - 1} E( \sum X_i ^2 - n \bar{X} ^2)$&#13;
-&#13;
-而 $E(X_i ^2) = D(X_i ) + E^2(X_i ) = \sigma ^2 + \mu ^2, \space  E(\bar{X} ^2) = D(\bar{X} ) + E^2(\bar{x} ) = \frac{ \sigma ^2}{ n} + \mu ^2$&#13;
-&#13;
-则 $E(S^2) = \frac{1}{n -1 } \large[n(\sigma ^2 + \mu ^2) - n(\frac{ \sigma ^2}{ n} + \mu ^2) \large] = \sigma ^2$&#13;
-&#13;
-所以 $S^2$ 是 $\sigma ^2$ 的无偏估计量． &#13;
-&#13;
----&#13;
-&#13;
-由于 $S^2$ 是 $\sigma ^2$ 的无偏估计量,   且 $\tilde{S}^2 = \frac{n - 1}{n} S^2$ ,  &#13;
-&#13;
-因此 $E( \tilde{S}^2 ) = \frac{n-1}{n} E(S^2) = \frac{n-1}{n} \sigma ^2$ ,   所以  $\tilde{S}^2$  不是 $\sigma ^2$ 的无偏估计量．&#13;
-&#13;
-&gt; 虽然 $S^2$ 是 $\sigma ^2$ 的无偏估计量,   但是 $S$ 并不是 $\sigma$  的无偏估计量．事实上,  由于 $D(S) = E(S^2) - E^2(S)$ ,  得 $E(S) = \sqrt{ E(S^2) - D(S) } = \sqrt{ \sigma ^2 - D(S) } \not = \sigma  $&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;有效性&lt;/summary&gt;&#13;
-&#13;
-设 $(X_1 ,  X_2 ,  X_3 )$ 为来自总体 $N(\mu,  1)$ 的一个样本,   $\mu$ 未知,  则下列 $\mu$ 的无偏估计量中最有效的是 (A)．&#13;
-&#13;
-- [x] (A) $\frac{1}{2} X_1 + \frac{1}{3} X_2 + \frac{1}{6} X_3$&#13;
-- [ ] (B) $\frac{1}{2} X_1 + \frac{1}{4} X_2 + \frac{1}{4} X_3$&#13;
-- [ ] (C) $\frac{1}{3} X_1 + \frac{1}{3} X_2 + \frac{1}{3} X_3$&#13;
-- [ ] (D) $ X_1 +  X_2 - X_3$&#13;
-&#13;
-**解析** &#13;
-&#13;
-- $D(\frac{1}{2} X_1 + \frac{1}{3} X_2 + \frac{1}{6} X_3) = \frac{1}{4} + \frac{1}{9} + \frac{1}{36} = \frac{7}{18}$&#13;
-- $D(\frac{1}{2} X_1 + \frac{1}{4} X_2 + \frac{1}{4} X_3) = \frac{1}{4} + \frac{1}{16} + \frac{1}{16} = \frac{3}{8}$&#13;
-- $D(\frac{1}{3} X_1 + \frac{1}{3} X_2 + \frac{1}{3} X_3) = \frac{1}{9} + \frac{1}{9} + \frac{1}{9} = \frac{1}{3}$&#13;
-- $D(X_1 +  X_2 - X_3) = 1 + 1 + 1 = 3$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 7.4  区间估计 &#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;abstract&lt;/summary&gt;&#13;
-&#13;
-- **点估计的缺陷** 未能反映出估计值$\hat{\theta}$ 与真实值 $\theta$ 之间的误差及可靠性．&#13;
-- **区间估计的思想** 对未知参数$\theta$,  构造两统计量$\theta _1$ 与$\theta _2$  ,   使得 $\theta$ 能以较大的概率落在随机区间 $[\theta _1 ,  \\theta _2  ]$ 内,  由相应的观测值来估计$\theta$ 的取值范围．&#13;
-&#13;
-$P \set{\theta _1  \leq \theta \leq \theta _2}$ —可信程度 &#13;
-&#13;
-$E(\theta _2  - \theta _1)$ —精确程度&#13;
-&#13;
-最优区间估计：可信度给定情况下区间尽量短． &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-#### 7.4.1 置信区间的概念及其求法&#13;
-&#13;
-定义 设总体 $X$ 含未知参数$\theta$,  对于给定的 $\alpha \in (0,  1)$,  若存在两个统计量 $\theta _1 (X_1 ,  X_2 ,  ...,  X_n)$ 和 $\theta _2 (X_1 ,  X_2 ,  ...,  X_n)$,   使得 $P \set{\theta _1  \leq \theta \leq \theta _2} = 1- \alpha$, 则称 $[\theta _1 ,  \theta _2]$ 为 $\theta$ 的置信度为 $1- \alpha$ 的置信区间．&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;置信区间&lt;/summary&gt;&#13;
-&#13;
-设总体 $X \sim N(\mu,  \sigma ^2)$,  其中 $\sigma  = \sigma _0$  已知,   $\mu$ 未知, $X_1 ,  X_2 ,  ...,  X_n$ 是 $X$ 的样本,  求 $\mu$ 的置信度为 $1- \alpha$ 的置信区间． &#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![sigma.webp](https://s2.loli.net/2025/06/09/efgX1dvlYqJkArw.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-解 因 $\sigma  = \sigma _0$  已知,  则由抽样分布知 $U = \frac{\bar{X} -\mu}{\sigma} \sqrt{n} $ 只包含未知参数 $\mu$ 且服从 $N(0,  1)$ ,  现需找一尽量短的区间,  使得 $U$ 落在该区间内的概率为 $1- \alpha$．由分位数的定义知 $P{-u_{1 - \alpha /2} \leq U \leq u_{1 - \alpha /2} } = 1- \alpha$&#13;
-&#13;
-即 $P \set{-u_{1 - \alpha /2} \leq \frac{\bar{X} -\mu}{\sigma} \sqrt{n} \leq u_{1 - \alpha /2} } = 1 - \alpha$&#13;
-&#13;
-因此 $\mu$ 的置信度为 $1- \alpha$ 的置信区间为 $\large[ \bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2},\bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} \large]$&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;求解步骤&lt;/summary&gt;&#13;
-&#13;
-1. 构造一个只包含待估参数 $\theta$ 的样本的函数 $U$ ,  要求它的分布已知(一般由抽样分布可得)&#13;
-2. 寻求一尽量短的区间 $[a,  b]$,  使得 $U$ 落在该区间内的概率为 $1- \alpha$ (一般由分位数可得)&#13;
-3. 从 $a \leq U \leq b$ 中得到等价不等式 $\theta _1 \leq \theta \leq \theta _2$ ,  则$[\theta _1 ,  \theta _2 ] $ 就是 $\theta$ 的置信度为 $1- \alpha$ 的置信区间． &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-#### 7.4.2 单个正态总体的情形&#13;
-&#13;
-设总体 $X \sim N(\mu,  \sigma ^2),  X_1 ,  X_2 ,  ...,  X_n$ 是 $X$ 的一个样本,  对给定置信度 $1- \alpha$ ,  求 $\mu$ 和 $\sigma ^2$ 的置信区间．&#13;
-&#13;
-{==问题一: 求 $\mu$ 的置信区间==}&#13;
-&#13;
-**当 $\sigma ^2$ 已知时**&#13;
-&#13;
-上一题可知,   $\mu$ 的置信度为 $1- \alpha$ 的置信区间为&#13;
-&#13;
-$$&#13;
-\large[ \bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2}, \bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} \large]&#13;
-$$&#13;
-&#13;
-**当 $\sigma ^2$ 未知时**&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![sigma2.webp](https://s2.loli.net/2025/06/09/IWu7celE2JhMo4C.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-因为 $S^2$ 是 $\sigma  ^2 $ 的无偏估计,  所以可以用$S $代替 $\sigma$ ,  则由抽样分布知 $T = \frac{\bar{X} -\mu}{S} \sqrt{n} \sim t(n-1) $&#13;
-&#13;
-由分位数 $P \set{-t_{1 - \alpha /2} (n -1) \leq T \leq t_{1 - \alpha /2} (n -1)} = 1- \alpha$&#13;
-&#13;
-即 $P \set{-t_{1 - \alpha /2} (n -1) \leq \frac{\bar{X} -\mu}{S} \sqrt{n} \leq t_{1 - \alpha /2} (n -1)} = 1- \alpha$&#13;
-&#13;
-所以 $\mu$ 的置信度为 $1- \alpha$ 的置信区间为 &#13;
-&#13;
-$$&#13;
-[\bar{X} - \frac{S}{\sqrt{n}}t_{1 - \alpha /2}, \bar{X} + \frac{S}{\sqrt{n}}t_{1 - \alpha /2}]&#13;
-$$&#13;
-&#13;
----&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;方差已知&lt;/summary&gt;&#13;
-&#13;
-某厂生产的节能灯寿命 $X \sim N(\mu,  8)$,  从生产的一批灯中抽取10只作寿命测试,  数据如下(小时)：1050,  1100,  1080,  1120,  1200,  1250,  1040,  1130,  1300,  1200 试估计这批节能灯平均寿命的范围 ( $\alpha   =   0.05 $ )．&#13;
-&#13;
-**解** 这是在方差已知的情况下对期望进行区间估计．因为 $\bar{X} = 1147,  u_{1 - \alpha /2} = u_{0.975} =1.96$,  从而可得&#13;
-&#13;
-- $\bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} = 1145.25$&#13;
-- $\bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} = 1148.75$&#13;
-&#13;
-所以这批节能灯平均寿命 $\mu$ 在0.95的置信水平下的置信区间为$[1145.25,  1148.75]$．(区间长度为3.5)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;方差未知&lt;/summary&gt;&#13;
-&#13;
-若上一题中的方差未知,  求这批节能灯平均寿命 $\mu$ 的置信水平为0.95的置信区间． &#13;
-&#13;
-&gt; $1 - \alpha = 0.95 \implies \alpha = 0.05$&#13;
-&#13;
-**解** 这是在方差未知的情况下对期望进行区间估计．由上一题的数据计算标准差 $S = \sqrt{S^2} \approx 87.06$,  类似得置信水平为0.95的置信区间为 $[1084.72,  1209.28]$(长度为124.56)&#13;
-&#13;
-&gt; 此题表明,  由于对总体的了解少了(方差未知),  因而在相同的置信水平下估计的效果也就差很多． &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-{==问题二: 求 $\sigma ^2$ 的置信区间==}&#13;
-&#13;
-**当 $\mu$ 已知时**&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![sigma1.webp](https://s2.loli.net/2025/06/10/FRmUnGQqoJw7TEa.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-因 $\mu = \mu _0$ 已知,  则由抽样分布知 $\chi ^2 = \frac{1}{\sigma ^2} \sum (X_i - \mu) ^2$ 只包含未知参数 $\sigma ^2$ 且服从 $\chi ^2(n)$,  现需找一尽量短的区间,  使得 $\chi ^2$ 落在该区间内的概率为 $1- \alpha$&#13;
-&#13;
-由分位数定义 $P \set{\chi _{\alpha /2} ^2 (n) \leq \chi ^2 \leq \chi _{1 - \alpha /2} ^2 (n)} = 1- \alpha$&#13;
-&#13;
-所以 $\sigma ^2$ 的置信度为 $1- \alpha$ 的置信区间为： &#13;
-&#13;
-$$&#13;
-\big[\frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{1 - \alpha /2} ^2 (n)}, \space \frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{\alpha /2} ^2 (n)}  \big]&#13;
-$$&#13;
-&#13;
-**当 $\mu$ 未知时**&#13;
-&#13;
-因为 $\bar{X}$ 是 $\mu$ 的无偏估计,  所以可以用 $\bar{X}$ 代替 $\mu$ ,  则由抽样分布知&#13;
-&#13;
-$\frac{(n -1)S^2}{\sigma ^2} = \sigma ^2 \sum (X_i - \bar{X} )^2 \sim \chi ^2 (n -1)$&#13;
-&#13;
-类似可得 $\sigma ^2$ 的置信度为 $1- \alpha$ 的置信区间为：&#13;
-&#13;
-$$&#13;
-\big[\frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{1 - \alpha /2} ^2 (n-1)}, \space \frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{\alpha /2} ^2 (n-1)}  \big]&#13;
-$$&#13;
-&#13;
----&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;期望已知&lt;/summary&gt;&#13;
-&#13;
-从总体 $X \sim N(0 ,  \sigma ^2)$ 中抽取一个容量为4的样本：1.3 , −2.78 , 0.06 , 1.98, 试求 $\sigma ^2$ 的置信水平为0.95的置信区间．&#13;
-&#13;
-**解** 这是在期望已知的情况下对方差进行区间估计．&#13;
-&#13;
-因为 $\sum (x_i - 0) ^2 =13.34 ,   \chi _{\alpha / 2} ^2 (n) = 0.484, \chi _{1 - \alpha / 2} ^2 (n) = 11.143$  &#13;
-&#13;
-所以可得 $\sigma ^2$ 置信水平为0.95的置信区间为 $[\frac{13.34}{11.143}, \frac{13.34}{0.484}]$&#13;
-&#13;
-&gt; 需要查表&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-## 第八章 假设检验 &#13;
-&#13;
-### 8.1  假设检验的基本思想 &#13;
-&#13;
-#### 8.1.1 假设检验的基本思想 (概率性质的反证法)&#13;
-&#13;
-为了推断总体,  首先对总体的分布或未知参数作出某种假设 $H_0$ ,  然后在 $H_0$ 成立的条件下,  若通过抽样分析发现“小概率事件”(矛盾)竟然在一次试验中发生了,  则表明 $H_0$ 很可能不成立,  从而拒绝 $H_0$ ；相反,  若没有导致上述“不合理”现象的发生,  则没有理由拒绝 $H_0$ ,  从而接受 $H_0$&#13;
-&#13;
-#### 8.1.2 两类错误&#13;
-&#13;
-- 第一类错误(弃真) $H_0$ 实际正确,  但据抽样分析拒绝了 $H_0$ ；P {拒绝 $H_0$ | $H_0$ 为真} = $\alpha$ —— 显著性水平&#13;
-- 第二类错误(纳伪) $H_0$ 实际错误,  但据抽样分析接受了 $H_0$ ．P {接受 $H_0$ | $H_0$ 不真} = $\beta$&#13;
-&#13;
-#### 8.1.3 假设检验的步骤&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;假设检验&lt;/summary&gt;&#13;
-&#13;
-某厂正常情况下生产灯泡寿命$X \sim N(1600,  80^2)$,  现从一批灯泡中抽取10个,  测得它们的平均寿命 $\bar{x} = 1548$,   若灯泡使用寿命的标准差不变,  在显著性水平 $\alpha = 0.05$ 的条件下,  能否认为该厂的生产正常? &#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![ex.webp](https://s2.loli.net/2025/06/10/92xgizYjr3EMvfT.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-**解** 由题意,  要检验假设 $H_0 ：\mu = \mu _0 = 1600,  H ：\mu \not = 1600$,  因 $\bar{X}$ 是 $\mu$ 的无偏估计,  所以用 $\bar{X}$ 来检验 $H_0$ 是合理的．&#13;
-&#13;
-在 $H_0$ 成立的条件下,  统计量 $U = \frac{\bar{X} - \mu _0}{\sigma} \sqrt{n} \sim N(0,  1)$,  若 $H_0$ 不真,  则 $|U|$ 一般会很大,  于是由 $P \{|U| &gt; u_{1 - \alpha / 2} \}  = \alpha$,  得拒绝域 $W = U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2}$&#13;
-&#13;
-因 $u = \frac{1548 - 1600}{80} \sqrt{10} \approx -2.06 &lt; - u_{0.975} = -1.96$&#13;
-&#13;
-观测值落入拒绝域,  即“小概率事件”竟发生了,  从而拒绝原假设 $H_0$ ,  认为生产过程不正常． &#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;假设检验求解过程&lt;/summary&gt;&#13;
-&#13;
-1. 由实际问题的要求提出原假设 $H_0$ 和对立假设 $H_1$&#13;
-2. 选择适当的统计量,  在 $H_0$ 成立的条件下确定其分布&#13;
-3. 对给定的 $\alpha$,  构造“小概率事件”,  得到拒绝域&#13;
-4. 据统计量的观测值对是否接受 $H_0$ 做出判断&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 8.2  单个正态总体参数的假设检验&#13;
-&#13;
-#### 8.2.1 期望的假设检验&#13;
-&#13;
-**当 $\sigma  ^2$ 已知时**&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![sig.webp](https://s2.loli.net/2025/06/10/f9rbdIZXDmqaSzC.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-$U$ 检验 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$&#13;
-&#13;
-- $H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0$ (双侧) &#13;
-&#13;
-    $W = \set{U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2} }$&#13;
-&#13;
-- $H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &gt; \mu _0$ (单侧) &#13;
-&#13;
-    $W = \set{U &gt; u_{1 - \alpha}}$&#13;
-&#13;
-- $H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &lt; \mu _0$ (单侧) &#13;
-&#13;
-    $W = \set{U &lt; u_{1 - \alpha}}$&#13;
-&#13;
-**当 $\sigma ^2$ 未知时**&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![p.webp](https://s2.loli.net/2025/06/10/yLkCUQo1nOB3sGE.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-$T$ 检验 $T = \frac{\bar{X} - \mu _0}{S} \sqrt{n} \sim t(n -1)$&#13;
-&#13;
-- $H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0$ &#13;
-&#13;
-    $W = \set{T &gt; t_{1 - \alpha / 2} (n - 1) 或 T &lt; -t_{1 - \alpha / 2} (n - 1)}$&#13;
-&#13;
-- $H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &gt; \mu _0$ &#13;
-&#13;
-    $W = \set{T &gt; t_{1 - \alpha} (n - 1)}$&#13;
-&#13;
-- $H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &lt; \mu _0$ &#13;
-&#13;
-    $W = \set{T &lt; - t_{1 - \alpha} (n - 1)}$&#13;
-&#13;
-&gt; 拒绝域中的不等号与 $H_0$ 的相反．&#13;
-&#13;
----&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;U检验&lt;/summary&gt;&#13;
-&#13;
-厂商称他们的装潢材料抗断强度 $X \sim N(3.25,  1.21)$,  现从中抽取9件进行检验,  测得平均抗断强度为3.15,  问能否接受该厂商的说法? $(\alpha = 0.05)$&#13;
-&#13;
-**解** 由题意,  要检验假设 $H_0 ：\mu = \mu _0 = 3.25,  H_1 ：\mu \not = 3.25$ , 因为是在方差已知的情况下对期望进行假设检验,   所以使用 U 检验,  即 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$,  从而可得拒绝域&#13;
-&#13;
-$W = \set{U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2} }$&#13;
-&#13;
-因 $1.96 = u_{0.975} &gt; u = \frac{3.15 - 3.25}{1.1} \sqrt{9} \approx -0.273 &gt; -u_{0.975} = -1.96$&#13;
-&#13;
-所以接受 $H_0$ ,  即认为该厂商的说法是正确的．&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;T检验&lt;/summary&gt;&#13;
-&#13;
-电视台广告部称企业在该台播放广告后的平均利润收益量至少为15万元,  已知这类企业广告播出后的收益量服从正态分布． 现抽取容量为20的样本,  得平均收益量为13.2万元,  标准差为3.4,  试在显著性水平 $\alpha = 0.05$ 下,  判断该广告部的说法是否正确?&#13;
-&#13;
-**解** 由题意,  要检验假设 $H_0 ：\mu \ge \mu =15,  H_1 ：\mu &lt;15$ , 因为是在方差未知的情况下对期望进行假设检验,   所以使用 T 检验,  即 $T = \frac{\bar{X} - \mu _0}{S} \sqrt{n} \sim t(n -1)$,   拒绝域 $W = \set{T &lt; - t_{1 - \alpha} (n - 1)}$  &#13;
-&#13;
-由于 $t = \frac{13.2 - 15}{3.4} \sqrt{20} \approx -2.37  &lt; -t_{0.95} (19) = -1.729$&#13;
-&#13;
-所以拒绝 $H_0$ ,  即认为该广告部的说法不正确．&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-#### 8.2.2 方差的假设检验&#13;
-&#13;
-**当 $\mu$ 已知时**&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![p1.webp](https://s2.loli.net/2025/06/10/D3FQJmUMIafT9Se.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-$\chi ^2(n)$ 检验 &#13;
-&#13;
-$$&#13;
-\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \mu)^2 \sim \chi ^2(n)&#13;
-$$&#13;
-&#13;
-- $H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2$&#13;
-&#13;
-    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n)}$&#13;
-&#13;
-- $H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &gt; \sigma ^2$&#13;
-&#13;
-    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n)}$&#13;
-&#13;
-- $H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &lt; \sigma ^2$&#13;
-&#13;
-    $W = \set{\chi ^2 &lt; \chi _{\alpha} ^2 (n)}$&#13;
-&#13;
-&#13;
-**当 $\mu$ 未知时**&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;inline end&lt;/summary&gt;&#13;
-&#13;
-![p2.webp](https://s2.loli.net/2025/06/10/7DbAXcYZB62fdlJ.webp)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-$\chi ^2 (n-1)$ 检验 &#13;
-&#13;
-$$&#13;
-\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \bar{X})^2 \sim \chi ^2(n-1)&#13;
-$$&#13;
-&#13;
-- $H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2$&#13;
-&#13;
-    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n-1)}$&#13;
-&#13;
-- $H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &gt; \sigma ^2$&#13;
-&#13;
-    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n-1)}$&#13;
-&#13;
-- $H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &lt; \sigma ^2$&#13;
-&#13;
-    $W = \set{\chi ^2 &lt; \chi _{\alpha} ^2 (n-1)}$&#13;
-&#13;
-&gt; 双侧检验的接受域即为置信区间．&#13;
-&#13;
----&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;$\chi ^2 (n-1)$ 检验&lt;/summary&gt;&#13;
-&#13;
-某车间生产的金属丝的折断力 $X \sim N(\mu,  64)$,  现从一批产品中抽出10根作折断力试验,  结果如下：578,  572,  570,  568,  572,  570,  572,  596,  584,  570 问能否认为这批金属丝的折断力方差仍为64? $(\alpha = 0.05)$&#13;
-&#13;
-**解** 由题意,  要检验假设 $H_0 ：\sigma ^2 = \sigma _0 ^2 = 64；H_1 ：\sigma ^2 \not = 64$,  因为是在期望未知的情况下对方差进行假设检验,  所以使用 $\chi ^2(n -1)$ 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$,  从而可得&#13;
-&#13;
-拒绝域 $W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n-1)}$&#13;
-&#13;
-由于 $2.7 = \chi _{0.025} ^2 (9) &lt; \chi ^2 \approx 10.65 &lt; \chi _{0.975} ^2 (9) =19.02$&#13;
-&#13;
-所以接受 $H_0$ ,  即认为折断力的方差与 64 无显著差异．&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;$\chi ^2 (n-1)$ 检验&lt;/summary&gt;&#13;
-&#13;
-某车间生产一种保险丝,  规定保险丝熔化时间的方差不得超过400．今从一批产品中抽出25个,   测得其熔化时间的方差为388.58．已知保险丝熔化时间服从正态分布,  试根据所给数据,  检验这批产品是否符合&#13;
-要求? $(\alpha = 0.05)$&#13;
-&#13;
-**解** 由题意,  要检验假设 $H_0 ：\sigma ^2 \leq \sigma _0 ^2 = 400；H_1 ：\sigma ^2 &gt; 400$ 因为在期望未知的情况下对方差进行假设检验,  所以使用 $\chi ^2 (n-1)$ 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$ ,  从而可得拒绝域  $W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n-1)}$&#13;
-&#13;
-由于 $\chi ^2 \approx 23.31 &lt; \chi _{0.95} ^2 (24) = 36.42$&#13;
-&#13;
-所以应该接受 $H_0$ ,  即这批保险丝符合要求．&#13;
-&#13;
-&lt;/details&gt;&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/75.html</guid><pubDate>Mon, 05 Oct 2026 15:10:47 +0000</pubDate></item><item><title>概率统计-概率论</title><link>https://interset-wq.github.io/post/74.html</link><description>+++&#13;
-date = 2025-08-06T22:08:41+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-5-1`&#13;
+- 类选择器`.`，相当于单属性定位'@class=属性值'，和id选择器用法类似。</description><guid isPermaLink="true">https://interset-wq.github.io/post/77.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>概率统计-概率论</title><link>https://interset-wq.github.io/post/74.html</link><description>✏️ `本文创建于2025-5-1`&#13;
 &#13;
 ## 第一章 随机事件与概率 &#13;
 &#13;
@@ -4409,10 +3515,1166 @@ $P\{X \leq x\}  = P \set{\frac{X - 500}{\sqrt{500 \times 0.5}} \le \frac{x - 500
 &#13;
 &lt;/details&gt;&#13;
 &#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/74.html</guid><pubDate>Mon, 05 Oct 2026 15:10:39 +0000</pubDate></item><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>+++&#13;
-date = 2025-08-06T20:38:14+08:00&#13;
-+++&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/74.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>概率统计-数理统计</title><link>https://interset-wq.github.io/post/75.html</link><description>✏️ `本文创建于2025-6-8`&#13;
 &#13;
+## 第六章 样本及抽样分布 &#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;abstract&lt;/summary&gt;&#13;
+&#13;
+- **数理统计** 研究如何合理的获得随机现象的数据资料,  建立有效的数学方法,  对所考察的问题作出推断或预测．&#13;
+- **研究方法** 部分 $\rightarrow$ 总体&#13;
+- **主要内容**&#13;
+&#13;
+    ```mermaid&#13;
+    flowchart TD&#13;
+        A[统计推断] --&gt;  B[估计理论]&#13;
+        A --&gt; C[假设检验]&#13;
+        B --&gt; D[参数估计]&#13;
+        B --&gt; E[非参数估计]&#13;
+    ```&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 6.1 随机样本 &#13;
+&#13;
+#### 6.1.1 总体与个体&#13;
+&#13;
+- **总体** 研究对象(数量指标)的全体．&#13;
+- **个体** 总体中的每个元素．&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;example&lt;/summary&gt;&#13;
+&#13;
+- 某工厂生产的灯泡的寿命 $X$ 是一个总体,  每个灯泡的寿命是一个个体；&#13;
+- 全校所有同学的身高和体重 $(X ,  Y )$ 是一个二维总体,  每个同学的身高和体重是一个个体． &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+#### 6.1.2 样本与统计量&#13;
+&#13;
+- **样本** 从某一总体 $X$ 中随机地、独立地抽取的 $n$ 个个体 $X _1,  X_2 ,  ...,  X_n$ 称为$X$ 的一个样本容量为 $n$ 的样本,  其对应的观测值 $X _1 ,  X_2 ,  ...,  X_n$ 称为样本值．&#13;
+- **统计量** 不含任何未知参数的样本的函数 $\varphi (X_1 ,  X_2 ,  ...,  X _n)$ 称为统计量．&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;example&lt;/summary&gt;&#13;
+&#13;
+设总体 $X \sim N(\mu,  \sigma ^2)$,  其中 $\mu$ 已知,  $\sigma ^2$ 未知,  则 $X_1 + X_2 + \mu$ 是统计量,  $\sum _{i=1} ^3 \frac{X_i ^2}{\sigma ^2}$ 不是统计量．&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+#### 6.1.3 样本的联合分布&#13;
+&#13;
+设总体 $X$ 的分布函数为$F (x),  X_1 ,  X_2 ,  ...,  X_n$ 是来自总体的一个样本(独立同分布),  则 $X_1 ,  X_2 ,  ...,  X_n$ 的联合分布函数为&#13;
+&#13;
+$$&#13;
+F ^* (x_1 ,  x_2 ,  ...,  x_n) = \prod _{i=1} ^n F (x_i )&#13;
+$$&#13;
+&#13;
+若 $X$ 的密度函数为 $f (x)$,  则样本的联合概率密度函数为&#13;
+&#13;
+$$&#13;
+f ^* (x_1 ,  x_2 ,  ...,  x_n) = \prod _{i=1} ^n f (x_i )&#13;
+$$&#13;
+&#13;
+若 $X$ 的分布律为 $p(x)$,  则样本的联合分布律为&#13;
+&#13;
+$$&#13;
+p ^* (x_1 ,  x_2 ,  ...,  x_n) = \prod _{i=1} ^n p (x_i )&#13;
+$$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;样本的联合分布&lt;/summary&gt;&#13;
+&#13;
+设总体 $X \sim N(12,  4)$ ,  从中抽取容量为5的样本 $(X_1,  X_2,  X_3,  X_4,  X_5)$,  求 $P\{max(X_1,  X_2,  X_3,  X_4,  X_5) &gt;15\}$ ．&#13;
+&#13;
+**解** $P\{max(X_1,  X_2,  X_3,  X_4,  X_5) &gt; 15\} = 1- P\{max(X_1,  X_2,  X_3,  X_4,  X_5) \leq 15\} = 1- P\{X_1 \leq 15,  X_2 \leq 15,  ...,  X_5 \leq 15\} = 1- P \set{X_1 \leq 15} P \set{X_2 \leq 15} \cdots P \set{X_5 \leq 15} = 1- \varPhi ^5 (\frac{15-12}{2}) = 1- \varPhi ^5 (1.5) \approx 0.2923$&#13;
+&#13;
+&gt; 需要查表&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 6.2 样本的数字特征 &#13;
+&#13;
+#### 6.2.1 总体矩&#13;
+&#13;
+- 称 $m_k = E(X ^k )$ (假设存在)为总体 $X$ 的 $k$ 阶原点矩&#13;
+- 称 $\mu _k = E[X - E(X )] ^k$ 为 $X$ 的 $k$ 阶中心矩&#13;
+- 特别地,  $m_1 = E(X ),  \mu _2 = D(X )$．&#13;
+&#13;
+&gt; 总体矩是一个常数． &#13;
+&#13;
+#### 6.2.2 样本矩&#13;
+&#13;
+设 $X_1 ,  X_2 ,  ...,  X_n$ 是总体 $X$ 的一样本,  &#13;
+&#13;
+- 称 $\bar{X} = \frac{1}{n} \sum _{i=1} ^n X_i$ 为样本均值,  &#13;
+- $S ^2 = \frac{1}{n-1} \sum _{i=1} ^n (X_i - \bar{X} ) ^2$ 为样本方差．&#13;
+- 而称 $A_k = \frac{1}{n} \sum _{i=1} ^n X_i ^k$ 为样本 $k$ 阶原点矩,  &#13;
+- 称 $B_k = \frac{1}{n} \sum _{i=1} ^n (X_i - \bar{X} ) ^k$ 为样本 $k$ 阶中心矩．&#13;
+- 特别地,  $A_1 = \bar{X},  B_2 = \frac{n-1}{n} S ^2$ &#13;
+- $B_2$ 由于和 $S ^2$ 很接近,  经常记为  $\tilde{S} ^2$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;样本矩&lt;/summary&gt;&#13;
+&#13;
+从某班数学期末考试成绩中,  随机抽取10名同学的成绩分别为100,  85,  70,  65,  90,  95,  63,  50,  77,  86．试写出总体,  样本,  样本容量,  样本值；写出样本的经验分布函数；&#13;
+求样本均值,  样本方差及样本二阶中心矩的观测值．&#13;
+&#13;
+**解** &#13;
+&#13;
+- 总体：该班数学期末考试成绩 X&#13;
+- 样本：$X_1 ,  X_2 ,  ...,  X_{10} $&#13;
+- 样本容量：n = 10&#13;
+- 样本值：100,  85,  70,  65,  90,  95,  63,  50,  77,  86． &#13;
+&#13;
+---&#13;
+&#13;
+将样本观测值 $x_1 ,  x_2 ,  ...,  x_{10}$ 按照从小到大的顺序排列为 50,  63,  65,  70,  77,  85,  86,  90,  95,  100 则样本的经验分布函数为&#13;
+&#13;
+$$&#13;
+F_{10} (x) = &#13;
+\begin{cases} &#13;
+0 , \space x &lt; 50 \\&#13;
+\frac{1}{10} , \space 50 \le x &lt; 63 \\&#13;
+\frac{2}{10} , \space 63 \le x &lt; 65 \\&#13;
+\vdots \\&#13;
+0 , \space 其他&#13;
+\end{cases}&#13;
+$$&#13;
+&#13;
+&gt; 经验分布函数类似于直方图, 落在每一段的样本要均分&#13;
+&#13;
+---&#13;
+&#13;
+- 样本均值 $\bar{x} = \frac{1}{n} \sum x_i = \frac{1}{10} (50 + 63 +...+100) = 78.1$&#13;
+- 样本方差 $S^2 = \frac{1}{n-1} \sum (x_i - \bar{x})^2 = \frac{1}{9} [(-28.1)^2 + \cdots + 21.9^2 ] = 252.54$&#13;
+- 样本二阶中心矩 $b_2 = \frac{1}{n} \sum(x_i - \bar(x))^2 = \frac{1}{10} [(-28.1)^2 + \cdots + 21.9^2 ] = 227.29．$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 6.3 抽样分布 &#13;
+&#13;
+#### 6.3.1 正态分布 $U \sim N(0, 1)$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![正态分布.png](https://s2.loli.net/2025/05/09/U91ThMJHEIWQ2be.png)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+$$&#13;
+f (x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \space ,  \space x \in \R&#13;
+$$&#13;
+&#13;
+- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$ 的一个样本,  $\bar{X} = \frac{1}{n} \sum _{i=1} ^n X_i$ 为样本均值,  则 $\bar{X} \sim N(\mu,  \frac{\sigma ^2}{n})$ ,  从而可得统计量 $U = \frac{\bar{X} - \mu}{\sigma} \sqrt{n} \sim N(0, 1)$&#13;
+&#13;
+- 设 $X_1 ,  X _2,  ...,  X_m$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma _1 ^2)$ 和 $N(\mu _2,  \sigma _2 ^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则&#13;
+&#13;
+    $$&#13;
+    U = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{\sigma _1 ^2}{m} + \frac{\sigma _2 ^2}{n}}} \sim N(0, 1)&#13;
+    $$&#13;
+&#13;
+    其中 $\bar{X} = \frac{1}{m} \sum _{i=1} ^m X_i \space,  \bar{Y} = \frac{1}{n} \sum _{i=1} ^n Y_i$&#13;
+&#13;
+#### 6.3.2 $\chi ^2$ 分布 $\chi ^2 \sim \chi ^2 (n)$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![k.webp](https://s2.loli.net/2025/06/08/CbAQR8xnWoY2zpE.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+**定义** 设 $X _1,  X _2,  ...,  X_n$ 相互独立且均服从 $N(0,  1)$,  则称统计量 $\chi ^2 = X _1 ^2 +...+ X_n ^2$ 服从自由度为 $n$ 的 $\chi ^2$ 分布,  记作 $\chi ^2 \sim \chi ^2 (n)$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;$\chi ^2$ 分布的性质&lt;/summary&gt;&#13;
+&#13;
+- 若 $\chi ^2 \sim \chi ^2 (n)$,  则 $E( \chi ^2) = n$,   $D( \chi ^2) = 2n$&#13;
+- 设 $\chi _1 ^2 \sim \chi ^2(n_1 ),   \chi _2 ^2 \sim \chi ^2 (n_2)$,  且 $\chi _1 ^2,  \chi _2 ^2$ 相互独立,  则有 $\chi _1 ^2 + \chi _2 ^2 \sim \chi ^2(n_1 + n_2 )$． (可加性)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则统计量&#13;
+&#13;
+    $$&#13;
+    \chi ^2 = \frac{1}{\sigma ^2} \sum _{i=1} ^n (X_i - \mu) ^2 \sim \chi ^2 (n)&#13;
+    $$&#13;
+&#13;
+- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则样本均值$\bar{X}$与样本方差 $S^2$ 相互独立,  且统计量&#13;
+&#13;
+    $$&#13;
+    \frac{(n-1) S^2}{\sigma ^2} = \frac{1}{\sigma ^2} \sum _{i=1} ^n (X_i - \mu) ^2 \sim \chi ^2 (n-1)&#13;
+    $$&#13;
+&#13;
+#### 6.3.3 $t$ 分布 (学生 $t$ 分布) $T \sim t(n)$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![t.webp](https://s2.loli.net/2025/06/08/dKYBvRqUOMwQDt6.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+**定义** 设 $X \sim N(0,  1),  Y \sim \chi ^2 (n)$,  且 $X$ 与 $Y$ 相互独立,  则称统计量 &#13;
+&#13;
+$$&#13;
+T = \frac{X}{\sqrt{\frac{Y}{n}}} = \frac{X}{\sqrt{Y}} \sqrt{n}&#13;
+$$ &#13;
+&#13;
+服从自由度为 $n$ 的 $t$ 分布,  记作 $T \sim t(n)$．&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;$t$ 分布的性质&lt;/summary&gt;&#13;
+&#13;
+- $f_t (x)$ 关于 $y$ 轴对称&#13;
+- 当 $n \to \infty$ 时,  $t$ 分布 $\to N(0,  1)$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+- 设 $X_1 ,  X _2,  ...,  X_n$ 是来自总体 $N(\mu,  \sigma ^2)$的一个样本,  则统计量&#13;
+&#13;
+    - $T = \frac{\bar{X} - \mu}{S} \sqrt{n} \sim t(n-1)$ 学生 $t$ 分布 &#13;
+&#13;
+        &gt; 其中 $S ^2 = \frac{1}{n-1} \sum _{i=1} ^n (X_i - \bar{X} ) ^2$&#13;
+&#13;
+    - $U = \frac{\bar{X} - \mu}{\sigma} \sqrt{n} \sim N(0, 1)$  正态分布&#13;
+&#13;
+- 设 $X_1 ,  X _2,  ...,  X_n$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma ^2)$ 和 $N(\mu _2,  \sigma ^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则&#13;
+&#13;
+    $$&#13;
+    T = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{S_w ^2}{m} + \frac{S_w ^2}{n}}} \sim t(m+n-2) \space \text{学生t分布} \\&#13;
+    \space \\&#13;
+    U = \frac{(\bar{X} - \bar{Y}) - (\mu _1 - \mu _2)}{\sqrt{\frac{\sigma _1 ^2}{m} + \frac{\sigma _2 ^2}{n}}} \sim N(0, 1) \space \text{正态分布}&#13;
+    $$&#13;
+&#13;
+    其中&#13;
+&#13;
+    $$&#13;
+    S_1 ^2 = \frac{1}{m-1} \sum _{i=1} ^m (X_i - \bar{X} ) ^2 \\&#13;
+    \space \\&#13;
+    S_2 ^2 = \frac{1}{n-1} \sum _{j=1} ^n (Y_j - \bar{Y} ) ^2 \\&#13;
+    \space \\&#13;
+    S_w ^2 = \frac{(m-1) S_1 ^2 + (n-1) S_2 ^2}{m+n-2} \space \text{复合样本方差}&#13;
+    $$&#13;
+&#13;
+#### 6.3.4 $F$ 分布 $F \sim F(m,  n)$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![f.webp](https://s2.loli.net/2025/06/08/d9khm8P2zreZXID.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+**定义** 设 $X \sim \chi ^2 (m)$,  $Y \sim \chi ^2 (n)$,  且 $X$ 与 $Y$ 相互独立,  则称统计量&#13;
+&#13;
+$$&#13;
+F = \frac{X/m}{Y/n}&#13;
+$$&#13;
+&#13;
+服从第一自由度为 $m$,  第二自由度为 $n$ 的 $F$ 分布,  记作 $F \sim F(m,  n)$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;$F$ 分布的性质&lt;/summary&gt;&#13;
+&#13;
+- 若 $F \sim F(m,  n)$,  则$\frac{1}{F} \sim F(n,  m)$&#13;
+- 若 $T \sim t(n)$,  则 $T ^2 \sim F(1,  n)$ &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+- 设 $X_1 ,  X _2,  ...,  X_n$  和 $Y_1 ,  Y _2,  ...,  Y_n$  分别为来自正态总体 $N(\mu _1,  \sigma _1^2)$ 和 $N(\mu _2,  \sigma _2^2)$ 的两个样本,  且总体 $X,  Y$ 相互独立,  则&#13;
+&#13;
+    $$&#13;
+    F = \frac{S_1 ^2 / S_2 ^2}{\sigma _1 ^2 / \sigma _2 ^2} \sim F(m-1,  n-1)&#13;
+    $$&#13;
+&#13;
+- 统计量&#13;
+&#13;
+    $$&#13;
+    F = \frac{\bar{S}_1 ^2 / \bar{S}_2 ^2}{\sigma _1 ^2 / \sigma _2 ^2} \sim F(m,  n)&#13;
+    $$&#13;
+&#13;
+    其中&#13;
+&#13;
+    $$&#13;
+    \bar{S}_1 ^2 = \frac{1}{m} \sum _{i=1} ^m (X_i - \mu _1 ) ^2 \\&#13;
+    \space \\&#13;
+    \bar{S}_2 ^2 = \frac{1}{n} \sum _{j=1} ^n (Y_j - \mu _2 ) ^2&#13;
+    $$&#13;
+&#13;
+#### 6.3.5 分位数&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end '常用分布的分位数图示'&lt;/summary&gt;&#13;
+&#13;
+![img1.png](https://s2.loli.net/2025/05/10/zWaw5cB2I1bUH4h.png)&#13;
+&#13;
+![img2.png](https://s2.loli.net/2025/05/10/KyXGHahqdtTglW6.png)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+**定义** 设 $X \sim F(x),  \alpha \in(0,  1)$为一常数,  若对于某一 实数 $x _{\alpha}$ 满足 $P\{X \leq x_{\alpha} \}  = F(x_{\alpha} ) = \alpha$ ,  则称 $x_{\alpha}$ 为 $X$ 的下侧 $\alpha$ 分位数．&#13;
+&#13;
+**常用分布的分位数**&#13;
+&#13;
+- $N (0,  1)$的下侧 $\alpha$ 分位数 $u_{\alpha}$ 满足 &#13;
+&#13;
+    $P \{U \leq u_{\alpha} \} = \int _{- \infty} ^{u _{\alpha}} \varphi(x)dx = \alpha$&#13;
+    &#13;
+    &gt; 由对称性 $-u_{\alpha} = u_{1 - \alpha}$&#13;
+&#13;
+- $\chi ^2(n)$的下侧 $\alpha$ 分位数 $\chi ^2_{\alpha} (n)$ 满足 &#13;
+  &#13;
+    $P \{ \chi ^2 \leq \chi ^2_{\alpha} (n) \} = \alpha$&#13;
+&#13;
+- $t(n)$的下侧 $\alpha$ 分位数 $t_{\alpha} (n)$ 满足 &#13;
+  &#13;
+    $P \{ t \leq t_{\alpha} (n) \} = \alpha$&#13;
+    &#13;
+    &gt; 由对称性 $-t_{\alpha} (n) = t_{1 - \alpha} (n)$&#13;
+&#13;
+- $F(m,  n)$的下侧 $\alpha$ 分位数 $F_{\alpha} (m, n)$ 满足 &#13;
+    - $P \{ F \leq F_{\alpha} (m, n) \} = \alpha$&#13;
+    - $F_{\alpha} (m, n) = \frac{1}{F_{1 - \alpha} (n, m)}$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;分位数&lt;/summary&gt;&#13;
+&#13;
+设 $X_1 ,  X_2 ,  ...,  X_{10}$ 是来自总体 $N(0,  0.3^2)$的样本,  求 $P \set{\sum _{i=1} ^{10} X_i ^2 &gt; 1.44}$ ．&#13;
+&#13;
+**解** 因为 $\sum _{i=1} ^{10} (\frac{X_i - \mu}{\sigma})^2 = \sum _{i=1} ^{10} \frac{X_i ^2}{0.3^2} \sim \chi ^2(10)$,  所以&#13;
+&#13;
+$$&#13;
+P \set{\sum _{i=1} ^{10} X_i ^2 &gt; 1.44} = P \set{\sum _{i=1} ^{10} \frac{X_i ^2}{0.3^2} &gt; \frac{1.44}{0.3^2}} \\&#13;
+= P \set{\chi ^2(10) &gt; 16} = 1- P \set{\chi ^2(10) \leq 16} = 1- 0.9 = 0.1&#13;
+$$&#13;
+&#13;
+&gt; 需要查表&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+## 第七章 参数估计 &#13;
+&#13;
+### 7.1  参数估计的概念 &#13;
+&#13;
+```mermaid&#13;
+flowchart TD&#13;
+    A[统计推断的目的] --&gt;  B[总体的具体分布-比较困难]&#13;
+    A --&gt; C[总体的某些参数-数字特征]&#13;
+    C --&gt; D[参数估计]&#13;
+    D --&gt; E[点估计]&#13;
+    D --&gt; F[区间估计]&#13;
+```&#13;
+&#13;
+参数估计的分类&#13;
+&#13;
+- 点估计：给出未知参数的估计值&#13;
+- 区间估计：给出未知参数的取值范围 &#13;
+&#13;
+### 7.2 点估计量的求法 &#13;
+&#13;
+#### 7.3.1 点估计的概念&#13;
+&#13;
+设总体 $X$ 中含有未知参数 $\theta,  X_1 ,  X_2 ,  ...,  X_n $为 $X$ 的一样本．点估计就是要构造适当的统计量 $\hat{\theta} (X_1 ,  X_2 ,  ...,  X_n)$,  用其观测值 $\hat{\theta} (x_1 ,  x_2 ,  ...,  x_n)$ 作为 $\theta$ 的估计值．&#13;
+&#13;
+点估计方法:&#13;
+&#13;
+- 矩估计&#13;
+- 最大似然估计 (极大似然估计) &#13;
+&#13;
+#### 7.3.2 矩估计&#13;
+&#13;
+假设 $\theta = (\theta _1 ,  \theta _2,  ...,  \theta _l) $ 为总体 $X$ 的待估参数, 令样本矩等于总体矩：&#13;
+&#13;
+$$&#13;
+\begin{cases} &#13;
+A_1 = m_1 \\&#13;
+A_2 = m_2 \\&#13;
+\vdots \\&#13;
+A_l = m_l&#13;
+\end{cases}&#13;
+$$&#13;
+&#13;
+用方程组的解 $\hat{\theta _1} ,  \hat{\theta _2} ,  ...,  \hat{\theta _l}$ 分别作为$\theta _1 ,  \theta _2,  ...,  \theta _l$ 的估计量,  则称该估计量为矩估计量,  相应的观察值称为矩估计值．&#13;
+&#13;
+&gt; 具体求解中只需掌握 $l = 1,  2$ 的情形． &#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;note&lt;/summary&gt;&#13;
+&#13;
+原理 $A_k \xrightarrow{P} m_k$&#13;
+&#13;
+- 样本矩 $A_k = \frac{1}{n} \sum _{i=1} ^n X_i ^k$&#13;
+- 总体矩 $m_k = E(X^k)$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;矩估计-记住此题结论&lt;/summary&gt;&#13;
+&#13;
+设 $X_1 ,  X_2 ,  ...,  X_n$ 为总体 $X$ 的一样本,  而 $X$ 的期望 $\mu$ 和方差 $\sigma ^2$ 都存在但未知,  试求 $\mu$ 和 $\sigma ^2$ 的矩估计量．&#13;
+&#13;
+**解** 令 &#13;
+&#13;
+$$&#13;
+\begin{cases} &#13;
+A_1 = m_1 \\&#13;
+A_2 = m_2&#13;
+\end{cases}&#13;
+$$&#13;
+&#13;
+而 $A_1 = \frac{1}{n} \sum X_i = \bar{X} ,  A_2 = \frac{1}{n} \sum X_i ^2$&#13;
+&#13;
+$m_1 = E(X ) = \mu,   m_2 = E(X ^2) = D(X ) + E^2(X ) = \sigma ^2 + \mu ^2$&#13;
+&#13;
+所以得&#13;
+&#13;
+$$&#13;
+\begin{cases} &#13;
+\hat{\mu} = \bar{X} = A_1 \\&#13;
+\hat{\sigma} ^2 = A_2 - \mu ^2 = \frac{1}{n} \sum X_i ^2 - \bar{X} ^2 = \frac{1}{n} \sum (X_i - \bar{X}) ^2 = \tilde{S} ^2&#13;
+\end{cases}&#13;
+$$&#13;
+&#13;
+&gt; 上述结果表明,  总体期望的矩估计量为样本的均值,  总体方差的矩估计量为样本的二阶中心矩． &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;矩估计&lt;/summary&gt;&#13;
+&#13;
+设总体 $X \sim P(\lambda)$,  $\lambda$ 未知,  $X_1 ,  X_2 ,  ...,  X_n$ 是 X$ 的一个样本,  求 $\lambda$ 的矩估计量．&#13;
+解 因为 $E(X ) = \lambda ,  D(X ) = \lambda$ ,  由上一题的结论：&#13;
+&#13;
+- 总体期望的矩估计量为样本的均值,  从而可得 $\hat{\lambda} = \bar{X}$ ,  &#13;
+- 总体方差的矩估计量为样本的二阶中心矩,  从而可得 $\hat{\lambda} = \frac{1}{n} \sum (X_i - \bar{X}) ^2 = \tilde{S} ^2 $&#13;
+&#13;
+即该待估参数有两个不同的矩估计量． &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;矩估计&lt;/summary&gt;&#13;
+&#13;
+设总体 $X \sim U[a,  b]$,  其中$a,  b$ 为未知参数,  试求 $a,  b$ 的矩估计量．&#13;
+&#13;
+**解** 由结论得&#13;
+&#13;
+$$&#13;
+\begin{cases} &#13;
+\frac{\hat{a} + \hat{b}}{2} = \bar{X} \\&#13;
+\\&#13;
+\frac{(\hat{b} - \hat{a})^2}{12}  = \tilde{S} ^2&#13;
+\end{cases}&#13;
+\implies&#13;
+\begin{cases} &#13;
+\hat{a} = \bar{X} - \sqrt{3} \tilde{S} \\&#13;
+\hat{b} = \bar{X} + \sqrt{3} \tilde{S}&#13;
+\end{cases}&#13;
+$$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+#### 7.3.3 最大似然估计&#13;
+&#13;
+原理：大概率事件易发生&#13;
+&#13;
+设总体X 的密度函数为 $f (x；\theta )$ (或分布律为 $p(x；\hat{\theta} )$),  $\theta = ( \theta _1, \theta _2, \cdots, \theta _l)$ 为待估参数,  称样本 $X_1 ,  X_2 ,  ...,  X_n$ 的联合密度函数(或联合分布律)为似然函数,  记为 $L(\theta )$,   即&#13;
+&#13;
+$$&#13;
+L(\theta) = f(x_1, x_2, \cdots, x_n ; \theta) = \prod _{i=1} ^n f (x_i；\theta ) , \space \theta \in \Theta \\&#13;
+L(\theta) = p(x_1, x_2, \cdots, x_n ; \theta) = \prod _{i=1} ^n p (x_i；\theta ) , \space \theta \in \Theta&#13;
+$$&#13;
+&#13;
+求出 $L(\theta)$ 的最大值点 $\hat{\theta}$,  则称 $\hat{\theta}$ 为 $\theta$ 的最大似然估计值． &#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;最大似然估计&lt;/summary&gt;&#13;
+&#13;
+设总体 $X \sim B(1,  p),  p$未知,  求 $p$ 的最大似然估计量．&#13;
+&#13;
+**解** 因 $X \sim P \set{X = x} = p^x (1- p)^{1-x},  x = 0,  1,  $ 则似然函数&#13;
+&#13;
+$$&#13;
+L(p) = \prod _{i=1} ^n p (x_i；p) = \prod _{i=1} ^n p^{x_i} (1- p)^{1-x_i} = p^{\sum x_i} (1- p)^{n - \sum x_i}&#13;
+$$&#13;
+&#13;
+取对数 $ln L( p) = (\sum x_i) ln p + (n - \sum x_i) ln(1- p)$&#13;
+&#13;
+令 $\frac{d ln L( p)}{dp} = 0 \implies p = \frac{1}{n} \sum x_i$ &#13;
+&#13;
+所以 $p$ 的最大似然估计量为 $\hat{p} = \frac{1}{n} \sum x_i = \bar{X}$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;!-- 例5 设总体X \sim P(\lambda),  \lambda未知,  求 \lambda 的最大似然估计量．&#13;
+\lambdax&#13;
+解 因 X \sim P{X = x} = e-\lambda,  x = 0,  1,  2,  ...,   则似然函数&#13;
+x!&#13;
+n&#13;
+\sum&#13;
+x&#13;
+i&#13;
+n n \lambdaxi \lambdai=1&#13;
+L(\lambda) =  p(x ；\lambda) =  e-\lambda= e-n\lambda,  &#13;
+i&#13;
+x ! x !\cdot  x !...x !&#13;
+i=1 i=1 i 1 2 n&#13;
+ n  n&#13;
+取对数 ln L(\lambda) = \sum x ln \lambda - n\lambda - \sumln(x !),  &#13;
+ &#13;
+i i&#13;
+ &#13;
+i=1 i=1&#13;
+dln L(\lambda) 1 n 1 n&#13;
+令 = \sum x - n = 0  \lambda = \sum x ,  &#13;
+d\lambda \lambda i n i&#13;
+i=1 i=1&#13;
+1 n&#13;
+&#13;
+所以 \lambda 的最大似然估计量为 \lambda = \sum X = X ．&#13;
+i&#13;
+n&#13;
+i=1  --&gt;&#13;
+&#13;
+离散型随机变量的最大似然估计的难点主要是似然函数的构造,  假如样本值已知,  似然函数有一个非常简单的构造法．设总体 $X$ 的分布律为:&#13;
+&#13;
+$$&#13;
+\begin{array}{c|cccc}&#13;
+X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\&#13;
+\hline&#13;
+P &amp; p_1 (\theta) &amp; p_2 (\theta) &amp; \cdots &amp; p_n (\theta)&#13;
+\end{array}&#13;
+$$&#13;
+&#13;
+$X_1 ,  X_2 ,  ...,  X_n$ 是 $X$ 的一个样本,  且样本值已知,  已知样本值中 $x_1 ,  x_2 ,  ...,  x_k$ 分别出现了$n_1 ,  n_2 ,  ...,  n_k $ 次,  则似然函数为：&#13;
+&#13;
+$L(\theta) = [p_1(\theta)] ^{n_1} [p_2(\theta)] ^{n_2} \cdots [p_k(\theta)] ^{n_k}$&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;最大似然估计-离散型&lt;/summary&gt;&#13;
+&#13;
+设总体 $X$ 的分布律为&#13;
+&#13;
+$$&#13;
+\begin{array}{c|cccc}&#13;
+X &amp; 1 &amp; 2 &amp; 3 \\&#13;
+\hline&#13;
+P &amp; \theta ^2 &amp; 2 \theta (1 - \theta) &amp; (1 - \theta)^2&#13;
+\end{array}&#13;
+$$&#13;
+&#13;
+(1,  2,  1) 为来自总体的一个样本,  求 $\theta$ 的最大似然估计．&#13;
+&#13;
+**解** 样本中出现了2个1,  1个2,  0个3,  即 $n_1 = 2,  n_2 = 1,  n_3 = 0$&#13;
+&#13;
+$L(\theta) = [\theta ^2] ^2 \cdot [2 \theta (1 - \theta)] ^1 \cdot [(1 - \theta)^2] ^0 = 2 \theta ^5 - 2 \theta ^6$&#13;
+&#13;
+$L'(\theta) = 10 \theta ^4 - 12 \theta ^5 = 0$&#13;
+&#13;
+解得 $\hat{\theta} = 0$ (舍去), $\hat{\theta} = \frac{5}{6}$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;!-- &#13;
+例7 设总体 X 的分布律为 0 &lt; p &lt;&#13;
+ &#13;
+P p2 2p(1- p) p2 1- 2p  2 &#13;
+(1,  3,  0,  2,  3,  3,  1,  3) 为来自总体的一个样本,  求 p 的最大似然估计．&#13;
+解 n = 1,  n = 2,  n = 1,  n = 4&#13;
+0 1 2 3&#13;
+L( p) =  p2 1 \cdot 2 p(1- p)2 \cdot   p2 1 \cdot 1- 2 p4= 4 p6(1- p)2(1- 2 p)4&#13;
+   &#13;
+ln L( p) = ln 4 + 6ln p + 2ln(1- p) + 4ln(1- 2 p)&#13;
+dln L( p) 6 2 8 7 - 13&#13;
+= - - = 0,  得 12 p2 -14 p + 3 = 0,  p =  0.2829&#13;
+dp p 1- p 1- 2 p 12 &#13;
+例8 设总体X \sim E(\lambda),  \lambda未知,  求 \lambda 的最大似然估计量．&#13;
+\lambdae-\lambdax,   x \ge 0,  &#13;
+解 因 X \sim f (x；\lambda) =  则似然函数&#13;
+0,   x &lt; 0,  &#13;
+&#13;
+  n &#13;
+n \lambdan exp -\lambda\sum x ,   x ,  ...,  x \ge 0,  &#13;
+  &#13;
+L(\lambda) =  f (x ；\lambda) = i 1 n&#13;
+  &#13;
+i i=1&#13;
+i=1 &#13;
+0,   其它,  &#13;
+&#13;
+dln L(\lambda) n 1&#13;
+两边取对数并令 = 0  \lambda = n \sum x = ,  &#13;
+i&#13;
+d\lambda x&#13;
+i=1&#13;
+n 1&#13;
+&#13;
+所以\lambda 的最大似然估计量为 \lambda = n \sum X = ．&#13;
+i&#13;
+X&#13;
+i=1 &#13;
+例9 设总体X \sim N(\mu,  \sigma 2),  \mu,  \sigma 2 未知,  求 \mu,  \sigma 2的最大似然估计量．&#13;
+2&#13;
+1 (x-\mu)&#13;
+-&#13;
+解 因 X \sim f (x; \mu,  \sigma 2) = e 2 ,   x \in \R,  &#13;
+2\sigma &#13;
+2\pi\sigma &#13;
+n  1 n &#13;
+则似然函数 L(\mu,  \sigma 2) =  f (x ; \mu,  \sigma 2) = (2\pi\sigma 2)-n exp - \sum(x - \mu)2 ,  &#13;
+2  &#13;
+i 2\sigma 2 i&#13;
+ &#13;
+i=1 i=1&#13;
+n 1 n&#13;
+取对数 ln L(\mu,  \sigma 2) = - (ln 2\pi + ln \sigma 2) - \sum(x - \mu)2,  &#13;
+2 2\sigma 2 i&#13;
+i=1 &#13;
+&#13;
+例9 设总体X \sim N(\mu,  \sigma 2),  \mu,  \sigma 2 未知,  求 \mu,  \sigma 2的最大似然估计量．&#13;
+  1 n&#13;
+[ln L(\mu,  \sigma 2)] = \sum(x - \mu) = 0,   (1)&#13;
+&#13;
+2 i&#13;
+\mu \sigma &#13;
+&#13;
+i=1&#13;
+令 &#13;
+ n 1 n&#13;
+&#13;
+[ln L(\mu,  \sigma 2)] = - + \sum(x - \mu)2 = 0,  &#13;
+(2)&#13;
+ \sigma 2 2\sigma 2 2\sigma 4 i&#13;
+&#13;
+i=1&#13;
+1 n 1 n&#13;
+由(1)式得 \mu = \sum x = x,  代入(2)得 \sigma 2 = \sum(x - x)2,  &#13;
+i&#13;
+n i&#13;
+n&#13;
+i=1&#13;
+i=1&#13;
+1 n 1 n&#13;
+&#13;
+\mu = \sum X = X ,   \sigma 2 = \sum(X - X )2 = S2 ．&#13;
+所以&#13;
+i i&#13;
+n n&#13;
+i=1 i=1 &#13;
+&#13;
+e-(x-\hat{\theta} ),   x \ge\hat{\theta} ,  &#13;
+例10 设总体 X \sim f (x;\hat{\theta} ) = \theta 未知,  求 \theta 的最大似然&#13;
+&#13;
+0,   x &lt;\hat{\theta} ,  &#13;
+&#13;
+估计量．&#13;
+ n&#13;
+\sum&#13;
+n  n\hat{\theta} - xi&#13;
+解 似然函数 L(\theta) =  f (x ;\theta) = e i=1 ,   x ,  ...,  x \ge\hat{\theta} ,  &#13;
+&#13;
+1 n&#13;
+i&#13;
+&#13;
+i=1 0,   其它,  &#13;
+&#13;
+ n&#13;
+\sum&#13;
+n\hat{\theta} - x&#13;
+n i&#13;
+&#13;
+e ,   \hat{\theta} \leq min{x },  &#13;
+L(\theta) =  f (x ;\theta) = i=1&#13;
+ i&#13;
+i 1\leqi\leqn&#13;
+&#13;
+i=1&#13;
+0,   其它,  &#13;
+&#13;
+要使 L(\hat{\theta} ) 达到最大,  只需取\hat{\theta} = min{x ,  x ,  ...,  x },  所以 \theta 的最大似然&#13;
+1 2 n&#13;
+&#13;
+估计量为\hat{\theta} = min{X ,  X ,  ...,  X }．&#13;
+1 2 n &#13;
+&#13;
+例11 设 X \sim U[a,  b],  a,  b 未知,  求 a,  b 的最大似然估计量．&#13;
+1 (b - a),   a \leq x \leq b,  &#13;
+解 因 X \sim f (x；a,  b) = 则似然函数&#13;
+&#13;
+0,   其它,  &#13;
+&#13;
+ 1&#13;
+n ,   a \leq x ,  ...,  x \leq b,  &#13;
+&#13;
+L(a,  b) =  f (x ；a,  b) = (b - a)n 1 n&#13;
+&#13;
+i&#13;
+i=1 &#13;
+0,   其它,  &#13;
+ &#13;
+&#13;
+例11 设 X \sim U[a,  b],  a,  b 未知,  求 a,  b 的最大似然估计量．&#13;
+1 (b - a),   a \leq x \leq b,  &#13;
+解 因 X \sim f (x；a,  b) = 则似然函数&#13;
+&#13;
+0,   其它,  &#13;
+&#13;
+ 1&#13;
+n ,   a \leq min{x },  b \ge max{x },  &#13;
+&#13;
+L(a,  b) =  f (x ；a,  b) = (b - a)n 1\leqi\leqn i 1\leqi\leqn i&#13;
+i&#13;
+i=1 &#13;
+0,   其它,  &#13;
+&#13;
+记 x = min{x },  x = max{x },  则对满足 a \leq x ,  x \leq b 的任意 a,  b 有&#13;
+i (n) i (n)&#13;
+1\leqi\leqn 1\leqi\leqn&#13;
+1 1&#13;
+L(a,  b) = \leq ,  &#13;
+(b - a)n (x - x )n&#13;
+(n) (1)&#13;
+&#13;
+a,  b 的最大似然估计为 a = min{X },  b = max{X }．&#13;
+i i&#13;
+1\leqi\leqn 1\leqi\leqn  --&gt;&#13;
+&#13;
+### 7.3  估计量的评选标准 &#13;
+&#13;
+- **无偏性** 设 $\hat{\theta}$ 是参数 $\theta$ 的估计量,  若 $E(\hat{\theta} ) = \theta$ ,  则称 $\hat{\theta}$  是 $\theta$的无偏估计量．&#13;
+- **有效性** 设$\hat{\theta _1}$  与$\hat{\theta _2}$  都是 $\theta$ 的无偏估计量,  若 $D(\hat{\theta _1}  ) &lt; D(\hat{\theta _2}  )$,   则称$\hat{\theta _1}$  比$\hat{\theta _2}$  更有效．&#13;
+- **相合性** 设$\hat{\theta}$ 是 $\theta$ 的估计量,  若$\hat{\theta} \xrightarrow{p} \theta \space  (n \to \infty)$,   则称 $\hat{\theta}$  是 $\theta$ 的相合估计量． &#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;无偏性&lt;/summary&gt;&#13;
+&#13;
+证明：样本均值 $\bar{X}$ 是总体期望 $\mu$ 的无偏估计量,  样本方差 $S^2$ 是总体方差 $\sigma ^2$ 的无偏估计量．&#13;
+&#13;
+**证** 因为 $E( \bar{X} ) = E( \frac{1}{n} \sum X_i) = \frac{1}{n} \cdot  n \mu = \mu$,  所以 $\bar{X}$ 是 $\mu$ 的无偏估计量．&#13;
+&#13;
+又 $E(S^2) = E \large[ \frac{1}{n - 1} \sum (X_i - \bar{X} ) ^2  \large] = \frac{1}{n - 1} E( \sum X_i ^2 - n \bar{X} ^2)$&#13;
+&#13;
+而 $E(X_i ^2) = D(X_i ) + E^2(X_i ) = \sigma ^2 + \mu ^2, \space  E(\bar{X} ^2) = D(\bar{X} ) + E^2(\bar{x} ) = \frac{ \sigma ^2}{ n} + \mu ^2$&#13;
+&#13;
+则 $E(S^2) = \frac{1}{n -1 } \large[n(\sigma ^2 + \mu ^2) - n(\frac{ \sigma ^2}{ n} + \mu ^2) \large] = \sigma ^2$&#13;
+&#13;
+所以 $S^2$ 是 $\sigma ^2$ 的无偏估计量． &#13;
+&#13;
+---&#13;
+&#13;
+由于 $S^2$ 是 $\sigma ^2$ 的无偏估计量,   且 $\tilde{S}^2 = \frac{n - 1}{n} S^2$ ,  &#13;
+&#13;
+因此 $E( \tilde{S}^2 ) = \frac{n-1}{n} E(S^2) = \frac{n-1}{n} \sigma ^2$ ,   所以  $\tilde{S}^2$  不是 $\sigma ^2$ 的无偏估计量．&#13;
+&#13;
+&gt; 虽然 $S^2$ 是 $\sigma ^2$ 的无偏估计量,   但是 $S$ 并不是 $\sigma$  的无偏估计量．事实上,  由于 $D(S) = E(S^2) - E^2(S)$ ,  得 $E(S) = \sqrt{ E(S^2) - D(S) } = \sqrt{ \sigma ^2 - D(S) } \not = \sigma  $&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;有效性&lt;/summary&gt;&#13;
+&#13;
+设 $(X_1 ,  X_2 ,  X_3 )$ 为来自总体 $N(\mu,  1)$ 的一个样本,   $\mu$ 未知,  则下列 $\mu$ 的无偏估计量中最有效的是 (A)．&#13;
+&#13;
+- [x] (A) $\frac{1}{2} X_1 + \frac{1}{3} X_2 + \frac{1}{6} X_3$&#13;
+- [ ] (B) $\frac{1}{2} X_1 + \frac{1}{4} X_2 + \frac{1}{4} X_3$&#13;
+- [ ] (C) $\frac{1}{3} X_1 + \frac{1}{3} X_2 + \frac{1}{3} X_3$&#13;
+- [ ] (D) $ X_1 +  X_2 - X_3$&#13;
+&#13;
+**解析** &#13;
+&#13;
+- $D(\frac{1}{2} X_1 + \frac{1}{3} X_2 + \frac{1}{6} X_3) = \frac{1}{4} + \frac{1}{9} + \frac{1}{36} = \frac{7}{18}$&#13;
+- $D(\frac{1}{2} X_1 + \frac{1}{4} X_2 + \frac{1}{4} X_3) = \frac{1}{4} + \frac{1}{16} + \frac{1}{16} = \frac{3}{8}$&#13;
+- $D(\frac{1}{3} X_1 + \frac{1}{3} X_2 + \frac{1}{3} X_3) = \frac{1}{9} + \frac{1}{9} + \frac{1}{9} = \frac{1}{3}$&#13;
+- $D(X_1 +  X_2 - X_3) = 1 + 1 + 1 = 3$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 7.4  区间估计 &#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;abstract&lt;/summary&gt;&#13;
+&#13;
+- **点估计的缺陷** 未能反映出估计值$\hat{\theta}$ 与真实值 $\theta$ 之间的误差及可靠性．&#13;
+- **区间估计的思想** 对未知参数$\theta$,  构造两统计量$\theta _1$ 与$\theta _2$  ,   使得 $\theta$ 能以较大的概率落在随机区间 $[\theta _1 ,  \\theta _2  ]$ 内,  由相应的观测值来估计$\theta$ 的取值范围．&#13;
+&#13;
+$P \set{\theta _1  \leq \theta \leq \theta _2}$ —可信程度 &#13;
+&#13;
+$E(\theta _2  - \theta _1)$ —精确程度&#13;
+&#13;
+最优区间估计：可信度给定情况下区间尽量短． &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+#### 7.4.1 置信区间的概念及其求法&#13;
+&#13;
+定义 设总体 $X$ 含未知参数$\theta$,  对于给定的 $\alpha \in (0,  1)$,  若存在两个统计量 $\theta _1 (X_1 ,  X_2 ,  ...,  X_n)$ 和 $\theta _2 (X_1 ,  X_2 ,  ...,  X_n)$,   使得 $P \set{\theta _1  \leq \theta \leq \theta _2} = 1- \alpha$, 则称 $[\theta _1 ,  \theta _2]$ 为 $\theta$ 的置信度为 $1- \alpha$ 的置信区间．&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;置信区间&lt;/summary&gt;&#13;
+&#13;
+设总体 $X \sim N(\mu,  \sigma ^2)$,  其中 $\sigma  = \sigma _0$  已知,   $\mu$ 未知, $X_1 ,  X_2 ,  ...,  X_n$ 是 $X$ 的样本,  求 $\mu$ 的置信度为 $1- \alpha$ 的置信区间． &#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![sigma.webp](https://s2.loli.net/2025/06/09/efgX1dvlYqJkArw.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+解 因 $\sigma  = \sigma _0$  已知,  则由抽样分布知 $U = \frac{\bar{X} -\mu}{\sigma} \sqrt{n} $ 只包含未知参数 $\mu$ 且服从 $N(0,  1)$ ,  现需找一尽量短的区间,  使得 $U$ 落在该区间内的概率为 $1- \alpha$．由分位数的定义知 $P{-u_{1 - \alpha /2} \leq U \leq u_{1 - \alpha /2} } = 1- \alpha$&#13;
+&#13;
+即 $P \set{-u_{1 - \alpha /2} \leq \frac{\bar{X} -\mu}{\sigma} \sqrt{n} \leq u_{1 - \alpha /2} } = 1 - \alpha$&#13;
+&#13;
+因此 $\mu$ 的置信度为 $1- \alpha$ 的置信区间为 $\large[ \bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2},\bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} \large]$&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;求解步骤&lt;/summary&gt;&#13;
+&#13;
+1. 构造一个只包含待估参数 $\theta$ 的样本的函数 $U$ ,  要求它的分布已知(一般由抽样分布可得)&#13;
+2. 寻求一尽量短的区间 $[a,  b]$,  使得 $U$ 落在该区间内的概率为 $1- \alpha$ (一般由分位数可得)&#13;
+3. 从 $a \leq U \leq b$ 中得到等价不等式 $\theta _1 \leq \theta \leq \theta _2$ ,  则$[\theta _1 ,  \theta _2 ] $ 就是 $\theta$ 的置信度为 $1- \alpha$ 的置信区间． &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+#### 7.4.2 单个正态总体的情形&#13;
+&#13;
+设总体 $X \sim N(\mu,  \sigma ^2),  X_1 ,  X_2 ,  ...,  X_n$ 是 $X$ 的一个样本,  对给定置信度 $1- \alpha$ ,  求 $\mu$ 和 $\sigma ^2$ 的置信区间．&#13;
+&#13;
+{==问题一: 求 $\mu$ 的置信区间==}&#13;
+&#13;
+**当 $\sigma ^2$ 已知时**&#13;
+&#13;
+上一题可知,   $\mu$ 的置信度为 $1- \alpha$ 的置信区间为&#13;
+&#13;
+$$&#13;
+\large[ \bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2}, \bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} \large]&#13;
+$$&#13;
+&#13;
+**当 $\sigma ^2$ 未知时**&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![sigma2.webp](https://s2.loli.net/2025/06/09/IWu7celE2JhMo4C.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+因为 $S^2$ 是 $\sigma  ^2 $ 的无偏估计,  所以可以用$S $代替 $\sigma$ ,  则由抽样分布知 $T = \frac{\bar{X} -\mu}{S} \sqrt{n} \sim t(n-1) $&#13;
+&#13;
+由分位数 $P \set{-t_{1 - \alpha /2} (n -1) \leq T \leq t_{1 - \alpha /2} (n -1)} = 1- \alpha$&#13;
+&#13;
+即 $P \set{-t_{1 - \alpha /2} (n -1) \leq \frac{\bar{X} -\mu}{S} \sqrt{n} \leq t_{1 - \alpha /2} (n -1)} = 1- \alpha$&#13;
+&#13;
+所以 $\mu$ 的置信度为 $1- \alpha$ 的置信区间为 &#13;
+&#13;
+$$&#13;
+[\bar{X} - \frac{S}{\sqrt{n}}t_{1 - \alpha /2}, \bar{X} + \frac{S}{\sqrt{n}}t_{1 - \alpha /2}]&#13;
+$$&#13;
+&#13;
+---&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;方差已知&lt;/summary&gt;&#13;
+&#13;
+某厂生产的节能灯寿命 $X \sim N(\mu,  8)$,  从生产的一批灯中抽取10只作寿命测试,  数据如下(小时)：1050,  1100,  1080,  1120,  1200,  1250,  1040,  1130,  1300,  1200 试估计这批节能灯平均寿命的范围 ( $\alpha   =   0.05 $ )．&#13;
+&#13;
+**解** 这是在方差已知的情况下对期望进行区间估计．因为 $\bar{X} = 1147,  u_{1 - \alpha /2} = u_{0.975} =1.96$,  从而可得&#13;
+&#13;
+- $\bar{X} - \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} = 1145.25$&#13;
+- $\bar{X} + \frac{\sigma}{\sqrt{n}} u_{1 - \alpha /2} = 1148.75$&#13;
+&#13;
+所以这批节能灯平均寿命 $\mu$ 在0.95的置信水平下的置信区间为$[1145.25,  1148.75]$．(区间长度为3.5)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;方差未知&lt;/summary&gt;&#13;
+&#13;
+若上一题中的方差未知,  求这批节能灯平均寿命 $\mu$ 的置信水平为0.95的置信区间． &#13;
+&#13;
+&gt; $1 - \alpha = 0.95 \implies \alpha = 0.05$&#13;
+&#13;
+**解** 这是在方差未知的情况下对期望进行区间估计．由上一题的数据计算标准差 $S = \sqrt{S^2} \approx 87.06$,  类似得置信水平为0.95的置信区间为 $[1084.72,  1209.28]$(长度为124.56)&#13;
+&#13;
+&gt; 此题表明,  由于对总体的了解少了(方差未知),  因而在相同的置信水平下估计的效果也就差很多． &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+{==问题二: 求 $\sigma ^2$ 的置信区间==}&#13;
+&#13;
+**当 $\mu$ 已知时**&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![sigma1.webp](https://s2.loli.net/2025/06/10/FRmUnGQqoJw7TEa.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+因 $\mu = \mu _0$ 已知,  则由抽样分布知 $\chi ^2 = \frac{1}{\sigma ^2} \sum (X_i - \mu) ^2$ 只包含未知参数 $\sigma ^2$ 且服从 $\chi ^2(n)$,  现需找一尽量短的区间,  使得 $\chi ^2$ 落在该区间内的概率为 $1- \alpha$&#13;
+&#13;
+由分位数定义 $P \set{\chi _{\alpha /2} ^2 (n) \leq \chi ^2 \leq \chi _{1 - \alpha /2} ^2 (n)} = 1- \alpha$&#13;
+&#13;
+所以 $\sigma ^2$ 的置信度为 $1- \alpha$ 的置信区间为： &#13;
+&#13;
+$$&#13;
+\big[\frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{1 - \alpha /2} ^2 (n)}, \space \frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{\alpha /2} ^2 (n)}  \big]&#13;
+$$&#13;
+&#13;
+**当 $\mu$ 未知时**&#13;
+&#13;
+因为 $\bar{X}$ 是 $\mu$ 的无偏估计,  所以可以用 $\bar{X}$ 代替 $\mu$ ,  则由抽样分布知&#13;
+&#13;
+$\frac{(n -1)S^2}{\sigma ^2} = \sigma ^2 \sum (X_i - \bar{X} )^2 \sim \chi ^2 (n -1)$&#13;
+&#13;
+类似可得 $\sigma ^2$ 的置信度为 $1- \alpha$ 的置信区间为：&#13;
+&#13;
+$$&#13;
+\big[\frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{1 - \alpha /2} ^2 (n-1)}, \space \frac{\sum _{i=1} ^n (X_i - \mu)^2}{\chi _{\alpha /2} ^2 (n-1)}  \big]&#13;
+$$&#13;
+&#13;
+---&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;期望已知&lt;/summary&gt;&#13;
+&#13;
+从总体 $X \sim N(0 ,  \sigma ^2)$ 中抽取一个容量为4的样本：1.3 , −2.78 , 0.06 , 1.98, 试求 $\sigma ^2$ 的置信水平为0.95的置信区间．&#13;
+&#13;
+**解** 这是在期望已知的情况下对方差进行区间估计．&#13;
+&#13;
+因为 $\sum (x_i - 0) ^2 =13.34 ,   \chi _{\alpha / 2} ^2 (n) = 0.484, \chi _{1 - \alpha / 2} ^2 (n) = 11.143$  &#13;
+&#13;
+所以可得 $\sigma ^2$ 置信水平为0.95的置信区间为 $[\frac{13.34}{11.143}, \frac{13.34}{0.484}]$&#13;
+&#13;
+&gt; 需要查表&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+## 第八章 假设检验 &#13;
+&#13;
+### 8.1  假设检验的基本思想 &#13;
+&#13;
+#### 8.1.1 假设检验的基本思想 (概率性质的反证法)&#13;
+&#13;
+为了推断总体,  首先对总体的分布或未知参数作出某种假设 $H_0$ ,  然后在 $H_0$ 成立的条件下,  若通过抽样分析发现“小概率事件”(矛盾)竟然在一次试验中发生了,  则表明 $H_0$ 很可能不成立,  从而拒绝 $H_0$ ；相反,  若没有导致上述“不合理”现象的发生,  则没有理由拒绝 $H_0$ ,  从而接受 $H_0$&#13;
+&#13;
+#### 8.1.2 两类错误&#13;
+&#13;
+- 第一类错误(弃真) $H_0$ 实际正确,  但据抽样分析拒绝了 $H_0$ ；P {拒绝 $H_0$ | $H_0$ 为真} = $\alpha$ —— 显著性水平&#13;
+- 第二类错误(纳伪) $H_0$ 实际错误,  但据抽样分析接受了 $H_0$ ．P {接受 $H_0$ | $H_0$ 不真} = $\beta$&#13;
+&#13;
+#### 8.1.3 假设检验的步骤&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;假设检验&lt;/summary&gt;&#13;
+&#13;
+某厂正常情况下生产灯泡寿命$X \sim N(1600,  80^2)$,  现从一批灯泡中抽取10个,  测得它们的平均寿命 $\bar{x} = 1548$,   若灯泡使用寿命的标准差不变,  在显著性水平 $\alpha = 0.05$ 的条件下,  能否认为该厂的生产正常? &#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![ex.webp](https://s2.loli.net/2025/06/10/92xgizYjr3EMvfT.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+**解** 由题意,  要检验假设 $H_0 ：\mu = \mu _0 = 1600,  H ：\mu \not = 1600$,  因 $\bar{X}$ 是 $\mu$ 的无偏估计,  所以用 $\bar{X}$ 来检验 $H_0$ 是合理的．&#13;
+&#13;
+在 $H_0$ 成立的条件下,  统计量 $U = \frac{\bar{X} - \mu _0}{\sigma} \sqrt{n} \sim N(0,  1)$,  若 $H_0$ 不真,  则 $|U|$ 一般会很大,  于是由 $P \{|U| &gt; u_{1 - \alpha / 2} \}  = \alpha$,  得拒绝域 $W = U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2}$&#13;
+&#13;
+因 $u = \frac{1548 - 1600}{80} \sqrt{10} \approx -2.06 &lt; - u_{0.975} = -1.96$&#13;
+&#13;
+观测值落入拒绝域,  即“小概率事件”竟发生了,  从而拒绝原假设 $H_0$ ,  认为生产过程不正常． &#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;假设检验求解过程&lt;/summary&gt;&#13;
+&#13;
+1. 由实际问题的要求提出原假设 $H_0$ 和对立假设 $H_1$&#13;
+2. 选择适当的统计量,  在 $H_0$ 成立的条件下确定其分布&#13;
+3. 对给定的 $\alpha$,  构造“小概率事件”,  得到拒绝域&#13;
+4. 据统计量的观测值对是否接受 $H_0$ 做出判断&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 8.2  单个正态总体参数的假设检验&#13;
+&#13;
+#### 8.2.1 期望的假设检验&#13;
+&#13;
+**当 $\sigma  ^2$ 已知时**&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![sig.webp](https://s2.loli.net/2025/06/10/f9rbdIZXDmqaSzC.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+$U$ 检验 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$&#13;
+&#13;
+- $H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0$ (双侧) &#13;
+&#13;
+    $W = \set{U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2} }$&#13;
+&#13;
+- $H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &gt; \mu _0$ (单侧) &#13;
+&#13;
+    $W = \set{U &gt; u_{1 - \alpha}}$&#13;
+&#13;
+- $H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &lt; \mu _0$ (单侧) &#13;
+&#13;
+    $W = \set{U &lt; u_{1 - \alpha}}$&#13;
+&#13;
+**当 $\sigma ^2$ 未知时**&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![p.webp](https://s2.loli.net/2025/06/10/yLkCUQo1nOB3sGE.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+$T$ 检验 $T = \frac{\bar{X} - \mu _0}{S} \sqrt{n} \sim t(n -1)$&#13;
+&#13;
+- $H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0$ &#13;
+&#13;
+    $W = \set{T &gt; t_{1 - \alpha / 2} (n - 1) 或 T &lt; -t_{1 - \alpha / 2} (n - 1)}$&#13;
+&#13;
+- $H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &gt; \mu _0$ &#13;
+&#13;
+    $W = \set{T &gt; t_{1 - \alpha} (n - 1)}$&#13;
+&#13;
+- $H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &lt; \mu _0$ &#13;
+&#13;
+    $W = \set{T &lt; - t_{1 - \alpha} (n - 1)}$&#13;
+&#13;
+&gt; 拒绝域中的不等号与 $H_0$ 的相反．&#13;
+&#13;
+---&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;U检验&lt;/summary&gt;&#13;
+&#13;
+厂商称他们的装潢材料抗断强度 $X \sim N(3.25,  1.21)$,  现从中抽取9件进行检验,  测得平均抗断强度为3.15,  问能否接受该厂商的说法? $(\alpha = 0.05)$&#13;
+&#13;
+**解** 由题意,  要检验假设 $H_0 ：\mu = \mu _0 = 3.25,  H_1 ：\mu \not = 3.25$ , 因为是在方差已知的情况下对期望进行假设检验,   所以使用 U 检验,  即 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$,  从而可得拒绝域&#13;
+&#13;
+$W = \set{U &gt; u_{1 - \alpha / 2} 或 U &lt; -u_{1 - \alpha / 2} }$&#13;
+&#13;
+因 $1.96 = u_{0.975} &gt; u = \frac{3.15 - 3.25}{1.1} \sqrt{9} \approx -0.273 &gt; -u_{0.975} = -1.96$&#13;
+&#13;
+所以接受 $H_0$ ,  即认为该厂商的说法是正确的．&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;T检验&lt;/summary&gt;&#13;
+&#13;
+电视台广告部称企业在该台播放广告后的平均利润收益量至少为15万元,  已知这类企业广告播出后的收益量服从正态分布． 现抽取容量为20的样本,  得平均收益量为13.2万元,  标准差为3.4,  试在显著性水平 $\alpha = 0.05$ 下,  判断该广告部的说法是否正确?&#13;
+&#13;
+**解** 由题意,  要检验假设 $H_0 ：\mu \ge \mu =15,  H_1 ：\mu &lt;15$ , 因为是在方差未知的情况下对期望进行假设检验,   所以使用 T 检验,  即 $T = \frac{\bar{X} - \mu _0}{S} \sqrt{n} \sim t(n -1)$,   拒绝域 $W = \set{T &lt; - t_{1 - \alpha} (n - 1)}$  &#13;
+&#13;
+由于 $t = \frac{13.2 - 15}{3.4} \sqrt{20} \approx -2.37  &lt; -t_{0.95} (19) = -1.729$&#13;
+&#13;
+所以拒绝 $H_0$ ,  即认为该广告部的说法不正确．&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+#### 8.2.2 方差的假设检验&#13;
+&#13;
+**当 $\mu$ 已知时**&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![p1.webp](https://s2.loli.net/2025/06/10/D3FQJmUMIafT9Se.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+$\chi ^2(n)$ 检验 &#13;
+&#13;
+$$&#13;
+\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \mu)^2 \sim \chi ^2(n)&#13;
+$$&#13;
+&#13;
+- $H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2$&#13;
+&#13;
+    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n)}$&#13;
+&#13;
+- $H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &gt; \sigma ^2$&#13;
+&#13;
+    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n)}$&#13;
+&#13;
+- $H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &lt; \sigma ^2$&#13;
+&#13;
+    $W = \set{\chi ^2 &lt; \chi _{\alpha} ^2 (n)}$&#13;
+&#13;
+&#13;
+**当 $\mu$ 未知时**&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;inline end&lt;/summary&gt;&#13;
+&#13;
+![p2.webp](https://s2.loli.net/2025/06/10/7DbAXcYZB62fdlJ.webp)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+$\chi ^2 (n-1)$ 检验 &#13;
+&#13;
+$$&#13;
+\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \bar{X})^2 \sim \chi ^2(n-1)&#13;
+$$&#13;
+&#13;
+- $H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2$&#13;
+&#13;
+    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n-1)}$&#13;
+&#13;
+- $H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &gt; \sigma ^2$&#13;
+&#13;
+    $W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n-1)}$&#13;
+&#13;
+- $H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &lt; \sigma ^2$&#13;
+&#13;
+    $W = \set{\chi ^2 &lt; \chi _{\alpha} ^2 (n-1)}$&#13;
+&#13;
+&gt; 双侧检验的接受域即为置信区间．&#13;
+&#13;
+---&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;$\chi ^2 (n-1)$ 检验&lt;/summary&gt;&#13;
+&#13;
+某车间生产的金属丝的折断力 $X \sim N(\mu,  64)$,  现从一批产品中抽出10根作折断力试验,  结果如下：578,  572,  570,  568,  572,  570,  572,  596,  584,  570 问能否认为这批金属丝的折断力方差仍为64? $(\alpha = 0.05)$&#13;
+&#13;
+**解** 由题意,  要检验假设 $H_0 ：\sigma ^2 = \sigma _0 ^2 = 64；H_1 ：\sigma ^2 \not = 64$,  因为是在期望未知的情况下对方差进行假设检验,  所以使用 $\chi ^2(n -1)$ 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$,  从而可得&#13;
+&#13;
+拒绝域 $W = \set{\chi ^2 &gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &lt; \chi _{\alpha / 2} ^2 (n-1)}$&#13;
+&#13;
+由于 $2.7 = \chi _{0.025} ^2 (9) &lt; \chi ^2 \approx 10.65 &lt; \chi _{0.975} ^2 (9) =19.02$&#13;
+&#13;
+所以接受 $H_0$ ,  即认为折断力的方差与 64 无显著差异．&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;$\chi ^2 (n-1)$ 检验&lt;/summary&gt;&#13;
+&#13;
+某车间生产一种保险丝,  规定保险丝熔化时间的方差不得超过400．今从一批产品中抽出25个,   测得其熔化时间的方差为388.58．已知保险丝熔化时间服从正态分布,  试根据所给数据,  检验这批产品是否符合&#13;
+要求? $(\alpha = 0.05)$&#13;
+&#13;
+**解** 由题意,  要检验假设 $H_0 ：\sigma ^2 \leq \sigma _0 ^2 = 400；H_1 ：\sigma ^2 &gt; 400$ 因为在期望未知的情况下对方差进行假设检验,  所以使用 $\chi ^2 (n-1)$ 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$ ,  从而可得拒绝域  $W = \set{\chi ^2 &gt; \chi _{1 - \alpha} ^2 (n-1)}$&#13;
+&#13;
+由于 $\chi ^2 \approx 23.31 &lt; \chi _{0.95} ^2 (24) = 36.42$&#13;
+&#13;
+所以应该接受 $H_0$ ,  即这批保险丝符合要求．&#13;
+&#13;
+&lt;/details&gt;&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/75.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>PowerShell 学习笔记（DAY 1-10 合并版）</title><link>https://interset-wq.github.io/post/63.html</link><description>&#13;
 ## 63 原文&#13;
 &#13;
 # DAY 1 背景介绍&#13;
@@ -4484,10 +4746,14 @@ PowerShell控制台和集成脚本环境（ISE）都支持4中Tab补全以减少
 - 补全命令：输入 `Get-S`，通过Tab键，或shift+tab组合键可以循环显示以 `Get-S` 开头的命令&#13;
 - 补全路径：输入 `Dir`，按空格，输入 `C:\`，再按Tab，会补全该目录内文件或目录的路径&#13;
 - 补全选项：输入 `Dir -`，按Tab键，循环显示这个命令支持的选项&#13;
-- 补全参数：在补全选项的基础上，再输入一个空格，通过按Tab键，可以循环显示这个命令的参数的合法值。</description><guid isPermaLink="true">https://interset-wq.github.io/post/63.html</guid><pubDate>Mon, 05 Oct 2026 15:10:11 +0000</pubDate></item><item><title>Linux 学习笔记（下：进阶篇）</title><link>https://interset-wq.github.io/post/62.html</link><description>+++&#13;
-date = 2025-08-03T10:22:37+08:00&#13;
-+++&#13;
+- 补全参数：在补全选项的基础上，再输入一个空格，通过按Tab键，可以循环显示这个命令的参数的合法值。</description><guid isPermaLink="true">https://interset-wq.github.io/post/63.html</guid><pubDate>Wed, 06 Aug 2025 12:38:14 +0000</pubDate></item><item><title>Linux 学习笔记（上：基础篇）</title><link>https://interset-wq.github.io/post/49.html</link><description>&#13;
+## 49 原文&#13;
 &#13;
+# 介绍&#13;
+&#13;
+## 计算机体系结构与操作系统&#13;
+&#13;
+冯诺依曼体系的结构要点：计算机数制采用二进制，程序指令和数据统一存储，计算机应按照程序顺序执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/49.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>Linux 学习笔记（下：进阶篇）</title><link>https://interset-wq.github.io/post/62.html</link><description>&#13;
 ## 58 原文&#13;
 &#13;
 # 网络管理&#13;
@@ -4495,986 +4761,125 @@ date = 2025-08-03T10:22:37+08:00&#13;
 ## 管理网络接口&#13;
 &#13;
 计算机的基本网络参数包括那些？&#13;
-1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。</description><guid isPermaLink="true">https://interset-wq.github.io/post/62.html</guid><pubDate>Mon, 05 Oct 2026 15:10:08 +0000</pubDate></item><item><title>Linux 学习笔记（上：基础篇）</title><link>https://interset-wq.github.io/post/49.html</link><description>+++&#13;
-date = 2025-08-03T10:22:37+08:00&#13;
-+++&#13;
-&#13;
-## 49 原文&#13;
-&#13;
-# 介绍&#13;
-&#13;
-## 计算机体系结构与操作系统&#13;
-&#13;
-冯诺依曼体系的结构要点：计算机数制采用二进制，程序指令和数据统一存储，计算机应按照程序顺序执行。</description><guid isPermaLink="true">https://interset-wq.github.io/post/49.html</guid><pubDate>Mon, 05 Oct 2026 15:09:24 +0000</pubDate></item><item><title>快捷键</title><link>https://interset-wq.github.io/post/48.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-# 快捷键&#13;
-&#13;
-✏️ `本文创建于2025-3-13`&#13;
-&#13;
-## Win11&#13;
-&#13;
-- 全屏,不显示任务栏 ++f11++&#13;
-- emoji ++windows+period++&#13;
-- 剪贴板 ++windows+v++&#13;
-- 切换输入法 ++windows+space++&#13;
-- 回到桌面 ++windows+d++&#13;
-- 打开文件资源管理器 ++windows+e++&#13;
-&#13;
-## VS Code&#13;
-&#13;
-缩进&#13;
-: &#13;
-    - 增加缩进 ++tab++ 或 ++ctrl+bracket-right++&#13;
-    - 减少缩进 ++tab+shift++ 或 ++ctrl+bracket-left++&#13;
-&#13;
-注释&#13;
-:   &#13;
-    - 注释、取消注释 ++ctrl+slash++&#13;
-&#13;
-移动代码块&#13;
-:   &#13;
-    - 向上移动 ++alt+up++&#13;
-    - 向下移动 ++alt+down++&#13;
-&#13;
-文件资源管理器&#13;
-:   &#13;
-    - 隐藏文件资源管理器 ++ctrl+b++&#13;
-&#13;
-打开文件&#13;
-:   &#13;
-    - 打开文件 ++ctrl+o++&#13;
-&#13;
-删除行&#13;
-:   &#13;
-    - 删除整行 ++ctrl+shift+k++&#13;
-&#13;
-换行&#13;
-:   &#13;
-    - 换行 ++ctrl+enter++&#13;
-&#13;
-复制粘贴代码块&#13;
-:   &#13;
-    - 向上粘贴 ++shift+alt+up++&#13;
-    - 向下粘贴 ++shift+alt+down++&#13;
-&#13;
-## PyCharm&#13;
-&#13;
-- 复制粘贴代码块 ++ctrl+d++&#13;
-- 移动代码块&#13;
-    * 向上 ++shift+alt+up++&#13;
-    * 向下 ++shift+alt+down++&#13;
-- 运行当前代码文件 ++ctrl+shift+f10++&#13;
-- 重命名文件 ++shift+f6++&#13;
-- 搜索 ++ctrl+f++&#13;
-&#13;
-## Word&#13;
-&#13;
-- 批量取消超链接 ++ctrl+shift+f9++&#13;
-- 编辑域代码、退出编辑域代码 ++shift+f9++&#13;
-- 插入域 ++ctrl+f9++&#13;
-&#13;
-## Excel&#13;
-&#13;
-- 手动换行 ++alt+enter++。</description><guid isPermaLink="true">https://interset-wq.github.io/post/48.html</guid><pubDate>Mon, 05 Oct 2026 15:09:21 +0000</pubDate></item><item><title>Markdown语法</title><link>https://interset-wq.github.io/post/47.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-# Markdown语法&#13;
-&#13;
-✏️ `本文创建于2025-3-10`&#13;
-&#13;
-## 一、标题&#13;
-&#13;
-markdown和html一样支持六个级别的标题，分别是标题一到标题六。</description><guid isPermaLink="true">https://interset-wq.github.io/post/47.html</guid><pubDate>Mon, 05 Oct 2026 15:09:10 +0000</pubDate></item><item><title>KaTex数学公式</title><link>https://interset-wq.github.io/post/46.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-4-29`&#13;
-&#13;
-[Katex文档](https://katex.org/docs/supported)&#13;
-&#13;
-## 一、字母&#13;
-&#13;
-希腊字母&#13;
-&#13;
-| 字母 | 大写 | 小写 |&#13;
-| --- | --- | --- |&#13;
-| $\Alpha \alpha$ | `\Alpha` | `\alpha` |&#13;
-| $\Beta \beta$ | `\Beta` | `\beta` |&#13;
-| $\Gamma \varGamma \gamma \digamma$ | `\Gamma` `\varGamma` | `\gamma` `\digamma` |&#13;
-| $\Delta \varDelta \delta$ | `\Delta` `\varDelta` | `\delta` |&#13;
-| $\Epsilon \epsilon \varepsilon$ | `\Epsilon` | `\epsilon` `\varepsilon` |&#13;
-| $\Zeta \zeta$ | `\Zeta` | `\zeta` |&#13;
-| $\Eta \eta$ | `\Eta` | `\eta` |&#13;
-| $\Theta \varTheta \theta \vartheta \thetasym$ | `\Theta` `\varTheta` | `\theta` `\vartheta` `\thetasym` |&#13;
-| $\Iota \iota$ | `\Iota` | `\iota` |&#13;
-| $\Kappa \kappa \varkappa$ | `\Kappa` | `\kappa` `\varkappa` |&#13;
-| $\Lambda \varLambda \lambda$ | `\Lambda` `\varLambda` | `\lambda` |&#13;
-| $\Mu \mu$ | `\Mu` | `\mu` |&#13;
-| $\Nu \nu$ | `\Nu` | `\nu` |&#13;
-| $\Xi \varXi \xi$ | `\Xi` `\varXi` | `\xi` |&#13;
-| $\Omicron \omicron$ | `\Omicron` | `\omicron` |&#13;
-| $\Pi \varPi \pi \varpi$ | `\Pi` `\varPi` | `\pi` `\varpi` |&#13;
-| $\Rho \rho \varrho$ | `\Rho` | `\rho` `\varrho` |&#13;
-| $\Sigma \varSigma \sigma \varsigma$ | `\Sigma` `\varSigma` | `\sigma` `\varsigma` |&#13;
-| $\Tau \tau$ | `\Tau` | `\tau` |&#13;
-| $\Upsilon \varUpsilon \upsilon$ | `\Upsilon` `\varUpsilon` | `\upsilon` |&#13;
-| $\Phi \varPhi \phi \varphi$ | `\Phi` `\varPhi` | `\phi` `\varphi` |&#13;
-| $\Chi \chi$ | `\Chi` | `\chi` |&#13;
-| $\Psi \varPsi \psi$ | `\Psi` `\varPsi` | `\psi` |&#13;
-| $\Omega \varOmega \omega$ | `\Omega` `\varOmega` | `\omega` |&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;其他字母&lt;/summary&gt;&#13;
-&#13;
-- $\imath$ `\imath`&#13;
-- $\jmath$ `\jmath`&#13;
-- $\aleph$ `\aleph`&#13;
-- $\alef$ `\alef`&#13;
-- $\alefsym$ `\alefsym`&#13;
-- $\beth$ `\beth`&#13;
-- $\gimel$ `\gimel`&#13;
-- $\daleth$ `\daleth`&#13;
-- $\eth$ `\eth`&#13;
-- $\nabla$ `\nabla`&#13;
-- $\partial$ `\partial`&#13;
-- $\Game$ `\Game`&#13;
-- $\Finv$ `\Finv`&#13;
-- $\cnums$ `\cnums`&#13;
-- $\Complex$ `\Complex`&#13;
-- $\ell$ `\ell`&#13;
-- $\hbar$ `\hbar`&#13;
-- $\hslash$ `\hslash`&#13;
-- $\Im$ `\Im`&#13;
-- $\image$ `\image`&#13;
-- $\Bbbk$ `\Bbbk`&#13;
-- $\N$ `\N`&#13;
-- $\natnums$ `\natnums`&#13;
-- $\R$ `\R`&#13;
-- $\Re$ `\Re`&#13;
-- $\real$ `\real`&#13;
-- $\reals$ `\reals`&#13;
-- $\Reals$ `\Reals`&#13;
-- $\wp$ `\wp`&#13;
-- $\weierp$ `\weierp`&#13;
-- $\Z$ `\Z`&#13;
-- $\text{\aa}$ `\text{\aa}`&#13;
-- $\text{\AA}$ `\text{\AA}`&#13;
-- $\text{\ae}$ `\text{\ae}`&#13;
-- $\text{\AE}$ `\text{\AE}`&#13;
-- $\text{\oe}$ `\text{\oe}`&#13;
-- $\text{\OE}$ `\text{\OE}`&#13;
-- $\text{\o}$ `\text{\o}`&#13;
-- $\text{\O}$ `\text{\O}`&#13;
-- $\text{\ss}$ `\text{\ss}`&#13;
-- $\text{\i}$ `\text{\i}`&#13;
-- $\text{\j}$ `\text{\j}`&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-## 二、逻辑和集合关系&#13;
-&#13;
-| 含义 | 符号 | 代码 |&#13;
-| --- | --- | --- |&#13;
-| 任意 | $\forall$ | `\forall` |&#13;
-| 存在 | $\exists$ | `\exists` 或 `\exist` |&#13;
-| 不存在 | $\nexists$ | `\nexists` |&#13;
-| 属于 | $\in$ | `\in` 或 `\isin` |&#13;
-| 属于 | $\ni$ | `\ni` |&#13;
-| 不属于 | $\notin$ | `\notin` |&#13;
-| 不属于 | $\notni$ | `\notni` |&#13;
-| 补集 | $\complement$ | `\complement` |&#13;
-| 包含于 | $\subset$ | `\subset` |&#13;
-| 包含 | $\supset$ | `\supset` |&#13;
-| | $\mid$ | `\mid` |&#13;
-| | $\land$ | `\land` |&#13;
-| | $\lor$ | `\lor` |&#13;
-| 因为 | $\because$ | `\because` |&#13;
-| 所以 | $\therefore$ | `\therefore` |&#13;
-| | $\mapsto$ | `\mapsto` |&#13;
-| 趋于 | $\to$ | `\to` |&#13;
-| | $\gets$ | `\gets` |&#13;
-| | $\leftrightarrow$ | `\leftrightarrow` |&#13;
-| 空集 | $\emptyset$ | `\emptyset` 或 `\empty` |&#13;
-| 空集 | $\varnothing$ | `\varnothing` |&#13;
-| 推出 | $\implies$ | `\implies` |&#13;
-| 推出 | $\impliedby$ | `\impliedby` |&#13;
-| 等价于 | $\iff$ | `\iff` |&#13;
-| 非 | $\neg$ | `\neg` 或 `\lnot` |&#13;
-| 交 | $\cap$ | `\cap` |&#13;
-| 并 | $\cup$ | `\cup` |&#13;
-&#13;
-&#13;
-集合&#13;
-&#13;
-$\Set{x | x &lt; 5}$ `\Set{x | x &lt; 5}`&#13;
-&#13;
-$\Set{x | x &lt; \frac 1 2}$ `\Set{x | x &lt; \frac{1}{2}}` 或 `\Set{x | x &lt; \frac 1 2}`&#13;
-&#13;
-## 三、运算符号&#13;
-&#13;
-**大运算**&#13;
-&#13;
-| 含义 | 符号 | 代码 |&#13;
-| --- | --- | --- |&#13;
-| 求和 | $\sum$ | `\sum` |&#13;
-| 积 | $\prod$ | `\prod` |&#13;
-| | $\coprod$ | `\coprod` |&#13;
-| 积分 | $\int$ | `\int` |&#13;
-| 积分 | $\intop$ | `\intop` |&#13;
-| 积分 | $\smallint$ | `\smallint` |&#13;
-| 二重积分 | $\iint$ | `\iint` |&#13;
-| 三重积分 | $\iiint$ | `\iiint` |&#13;
-| 环路积分 | $\oint$ | `\oint` |&#13;
-| 二重环路积分 | $\oiint$ | `\oiint` |&#13;
-| 三重环路积分 | $\oiiint$ | `\oiiint` |&#13;
-| | $\bigotimes$ | `\bigotimes` |&#13;
-| | $\bigoplus$ | `\bigoplus` |&#13;
-| | $\bigodot$ | `\bigodot` |&#13;
-| | $\biguplus$ | `\biguplus` |&#13;
-| | $\bigvee$ | `\bigvee` |&#13;
-| | $\bigwedge$ | `\bigwedge` |&#13;
-| 交 | $\bigcap$ | `\bigcap` |&#13;
-| 并 | $\bigcup$ | `\bigcup` |&#13;
-| | $\bigsqcup$ | `\bigsqcup` |&#13;
-&#13;
-**普通计算**&#13;
-&#13;
-| 含义 | 符号 | 代码 |&#13;
-| --- | --- | --- |&#13;
-| 加 | + | 本身 |&#13;
-| 减 | - | 本身 |&#13;
-| 除 | $\div$ | `\div` |&#13;
-| 除（斜杠） | / | 本身 |&#13;
-| 叉乘 | $\times$ | `\times` |&#13;
-| 点乘 | $\cdot$ 或 $\cdotp$ 或 $\centerdot$ | `\cdot` 或 `\cdotp` 或 `\centerdot` |&#13;
-| 加减 | $\pm$ | `\pm` 或 `\plusmn` |&#13;
-| 减加 | $\mp$ | `\mp` |&#13;
-&#13;
-&#13;
-等价于 $\Longleftrightarrow$ `\Longleftrightarrow`&#13;
-&#13;
-对立事件 $\overline{A}$ `\overline{A}`&#13;
-&#13;
-大于等于 $\geq$ `\geq`&#13;
-&#13;
-小于等于 $\leq$ `\leq`&#13;
-&#13;
-不等于 $\neq$ `\neq`&#13;
-&#13;
-无穷 $\infty$ `\infty`&#13;
-&#13;
-服从 $\sim$ `\sim`&#13;
-&#13;
-约等于 $\approx$ `\approx`&#13;
-&#13;
-分布律 &#13;
-&#13;
-$$&#13;
-\begin{array}{c|cccc}&#13;
-X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\&#13;
-\hline&#13;
-P &amp; p_1 &amp; p_2 &amp; \cdots &amp; p_n&#13;
-\end{array}&#13;
-$$&#13;
-&#13;
-    $$&#13;
-    \begin{array}{c|cccc}&#13;
-    X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\&#13;
-    \hline&#13;
-    P &amp; p_1 &amp; p_2 &amp; \cdots &amp; p_n&#13;
-    \end{array}&#13;
-    $$&#13;
-&#13;
-联合分布律&#13;
-&#13;
-$$&#13;
-\begin{array}{c|ccc}&#13;
-X \backslash Y &amp; y_1 &amp; y_2 &amp; \cdots &amp; y_j &amp; \cdots \\&#13;
-\hline&#13;
-x_1 &amp; p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1j} &amp; \cdots \\&#13;
-x_2 &amp; p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2j} &amp; \cdots \\&#13;
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
-x_i &amp; p_{31} &amp; p_{32} &amp; \cdots &amp; p_{3j} &amp; \cdots \\&#13;
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
-\end{array}&#13;
-$$&#13;
-&#13;
-    $$&#13;
-    \begin{array}{c|ccc}&#13;
-    X \backslash Y &amp; y_1 &amp; y_2 &amp; \cdots &amp; y_j &amp; \cdots \\&#13;
-    \hline&#13;
-    x_1 &amp; p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1j} &amp; \cdots \\&#13;
-    x_2 &amp; p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2j} &amp; \cdots \\&#13;
-    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
-    x_i &amp; p_{31} &amp; p_{32} &amp; \cdots &amp; p_{3j} &amp; \cdots \\&#13;
-    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
-    \end{array}&#13;
-    $$&#13;
-&#13;
-分段函数&#13;
-&#13;
-$$&#13;
-F(x) = &#13;
-\begin{cases} &#13;
-0 , \space x \le 0 \\&#13;
-Ax^2 , \space0 &lt; x \le 1 \\&#13;
-1 , \space x &gt; 1&#13;
-\end{cases}&#13;
-$$&#13;
-&#13;
-    $$&#13;
-    F(x) = &#13;
-    \begin{cases} &#13;
-    0 , \space x \le 0 \\&#13;
-    Ax^2 , \space0 &lt; x \le 1 \\&#13;
-    1 , \space x &gt; 1&#13;
-    \end{cases}&#13;
-    $$&#13;
-&#13;
-$\xrightarrow{over}$&#13;
-&#13;
-    $\xrightarrow{over}$。</description><guid isPermaLink="true">https://interset-wq.github.io/post/46.html</guid><pubDate>Mon, 05 Oct 2026 15:09:07 +0000</pubDate></item><item><title>预备节：面向对象</title><link>https://interset-wq.github.io/post/45.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-# 预备节：面向对象&#13;
-&#13;
-✏️ `本文创建于2025-3-16`&#13;
-&#13;
-要使用tkinter进行GUI设计，就不得不用到**面向对象**的编程思想。</description><guid isPermaLink="true">https://interset-wq.github.io/post/45.html</guid><pubDate>Mon, 05 Oct 2026 15:09:04 +0000</pubDate></item><item><title>scipy</title><link>https://interset-wq.github.io/post/44.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = '算法和数据结构'&#13;
-+++&#13;
-&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
-&#13;
-[:simple-scipy: scipy官方文档](https://scipy.org/)&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/44.html</guid><pubDate>Mon, 05 Oct 2026 15:09:01 +0000</pubDate></item><item><title>pandas</title><link>https://interset-wq.github.io/post/43.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = '数据结构和数据分析'&#13;
-+++&#13;
-&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
-&#13;
-[:simple-pandas: pandas官方文档](https://pandas.pydata.org/docs/)。</description><guid isPermaLink="true">https://interset-wq.github.io/post/43.html</guid><pubDate>Mon, 05 Oct 2026 15:08:59 +0000</pubDate></item><item><title>NumPy</title><link>https://interset-wq.github.io/post/42.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = '科学计算'&#13;
-+++&#13;
-✏️ `本文创建于2025-5-16`&#13;
-&#13;
-[:simple-numpy: NumPy官方文档](https://numpy.org/doc/stable/index.html)&#13;
-&#13;
-## 一 导入&#13;
-&#13;
-    import numpy as np&#13;
-&#13;
-## 二 数组ndarray&#13;
-&#13;
-在NumPy中基本数组类被称为`ndarray`, 它代表一个“N维数组”, 类似于python基本数据类型的列表。</description><guid isPermaLink="true">https://interset-wq.github.io/post/42.html</guid><pubDate>Mon, 05 Oct 2026 15:08:56 +0000</pubDate></item><item><title>matplotlib</title><link>https://interset-wq.github.io/post/41.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = '数据可视化PNG图像'&#13;
-+++&#13;
-✏️ `本文创建于2025-5-16`&#13;
-&#13;
-[matplotlib官方文档](https://matplotlib.org/stable/users/index.html)&#13;
-&#13;
-## 第三方库matplotlib&#13;
-### 折线图plot&#13;
-```py&#13;
-import matplotlib.pyplot as plt&#13;
-squares = [1, 4, 9, 16, 25]&#13;
-fig, ax = plt.subplots()&#13;
-ax.plot(squares) # 绘图&#13;
-plt.show() # 显示图像&#13;
+1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。</description><guid isPermaLink="true">https://interset-wq.github.io/post/62.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>basic-git-command</title><link>https://interset-wq.github.io/post/25.html</link><description>[:simple-git: Git官方文档](https://git-scm.com/doc){ .md-button .md-button--primary }
+[:simple-github: GitHub文档](https://docs.github.com/zh){ .md-button }
+
+[GitCode文档](https://docs.gitcode.com/){ .md-button .md-button--primary }
+[:simple-gitee: Gitee文档](https://gitee.com/all-about-git){ .md-button }
+
+???+ warning
+    创建 repo 时,一定要创建 `README.md` `.gitignore` 和 `LICENSE` 文件,减少不必要的麻烦
+
+`git init` 初始化一个全新的 Git 存储库并开始跟踪现有目录。</description><guid isPermaLink="true">https://interset-wq.github.io/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>First Contributions</title><link>https://interset-wq.github.io/post/26.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+&#13;
+[:simple-github: First Contributions](https://github.com/firstcontributions/first-contributions)&#13;
+&#13;
+## STEP1 Fork other's repo &#13;
+&#13;
+Fork repo [first-contributions](https://github.com/firstcontributions/first-contributions)&#13;
+&#13;
+## STEP2 Clone my repo forked from others&#13;
+&#13;
+```bash&#13;
+$ git clone https://github.com/interset-wq/first-contributions.git&#13;
 ```&#13;
-&#13;
-subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot）。</description><guid isPermaLink="true">https://interset-wq.github.io/post/41.html</guid><pubDate>Mon, 05 Oct 2026 15:08:54 +0000</pubDate></item><item><title>string</title><link>https://interset-wq.github.io/post/39.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = '字符串常量'&#13;
-+++&#13;
-✏️ `本文创建于2025-6-29`&#13;
-&#13;
-[:simple-python: string官方文档](https://docs.python.org/zh-cn/3.13/library/string.html#module-string)&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;abstract&lt;/summary&gt;&#13;
-&#13;
-string模块中的绝大多数方法已成为str数据类型的方法，使用时已没有必要导入string&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-- `string.ascii_lowercase` 小写字母 'abcdefghijklmnopqrstuvwxyz'&#13;
-- `string.ascii_uppercase` 大写字母 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'&#13;
-- `string.ascii_letters` 英文大小写字母 `ascii_lowercase` 和 `ascii_uppercase` 常量的拼连&#13;
-- `string.digits` 阿拉伯数字 '0123456789'&#13;
-- `string.hexdigits` 十六进制字符 '0123456789abcdefABCDEF'&#13;
-- `string.octdigits` 八进制字符 '01234567'&#13;
-- `string.whitespace` 空白字符 其中包括空格、制表、换行、回车、进纸和纵向制表符。</description><guid isPermaLink="true">https://interset-wq.github.io/post/39.html</guid><pubDate>Mon, 05 Oct 2026 15:08:26 +0000</pubDate></item><item><title>Revit 天正插件TR</title><link>https://interset-wq.github.io/post/38.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-6-24`&#13;
-&#13;
-## 天正建筑 选项卡&#13;
-&#13;
-这个选项卡下的功能可以替代revit用于基本建筑建模的所有功能，是天正插件的核心内容。</description><guid isPermaLink="true">https://interset-wq.github.io/post/38.html</guid><pubDate>Mon, 05 Oct 2026 15:08:22 +0000</pubDate></item><item><title>Revit 操作技巧</title><link>https://interset-wq.github.io/post/37.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-5-10`&#13;
-&#13;
-## 一、常用命令&#13;
-&#13;
-- `RP` 放置参考平面&#13;
-- `HH` 隐藏&#13;
-- `HI` 隔离显示，只显示选中的图元&#13;
-- `HR` 全显示，取消隐藏&#13;
-- `DI` 尺寸标注&#13;
-- `EL` 高程标注&#13;
-- `LL` 绘制标高&#13;
-- `LI` 放置线&#13;
-- `TR` 修剪&#13;
-- `SL` 打断&#13;
-- `DL` 详图线&#13;
-&#13;
-## 二、绘制轴网&#13;
-&#13;
-参考这位大佬是视频：&#13;
-&#13;
-&lt;iframe src='//player.bilibili.com/player.html?isOutside=true&amp;aid=114846536306689&amp;bvid=BV14FuNzcEeS&amp;cid=31019960957&amp;p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'&gt;&lt;/iframe&gt;&#13;
-&#13;
-针对不同情况，有以下两种方式快速绘制：&#13;
-&#13;
-### 2.1 复制CO&#13;
-&#13;
-如果没有连续相同间距的轴线时，直接使用 `CO` 复制命令，并且勾选 `多个` 复选框。</description><guid isPermaLink="true">https://interset-wq.github.io/post/37.html</guid><pubDate>Mon, 05 Oct 2026 15:08:19 +0000</pubDate></item><item><title>Revit</title><link>https://interset-wq.github.io/post/36.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-5-10`&#13;
-&#13;
-&lt;!-- ???+ quote &#13;
-    本文提供PDF下载, 点击标题旁边的 📥 图标下载本文PDF --&gt;&#13;
-&#13;
-## 简介&#13;
-&#13;
-族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等&#13;
-&#13;
-项目样板: 相当于模板文件&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;warning&lt;/summary&gt;&#13;
-&#13;
-如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 无CAD图纸,根据PDF直接使用revit绘制图形的步骤&#13;
-&#13;
-1. 在revit立面视图绘制标高&#13;
-    - 根据revit立面视图自带的两个标高绘制&#13;
-    - 设置这两个默认标高的左右标记同时可见&#13;
-    - 将 `上标头` 的标高设置为PDF图纸中的大小,不必修改标高别名 `标高2`&#13;
-    - 使用 ++ctrl+c++ 复制 `上标头`&#13;
-    - 使用 ++ctrl+v++ 粘贴,放置, ++esc++&#13;
-    - 修改标高值&#13;
-    - 重复上述步骤&#13;
-    - 根据图纸修改标高的别名&#13;
-    - 由于使用了复制粘贴,revit不会将粘贴的标高显示在 `项目浏览器` 的 `结构平面` 中,需要手动调整&#13;
-&#13;
-        ![constract.png](https://s2.loli.net/2025/05/15/dgb48Qr2Ik3GtDZ.png)&#13;
-&#13;
-        按图示操作, 点击 `结构平面`, revit将弹出 `新建结构平面` 对话框,选取需要的标高(一般是全选), 点击 `确定`&#13;
-&#13;
-2. 绘制轴网(在CAD中也称为定位轴线)&#13;
-    - 随便绘制一根轴线(此处以横向轴线为例)&#13;
-    - 设置这根轴线的左右标记同时可见,修改标记的内容,绘制时按照数字和字母顺序绘制,以使用revit的某人标记&#13;
-    - 使用 ++ctrl+c++ 复制这根轴线&#13;
-    - 使用 ++ctrl+v++ 粘贴&#13;
-    - 键盘输入距离&#13;
-    - 键盘 ++esc++ 退出, 使用 ++ctrl+c++ 复制这根刚刚放置的轴线&#13;
-    - 重复上述步骤&#13;
-    - 纵向轴线画法相同&#13;
-    - 将轴网放置在四个观测记号的中央&#13;
-&#13;
-## 第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图&#13;
-&#13;
-使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 `.dwg`. 采用图形上面的图名作为文件名, 以便后续使用.&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;tip&lt;/summary&gt;&#13;
-&#13;
-实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;操作步骤&lt;/summary&gt;&#13;
-&#13;
-1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.&#13;
-2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.&#13;
-&#13;
-    ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)&#13;
-&#13;
-    ???+ warning&#13;
-        选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.&#13;
-&#13;
-    ???+ tip 'FILETAB选项卡'&#13;
-        `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.&#13;
-&#13;
-        ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;如何打开AutoCAD的左右两侧的绘图和修改工具栏&lt;/summary&gt;&#13;
-&#13;
-step1 显示菜单栏&#13;
-&#13;
-![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)&#13;
-&#13;
-step2 打开菜单栏的 `工具` 选项卡&#13;
-&#13;
-![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-## 第二步: 使用Revit创建一个结构模型&#13;
-&#13;
-新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)&#13;
-&#13;
-![newproj.png](https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png)&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;如何打开项目选择器和属性&lt;/summary&gt;&#13;
-&#13;
-![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 2.1 绘制标高&#13;
-&#13;
-1. 随便选取一个立面,绘制标高,此处以'东'为例:&#13;
-&#13;
-    ![east.png](https://s2.loli.net/2025/05/11/VgCML3s1NQYex5H.png)&#13;
-&#13;
-2. 绘制标高&#13;
-&#13;
-    ![height1.png](https://s2.loli.net/2025/05/11/Smn6aLI5XYCc8Zq.png)&#13;
-&#13;
-3. 随意绘制几个标高,参考结构图将标高的数值改为结构图中的数值,并将'标高1'之类的默认名称改为结构图中的'一层'等名称,更改名称时会弹出提示框'是否希望重命名相应视图',选择'是'即可.&#13;
-&#13;
-    ![height.png](https://s2.loli.net/2025/05/11/enPMiSXwj7UfIuh.png)&#13;
-&#13;
-    ![alert.png](https://s2.loli.net/2025/05/11/HG7nX1KARaJf2su.png)&#13;
-&#13;
-4. 默认标高标注只显示右侧的,为了便于观察,往往需要同时显示左右两侧的标高标注. 在 `属性` 中点击 `编辑类型`, 勾选图示内容.&#13;
-&#13;
-    ![edit.png](https://s2.loli.net/2025/05/11/tyiwcDMS1LIx2sX.png)&#13;
-&#13;
-至此, 标高绘制完成.&#13;
-&#13;
-### 2.2 绘制轴网&#13;
-&#13;
-1. 将Revit视图切换到任意结构平面视图,将CAD图形导入Revit,注意:结构平面视图应与CAD图形一一对应,依次导入.&#13;
-&#13;
-    ![input.png](https://s2.loli.net/2025/05/11/qAjM1oTCSu385Gi.png)&#13;
-&#13;
-2. 绘制轴网,并移动方向标记使其靠近CAD图形,并使CAD图形大致位于四个方向标记的中间位置处.&#13;
-    &#13;
-    ![net.png](https://s2.loli.net/2025/05/11/zr4y7UVBoIP1pvK.png)&#13;
-&#13;
-    ![move.png](https://s2.loli.net/2025/05/11/6z8g2ojPf4tsump.png)&#13;
-&#13;
-3. 修改轴网的数字或字母编号,使其与定位轴线的编号一致.类似于标高标记,轴网标记也需要同时显示左右两侧的编号,二者操作类似.但是,轴网的轴线往往与定位轴线相重合,因此可以 `设置轴线中段为无` 将轴网的轴线隐藏,以免线条太多干扰视线.注意:轴线只需要在任意一个结构平面中绘制一次即可,因此绘制时建议选择线条较少的结构平面.&#13;
-&#13;
-    ![line.png](https://s2.loli.net/2025/05/11/Mb9LRvWnEtkdCih.png)&#13;
-&#13;
-4. 检查其他结构平面的定位轴线与轴网是否一致,如果不一致,请回到第一步重新拆分平面图.&#13;
-&#13;
-至此, 轴网绘制完成.&#13;
-&#13;
-### 2.3 在基础平面图中绘制垫层&#13;
-&#13;
-1. 通过结构图读出垫层的厚度和尺寸.&#13;
-&#13;
-    ![board0.png](https://s2.loli.net/2025/05/11/ZEeS51XKvptuQG8.png)&#13;
-&#13;
-2. 绘制垫层,把垫层视作楼板&#13;
-&#13;
-    ![board.png](https://s2.loli.net/2025/05/11/hjkfOSe7aHgP1Fy.png)&#13;
-&#13;
-    Revit会直接让我们使用系统族中的楼板, 往往我们需要修改其尺寸.为了保护系统族不会被篡改,往往复制系统族,重命名,然后修改尺寸.&#13;
-&#13;
-    ![board2.png](https://s2.loli.net/2025/05/11/PLwK2DyHb7fdtWh.png)&#13;
-&#13;
-    ![edit_board.png](https://s2.loli.net/2025/05/11/7c1DGpd9jgBiIC8.png)&#13;
-&#13;
-    ![diy_board.png](https://s2.loli.net/2025/05/11/IELi475VoahQqcP.png)&#13;
-&#13;
-3. 选择合适的方式绘制垫层, 绘制结束之后打对钩确认.&#13;
-&#13;
-    ![draw_board.png](https://s2.loli.net/2025/05/11/qOwlXsHu8FYetkW.png)&#13;
-&#13;
-至此, 垫层绘制完成.&#13;
-&#13;
-关闭此文件 `结构模型` `.rvt`&#13;
-&#13;
-### 2.4 新建条形基础族和放置条形基础&#13;
-&#13;
-1. 新建一个族&#13;
-&#13;
-    ![新建族.png](https://s2.loli.net/2025/05/13/rGKgIV64FtCvxl2.png)&#13;
-&#13;
-2. 通过 `放样` (面动成体) 绘制条形基础&#13;
-&#13;
-    ![放样.png](https://s2.loli.net/2025/05/13/TFAfjipRtQ6K9yE.png)&#13;
-&#13;
-    由于新建组时选取的模型 `基于线的公制常规模型` 自带线,所以通过`拾取路径`来绘制截面,绘制完成之后打对钩&#13;
-&#13;
-    ![拾取路径.png](https://s2.loli.net/2025/05/13/ezhRc4tZsAKXjP8.png)&#13;
-&#13;
-    - 识图,绘制基础轮廓,操作类似于AutoCAD&#13;
-&#13;
-        ![基础.png](https://s2.loli.net/2025/05/13/AKzEHoVlg6NnpTS.png)&#13;
-&#13;
-    - 由于图中的条形基础是对称结构,`编辑轮廓`时可以随便选取一个面,绘制结束之后打对钩&#13;
-  &#13;
-        ![编辑轮廓.png](https://s2.loli.net/2025/05/13/EZYV9jUcofAgysk.png)&#13;
-&#13;
-3. 至此,条形基础绘制结束.将这个族命名为 `条形基础` 保存 `.rfa`, 并关闭此文件&#13;
-4. 再次打开 `结构模型.rvt`&#13;
-5. 导入 `条形基础.rfa` &#13;
-&#13;
-    ![载入.png](https://s2.loli.net/2025/05/13/sIEgGkDJtv5VqA1.png)&#13;
-&#13;
-    ???+ warning&#13;
-        进行此操作之后,revit并不会有任何反应,但是族文件已经导入到此项目中了.&#13;
-&#13;
-6. 放置条形基础(`基于线的公制常规模型` 属于 `构建`)&#13;
-&#13;
-    ![放置.png](https://s2.loli.net/2025/05/13/deEVSpTQZYDMCkc.png)&#13;
-&#13;
-    - 选择 `放置在工作平面上` , 根据图纸标高放置在垫层上&#13;
-&#13;
-        ![放置2.png](https://s2.loli.net/2025/05/13/nxdlCWhoyDtM3Fw.png)&#13;
-&#13;
-    - 通过快捷键 `hh` `临时隐藏/隔离` 2.3 步骤绘制的垫层,放置其遮挡CAD底图的线条&#13;
-    - 放置条形基础&#13;
-&#13;
-        ???+ note&#13;
-            放置时往往不能很好的对齐,因此放置结束之后使用对其命令 `al` 对齐,来调整基础防止的位置,操作类似于CAD&#13;
-&#13;
-            ![对齐.png](https://s2.loli.net/2025/05/13/lkHug6dGfQAB1wN.png)&#13;
-&#13;
-            放置时也不好把握基础的具体长度,也需要自行调整,操作类似于CAD&#13;
-&#13;
-7. 使用 `hr` 命令取消 `hh` 的隐藏功能,使垫层可见&#13;
-&#13;
-    ???+ note&#13;
-        如果在三维视图中查看感觉显示效果不好,可以在revit窗口左下角切换其他的 `视觉样式`&#13;
-&#13;
-        ![视觉样式.png](https://s2.loli.net/2025/05/13/879fDmpQhSXzV12.png)&#13;
-&#13;
-8. 切换到立面图查看,检查&#13;
-&#13;
-至此,放置基础完成.&#13;
-&#13;
-### 2.5 放置基础到一层的结构柱&#13;
 &#13;
 &lt;details&gt;&#13;
 &lt;summary&gt;note&lt;/summary&gt;&#13;
 &#13;
-使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.&#13;
+此处使用的是HTTPS,也可以使用SSH&#13;
 &#13;
 &lt;/details&gt;&#13;
 &#13;
-1. 由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.&#13;
+## STEP3 创建一个新分支&#13;
 &#13;
-    将底图变为可选状态,点击revit右下角的 `选择锁定图元` 使其小图标右上角的×消失.&#13;
+1. 切换目录到 clone 到本地的 repo 的目录中&#13;
+2. 使用 `git switch` 命令新建一个代码分支&#13;
 &#13;
-    ![link.png](https://s2.loli.net/2025/05/14/vFpbnrgm2u8IthA.png)&#13;
+    ```bash&#13;
+    $ git switch -c &lt;新分支的名称&gt;&#13;
+    ```&#13;
 &#13;
-    选中底图,将其设置为 `前景`.&#13;
+    此处创建一个add-myname分支:&#13;
 &#13;
-    ![foreground.png](https://s2.loli.net/2025/05/14/JnhcRmxKbet9rVj.png)&#13;
+    ```bash&#13;
+    $ git switch -c add-interset-wq&#13;
+    ```&#13;
 &#13;
-    再次点击revit右下角的 `选择锁定图元`,禁止选中底图&#13;
+## STEP4 修改代码, Commint 修改&#13;
 &#13;
-2. 观察结构图中的柱结构, 如果同一个名字的柱有多种不同的配筋,应该加以区分.&#13;
+1. 修改 `Contributors.md` 中的内容&#13;
+2. 检查状态(可选, 输出信息中,被修改的文件的文件名会被标红)&#13;
 &#13;
-    ![domain.png](https://s2.loli.net/2025/05/14/Ym3P5wz7XuevRUj.png)&#13;
+    ```bash&#13;
+    $ git status&#13;
+    ```&#13;
 &#13;
-3. 在revit中放置柱,并设置柱是向上延伸(高度)还是向下延伸(深度),以及要延伸到哪一层.&#13;
+3. 添加改动&#13;
 &#13;
-    ![domain2.png](https://s2.loli.net/2025/05/14/DchtX6prVnSslg3.png)&#13;
+    ```bash&#13;
+    $ git add Contributors.md&#13;
+    ```&#13;
 &#13;
-4. 默认柱直接防止在了基础底图的标高平面上,而柱应该防止在条形基础之上,因此需要设置柱的底部偏移.&#13;
+4. 检查状态(可选,输出信息中,刚才标红的文件名现在标绿)&#13;
+5. 提交修改&#13;
 &#13;
-    ![domain3.png](https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png)&#13;
+    ```bash&#13;
+    $ git commit -m 'Add interset-wq to Contributors list'&#13;
+    ```&#13;
+&#13;
+6. Push 到 GitHub repo&#13;
+&#13;
+    ```bash&#13;
+    $ git push origin &lt;分支的名称&gt;&#13;
+    ```&#13;
+&#13;
+    此处推送的分支为前面新建的分支add-interset-wq&#13;
+    ```bash&#13;
+    $ git push origin add-interset-wq&#13;
+    ```&#13;
+&#13;
+## STEP5 Pull Request(PR)&#13;
+&#13;
+1. 刚刚从别人那里fork的repo上方出现 `Compare &amp; pull request` 的按钮,点击此按钮&#13;
+2. 点击 `Create pull request` 按钮，正式提交 pull request&#13;
+
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/26.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>快速开始</title><link>https://interset-wq.github.io/post/27.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+&#13;
+[:simple-git: Git官方文档](https://git-scm.com/doc)&#13;
+[:simple-github: GitHub官方文档](https://docs.github.com/zh)&#13;
+&#13;
+## STEP1 在 Git 中设置用户名和邮箱&#13;
+&#13;
+Git 使用用户名将提交与身份关联。</description><guid isPermaLink="true">https://interset-wq.github.io/post/27.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>盒子模型和经典布局</title><link>https://interset-wq.github.io/post/28.html</link><description>✏️ `本文创建于2025-4-2`&#13;
+&#13;
+## 一、盒子模型&#13;
 &#13;
 &lt;details&gt;&#13;
-&lt;summary&gt;tip&lt;/summary&gt;&#13;
+&lt;summary&gt;css长度单位&lt;/summary&gt;&#13;
 &#13;
-改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动&#13;
+CSS 中设置长度，必须加单位，否则样式无效！&#13;
 &#13;
-&lt;/details&gt;&#13;
+- `px` ：像素。</description><guid isPermaLink="true">https://interset-wq.github.io/post/28.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>HTML4和CSS2常用语法</title><link>https://interset-wq.github.io/post/29.html</link><description>✏️ `本文创建于2025-3-24`&#13;
 &#13;
-至此,基础层的柱放置完成.&#13;
+&gt; [!NOTE]&#13;
+&gt; HTML用于设计网页的**结构**，CSS用于控制网页的**表现**，JavaScript用于控制网页的**行为**。</description><guid isPermaLink="true">https://interset-wq.github.io/post/29.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>HTML5和CSS3新特性</title><link>https://interset-wq.github.io/post/30.html</link><description>✏️ `本文创建于2025-4-4`&#13;
 &#13;
-### 2.6 绘制基础和一层之间的的梁/板&#13;
+## 一、HTML5&#13;
 &#13;
-1. 将视图切换到 `一层` 调整 `视图范围`, 防止基础层线条对一层的干扰&#13;
+[:octicons-question-24:whatwg和W3C官方文档](https://html.spec.whatwg.org/multipage/index.html)&#13;
+[:simple-mdnwebdocs: MDN权威文档](https://developer.mozilla.org/zh-CN/docs/Web/HTML)&#13;
 &#13;
-    ![range.png](https://s2.loli.net/2025/05/14/Mpk5vVPqYnjDRgQ.png)&#13;
+### 1.1 HTML5简介&#13;
 &#13;
-    ???+ note&#13;
-        由于视图切换到了 `一层` , 主要范围的 &#13;
-        &#13;
-        - `顶` 应该设置为 `标高之上(二层)`, 偏移量设置为 `0`,偏移量的单位是毫米&#13;
-        - `剖切面` 的 `偏移量` 的值应该设置为小于二层标高的数值&#13;
-        - `底` 应该设置为 `标高之上(一层)`, 偏移量设置为小于一层标高的一个数值&#13;
+:simple-html5:HTML5 在狭义上是指新一代的 HTML 标准，在广义上是指：整个前端。</description><guid isPermaLink="true">https://interset-wq.github.io/post/30.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Web APIs</title><link>https://interset-wq.github.io/post/33.html</link><description>✏️ `本文创建于2025-4-18`&#13;
 &#13;
-        视图深度的 `标高` 可以直接采用主要范围的 `底` 的设置&#13;
-&#13;
-2. 放置梁,可以直接使用柱的中心点作为梁的起止点,然后使用 `al` 对齐命令对齐即可. `结构` - `梁`&#13;
-&#13;
-    ???+ note&#13;
-        revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,都会被自动截断,这也符合实际情况,因此放置梁时不必在意梁和柱的重合,因此可以直接使用柱的中心点作为梁的起止点.&#13;
-&#13;
-        revit放置构件时,不必在意配筋情况,只要注意宽高即可.但是,配筋情况不同的同名构件,要用不同的名称命名.&#13;
-&#13;
-3. 放置板(这个板实际上是基础层的天花板) `结构` - `楼板` - `楼板:结构` - `边界线` - `矩形`, 操作结束之后打对钩&#13;
-4. revit默认板会截断梁和柱,这明显与实际不符,因此需要改变二者的截断关系.&#13;
-&#13;
-    在三维视图中选中板 - `连接` - `切换链接顺序` - 勾选 `多个开关` - 再次选中板 - 使用鼠标左键拖动选择&#13;
-&#13;
-    ![board.png](https://s2.loli.net/2025/05/14/bTonxU4P9LYdfVR.png)&#13;
-&#13;
-    ![mul.png](https://s2.loli.net/2025/05/14/nIEqoGCMpuOQsJT.png)&#13;
-&#13;
-    ???+ tip&#13;
-        如果板无法选中,请开启revit右下角的 `按面选择图元`&#13;
-&#13;
-        ![tip.png](https://s2.loli.net/2025/05/14/YLQf5owJrk4UquN.png)&#13;
-&#13;
-5. 切换到立面图检查&#13;
-&#13;
-至此,梁和板放置完毕.&#13;
-&#13;
-基础层绘制完毕.&#13;
-&#13;
-### 2.7 放置一层到二层的柱(操作同 2.5)&#13;
-&#13;
-### 2.8 放置楼梯的柱和梁&#13;
-&#13;
-1. 分析结构图,计算柱高和梁的偏移高度&#13;
-&#13;
-    ![floor-info.png](https://s2.loli.net/2025/05/15/2E9lZIpgTzJDW1b.png)&#13;
-&#13;
-2. 切换到一层的平面视图, `结构` - `柱`, 直接设置柱高来放置柱&#13;
-&#13;
-    ![floor-domain.png](https://s2.loli.net/2025/05/15/A4fFoVnU3QYyrme.png)&#13;
-&#13;
-3. 计算梯梁距离一层的高度,设置 `Z轴偏移值`,再放置梁,可以使用 `al` 对齐命令辅助对齐.&#13;
-&#13;
-    ![floor-x.png](https://s2.loli.net/2025/05/15/t1RTPxIWsf6vDLw.png)&#13;
-&#13;
-    ???+ warning&#13;
-        必须先设置偏移值,再放置梁.&#13;
-&#13;
-4. 通过 `注释` 检查梁的标高和柱的标高&#13;
-&#13;
-    ![height.png](https://s2.loli.net/2025/05/15/cw7tGlBrb5mMON3.png)&#13;
-&#13;
-至此,楼梯的柱和梁放置完毕.&#13;
-&#13;
-### 2.9 放置二层的梁和板&#13;
-&#13;
-由于二层的梁比较多,因此可以使用 `hh` 隐藏二层平面布置图,导入二层梁平面配筋图.以此图为基准绘制梁和板&#13;
-&#13;
-### 2.10 放置二层到屋顶的柱&#13;
-&#13;
-### 2.11 放置屋顶的梁&#13;
-&#13;
-通过观察发现,屋顶的梁的布置和一层梁的布置大致相同,因此可以直接复制一层的梁,粘贴&#13;
-&#13;
-1. 使用鼠标在三维视图中框选,使用 `过滤器` 选中梁&#13;
-&#13;
-    ![copy.png](https://s2.loli.net/2025/05/16/ITawebnRE2L6GuY.png)&#13;
-&#13;
-2. 点击 `复制`, 再点击 `粘贴` - `与选定的标高对齐`&#13;
-&#13;
-    ![copy2.png](https://s2.loli.net/2025/05/16/I3hMTVkcARC4xuv.png)&#13;
-&#13;
-3. 在弹出的对话框中选择 `屋顶` - `确定`&#13;
-&#13;
-    ![copy3.png](https://s2.loli.net/2025/05/16/znpaxqkUrGCW9ub.png)&#13;
-&#13;
-4. 由于屋顶的梁和一层的梁并不相同,因此需要将复制的梁更换为屋顶的梁&#13;
-    - 新建一个梁, ++esc++&#13;
-    - 选中需要替换的梁, 切换为刚刚新建的梁&#13;
-&#13;
-至此,屋顶的梁放置完毕.&#13;
-&#13;
-### 2.12 绘制屋顶的板&#13;
-&#13;
-结构模型绘制完成.&#13;
-&#13;
-## 第三步: 使用Revit创建一个建筑模型&#13;
-&#13;
-新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)&#13;
-&#13;
-### 2.1 绘制标高 导入CAD图形 绘制轴网&#13;
-&#13;
-### 3.2 绘制一层建筑外墙&#13;
-&#13;
-如果墙不是承重构件(剪力墙),则使用 `墙:建筑`,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)&#13;
-&#13;
-![3-1.png](https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png)&#13;
-&#13;
-### 3.3 绘制一层内墙&#13;
-&#13;
-墙面有装饰需要参考 **建筑材料表** 或 **工程做法表**&#13;
-&#13;
-墙由 **主体结构** 和 **装饰层** 组成, 装饰层又由 **踢脚线墙裙线** 和 **墙面** 组层.&#13;
+## 一、Web APIs 简介&#13;
 &#13;
 &lt;details&gt;&#13;
-&lt;summary&gt;warning&lt;/summary&gt;&#13;
+&lt;summary&gt;变量声明&lt;/summary&gt;&#13;
 &#13;
-**踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-以下以分割车库和卫生间的墙面为例说明:&#13;
-&#13;
-分析 **建筑材料表**:&#13;
-&#13;
-![3-2.png](https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png)&#13;
-&#13;
-![3-3.png](https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png)&#13;
-&#13;
-![3-4.png](https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png)&#13;
-&#13;
-这面墙的结构大致如下图所示(图示的墙结构中的 `墙` 指的是这面墙的 `主体结构` 和 `墙面`).&#13;
-&#13;
-![3-5.png](https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png)&#13;
-&#13;
-可将这面墙分成三段建模(从下往上):&#13;
-&#13;
-1. 第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖&#13;
-&#13;
-    ???+ info '第一段的建模'&#13;
-        新建一个 `墙:建筑`,对其进行修改,revit提供的材料无法满足需要时需要 `新建材质`&#13;
-&#13;
-        ![3-6.png](https://s2.loli.net/2025/05/22/dINtDvkZOUY451e.png)&#13;
-&#13;
-        参考 **建筑材料表** 计算并建模.&#13;
-&#13;
-        ![3-7.png](https://s2.loli.net/2025/05/22/Q85CNrnmdkG1thx.png)&#13;
-&#13;
-2. 第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖&#13;
-3. 第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖&#13;
-&#13;
-使用 `叠层墙` 将以上三部分合成为一面墙.&#13;
-&#13;
-在左侧 `属性` 中将墙切换到 `叠层墙`, 新建一个叠层墙,编辑类型&#13;
-&#13;
-将以上三部分添加到这个叠层墙中,根据实际情况建模&#13;
-&#13;
-![3-8.png](https://s2.loli.net/2025/05/22/UTBk4v2iNPIewRm.png)&#13;
-&#13;
-绘制时,根据实际情况选择绘制墙时的定位线&#13;
-&#13;
-![3-9.png](https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png)&#13;
-&#13;
-绘制楼梯间和卫生间的墙的操作同上.&#13;
-&#13;
-### 3.4 放置门&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;warning&lt;/summary&gt;&#13;
-&#13;
-外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-先将CAD底图切换为 `前景`,根据建筑图CAD图纸确定门的尺寸.注意将 `类型标记` 修改为图纸上的标记.&#13;
-&#13;
-![3-10.png](https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png)&#13;
-&#13;
-![3-11.png](https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png)&#13;
-&#13;
-### 3.5 放置窗&#13;
-&#13;
-和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 `默认窗台高度`&#13;
-&#13;
-![3-14.png](https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png)&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;warning&lt;/summary&gt;&#13;
-&#13;
-放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-### 3.6 绘制外墙装饰层(内侧)&#13;
-&#13;
-思路:把装饰层看做是一面墙,并紧贴外墙&#13;
-&#13;
-![3-15.png](https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png)&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/36.html</guid><pubDate>Mon, 05 Oct 2026 15:08:16 +0000</pubDate></item><item><title>使用 Excel 处理角度</title><link>https://interset-wq.github.io/post/35.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-5-28`&#13;
-&#13;
-众所周知电脑并不能直接对角度制表示的角度进行计算, 使用计算机对角度进行计算时,往往要先化角度制为弧度制.&#13;
-&#13;
-Excel 可以通过一些公式进行角度制角度的计算, 思路是 {==先将角度制转换为弧度制, 然后再将弧度制转换成角度制==}, 为了实现这个运算,往往需要用到以下公式:&#13;
-&#13;
-- `PI()` 常数 π&#13;
-- `INT()` 取整函数,对传入的数值进行取整,舍弃小数位&#13;
-- `RADIANS()` 传入数值,单位默认为°, 将角度制转换为弧度制&#13;
-- `DEGREES()` 传入数值,单位默认为rad, 将弧度制转换成角度制&#13;
-- `ROUND(num,num-digits)` 四舍五入函数,传入数值,和需要保留的位数,对数值进行四舍五入&#13;
-&#13;
-有些时候我们并不喜欢使用小数表示角度制角度,例如 $45.5 \degree$, 而是使用度分秒表示角度, 如 $45 \degree 30' 00''$, 在由于角度制角度是60进制,因此计算显得非常麻烦.&#13;
-&#13;
-![e.jpg](https://s2.loli.net/2025/05/28/DboYRuHE1QOpJha.jpg)&#13;
-&#13;
-使用度分秒为单位时,应分别将度分秒写在不同的单元格中(如上表所示).以下通过`ROW 3`进行说明&#13;
-&#13;
-- `D3` 单元格 通过公式 `=RADIANS(A3+B3/60+C3/3600)` 将 $180 \degree 45' 12''$ 转化为 3.154740801 rad&#13;
-- `E3` 单元格 通过公式 `=DEGREES(D3)` 将 3.154740801 rad 转化为 $180.7533333 \degree$, 也可以通过公式 `=A3+B3/60+C3/3600` 将 $180 \degree 45' 12''$ 转换为 $180.7533333 \degree$&#13;
-- `F3` 单元格 通过公式 `=INT(E3)` 对以度为单位的角度取整,从而获取以度分秒为单位时的度数&#13;
-- `G3` 单元格 通过公式 `=INT((E3-F3)*60)` 先获取以度为单位角度的小数位,再乘以60获得有小数位分数,再取整获得以度分秒为单位时的分数&#13;
-- `H3` 单元格 通过公式 `=(E3-F3-G3/60)*3600` 依次减去以度分秒为单位的度数,和化为度数的分数,得到剩余的度数,再乘以3600,将度数化为秒数,从而得到以度分秒为单位的秒数&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;tip&lt;/summary&gt;&#13;
-&#13;
-可以将度分秒统一转换为秒进行计算.&#13;
-&#13;
-- 度数 = INT(总秒数/3600)&#13;
-- 分数 = INT(总秒数 - 度数*60)&#13;
-- 秒数 = 总秒数 - 3600*度数 - 60*分数&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;tip&lt;/summary&gt;&#13;
-&#13;
-对精度有要求时,应该使用 `ROUND()` 函数来控制精度.&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;warning&lt;/summary&gt;&#13;
-&#13;
-计算时可能会出现精度问题,例如 `G6` 和 `H6` 单元格 就出现了精度问题.&#13;
-&#13;
-&lt;/details&gt;&#13;
-&#13;
-&#13;
-&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/35.html</guid><pubDate>Mon, 05 Oct 2026 15:08:13 +0000</pubDate></item><item><title>AutoCAD</title><link>https://interset-wq.github.io/post/34.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-5-31`&#13;
+常用 `const` 和 `let` 关键字进行变量声明，在两者都可以使用的情况下，优先使用 `const` 进行变量声明。</description><guid isPermaLink="true">https://interset-wq.github.io/post/33.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>AutoCAD</title><link>https://interset-wq.github.io/post/34.html</link><description>✏️ `本文创建于2025-5-31`&#13;
 &#13;
 &lt;details&gt;&#13;
 &lt;summary&gt;abstract&lt;/summary&gt;&#13;
@@ -6135,458 +5540,577 @@ AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和
 &#13;
 ## 十三、脚本 `SCRIPT`&#13;
 &#13;
-通过 `.scr` 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.。</description><guid isPermaLink="true">https://interset-wq.github.io/post/34.html</guid><pubDate>Mon, 05 Oct 2026 15:08:10 +0000</pubDate></item><item><title>Web APIs</title><link>https://interset-wq.github.io/post/33.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = 'JavaScript进阶语法'&#13;
-+++&#13;
-✏️ `本文创建于2025-4-18`&#13;
+通过 `.scr` 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.。</description><guid isPermaLink="true">https://interset-wq.github.io/post/34.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>使用 Excel 处理角度</title><link>https://interset-wq.github.io/post/35.html</link><description>✏️ `本文创建于2025-5-28`&#13;
 &#13;
-## 一、Web APIs 简介&#13;
+众所周知电脑并不能直接对角度制表示的角度进行计算, 使用计算机对角度进行计算时,往往要先化角度制为弧度制.&#13;
 &#13;
-&lt;details&gt;&#13;
-&lt;summary&gt;变量声明&lt;/summary&gt;&#13;
+Excel 可以通过一些公式进行角度制角度的计算, 思路是 {==先将角度制转换为弧度制, 然后再将弧度制转换成角度制==}, 为了实现这个运算,往往需要用到以下公式:&#13;
 &#13;
-常用 `const` 和 `let` 关键字进行变量声明，在两者都可以使用的情况下，优先使用 `const` 进行变量声明。</description><guid isPermaLink="true">https://interset-wq.github.io/post/33.html</guid><pubDate>Mon, 05 Oct 2026 15:08:08 +0000</pubDate></item><item><title>HTML5和CSS3新特性</title><link>https://interset-wq.github.io/post/30.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-4-4`&#13;
+- `PI()` 常数 π&#13;
+- `INT()` 取整函数,对传入的数值进行取整,舍弃小数位&#13;
+- `RADIANS()` 传入数值,单位默认为°, 将角度制转换为弧度制&#13;
+- `DEGREES()` 传入数值,单位默认为rad, 将弧度制转换成角度制&#13;
+- `ROUND(num,num-digits)` 四舍五入函数,传入数值,和需要保留的位数,对数值进行四舍五入&#13;
 &#13;
-## 一、HTML5&#13;
+有些时候我们并不喜欢使用小数表示角度制角度,例如 $45.5 \degree$, 而是使用度分秒表示角度, 如 $45 \degree 30' 00''$, 在由于角度制角度是60进制,因此计算显得非常麻烦.&#13;
 &#13;
-[:octicons-question-24:whatwg和W3C官方文档](https://html.spec.whatwg.org/multipage/index.html)&#13;
-[:simple-mdnwebdocs: MDN权威文档](https://developer.mozilla.org/zh-CN/docs/Web/HTML)&#13;
+![e.jpg](https://s2.loli.net/2025/05/28/DboYRuHE1QOpJha.jpg)&#13;
 &#13;
-### 1.1 HTML5简介&#13;
+使用度分秒为单位时,应分别将度分秒写在不同的单元格中(如上表所示).以下通过`ROW 3`进行说明&#13;
 &#13;
-:simple-html5:HTML5 在狭义上是指新一代的 HTML 标准，在广义上是指：整个前端。</description><guid isPermaLink="true">https://interset-wq.github.io/post/30.html</guid><pubDate>Mon, 05 Oct 2026 15:07:58 +0000</pubDate></item><item><title>HTML4和CSS2常用语法</title><link>https://interset-wq.github.io/post/29.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = '为HTML5和CSS3打下基础'&#13;
-+++&#13;
-✏️ `本文创建于2025-3-24`&#13;
-&#13;
-&gt; [!NOTE]&#13;
-&gt; HTML用于设计网页的**结构**，CSS用于控制网页的**表现**，JavaScript用于控制网页的**行为**。</description><guid isPermaLink="true">https://interset-wq.github.io/post/29.html</guid><pubDate>Mon, 05 Oct 2026 15:07:56 +0000</pubDate></item><item><title>盒子模型和经典布局</title><link>https://interset-wq.github.io/post/28.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-description = '传统网页布局法'&#13;
-+++&#13;
-✏️ `本文创建于2025-4-2`&#13;
-&#13;
-## 一、盒子模型&#13;
+- `D3` 单元格 通过公式 `=RADIANS(A3+B3/60+C3/3600)` 将 $180 \degree 45' 12''$ 转化为 3.154740801 rad&#13;
+- `E3` 单元格 通过公式 `=DEGREES(D3)` 将 3.154740801 rad 转化为 $180.7533333 \degree$, 也可以通过公式 `=A3+B3/60+C3/3600` 将 $180 \degree 45' 12''$ 转换为 $180.7533333 \degree$&#13;
+- `F3` 单元格 通过公式 `=INT(E3)` 对以度为单位的角度取整,从而获取以度分秒为单位时的度数&#13;
+- `G3` 单元格 通过公式 `=INT((E3-F3)*60)` 先获取以度为单位角度的小数位,再乘以60获得有小数位分数,再取整获得以度分秒为单位时的分数&#13;
+- `H3` 单元格 通过公式 `=(E3-F3-G3/60)*3600` 依次减去以度分秒为单位的度数,和化为度数的分数,得到剩余的度数,再乘以3600,将度数化为秒数,从而得到以度分秒为单位的秒数&#13;
 &#13;
 &lt;details&gt;&#13;
-&lt;summary&gt;css长度单位&lt;/summary&gt;&#13;
+&lt;summary&gt;tip&lt;/summary&gt;&#13;
 &#13;
-CSS 中设置长度，必须加单位，否则样式无效！&#13;
+可以将度分秒统一转换为秒进行计算.&#13;
 &#13;
-- `px` ：像素。</description><guid isPermaLink="true">https://interset-wq.github.io/post/28.html</guid><pubDate>Mon, 05 Oct 2026 15:07:52 +0000</pubDate></item><item><title>快速开始</title><link>https://interset-wq.github.io/post/27.html</link><description>+++&#13;
-date = 2025-07-31T10:18:38+08:00&#13;
-+++&#13;
-✏️ `本文创建于2025-5-16`&#13;
+- 度数 = INT(总秒数/3600)&#13;
+- 分数 = INT(总秒数 - 度数*60)&#13;
+- 秒数 = 总秒数 - 3600*度数 - 60*分数&#13;
 &#13;
-[:simple-git: Git官方文档](https://git-scm.com/doc)&#13;
-[:simple-github: GitHub官方文档](https://docs.github.com/zh)&#13;
+&lt;/details&gt;&#13;
 &#13;
-## STEP1 在 Git 中设置用户名和邮箱&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;tip&lt;/summary&gt;&#13;
 &#13;
-Git 使用用户名将提交与身份关联。</description><guid isPermaLink="true">https://interset-wq.github.io/post/27.html</guid><pubDate>Mon, 05 Oct 2026 15:07:44 +0000</pubDate></item><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
-
-这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>第三篇测试：多标签文章</title><link>https://interset-wq.github.io/post/3.html</link><description>第三篇测试：多标签文章
-
-(触发一次自动构建验证 issues.edited)。</description><guid isPermaLink="true">https://interset-wq.github.io/post/3.html</guid><pubDate>Wed, 30 Sep 2026 01:24:30 +0000</pubDate></item><item><title>GitHub Favored Markdown</title><link>https://interset-wq.github.io/post/108.html</link><description>
-# GitHub Favored Markdown
-
-[GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-
-## 文本样式
-
-- 粗体 `**bold**` 或 `__bold__` ctrl+b
-- 斜体 `*italic*` 或 `_italic_` ctrl+i
-- 粗体和斜体可以嵌套
-- 粗斜体 `***bold italic***`
-- 删除线 `~~strikethrough~~` 或 `~strikethrough~`
-- 下标 `&lt;sub&gt;subscript&lt;/sub&gt;`
-- 上标 `&lt;sup&gt;superscript&lt;/sup&gt;`
-- 下划线 `&lt;ins&gt;underline&lt;/ins&gt;`
-
-## 单行代码
-
-ctrl+e
-
-## 颜色
-
-使用单行代码包裹rgb,hex,hsl颜色
-
-## 链接
-
-ctrl+k
-
-也可以通过这种方法链接到仓库中的其他文件
-
-## 图片
-
-`![]()`
-
-也可以通过这种方法链接仓库中的图片
-
-还可以使用HTML的 `picture` 标签
-
-## 任务列表
-
-``` md
-- [ ] unfinished
-- [x] finished
-```
-
-## emojis
-
-https://github.com/ikatyang/emoji-cheat-sheet/blob/github-actions-auto-update/README.md#github-custom-emoji
-
-## 脚注
-
-``` md
-Here is a simple footnote[^1].
-
-A footnote can also have multiple lines[^2].
-
-[^1]: My reference.
-[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.  This is a second line.
-```
-
-## 告诫
-
-``` md
-&gt; [!NOTE]
-&gt; Useful information that users should know, even when skimming content.
-
-&gt; [!TIP]
-&gt; Helpful advice for doing things better or more easily.
-
-&gt; [!IMPORTANT]
-&gt; Key information users need to know to achieve their goal.
-
-&gt; [!WARNING]
-&gt; Urgent info that needs immediate user attention to avoid problems.
-
-&gt; [!CAUTION]
-&gt; Advises about risks or negative outcomes of certain actions.
-```
-
-&gt; [!NOTE]
-&gt; Useful information that users should know, even when skimming content.
-
-&gt; [!TIP]
-&gt; Helpful advice for doing things better or more easily.
-
-&gt; [!IMPORTANT]
-&gt; Key information users need to know to achieve their goal.
-
-&gt; [!WARNING]
-&gt; Urgent info that needs immediate user attention to avoid problems.
-
-&gt; [!CAUTION]
-&gt; Advises about risks or negative outcomes of certain actions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/108.html</guid><pubDate>Thu, 11 Sep 2025 01:52:35 +0000</pubDate></item><item><title>Note</title><link>https://interset-wq.github.io/post/82.html</link><description># Note
-
-## 使用C语言的7个步骤
-
-1. 定义程序的目标
-2. 设计程序
-3. 编写代码
-4. 编译
-5. 运行程序
-6. 测试和调试程序
-7. 维护和修改程序
-
-## 变量命名规则
-
-- 可以用小写字母、大写字母、数字和下划线（_）来命名。</description><guid isPermaLink="true">https://interset-wq.github.io/post/82.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>datetime 日期和时间</title><link>https://interset-wq.github.io/post/83.html</link><description># datetime 日期和时间
-
-datetime 模块提供了以简单和复杂的方式操作日期和时间的类。</description><guid isPermaLink="true">https://interset-wq.github.io/post/83.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>glob 文件通配符</title><link>https://interset-wq.github.io/post/84.html</link><description># glob 文件通配符
-
-glob 模块提供了一个在目录中使用通配符搜索创建文件列表的函数
-
-## 导入
-
-    import glob
-
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/84.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>数学相关库</title><link>https://interset-wq.github.io/post/85.html</link><description># 数学相关库
-
-## math 浮点数数学运算
-
-## random 随机数
-
-## statistics 统计
-
-statistics 模块计算数值数据的基本统计属性（均值，中位数，方差等）。</description><guid isPermaLink="true">https://interset-wq.github.io/post/85.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>os 操作系统接口</title><link>https://interset-wq.github.io/post/86.html</link><description># os 操作系统接口
-
-提供用于与操作系统交互的函数
-
-## 导入
-
-    import os
-
-一定要使用 import os 而不是 from os import * 。</description><guid isPermaLink="true">https://interset-wq.github.io/post/86.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>shutil 日常文件管理操作</title><link>https://interset-wq.github.io/post/88.html</link><description># shutil 日常文件管理操作
-
-## 导入
-
-    import shutil
-
-## 常用函数
-
-- shutil.copyfile(src, dst) 将src路径处的文件复制到dst路径
-- shutil.move(src, dst) 移动文件。</description><guid isPermaLink="true">https://interset-wq.github.io/post/88.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>sys 和 argparse</title><link>https://interset-wq.github.io/post/89.html</link><description># sys 和 argparse
-
-## sys 
-
-### 命令行参数
-
-一般的工具脚本常常需要处理命令行参数。</description><guid isPermaLink="true">https://interset-wq.github.io/post/89.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>标准库</title><link>https://interset-wq.github.io/post/90.html</link><description># 标准库
-
-- os 操作系统接口
-- shutil 日常文件管理
-- glob 文件通配符
-- sys 命令行参数 错误输出重定向 终止程序
-- argparse 命令行参数
-- re 正则表达式
-- math 浮点数运算
-- random 随机数
-- statistics 统计（均值，中位数，方差等）
-- urllib.request 访问互联网
-- smtplib 发送邮件
-- datatime 日期和时间
-- zlib gzip bz2 lzma zipfile tarfile 文件压缩
-- timeit 性能测试
-- doctest 质量控制
-- unittest 单元测试
-- email 电子邮件
-- json 处理json文件
-- csv 处理csv文件
-- sqlite3 数据库
-- reprlib pprint textwrap local 格式化输出 
-- string 模板
-- struct 二进制数据
-- threading 多线程
-- logging 日志
-- weakref 弱引用
-- array
-- collections
-- bisect
-- heapq
-- demical 十进制浮点数
-- 。</description><guid isPermaLink="true">https://interset-wq.github.io/post/90.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>pathlib 和 os.path文件操作</title><link>https://interset-wq.github.io/post/91.html</link><description># pathlib 和 os.path文件操作
-
-[os.path官方文档](https://docs.python.org/zh-cn/3/library/os.path.html)
-
-[pathlib官方文档](https://docs.python.org/zh-cn/3/library/pathlib.html)
-
-## 第一步：导入pathlib和os.path
-
-    from pathlib import Path
-    import os.path
-
-## 第二步：创建Path对象
-
-Path类：
-
-`Path(*pathsegments)` 传入文件路径或路径片段，路径之间使用逗号分隔，默认值是当前目录
-
-## 第二步：对Path对象进行操作
-
-### 2.1 path对象路径常用属性和方法
-
-- `parts` 将路径拆分，返回路径片段的元组
-- `drive` 返回盘符
-- `parents` 返回祖先路径
-- `parent` 返回父路径，相当于 `os.path.dirname()`函数
-- `name` 返回最末尾的路径（文件名或文件夹名），相当于 `os.path.basename()` 函数
-- `suffix` 返回文件后缀名（文件扩展名），相当于 `os.path.splitext()` 函数
-- `suffixes` 返回文件扩展名列表，主要针对文件后缀名中有多个 `.` 的后缀名
-- `stem` 返回去除后缀名的最末尾路径（不包含后缀名的文件名或文件夹名），相当于 `os.path.splitext()` 函数
-- `as_posix()` 返回使用 `/` 的文件路径，主要用于将windows路径的 `\\` 路径转换为 `/` 路径
-- `is_absolute()` 判断是否是绝对路径，相当于 `os.path.isabs()` 函数
-- `is_relative_to(other)` 判断此路径是否是相对于 other 的路径
-- `joinpath(*pathsegments)` 将传入的路径片段与path对象的路径组和，相当于 `os.path.join()` 函数
-- `with_name(name)` 返回一个新的路径并修改 name。</description><guid isPermaLink="true">https://interset-wq.github.io/post/91.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>turtle</title><link>https://interset-wq.github.io/post/92.html</link><description>[turtle官方文档](https://docs.python.org/zh-cn/3.13/library/turtle.html#module-turtle)
-
-## 导入
-
-    import turtle as t
-
-## 海龟移动和方向
-
-海龟的起始位置是坐标原点, 数学平面直角坐标系. 海龟在图形中用三角箭头表示, 箭头的指向就是海龟前进的方向
-
-- `t.forward(distance)` 函数 传入数字float类型,单位是像素 海龟前进(海龟的初始方向是X轴正方向)
-- `t.backward(distance)` 函数 传入数字float类型,单位是像素 海龟后退
-- `t.left(angle)` 函数 传入数字float类型,单位角度 海龟朝逆时针方向转向
-- `t.right(angle)` 函数 传入数字float类型,单位角度 海龟朝顺时针方向转向
-- `t.color()` 传入表示颜色的字符串，切换爬行路径的颜色
-- `t.width()` 传入整数，调整线宽
-- `t.up()` 抬起画笔，不绘制路径
-- `t.down()` 放下画笔，继续绘制路径
-- `t.home()` 走直线回到起点
-- `t.pos()` 返回当前位置的坐标
-- `t.clearscreen()` 清空足迹，回到起点
-- `t.fillcolor()` 传入颜色，设置填充色
-- `t.begin_fill()` 开始使用填充色
-- `t.end_fill()` 结束使用填充色
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/92.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>bs4 解析网页</title><link>https://interset-wq.github.io/post/76.html</link><description># bs4 解析网页
-
-[bs4官方文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)
-
-## 安装
-
-    pip install beautifulsoup4
-
-## 第一步：创建soup对象
-
-`BeautifulSoup()` 类
-
-- 第一个参数是html格式的文本，常传入 `res.text`
-- 第二个位置参数是解析器，常使用 `'lxml'`
-- 关键字参数 `multi_valued_attributes` （默认按照html语法规范解析，不推荐使用此参数修改配置）
-    - `multi_valued_attributes=None` ，将所有html标签的属性当做是单值属性解析
-    - `multi_valued_attributes=class_is_multi` ，将所有属性当做多值属性解析
-
-
-常用的解析器：
-
-- html.parser解析器（属于python标准库） `BeautifulSoup(res.text, 'html.parser')`
-    - Python的内置标准库
-    - 执行速度较快
-    - 容错能力强
-    - 速度没有 lxml 快，容错没有 html5lib强
-- lxml HTML解析器（第三方库，推荐使用） `BeautifulSoup(res.text, 'lxml')`
-    - 速度快
-    - 容错能力强	
-    - 额外的 C 依赖
-- lxml XML解析器（第三方库） `BeautifulSoup(markup, ['lxml-xml'])` 或 `BeautifulSoup(markup, 'xml')`
-    - 速度快
-    - 唯一支持 XML 的解析器	
-    - 额外的 C 依赖
-    - 使用此解析器，所有属性当做是单值属性解析
-- html5lib解析器（第三方库） `BeautifulSoup(markup, 'html5lib')`
-    - 最好的容错性
-    - 以浏览器的方式解析文档
-    - 生成 HTML5 格式的文档
-    - 速度慢
-    - 额外的 Python 依赖
-
-## 第二步：对soup对象进行操作
-
-soup对象的属性和方法：
-
-- 所有html标签都可以看做是soup对象的属性，`soup.标签` 相当于对soup对象使用了元素选择器，且只选中 {==第一个==} 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）
-    
-    ???+ note '子节点'
-        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</description><guid isPermaLink="true">https://interset-wq.github.io/post/76.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>freecodecamp</title><link>https://interset-wq.github.io/post/24.html</link><description>## Scientific Computing with Python
-
-- [ ] instantiate v.实例化
-- [ ] instance n.实例，例子 v.举例
-- [ ] ledger n.收支总账
-- [ ] deposit v.&amp;n.存款
-- [ ] negative number 负数。</description><guid isPermaLink="true">https://interset-wq.github.io/post/24.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>basic-git-command</title><link>https://interset-wq.github.io/post/25.html</link><description>[:simple-git: Git官方文档](https://git-scm.com/doc){ .md-button .md-button--primary }
-[:simple-github: GitHub文档](https://docs.github.com/zh){ .md-button }
-
-[GitCode文档](https://docs.gitcode.com/){ .md-button .md-button--primary }
-[:simple-gitee: Gitee文档](https://gitee.com/all-about-git){ .md-button }
-
-???+ warning
-    创建 repo 时,一定要创建 `README.md` `.gitignore` 和 `LICENSE` 文件,减少不必要的麻烦
-
-`git init` 初始化一个全新的 Git 存储库并开始跟踪现有目录。</description><guid isPermaLink="true">https://interset-wq.github.io/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>First Contributions</title><link>https://interset-wq.github.io/post/26.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+对精度有要求时,应该使用 `ROUND()` 函数来控制精度.&#13;
 &#13;
-[:simple-github: First Contributions](https://github.com/firstcontributions/first-contributions)&#13;
+&lt;/details&gt;&#13;
 &#13;
-## STEP1 Fork other's repo &#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;warning&lt;/summary&gt;&#13;
 &#13;
-Fork repo [first-contributions](https://github.com/firstcontributions/first-contributions)&#13;
+计算时可能会出现精度问题,例如 `G6` 和 `H6` 单元格 就出现了精度问题.&#13;
 &#13;
-## STEP2 Clone my repo forked from others&#13;
+&lt;/details&gt;&#13;
 &#13;
-```bash&#13;
-$ git clone https://github.com/interset-wq/first-contributions.git&#13;
-```&#13;
+&#13;
+&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/35.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit</title><link>https://interset-wq.github.io/post/36.html</link><description>✏️ `本文创建于2025-5-10`&#13;
+&#13;
+&lt;!-- ???+ quote &#13;
+    本文提供PDF下载, 点击标题旁边的 📥 图标下载本文PDF --&gt;&#13;
+&#13;
+## 简介&#13;
+&#13;
+族: 相当于一个模板，里面包含了很多元素，比如墙、门、窗、柱子、梁等&#13;
+&#13;
+项目样板: 相当于模板文件&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;warning&lt;/summary&gt;&#13;
+&#13;
+如果Revit需要和其他软件配合使用, 请先安装Revit, 这样在安装其他软件时,才会自动安装Revit的插件.&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 无CAD图纸,根据PDF直接使用revit绘制图形的步骤&#13;
+&#13;
+1. 在revit立面视图绘制标高&#13;
+    - 根据revit立面视图自带的两个标高绘制&#13;
+    - 设置这两个默认标高的左右标记同时可见&#13;
+    - 将 `上标头` 的标高设置为PDF图纸中的大小,不必修改标高别名 `标高2`&#13;
+    - 使用 ++ctrl+c++ 复制 `上标头`&#13;
+    - 使用 ++ctrl+v++ 粘贴,放置, ++esc++&#13;
+    - 修改标高值&#13;
+    - 重复上述步骤&#13;
+    - 根据图纸修改标高的别名&#13;
+    - 由于使用了复制粘贴,revit不会将粘贴的标高显示在 `项目浏览器` 的 `结构平面` 中,需要手动调整&#13;
+&#13;
+        ![constract.png](https://s2.loli.net/2025/05/15/dgb48Qr2Ik3GtDZ.png)&#13;
+&#13;
+        按图示操作, 点击 `结构平面`, revit将弹出 `新建结构平面` 对话框,选取需要的标高(一般是全选), 点击 `确定`&#13;
+&#13;
+2. 绘制轴网(在CAD中也称为定位轴线)&#13;
+    - 随便绘制一根轴线(此处以横向轴线为例)&#13;
+    - 设置这根轴线的左右标记同时可见,修改标记的内容,绘制时按照数字和字母顺序绘制,以使用revit的某人标记&#13;
+    - 使用 ++ctrl+c++ 复制这根轴线&#13;
+    - 使用 ++ctrl+v++ 粘贴&#13;
+    - 键盘输入距离&#13;
+    - 键盘 ++esc++ 退出, 使用 ++ctrl+c++ 复制这根刚刚放置的轴线&#13;
+    - 重复上述步骤&#13;
+    - 纵向轴线画法相同&#13;
+    - 将轴网放置在四个观测记号的中央&#13;
+&#13;
+## 第一步: 使用AutoCAD从结构图和建筑图中拆分平面图,作为底图&#13;
+&#13;
+使用AutoCAD从结构图和建筑图中拆分平面图(平面布置图和标高平面图), 每个平面图另存为一个 CAD 文件 `.dwg`. 采用图形上面的图名作为文件名, 以便后续使用.&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;tip&lt;/summary&gt;&#13;
+&#13;
+实际上也要拆分梁平面配筋图,但是有些楼层梁的布置比较简单,只使用平面布置图就可以定位梁的位置,这种情况下就没有必要使用梁平面配筋图.对于梁布置比较复杂的楼层,需要另外使用梁平面配筋图,用来放置梁.&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;操作步骤&lt;/summary&gt;&#13;
+&#13;
+1. 如果所有图形都合并在了一个,请先拆分图形, 然后再拆分平面图.&#13;
+2. 选中图形,建议使用从右下角到左上角的矩形选取方式, 然后 单击右键- 剪贴板 - 带基点复制 - 在图形中选中基点(建议选取定位轴线的交点) - 新建一个 `FILETAB` 选项卡 - ++ctrl+v++ - 在命令框中输入 `0,0` - 回车, 这个图形的基点将放置在坐标原点处.&#13;
+&#13;
+    ![.png](https://s2.loli.net/2025/05/11/eW2uf7R948LTSXt.png)&#13;
+&#13;
+    ???+ warning&#13;
+        选择图形时,请不要拖拽鼠标,而是先点击选取区域的右下角点,再点击左上角点.这种选取方式只要选中某个整体的一部分就可以选中整体.&#13;
+&#13;
+    ???+ tip 'FILETAB选项卡'&#13;
+        `FILETAB` 命令打开文件选项卡,类似于浏览器的页签, 可以打开多个文件, 每个文件都有自己的绘图和修改工具栏.&#13;
+&#13;
+        ![filetab.png](https://s2.loli.net/2025/05/11/VbpxJYR4LhgljZr.png)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;如何打开AutoCAD的左右两侧的绘图和修改工具栏&lt;/summary&gt;&#13;
+&#13;
+step1 显示菜单栏&#13;
+&#13;
+![step1.png](https://s2.loli.net/2025/05/11/rif4wBey9kWz75n.png)&#13;
+&#13;
+step2 打开菜单栏的 `工具` 选项卡&#13;
+&#13;
+![step2.png](https://s2.loli.net/2025/05/11/grhJtwPzc8yeO7K.png)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+## 第二步: 使用Revit创建一个结构模型&#13;
+&#13;
+新建 - 选择结构样板 - 勾选项目 - 点击确定 (根据结构图建模,屋顶和主要承重构件柱和梁)&#13;
+&#13;
+![newproj.png](https://s2.loli.net/2025/05/11/tLChnI3GMTBlekf.png)&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;如何打开项目选择器和属性&lt;/summary&gt;&#13;
+&#13;
+![如何打开项目选择器和属性.png](https://s2.loli.net/2025/05/11/YN4bahodiGmyrXn.png)&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 2.1 绘制标高&#13;
+&#13;
+1. 随便选取一个立面,绘制标高,此处以'东'为例:&#13;
+&#13;
+    ![east.png](https://s2.loli.net/2025/05/11/VgCML3s1NQYex5H.png)&#13;
+&#13;
+2. 绘制标高&#13;
+&#13;
+    ![height1.png](https://s2.loli.net/2025/05/11/Smn6aLI5XYCc8Zq.png)&#13;
+&#13;
+3. 随意绘制几个标高,参考结构图将标高的数值改为结构图中的数值,并将'标高1'之类的默认名称改为结构图中的'一层'等名称,更改名称时会弹出提示框'是否希望重命名相应视图',选择'是'即可.&#13;
+&#13;
+    ![height.png](https://s2.loli.net/2025/05/11/enPMiSXwj7UfIuh.png)&#13;
+&#13;
+    ![alert.png](https://s2.loli.net/2025/05/11/HG7nX1KARaJf2su.png)&#13;
+&#13;
+4. 默认标高标注只显示右侧的,为了便于观察,往往需要同时显示左右两侧的标高标注. 在 `属性` 中点击 `编辑类型`, 勾选图示内容.&#13;
+&#13;
+    ![edit.png](https://s2.loli.net/2025/05/11/tyiwcDMS1LIx2sX.png)&#13;
+&#13;
+至此, 标高绘制完成.&#13;
+&#13;
+### 2.2 绘制轴网&#13;
+&#13;
+1. 将Revit视图切换到任意结构平面视图,将CAD图形导入Revit,注意:结构平面视图应与CAD图形一一对应,依次导入.&#13;
+&#13;
+    ![input.png](https://s2.loli.net/2025/05/11/qAjM1oTCSu385Gi.png)&#13;
+&#13;
+2. 绘制轴网,并移动方向标记使其靠近CAD图形,并使CAD图形大致位于四个方向标记的中间位置处.&#13;
+    &#13;
+    ![net.png](https://s2.loli.net/2025/05/11/zr4y7UVBoIP1pvK.png)&#13;
+&#13;
+    ![move.png](https://s2.loli.net/2025/05/11/6z8g2ojPf4tsump.png)&#13;
+&#13;
+3. 修改轴网的数字或字母编号,使其与定位轴线的编号一致.类似于标高标记,轴网标记也需要同时显示左右两侧的编号,二者操作类似.但是,轴网的轴线往往与定位轴线相重合,因此可以 `设置轴线中段为无` 将轴网的轴线隐藏,以免线条太多干扰视线.注意:轴线只需要在任意一个结构平面中绘制一次即可,因此绘制时建议选择线条较少的结构平面.&#13;
+&#13;
+    ![line.png](https://s2.loli.net/2025/05/11/Mb9LRvWnEtkdCih.png)&#13;
+&#13;
+4. 检查其他结构平面的定位轴线与轴网是否一致,如果不一致,请回到第一步重新拆分平面图.&#13;
+&#13;
+至此, 轴网绘制完成.&#13;
+&#13;
+### 2.3 在基础平面图中绘制垫层&#13;
+&#13;
+1. 通过结构图读出垫层的厚度和尺寸.&#13;
+&#13;
+    ![board0.png](https://s2.loli.net/2025/05/11/ZEeS51XKvptuQG8.png)&#13;
+&#13;
+2. 绘制垫层,把垫层视作楼板&#13;
+&#13;
+    ![board.png](https://s2.loli.net/2025/05/11/hjkfOSe7aHgP1Fy.png)&#13;
+&#13;
+    Revit会直接让我们使用系统族中的楼板, 往往我们需要修改其尺寸.为了保护系统族不会被篡改,往往复制系统族,重命名,然后修改尺寸.&#13;
+&#13;
+    ![board2.png](https://s2.loli.net/2025/05/11/PLwK2DyHb7fdtWh.png)&#13;
+&#13;
+    ![edit_board.png](https://s2.loli.net/2025/05/11/7c1DGpd9jgBiIC8.png)&#13;
+&#13;
+    ![diy_board.png](https://s2.loli.net/2025/05/11/IELi475VoahQqcP.png)&#13;
+&#13;
+3. 选择合适的方式绘制垫层, 绘制结束之后打对钩确认.&#13;
+&#13;
+    ![draw_board.png](https://s2.loli.net/2025/05/11/qOwlXsHu8FYetkW.png)&#13;
+&#13;
+至此, 垫层绘制完成.&#13;
+&#13;
+关闭此文件 `结构模型` `.rvt`&#13;
+&#13;
+### 2.4 新建条形基础族和放置条形基础&#13;
+&#13;
+1. 新建一个族&#13;
+&#13;
+    ![新建族.png](https://s2.loli.net/2025/05/13/rGKgIV64FtCvxl2.png)&#13;
+&#13;
+2. 通过 `放样` (面动成体) 绘制条形基础&#13;
+&#13;
+    ![放样.png](https://s2.loli.net/2025/05/13/TFAfjipRtQ6K9yE.png)&#13;
+&#13;
+    由于新建组时选取的模型 `基于线的公制常规模型` 自带线,所以通过`拾取路径`来绘制截面,绘制完成之后打对钩&#13;
+&#13;
+    ![拾取路径.png](https://s2.loli.net/2025/05/13/ezhRc4tZsAKXjP8.png)&#13;
+&#13;
+    - 识图,绘制基础轮廓,操作类似于AutoCAD&#13;
+&#13;
+        ![基础.png](https://s2.loli.net/2025/05/13/AKzEHoVlg6NnpTS.png)&#13;
+&#13;
+    - 由于图中的条形基础是对称结构,`编辑轮廓`时可以随便选取一个面,绘制结束之后打对钩&#13;
+  &#13;
+        ![编辑轮廓.png](https://s2.loli.net/2025/05/13/EZYV9jUcofAgysk.png)&#13;
+&#13;
+3. 至此,条形基础绘制结束.将这个族命名为 `条形基础` 保存 `.rfa`, 并关闭此文件&#13;
+4. 再次打开 `结构模型.rvt`&#13;
+5. 导入 `条形基础.rfa` &#13;
+&#13;
+    ![载入.png](https://s2.loli.net/2025/05/13/sIEgGkDJtv5VqA1.png)&#13;
+&#13;
+    ???+ warning&#13;
+        进行此操作之后,revit并不会有任何反应,但是族文件已经导入到此项目中了.&#13;
+&#13;
+6. 放置条形基础(`基于线的公制常规模型` 属于 `构建`)&#13;
+&#13;
+    ![放置.png](https://s2.loli.net/2025/05/13/deEVSpTQZYDMCkc.png)&#13;
+&#13;
+    - 选择 `放置在工作平面上` , 根据图纸标高放置在垫层上&#13;
+&#13;
+        ![放置2.png](https://s2.loli.net/2025/05/13/nxdlCWhoyDtM3Fw.png)&#13;
+&#13;
+    - 通过快捷键 `hh` `临时隐藏/隔离` 2.3 步骤绘制的垫层,放置其遮挡CAD底图的线条&#13;
+    - 放置条形基础&#13;
+&#13;
+        ???+ note&#13;
+            放置时往往不能很好的对齐,因此放置结束之后使用对其命令 `al` 对齐,来调整基础防止的位置,操作类似于CAD&#13;
+&#13;
+            ![对齐.png](https://s2.loli.net/2025/05/13/lkHug6dGfQAB1wN.png)&#13;
+&#13;
+            放置时也不好把握基础的具体长度,也需要自行调整,操作类似于CAD&#13;
+&#13;
+7. 使用 `hr` 命令取消 `hh` 的隐藏功能,使垫层可见&#13;
+&#13;
+    ???+ note&#13;
+        如果在三维视图中查看感觉显示效果不好,可以在revit窗口左下角切换其他的 `视觉样式`&#13;
+&#13;
+        ![视觉样式.png](https://s2.loli.net/2025/05/13/879fDmpQhSXzV12.png)&#13;
+&#13;
+8. 切换到立面图查看,检查&#13;
+&#13;
+至此,放置基础完成.&#13;
+&#13;
+### 2.5 放置基础到一层的结构柱&#13;
 &#13;
 &lt;details&gt;&#13;
 &lt;summary&gt;note&lt;/summary&gt;&#13;
 &#13;
-此处使用的是HTTPS,也可以使用SSH&#13;
+使用revit建模时,按照从下到上的原则进行,一层一层的建模,即使一个柱子直接从地基到屋顶,也要分层依次放置.&#13;
 &#13;
 &lt;/details&gt;&#13;
 &#13;
-## STEP3 创建一个新分支&#13;
+1. 由于基础层已经摆放了垫层和基础,导致底图被遮挡,因此首先要使底图可见.&#13;
 &#13;
-1. 切换目录到 clone 到本地的 repo 的目录中&#13;
-2. 使用 `git switch` 命令新建一个代码分支&#13;
+    将底图变为可选状态,点击revit右下角的 `选择锁定图元` 使其小图标右上角的×消失.&#13;
 &#13;
-    ```bash&#13;
-    $ git switch -c &lt;新分支的名称&gt;&#13;
-    ```&#13;
+    ![link.png](https://s2.loli.net/2025/05/14/vFpbnrgm2u8IthA.png)&#13;
 &#13;
-    此处创建一个add-myname分支:&#13;
+    选中底图,将其设置为 `前景`.&#13;
 &#13;
-    ```bash&#13;
-    $ git switch -c add-interset-wq&#13;
-    ```&#13;
+    ![foreground.png](https://s2.loli.net/2025/05/14/JnhcRmxKbet9rVj.png)&#13;
 &#13;
-## STEP4 修改代码, Commint 修改&#13;
+    再次点击revit右下角的 `选择锁定图元`,禁止选中底图&#13;
 &#13;
-1. 修改 `Contributors.md` 中的内容&#13;
-2. 检查状态(可选, 输出信息中,被修改的文件的文件名会被标红)&#13;
+2. 观察结构图中的柱结构, 如果同一个名字的柱有多种不同的配筋,应该加以区分.&#13;
 &#13;
-    ```bash&#13;
-    $ git status&#13;
-    ```&#13;
+    ![domain.png](https://s2.loli.net/2025/05/14/Ym3P5wz7XuevRUj.png)&#13;
 &#13;
-3. 添加改动&#13;
+3. 在revit中放置柱,并设置柱是向上延伸(高度)还是向下延伸(深度),以及要延伸到哪一层.&#13;
 &#13;
-    ```bash&#13;
-    $ git add Contributors.md&#13;
-    ```&#13;
+    ![domain2.png](https://s2.loli.net/2025/05/14/DchtX6prVnSslg3.png)&#13;
 &#13;
-4. 检查状态(可选,输出信息中,刚才标红的文件名现在标绿)&#13;
-5. 提交修改&#13;
+4. 默认柱直接防止在了基础底图的标高平面上,而柱应该防止在条形基础之上,因此需要设置柱的底部偏移.&#13;
 &#13;
-    ```bash&#13;
-    $ git commit -m 'Add interset-wq to Contributors list'&#13;
-    ```&#13;
+    ![domain3.png](https://s2.loli.net/2025/05/14/TObFavuP4Dj1odU.png)&#13;
 &#13;
-6. Push 到 GitHub repo&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;tip&lt;/summary&gt;&#13;
 &#13;
-    ```bash&#13;
-    $ git push origin &lt;分支的名称&gt;&#13;
-    ```&#13;
+改变三维模型的观察角度: 按住 ++shift++ 键,同时使用鼠标中键拖动&#13;
 &#13;
-    此处推送的分支为前面新建的分支add-interset-wq&#13;
-    ```bash&#13;
-    $ git push origin add-interset-wq&#13;
-    ```&#13;
+&lt;/details&gt;&#13;
 &#13;
-## STEP5 Pull Request(PR)&#13;
+至此,基础层的柱放置完成.&#13;
 &#13;
-1. 刚刚从别人那里fork的repo上方出现 `Compare &amp; pull request` 的按钮,点击此按钮&#13;
-2. 点击 `Create pull request` 按钮，正式提交 pull request&#13;
-
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/26.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>jieba 中文分词结巴</title><link>https://interset-wq.github.io/post/40.html</link><description># jieba 中文分词结巴
+### 2.6 绘制基础和一层之间的的梁/板&#13;
+&#13;
+1. 将视图切换到 `一层` 调整 `视图范围`, 防止基础层线条对一层的干扰&#13;
+&#13;
+    ![range.png](https://s2.loli.net/2025/05/14/Mpk5vVPqYnjDRgQ.png)&#13;
+&#13;
+    ???+ note&#13;
+        由于视图切换到了 `一层` , 主要范围的 &#13;
+        &#13;
+        - `顶` 应该设置为 `标高之上(二层)`, 偏移量设置为 `0`,偏移量的单位是毫米&#13;
+        - `剖切面` 的 `偏移量` 的值应该设置为小于二层标高的数值&#13;
+        - `底` 应该设置为 `标高之上(一层)`, 偏移量设置为小于一层标高的一个数值&#13;
+&#13;
+        视图深度的 `标高` 可以直接采用主要范围的 `底` 的设置&#13;
+&#13;
+2. 放置梁,可以直接使用柱的中心点作为梁的起止点,然后使用 `al` 对齐命令对齐即可. `结构` - `梁`&#13;
+&#13;
+    ???+ note&#13;
+        revit默认柱结构会将梁截断,因此无论放置的梁和柱重合多少,都会被自动截断,这也符合实际情况,因此放置梁时不必在意梁和柱的重合,因此可以直接使用柱的中心点作为梁的起止点.&#13;
+&#13;
+        revit放置构件时,不必在意配筋情况,只要注意宽高即可.但是,配筋情况不同的同名构件,要用不同的名称命名.&#13;
+&#13;
+3. 放置板(这个板实际上是基础层的天花板) `结构` - `楼板` - `楼板:结构` - `边界线` - `矩形`, 操作结束之后打对钩&#13;
+4. revit默认板会截断梁和柱,这明显与实际不符,因此需要改变二者的截断关系.&#13;
+&#13;
+    在三维视图中选中板 - `连接` - `切换链接顺序` - 勾选 `多个开关` - 再次选中板 - 使用鼠标左键拖动选择&#13;
+&#13;
+    ![board.png](https://s2.loli.net/2025/05/14/bTonxU4P9LYdfVR.png)&#13;
+&#13;
+    ![mul.png](https://s2.loli.net/2025/05/14/nIEqoGCMpuOQsJT.png)&#13;
+&#13;
+    ???+ tip&#13;
+        如果板无法选中,请开启revit右下角的 `按面选择图元`&#13;
+&#13;
+        ![tip.png](https://s2.loli.net/2025/05/14/YLQf5owJrk4UquN.png)&#13;
+&#13;
+5. 切换到立面图检查&#13;
+&#13;
+至此,梁和板放置完毕.&#13;
+&#13;
+基础层绘制完毕.&#13;
+&#13;
+### 2.7 放置一层到二层的柱(操作同 2.5)&#13;
+&#13;
+### 2.8 放置楼梯的柱和梁&#13;
+&#13;
+1. 分析结构图,计算柱高和梁的偏移高度&#13;
+&#13;
+    ![floor-info.png](https://s2.loli.net/2025/05/15/2E9lZIpgTzJDW1b.png)&#13;
+&#13;
+2. 切换到一层的平面视图, `结构` - `柱`, 直接设置柱高来放置柱&#13;
+&#13;
+    ![floor-domain.png](https://s2.loli.net/2025/05/15/A4fFoVnU3QYyrme.png)&#13;
+&#13;
+3. 计算梯梁距离一层的高度,设置 `Z轴偏移值`,再放置梁,可以使用 `al` 对齐命令辅助对齐.&#13;
+&#13;
+    ![floor-x.png](https://s2.loli.net/2025/05/15/t1RTPxIWsf6vDLw.png)&#13;
+&#13;
+    ???+ warning&#13;
+        必须先设置偏移值,再放置梁.&#13;
+&#13;
+4. 通过 `注释` 检查梁的标高和柱的标高&#13;
+&#13;
+    ![height.png](https://s2.loli.net/2025/05/15/cw7tGlBrb5mMON3.png)&#13;
+&#13;
+至此,楼梯的柱和梁放置完毕.&#13;
+&#13;
+### 2.9 放置二层的梁和板&#13;
+&#13;
+由于二层的梁比较多,因此可以使用 `hh` 隐藏二层平面布置图,导入二层梁平面配筋图.以此图为基准绘制梁和板&#13;
+&#13;
+### 2.10 放置二层到屋顶的柱&#13;
+&#13;
+### 2.11 放置屋顶的梁&#13;
+&#13;
+通过观察发现,屋顶的梁的布置和一层梁的布置大致相同,因此可以直接复制一层的梁,粘贴&#13;
+&#13;
+1. 使用鼠标在三维视图中框选,使用 `过滤器` 选中梁&#13;
+&#13;
+    ![copy.png](https://s2.loli.net/2025/05/16/ITawebnRE2L6GuY.png)&#13;
+&#13;
+2. 点击 `复制`, 再点击 `粘贴` - `与选定的标高对齐`&#13;
+&#13;
+    ![copy2.png](https://s2.loli.net/2025/05/16/I3hMTVkcARC4xuv.png)&#13;
+&#13;
+3. 在弹出的对话框中选择 `屋顶` - `确定`&#13;
+&#13;
+    ![copy3.png](https://s2.loli.net/2025/05/16/znpaxqkUrGCW9ub.png)&#13;
+&#13;
+4. 由于屋顶的梁和一层的梁并不相同,因此需要将复制的梁更换为屋顶的梁&#13;
+    - 新建一个梁, ++esc++&#13;
+    - 选中需要替换的梁, 切换为刚刚新建的梁&#13;
+&#13;
+至此,屋顶的梁放置完毕.&#13;
+&#13;
+### 2.12 绘制屋顶的板&#13;
+&#13;
+结构模型绘制完成.&#13;
+&#13;
+## 第三步: 使用Revit创建一个建筑模型&#13;
+&#13;
+新建 - 选择建筑样板 - 勾选项目 - 点击确定 (根据建筑图建模, 墙和其他)&#13;
+&#13;
+### 2.1 绘制标高 导入CAD图形 绘制轴网&#13;
+&#13;
+### 3.2 绘制一层建筑外墙&#13;
+&#13;
+如果墙不是承重构件(剪力墙),则使用 `墙:建筑`,绘制墙时如何中间有结构柱的话,要让出结构柱的位置(梯柱除外)&#13;
+&#13;
+![3-1.png](https://s2.loli.net/2025/05/21/X1mxicKU2A8DgSN.png)&#13;
+&#13;
+### 3.3 绘制一层内墙&#13;
+&#13;
+墙面有装饰需要参考 **建筑材料表** 或 **工程做法表**&#13;
+&#13;
+墙由 **主体结构** 和 **装饰层** 组成, 装饰层又由 **踢脚线墙裙线** 和 **墙面** 组层.&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;warning&lt;/summary&gt;&#13;
+&#13;
+**踢脚线墙裙线** 位于 **墙面** 之上,因此有关 **踢脚线墙裙线** 的建模都需要考虑 **墙面** 的厚度等.以下都对不可见(不需要渲染)的材料进行了简化处理.大部分衬底都直接使用 **水泥砂浆** 作为材料.&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+以下以分割车库和卫生间的墙面为例说明:&#13;
+&#13;
+分析 **建筑材料表**:&#13;
+&#13;
+![3-2.png](https://s2.loli.net/2025/05/21/GNna7kP2iS3lgjh.png)&#13;
+&#13;
+![3-3.png](https://s2.loli.net/2025/05/21/5Hb2zpFo1QIqNfR.png)&#13;
+&#13;
+![3-4.png](https://s2.loli.net/2025/05/21/IyLRsxhezUCo1Y5.png)&#13;
+&#13;
+这面墙的结构大致如下图所示(图示的墙结构中的 `墙` 指的是这面墙的 `主体结构` 和 `墙面`).&#13;
+&#13;
+![3-5.png](https://s2.loli.net/2025/05/21/YcyW3o8TDmFnbUN.png)&#13;
+&#13;
+可将这面墙分成三段建模(从下往上):&#13;
+&#13;
+1. 第一段(高度100mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)玻化砖&#13;
+&#13;
+    ???+ info '第一段的建模'&#13;
+        新建一个 `墙:建筑`,对其进行修改,revit提供的材料无法满足需要时需要 `新建材质`&#13;
+&#13;
+        ![3-6.png](https://s2.loli.net/2025/05/22/dINtDvkZOUY451e.png)&#13;
+&#13;
+        参考 **建筑材料表** 计算并建模.&#13;
+&#13;
+        ![3-7.png](https://s2.loli.net/2025/05/22/Q85CNrnmdkG1thx.png)&#13;
+&#13;
+2. 第二段(高度100mm到1200mm): 左(车库)水泥砂浆墙裙环氧罩面,右(卫生间)墙面砖&#13;
+3. 第三段(高度1200mm之上): 左(车库)乳胶漆,右(卫生间)墙面砖&#13;
+&#13;
+使用 `叠层墙` 将以上三部分合成为一面墙.&#13;
+&#13;
+在左侧 `属性` 中将墙切换到 `叠层墙`, 新建一个叠层墙,编辑类型&#13;
+&#13;
+将以上三部分添加到这个叠层墙中,根据实际情况建模&#13;
+&#13;
+![3-8.png](https://s2.loli.net/2025/05/22/UTBk4v2iNPIewRm.png)&#13;
+&#13;
+绘制时,根据实际情况选择绘制墙时的定位线&#13;
+&#13;
+![3-9.png](https://s2.loli.net/2025/05/22/1P93eEzuhL7i2mA.png)&#13;
+&#13;
+绘制楼梯间和卫生间的墙的操作同上.&#13;
+&#13;
+### 3.4 放置门&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;warning&lt;/summary&gt;&#13;
+&#13;
+外墙放置门时,需要放置在墙的主体结构上(核心层),因此前面放置外墙时,并没有对装饰层进行建模.门需要使用渲染.&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+先将CAD底图切换为 `前景`,根据建筑图CAD图纸确定门的尺寸.注意将 `类型标记` 修改为图纸上的标记.&#13;
+&#13;
+![3-10.png](https://s2.loli.net/2025/05/22/ECNauS7652LeiZx.png)&#13;
+&#13;
+![3-11.png](https://s2.loli.net/2025/05/22/VJPDmkqhrBbZ42v.png)&#13;
+&#13;
+### 3.5 放置窗&#13;
+&#13;
+和防止门的操作类似,窗也要使用渲染,唯一不同的是窗需要计算 `默认窗台高度`&#13;
+&#13;
+![3-14.png](https://s2.loli.net/2025/05/22/VdxPaNGOi6lnB8D.png)&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;warning&lt;/summary&gt;&#13;
+&#13;
+放置窗时如果看不到窗,可能是因为 `视图范围`, 此时需要调整一下视图范围,使窗可见.&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+### 3.6 绘制外墙装饰层(内侧)&#13;
+&#13;
+思路:把装饰层看做是一面墙,并紧贴外墙&#13;
+&#13;
+![3-15.png](https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png)&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/36.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit 操作技巧</title><link>https://interset-wq.github.io/post/37.html</link><description>✏️ `本文创建于2025-5-10`&#13;
+&#13;
+## 一、常用命令&#13;
+&#13;
+- `RP` 放置参考平面&#13;
+- `HH` 隐藏&#13;
+- `HI` 隔离显示，只显示选中的图元&#13;
+- `HR` 全显示，取消隐藏&#13;
+- `DI` 尺寸标注&#13;
+- `EL` 高程标注&#13;
+- `LL` 绘制标高&#13;
+- `LI` 放置线&#13;
+- `TR` 修剪&#13;
+- `SL` 打断&#13;
+- `DL` 详图线&#13;
+&#13;
+## 二、绘制轴网&#13;
+&#13;
+参考这位大佬是视频：&#13;
+&#13;
+&lt;iframe src='//player.bilibili.com/player.html?isOutside=true&amp;aid=114846536306689&amp;bvid=BV14FuNzcEeS&amp;cid=31019960957&amp;p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'&gt;&lt;/iframe&gt;&#13;
+&#13;
+针对不同情况，有以下两种方式快速绘制：&#13;
+&#13;
+### 2.1 复制CO&#13;
+&#13;
+如果没有连续相同间距的轴线时，直接使用 `CO` 复制命令，并且勾选 `多个` 复选框。</description><guid isPermaLink="true">https://interset-wq.github.io/post/37.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit 天正插件TR</title><link>https://interset-wq.github.io/post/38.html</link><description>✏️ `本文创建于2025-6-24`&#13;
+&#13;
+## 天正建筑 选项卡&#13;
+&#13;
+这个选项卡下的功能可以替代revit用于基本建筑建模的所有功能，是天正插件的核心内容。</description><guid isPermaLink="true">https://interset-wq.github.io/post/38.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>string</title><link>https://interset-wq.github.io/post/39.html</link><description>✏️ `本文创建于2025-6-29`&#13;
+&#13;
+[:simple-python: string官方文档](https://docs.python.org/zh-cn/3.13/library/string.html#module-string)&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;abstract&lt;/summary&gt;&#13;
+&#13;
+string模块中的绝大多数方法已成为str数据类型的方法，使用时已没有必要导入string&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+- `string.ascii_lowercase` 小写字母 'abcdefghijklmnopqrstuvwxyz'&#13;
+- `string.ascii_uppercase` 大写字母 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'&#13;
+- `string.ascii_letters` 英文大小写字母 `ascii_lowercase` 和 `ascii_uppercase` 常量的拼连&#13;
+- `string.digits` 阿拉伯数字 '0123456789'&#13;
+- `string.hexdigits` 十六进制字符 '0123456789abcdefABCDEF'&#13;
+- `string.octdigits` 八进制字符 '01234567'&#13;
+- `string.whitespace` 空白字符 其中包括空格、制表、换行、回车、进纸和纵向制表符。</description><guid isPermaLink="true">https://interset-wq.github.io/post/39.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>jieba 中文分词结巴</title><link>https://interset-wq.github.io/post/40.html</link><description># jieba 中文分词结巴
 
 [README.md](https://github.com/fxsjy/jieba){ .md-button .md-button--primary }
 
@@ -6608,4 +6132,372 @@ $ git clone https://github.com/interset-wq/first-contributions.git&#13;
     - `HMM` 参数用来控制是否使用 HMM 模型
     - `use_paddle` 参数用来控制是否使用paddle模式下的分词模式
 - `jieba.cut_for_search(sentence, HMM=True)` 函数 返回generator迭代器, 可以使用 `list()`函数 转换为分词之后的 `list` 对象. 搜索引擎模式, 该方法适合用于搜索引擎构建倒排索引的分词. 效果类似于 `jieba.cut()`全模式
-    - `sentence` 需要分词的字符串. unicode 或 UTF-8 字符串、GBK 字符串。</description><guid isPermaLink="true">https://interset-wq.github.io/post/40.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item></channel></rss>
+    - `sentence` 需要分词的字符串. unicode 或 UTF-8 字符串、GBK 字符串。</description><guid isPermaLink="true">https://interset-wq.github.io/post/40.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>matplotlib</title><link>https://interset-wq.github.io/post/41.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+&#13;
+[matplotlib官方文档](https://matplotlib.org/stable/users/index.html)&#13;
+&#13;
+## 第三方库matplotlib&#13;
+### 折线图plot&#13;
+```py&#13;
+import matplotlib.pyplot as plt&#13;
+squares = [1, 4, 9, 16, 25]&#13;
+fig, ax = plt.subplots()&#13;
+ax.plot(squares) # 绘图&#13;
+plt.show() # 显示图像&#13;
+```&#13;
+&#13;
+subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot）。</description><guid isPermaLink="true">https://interset-wq.github.io/post/41.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>NumPy</title><link>https://interset-wq.github.io/post/42.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+&#13;
+[:simple-numpy: NumPy官方文档](https://numpy.org/doc/stable/index.html)&#13;
+&#13;
+## 一 导入&#13;
+&#13;
+    import numpy as np&#13;
+&#13;
+## 二 数组ndarray&#13;
+&#13;
+在NumPy中基本数组类被称为`ndarray`, 它代表一个“N维数组”, 类似于python基本数据类型的列表。</description><guid isPermaLink="true">https://interset-wq.github.io/post/42.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>pandas</title><link>https://interset-wq.github.io/post/43.html</link><description>&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
+&#13;
+[:simple-pandas: pandas官方文档](https://pandas.pydata.org/docs/)
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/43.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>scipy</title><link>https://interset-wq.github.io/post/44.html</link><description>&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
+&#13;
+[:simple-scipy: scipy官方文档](https://scipy.org/)&#13;
+
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/44.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>预备节：面向对象</title><link>https://interset-wq.github.io/post/45.html</link><description># 预备节：面向对象&#13;
+&#13;
+✏️ `本文创建于2025-3-16`&#13;
+&#13;
+要使用tkinter进行GUI设计，就不得不用到**面向对象**的编程思想。</description><guid isPermaLink="true">https://interset-wq.github.io/post/45.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>KaTex数学公式</title><link>https://interset-wq.github.io/post/46.html</link><description>✏️ `本文创建于2025-4-29`&#13;
+&#13;
+[Katex文档](https://katex.org/docs/supported)&#13;
+&#13;
+## 一、字母&#13;
+&#13;
+希腊字母&#13;
+&#13;
+| 字母 | 大写 | 小写 |&#13;
+| --- | --- | --- |&#13;
+| $\Alpha \alpha$ | `\Alpha` | `\alpha` |&#13;
+| $\Beta \beta$ | `\Beta` | `\beta` |&#13;
+| $\Gamma \varGamma \gamma \digamma$ | `\Gamma` `\varGamma` | `\gamma` `\digamma` |&#13;
+| $\Delta \varDelta \delta$ | `\Delta` `\varDelta` | `\delta` |&#13;
+| $\Epsilon \epsilon \varepsilon$ | `\Epsilon` | `\epsilon` `\varepsilon` |&#13;
+| $\Zeta \zeta$ | `\Zeta` | `\zeta` |&#13;
+| $\Eta \eta$ | `\Eta` | `\eta` |&#13;
+| $\Theta \varTheta \theta \vartheta \thetasym$ | `\Theta` `\varTheta` | `\theta` `\vartheta` `\thetasym` |&#13;
+| $\Iota \iota$ | `\Iota` | `\iota` |&#13;
+| $\Kappa \kappa \varkappa$ | `\Kappa` | `\kappa` `\varkappa` |&#13;
+| $\Lambda \varLambda \lambda$ | `\Lambda` `\varLambda` | `\lambda` |&#13;
+| $\Mu \mu$ | `\Mu` | `\mu` |&#13;
+| $\Nu \nu$ | `\Nu` | `\nu` |&#13;
+| $\Xi \varXi \xi$ | `\Xi` `\varXi` | `\xi` |&#13;
+| $\Omicron \omicron$ | `\Omicron` | `\omicron` |&#13;
+| $\Pi \varPi \pi \varpi$ | `\Pi` `\varPi` | `\pi` `\varpi` |&#13;
+| $\Rho \rho \varrho$ | `\Rho` | `\rho` `\varrho` |&#13;
+| $\Sigma \varSigma \sigma \varsigma$ | `\Sigma` `\varSigma` | `\sigma` `\varsigma` |&#13;
+| $\Tau \tau$ | `\Tau` | `\tau` |&#13;
+| $\Upsilon \varUpsilon \upsilon$ | `\Upsilon` `\varUpsilon` | `\upsilon` |&#13;
+| $\Phi \varPhi \phi \varphi$ | `\Phi` `\varPhi` | `\phi` `\varphi` |&#13;
+| $\Chi \chi$ | `\Chi` | `\chi` |&#13;
+| $\Psi \varPsi \psi$ | `\Psi` `\varPsi` | `\psi` |&#13;
+| $\Omega \varOmega \omega$ | `\Omega` `\varOmega` | `\omega` |&#13;
+&#13;
+&lt;details&gt;&#13;
+&lt;summary&gt;其他字母&lt;/summary&gt;&#13;
+&#13;
+- $\imath$ `\imath`&#13;
+- $\jmath$ `\jmath`&#13;
+- $\aleph$ `\aleph`&#13;
+- $\alef$ `\alef`&#13;
+- $\alefsym$ `\alefsym`&#13;
+- $\beth$ `\beth`&#13;
+- $\gimel$ `\gimel`&#13;
+- $\daleth$ `\daleth`&#13;
+- $\eth$ `\eth`&#13;
+- $\nabla$ `\nabla`&#13;
+- $\partial$ `\partial`&#13;
+- $\Game$ `\Game`&#13;
+- $\Finv$ `\Finv`&#13;
+- $\cnums$ `\cnums`&#13;
+- $\Complex$ `\Complex`&#13;
+- $\ell$ `\ell`&#13;
+- $\hbar$ `\hbar`&#13;
+- $\hslash$ `\hslash`&#13;
+- $\Im$ `\Im`&#13;
+- $\image$ `\image`&#13;
+- $\Bbbk$ `\Bbbk`&#13;
+- $\N$ `\N`&#13;
+- $\natnums$ `\natnums`&#13;
+- $\R$ `\R`&#13;
+- $\Re$ `\Re`&#13;
+- $\real$ `\real`&#13;
+- $\reals$ `\reals`&#13;
+- $\Reals$ `\Reals`&#13;
+- $\wp$ `\wp`&#13;
+- $\weierp$ `\weierp`&#13;
+- $\Z$ `\Z`&#13;
+- $\text{\aa}$ `\text{\aa}`&#13;
+- $\text{\AA}$ `\text{\AA}`&#13;
+- $\text{\ae}$ `\text{\ae}`&#13;
+- $\text{\AE}$ `\text{\AE}`&#13;
+- $\text{\oe}$ `\text{\oe}`&#13;
+- $\text{\OE}$ `\text{\OE}`&#13;
+- $\text{\o}$ `\text{\o}`&#13;
+- $\text{\O}$ `\text{\O}`&#13;
+- $\text{\ss}$ `\text{\ss}`&#13;
+- $\text{\i}$ `\text{\i}`&#13;
+- $\text{\j}$ `\text{\j}`&#13;
+&#13;
+&lt;/details&gt;&#13;
+&#13;
+## 二、逻辑和集合关系&#13;
+&#13;
+| 含义 | 符号 | 代码 |&#13;
+| --- | --- | --- |&#13;
+| 任意 | $\forall$ | `\forall` |&#13;
+| 存在 | $\exists$ | `\exists` 或 `\exist` |&#13;
+| 不存在 | $\nexists$ | `\nexists` |&#13;
+| 属于 | $\in$ | `\in` 或 `\isin` |&#13;
+| 属于 | $\ni$ | `\ni` |&#13;
+| 不属于 | $\notin$ | `\notin` |&#13;
+| 不属于 | $\notni$ | `\notni` |&#13;
+| 补集 | $\complement$ | `\complement` |&#13;
+| 包含于 | $\subset$ | `\subset` |&#13;
+| 包含 | $\supset$ | `\supset` |&#13;
+| | $\mid$ | `\mid` |&#13;
+| | $\land$ | `\land` |&#13;
+| | $\lor$ | `\lor` |&#13;
+| 因为 | $\because$ | `\because` |&#13;
+| 所以 | $\therefore$ | `\therefore` |&#13;
+| | $\mapsto$ | `\mapsto` |&#13;
+| 趋于 | $\to$ | `\to` |&#13;
+| | $\gets$ | `\gets` |&#13;
+| | $\leftrightarrow$ | `\leftrightarrow` |&#13;
+| 空集 | $\emptyset$ | `\emptyset` 或 `\empty` |&#13;
+| 空集 | $\varnothing$ | `\varnothing` |&#13;
+| 推出 | $\implies$ | `\implies` |&#13;
+| 推出 | $\impliedby$ | `\impliedby` |&#13;
+| 等价于 | $\iff$ | `\iff` |&#13;
+| 非 | $\neg$ | `\neg` 或 `\lnot` |&#13;
+| 交 | $\cap$ | `\cap` |&#13;
+| 并 | $\cup$ | `\cup` |&#13;
+&#13;
+&#13;
+集合&#13;
+&#13;
+$\Set{x | x &lt; 5}$ `\Set{x | x &lt; 5}`&#13;
+&#13;
+$\Set{x | x &lt; \frac 1 2}$ `\Set{x | x &lt; \frac{1}{2}}` 或 `\Set{x | x &lt; \frac 1 2}`&#13;
+&#13;
+## 三、运算符号&#13;
+&#13;
+**大运算**&#13;
+&#13;
+| 含义 | 符号 | 代码 |&#13;
+| --- | --- | --- |&#13;
+| 求和 | $\sum$ | `\sum` |&#13;
+| 积 | $\prod$ | `\prod` |&#13;
+| | $\coprod$ | `\coprod` |&#13;
+| 积分 | $\int$ | `\int` |&#13;
+| 积分 | $\intop$ | `\intop` |&#13;
+| 积分 | $\smallint$ | `\smallint` |&#13;
+| 二重积分 | $\iint$ | `\iint` |&#13;
+| 三重积分 | $\iiint$ | `\iiint` |&#13;
+| 环路积分 | $\oint$ | `\oint` |&#13;
+| 二重环路积分 | $\oiint$ | `\oiint` |&#13;
+| 三重环路积分 | $\oiiint$ | `\oiiint` |&#13;
+| | $\bigotimes$ | `\bigotimes` |&#13;
+| | $\bigoplus$ | `\bigoplus` |&#13;
+| | $\bigodot$ | `\bigodot` |&#13;
+| | $\biguplus$ | `\biguplus` |&#13;
+| | $\bigvee$ | `\bigvee` |&#13;
+| | $\bigwedge$ | `\bigwedge` |&#13;
+| 交 | $\bigcap$ | `\bigcap` |&#13;
+| 并 | $\bigcup$ | `\bigcup` |&#13;
+| | $\bigsqcup$ | `\bigsqcup` |&#13;
+&#13;
+**普通计算**&#13;
+&#13;
+| 含义 | 符号 | 代码 |&#13;
+| --- | --- | --- |&#13;
+| 加 | + | 本身 |&#13;
+| 减 | - | 本身 |&#13;
+| 除 | $\div$ | `\div` |&#13;
+| 除（斜杠） | / | 本身 |&#13;
+| 叉乘 | $\times$ | `\times` |&#13;
+| 点乘 | $\cdot$ 或 $\cdotp$ 或 $\centerdot$ | `\cdot` 或 `\cdotp` 或 `\centerdot` |&#13;
+| 加减 | $\pm$ | `\pm` 或 `\plusmn` |&#13;
+| 减加 | $\mp$ | `\mp` |&#13;
+&#13;
+&#13;
+等价于 $\Longleftrightarrow$ `\Longleftrightarrow`&#13;
+&#13;
+对立事件 $\overline{A}$ `\overline{A}`&#13;
+&#13;
+大于等于 $\geq$ `\geq`&#13;
+&#13;
+小于等于 $\leq$ `\leq`&#13;
+&#13;
+不等于 $\neq$ `\neq`&#13;
+&#13;
+无穷 $\infty$ `\infty`&#13;
+&#13;
+服从 $\sim$ `\sim`&#13;
+&#13;
+约等于 $\approx$ `\approx`&#13;
+&#13;
+分布律 &#13;
+&#13;
+$$&#13;
+\begin{array}{c|cccc}&#13;
+X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\&#13;
+\hline&#13;
+P &amp; p_1 &amp; p_2 &amp; \cdots &amp; p_n&#13;
+\end{array}&#13;
+$$&#13;
+&#13;
+    $$&#13;
+    \begin{array}{c|cccc}&#13;
+    X &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\&#13;
+    \hline&#13;
+    P &amp; p_1 &amp; p_2 &amp; \cdots &amp; p_n&#13;
+    \end{array}&#13;
+    $$&#13;
+&#13;
+联合分布律&#13;
+&#13;
+$$&#13;
+\begin{array}{c|ccc}&#13;
+X \backslash Y &amp; y_1 &amp; y_2 &amp; \cdots &amp; y_j &amp; \cdots \\&#13;
+\hline&#13;
+x_1 &amp; p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1j} &amp; \cdots \\&#13;
+x_2 &amp; p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2j} &amp; \cdots \\&#13;
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
+x_i &amp; p_{31} &amp; p_{32} &amp; \cdots &amp; p_{3j} &amp; \cdots \\&#13;
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
+\end{array}&#13;
+$$&#13;
+&#13;
+    $$&#13;
+    \begin{array}{c|ccc}&#13;
+    X \backslash Y &amp; y_1 &amp; y_2 &amp; \cdots &amp; y_j &amp; \cdots \\&#13;
+    \hline&#13;
+    x_1 &amp; p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1j} &amp; \cdots \\&#13;
+    x_2 &amp; p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2j} &amp; \cdots \\&#13;
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
+    x_i &amp; p_{31} &amp; p_{32} &amp; \cdots &amp; p_{3j} &amp; \cdots \\&#13;
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\&#13;
+    \end{array}&#13;
+    $$&#13;
+&#13;
+分段函数&#13;
+&#13;
+$$&#13;
+F(x) = &#13;
+\begin{cases} &#13;
+0 , \space x \le 0 \\&#13;
+Ax^2 , \space0 &lt; x \le 1 \\&#13;
+1 , \space x &gt; 1&#13;
+\end{cases}&#13;
+$$&#13;
+&#13;
+    $$&#13;
+    F(x) = &#13;
+    \begin{cases} &#13;
+    0 , \space x \le 0 \\&#13;
+    Ax^2 , \space0 &lt; x \le 1 \\&#13;
+    1 , \space x &gt; 1&#13;
+    \end{cases}&#13;
+    $$&#13;
+&#13;
+$\xrightarrow{over}$&#13;
+&#13;
+    $\xrightarrow{over}$。</description><guid isPermaLink="true">https://interset-wq.github.io/post/46.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Markdown语法</title><link>https://interset-wq.github.io/post/47.html</link><description># Markdown语法&#13;
+&#13;
+✏️ `本文创建于2025-3-10`&#13;
+&#13;
+## 一、标题&#13;
+&#13;
+markdown和html一样支持六个级别的标题，分别是标题一到标题六。</description><guid isPermaLink="true">https://interset-wq.github.io/post/47.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>快捷键</title><link>https://interset-wq.github.io/post/48.html</link><description># 快捷键&#13;
+&#13;
+✏️ `本文创建于2025-3-13`&#13;
+&#13;
+## Win11&#13;
+&#13;
+- 全屏,不显示任务栏 ++f11++&#13;
+- emoji ++windows+period++&#13;
+- 剪贴板 ++windows+v++&#13;
+- 切换输入法 ++windows+space++&#13;
+- 回到桌面 ++windows+d++&#13;
+- 打开文件资源管理器 ++windows+e++&#13;
+&#13;
+## VS Code&#13;
+&#13;
+缩进&#13;
+: &#13;
+    - 增加缩进 ++tab++ 或 ++ctrl+bracket-right++&#13;
+    - 减少缩进 ++tab+shift++ 或 ++ctrl+bracket-left++&#13;
+&#13;
+注释&#13;
+:   &#13;
+    - 注释、取消注释 ++ctrl+slash++&#13;
+&#13;
+移动代码块&#13;
+:   &#13;
+    - 向上移动 ++alt+up++&#13;
+    - 向下移动 ++alt+down++&#13;
+&#13;
+文件资源管理器&#13;
+:   &#13;
+    - 隐藏文件资源管理器 ++ctrl+b++&#13;
+&#13;
+打开文件&#13;
+:   &#13;
+    - 打开文件 ++ctrl+o++&#13;
+&#13;
+删除行&#13;
+:   &#13;
+    - 删除整行 ++ctrl+shift+k++&#13;
+&#13;
+换行&#13;
+:   &#13;
+    - 换行 ++ctrl+enter++&#13;
+&#13;
+复制粘贴代码块&#13;
+:   &#13;
+    - 向上粘贴 ++shift+alt+up++&#13;
+    - 向下粘贴 ++shift+alt+down++&#13;
+&#13;
+## PyCharm&#13;
+&#13;
+- 复制粘贴代码块 ++ctrl+d++&#13;
+- 移动代码块&#13;
+    * 向上 ++shift+alt+up++&#13;
+    * 向下 ++shift+alt+down++&#13;
+- 运行当前代码文件 ++ctrl+shift+f10++&#13;
+- 重命名文件 ++shift+f6++&#13;
+- 搜索 ++ctrl+f++&#13;
+&#13;
+## Word&#13;
+&#13;
+- 批量取消超链接 ++ctrl+shift+f9++&#13;
+- 编辑域代码、退出编辑域代码 ++shift+f9++&#13;
+- 插入域 ++ctrl+f9++&#13;
+&#13;
+## Excel&#13;
+&#13;
+- 手动换行 ++alt+enter++。</description><guid isPermaLink="true">https://interset-wq.github.io/post/48.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>threading</title><link>https://interset-wq.github.io/post/111.html</link><description>✏️ `本文创建于2025-4-17`&#13;
+&#13;
+[:simple-python: threading官方文档](https://docs.python.org/zh-cn/3/library/threading.html)&#13;
+&#13;
+## 导入threading&#13;
+&#13;
+    from threading import Thread&#13;
+&#13;
+## 第一步：创建thread对象&#13;
+&#13;
+Thread类：&#13;
+&#13;
+`Thread(group, target, name, args, kwargs, daemon)`&#13;
+&#13;
+创建thread对象时必须使用关键字参数传参，禁止使用位置参数。</description><guid isPermaLink="true">https://interset-wq.github.io/post/111.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item></channel></rss>
