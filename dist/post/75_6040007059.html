@@ -20,27 +20,13 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="✏️ `本文创建于2025-6-8`
-
-本篇共 3 章，正文按章拆分为系列文章，点击下方目录或页面底部系列列表阅读：
-
-- **第六章 样本及抽样分布**
-- **第七章 参数估计**
-- **第八章 假设检验**
-。">
-<meta property="og:title" content="概率统计-数理统计">
-<meta property="og:description" content="✏️ `本文创建于2025-6-8`
-
-本篇共 3 章，正文按章拆分为系列文章，点击下方目录或页面底部系列列表阅读：
-
-- **第六章 样本及抽样分布**
-- **第七章 参数估计**
-- **第八章 假设检验**
-。">
+  <meta name="description" content="My notes on everything.">
+<meta property="og:title" content="第八章 假设检验">
+<meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/75.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/75_6040007059.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>概率统计-数理统计</title>
+<title>第八章 假设检验</title>
   
 <style>
   <style>
@@ -59,7 +45,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">概率统计-数理统计</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">第八章 假设检验</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -69,29 +55,180 @@
 </button>
 </nav></header>
   <main class="in-site-main" id="content">  <article>
+    <nav class="in-series-crumb" aria-label="Series">
+      <a href="https://interset-wq.github.io/post/75.html">概率统计-数理统计</a>
+      <span>3 / 3</span>
+    </nav>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-08-06</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-07</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-07</span>
       <span class="Label" style="background-color:#56b6c2;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#Math">Math</a>
       </span>
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><p>✏️ <code class="notranslate">本文创建于2025-6-8</code></p>
-<p>本篇共 3 章，正文按章拆分为系列文章，点击下方目录或页面底部系列列表阅读：</p>
+    <div class="in-post-body markdown-body"><h3>8.1  假设检验的基本思想</h3>
+<h4>8.1.1 假设检验的基本思想 (概率性质的反证法)</h4>
+<p>为了推断总体,  首先对总体的分布或未知参数作出某种假设 $H_0$ ,  然后在 $H_0$ 成立的条件下,  若通过抽样分析发现“小概率事件”(矛盾)竟然在一次试验中发生了,  则表明 $H_0$ 很可能不成立,  从而拒绝 $H_0$ ；相反,  若没有导致上述“不合理”现象的发生,  则没有理由拒绝 $H_0$ ,  从而接受 $H_0$</p>
+<h4>8.1.2 两类错误</h4>
 <ul>
-<li><strong>第六章 样本及抽样分布</strong></li>
-<li><strong>第七章 参数估计</strong></li>
-<li><strong>第八章 假设检验</strong></li>
-</ul></div>
-    <nav class="in-series-list" aria-label="Series">
-      <h2>概率统计-数理统计</h2>
-      <ol>
-        <li><a href="https://interset-wq.github.io/post/75_6040005435.html">第六章 样本及抽样分布</a></li>
-        <li><a href="https://interset-wq.github.io/post/75_6040006231.html">第七章 参数估计</a></li>
-        <li><a href="https://interset-wq.github.io/post/75_6040007059.html">第八章 假设检验</a></li>
-      </ol>
+<li>第一类错误(弃真) $H_0$ 实际正确,  但据抽样分析拒绝了 $H_0$ ；P {拒绝 $H_0$ | $H_0$ 为真} = $\alpha$ —— 显著性水平</li>
+<li>第二类错误(纳伪) $H_0$ 实际错误,  但据抽样分析接受了 $H_0$ ．P {接受 $H_0$ | $H_0$ 不真} = $\beta$
+</li>
+</ul>
+<h4>8.1.3 假设检验的步骤</h4>
+<details>
+<summary>假设检验</summary>
+<p>某厂正常情况下生产灯泡寿命$X \sim N(1600,  80^2)$,  现从一批灯泡中抽取10个,  测得它们的平均寿命 $\bar{x} = 1548$,   若灯泡使用寿命的标准差不变,  在显著性水平 $\alpha = 0.05$ 的条件下,  能否认为该厂的生产正常?</p>
+<details>
+<summary>inline end</summary>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/923b69cf0f3b20d995a6a7119047b32b3c669dc0e1d0e0b9abba4ebac31d4ab2/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f39327867697a596a7233454d7666542e77656270"><img src="https://camo.githubusercontent.com/923b69cf0f3b20d995a6a7119047b32b3c669dc0e1d0e0b9abba4ebac31d4ab2/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f39327867697a596a7233454d7666542e77656270" alt="ex.webp" data-canonical-src="https://s2.loli.net/2025/06/10/92xgizYjr3EMvfT.webp" style="max-width: 100%;"></a></p>
+</details>
+<p><strong>解</strong> 由题意,  要检验假设 $H_0 ：\mu = \mu _0 = 1600,  H ：\mu \not = 1600$,  因 $\bar{X}$ 是 $\mu$ 的无偏估计,  所以用 $\bar{X}$ 来检验 $H_0$ 是合理的．</p>
+<p>在 $H_0$ 成立的条件下,  统计量 $U = \frac{\bar{X} - \mu <em>0}{\sigma} \sqrt{n} \sim N(0,  1)$,  若 $H_0$ 不真,  则 $|U|$ 一般会很大,  于是由 $P {|U| &gt; u</em>{1 - \alpha / 2} }  = \alpha$,  得拒绝域 $W = U &amp;gt; u_{1 - \alpha / 2} 或 U &amp;lt; -u_{1 - \alpha / 2}$</p>
+<p>因 $u = \frac{1548 - 1600}{80} \sqrt{10} \approx -2.06 &amp;lt; - u_{0.975} = -1.96$</p>
+<p>观测值落入拒绝域,  即“小概率事件”竟发生了,  从而拒绝原假设 $H_0$ ,  认为生产过程不正常．</p>
+</details>
+<details>
+<summary>假设检验求解过程</summary>
+<ol>
+<li>由实际问题的要求提出原假设 $H_0$ 和对立假设 $H_1$
+</li>
+<li>选择适当的统计量,  在 $H_0$ 成立的条件下确定其分布</li>
+<li>对给定的 $\alpha$,  构造“小概率事件”,  得到拒绝域</li>
+<li>据统计量的观测值对是否接受 $H_0$ 做出判断</li>
+</ol>
+</details>
+<h3>8.2  单个正态总体参数的假设检验</h3>
+<h4>8.2.1 期望的假设检验</h4>
+<p><strong>当 $\sigma  ^2$ 已知时</strong></p>
+<details>
+<summary>inline end</summary>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ebb220f92e0784529b1a5a9c78d3942eab9e751ce13770896bf983216e8a45b8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f6639726264495a58446d7161537a432e77656270"><img src="https://camo.githubusercontent.com/ebb220f92e0784529b1a5a9c78d3942eab9e751ce13770896bf983216e8a45b8/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f6639726264495a58446d7161537a432e77656270" alt="sig.webp" data-canonical-src="https://s2.loli.net/2025/06/10/f9rbdIZXDmqaSzC.webp" style="max-width: 100%;"></a></p>
+</details>
+<p>$U$ 检验 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$</p>
+<ul>
+<li>
+<p>$H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0$ (双侧)</p>
+<p>$W = \set{U &amp;gt; u_{1 - \alpha / 2} 或 U &amp;lt; -u_{1 - \alpha / 2} }$</p>
+</li>
+<li>
+<p>$H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &amp;gt; \mu _0$ (单侧)</p>
+<p>$W = \set{U &amp;gt; u_{1 - \alpha}}$</p>
+</li>
+<li>
+<p>$H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &amp;lt; \mu _0$ (单侧)</p>
+<p>$W = \set{U &amp;lt; u_{1 - \alpha}}$</p>
+</li>
+</ul>
+<p><strong>当 $\sigma ^2$ 未知时</strong></p>
+<details>
+<summary>inline end</summary>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/83013033534e35cbc669f36927e79c18ff34f24a5a3accc9d2f40481026005a3/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f794c6b4355516f316e4f42337347452e77656270"><img src="https://camo.githubusercontent.com/83013033534e35cbc669f36927e79c18ff34f24a5a3accc9d2f40481026005a3/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f794c6b4355516f316e4f42337347452e77656270" alt="p.webp" data-canonical-src="https://s2.loli.net/2025/06/10/yLkCUQo1nOB3sGE.webp" style="max-width: 100%;"></a></p>
+</details>
+<p>$T$ 检验 $T = \frac{\bar{X} - \mu _0}{S} \sqrt{n} \sim t(n -1)$</p>
+<ul>
+<li>
+<p>$H_0 ：\mu = \mu _0 ,  H_1 ：\mu \not = \mu _0$</p>
+<p>$W = \set{T &amp;gt; t_{1 - \alpha / 2} (n - 1) 或 T &amp;lt; -t_{1 - \alpha / 2} (n - 1)}$</p>
+</li>
+<li>
+<p>$H_0 ：\mu \le \mu _0 ,  H_1 ：\mu &amp;gt; \mu _0$</p>
+<p>$W = \set{T &amp;gt; t_{1 - \alpha} (n - 1)}$</p>
+</li>
+<li>
+<p>$H_0 ：\mu \ge \mu _0 ,  H_1 ：\mu &amp;lt; \mu _0$</p>
+<p>$W = \set{T &amp;lt; - t_{1 - \alpha} (n - 1)}$</p>
+</li>
+</ul>
+<blockquote>
+<p>拒绝域中的不等号与 $H_0$ 的相反．</p>
+</blockquote>
+<hr>
+<details>
+<summary>U检验</summary>
+<p>厂商称他们的装潢材料抗断强度 $X \sim N(3.25,  1.21)$,  现从中抽取9件进行检验,  测得平均抗断强度为3.15,  问能否接受该厂商的说法? $(\alpha = 0.05)$</p>
+<p><strong>解</strong> 由题意,  要检验假设 $H_0 ：\mu = \mu _0 = 3.25,  H_1 ：\mu \not = 3.25$ , 因为是在方差已知的情况下对期望进行假设检验,   所以使用 U 检验,  即 $U = \frac{\bar{X} - \mu _0}{\sigma} \sim N(0,  1)$,  从而可得拒绝域</p>
+<p>$W = \set{U &amp;gt; u_{1 - \alpha / 2} 或 U &amp;lt; -u_{1 - \alpha / 2} }$</p>
+<p>因 $1.96 = u_{0.975} &amp;gt; u = \frac{3.15 - 3.25}{1.1} \sqrt{9} \approx -0.273 &amp;gt; -u_{0.975} = -1.96$</p>
+<p>所以接受 $H_0$ ,  即认为该厂商的说法是正确的．</p>
+</details>
+<details>
+<summary>T检验</summary>
+<p>电视台广告部称企业在该台播放广告后的平均利润收益量至少为15万元,  已知这类企业广告播出后的收益量服从正态分布． 现抽取容量为20的样本,  得平均收益量为13.2万元,  标准差为3.4,  试在显著性水平 $\alpha = 0.05$ 下,  判断该广告部的说法是否正确?</p>
+<p><strong>解</strong> 由题意,  要检验假设 $H_0 ：\mu \ge \mu =15,  H_1 ：\mu &amp;lt;15$ , 因为是在方差未知的情况下对期望进行假设检验,   所以使用 T 检验,  即 $T = \frac{\bar{X} - \mu <em>0}{S} \sqrt{n} \sim t(n -1)$,   拒绝域 $W = \set{T &lt; - t</em>{1 - \alpha} (n - 1)}$</p>
+<p>由于 $t = \frac{13.2 - 15}{3.4} \sqrt{20} \approx -2.37  &amp;lt; -t_{0.95} (19) = -1.729$</p>
+<p>所以拒绝 $H_0$ ,  即认为该广告部的说法不正确．</p>
+</details>
+<h4>8.2.2 方差的假设检验</h4>
+<p><strong>当 $\mu$ 已知时</strong></p>
+<details>
+<summary>inline end</summary>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2c1ca2af4a043e84a13190103bfaaa0690c9cd85cb53cea1a6c50230c8bd5d15/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f443346514a6d554d496166543953652e77656270"><img src="https://camo.githubusercontent.com/2c1ca2af4a043e84a13190103bfaaa0690c9cd85cb53cea1a6c50230c8bd5d15/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f443346514a6d554d496166543953652e77656270" alt="p1.webp" data-canonical-src="https://s2.loli.net/2025/06/10/D3FQJmUMIafT9Se.webp" style="max-width: 100%;"></a></p>
+</details>
+<p>$\chi ^2(n)$ 检验</p>
+<p>$$
+\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \mu)^2 \sim \chi ^2(n)
+$$</p>
+<ul>
+<li>
+<p>$H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2$</p>
+<p>$W = \set{\chi ^2 &amp;gt; \chi _{1 - \alpha / 2} ^2 (n) 或 \chi ^2 &amp;lt; \chi _{\alpha / 2} ^2 (n)}$</p>
+</li>
+<li>
+<p>$H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &amp;gt; \sigma ^2$</p>
+<p>$W = \set{\chi ^2 &amp;gt; \chi _{1 - \alpha} ^2 (n)}$</p>
+</li>
+<li>
+<p>$H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &amp;lt; \sigma ^2$</p>
+<p>$W = \set{\chi ^2 &amp;lt; \chi _{\alpha} ^2 (n)}$</p>
+</li>
+</ul>
+<p><strong>当 $\mu$ 未知时</strong></p>
+<details>
+<summary>inline end</summary>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c8695deddf3f422b3bf7b5b0ae055b10b5bb2c4996f597436ec83c0e7a4e0bb4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f374462415863595a42363266646c4a2e77656270"><img src="https://camo.githubusercontent.com/c8695deddf3f422b3bf7b5b0ae055b10b5bb2c4996f597436ec83c0e7a4e0bb4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30362f31302f374462415863595a42363266646c4a2e77656270" alt="p2.webp" data-canonical-src="https://s2.loli.net/2025/06/10/7DbAXcYZB62fdlJ.webp" style="max-width: 100%;"></a></p>
+</details>
+<p>$\chi ^2 (n-1)$ 检验</p>
+<p>$$
+\chi ^2 = \frac{1}{\sigma _0 ^2} \sum _{i=1} ^n (X_i - \bar{X})^2 \sim \chi ^2(n-1)
+$$</p>
+<ul>
+<li>
+<p>$H_0 ：\sigma ^2 = \sigma _0 ^2,  H_1 ：\sigma ^2 \not = \sigma ^2$</p>
+<p>$W = \set{\chi ^2 &amp;gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &amp;lt; \chi _{\alpha / 2} ^2 (n-1)}$</p>
+</li>
+<li>
+<p>$H_0 ：\sigma ^2 \le \sigma _0 ^2,  H_1 ：\sigma ^2 &amp;gt; \sigma ^2$</p>
+<p>$W = \set{\chi ^2 &amp;gt; \chi _{1 - \alpha} ^2 (n-1)}$</p>
+</li>
+<li>
+<p>$H_0 ：\sigma ^2 \ge \sigma _0 ^2,  H_1 ：\sigma ^2 &amp;lt; \sigma ^2$</p>
+<p>$W = \set{\chi ^2 &amp;lt; \chi _{\alpha} ^2 (n-1)}$</p>
+</li>
+</ul>
+<blockquote>
+<p>双侧检验的接受域即为置信区间．</p>
+</blockquote>
+<hr>
+<details>
+<summary>$\chi ^2 (n-1)$ 检验</summary>
+<p>某车间生产的金属丝的折断力 $X \sim N(\mu,  64)$,  现从一批产品中抽出10根作折断力试验,  结果如下：578,  572,  570,  568,  572,  570,  572,  596,  584,  570 问能否认为这批金属丝的折断力方差仍为64? $(\alpha = 0.05)$</p>
+<p><strong>解</strong> 由题意,  要检验假设 $H_0 ：\sigma ^2 = \sigma _0 ^2 = 64；H_1 ：\sigma ^2 \not = 64$,  因为是在期望未知的情况下对方差进行假设检验,  所以使用 $\chi ^2(n -1)$ 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$,  从而可得</p>
+<p>拒绝域 $W = \set{\chi ^2 &amp;gt; \chi _{1 - \alpha / 2} ^2 (n-1) 或 \chi ^2 &amp;lt; \chi _{\alpha / 2} ^2 (n-1)}$</p>
+<p>由于 $2.7 = \chi _{0.025} ^2 (9) &amp;lt; \chi ^2 \approx 10.65 &amp;lt; \chi _{0.975} ^2 (9) =19.02$</p>
+<p>所以接受 $H_0$ ,  即认为折断力的方差与 64 无显著差异．</p>
+</details>
+<details>
+<summary>$\chi ^2 (n-1)$ 检验</summary>
+<p>某车间生产一种保险丝,  规定保险丝熔化时间的方差不得超过400．今从一批产品中抽出25个,   测得其熔化时间的方差为388.58．已知保险丝熔化时间服从正态分布,  试根据所给数据,  检验这批产品是否符合<br>
+要求? $(\alpha = 0.05)$</p>
+<p><strong>解</strong> 由题意,  要检验假设 $H_0 ：\sigma ^2 \leq \sigma _0 ^2 = 400；H_1 ：\sigma ^2 &amp;gt; 400$ 因为在期望未知的情况下对方差进行假设检验,  所以使用 $\chi ^2 (n-1)$ 检验,  即 $ \chi ^2 = \frac{1}{\sigma _0 ^2} \sum (X_i - \bar{X})^2 \sim \chi ^2(n-1)$ ,  从而可得拒绝域  $W = \set{\chi ^2 &amp;gt; \chi _{1 - \alpha} ^2 (n-1)}$</p>
+<p>由于 $\chi ^2 \approx 23.31 &amp;lt; \chi _{0.95} ^2 (24) = 36.42$</p>
+<p>所以应该接受 $H_0$ ,  即这批保险丝符合要求．</p>
+</details></div>
+    <nav class="in-series-pager" aria-label="Series pages">
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/75_6040006231.html">第七章 参数估计</a>
     </nav>
   </article>
 <section class="in-comments-section">

@@ -21,15 +21,15 @@
     })();
   </script>
   <meta name="description" content="My notes on everything.">
-<meta property="og:title" content="GFM 扩展语法">
+<meta property="og:title" content="OOP面向对象">
 <meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/47_6033898039.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/112_6039403493.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>GFM 扩展语法</title>
+<title>OOP面向对象</title>
   <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
   
-<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}.markdown-alert.markdown-alert-caution {border-left-color:var(--borderColor-danger-emphasis, var(--color-danger-emphasis));background-color:var(--color-danger-subtle);}.markdown-alert.markdown-alert-caution .markdown-alert-title {color: var(--fgColor-danger,var(--color-danger-fg));}
+<style>
   <style>
     .in-progress {
       position: fixed;
@@ -46,7 +46,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">GFM 扩展语法</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">OOP面向对象</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -57,113 +57,152 @@
 </nav></header>
   <main class="in-site-main" id="content">  <article>
     <nav class="in-series-crumb" aria-label="Series">
-      <a href="https://interset-wq.github.io/post/47.html">Markdown语法</a>
+      <a href="https://interset-wq.github.io/post/112.html">Python基础语法</a>
       <span>1 / 1</span>
     </nav>
     <div class="in-post-meta">
       <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-07</span>
-      <span class="Label" style="background-color:#d4c5f9;color:#fff">
-        <a href="https://interset-wq.github.io/tag.html#Reference">Reference</a>
+      <span class="Label" style="background-color:#3572a5;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
       </span>
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><h1>GFM 扩展语法</h1>
-<p>GitHub Flavored Markdown 在标准 Markdown 之上的扩展。每节均为「源码 → 渲染效果」对照。</p>
-<h2>一、文本样式扩展</h2>
-<pre lang="text" class="notranslate"><code class="notranslate">~~删除线~~ 或 ~单波浪线~
-H&lt;sub&gt;2&lt;/sub&gt;O 下标
-X&lt;sup&gt;2&lt;/sup&gt; 上标
-&lt;ins&gt;下划线&lt;/ins&gt;
+    <div class="in-post-body markdown-body"><p>要使用tkinter进行GUI设计，就不得不用到<strong>面向对象</strong>的编程思想。Tkinter提供的小部件非常有限，而且大多数小部件的功能往往不足以完成相应的任务。在这种情况之下，就不得不使用继承来加强小部件的功能，或者创建新的小部件。</p>
+<p>面向对象编程（object-oriented programming，OOP）是最有效的软件编写方法之一，在面向对象编程中，我们可以：编写表示现实世界中事物或情景的类（class），并基于这些类来创建对象（object）。通过类的实例化来根据类创建对象，并在代码中使用类的实例（instance）对象。</p>
+<p>class关键字，类名以大写字母开头（大驼峰命名法）。 类名后面不需要加括号，但是子类后面需要加括号</p>
+<h2>一、属性</h2>
+<p>使用 <code class="notranslate">dir()</code> 函数可以查看一个对象所有的方法和属性</p>
+<h3>1.1 类属性</h3>
+<p>通俗来说，类属性就是定义在类中的变量。不需要创建实例就能直接使用，当然实例也可以使用类属性。通过类名就可以调用，可以更改属性值，还可以创建新属性。</p>
+<p>我们来创建一个 <em>Banana</em> 类：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+    <span class="pl-s">"""一种美味的热带水果"""</span>
+    <span class="pl-s1">food_group</span> <span class="pl-c1">=</span> <span class="pl-s">'fruit'</span>
+    <span class="pl-s1">colors</span> <span class="pl-c1">=</span> [<span class="pl-s">'green'</span>, <span class="pl-s">'green-yellow'</span>, <span class="pl-s">'yellow'</span>, <span class="pl-s">'brown spotted'</span>, <span class="pl-s">'black'</span>]</pre></div>
+<p>上面代码中的 <em>food_group</em> 和 <em>colors</em> 就是类属性。它们不需要创建实例就可以使用，对二者调用 <code class="notranslate">print()</code> 函数：</p>
+<pre class="notranslate"><code class="notranslate">print(Banana.food_group) # fruit 
+print(Banana.colors) # ['green', 'green-yellow', 'yellow', 'brown spotted', 'black']
 </code></pre>
-<p>渲染效果：<del>删除线</del>、H<sub>2</sub>O、X<sup>2</sup>、<ins>下划线</ins></p>
-<h2>二、颜色</h2>
-<p>反引号内写颜色值会渲染成色块（支持 hex / rgb / hsl）：</p>
-<pre lang="text" class="notranslate"><code class="notranslate">`#0969da` `rgb(9, 105, 218)` `hsl(212, 92%, 45%)`
+<h3>1.2 实例属性</h3>
+<p>使用初始化方法 <code class="notranslate">__init__()</code> 创建实例属性。<code class="notranslate">self</code> 形参：它是一个指向实例本身的引用，实例的每次调用都会自动传入自身，这样使得实例能够访问类中的属性和方法，self 形参必不可少，而且必须位于其他形参的前面。</p>
+<p>所有的实例属性定义时都有 <code class="notranslate">self.</code> 的前缀，有些属性无须通过形参来定义，可以在 <code class="notranslate">__init__()</code> 方法中为其指定默认值。</p>
+<p>实例属性就是定义在构造方法（又称初始化方法，属于魔术方法的一种） <code class="notranslate">__init__()</code> 中的带有 <em>self.</em> 前缀的变量，必须创建实例之后才能使用。不创建实例通过类名调用会报错。需要先创建实例，才能调用，创建实例后，可以对属性重新赋值，还可以创建新属性。</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+    <span class="pl-c"># --snip--</span>
+    <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'green'</span>):
+        <span class="pl-s1">self</span>.<span class="pl-c1">color</span> <span class="pl-c1">=</span> <span class="pl-s1">color</span></pre></div>
+<p>此处的 <em>self.color</em> 就是实例属性，它是定义在 <code class="notranslate">__init__()</code> 方法中的一个变量。</p>
+<ul>
+<li><code class="notranslate">__init__(self)</code> 方法的第一个参数必须是 <em>self</em>，用来表示实例本身</li>
+<li><em>self.color</em> 和 <em>color</em> 并不是同一个变量，而是两个不同的变量，<em>self.color</em> 是一个不可分割的整体</li>
+</ul>
+<p>为了使用 <em>self.color</em> 属性，我们需要创建实例：</p>
+<pre class="notranslate"><code class="notranslate">my_banana = Banana()
+print(my_banana.color) # green
 </code></pre>
-<p>渲染效果：<code class="notranslate">#0969da<span class="ml-1 d-inline-block border circle color-border-subtle" style="background-color: #0969da; height: 8px; width: 8px;"></span></code> <code class="notranslate">rgb(9, 105, 218)<span class="ml-1 d-inline-block border circle color-border-subtle" style="background-color: rgb(9, 105, 218); height: 8px; width: 8px;"></span></code> <code class="notranslate">hsl(212, 92%, 45%)<span class="ml-1 d-inline-block border circle color-border-subtle" style="background-color: hsl(212, 92%, 45%); height: 8px; width: 8px;"></span></code></p>
-<h2>三、Emoji</h2>
-<p>冒号包裹短代码，完整清单见 <a href="https://github.com/ikatyang/emoji-cheat-sheet">emoji-cheat-sheet</a>：</p>
-<pre lang="text" class="notranslate"><code class="notranslate"><img class="emoji" alt=":smile:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8"> <img class="emoji" alt=":tada:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8"> <img class="emoji" alt=":rocket:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png?v8"> <img class="emoji" alt=":+1:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">
+<h2>二、方法</h2>
+<h3>2.1 实例方法</h3>
+<p>定义在类中的函数，和 <code class="notranslate">__init__()</code> 方法一样，第一个参数必须是 <em>self</em>。需要先创建实例，才能调用。创建实例后，可以新建方法（先定义一个函数，再使用self.的方式将创建的函数名赋值给self）。</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+    <span class="pl-c"># --snip--</span>
+    <span class="pl-k">def</span> <span class="pl-en">print_color</span>(<span class="pl-s1">self</span>):
+        <span class="pl-en">print</span>(<span class="pl-s1">self</span>.<span class="pl-c1">color</span>)</pre></div>
+<p>需要创建实例才可以使用：</p>
+<pre class="notranslate"><code class="notranslate">my_banana.print_color() # green
 </code></pre>
-<p>渲染效果：<img class="emoji" alt=":smile:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8"> <img class="emoji" alt=":tada:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8"> <img class="emoji" alt=":rocket:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png?v8"> <img class="emoji" alt=":+1:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8"></p>
-<h2>四、脚注</h2>
-<pre lang="text" class="notranslate"><code class="notranslate">这里有一个脚注[^1]，还可以多行[^2]。
-
-[^1]: 引用内容。
-[^2]: 换行需要在行首加两个空格。
-     这是第二行。
+<h3>2.2 类方法</h3>
+<p>使用装饰器 <code class="notranslate">@classmethod</code> 修饰的方法，类方法的第一个参数必须是 <em>cls</em>，表示这个类本身。不能使用实例属性和实例方法，但是可以通过 <em>cls.</em> 来访问类属性，类似与实例属性的访问。</p>
+<p>不需要创建实例就可以调用类方法，在类中也可以通过 <code class="notranslate">self.</code> 来调用类方法，类似于实例方法在类中的调用。当然实例也可以调用类方法。</p>
+<p><code class="notranslate">cls()</code> 函数，在类方法中使用可以创建实例对象。</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+    <span class="pl-c"># --snip--</span>
+    <span class="pl-en">@<span class="pl-s1">classmethod</span></span>
+    <span class="pl-k">def</span> <span class="pl-en">check_color</span>(<span class="pl-s1">cls</span>, <span class="pl-s1">color</span>):
+        <span class="pl-k">return</span> <span class="pl-s1">color</span> <span class="pl-c1">in</span> <span class="pl-s1">cls</span>.<span class="pl-c1">colors</span></pre></div>
+<p>这个方法通过类名就可以直接调用：</p>
+<pre class="notranslate"><code class="notranslate">print(Banana.check_color('blue')) # False
 </code></pre>
-<p>渲染效果：这里有一个脚注<sup><a href="#user-content-fn-1-7d03b29c64228f05e8f644ee97b724db" id="user-content-fnref-1-7d03b29c64228f05e8f644ee97b724db" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup>，还可以多行<sup><a href="#user-content-fn-2-7d03b29c64228f05e8f644ee97b724db" id="user-content-fnref-2-7d03b29c64228f05e8f644ee97b724db" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>。</p>
-<h2>五、告诫块（Alerts）</h2>
-<p>五种级别，<code class="notranslate">&gt;</code> 内首行写 <code class="notranslate">[!类型]</code>：</p>
-<pre lang="text" class="notranslate"><code class="notranslate">&gt; [!NOTE]
-&gt; Useful information that users should know, even when skimming content.
-
-&gt; [!TIP]
-&gt; Helpful advice for doing things better or more easily.
-
-&gt; [!IMPORTANT]
-&gt; Key information users need to know to achieve their goal.
-
-&gt; [!WARNING]
-&gt; Urgent info that needs immediate user attention to avoid problems.
-
-&gt; [!CAUTION]
-&gt; Advises about risks or negative outcomes of certain actions.
+<h3>2.3 静态方法</h3>
+<p>使用装饰器<code class="notranslate">@staticmethod</code>修饰的方法，定义静态方法时，不需要传入参数 <em>self</em>或 <em>cls</em> 。静态方法类似于普通的函数。不能在静态方法中使用实例属性和实例方法。</p>
+<p>直接通过类名，就可以调用。当然也可以通过实例调用静态方法。</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+    <span class="pl-c"># --snip--</span>
+    <span class="pl-en">@<span class="pl-s1">staticmethod</span></span>
+    <span class="pl-k">def</span> <span class="pl-en">estimate_calories</span>(<span class="pl-s1">num_bananas</span>):
+        <span class="pl-k">return</span> <span class="pl-s1">num_bananas</span> <span class="pl-c1">*</span> <span class="pl-c1">105</span></pre></div>
+<p>这个方法通过类名就可以直接调用：</p>
+<pre class="notranslate"><code class="notranslate">print(Banana.estimate_calories(10)) # 1050
 </code></pre>
-<p>渲染效果：</p>
-<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>Useful information that users should know, even when skimming content.</p>
-</div>
-<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>Helpful advice for doing things better or more easily.</p>
-</div>
-<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p>Key information users need to know to achieve their goal.</p>
-</div>
-<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>Urgent info that needs immediate user attention to avoid problems.</p>
-</div>
-<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>Advises about risks or negative outcomes of certain actions.</p>
-</div>
-<h2>六、折叠区</h2>
-<p>HTML <code class="notranslate">&lt;details&gt;</code> 标签，<code class="notranslate">summary</code> 为可见标题：</p>
-<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">details</span><span class="pl-kos">&gt;</span>
-<span class="pl-kos">&lt;</span><span class="pl-ent">summary</span><span class="pl-kos">&gt;</span>点击展开<span class="pl-kos">&lt;/</span><span class="pl-ent">summary</span><span class="pl-kos">&gt;</span>
-被折叠的内容。
-<span class="pl-kos">&lt;/</span><span class="pl-ent">details</span><span class="pl-kos">&gt;</span></pre></div>
-<p>渲染效果：</p>
-<details>
-<summary>点击展开</summary>
-被折叠的内容。
-</details>
-<h2>七、自动链接</h2>
-<p>裸 URL、@用户名、#issue 号、SHA 均自动转链接：</p>
-<pre lang="text" class="notranslate"><code class="notranslate">https://github.com
-@octocat
-#47
-</code></pre>
-<p>渲染效果：<a href="https://github.com%E3%80%81@octocat%E3%80%81#47" rel="nofollow">https://github.com、@octocat、#47</a></p>
-<h2>八、LaTeX 数学（GitHub 支持）</h2>
-<pre lang="text" class="notranslate"><code class="notranslate">$\sqrt{3}x^2 + \frac{1}{2}$
-
-$$
-\int_a^b f(x)\,dx = F(b) - F(a)
-$$
-</code></pre>
-<p>渲染效果：</p>
-<p>$\sqrt{3}x^2 + \frac{1}{2}$</p>
-<p>$$
-\int_a^b f(x),dx = F(b) - F(a)
-$$</p>
-<section data-footnotes="" class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
-<ol>
-<li id="user-content-fn-1-7d03b29c64228f05e8f644ee97b724db">
-<p>引用内容。 <a href="#user-content-fnref-1-7d03b29c64228f05e8f644ee97b724db" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
-</li>
-<li id="user-content-fn-2-7d03b29c64228f05e8f644ee97b724db">
-<p>换行需要在行首加两个空格。<br>
-这是第二行。 <a href="#user-content-fnref-2-7d03b29c64228f05e8f644ee97b724db" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
-</li>
-</ol>
-</section></div>
+<h2>三、类的三个特性</h2>
+<p>封装、多态、继承</p>
+<h3>3.1 继承</h3>
+<p>代码复用。</p>
+<p>在编写类时，并非总是要从头开始，如果要编写的类是一个已有类的特殊版本，那么我们就可以使用继承（inheritance）。被继承的类称为父类（parent class）或超类，而继承的类称为子类（child class）。子类可以继承父类的所有属性和方法，也可以定义自己的属性和方法。</p>
+<p>父类代码必须放在在子类代码的前面。需要在子类名称后添加括号，并在其中指定父类的名称，括号中指定了当前类继承的父类名称。在子类的初始化方法中， 我们使用了 super() 函数。这是一个特殊的函数，让你能够调用父类的方法，继承父类的实例属性。当父类中定义的一些方法不能满足子类的要求时，可以在子类中随时重写父类的方法：定义一个同名的方法。当调用子类生成的实例时，Python 首先会查找子类中的方法，从而忽略父类中被重写的同名方法。也可以把实例当作属性</p>
+<p>单继承 使用 <code class="notranslate">super().__init__()</code> 继承父类属性和方法</p>
+<p>多继承 使用 <code class="notranslate">父类类名.__init__ ()</code> 继承父类方法和属性</p>
+<p>在子类中重写方法 可以使用 <code class="notranslate">super()</code> 从父类继承原方法</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">RedBanana</span>(<span class="pl-v">Banana</span>):
+    <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'green'</span>):
+        <span class="pl-en">super</span>().<span class="pl-c1">__init__</span>(<span class="pl-s1">color</span>)</pre></div>
+<p>通过继承 <em>RedBanana</em> 类获得了 <em>Banana</em> 类的所有属性和方法。</p>
+<h3>3.2 多态</h3>
+<p>提高程序的可扩展性。</p>
+<p>多个不同的类有同名的方法，通过创建一个参数是类的函数，这个函数中调用这些类同名的方法，可以实现多态（同一个方法，适用于不同的对象产生不同的行为）。</p>
+<h3>3.3 封装</h3>
+<p>保护程序的安全。</p>
+<h4>3.3.1 受保护成员（单下划线）</h4>
+<p>使用单下划线开头的属性和方法表示受保护的成员，只能在类的内部使用，子类可以通过继承获得受保护成员，实际上在外部也可以使用。</p>
+<h4>3.3.2 私有成员（双下划线）</h4>
+<p>使用双下划线开头的变量或方法表示私有成员，只能在类的内部使用，子类无法通过继承获得私有成员</p>
+<h4>3.3.3 魔术方法和魔术属性（首尾双下划线）</h4>
+<p>魔术方法</p>
+<ul>
+<li>构造方法 <code class="notranslate">__init__</code></li>
+<li><code class="notranslate">__str__</code>	对实例调用 <code class="notranslate">print()</code> 函数时，返回的内容</li>
+</ul>
+<p>魔术属性</p>
+<ul>
+<li>obj.__dict__属性 存储对象的属性字典</li>
+<li>obj.__class__属性 存储对象所属于的类，相当于调用了type()函数。在此基础上还可以再使用__name__属性，返类名</li>
+<li>obj.__bases__属性 存储对象父类的元组</li>
+<li>obj.__base__属性 存储对象继承的第一个父类</li>
+<li>obj.__mro__属性 存储直接或间接继承的父类的元组</li>
+</ul>
+<h2>四、类型注解</h2>
+<p>类的编写风格</p>
+<ul>
+<li>类名中的每个单词的首字母都应大写，并且不使用下划线。这种命名规则叫做大驼峰式命名法（也称为 Pascal 命名法）。实例名和模块名都应该使用全小写，并在单词之间加上下划线（_）。 这种命名规则叫做下划线命名法（也称为 蛇形命名法）</li>
+<li>每个类定义后的第一行和模块文件的首行，都应该包含一个文档字符串，简要地描述类的功能，以帮助其他人理解我们的代码</li>
+<li>使用两个空行来分隔不同类，使用一个空行分隔类内的不同方法</li>
+<li>当使用 import 语句时，使用一个空行分隔标准库和自己的库</li>
+</ul>
+<p>适用类型注解可以让 <code class="notranslate">PyCharm</code> 为自定义的方法、变量等添加代码提示。</p>
+<p>类型注解在代码简单时，几乎不使用，但是当代码十分复杂时，可以使用类型注解帮助自己更好的记住自己的思路，从而提高自己的工作效率。</p>
+<h3>4.1 对类中的变量添加类型注解</h3>
+<p>写法一</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span>: <span class="pl-smi">list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
+<span class="pl-s1">my_tuple</span>: <span class="pl-smi">tuple</span> <span class="pl-c1">=</span> (<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>)</pre></div>
+<p>写法二</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>] <span class="pl-c"># type: list</span>
+<span class="pl-s1">my_tuple</span> <span class="pl-c1">=</span> (<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>) <span class="pl-c"># type: tuple</span></pre></div>
+<p>分别对my_list和my_tuple两个变量进行了类型注解。</p>
+<h3>4.2 对类中的方法添加类型注解</h3>
+<p>例如：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-en">@<span class="pl-s1">staticmethod</span></span>
+<span class="pl-k">def</span> <span class="pl-en">estimate_calories</span>(<span class="pl-s1">num_bananas</span>: <span class="pl-smi">int</span>) <span class="pl-c1">-&gt;</span> <span class="pl-smi">int</span>:
+   <span class="pl-k">return</span> <span class="pl-s1">num_bananas</span> <span class="pl-c1">*</span> <span class="pl-c1">105</span></pre></div>
+<p>为传入的参数 <em>num_bananas</em> 和 方法的返回值添加了类型注解。</p>
+<h3>4.3 Union联合类型注解</h3>
+<p>如果一个变量中存储了不同类型的数据，那就需要使用联合类型注解，常用于字典、列表等。</p>
+<p>使用前先导入模块 <code class="notranslate">from typing import Union</code></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 旧版本Python</span>
+<span class="pl-k">from</span> <span class="pl-s1">typing</span> <span class="pl-k">import</span> <span class="pl-v">Union</span>
+<span class="pl-s1">my_list</span>: <span class="pl-s1">list</span>[<span class="pl-v">Union</span>[<span class="pl-smi">int</span>, <span class="pl-smi">str</span>]] <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-s">"hello"</span>, <span class="pl-s">"world"</span>]
+<span class="pl-c"># 新版本Python可以不导入typing</span>
+<span class="pl-s1">my_list2</span>: <span class="pl-s1">list</span>[<span class="pl-s1">int</span> <span class="pl-c1">|</span> <span class="pl-s1">str</span>] <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-s">"hello"</span>, <span class="pl-s">"world"</span>]</pre></div>
+<p>因为 <em>my_list</em> 变量存储的数据同时有 <em>int</em> 和 <em>str</em>，所以需要使用联合类型注解。</p></div>
     <nav class="in-series-pager" aria-label="Series pages">
     </nav>
   </article>
@@ -285,6 +324,6 @@ $$</p>
       update();
     })();
   </script>
-  <script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
 </body>
 </html>
