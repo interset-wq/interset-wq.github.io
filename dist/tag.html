@@ -58,7 +58,7 @@
   <span id="run-days"></span>
   <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
 </div>
-<div class="in-footer-built">构建部署于 2026-10-07 23:33:17</div>
+<div class="in-footer-built">构建部署于 2026-10-07 23:55:38</div>
 <script>
   (function () {
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
@@ -128,6 +128,7 @@
       var heading = document.querySelector('.in-page-title');
       var timeline = document.getElementById('timeline');
       var knownLabels = [];
+      var labelCounts = {};
       // "%d" placeholder swapped for the sub-post count at render time
       var SERIES_PARTS = "\u7cfb\u5217 \u00b7 %d \u7bc7";
 
@@ -139,14 +140,33 @@
         return list.querySelectorAll('.in-post-card');
       }
 
-      function badge(text, color) {
-        // Neutral chip + colour dot: label colours stay visible without
-        // betting on a readable bg/text pair (same look as the tag cloud).
-        var node = document.createElement('span');
-        node.className = 'in-badge';
-        node.style.setProperty('--in-badge-dot', color || '#6e7781');
-        node.textContent = text;
-        return node;
+      // EXACTLY the chip the tag cloud renders: button.in-tag-cloud-item
+      // with a colour dot, the label text and (labels only) the global
+      // post count - same DOM, same classes, same CSS. onClick lets a
+      // card chip filter in place instead of following the card link.
+      function badge(text, color, count, onClick) {
+        var button = document.createElement('button');
+        button.className = 'in-tag-cloud-item';
+        button.type = 'button';
+        var dot = document.createElement('span');
+        dot.className = 'in-tag-cloud-dot';
+        dot.style.backgroundColor = color || '#6e7781';
+        button.appendChild(dot);
+        button.appendChild(document.createTextNode(text));
+        if (count !== undefined) {
+          var num = document.createElement('span');
+          num.className = 'in-tag-cloud-count';
+          num.textContent = count;
+          button.appendChild(num);
+        }
+        if (onClick) {
+          button.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            onClick();
+          });
+        }
+        return button;
       }
 
       function postIcon() {
@@ -236,7 +256,9 @@
           var labelsBox = document.createElement('span');
           labelsBox.className = 'in-post-card-labels';
           item.labels.forEach(function (name) {
-            labelsBox.appendChild(badge(name, data.label_colors[name]));
+            labelsBox.appendChild(badge(name, data.label_colors[name], labelCounts[name] || 0, function () {
+              showLabel(name);
+            }));
           });
           meta.appendChild(labelsBox);
           if (item.subs) {
@@ -302,7 +324,9 @@
             var labelsBox = document.createElement('span');
             labelsBox.className = 'in-timeline-labels';
             item.labels.forEach(function (name) {
-              labelsBox.appendChild(badge(name, data.label_colors[name]));
+              labelsBox.appendChild(badge(name, data.label_colors[name], labelCounts[name] || 0, function () {
+                showLabel(name);
+              }));
             });
             body.appendChild(labelsBox);
 
@@ -421,7 +445,11 @@
       request.responseType = 'text';
       request.onload = function () {
         var data = JSON.parse(request.response);
-        renderCloud(data, countLabels(data));
+        var counts = countLabels(data);
+        Object.keys(counts).forEach(function (name) {
+          labelCounts[name] = counts[name];
+        });
+        renderCloud(data, counts);
         renderRows(data);
         renderTimeline(data);
         filter(decodeURI(window.location.hash.slice(1)) || 'All');
