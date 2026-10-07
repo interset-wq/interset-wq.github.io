@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Wed, 07 Oct 2026 08:42:39 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Wed, 07 Oct 2026 13:38:47 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
 
 这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>README</title><link>https://interset-wq.github.io/post/79.html</link><description>## 一、JavaScript简介&#13;
 &#13;
@@ -4648,16 +4648,12 @@ PowerShell控制台和集成脚本环境（ISE）都支持4中Tab补全以减少
 ## 管理网络接口&#13;
 &#13;
 计算机的基本网络参数包括那些？&#13;
-1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。</description><guid isPermaLink="true">https://interset-wq.github.io/post/62.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>basic-git-command</title><link>https://interset-wq.github.io/post/25.html</link><description>[:simple-git: Git官方文档](https://git-scm.com/doc){ .md-button .md-button--primary }
-[:simple-github: GitHub文档](https://docs.github.com/zh){ .md-button }
-
-[GitCode文档](https://docs.gitcode.com/){ .md-button .md-button--primary }
-[:simple-gitee: Gitee文档](https://gitee.com/all-about-git){ .md-button }
-
-???+ warning
-    创建 repo 时,一定要创建 `README.md` `.gitignore` 和 `LICENSE` 文件,减少不必要的麻烦
-
-`git init` 初始化一个全新的 Git 存储库并开始跟踪现有目录。</description><guid isPermaLink="true">https://interset-wq.github.io/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>First Contributions</title><link>https://interset-wq.github.io/post/26.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+1） IP 地址：一个 IP 地址标识一块网卡接口，主要有网络号和主机号组成。</description><guid isPermaLink="true">https://interset-wq.github.io/post/62.html</guid><pubDate>Sun, 03 Aug 2025 02:22:37 +0000</pubDate></item><item><title>basic-git-command</title><link>https://interset-wq.github.io/post/25.html</link><description># basic-git-command&#13;
+&#13;
+[Git 官方文档](https://git-scm.com/doc) · [GitHub 文档](https://docs.github.com/zh) · [GitCode 文档](https://docs.gitcode.com/) · [Gitee 文档](https://gitee.com/all-about-git)&#13;
+&#13;
+&gt; [!WARNING]&#13;
+&gt; 创建 repo 时，一定要创建 `README.md`、`.gitignore` 和 `LICENSE` 文件，减少不必要的麻烦。</description><guid isPermaLink="true">https://interset-wq.github.io/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>First Contributions</title><link>https://interset-wq.github.io/post/26.html</link><description>✏️ `本文创建于2025-5-16`&#13;
 &#13;
 [:simple-github: First Contributions](https://github.com/firstcontributions/first-contributions)&#13;
 &#13;
