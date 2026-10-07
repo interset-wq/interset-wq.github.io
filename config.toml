@@ -21,3 +21,10 @@ repo = "interset-wq/interset-wq.github.io"  # 评论存储的仓库（需开启 
 repo_id = "R_kgDOTWqpPQ"
 category = "Announcements"
 category_id = "DIC_kwDOTWqpPc4DBFW-"
+
+# footer 社交图标测试段（验证后可删）
+[[social]]
+id = "bilibili"
+title = "Bilibili"
+action = "link"
+url = "https://space.bilibili.com/000000"
