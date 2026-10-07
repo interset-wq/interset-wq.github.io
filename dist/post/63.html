@@ -204,7 +204,7 @@ PowerShell控制台和集成脚本环境（ISE）都支持4中Tab补全以减少
 </ul>
 <p>反引号`之后不要随意添加空格等空白字符</p>
 <h2>检查powershell版本</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">$PSVersionTable</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">$PSVersionTable</span>
 
 Name                           Value
 <span class="pl-k">----</span>                           <span class="pl-k">-----</span>
@@ -238,7 +238,7 @@ SerializationVersion           <span class="pl-c1">1.1</span>.<span class="pl-c1
 </ul>
 <p>即32位操作系统仅有32位的powershell，而64位操作系统可以同时有32位和64位两个版本的powershell，32位版本的会在末尾注明 <code class="notranslate">(x86)</code></p>
 <h2>通过终端powershell控制台打开ISE</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> ise</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> ise</pre></div>
 <p>回车之后会自动打开集成脚本环境（Windows PowerShell ISE）</p>
 <h2>四种方式的Tab键补全</h2>
 <p>PowerShell控制台和集成脚本环境（ISE）都支持4中Tab补全以减少输入错误：</p>
@@ -256,7 +256,7 @@ SerializationVersion           <span class="pl-c1">1.1</span>.<span class="pl-c1
 <p>RTFM(Read The Friendly Manual)帮助文档</p>
 <p>Cmdlet，即powershell独有的概念，绝大多数powershell命令都可以看作是cmdlet</p>
 <h2>通过help查看某条命令的帮助文档</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> help <span class="pl-c1">Get-Service</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> help <span class="pl-c1">Get-Service</span>
 
 名称
     <span class="pl-c1">Get-Service</span>
@@ -279,19 +279,19 @@ SerializationVersion           <span class="pl-c1">1.1</span>.<span class="pl-c1
         <span class="pl-k">--</span> 若要联机查看此 cmdlet 的帮助主题，请键入: <span class="pl-s"><span class="pl-pds">"</span>Get-Help Get-Service -Online<span class="pl-pds">"</span></span> 或
            转到 https:<span class="pl-k">//</span><span class="pl-c1">go.microsoft.com</span><span class="pl-k">/</span>fwlink<span class="pl-k">/</span>?LinkID<span class="pl-k">=</span><span class="pl-c1">113332</span>。</pre></div>
 <h2>更新帮助文档</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Update-Help</span></pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Update-Help</span></pre></div>
 <div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p>在管理员身份下使用。此命令会自动下载最新的powershell官方文档</p>
 </div>
 <p>指定下载帮助文档的url</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Update-Help</span> <span class="pl-k">-</span>SourcePath http:<span class="pl-k">//</span><span class="pl-c1">github.com</span><span class="pl-k">/</span>powershell</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Update-Help</span> <span class="pl-k">-</span>SourcePath http:<span class="pl-k">//</span><span class="pl-c1">github.com</span><span class="pl-k">/</span>powershell</pre></div>
 <p>从指定的url下载帮助文档</p>
 <h2>将帮助文档保存到本地</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Save-Help</span> C:\Desktop\new  </pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Save-Help</span> C:\Desktop\new  </pre></div>
 <p>将帮助文档下载到桌面上的new目录中</p>
 <h2>获取帮助</h2>
 <p>使用cmdlet命令 <code class="notranslate">Get-Help</code> 可以获取帮助。使用 <code class="notranslate">Help</code> 或 <code class="notranslate">Man</code> 也可以获取帮助，它们二者都是对cmdlet命令封装后的函数。只不过 <code class="notranslate">Get-Help</code> 是一次性显示，<code class="notranslate">Help</code> 和 <code class="notranslate">Man</code> 是分页显示，使用空格键翻页，<code class="notranslate">Man</code> 是 <code class="notranslate">Help</code> 的别名。在控制台中CTRL+C组合键是返回，并不是复制</p>
 <h3>Help分页显示帮助文档</h3>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> Help <span class="pl-c1">Get-Content</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> Help <span class="pl-c1">Get-Content</span>
 
 名称
     <span class="pl-c1">Get-Content</span>
@@ -315,7 +315,7 @@ SerializationVersion           <span class="pl-c1">1.1</span>.<span class="pl-c1
            转到 https:<span class="pl-k">//</span><span class="pl-c1">go.microsoft.com</span><span class="pl-k">/</span>fwlink<span class="pl-k">/</span>?LinkID<span class="pl-k">=</span><span class="pl-c1">113310</span>。
 <span class="pl-k">--</span> More  <span class="pl-k">--</span></pre></div>
 <h3>Get-Help一次性显示帮助文档</h3>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Help</span> <span class="pl-c1">Get-Content</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Help</span> <span class="pl-c1">Get-Content</span>
 
 名称
     <span class="pl-c1">Get-Content</span>
@@ -338,7 +338,7 @@ SerializationVersion           <span class="pl-c1">1.1</span>.<span class="pl-c1
         <span class="pl-k">--</span> 若要联机查看此 cmdlet 的帮助主题，请键入: <span class="pl-s"><span class="pl-pds">"</span>Get-Help Get-Content -Online<span class="pl-pds">"</span></span> 或
            转到 https:<span class="pl-k">//</span><span class="pl-c1">go.microsoft.com</span><span class="pl-k">/</span>fwlink<span class="pl-k">/</span>?LinkID<span class="pl-k">=</span><span class="pl-c1">113310</span>。</pre></div>
 <h3>Get-Help使用分页显示模式</h3>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Help</span> <span class="pl-c1">Get-Content</span> <span class="pl-k">|</span> More
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Help</span> <span class="pl-c1">Get-Content</span> <span class="pl-k">|</span> More
 
 名称
     <span class="pl-c1">Get-Content</span>
@@ -363,7 +363,7 @@ SerializationVersion           <span class="pl-c1">1.1</span>.<span class="pl-c1
 <span class="pl-k">--</span> More  <span class="pl-k">--</span></pre></div>
 <h2>查找命令</h2>
 <p><code class="notranslate">Get-Help</code> 的 <code class="notranslate">-Name</code> 参数可以用来查找命令，这个参数是一个位置参数，使用时用需要查找的命令替换 Name，支持使用通配符</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> Help <span class="pl-k">*</span>event<span class="pl-k">*</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> Help <span class="pl-k">*</span>event<span class="pl-k">*</span>
 
 Name                              Category  Module                    Synopsis
 <span class="pl-k">----</span>                              <span class="pl-k">--------</span>  <span class="pl-k">------</span>                    <span class="pl-k">--------</span>
@@ -394,7 +394,7 @@ Name                              Category  Module                    Synopsis
 <li><code class="notranslate">Get-Command *log* -type Cmdlet</code> 返回一个所有Cmdlet命令名称包含log的列表</li>
 </ul>
 <h2>帮助详解</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Help</span> <span class="pl-c1">Get-EventLog</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Help</span> <span class="pl-c1">Get-EventLog</span>
 
 名称
     <span class="pl-c1">Get-EventLog</span>
@@ -410,7 +410,7 @@ Name                              Category  Module                    Synopsis
 </ul>
 <h3>查看更详细的帮助文档</h3>
 <p><code class="notranslate">Help</code> 的 <code class="notranslate">-full</code> 选项可以更详细的显示帮助文档</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> Help <span class="pl-c1">Get-Event</span> <span class="pl-k">-</span>full
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> Help <span class="pl-c1">Get-Event</span> <span class="pl-k">-</span>full
 
 名称
     <span class="pl-c1">Get-Event</span>
@@ -479,7 +479,7 @@ Name                              Category  Module                    Synopsis
 <h2>66 原文</h2>
 <h1>DAY 4 运行命令</h1>
 <h2>剖析一个命令</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-EventLog</span> <span class="pl-k">-</span>LogName Security <span class="pl-k">-</span>ComputerName WIN8<span class="pl-k">,</span>Server1 <span class="pl-k">-</span>Verbose</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-EventLog</span> <span class="pl-k">-</span>LogName Security <span class="pl-k">-</span>ComputerName WIN8<span class="pl-k">,</span>Server1 <span class="pl-k">-</span>Verbose</pre></div>
 <div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>这个命令在新版powershell中的写法已经发生了改变，与这种写法有较大差异</p>
 </div>
 <p>分析这个命令：</p>
@@ -511,7 +511,7 @@ Name                              Category  Module                    Synopsis
 <h2>命令的别名（命令的昵称）</h2>
 <p>别名一般是命令的缩写形式，有些命令实在是太长了，因此别名可以解决命令太长容易输入错误的问题。别名仅仅是命令的一个昵称，无法包含任何预定义的参数</p>
 <p>通过 <code class="notranslate">Get-Alias -Definition 命令名</code> 可以查看命令的别名</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Alias</span> <span class="pl-k">-</span>Definition <span class="pl-c1">Get-Service</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Alias</span> <span class="pl-k">-</span>Definition <span class="pl-c1">Get-Service</span>
 
 CommandType     Name
 <span class="pl-k">-----------</span>     <span class="pl-k">----</span>
@@ -523,7 +523,7 @@ Alias           gsv <span class="pl-k">-</span><span class="pl-k">&gt;</span> <s
 </li>
 <li>
 <p>参数名别名，例如：查看 <code class="notranslate">Get-EventLog</code> 命令 <code class="notranslate">Computer</code>参数的别名 <code class="notranslate">Cn</code></p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> (<span class="pl-c1">Get-Command</span> <span class="pl-c1">Get-EventLog</span> <span class="pl-k">|</span> Select <span class="pl-k">-</span>ExpandProperty parameters).computername.aliases
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> (<span class="pl-c1">Get-Command</span> <span class="pl-c1">Get-EventLog</span> <span class="pl-k">|</span> Select <span class="pl-k">-</span>ExpandProperty parameters).computername.aliases
 Cn</pre></div>
 </li>
 <li>
@@ -531,7 +531,7 @@ Cn</pre></div>
 </li>
 </ul>
 <h2>快捷传参</h2>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Show-Command</span> <span class="pl-c1">Get-EventLog</span></pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Show-Command</span> <span class="pl-c1">Get-EventLog</span></pre></div>
 <p>运行这个命令之后会弹出一个对话框，可以在这个对话框中填写参数运行命令。使用这种方法输入的命令格式一定是正确的</p>
 <p><a target="_blank" rel="noopener noreferrer" href="./img/1.jpg"><img src="./img/1.jpg" alt="" style="max-width: 100%;"></a></p>
 <hr>
@@ -540,7 +540,7 @@ Cn</pre></div>
 <h2>提供程序PSProvider</h2>
 <p>一个PowerShell的提供程序，即PSProvider，本质上是一个适配器。它可以接受某些数据存储。</p>
 <p>查看当前shell中已存在的提供程序：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSProvider</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSProvider</span>
 
 Name                 Capabilities   Drives
 <span class="pl-k">----</span>                 <span class="pl-k">------------</span>   <span class="pl-k">------</span>
@@ -558,7 +558,7 @@ Variable             ShouldProcess  {Variable}</pre></div>
 </ul>
 <p>也可以通过某个提供程序创建一个 <code class="notranslate">PSDrive</code>。<code class="notranslate">PSDriver</code> 可以通过一个特定的提供程序链接到存储某些数据的介质。类似于Windows文件资源管理器。</p>
 <p>查看当前已连接的驱动器：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSDrive</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSDrive</span>
 
 Name           Used (GB)     Free (GB) Provider
 <span class="pl-k">----</span>           <span class="pl-k">---------</span>     <span class="pl-k">---------</span> <span class="pl-k">--------</span>
@@ -575,7 +575,7 @@ HKLM                                   Registry
 Variable                               Variable
 WSMan                                  WSMan</pre></div>
 <p>大多数情况下，操作 <code class="notranslate">PSDrive</code> 的cmdlet名词部分都会包含 'item'：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Command</span> <span class="pl-k">-</span>Noun <span class="pl-k">*</span>item<span class="pl-k">*</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Command</span> <span class="pl-k">-</span>Noun <span class="pl-k">*</span>item<span class="pl-k">*</span>
 
 CommandType     Name
 <span class="pl-k">-----------</span>     <span class="pl-k">----</span>
@@ -628,7 +628,7 @@ Cmdlet          Stop-WebItem</pre></div>
 <li><code class="notranslate">ChildItem</code> 名词对应的是项的子项，如文件夹的文件或子文件夹。</li>
 </ul>
 <p>文件系统驱动器下的cmdlet中的命令都不支持 <code class="notranslate">UseTransaction</code> 参数。注册表驱动器下的cmdlet中的命令都不支持 <code class="notranslate">Filter</code> 参数。<code class="notranslate">Environment</code>这个PSProvider主要用来构造powershell中可用的ENV（类型驱动器，如Env:\PSModulePath），该驱动器主要用于访问Windows中的环境变量，它没有对应的项属性：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-ItemProperty</span> <span class="pl-k">-</span>Path Env:\PSModulePath
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-ItemProperty</span> <span class="pl-k">-</span>Path Env:\PSModulePath
 <span class="pl-c1">Get-ItemProperty</span> : 无法使用接口。此提供程序不支
 持 IPropertyCmdletProvider 接口。
 所在位置 行:<span class="pl-c1">1</span> 字符: <span class="pl-c1">1</span>
@@ -645,13 +645,13 @@ Cmdlet          Stop-WebItem</pre></div>
 <h2>使用文件系统</h2>
 <h3>切换目录Set-Location</h3>
 <p>类似于cmd中的 <code class="notranslate">cd</code> 命令，用于切换当前目录。在powershell中 <code class="notranslate">cd</code> 是 <code class="notranslate">Set-Location</code> 的别名。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> cd c:\windows
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Users\<span class="pl-c1">86183</span><span class="pl-k">&gt;</span> cd c:\windows
 PS C:\windows<span class="pl-k">&gt;</span> <span class="pl-c1">Set-Location</span> <span class="pl-k">-</span>Path c:\desktop
 PS C:\desktop<span class="pl-k">&gt;</span></pre></div>
 <h3>创建项New-Item</h3>
 <p><code class="notranslate">New-Item</code> 用于创建项。可以创建文件或文件夹。</p>
 <p><code class="notranslate">New-Item [-Path] &lt;string[]&gt; -ItemType Directory</code> 或 <code class="notranslate">New-Item [-Path] &lt;string[]&gt; -Type Directory</code> 创建文件夹，相当于<code class="notranslate">mkdir</code></p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\desktop<span class="pl-k">&gt;</span> <span class="pl-c1">New-Item</span> test <span class="pl-k">-</span>ItemType Directory
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\desktop<span class="pl-k">&gt;</span> <span class="pl-c1">New-Item</span> test <span class="pl-k">-</span>ItemType Directory
 
 
     目录: C:\desktop
@@ -682,7 +682,7 @@ d<span class="pl-k">-----</span>         <span class="pl-c1">2025</span><span cl
 <p>在大部分其他类型的数据存储中，<code class="notranslate">*</code> 和 <code class="notranslate">?</code> 都可以出现在项item的名称中，如注册表</p>
 <h3>列出子项Get-ChildItem</h3>
 <p><code class="notranslate">Get-ChildItem</code> 用于列出子项。可以列出文件或文件夹。<code class="notranslate">Dir</code> 是它的别名。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\windows<span class="pl-k">&gt;</span> <span class="pl-c1">Get-ChildItem</span> <span class="pl-k">*</span>.exe
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\windows<span class="pl-k">&gt;</span> <span class="pl-c1">Get-ChildItem</span> <span class="pl-k">*</span>.exe
 
 
     目录: C:\windows
@@ -724,7 +724,7 @@ Mode                 LastWriteTime         Length Name
 <span class="pl-k">-</span>a<span class="pl-k">----</span>         <span class="pl-c1">2025</span><span class="pl-k">/</span><span class="pl-c1">6</span><span class="pl-k">/</span><span class="pl-c1">12</span>      <span class="pl-c1">8</span>:<span class="pl-c1">15</span>          <span class="pl-c1">12288</span> <span class="pl-c1">winhlp32.exe</span></pre></div>
 <h2>注册表提供程序</h2>
 <p>切换目录到注册表：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Set-Location</span> <span class="pl-k">-</span>Path HKCU:
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Set-Location</span> <span class="pl-k">-</span>Path HKCU:
 PS HKCU:\<span class="pl-k">&gt;</span> <span class="pl-c1">Set-Location</span> <span class="pl-k">-</span>Path software
 PS HKCU:\software<span class="pl-k">&gt;</span> <span class="pl-c1">Set-Location</span> <span class="pl-k">-</span>Path microsoft
 PS HKCU:\software\microsoft<span class="pl-k">&gt;</span> <span class="pl-c1">Set-Location</span> <span class="pl-k">-</span>Path .\Windows\
@@ -767,7 +767,7 @@ PS HKCU:\software\microsoft\Windows\<span class="pl-k">&gt;</span> <span class="
 <h1>管道：连接命令</h1>
 <h2>通过管道连接命令</h2>
 <p>powershell通过管道 <code class="notranslate">|</code> 连接命令。管道通过传输一个命令，把其输出作为另一个cmdlet的输入，使第二个命令可以通过第一个的结果作为输入并联合起来运行。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> Dir <span class="pl-k">|</span> More
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> Dir <span class="pl-k">|</span> More
 
 
     目录: C:\Desktop
@@ -784,16 +784,16 @@ d<span class="pl-k">-----</span>         <span class="pl-c1">2025</span><span cl
 <p>上面的例子就是把 <code class="notranslate">dir</code> 的输出结果作为 <code class="notranslate">More</code> 的输入。</p>
 <h2>输出结果到CSV或XML文件</h2>
 <h3>CSV表格</h3>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Export-Csv</span> procs.csv</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Export-Csv</span> procs.csv</pre></div>
 <p>将 <code class="notranslate">Get-Process</code> 的输出结果写入 <code class="notranslate">procs.csv</code> 文件，并保存到桌面</p>
 <p>这个csv表格的第一行是 <code class="notranslate">#TYPE System.Diagnostics.Process</code>，这是一个注释 （<code class="notranslate">#</code>用来注释），代表文件中包含的信息类型。这个csv文件中显示的内容比控制台显示的内容更详细，因为控制台只输出一些比较重要的信息</p>
 <p>在控制台导入csv文件，查看其内容：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Import-Csv</span> procs.csv</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Import-Csv</span> procs.csv</pre></div>
 <h3>XML</h3>
 <p><code class="notranslate">Export-clixml</code> 命令，用于创建常规的命令行界面可扩展标记语言文件 generic command-line interface (CLI) extensible makeup language (XML)。<code class="notranslate">clixml</code> 是powershell专用的，但是任何可以解析xml文件的程序都能够读取它。还有 <code class="notranslate">Import-clixml</code> 命令，所有的以 <code class="notranslate">import</code> 和 <code class="notranslate">export</code> 开头的cmdlet都需要传入文件名参数。</p>
 <h3>对比文件</h3>
 <p><code class="notranslate">Compare-Object</code> 用于对比文件的差异，它的别名是 <code class="notranslate">Diff</code>。建议使用 <code class="notranslate">diff</code> 别名</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Export-Clixml</span> reference.xml
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Export-Clixml</span> reference.xml
 <span class="pl-k">&gt;</span> diff <span class="pl-k">-</span>ReferenceObject (<span class="pl-c1">Import-Clixml</span> .\reference.xml) <span class="pl-k">-</span>DifferenceObject (<span class="pl-c1">Get-Process</span>) <span class="pl-k">-</span>Property name
 
 name               SideIndicator
@@ -831,12 +831,12 @@ svchost            <span class="pl-k">&lt;</span><span class="pl-k">=</span></pr
 <p>通过 <code class="notranslate">Get-Process | Export-Clixml reference.xml</code> 导出xml文件之后，又打开了一些应用程序，通过 <code class="notranslate">diff</code>命令可以比对前后数据的差异。<code class="notranslate">=&gt;</code> 代表只存在与 <code class="notranslate">-DifferenceObject</code> 的内容， <code class="notranslate">&lt;=</code> 代表只存在与 <code class="notranslate">-ReferenceObject</code> 中的内容，二者都有的内容不会出现在输出结果中。 <code class="notranslate">()</code> 可以提高命令执行的优先级</p>
 <h2>管道传输到文件或打印机</h2>
 <p>powershell的输出一般是在控制台上面，但是可以修改它输入内容的位置，使其可以保存到文件中或是通过打印机打印到纸上。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> dir <span class="pl-k">&gt;</span> DirectoryList.txt
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> dir <span class="pl-k">&gt;</span> DirectoryList.txt
 <span class="pl-k">&gt;</span> dir <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> DirectoryList2.txt</pre></div>
 <p>以上两个命令结果是相同的，都是将 <code class="notranslate">dir</code> 的输出结果保存到txt文件中，但是第一种通过 <code class="notranslate">&gt;</code> 写法是兼容cmd的写法，第二种是powershell的写法</p>
 <p><code class="notranslate">Out-File</code> 提供了一些参数让你定制替代的字符编码（如UTF8或Unicode）、追加内容到现有文件等功能。默认情况下，用“Out-File”创建的文件有80列宽，这种默认的80列宽可能会导致一些内容原本的排版格式被破坏，使可读性变差。</p>
 <p>PowerShell有很多 <code class="notranslate">out</code> 开头的cmdlet，其中一个叫 <code class="notranslate">out-default</code></p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> dir
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> dir
 <span class="pl-k">&gt;</span> dir <span class="pl-k">|</span> <span class="pl-c1">Out-Default</span> <span class="pl-k">|</span> <span class="pl-c1">Out-Host</span></pre></div>
 <p>当你运行 <code class="notranslate">dir</code> 时，实际上是在运行 <code class="notranslate">Dir | Out-Default | Out-Host</code> 而“Out-Host”是显示结果到显示器中。</p>
 <ul>
@@ -845,21 +845,21 @@ svchost            <span class="pl-k">&lt;</span><span class="pl-k">=</span></pr
 </ul>
 <h2>转换成html</h2>
 <p>只需要通过管道将结果传递给“ConvertTo-HTML”命令即可。该命令可以生成结构良好的、通用的HTML数据，并可以在任何Web浏览器中打开。但是这只是原始数据，如果需要美观，需要引用CSS（Cascading Style Sheet）文件定制样式。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Service</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span></pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Service</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span></pre></div>
 <p>该命令不需要文件名，直接在控制台输出这个html文件的内容。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Service</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> services.html</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Service</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> services.html</pre></div>
 <p>输出为html文件。</p>
 <p>PowerShell附带其他<code class="notranslate">ConvertTo</code>开头的cmdlet，包括“ConvertTo-CSV”和“ConvertTo-XML”等。正如“ConvertTo-HTML”一样，这些命令都不在磁盘上创建文件，只是把命令的输出结果分别转换成CSV或XML。你需要用管道把它们和“Out-File”连接起来以便存储到磁盘上，和使用“Export-CSV”或“Export-CliXML”效果类似。另外，它们能既转换又存储。</p>
 <h2>使用cmdlet修改系统：终止进程和停止服务</h2>
 <div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>不要运行下面这个命令，否则电脑会蓝屏死机</p>
 </div>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
 <p>这个命令会关闭所有的进程，会导致电脑死机。带有相同名词（本例中的进程Process）的Cmdlets可以在彼此之间互传信息。通常情况下，你最好带上特定进程名称而不是终止全部进程：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">-</span>Name Notepad <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">-</span>Name Notepad <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
 <p>上面的代码结束Windows记事本notepad的进程，会关闭记事本。</p>
 <p>服务也是类似的，“Get-Service”命令的输出结果能和其他Cmdlets（如Stop-Service、Start-Service、Set-Service等）一起被管道传输。</p>
 <p>类似于 “Stop-Service”和“Stop-Process” 的 Cmdlets以某些方式修改系统，并且有一个内部定义的影响级别（impact level）。Cmdlet的创建者已经设定了这些影响级别，并且不允许修改。而Shell有一个相应的“$ConfirmPreference”设置，默认为“High”。可以通过下面的命令查看你的Shell的设置：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">$ConfirmPreference</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">$ConfirmPreference</span>
 High</pre></div>
 <p>工作原理：当Cmdlet的内部影响级别大于等于Shell的“$ConfirmPreference”设置时，不管Cmdlet正准备做什么，Shell都会自动询问是否进行此操作。当Cmdlet的内部影响级别小于Shell的“$ConfirmPreference”设置时，不会自动弹出这个提示。也就是说，如果权限较高的cmdlet在执行修改系统的操作时，不会提示用户是否进行此操作。</p>
 <p>在末尾添加 <code class="notranslate">-confirm</code>参数，对于某些被支持的用于修改系统的Cmdlet，会弹出提示，并对这些被支持的Cmdlet显示对应的帮助文档。或者使用 <code class="notranslate">-whatif</code> 参数，也可以达成类似的效果。</p>
@@ -878,7 +878,7 @@ High</pre></div>
 <p>一个适合管理单元PowerShell的名字是PSSnapin，用于区别这些来自管理单元的图形MMS。PSSnapins在PowerShell v1版本的时候就已经存在。一个PSSnapin通常包含一个或多个DLL文件，同时包含配置XML文件和帮助文档。PSSnapins必须先安装和注册，然后PowerShell才能识别它的存在。</p>
 <p>PSSnapin的概念逐步被微软移除了，将来可能会越来越少出现。在内部，微软的重点是提供扩展模块。</p>
 <p>获取可用的管理单元列表：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSSnapin</span> <span class="pl-k">-</span>Registered
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSSnapin</span> <span class="pl-k">-</span>Registered
 
 
 Name        : SqlServerCmdletSnapin100
@@ -890,14 +890,14 @@ PSVersion   : <span class="pl-c1">5.1</span>
 Description : SQL Server Provider</pre></div>
 <p>上面的信息说明我的机器上安装了两个可用的管理单元，但是并没有加载。</p>
 <p>可以通过运行Get-PSSnapin命令查看已加载的列表。该列表包含所有的核心，包含PowerShell中的本机功能的自动加载管理单元：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSSnapin</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSSnapin</span>
 
 
 Name        : Microsoft.PowerShell.Core
 PSVersion   : <span class="pl-c1">5.1</span>.<span class="pl-c1">26100.4202</span>
 Description : 此 Windows PowerShell 管理单元包含用于管理 Windows PowerShell 组件的 cmdlet。</pre></div>
 <p>通过运行Add-PSSnapin并指定管理单元名称的方式加载某一个管理单元：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">add-pssnapin</span> sqlserverCmdletsnapin100
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">add-pssnapin</span> sqlserverCmdletsnapin100
 <span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSSnapin</span>
 
 
@@ -909,14 +909,14 @@ Name        : sqlservercmdletsnapin100
 PSVersion   : <span class="pl-c1">5.1</span>
 Description : This is a PowerShell snap<span class="pl-k">-</span>in that includes various SQL Server cmdlets.</pre></div>
 <p>PSSnapin可以增加Cmdlets命令、提供PSDrive，或者两者都增加。使用<code class="notranslate">Get-Command</code>（或者别名：<code class="notranslate">Gcm</code>）命令找出已增加的Cmdlets命令：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> gcm <span class="pl-k">-</span>PSSnapin sqlservercmdletsnapin100
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> gcm <span class="pl-k">-</span>PSSnapin sqlservercmdletsnapin100
 
 CommandType     Name                                               Version    Source
 <span class="pl-k">-----------</span>     <span class="pl-k">----</span>                                               <span class="pl-k">-------</span>    <span class="pl-k">------</span>
 Cmdlet          <span class="pl-c1">Invoke-PolicyEvaluation</span>                            <span class="pl-c1">10.0</span>.<span class="pl-c1">0.0</span>   sqlservercmdletsnapin100
 Cmdlet          <span class="pl-c1">Invoke-Sqlcmd</span>                                      <span class="pl-c1">10.0</span>.<span class="pl-c1">0.0</span>   sqlservercmdletsnapin100</pre></div>
 <p>再把添加另一个没有加载的管理单元：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Add-PSSnapin</span> SqlServerProviderSnapin100
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Add-PSSnapin</span> SqlServerProviderSnapin100
 <span class="pl-k">&gt;</span> <span class="pl-c1">Get-PSSnapin</span>
 
 
@@ -947,7 +947,7 @@ SqlServer            Credentials                                       {SQLSERVE
 <h2>扩展：找到并添加模块</h2>
 <p>PowerShell提供的第二种扩展方式称为模块。模块被设计<br>
 得更加独立，因此更加容易分发，但是它的工作原理类似于PSSnapins。模块不需要复杂的注册。PowerShell会自动在一个特定的目录下查找模块。PSModulePath这个环境变量定义了PowerShell期望存放模块的路径：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Content</span> Env:\PSModulePath
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Content</span> Env:\PSModulePath
 D:\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.<span class="pl-c1">0</span>\Modules</pre></div>
 <p>只要知道一个模块的完整路径，你就可以从任何其他的位置添加模块。PSModulePath并不能在PowerShell中修改，它是操作系统环境变量的一部分。你可以在系统控制面板中对它进行修改，或者通过组策略修改。一些微软或第三方产品可能会修改该变量。</p>
 <p>在PowerShell中，该路径很重要。如果你有位于其他位置的模块，你应该把模块所在的路径加入到PSModulePath这个环境变量中。</p>
@@ -963,7 +963,7 @@ C:\MyPrograms\Something\MyModule。如果在开始菜单中有一个特定产品
 <p>如果你已经对冲突不厌其烦，你可以随时选择删除冲突的扩展名。你需要运行Remove-PSSnapin或Remove-Module，并指定管理模块或模块命令的名称，从而卸载某个扩展</p>
 <h2>玩转一个新的模块</h2>
 <p>我们的目标是清除我们计算机上的DNS名称解析缓存。我们还不知道PowerShell是否能做到这一点，所以我们先要在帮助系统中寻找一些线索。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate">&gt; Get-Help *dns*                                                                                                                                                                                                               Name                              Category  Module                    Synopsis                                          ----                              --------  ------                    --------                                          dnsn                              Alias                               Disconnect-PSSession                              Set-DnsClient                     Function  DnsClient                 ...                                               Remove-DnsClientNrptRule          Function  DnsClient                 ...                                               Get-DnsClientDohServerAddress     Function  DnsClient                 ...                                               Set-DnsClientNrptGlobal           Function  DnsClient                 ...                                               Set-DnsClientServerAddress        Function  DnsClient                 ...                                               Get-DnsClientServerAddress        Function  DnsClient                 ...                                               Add-DnsClientNrptRule             Function  DnsClient                 ...                                               Clear-DnsClientCache              Function  DnsClient                 ...                                               Get-DnsClient                     Function  DnsClient                 ...                                               Set-DnsClientDohServerAddress     Function  DnsClient                 ...                                               Add-DnsClientDohServerAddress     Function  DnsClient                 ...
+<div class="highlight highlight-source-powershell"><pre class="notranslate">&gt; Get-Help *dns*                                                                                                                                                                                                               Name                              Category  Module                    Synopsis                                          ----                              --------  ------                    --------                                          dnsn                              Alias                               Disconnect-PSSession                              Set-DnsClient                     Function  DnsClient                 ...                                               Remove-DnsClientNrptRule          Function  DnsClient                 ...                                               Get-DnsClientDohServerAddress     Function  DnsClient                 ...                                               Set-DnsClientNrptGlobal           Function  DnsClient                 ...                                               Set-DnsClientServerAddress        Function  DnsClient                 ...                                               Get-DnsClientServerAddress        Function  DnsClient                 ...                                               Add-DnsClientNrptRule             Function  DnsClient                 ...                                               Clear-DnsClientCache              Function  DnsClient                 ...                                               Get-DnsClient                     Function  DnsClient                 ...                                               Set-DnsClientDohServerAddress     Function  DnsClient                 ...                                               Add-DnsClientDohServerAddress     Function  DnsClient                 ...
 <span class="pl-c1">Set-DnsClientNrptRule</span>             Function  DnsClient                 ...
 <span class="pl-c1">Get-DnsClientNrptGlobal</span>           Function  DnsClient                 ...
 <span class="pl-c1">Get-DnsClientNrptRule</span>             Function  DnsClient                 ...
@@ -984,7 +984,7 @@ C:\MyPrograms\Something\MyModule。如果在开始菜单中有一个特定产品
 <span class="pl-c1">Set-VpnConnectionTriggerDnsCon</span>..<span class="pl-k">.</span> Function  VpnClient                 ...
 <span class="pl-c1">Remove-VpnConnectionTriggerDns</span>..<span class="pl-k">.</span> Function  VpnClient                 ...</pre></div>
 <p>上面显示的就是我们计算机上所有的DnsClient模块。里面并没有找到与清空DNS缓存有关的命令。为了找出该命令，我们手动加载该模块并列出所有命令。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Import-Module</span> <span class="pl-k">-</span>name DnsClient
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Import-Module</span> <span class="pl-k">-</span>name DnsClient
 <span class="pl-k">&gt;</span> <span class="pl-c1">Get-Command</span> <span class="pl-k">-</span>Module DnsClient
 
 CommandType     Name                                               Version    Source
@@ -1011,7 +1011,7 @@ Function        Set-DnsClientNrptRule                              1.0.0.0    Dn
 Function        Set-DnsClientServerAddress                         1.0.0.0    DnsClient
 Cmdlet          Resolve-DnsName                                    1.0.0.0    DnsClient</pre></div>
 <p>Clear-DnsClientCache可以清除DNS缓存</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Clear-DnsClientCache</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Clear-DnsClientCache</span>
 <span class="pl-k">&gt;</span> <span class="pl-c1">Clear-DnsClientCache</span> <span class="pl-k">-</span>Verbose
 详细信息: The specified name resolution records cached on this machine will be removed.
 Subsequent name resolutions may <span class="pl-k">return</span> up<span class="pl-k">-</span>to<span class="pl-k">-</span>date information.</pre></div>
@@ -1025,7 +1025,7 @@ Subsequent name resolutions may <span class="pl-k">return</span> up<span class="
 <h2>对象</h2>
 <p>运行PowerShell中的<code class="notranslate">Get-Process</code>。可以看到一个包含多列的表格，但这些信息仅仅是关于进程的冰山一角。进程对象还包括机器名、主窗口句柄、最大工作集大小、退出代码和时间、处理器掩码信息以及其他大量信息。实际上，你可以找出超过60个与进程有关的信息。PowerShell仅仅展示少量的信息，原因非常简单，PowerShell当然可以提供屏幕上所无法容纳的更多的信息。当运行任意命令，比如Get-Process、Get-Service、Get-EventLog或其他命令时，PowerShell会在内存中完全构造用于容纳关于项的所有信息的表格。例如Get-Process，该表格由67列组成，每行对应运行在计算机中的一个进程。每一列包含一部分信息，比如说虚拟内存、CPU利用率、处理器名称、进程ID等。然后，PowerShell会检查你是否指定所需查看的列。如果你未指定想查看的列，Shell会查看由微软提供的配置文件并只显示微软认为你希望查看的列。</p>
 <p>一种查看所有列的方式是使用ConvertTo-HTML命令：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> processes.html</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> processes.html</pre></div>
 <p>该命令不会过滤列，而是生成包含所有列的HTML文件。这是查看整个表的一种方式。</p>
 <p>除去包含这些信息的列之外，表中每一行都有一些与之对应的方法。这些方法包括操作系统可以以进程为目标进行的操作。比如说，操作系统可以关闭进程、杀死进程、刷新信息，或者等待进程退出等。</p>
 <p>每当运行一个可以产生结果的命令时，输出结果在内存中以表的形式存放。当将输出结果以管道的方式由一个命令传送给另一个命令时，比如说：</p>
@@ -1051,7 +1051,7 @@ Subsequent name resolutions may <span class="pl-k">return</span> up<span class="
 <p>如果说对象就像内存中一个巨大的表，而PowerShell仅仅在屏幕上展示表的一部分，有些我们需要使用的属性可能并没有显示在屏幕上。</p>
 <p>如果需要了解更多关于对象的内容，使用命令：<code class="notranslate">Get-Member</code>，它的别名是 <code class="notranslate">Gm</code>。可以在任何产生某些输出的命令之后使用Gm。</p>
 <p>例如，运行Get-Process会在屏幕上产生一些输出，可以将这些输出通过管道传送给Gm</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> gm
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> gm
 
 
    TypeName:System.Diagnostics.Process
@@ -1161,17 +1161,17 @@ ProductVersion             ScriptProperty System.Object ProductVersion {get<span
 <p>很多对象都支持一个或多个方法，可以指导对象的行为。进程对象包含一个Kill方法，它会终止进程。</p>
 <p>某些方法需要一个或多个输入参数来为某个行为提供额外的细节信息，这些方法可以和Cmdlets互相替代。</p>
 <p>例如，如果你需要终止一个进程，可以通过3个办法实现。其中一个办法是获取对象并执行Kill方法，另一个办法是使用一系列Cmdlets：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">-</span>Name Notepad <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">-</span>Name Notepad <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
 <p>还可以使用单个Cmdlet完成这项任务：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Stop-Process</span> <span class="pl-k">-</span>name Notepad</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Stop-Process</span> <span class="pl-k">-</span>name Notepad</pre></div>
 <p>除了属性和方法之外，对象还有一个事件。事件是以对象的方式通知你某些事情发生了。一个进程对象，举例来说，可以在进程结束时触发Exited事件。你可以将你自己的命令附加到这些事件上，比如说，当进程结束时发送一封邮件。</p>
 <h2>排序对象</h2>
 <p>大部分PowerShell Cmdlets以确定性的方式产生对象，这意味着每次运行命令时都会以相同的顺序产生对象。例如，服务和进程都按照字母表顺序对名称进行排序。事件日志倾向于按照事件排序。我们可以改变排序方式。</p>
 <p>例如，假设我们希望显示一个进程列表，按照对虚拟内存（Vitrual Memory，VM）的消耗由高到低进行排列。我们将需要基于VM属性对列表进行重新排序。PowerShell提供了一个简单的Cmdlet命令 Sort-Object，就像其名称那样，可以对对象进行排序。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Sort-Object</span> <span class="pl-k">-</span>property VM</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Sort-Object</span> <span class="pl-k">-</span>property VM</pre></div>
 <p>该命令并不是我们最终想要的结果。它虽然以VM进行排序，但是以升序形式，最大值在列表底部。通过阅读Sort-Object，可以发现-descending参数可以反转排序。我们还注意到，-property参数是位置参数，因此无须输入参数名称。我们还告诉过你Sort-Object有一个别<br>
 名，也就是Sort</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> Sort VM –desc
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> Sort VM –desc
 <span class="pl-cce">``</span>
 
 我们还将<span class="pl-k">-</span>descending简化为<span class="pl-k">-</span>desc，仍然可以得到想要的结果。<span class="pl-k">-</span>property参数接受多个值
@@ -1184,15 +1184,15 @@ ProductVersion             ScriptProperty System.Object ProductVersion {get<span
 <h2>选择所需的属性</h2>
 <p>另一个有用的Cmdlet是Select-Object。该Cmdlet从管道接受对象，你可以指定希望显示的属性。这使得你可以访问任意属性，减少返回列表，只返回你感兴趣的列，而默认情况下由PowerShell配置规则控制。这对于将对象输出到HTML的ConvertTo-HTML命令来说非常有用，因为该Cmdlet通常会创建包含所有属性的表。</p>
 <p>比较下面两个命令的结果：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-HTML</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> test1.html 
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-HTML</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> test1.html 
 <span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Select-Object</span> <span class="pl-k">-</span>property Name<span class="pl-k">,</span> ID<span class="pl-k">,</span> VM<span class="pl-k">,</span> PM <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-HTML</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> test2.html</pre></div>
 <p><code class="notranslate">test2.html</code> 这个文件只显示 <code class="notranslate">name</code> <code class="notranslate">id</code> <code class="notranslate">vm</code> <code class="notranslate">pm</code> 这几列。</p>
 <p>Select-Object的别名是Select，-property参是位置参数，这意味着我们可以将上面运行的命令缩短。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> select Name<span class="pl-k">,</span> Id<span class="pl-k">,</span> vm<span class="pl-k">,</span> pm <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> test3.html</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> select Name<span class="pl-k">,</span> Id<span class="pl-k">,</span> vm<span class="pl-k">,</span> pm <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> test3.html</pre></div>
 <p>可以修改下述命令进行其他尝试，该命令将结果展现在屏幕上：</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> select Name<span class="pl-k">,</span> id<span class="pl-k">,</span> vm<span class="pl-k">,</span> pm</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> select Name<span class="pl-k">,</span> id<span class="pl-k">,</span> vm<span class="pl-k">,</span> pm</pre></div>
 <p>Select-Object还拥有-First和-Last参数，这两个参数可只显示列表的前几项或后几项。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> select <span class="pl-k">-</span>First <span class="pl-c1">10</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> select <span class="pl-k">-</span>First <span class="pl-c1">10</span>
 
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 <span class="pl-k">-------</span>  <span class="pl-k">------</span>    <span class="pl-k">-----</span>      <span class="pl-k">-----</span>     <span class="pl-k">------</span>     <span class="pl-k">--</span>  <span class="pl-k">--</span> <span class="pl-k">-----------</span>
@@ -1211,17 +1211,17 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 <h2>在命令结束之前总是对象的形式</h2>
 <p>PowerShell管道在最后一个命令执行之前总是传递对象。在最后一个命令执行时，PowerShell将会查看管道中所包含的对象，并根据不同的配置文件决定哪一个属性被用于构建展示在屏幕上的最终结果。它还会基于一些内部规则和配置文件确定展示是表还是列表。</p>
 <p>在一个命令行中，管道可以包含不同类型的对象。管道之后可以使用换行提交代码的可读性。换行之后命令提示符变为 <code class="notranslate">&gt;&gt;</code></p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span>
 <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">Sort-Object</span> vm <span class="pl-k">-</span>Descending <span class="pl-k">|</span>
 <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">Out-File</span> procs.txt</pre></div>
 <p>上面的代码首先运行Get-Process，该命令将进程对象放入管道。下一个命令是Sort-Object，该命令并不会改变管道中的内容，仅仅是改变对象的顺序，直到Sort-Object结束，管道仍然只包含进程。最后一个命令是Out-File。在这里，PowerShell生成输出结果，也就是管道中所包含的内容——进程对象，并根据PowerShell的内部规则将对象格式化，最终结果被存入指定文件。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span>
 <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">Sort-Object</span> vm <span class="pl-k">-</span>Descending <span class="pl-k">|</span>
 <span class="pl-k">&gt;&gt;</span> <span class="pl-c1">Select-Object</span> Name<span class="pl-k">,</span> Id<span class="pl-k">,</span> vm</pre></div>
 <p>该命令以同样的方式运行。Get-Process将进程对象放入管道。接下来运行Sort-Object，该命令将同样的进程对象放入管道。但Select-Object就有所不同了。进程对象总是拥有相同的成员。Select-Object并不能通过删除你不需要的属性减少属性列表。如果这样的话，结果就不再是进程对象，而是Select-Object创建一个名为PSObject的自定义对象，PowerShell使用这个对象将属性从进程对象中复制出来，结果是自定义对象被放入管道。</p>
 <p>当PowerShell发现光标已经到达命令行结尾时，它必须知道如何对文本输出结果进行排版。这是由于管道中包含的对象不再是进程对象，PowerShell不会再将默认规则和配置应用于进程对象，而是通过查询PSObject的规则和配置，这也是当前管道中包含的配置类型。由于PSObjects用于自定义输出，微软并没有为PSObjects提供任何规则或配置。而是PowerShell将尽最大努力进行猜测并产生表。在理论上，产生的表可以容纳上述3列信息，但表并不像正常的Get-Process输出结果那样有美观的排版，这是由于Shell缺少使得表更美观的额外的配置信息。</p>
 <p>你可以使用Gm查看管道中不同的对象。请记住，你可以在任何产生输出结果的Cmdlet之后使用Gm。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> Sort VM <span class="pl-k">-</span>descending <span class="pl-k">|</span> gm
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> Sort VM <span class="pl-k">-</span>descending <span class="pl-k">|</span> gm
 <span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> sort vm <span class="pl-k">-</span>Descending <span class="pl-k">|</span> select Name<span class="pl-k">,</span> Id<span class="pl-k">,</span> VM <span class="pl-k">|</span> gm
 
 
@@ -1238,7 +1238,7 @@ Name        NoteProperty string Name<span class="pl-k">=</span>msedgewebview2
 VM          NoteProperty long VM<span class="pl-k">=</span><span class="pl-c1">3764506271744</span></pre></div>
 <p>PowerShell会展示出管道中对象的类型名称作为Gm输出结果的一部分。在第一个例子中，对象类型为System.Diagnostics.Process，但是在第二个例子中，管道里包含另一种类型的对象。这个新的“经过筛选”的对象仅包含3个指定属性——<br>
 Name、ID和VM，以及另外一些由系统生成的成员。即便Gm产生对象并将对象放入管道，在运行Gm之后，管道也不再包含进程对象或是“经过筛选”的对象，它仅包含由Gm生成的对象类型：Microsoft.PowerShell.Commands.MemberDefinition。你可以通过在管道中对Gm的输出结果再次使用Gm命令证明。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> gm <span class="pl-k">|</span> gm
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> gm <span class="pl-k">|</span> gm
 
 
    TypeName:Microsoft.PowerShell.Commands.MemberDefinition
@@ -1262,7 +1262,7 @@ TypeName    Property   string TypeName {get;}</pre></div>
 <p>单行的PowerShell命令功能如此强大，主要在于PowerShell管道的工作机制。</p>
 <h2>PowerShell如何传输数据给管道</h2>
 <p>当将两条命令串联在一起时，PowerShell必须搞清楚怎样将第一条命令的输出作为第二条命令的输入。在下面的示例中，我们将第一条命令称为命令A，这条命令会产生某些结果。第二条命令称为命令B，它会接收命令A产生的结果集，然后完成自己的工作。</p>
-<span class="in-code-lang">powershell</span><div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> CommandA <span class="pl-k">|</span> CommandB</pre></div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> CommandA <span class="pl-k">|</span> CommandB</pre></div>
 <p>你可能希望将这部分计算机名称作为某些命令的传入数据，以便该命令会在这些计算机上被运行，比如下面的例子。</p>
 <p>PS C:&gt; Get-Content .\computers.txt | Get-Service<br>
 当运行Get-Content命令时，它会将文本文件中的计算机名称放入管道中。之后PowerShell再决定如何将该数据传递给Get-Service命令。但PowerShell一次只能使用单个参数接收传入数据。也就是说，PowerShell必须决定由Get-Service的哪个参数接收Get-Content的输出结果。这个决定的过程就称为管道参数绑定（Pipeline parameter binding）。PowerShell使用两种方法将Get-Content的输出结果传入给Get-Service的某个参数。该Shell尝试使用的第一种方法称为ByValue；如果这种方法行不通，它将会尝试ByPropertyName。</p>
@@ -1306,9 +1306,9 @@ PS C:\Windows\System32\WindowsPowerShell\v1.0&gt; notepad dotnettypes.format.ps1
        data-bottom-title="下一页"></div>
 </main>
   <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons" data-copied="已复制">
-  <a class="in-nav-btn in-social" href="https://space.bilibili.com/000000" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
-  <a class="in-nav-btn in-social" href="mailto:example@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
-  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="123456789"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
+  <a class="in-nav-btn in-social" href="https://space.bilibili.com/UID:3546586772670802" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
+  <a class="in-nav-btn in-social" href="mailto:intersetwq@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="2775055258"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
   <button class="in-nav-btn in-social" type="button" title="WeChat" aria-label="WeChat" data-qrcode="https://interset-wq.github.io/assets/avatar.png"><svg fill="#07C160" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WeChat</title><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg></button>
   <a class="in-nav-btn in-social" href="https://interset-wq.github.io/rss.xml" target="_blank" rel="noopener" title="RSS" aria-label="RSS"><svg fill="#FFA500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
   <a class="in-nav-btn in-social" href="https://github.com/interset-wq/interset-wq.github.io" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg fill="#181717" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>

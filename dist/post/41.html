@@ -81,13 +81,13 @@ subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot
 <p><a href="https://matplotlib.org/stable/users/index.html" rel="nofollow">matplotlib官方文档</a></p>
 <h2>第三方库matplotlib</h2>
 <h3>折线图plot</h3>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
 <span class="pl-s1">squares</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">9</span>, <span class="pl-c1">16</span>, <span class="pl-c1">25</span>]
 <span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
 <span class="pl-s1">ax</span>.<span class="pl-c1">plot</span>(<span class="pl-s1">squares</span>) <span class="pl-c"># 绘图</span>
 <span class="pl-s1">plt</span>.<span class="pl-c1">show</span>() <span class="pl-c"># 显示图像</span></pre></div>
 <p>subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot）。变量 fig 表示由生成的一系列绘图构成的整个图形。变量 ax 表示图形中的绘图，在大多数情况下，使用这个变量来定义和定制绘图。</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
 <span class="pl-s1">squares</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">9</span>, <span class="pl-c1">16</span>, <span class="pl-c1">25</span>]
 <span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
 <span class="pl-s1">ax</span>.<span class="pl-c1">plot</span>(<span class="pl-s1">squares</span>, <span class="pl-s1">linewidth</span><span class="pl-c1">=</span><span class="pl-c1">3</span>)<span class="pl-c"># 设置图线线宽</span>
@@ -99,7 +99,7 @@ subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot
 <span class="pl-s1">ax</span>.<span class="pl-c1">tick_params</span>(<span class="pl-s1">labelsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># 设置坐标轴刻度标记字号</span>
 <span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()</pre></div>
 <p>plot()方法默认为x轴从0开始。上面的图线有问题，需要纠正</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
 <span class="pl-s1">input_values</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>, <span class="pl-c1">4</span>, <span class="pl-c1">5</span>]
 <span class="pl-s1">squares</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">9</span>, <span class="pl-c1">16</span>, <span class="pl-c1">25</span>]
 <span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
@@ -112,7 +112,7 @@ subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot
 <span class="pl-s1">ax</span>.<span class="pl-c1">tick_params</span>(<span class="pl-s1">labelsize</span><span class="pl-c1">=</span><span class="pl-c1">14</span>)<span class="pl-c"># 设置坐标轴刻度标记字号</span>
 <span class="pl-s1">plt</span>.<span class="pl-c1">show</span>()</pre></div>
 <p>Matplotlib有很多内置样式：</p>
-<span class="in-code-lang">batchfile</span><div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> import matplotlib.pyplot as plt
+<div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> import matplotlib.pyplot as plt
 <span class="pl-k">&gt;&gt;&gt;</span> plt.style.available
 ['Solarize_Light2', '_classic_test_patch', '_mpl-gallery', '_mpl-gallery-nogrid', 'bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-v0_8', 'seaborn-v0_8-bright', 'seaborn-v0_8-colorblind', 'seaborn-v0_8-dark', 'seaborn-v0_8-dark-palette', 'seaborn-v0_8-darkgrid', 'seaborn-v0_8-deep', 'seaborn-v0_8-muted', 'seaborn-v0_8-notebook', 'seaborn-v0_8-paper', 'seaborn-v0_8-pastel', 'seaborn-v0_8-poster', 'seaborn-v0_8-talk', 'seaborn-v0_8-ticks', 'seaborn-v0_8-white', 'seaborn-v0_8-whitegrid', 'tableau-colorblind10']</pre></div>
 <p>使用内置样式seaborn-v0_8</p>
@@ -132,7 +132,7 @@ plt.show()
 </code></pre>
 <h3>散点图scatter</h3>
 <p>绘制一个点</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
 <span class="pl-s1">plt</span>.<span class="pl-c1">style</span>.<span class="pl-c1">use</span>(<span class="pl-s">'seaborn-v0_8'</span>)
 <span class="pl-s1">fig</span>, <span class="pl-s1">ax</span> <span class="pl-c1">=</span> <span class="pl-s1">plt</span>.<span class="pl-c1">subplots</span>()
 <span class="pl-s1">ax</span>.<span class="pl-c1">scatter</span>(<span class="pl-c1">2</span>, <span class="pl-c1">4</span>, <span class="pl-s1">s</span><span class="pl-c1">=</span><span class="pl-c1">200</span>)<span class="pl-c"># 参数分别为x坐标，y坐标，点的大小</span>
@@ -159,7 +159,7 @@ ax.tick_params(labelsize=14)# 设置刻度标记字号
 plt.show()
 </code></pre>
 <p>使用列表推导式绘制更多点</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
 <span class="pl-s1">x_values</span> <span class="pl-c1">=</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-c1">1001</span>)
 <span class="pl-s1">y_values</span> <span class="pl-c1">=</span> [<span class="pl-s1">x</span><span class="pl-c1">**</span><span class="pl-c1">2</span> <span class="pl-k">for</span> <span class="pl-s1">x</span> <span class="pl-c1">in</span> <span class="pl-s1">x_values</span>]<span class="pl-c"># 列表推导式</span>
 <span class="pl-s1">plt</span>.<span class="pl-c1">style</span>.<span class="pl-c1">use</span>(<span class="pl-s">'seaborn-v0_8'</span>)
@@ -187,7 +187,7 @@ plt.show()
 <h3>随机游走</h3>
 <p>创建关于随机游走的类</p>
 <p>random_walk.py</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">random</span> <span class="pl-k">import</span> <span class="pl-s1">choice</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">random</span> <span class="pl-k">import</span> <span class="pl-s1">choice</span>
 
 
 <span class="pl-k">class</span> <span class="pl-v">RandomWalk</span>:
@@ -220,7 +220,7 @@ plt.show()
             <span class="pl-s1">self</span>.<span class="pl-c1">y_values</span>.<span class="pl-c1">append</span>(<span class="pl-s1">y</span>)</pre></div>
 <p>导入类，进行随机游走</p>
 <p>rw_visual.py</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
 
 <span class="pl-k">from</span> <span class="pl-s1">random_walk</span> <span class="pl-k">import</span> <span class="pl-v">RandomWalk</span>
 
@@ -256,7 +256,7 @@ plt.show()
 plotly库绘制图形后使用浏览器显示，支持中文字体<br>
 创建Die类<br>
 die.py</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">random</span> <span class="pl-k">import</span> <span class="pl-s1">randint</span><span class="pl-c"># randint包括左右端点</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">random</span> <span class="pl-k">import</span> <span class="pl-s1">randint</span><span class="pl-c"># randint包括左右端点</span>
 
 
 <span class="pl-k">class</span> <span class="pl-v">Die</span>:
@@ -268,7 +268,7 @@ die.py</p>
         <span class="pl-s">""""返回一个介于 1 和骰子面数之间的随机值"""</span>
         <span class="pl-k">return</span> <span class="pl-en">randint</span>(<span class="pl-c1">1</span>, <span class="pl-s1">self</span>.<span class="pl-c1">num_sides</span>)</pre></div>
 <h3>投掷一枚六面骰子D6</h3>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span> <span class="pl-c"># 此库使用默认浏览器打开图像，支持中文字体</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span> <span class="pl-c"># 此库使用默认浏览器打开图像，支持中文字体</span>
 
 <span class="pl-k">from</span> <span class="pl-s1">die</span> <span class="pl-k">import</span> <span class="pl-v">Die</span>
 
@@ -294,7 +294,7 @@ die.py</p>
 <span class="pl-c"># fig = px.line(x=poss_results, y=frequencies)# line()折线图</span>
 <span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
 <h3>投掷2个D6</h3>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span> <span class="pl-c"># 此库使用默认浏览器打开图像，支持中文字体</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span> <span class="pl-c"># 此库使用默认浏览器打开图像，支持中文字体</span>
 
 <span class="pl-k">from</span> <span class="pl-s1">die</span> <span class="pl-k">import</span> <span class="pl-v">Die</span>
 
@@ -325,7 +325,7 @@ die.py</p>
 <h3>内置库csv</h3>
 <p>要在文本文件中存储数据，最简单的方式是将数据组织为一系列以逗号分隔的值（comma-separated values，CSV）并写入文件。这样的文件称为 CSV 文件。</p>
 <h3>datetime</h3>
-<span class="in-code-lang">batchfile</span><div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> from datetime import datetime
+<div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> from datetime import datetime
 <span class="pl-k">&gt;&gt;&gt;</span> first_date = datetime.strptime('2021-07-01', '<span class="pl-smi">%Y-%</span>m-%d')
 <span class="pl-k">&gt;&gt;&gt;</span> print(first_date)
 2021-07-01 00:00:00</pre></div>
@@ -386,7 +386,7 @@ die.py</p>
 </table></markdown-accessiblity-table>
 <h3>某地最高温度和最低温度数据可视化</h3>
 <p>death_valley_highs_lows.py.py</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">import</span> <span class="pl-s1">csv</span>
 <span class="pl-k">import</span> <span class="pl-s1">matplotlib</span>.<span class="pl-s1">pyplot</span> <span class="pl-k">as</span> <span class="pl-s1">plt</span>
 <span class="pl-k">from</span> <span class="pl-s1">datetime</span> <span class="pl-k">import</span> <span class="pl-s1">datetime</span>
@@ -434,7 +434,7 @@ die.py</p>
 <h2>使用json文件作为数据源</h2>
 <p>绘制散点图</p>
 <p>eq_explore_data.py</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">import</span> <span class="pl-s1">json</span>
 <span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
 
@@ -474,7 +474,7 @@ die.py</p>
 <span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
 <p>另一种表示方法<br>
 eq_explore_data.py</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">import</span> <span class="pl-s1">json</span>
 <span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
 <span class="pl-k">import</span> <span class="pl-s1">pandas</span> <span class="pl-k">as</span> <span class="pl-s1">pd</span>
@@ -519,7 +519,7 @@ eq_explore_data.py</p>
 <span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
 <p>进一步美化图像</p>
 <p>eq_explore_data.py</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">import</span> <span class="pl-s1">json</span>
 <span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
 <span class="pl-k">import</span> <span class="pl-s1">pandas</span> <span class="pl-k">as</span> <span class="pl-s1">pd</span>
@@ -567,7 +567,7 @@ eq_explore_data.py</p>
 <span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
 <p>使用更多数据的json文件</p>
 <p>数据可视化</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pathlib</span> <span class="pl-k">import</span> <span class="pl-v">Path</span>
 <span class="pl-k">import</span> <span class="pl-s1">json</span>
 <span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
 <span class="pl-k">import</span> <span class="pl-s1">pandas</span> <span class="pl-k">as</span> <span class="pl-s1">pd</span>
@@ -619,7 +619,7 @@ eq_explore_data.py</p>
 )
 <span class="pl-s1">fig</span>.<span class="pl-c1">show</span>()</pre></div>
 <p>其他渐变色</p>
-<span class="in-code-lang">batchfile</span><div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> import plotly.express as px
+<div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-k">&gt;&gt;&gt;</span> import plotly.express as px
 <span class="pl-k">&gt;&gt;&gt;</span> px.colors.named_colorscales()
 ['aggrnyl', 'agsunset', 'blackbody', 'bluered', 'blues', 'blugrn', 'bluyl', 'brwnyl', 'bugn', 'bupu', 'burg', 'burgyl', 'cividis', 'darkmint', 'electric', 'emrld', 'gnbu', 'greens', 'greys', 'hot', 'inferno', 'jet', 'magenta', 'magma', 'mint', 'orrd', 'oranges', 'oryel', 'peach', 'pinkyl', 'plasma', 'plotly3', 'pubu', 'pubugn', 'purd', 'purp', 'purples', 'purpor', 'rainbow', 'rdbu', 'rdpu', 'redor', 'reds', 'sunset', 'sunsetdark', 'teal', 'tealgrn', 'turbo', 'viridis', 'ylgn', 'ylgnbu', 'ylorbr', 'ylorrd', 'algae', 'amp', 'deep', 'dense', 'gray', 'haline', 'ice', 'matter', 'solar', 'speed', 'tempo', 'thermal', 'turbid', 'armyrose', 'brbg', 'earth', 'fall', 'geyser', 'prgn', 'piyg', 'picnic', 'portland', 'puor', 'rdgy', 'rdylbu', 'rdylgn', 'spectral', 'tealrose', 'temps', 'tropic', 'balance', 'curl', 'delta', 'oxy', 'edge', 'hsv', 'icefire', 'phase', 'twilight', 'mrybm', 'mygbm']</pre></div>
 <h2>使用GitHub API对GitHub的数据可视化</h2>
@@ -628,7 +628,7 @@ eq_explore_data.py</p>
 这个 API 调用返回 GitHub 当前托管了多少个 Python 项目，以及有关最受欢迎的Python 仓库的信息。下面来仔细地研究这个 API 调用。开头的<a href="https://api.github.com/">https://api.github.com/</a> 是 GitHub 的 API 地址。接下来的search/repositories 让 API 搜索 GitHub 上的所有仓库。repositories 后面的问号指出需要传递一个参数。参数 q 表示查询，而等号（=）让我们能够开始指定查询（q=）。接着，通过 language:python 指出只想获取主要语言为 Python 的仓库的信息。最后的 +sort:stars 指定将项目按星数排序。<br>
 大多数 API 存在速率限制，即在特定时间内可执行的请求数存在限制。要获悉是否接近了 GitHub 的限制，请在浏览器中输入 <a href="https://api.github.com/rate_limit">https://api.github.com/rate_limit</a><br>
 注意：很多 API 要求，在通过注册获得 API 密钥（访问令牌）后，才能执行 API调用。GitHub 没有这样的要求，但获得访问令牌后，配额将高得多。</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">requests</span>
 <span class="pl-k">import</span> <span class="pl-s1">plotly</span>.<span class="pl-s1">express</span> <span class="pl-k">as</span> <span class="pl-s1">px</span>
 
 
@@ -689,9 +689,9 @@ eq_explore_data.py</p>
        data-bottom-title="下一页"></div>
 </main>
   <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons" data-copied="已复制">
-  <a class="in-nav-btn in-social" href="https://space.bilibili.com/000000" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
-  <a class="in-nav-btn in-social" href="mailto:example@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
-  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="123456789"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
+  <a class="in-nav-btn in-social" href="https://space.bilibili.com/UID:3546586772670802" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
+  <a class="in-nav-btn in-social" href="mailto:intersetwq@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="2775055258"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
   <button class="in-nav-btn in-social" type="button" title="WeChat" aria-label="WeChat" data-qrcode="https://interset-wq.github.io/assets/avatar.png"><svg fill="#07C160" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WeChat</title><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg></button>
   <a class="in-nav-btn in-social" href="https://interset-wq.github.io/rss.xml" target="_blank" rel="noopener" title="RSS" aria-label="RSS"><svg fill="#FFA500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
   <a class="in-nav-btn in-social" href="https://github.com/interset-wq/interset-wq.github.io" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg fill="#181717" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>

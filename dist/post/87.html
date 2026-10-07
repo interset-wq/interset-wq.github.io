@@ -842,7 +842,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>search和findall的函数式写法和方法式写法并没有太大的差别,只是采用了不同的编程思想——函数式编程和面向对象编程.</p>
 <h3>search</h3>
 <p><strong>方法</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'ma'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
@@ -854,7 +854,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <li>Match对象的 <code class="notranslate">match.group()</code>方法,返回查找字符串中实际匹配的文本</li>
 </ul>
 <p><strong>函数</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'ma'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">search</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -862,13 +862,13 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># ma</span></pre></div>
 <h3>findall</h3>
 <p><strong>方法</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'ma'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># ['ma', 'ma']</span></pre></div>
 <p><strong>函数</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'ma'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -876,19 +876,19 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <h3>sub</h3>
 <p>正则表达式不仅能找到文本模式,而且能够用新的文本替换掉这些模式. Pattern对象的sub()方法需要传入两个参数.第一个参数是一个字符串,用于取代发现的匹配.第二个参数是一个字符串,返回替换完成后的字符串.</p>
 <p><strong>方法</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'World'</span>)
 <span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">sub</span>(<span class="pl-s">'Python'</span>, <span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">new_str</span>) <span class="pl-c"># Hello Python!</span></pre></div>
 <p><strong>函数</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'World'</span>
 <span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">sub</span>(<span class="pl-s1">pattern</span>, <span class="pl-s">'Python'</span>, <span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">new_str</span>) <span class="pl-c"># Hello Python!</span></pre></div>
 <p>有时候,你可能需要使用匹配的文本本身,作为替换的一部分.在sub()的第一个参数中,可以输入\1、\2、\3…….表示“在替换中输入分组1、2、3……的文本”.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My email is d111kc@foxmail.com, his email is jerry@example.com'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\w)\w*@'</span>)
 <span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">sub</span>(<span class="pl-s">r'\1****@'</span>, <span class="pl-s1">my_str</span>)
@@ -897,7 +897,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <h2>正则表达式的特殊符号</h2>
 <h3>利用小括号 <code class="notranslate">()</code> 分组</h3>
 <p><strong>search方法</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
@@ -907,7 +907,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">2</span>)) <span class="pl-c"># 456-7890</span>
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">groups</span>()) <span class="pl-c"># ('123', '456-7890')</span></pre></div>
 <p><strong>search函数</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">search</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -925,13 +925,13 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 </ul>
 <hr>
 <p><strong>findall方法</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># [('123', '456-7890')]</span></pre></div>
 <p><strong>findall函数</strong></p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -939,20 +939,20 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>面对分组时,findall的返回值是 <code class="notranslate">list[tuple]</code>,每个分组就是元组的元素</p>
 <h3>使用管道 <code class="notranslate">|</code> 匹配多个分组</h3>
 <p>字符“|”称为“管道”,表示“或”.如果有多个符合匹配的文本,则第一个出现的作为match对象返回.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'Tom|Jerry'</span>) <span class="pl-c"># 匹配Tom或Jerry字符串</span>
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'Tom and Jerry'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Tom</span>
 <span class="pl-s1">match2</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'Jerry and Tom'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match2</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Jerry</span></pre></div>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'He(y|llo|ro)'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'Hello world.'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Hello （无视分组）</span>
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">1</span>)) <span class="pl-c"># llo （第1组）</span></pre></div>
 <h3>用问号 <code class="notranslate">?</code> 实现可选匹配</h3>
 <p>字符?表示它前面的分组在这个匹配模式中是可选的,即匹配问号之前的分组一次或零次.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(py)?torch'</span>)
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'I want to learn pytorch this week.'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># pytorch</span>
@@ -960,7 +960,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match2</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># torch</span></pre></div>
 <h3>用星号 <code class="notranslate">*</code> 匹配任意次</h3>
 <p>星号之前的分组,可以在文本中出现任意次.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'Bat(wo)*man'</span>)
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'the adventure of Batman'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Batman</span>
@@ -975,7 +975,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>如果想要一个分组重复特定次数,就在正则表达式中该分组的后面,跟上花括号包围的数字.除了一个数字,还可以指定一个范围,即在花括号内写下一个最小值、逗号、最大值.例如正则表达式(ha){3,5}匹配'hahaha','hahahaha','hahahahaha'.也可以不写花括号中的第一个或第二个数字,表示不限定最小值或最大值.</p>
 <h3>非贪心匹配 <code class="notranslate">?</code></h3>
 <p>Python的正则表达式默认是贪心匹配,这表示在有二义的情况下,它们会尽可能匹配最长的字符串.花括号的“非贪心”版本匹配尽可能最短的字符串,即在结束的花括号后跟着一个问号.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">greed_pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(Ha){3,5}'</span>)
 <span class="pl-s1">mo1</span> <span class="pl-c1">=</span> <span class="pl-s1">greed_pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'HaHaHaHaHa'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">mo1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># HaHaHaHaHa</span>
@@ -984,14 +984,14 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">mo2</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># HaHaHa</span></pre></div>
 <h3>使用方括号 <code class="notranslate">[]</code> 建立字符分类</h3>
 <p>可以用方括号定义自己的字符分类.例如,字符分类 <code class="notranslate">[aeiouAEIOU]</code> 将匹配所有元音字符,不论大小写.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'[aeiouAEIOU]'</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Python is VERY interesting.'</span>
 <span class="pl-s1">my_list</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">my_list</span>) <span class="pl-c"># ['o', 'i', 'E', 'i', 'e', 'e', 'i']</span></pre></div>
 <p>也可以使用连字符 <code class="notranslate">-</code> 表示字母或数字的范围.例如,字符分类 <code class="notranslate">[a-zA-Z0-9]</code> 将匹配所有小写字母、大写字母和数字.</p>
 <p>注意,在方括号 <code class="notranslate">[]</code> 内,普通的正则表达式符号不会被解释.你不需要前面加上倒斜杠转义<code class="notranslate">.</code>、<code class="notranslate">*</code>、<code class="notranslate">?</code>或<code class="notranslate">()</code>字符.例如,字符分类将匹配数字0到5和一个句点,则需要将它写成[0-5.] .通过在字符分类的左方括号后加上一个插入字符 <code class="notranslate">^</code>,就可以得到“非字符类”.非字符类将匹配不在这个字符类中的所有字符.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'[^aeiouAEIOU]'</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Python'</span>
 <span class="pl-s1">my_list</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -1000,7 +1000,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>可以在正则表达式的开始处使用插入符号 <code class="notranslate">^</code>,表明匹配必须发生在被查找文本开始处.类似地,可以再正则表达式的末尾加上美元符号 <code class="notranslate">$</code>,表示该字符串必须以这个正则表达式的模式结束.可以同时使用 <code class="notranslate">^</code> 和 <code class="notranslate">$</code>,表明整个字符串必须匹配该模式,也就是说,只匹配该字符串的某个子集是不够的.</p>
 <h3>通配符 <code class="notranslate">.</code></h3>
 <p>在正则表达式中,句点字符 <code class="notranslate">.</code> 称为“通配符”.它匹配除了换行之外的所有字符.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'.at'</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'The cat in the hat sat on the flat mat.'</span>
 <span class="pl-s1">my_list</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -1008,14 +1008,14 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>要记住,句点字符只匹配一个字符,所以,对于文本 <code class="notranslate">flat</code> ,只匹配 <code class="notranslate">lat.</code> 要匹配真正的句点,就是用倒斜杠转义.</p>
 <h3>用点星 <code class="notranslate">.*</code> <code class="notranslate">.*?</code> 匹配所有字符</h3>
 <p>可以用点星(.*)表示“任意文本”.句点字符表示“除换行外所有单个字符”,星号字符表示“前面字符出现零次或多次”.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello world!'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(.*) world'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Hello world!</span>
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">1</span>)) <span class="pl-c"># Hello</span></pre></div>
 <p>点星 <code class="notranslate">.*</code> 使用贪心匹配.要用非贪心模式匹配所有文本,就使用点星问 <code class="notranslate">.*?</code> .像和花括号一起使用时那样,问号告诉Python用非贪心模式匹配.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'&lt;Hello&gt; &lt;World&gt;'</span>
 <span class="pl-c"># 非贪心匹配</span>
 <span class="pl-s1">nongreddy_pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'&lt;.*?&gt;'</span>)
@@ -1030,7 +1030,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>点-星将匹配除换行外的所有字符.通过传入 <code class="notranslate">re.DOTALL</code> 作为 <code class="notranslate">re.compile()</code> 的第二个参数,可以让句点字符匹配所有字符,包括换行字符.</p>
 <h3>不区分大小写的匹配 <code class="notranslate">re.I</code> <code class="notranslate">re.IGNORECASE</code></h3>
 <p>通常,正则表达式默认区分大小写.要让正则表达式不区分大小写,可以向 <code class="notranslate">re.compile()</code> 传入 <code class="notranslate">re.IGNORECASE</code> 或 <code class="notranslate">re.I</code> ,作为第二个参数.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'hello'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">I</span>)
 <span class="pl-s1">my_str1</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str1</span>)
@@ -1043,7 +1043,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match3</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># hello</span></pre></div>
 <h3>正则表达式中编写注释 <code class="notranslate">re.VERBOSE</code></h3>
 <p>可以向<code class="notranslate">re.compile()</code>传入变量<code class="notranslate">re.VERBOSE</code>,作为第二个参数.忽略正则表达式字符串中的空白符和注释.</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}(\s*(ext|x|ext.)\s*\d{2,5})?)'</span>)<span class="pl-c"># 这个正则表达式难以阅读,可以添加注释简化阅读</span>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}(\s*(ext|x|ext.)\s*\d{2,5})?)'</span>)<span class="pl-c"># 这个正则表达式难以阅读,可以添加注释简化阅读</span>
 <span class="pl-c"># 三重引号表示多行字符串,也可表示注释</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'''(</span>
 <span class="pl-s">    (\d{3}|\(\d{3}\))? # 区号</span>
@@ -1056,7 +1056,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>使用了三重引号('"),创建了一个多行字符串.这样就可以将正则表达式定义放在多行中,让它更可读.正则表达式字符串中的注释规则,与普通的Python代码一样：#符号和它后面直到行末的内容,都被忽略.而且,表示正则表达式的多行字符串中,多余的空白字符也不认为是要匹配的文本模式的一部分.</p>
 <h3>使用管道 <code class="notranslate">|</code> 组合使用 <code class="notranslate">re.IGNORECASE</code> <code class="notranslate">re.DOTALL</code>和 <code class="notranslate">re.VERBOSE</code>(不推荐使用)</h3>
 <p>如果你希望在正则表达式中使用re.VERBOSE来编写注释,还希望使用re.IGNORECASE来忽略大小写,该怎么办？遗憾的是,re.compile()函数只接受一个值作为它的第二参数.可以使用管道字符(|)将变量组合起来,从而绕过这个限制.管道字符在这里称为“按位或”操作符.所以,如果希望正则表达式不区分大小写,并且句点字符匹配换行,就可以这样构造re.compile()调用：</p>
-<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">someRegexValue</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'foo'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">IGNORECASE</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">DOTALL</span>)
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">someRegexValue</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'foo'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">IGNORECASE</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">DOTALL</span>)
 <span class="pl-s1">someRegexValue</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'foo'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">IGNORECASE</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">DOTALL</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">VERBOSE</span>)</pre></div></div>
   </article>
 <section class="in-comments-section">
@@ -1082,9 +1082,9 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
        data-bottom-title="下一页"></div>
 </main>
   <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons" data-copied="已复制">
-  <a class="in-nav-btn in-social" href="https://space.bilibili.com/000000" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
-  <a class="in-nav-btn in-social" href="mailto:example@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
-  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="123456789"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
+  <a class="in-nav-btn in-social" href="https://space.bilibili.com/UID:3546586772670802" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
+  <a class="in-nav-btn in-social" href="mailto:intersetwq@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="2775055258"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
   <button class="in-nav-btn in-social" type="button" title="WeChat" aria-label="WeChat" data-qrcode="https://interset-wq.github.io/assets/avatar.png"><svg fill="#07C160" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WeChat</title><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg></button>
   <a class="in-nav-btn in-social" href="https://interset-wq.github.io/rss.xml" target="_blank" rel="noopener" title="RSS" aria-label="RSS"><svg fill="#FFA500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
   <a class="in-nav-btn in-social" href="https://github.com/interset-wq/interset-wq.github.io" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg fill="#181717" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>

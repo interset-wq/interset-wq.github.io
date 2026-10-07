@@ -95,7 +95,7 @@ IP 地址中对应子网掩码为 1 的位为网络部分。<br>
 </ul>
 <h3>用 ifconfig -a 检测接口</h3>
 <p>用<code class="notranslate">ifconfig -a</code>命令可检测所有目前已识别的网络接口信息</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig -a
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig -a
 ens33: flags=<span class="pl-k">4163&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="pl-k">&gt;</span>  mtu 1500
         inet 192.168.27.128  netmask 255.255.255.0  broadcast 192.168.27.255
         inet6 fe80::5f44:5a23:6d7:6307  prefixlen 64  scopeid 0x<span class="pl-k">20&lt;</span>link<span class="pl-k">&gt;</span>
@@ -133,7 +133,7 @@ virbr0-nic: flags=<span class="pl-k">4098&lt;</span>BROADCAST,MULTICAST<span cla
 <p>ifconfig命令如果不附加-a选项，就只能报告活跃的接口。</p>
 <h3>用 ifconfig 命令配置网络接口</h3>
 <p>用户应该为接口配置恰当的联网信息，比如IP地址和子网掩码。在Linux系统中可用ifconfig命令来完成这些操作。ifconfig命令的基本格式如下：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig 接口名 [选项] [地址]</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig 接口名 [选项] [地址]</pre></div>
 <p>和大多数Linux命令不同，在这里许多选项要用关键词来指定，而不是用标准命令行选项语法。下面列出一些在ifconfig命令中比较常用的选项关键词。</p>
 <p>选项：</p>
 <ul>
@@ -255,7 +255,7 @@ net.ipv4.ip_forward = 1 说明 Linux 开启了路由转发功能</li>
 <p>独立的服务要想启动，主要有两种方法：</p>
 <h3>使用/etc/init.d/目录中的启动脚本来启动独立的服务</h3>
 <p>所有独立服务的启动脚本都存放在/etc/init.d/目录中，调用这些脚本就可以启动独立的服务了。这种启动方式是推荐启动方式，命令格式如下：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ /etc/init.d/独立服务名 start<span class="pl-k">|</span>stop<span class="pl-k">|</span>status<span class="pl-k">|</span>restart</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ /etc/init.d/独立服务名 start<span class="pl-k">|</span>stop<span class="pl-k">|</span>status<span class="pl-k">|</span>restart</pre></div>
 <p>参数：</p>
 <ul>
 <li>start：启动服务。</li>
@@ -266,7 +266,7 @@ net.ipv4.ip_forward = 1 说明 Linux 开启了路由转发功能</li>
 <p>以httpd服务为例：</p>
 <p>安装httpd：</p>
 <p>启动httpd服务命令如下：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ /etc/init.d/httpd start</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ /etc/init.d/httpd start</pre></div>
 <p>查询httpd服务状态，并能够看到httpd服务的PID：<br>
 [root@ localhost~]#/etc/init.d/httpd status<br>
 httpd（pid13313)<br>
@@ -290,14 +290,14 @@ rsyslogd 服务依赖其配置文件 /etc/rsyslogd.conf 来确定各个服务不
 <h1>Emacs 编辑器</h1>
 <h2>安装</h2>
 <p>centos</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install emacs</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install emacs</pre></div>
 <h2>Emacs 的操作</h2>
 <h3>Emacs 的启动</h3>
 <p>emacs使用图形化界面编辑文件，并不使用类似于vim的命令行界面</p>
 <p>打开emacs</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ emacs</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ emacs</pre></div>
 <p>通过emacs打开文件，文件不存在时，创建新文件：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ emacs hello.txt</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ emacs hello.txt</pre></div>
 <p>模式行是emacs界面倒数第二行。模式行显示状态信息。包括以下几个字段：</p>
 <p><code class="notranslate">-:--- buf pos L# (Pattern)</code></p>
 <ul>
@@ -494,21 +494,21 @@ M 有 Batis 是一款优秀的持久层框架，支持定制化 SQL、存储过�
 <h1>Linux 应用程序开发技术</h1>
 <h2>centos配置C语言环境</h2>
 <p>安装 wget</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ yum -y install wget</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ yum -y install wget</pre></div>
 <p>检查wget是否安装成功：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ wget --version</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ wget --version</pre></div>
 <p>检查gcc是否已安装：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc --version</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc --version</pre></div>
 <p>安装gcc：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install gcc</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install gcc</pre></div>
 <p>检查是否安装 gdb：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gdb --version</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gdb --version</pre></div>
 <p>安装gdb：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install gdb</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install gdb</pre></div>
 <p>检查是否安装make：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ make --version</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ make --version</pre></div>
 <p>安装make：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install make</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ yum install make</pre></div>
 <p>安装完这些之后，C语言环境配置完成。一般Centos默认安装了这些。</p>
 <h2>C语言程序开发的一般过程</h2>
 <p>Linux系统下C语言程序开发的过程:</p>
@@ -517,7 +517,7 @@ M 有 Batis 是一款优秀的持久层框架，支持定制化 SQL、存储过�
 <p>如果开发的是一个大型程序，可以编写akefile文件自动编译程序，并使用cvs对项目进行管理。</p>
 <p>下面通过一个例子对C语言程序的编写和运行进行演示。</p>
 <h3>第一步 使用VI编写C语言代码</h3>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim hello.c
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim hello.c
 $ cat hello.c
 <span class="pl-c"><span class="pl-c">#</span>include &lt;studio.h&gt;</span>
 int <span class="pl-en">main</span>() {
@@ -525,11 +525,11 @@ printf(<span class="pl-s"><span class="pl-pds">"</span>hello world\n<span class=
 <span class="pl-k">return</span> 0<span class="pl-k">;</span>
 }</pre></div>
 <h3>第二步 使用GCC编译代码</h3>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -o hello hello.c</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -o hello hello.c</pre></div>
 <p>这条命令表明将 hello.c 这个文件编译为可执行文件 hello</p>
 <h3>第三步 运行代码</h3>
 <p>运行gcc编译后的可执行文件hello</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ./hello 
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ./hello 
 hello world</pre></div>
 <h2>GCC 编辑器</h2>
 <h3>C 语言程序的编译过程</h3>
@@ -538,20 +538,20 @@ hello world</pre></div>
 扩展名为“.c”的文件，在源文件的头部一般包含头文件（扩展名为“.h”），以#include开头；或者包含常量的定义，以#define开头；或者包含条件编译命令，以#ifdef开头。</p>
 <p>预处理阶段会生成一个中间文件（扩展名为“.i”），在实际工作中一般不用专门生成这种文<br>
 件，这只是编译器在编译的过程中生成的一种中间代码形式。若要生成这种文件，可以使用下面的命令：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -E hello.c -o hello.i</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -E hello.c -o hello.i</pre></div>
 <p>它通过对源文件“hello.c”使用-E选项生成中间文件“hello.i”</p>
 <p>在编译阶段，输入是中间文件（扩展名为“i”），编译后生成汇编文件（扩展名为“.s”），可以使用下面的GCC命令：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -S hello.i -o hello.s</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -S hello.i -o hello.s</pre></div>
 <p>在汇编阶段，将汇编文件（扩展名为“.s”）转换成二进制机器代码（扩展名为“.o”），可以使用下面的GCC命令：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -c hello.s -o hello.o</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc -c hello.s -o hello.o</pre></div>
 <p>在链接阶段，将输人的二进制机器代码文件（扩展名为“.o”）与库文件等汇集到一起形成一个可执行的二进制代码文件，可以使用下面的GCC命令：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc hello.o -o hello</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc hello.o -o hello</pre></div>
 <p>最终生成可执行文件hello。</p>
 <p>上述分步编译的过程只是演示了C语言程序在编译过程中经历的阶段，实际操作时可以直接使用简化的CCC命令：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc-c hello.c -o hello.o
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc-c hello.c -o hello.o
 $ gcc hello.o -o hello</pre></div>
 <p>或者采用更简化的形式：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc hello.c -o hello</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gcc hello.c -o hello</pre></div>
 <p>即可生成可执行文件hello。</p>
 <h3>GCC 基本用法</h3>
 <p>语法 <code class="notranslate">$ gcc [选项] [文件名]</code></p>
@@ -561,9 +561,9 @@ $ gcc hello.o -o hello</pre></div>
 <h3>GDB 的启动和退出</h3>
 <p>要启动GDB，需要在Linux的应用程序终端中输人命令“gdb程序名”或者先输人“gdb”，然后输人“file 程序名”。</p>
 <p>例如，启动GDB对hello进行调试，可以输入命令：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gdb hello</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gdb hello</pre></div>
 <p>或者输人命令：</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ gdb
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ gdb
 (gdb) file hello</pre></div>
 <p>启动GDB后显示的是CDB的版权信息，如果想在GDB启动时不输出版权信息，可以在启动时加人“-q”选项，例如“gdb-q hello”。启动后显示的是GDB提示符：（gdb），可以在提示符（gdb）的后面输入GDB的相关命令。</p>
 <p>退出GDB的方法是使用“quit"或者“q"，再按回车。</p>
@@ -1195,7 +1195,7 @@ vim 文件路径
 </table></markdown-accessiblity-table>
 <h3>查看命令的帮助</h3>
 <p>可以通过：<code class="notranslate">命令 --help</code>查看命令的帮助手册</p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ls --help 
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls --help 
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically <span class="pl-k">if</span> none of -cftuvSUX nor --sort is specified.
@@ -1493,7 +1493,7 @@ Wed Jul 23 10:51:41 CST 2025
 <p>每一台联网的电脑都会有一个地址，用于和其它计算机进行通讯。IP地址主要有2个版本，V4版本和V6版本（V6很少用）</p>
 <p>IPv4版本的地址格式是：<code class="notranslate">a.b.c.d</code>，其中abcd表示0~255的数字，如<code class="notranslate">192.168.88.101</code>就是一个标准的IP地址</p>
 <p>可以通过命令：<code class="notranslate">ifconfig</code>，查看本机的ip地址，如无法使用ifconfig命令，CentOS可以安装：<code class="notranslate">yum -y install net-tools</code></p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ifconfig
 Command <span class="pl-s"><span class="pl-pds">'</span>ifconfig<span class="pl-pds">'</span></span> not found, but can be installed with:
 sudo apt install net-tools</pre></div>
 <h3>7.2 特殊IP地址</h3>
@@ -1914,7 +1914,7 @@ PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/d111kc/.local/bin:/
 <h3>2.3 查看权限控制</h3>
 <p>通过<code class="notranslate">ls -l</code>，有些Linux也可使用这个命令的别名 <code class="notranslate">ll</code>， 可以以列表形式查看内容，并显示权限细节</p>
 <p><a target="_blank" rel="noopener noreferrer" href="./img/user-right.webp"><img src="./img/user-right.webp" alt="图片" style="max-width: 100%;"></a></p>
-<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ls -l
+<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls -l
 total 0
 -rwxrwxrwx 1 d111kc d111kc    0 Sep 10 13:57 hello.txt
 lrwxrwxrwx 1 d111kc d111kc    9 Sep 10 13:58 note -<span class="pl-k">&gt;</span> ./note.md
@@ -2008,9 +2008,9 @@ drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 13:57 test1</pre></div>
        data-bottom-title="下一页"></div>
 </main>
   <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons" data-copied="已复制">
-  <a class="in-nav-btn in-social" href="https://space.bilibili.com/000000" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
-  <a class="in-nav-btn in-social" href="mailto:example@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
-  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="123456789"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
+  <a class="in-nav-btn in-social" href="https://space.bilibili.com/UID:3546586772670802" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
+  <a class="in-nav-btn in-social" href="mailto:intersetwq@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="2775055258"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
   <button class="in-nav-btn in-social" type="button" title="WeChat" aria-label="WeChat" data-qrcode="https://interset-wq.github.io/assets/avatar.png"><svg fill="#07C160" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WeChat</title><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg></button>
   <a class="in-nav-btn in-social" href="https://interset-wq.github.io/rss.xml" target="_blank" rel="noopener" title="RSS" aria-label="RSS"><svg fill="#FFA500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
   <a class="in-nav-btn in-social" href="https://github.com/interset-wq/interset-wq.github.io" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg fill="#181717" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
