@@ -27,19 +27,19 @@ category_id = "DIC_kwDOTWqpPc4DBFW-"
 id = "bilibili"
 title = "Bilibili"
 action = "link"
-url = "https://space.bilibili.com/000000"
+url = "https://space.bilibili.com/UID:3546586772670802"
 
 [[social]]
 id = "gmail"
 title = "Email"
 action = "link"
-url = "mailto:example@gmail.com"
+url = "mailto:intersetwq@gmail.com"
 
 [[social]]
 id = "qq"
 title = "QQ"
 action = "copy"
-username = "123456789"
+username = "2775055258"
 
 [[social]]
 id = "wechat"
