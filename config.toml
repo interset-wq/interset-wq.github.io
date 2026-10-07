@@ -28,3 +28,22 @@ id = "bilibili"
 title = "Bilibili"
 action = "link"
 url = "https://space.bilibili.com/000000"
+
+[[social]]
+id = "gmail"
+title = "Email"
+action = "link"
+url = "mailto:example@gmail.com"
+
+[[social]]
+id = "qq"
+title = "QQ"
+action = "copy"
+username = "123456789"
+
+[[social]]
+id = "wechat"
+title = "WeChat"
+action = "qrcode"
+qrcode = "https://interset-wq.github.io/assets/avatar.png"
+
