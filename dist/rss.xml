@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Tue, 06 Oct 2026 16:14:31 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>+++&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Wed, 07 Oct 2026 02:05:52 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>Python基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>+++&#13;
 date = 2025-09-06T23:15:30+08:00&#13;
 +++&#13;
 # 内置函数&#13;
@@ -6497,86 +6497,7 @@ soup对象的属性和方法：
 - 所有html标签都可以看做是soup对象的属性，`soup.标签` 相当于对soup对象使用了元素选择器，且只选中 {==第一个==} 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）
     
     ???+ note '子节点'
-        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</description><guid isPermaLink="true">https://interset-wq.github.io/post/76.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>chinadaily</title><link>https://interset-wq.github.io/post/23.html</link><description>## 2025
-
-### July 11
-
-- [x] designate v.指定，指派 adj.尚未就职的
-- [ ] reproductive adj.生殖的，繁殖的
-- [x] profound adj.意义深远的，彻底的
-- [ ] demographic adj.人口(统计)学的 n.人口统计数据
-- [ ] fertility n.富饶，可繁殖性
-- [ ] depopulation n.人口减少，灭绝
-- [x] respondent n.调查对象，被告
-- [x] constraint n.限制，约束
-- [ ] socioeconomic adj.社会经济的
-- [ ] disparity n.差异，差距
-- [x] aspiration n.渴望，抱负，志向
-- [ ] encompass v.包含，涉及
-- [ ] subsidy n.补贴
-    - [ ] subsidize v.资助，补助
-- [x] initiative n.倡议
-- [ ] maternity n.怀孕
-- [ ] maternal adj.母亲的
-- [x] inclusive adj.包括在内的，范围广泛的
-- [ ] exclude v.排除，不包括，防止……进入
-- [ ] incentive adj.激励，鼓励，刺激
-- [x] eliminate v.消除
-- [x] stereotype n.刻板印象
-- [ ] spouse n.配偶
-- [ ] discard v.抛弃，丢弃
-
----
-
-### July 12
-
-- [ ] epic adj.史诗，惊人之举 adj.宏大的，壮丽的
-- [ ] trudge v.费力地走
-- [ ] dusty adj.布满灰尘的
-- [ ] suspend v.暂停，终止，推迟
-- [ ] asphalt v.&amp;n.(铺)沥青
-- [ ] emblematic adj.典型的，象征的
-- [ ] microcosm n.缩影
-- [x] alleviation n.减轻，缓和
-- [ ] portray v.描绘
-- [ ] anthropologist n.人类学家
-- [ ] methodology n.方法(论)，原则
-- [ ] gaunt adj.&amp;v.(使)憔悴(的)，破败的
-- [ ] stoop v.俯身，弯腰
-- [ ] barometer n.晴雨表，指标，气压计
-- [ ] metamorphosis n.变形，质变
-- [ ] dwelling n.住宅，公寓
-- [x] external n.&amp;adj.外部(的)
-
----
-
-### July 13
-
-- [ ] pave v.铺路 n.铺路的材料
-- [ ] witty adj.机智的，妙趣横生的
-- [ ] prevail v.盛行，战胜，压倒，被接受
-- [ ] proceeding adj.前面的
-- [ ] prudent adj.谨慎的，节俭的
-- [ ] mobility n.流动性
-    - [ ] mobilize v.动员，调用，组织
-- [ ] revival n.复兴，重演，再流行
-- [ ] stake n.股份 v.以……打赌
-- [x] diminish v.减少，降低
-- [x] fetch v.拿来，请来
-- [ ] perception n.感知，看法，见解
-- [ ] hierarchical adj.等级制的，按等级划分的
-- [ ] multistory adj.多层的 n.多层建筑
-- [ ] obsession n.痴迷，困扰
-- [ ] nurture v.培养，支持
-- [ ] unleash v.使爆发，发泄，突然释放
-- [ ] rigid adj.坚硬的，刻板的，严格的，精确的
-
---- 
-
-### July 14
-
-- [x] legacy n.遗产，后遗症 adj.已停产的
-- [ ] proportion n。</description><guid isPermaLink="true">https://interset-wq.github.io/post/23.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>freecodecamp</title><link>https://interset-wq.github.io/post/24.html</link><description>## Scientific Computing with Python
+        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</description><guid isPermaLink="true">https://interset-wq.github.io/post/76.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>freecodecamp</title><link>https://interset-wq.github.io/post/24.html</link><description>## Scientific Computing with Python
 
 - [ ] instantiate v.实例化
 - [ ] instance n.实例，例子 v.举例
