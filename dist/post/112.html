@@ -20,13 +20,12 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="# 内置函数
-
+  <meta name="description" content="
 [Python官方文档](https://docs.python.org/zh-cn/3/)
 
-python解释器可以使用Tab不全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行
+python解释器可以使用Tab补全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行
 
-pass常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错
+`pass` 或 `...` 常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错
 
 enum库 定义常量
 
@@ -98,13 +97,12 @@ enum库 定义常量
 
 除了 int 和 float，Python 还支持其他数字类型，例如 Decimal 或 Fraction。">
 <meta property="og:title" content="Python基础语法">
-<meta property="og:description" content="# 内置函数
-
+<meta property="og:description" content="
 [Python官方文档](https://docs.python.org/zh-cn/3/)
 
-python解释器可以使用Tab不全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行
+python解释器可以使用Tab补全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行
 
-pass常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错
+`pass` 或 `...` 常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错
 
 enum库 定义常量
 
@@ -217,10 +215,9 @@ enum库 定义常量
     </div>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><h1>内置函数</h1>
-<p><a href="https://docs.python.org/zh-cn/3/" rel="nofollow">Python官方文档</a></p>
-<p>python解释器可以使用Tab不全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行</p>
-<p>pass常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错</p>
+    <div class="in-post-body markdown-body"><p><a href="https://docs.python.org/zh-cn/3/" rel="nofollow">Python官方文档</a></p>
+<p>python解释器可以使用Tab补全，通过ctrl+c或ctrl+z回车或quit()可以退出解释器，重新回到windows命令行</p>
+<p><code class="notranslate">pass</code> 或 <code class="notranslate">...</code> 常常作为定义函数、类、循环等操作的占位符，为了满足语法规范，防止报错</p>
 <p>enum库 定义常量</p>
 <h2>一、注释和变量命名规范</h2>
 <h3>1.1 注释</h3>
@@ -311,7 +308,6 @@ enum库 定义常量
 <li>非 <code class="notranslate">not</code></li>
 </ul>
 <hr>
-<h1>基本数据类型</h1>
 <h2>四、数据类型</h2>
 <p>基本数据类型有 <code class="notranslate">整型int</code> <code class="notranslate">浮点数float</code> <code class="notranslate">布尔数bool -&gt; True/False</code> <code class="notranslate">字符串str</code> <code class="notranslate">复数complex</code> <code class="notranslate">空NoneType -&gt; None</code> <code class="notranslate">列表list</code> <code class="notranslate">集合set</code> <code class="notranslate">元组tuple</code> <code class="notranslate">字典dict</code>。整数和浮点数可以适当添加下划线让数字更易读。可以通过使用逗号分割同时为多个变量赋值。</p>
 <p>数据容器：一种可以容纳多份数据的数据类型，容纳的每一份数据称之为1个元素，每一个元素，可以是任意类型的数据，如字符串、数字、布尔等。五种数据容器分别是 <code class="notranslate">列表list</code> <code class="notranslate">集合set</code> <code class="notranslate">元组tuple</code> <code class="notranslate">字典dict</code> <code class="notranslate">字符串str</code></p>
@@ -414,9 +410,7 @@ enum库 定义常量
 <li><code class="notranslate">count(元素)</code> 方法 统计某元素在列表中出现次数</li>
 <li><code class="notranslate">sort()</code>方法 正序排列，传入<code class="notranslate">reverse=True</code>时倒序排列（按照数字或字母顺序）</li>
 <li><code class="notranslate">reverse()</code>方法 倒置，将原顺序倒置</li>
-</ul>
-<p><code class="notranslate">del 列表名[下标]</code> 删除元素</p>
-<ul>
+<li><code class="notranslate">del 列表名[下标]</code> 删除元素</li>
 <li><code class="notranslate">len()</code> 函数 返回列表长度</li>
 <li><code class="notranslate">sorted()</code>函数 正序排列，传入参数reverse=True时倒序排列</li>
 <li><code class="notranslate">max(lst)</code>函数 取列表中的最大值</li>
@@ -491,79 +485,48 @@ enum库 定义常量
 <p>通过键获取值，使用花括号包裹，键值对使用逗号分隔，键和值使用冒号连接。</p>
 <p>常用操作</p>
 <ul>
-<li>
-<p>新增元素 <code class="notranslate">字典名[Key] = Value</code></p>
-</li>
-<li>
-<p>更新元素 <code class="notranslate">字典名[Key] = Value</code> 对已存在的键使用</p>
-</li>
-<li>
-<p>删除元素 <code class="notranslate">pop(Key)</code> 方法 字典被修改，指定Key的键值对被删除，返回键对应的值value</p>
-</li>
-<li>
-<p>清空字典 <code class="notranslate">clear()</code> 方法 字典被修改为空字典{}，元素被清空</p>
-</li>
-<li>
-<p>字典长度 <code class="notranslate">len()</code>函数</p>
-</li>
-<li>
-<p>删除字典中的键值对：使用 del 语句将指定字典名中要删除的键相应的键值对彻底删除。例如 使用 <code class="notranslate">del mydict['name']</code> 删除mydict字典中的name对应的键值对</p>
-</li>
-<li>
-<p><code class="notranslate">get()</code> 方法</p>
+<li>新增元素 <code class="notranslate">字典名[Key] = Value</code></li>
+<li>更新元素 <code class="notranslate">字典名[Key] = Value</code> 对已存在的键使用</li>
+<li>删除元素 <code class="notranslate">pop(Key)</code> 方法 字典被修改，指定Key的键值对被删除，返回键对应的值value</li>
+<li>清空字典 <code class="notranslate">clear()</code> 方法 字典被修改为空字典{}，元素被清空</li>
+<li>字典长度 <code class="notranslate">len()</code>函数</li>
+<li>删除字典中的键值对：使用 del 语句将指定字典名中要删除的键相应的键值对彻底删除。例如 使用 <code class="notranslate">del mydict['name']</code> 删除mydict字典中的name对应的键值对</li>
+<li><code class="notranslate">get()</code> 方法
 <ul>
 <li>用来访问字典某个键对应的值，如果键不存在，返回默认值或<code class="notranslate">None</code></li>
 <li><code class="notranslate">my_dict.get(key, [default])</code>：根据键获取值，默认值 <code class="notranslate">default</code> 实参是可选的</li>
 </ul>
 </li>
-<li>
-<p><code class="notranslate">{==items()==}</code>方法 用于同时遍历字典的键和值</p>
-<p>??? example</p>
-<pre class="notranslate"><code class="notranslate">  代码
-  ```py
-  languages = {'python': 'py', 'javascript': 'js', 'c++': 'cpp'}
-  for lang, extension in languages.items():
-      print(f'{lang}语言的文件后缀名是{extension}')
-  ```
-  输出结果
-  ```
-  python语言的文件后缀名是py
-  javascript语言的文件后缀名是js
-  c++语言的文件后缀名是cpp
-  ```
-</code></pre>
-</li>
-<li>
-<p><code class="notranslate">keys()</code>方法	返回键的列表，一般用于遍历所有键，直接使用字典名遍历，默认是遍历字典的键的列表</p>
-</li>
-<li>
-<p><code class="notranslate">values()</code>方法，返回值的列表，一般用于遍历所有的值</p>
-</li>
-<li>
-<p><em>字典推导式</em> 能明显简化代码</p>
-<p>???+ example</p>
-<pre class="notranslate"><code class="notranslate">  ```py
-  langs = ['python', 'javascripts', 'c++']
-  extensions = ['py', 'js', 'cpp']
-  languages = {lang: extension for lang, extension in zip(langs, extensions)}
-  print(languages) # 输出结果 {'python': 'py', 'javascripts': 'js', 'c++': 'cpp'}
-  ```
-</code></pre>
-</li>
+<li><code class="notranslate">items()</code>方法 用于同时遍历字典的键和值</li>
 </ul>
+<p>代码</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">languages</span> <span class="pl-c1">=</span> {<span class="pl-s">'python'</span>: <span class="pl-s">'py'</span>, <span class="pl-s">'javascript'</span>: <span class="pl-s">'js'</span>, <span class="pl-s">'c++'</span>: <span class="pl-s">'cpp'</span>}
+<span class="pl-k">for</span> <span class="pl-s1">lang</span>, <span class="pl-s1">extension</span> <span class="pl-c1">in</span> <span class="pl-s1">languages</span>.<span class="pl-c1">items</span>():
+    <span class="pl-en">print</span>(<span class="pl-s">f'<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">lang</span><span class="pl-kos">}</span></span>语言的文件后缀名是<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">extension</span><span class="pl-kos">}</span></span>'</span>)</pre></div>
+<p>输出结果</p>
+<pre class="notranslate"><code class="notranslate">python语言的文件后缀名是py
+javascript语言的文件后缀名是js
+c++语言的文件后缀名是cpp
+</code></pre>
+<ul>
+<li><code class="notranslate">keys()</code>方法	返回键的列表，一般用于遍历所有键，直接使用字典名遍历，默认是遍历字典的键的列表</li>
+<li><code class="notranslate">values()</code>方法，返回值的列表，一般用于遍历所有的值</li>
+<li><em>字典推导式</em> 能明显简化代码</li>
+</ul>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">langs</span> <span class="pl-c1">=</span> [<span class="pl-s">'python'</span>, <span class="pl-s">'javascripts'</span>, <span class="pl-s">'c++'</span>]
+<span class="pl-s1">extensions</span> <span class="pl-c1">=</span> [<span class="pl-s">'py'</span>, <span class="pl-s">'js'</span>, <span class="pl-s">'cpp'</span>]
+<span class="pl-s1">languages</span> <span class="pl-c1">=</span> {<span class="pl-s1">lang</span>: <span class="pl-s1">extension</span> <span class="pl-k">for</span> <span class="pl-s1">lang</span>, <span class="pl-s1">extension</span> <span class="pl-c1">in</span> <span class="pl-en">zip</span>(<span class="pl-s1">langs</span>, <span class="pl-s1">extensions</span>)}
+<span class="pl-en">print</span>(<span class="pl-s1">languages</span>) <span class="pl-c"># 输出结果 {'python': 'py', 'javascripts': 'js', 'c++': 'cpp'}</span></pre></div>
 <details>
 <summary>字典特点</summary>
-</details>
-<pre class="notranslate"><code class="notranslate">- 可以容纳多个数据
+- 可以容纳多个数据
 - 可以容纳不同类型的数据
 - 每一份数据是KeyValue键值对
 - 可以通过Key获取到Value，Key不可重复（重复会覆盖）
 - 不支持下标索引
 - 可以修改（增加或删除更新元素等）
 - 支持for循环，不支持while循环
-</code></pre>
-<hr>
-<h1>语句和函数</h1>
+</details>
 <h2>五、判断语句和循环语句</h2>
 <h3>5.1 判断语句</h3>
 <p>判断语句if，和布尔数以及比较运算符一起使用。关键字<code class="notranslate">in</code> 检查特定值是否在列表、元组中。将数值 0、空值 None、空字符串、空列表[]、空元组()、空字典{} 用作条件表达式时，Python 都会返回 False</p>
@@ -637,8 +600,6 @@ enum库 定义常量
 <li><code class="notranslate">import module_name as mn</code> 使用<code class="notranslate">as</code>为模块取别名</li>
 <li><code class="notranslate">from module_name import *</code> 导入模块中所有函数（不推荐使用）</li>
 </ul>
-<hr>
-<h1>文件和异常</h1>
 <h2>七、文件操作</h2>
 <h3>7.1 文件操作基本流程</h3>
 <ol>
@@ -860,8 +821,6 @@ print(my_banana.color) # green
 <span class="pl-c"># 新版本Python可以不导入typing</span>
 <span class="pl-s1">my_list2</span>: <span class="pl-s1">list</span>[<span class="pl-s1">int</span> <span class="pl-c1">|</span> <span class="pl-s1">str</span>] <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-s">"hello"</span>, <span class="pl-s">"world"</span>]</pre></div>
 <p>因为 <em>my_list</em> 变量存储的数据同时有 <em>int</em> 和 <em>str</em>，所以需要使用联合类型注解。</p>
-<hr>
-<h1>测试</h1>
 <h2>十、测试unittest/pytest</h2>
 <p>可以使用 <em>标准库unittest</em> 或 <em>第三方库pytest</em> 进行单元测试。一种最简单的测试是单元测试（unit test），用于核实函数的某个方面没有问题。测试用例（test case）是一组单元测试，这些单元测试一道核实函数在各种情况下的行为都符合要求。良好的测试用例考虑到了函数可能收到的各种输入，包含针对所有这些情况的测试。全覆盖（full coverage）测试用例包含一整套单元测试，涵盖了各种可能的函数使用方式。</p>
 <p>使用 pytest 进行测试，会让单元测试编写起来非常简单。我们将编写一个测试函数，它会调用要测试的函数，并做出有关返回值的断言 （<code class="notranslate">assert</code> 语句）。如果断言正确，表示测试通过；如果断言不正确，表示测试未通过。</p>
