@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,7 +202,7 @@ $ git clone https://github.com/interset-wq/first-contributions.git
 <h2>STEP1 Fork other's repo</h2>
 <p>Fork repo <a href="https://github.com/firstcontributions/first-contributions">first-contributions</a></p>
 <h2>STEP2 Clone my repo forked from others</h2>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git clone https://github.com/interset-wq/first-contributions.git</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git clone https://github.com/interset-wq/first-contributions.git</pre></div>
 <details>
 <summary>note</summary>
 <p>此处使用的是HTTPS,也可以使用SSH</p>
@@ -214,9 +214,9 @@ $ git clone https://github.com/interset-wq/first-contributions.git
 </li>
 <li>
 <p>使用 <code class="notranslate">git switch</code> 命令新建一个代码分支</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git switch -c <span class="pl-k">&lt;</span>新分支的名称<span class="pl-k">&gt;</span></pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git switch -c <span class="pl-k">&lt;</span>新分支的名称<span class="pl-k">&gt;</span></pre></div>
 <p>此处创建一个add-myname分支:</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git switch -c add-interset-wq</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git switch -c add-interset-wq</pre></div>
 </li>
 </ol>
 <h2>STEP4 修改代码, Commint 修改</h2>
@@ -226,24 +226,24 @@ $ git clone https://github.com/interset-wq/first-contributions.git
 </li>
 <li>
 <p>检查状态(可选, 输出信息中,被修改的文件的文件名会被标红)</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git status</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git status</pre></div>
 </li>
 <li>
 <p>添加改动</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git add Contributors.md</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git add Contributors.md</pre></div>
 </li>
 <li>
 <p>检查状态(可选,输出信息中,刚才标红的文件名现在标绿)</p>
 </li>
 <li>
 <p>提交修改</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git commit -m <span class="pl-s"><span class="pl-pds">"</span>Add interset-wq to Contributors list<span class="pl-pds">"</span></span></pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git commit -m <span class="pl-s"><span class="pl-pds">"</span>Add interset-wq to Contributors list<span class="pl-pds">"</span></span></pre></div>
 </li>
 <li>
 <p>Push 到 GitHub repo</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git push origin <span class="pl-k">&lt;</span>分支的名称<span class="pl-k">&gt;</span></pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git push origin <span class="pl-k">&lt;</span>分支的名称<span class="pl-k">&gt;</span></pre></div>
 <p>此处推送的分支为前面新建的分支add-interset-wq</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ git push origin add-interset-wq</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ git push origin add-interset-wq</pre></div>
 </li>
 </ol>
 <h2>STEP5 Pull Request(PR)</h2>

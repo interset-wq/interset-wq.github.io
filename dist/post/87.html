@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -842,7 +842,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>search和findall的函数式写法和方法式写法并没有太大的差别,只是采用了不同的编程思想——函数式编程和面向对象编程.</p>
 <h3>search</h3>
 <p><strong>方法</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'ma'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
@@ -854,7 +854,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <li>Match对象的 <code class="notranslate">match.group()</code>方法,返回查找字符串中实际匹配的文本</li>
 </ul>
 <p><strong>函数</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'ma'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">search</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -862,13 +862,13 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># ma</span></pre></div>
 <h3>findall</h3>
 <p><strong>方法</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'ma'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># ['ma', 'ma']</span></pre></div>
 <p><strong>函数</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Math is intresting, and I like learing mathmatics.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'ma'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -876,19 +876,19 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <h3>sub</h3>
 <p>正则表达式不仅能找到文本模式,而且能够用新的文本替换掉这些模式. Pattern对象的sub()方法需要传入两个参数.第一个参数是一个字符串,用于取代发现的匹配.第二个参数是一个字符串,返回替换完成后的字符串.</p>
 <p><strong>方法</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'World'</span>)
 <span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">sub</span>(<span class="pl-s">'Python'</span>, <span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">new_str</span>) <span class="pl-c"># Hello Python!</span></pre></div>
 <p><strong>函数</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">'World'</span>
 <span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">sub</span>(<span class="pl-s1">pattern</span>, <span class="pl-s">'Python'</span>, <span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">new_str</span>) <span class="pl-c"># Hello Python!</span></pre></div>
 <p>有时候,你可能需要使用匹配的文本本身,作为替换的一部分.在sub()的第一个参数中,可以输入\1、\2、\3…….表示“在替换中输入分组1、2、3……的文本”.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My email is d111kc@foxmail.com, his email is jerry@example.com'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\w)\w*@'</span>)
 <span class="pl-s1">new_str</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">sub</span>(<span class="pl-s">r'\1****@'</span>, <span class="pl-s1">my_str</span>)
@@ -897,7 +897,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <h2>正则表达式的特殊符号</h2>
 <h3>利用小括号 <code class="notranslate">()</code> 分组</h3>
 <p><strong>search方法</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
@@ -907,7 +907,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">2</span>)) <span class="pl-c"># 456-7890</span>
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">groups</span>()) <span class="pl-c"># ('123', '456-7890')</span></pre></div>
 <p><strong>search函数</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">search</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -925,13 +925,13 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 </ul>
 <hr>
 <p><strong>findall方法</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>) <span class="pl-c"># [('123', '456-7890')]</span></pre></div>
 <p><strong>findall函数</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'My phone num is 123-456-7890.'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'(\d\d\d)-(\d\d\d-\d\d\d\d)'</span>
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -939,20 +939,20 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>面对分组时,findall的返回值是 <code class="notranslate">list[tuple]</code>,每个分组就是元组的元素</p>
 <h3>使用管道 <code class="notranslate">|</code> 匹配多个分组</h3>
 <p>字符“|”称为“管道”,表示“或”.如果有多个符合匹配的文本,则第一个出现的作为match对象返回.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'Tom|Jerry'</span>) <span class="pl-c"># 匹配Tom或Jerry字符串</span>
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'Tom and Jerry'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Tom</span>
 <span class="pl-s1">match2</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'Jerry and Tom'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match2</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Jerry</span></pre></div>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'He(y|llo|ro)'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'Hello world.'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Hello （无视分组）</span>
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">1</span>)) <span class="pl-c"># llo （第1组）</span></pre></div>
 <h3>用问号 <code class="notranslate">?</code> 实现可选匹配</h3>
 <p>字符?表示它前面的分组在这个匹配模式中是可选的,即匹配问号之前的分组一次或零次.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(py)?torch'</span>)
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'I want to learn pytorch this week.'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># pytorch</span>
@@ -960,7 +960,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match2</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># torch</span></pre></div>
 <h3>用星号 <code class="notranslate">*</code> 匹配任意次</h3>
 <p>星号之前的分组,可以在文本中出现任意次.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'Bat(wo)*man'</span>)
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'the adventure of Batman'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Batman</span>
@@ -975,7 +975,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>如果想要一个分组重复特定次数,就在正则表达式中该分组的后面,跟上花括号包围的数字.除了一个数字,还可以指定一个范围,即在花括号内写下一个最小值、逗号、最大值.例如正则表达式(ha){3,5}匹配'hahaha','hahahaha','hahahahaha'.也可以不写花括号中的第一个或第二个数字,表示不限定最小值或最大值.</p>
 <h3>非贪心匹配 <code class="notranslate">?</code></h3>
 <p>Python的正则表达式默认是贪心匹配,这表示在有二义的情况下,它们会尽可能匹配最长的字符串.花括号的“非贪心”版本匹配尽可能最短的字符串,即在结束的花括号后跟着一个问号.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">greed_pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(Ha){3,5}'</span>)
 <span class="pl-s1">mo1</span> <span class="pl-c1">=</span> <span class="pl-s1">greed_pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s">'HaHaHaHaHa'</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">mo1</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># HaHaHaHaHa</span>
@@ -984,14 +984,14 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">mo2</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># HaHaHa</span></pre></div>
 <h3>使用方括号 <code class="notranslate">[]</code> 建立字符分类</h3>
 <p>可以用方括号定义自己的字符分类.例如,字符分类 <code class="notranslate">[aeiouAEIOU]</code> 将匹配所有元音字符,不论大小写.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'[aeiouAEIOU]'</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Python is VERY interesting.'</span>
 <span class="pl-s1">my_list</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">my_list</span>) <span class="pl-c"># ['o', 'i', 'E', 'i', 'e', 'e', 'i']</span></pre></div>
 <p>也可以使用连字符 <code class="notranslate">-</code> 表示字母或数字的范围.例如,字符分类 <code class="notranslate">[a-zA-Z0-9]</code> 将匹配所有小写字母、大写字母和数字.</p>
 <p>注意,在方括号 <code class="notranslate">[]</code> 内,普通的正则表达式符号不会被解释.你不需要前面加上倒斜杠转义<code class="notranslate">.</code>、<code class="notranslate">*</code>、<code class="notranslate">?</code>或<code class="notranslate">()</code>字符.例如,字符分类将匹配数字0到5和一个句点,则需要将它写成[0-5.] .通过在字符分类的左方括号后加上一个插入字符 <code class="notranslate">^</code>,就可以得到“非字符类”.非字符类将匹配不在这个字符类中的所有字符.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'[^aeiouAEIOU]'</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Python'</span>
 <span class="pl-s1">my_list</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -1000,7 +1000,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>可以在正则表达式的开始处使用插入符号 <code class="notranslate">^</code>,表明匹配必须发生在被查找文本开始处.类似地,可以再正则表达式的末尾加上美元符号 <code class="notranslate">$</code>,表示该字符串必须以这个正则表达式的模式结束.可以同时使用 <code class="notranslate">^</code> 和 <code class="notranslate">$</code>,表明整个字符串必须匹配该模式,也就是说,只匹配该字符串的某个子集是不够的.</p>
 <h3>通配符 <code class="notranslate">.</code></h3>
 <p>在正则表达式中,句点字符 <code class="notranslate">.</code> 称为“通配符”.它匹配除了换行之外的所有字符.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s">r'.at'</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'The cat in the hat sat on the flat mat.'</span>
 <span class="pl-s1">my_list</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">findall</span>(<span class="pl-s1">pattern</span>, <span class="pl-s1">my_str</span>)
@@ -1008,14 +1008,14 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>要记住,句点字符只匹配一个字符,所以,对于文本 <code class="notranslate">flat</code> ,只匹配 <code class="notranslate">lat.</code> 要匹配真正的句点,就是用倒斜杠转义.</p>
 <h3>用点星 <code class="notranslate">.*</code> <code class="notranslate">.*?</code> 匹配所有字符</h3>
 <p>可以用点星(.*)表示“任意文本”.句点字符表示“除换行外所有单个字符”,星号字符表示“前面字符出现零次或多次”.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello world!'</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'(.*) world'</span>)
 <span class="pl-s1">match</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str</span>)
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># Hello world!</span>
 <span class="pl-en">print</span>(<span class="pl-s1">match</span>.<span class="pl-c1">group</span>(<span class="pl-c1">1</span>)) <span class="pl-c"># Hello</span></pre></div>
 <p>点星 <code class="notranslate">.*</code> 使用贪心匹配.要用非贪心模式匹配所有文本,就使用点星问 <code class="notranslate">.*?</code> .像和花括号一起使用时那样,问号告诉Python用非贪心模式匹配.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">my_str</span> <span class="pl-c1">=</span> <span class="pl-s">'&lt;Hello&gt; &lt;World&gt;'</span>
 <span class="pl-c"># 非贪心匹配</span>
 <span class="pl-s1">nongreddy_pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'&lt;.*?&gt;'</span>)
@@ -1030,7 +1030,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>点-星将匹配除换行外的所有字符.通过传入 <code class="notranslate">re.DOTALL</code> 作为 <code class="notranslate">re.compile()</code> 的第二个参数,可以让句点字符匹配所有字符,包括换行字符.</p>
 <h3>不区分大小写的匹配 <code class="notranslate">re.I</code> <code class="notranslate">re.IGNORECASE</code></h3>
 <p>通常,正则表达式默认区分大小写.要让正则表达式不区分大小写,可以向 <code class="notranslate">re.compile()</code> 传入 <code class="notranslate">re.IGNORECASE</code> 或 <code class="notranslate">re.I</code> ,作为第二个参数.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">re</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'hello'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">I</span>)
 <span class="pl-s1">my_str1</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello World!'</span>
 <span class="pl-s1">match1</span> <span class="pl-c1">=</span> <span class="pl-s1">pattern</span>.<span class="pl-c1">search</span>(<span class="pl-s1">my_str1</span>)
@@ -1043,7 +1043,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <span class="pl-en">print</span>(<span class="pl-s1">match3</span>.<span class="pl-c1">group</span>()) <span class="pl-c"># hello</span></pre></div>
 <h3>正则表达式中编写注释 <code class="notranslate">re.VERBOSE</code></h3>
 <p>可以向<code class="notranslate">re.compile()</code>传入变量<code class="notranslate">re.VERBOSE</code>,作为第二个参数.忽略正则表达式字符串中的空白符和注释.</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}(\s*(ext|x|ext.)\s*\d{2,5})?)'</span>)<span class="pl-c"># 这个正则表达式难以阅读,可以添加注释简化阅读</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}(\s*(ext|x|ext.)\s*\d{2,5})?)'</span>)<span class="pl-c"># 这个正则表达式难以阅读,可以添加注释简化阅读</span>
 <span class="pl-c"># 三重引号表示多行字符串,也可表示注释</span>
 <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">r'''(</span>
 <span class="pl-s">    (\d{3}|\(\d{3}\))? # 区号</span>
@@ -1056,7 +1056,7 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 <p>使用了三重引号('"),创建了一个多行字符串.这样就可以将正则表达式定义放在多行中,让它更可读.正则表达式字符串中的注释规则,与普通的Python代码一样：#符号和它后面直到行末的内容,都被忽略.而且,表示正则表达式的多行字符串中,多余的空白字符也不认为是要匹配的文本模式的一部分.</p>
 <h3>使用管道 <code class="notranslate">|</code> 组合使用 <code class="notranslate">re.IGNORECASE</code> <code class="notranslate">re.DOTALL</code>和 <code class="notranslate">re.VERBOSE</code>(不推荐使用)</h3>
 <p>如果你希望在正则表达式中使用re.VERBOSE来编写注释,还希望使用re.IGNORECASE来忽略大小写,该怎么办？遗憾的是,re.compile()函数只接受一个值作为它的第二参数.可以使用管道字符(|)将变量组合起来,从而绕过这个限制.管道字符在这里称为“按位或”操作符.所以,如果希望正则表达式不区分大小写,并且句点字符匹配换行,就可以这样构造re.compile()调用：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">someRegexValue</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'foo'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">IGNORECASE</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">DOTALL</span>)
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">someRegexValue</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'foo'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">IGNORECASE</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">DOTALL</span>)
 <span class="pl-s1">someRegexValue</span> <span class="pl-c1">=</span> <span class="pl-s1">re</span>.<span class="pl-c1">compile</span>(<span class="pl-s">'foo'</span>, <span class="pl-s1">re</span>.<span class="pl-c1">IGNORECASE</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">DOTALL</span> <span class="pl-c1">|</span> <span class="pl-s1">re</span>.<span class="pl-c1">VERBOSE</span>)</pre></div></div>
   </article>
 <section class="in-comments-section">

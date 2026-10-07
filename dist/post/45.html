@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,7 +67,7 @@
 <h3>1.1 类属性</h3>
 <p>通俗来说，类属性就是定义在类中的变量。不需要创建实例就能直接使用，当然实例也可以使用类属性。通过类名就可以调用，可以更改属性值，还可以创建新属性。</p>
 <p>我们来创建一个 <em>Banana</em> 类：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
     <span class="pl-s">"""一种美味的热带水果"""</span>
     <span class="pl-s1">food_group</span> <span class="pl-c1">=</span> <span class="pl-s">'fruit'</span>
     <span class="pl-s1">colors</span> <span class="pl-c1">=</span> [<span class="pl-s">'green'</span>, <span class="pl-s">'green-yellow'</span>, <span class="pl-s">'yellow'</span>, <span class="pl-s">'brown spotted'</span>, <span class="pl-s">'black'</span>]</pre></div>
@@ -83,7 +83,7 @@ print(Banana.colors)
 <p>使用初始化方法 <code class="notranslate">__init__()</code> 创建实例属性。<code class="notranslate">self</code> 形参：它是一个指向实例本身的引用，实例的每次调用都会自动传入自身，这样使得实例能够访问类中的属性和方法，self 形参必不可少，而且必须位于其他形参的前面。</p>
 <p>所有的实例属性定义时都有 <code class="notranslate">self.</code> 的前缀，有些属性无须通过形参来定义，可以在 <code class="notranslate">__init__()</code> 方法中为其指定默认值。</p>
 <p>实例属性就是定义在构造方法（又称初始化方法，属于魔术方法的一种） <code class="notranslate">__init__()</code> 中的带有 <em>self.</em> 前缀的变量，必须创建实例之后才能使用。不创建实例通过类名调用会报错。需要先创建实例，才能调用，创建实例后，可以对属性重新赋值，还可以创建新属性。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
     <span class="pl-c"># --snip--(1)</span>
     <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'green'</span>):
         <span class="pl-s1">self</span>.<span class="pl-c1">color</span> <span class="pl-c1">=</span> <span class="pl-s1">color</span></pre></div>
@@ -108,7 +108,7 @@ print(my_banana.color)
 <h2>二、方法</h2>
 <h3>2.1 实例方法</h3>
 <p>定义在类中的函数，和 <code class="notranslate">__init__()</code> 方法一样，第一个参数必须是 <em>self</em>。需要先创建实例，才能调用。创建实例后，可以新建方法（先定义一个函数，再使用self.的方式将创建的函数名赋值给self）。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
     <span class="pl-c"># --snip--</span>
     <span class="pl-k">def</span> <span class="pl-en">print_color</span>(<span class="pl-s1">self</span>):
         <span class="pl-en">print</span>(<span class="pl-s1">self</span>.<span class="pl-c1">color</span>)</pre></div>
@@ -122,7 +122,7 @@ print(my_banana.color)
 <p>使用装饰器 <code class="notranslate">@classmethod</code> 修饰的方法，类方法的第一个参数必须是 <em>cls</em>，表示这个类本身。不能使用实例属性和实例方法，但是可以通过 <em>cls.</em> 来访问类属性，类似与实例属性的访问。</p>
 <p>不需要创建实例就可以调用类方法，在类中也可以通过 <code class="notranslate">self.</code> 来调用类方法，类似于实例方法在类中的调用。当然实例也可以调用类方法。</p>
 <p><code class="notranslate">cls()</code> 函数，在类方法中使用可以创建实例对象。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
     <span class="pl-c"># --snip--</span>
     <span class="pl-en">@<span class="pl-s1">classmethod</span></span>
     <span class="pl-k">def</span> <span class="pl-en">check_color</span>(<span class="pl-s1">cls</span>, <span class="pl-s1">color</span>):
@@ -136,7 +136,7 @@ print(my_banana.color)
 <h3>2.3 静态方法</h3>
 <p>使用装饰器<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/staticmethod/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/staticmethod">@staticmethod</a>修饰的方法，定义静态方法时，不需要传入参数 <em>self</em>或 <em>cls</em> 。静态方法类似于普通的函数。不能在静态方法中使用实例属性和实例方法。</p>
 <p>直接通过类名，就可以调用。当然也可以通过实例调用静态方法。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
     <span class="pl-c"># --snip--</span>
     <span class="pl-en">@<span class="pl-s1">staticmethod</span></span>
     <span class="pl-k">def</span> <span class="pl-en">estimate_calories</span>(<span class="pl-s1">num_bananas</span>):
@@ -148,7 +148,7 @@ print(my_banana.color)
 <pre class="notranslate"><code class="notranslate">1050
 </code></pre>
 <h2>三、类的三个特性</h2>
-<div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">mindmap</span>
+<span class="in-code-lang">mermaid</span><div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">mindmap</span>
     <span class="pl-ent">类</span>
         <span class="pl-ent">封装</span>
         <span class="pl-ent">多态</span>
@@ -160,7 +160,7 @@ print(my_banana.color)
 <p>单继承 使用 <code class="notranslate">super().__init__()</code> 继承父类属性和方法</p>
 <p>多继承 使用 <code class="notranslate">父类类名.__init__ ()</code> 继承父类方法和属性</p>
 <p>在子类中重写方法 可以使用 <code class="notranslate">super()</code> 从父类继承原方法</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">RedBanana</span>(<span class="pl-v">Banana</span>):
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">RedBanana</span>(<span class="pl-v">Banana</span>):
     <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'green'</span>):
         <span class="pl-en">super</span>().<span class="pl-c1">__init__</span>(<span class="pl-s1">color</span>)</pre></div>
 <p>通过继承 <em>RedBanana</em> 类获得了 <em>Banana</em> 类的所有属性和方法。</p>
@@ -205,15 +205,15 @@ print(my_banana.color)
 <h3>4.1 对类中的变量添加类型注解</h3>
 <p>例如：</p>
 <p><strong>方法1</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span>: <span class="pl-smi">list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>， <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span>: <span class="pl-smi">list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>， <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
 <span class="pl-s1">my_tuple</span>: <span class="pl-smi">tuple</span> <span class="pl-c1">=</span> (<span class="pl-c1">1</span>,<span class="pl-c1">2</span>，<span class="pl-c1">3</span>)</pre></div>
 <p><strong>方法2</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>， <span class="pl-c1">2</span>, <span class="pl-c1">3</span>] <span class="pl-c"># type: list</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>， <span class="pl-c1">2</span>, <span class="pl-c1">3</span>] <span class="pl-c"># type: list</span>
 <span class="pl-s1">my_tuple</span> <span class="pl-c1">=</span> (<span class="pl-c1">1</span>,<span class="pl-c1">2</span>，<span class="pl-c1">3</span>) <span class="pl-c"># type: tuple</span></pre></div>
 <p>分别对my_list和my_tuple两个变量进行了类型注解。</p>
 <h3>4.2 对类中的方法添加类型注解</h3>
 <p>例如：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-en">@<span class="pl-s1">staticmethod</span></span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-en">@<span class="pl-s1">staticmethod</span></span>
 <span class="pl-k">def</span> <span class="pl-en">estimate_calories</span>(<span class="pl-s1">num_bananas</span>: <span class="pl-smi">int</span>) <span class="pl-c1">-&gt;</span> <span class="pl-smi">int</span>:
    <span class="pl-k">return</span> <span class="pl-s1">num_bananas</span> <span class="pl-c1">*</span> <span class="pl-c1">105</span></pre></div>
 <p>为传入的参数 <em>num_bananas</em> 和 方法的返回值添加了类型注解。</p>
@@ -225,7 +225,7 @@ print(my_banana.color)
 </code></pre>
 <p>因为 <em>my_list</em> 变量存储的数据同时有 <em>int</em> 和 <em>str</em>，所以需要使用联合类型注解。</p>
 <h2>五、举例</h2>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
     <span class="pl-s">"""一个用于表示香蕉的类"""</span>
     
     <span class="pl-s1">food_group</span> <span class="pl-c1">=</span> <span class="pl-s">'fruit'</span>

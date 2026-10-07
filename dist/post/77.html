@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -448,12 +448,12 @@ DrissionPage支持的元素定位法
 <ul>
 <li>
 <p>CSS选择器 <code class="notranslate">ele('css: 选择器')</code>，可简写为<code class="notranslate">ele('c: 选择器')</code>，<code class="notranslate">css:</code>与<code class="notranslate">css=</code>效果一致，没有<code class="notranslate">css^</code>和<code class="notranslate">css$</code>语法</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'css:.div'</span>)  <span class="pl-c"># 查找 div 元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'css:.div'</span>)  <span class="pl-c"># 查找 div 元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'css:&gt;div'</span>)  <span class="pl-c"># 查找 div 子元素元素，这个写法是本库特有，原生不支持</span></pre></div>
 </li>
 <li>
 <p>XPath <code class="notranslate">ele('xpath: 选择器')</code>，可简写为<code class="notranslate">ele('x: 选择器')</code>，<code class="notranslate">xpath:</code>与<code class="notranslate">xpath=</code>效果一致，没有<code class="notranslate">xpath^</code>和<code class="notranslate">xpath$</code>语法</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele2</span> <span class="pl-c1">=</span> <span class="pl-s1">ele1</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'xpath:.//div'</span>)  <span class="pl-c"># 查找后代中第一个 div 元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele2</span> <span class="pl-c1">=</span> <span class="pl-s1">ele1</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'xpath:.//div'</span>)  <span class="pl-c"># 查找后代中第一个 div 元素</span>
 <span class="pl-s1">ele2</span> <span class="pl-c1">=</span> <span class="pl-s1">ele1</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'xpath://div'</span>)  <span class="pl-c"># 和上面一行一样，查找元素的后代时，// 前面的 . 可以省略</span>
 <span class="pl-s1">ele_class_str</span> <span class="pl-c1">=</span> <span class="pl-s1">ele1</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'xpath://div/@class'</span>)  <span class="pl-c"># 使用xpath获取div元素的class属性（selenium页面元素无此功能）</span></pre></div>
 </li>
@@ -462,7 +462,7 @@ DrissionPage支持的元素定位法
 </li>
 <li>
 <p>id选择器<code class="notranslate">#</code>，相当于当属性定位<code class="notranslate">@id=id值</code></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#one'</span>)  <span class="pl-c"># 查找id="one"的元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#one'</span>)  <span class="pl-c"># 查找id="one"的元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#=one'</span>)  <span class="pl-c"># 同上</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#:ne'</span>)  <span class="pl-c"># 查找id属性包含ne的元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'#^on'</span>)  <span class="pl-c"># 查找id属性以on开头的元素</span>
@@ -470,7 +470,7 @@ DrissionPage支持的元素定位法
 </li>
 <li>
 <p>类选择器<code class="notranslate">.</code>，相当于单属性定位"<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/Class/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/Class">@Class</a>=属性值"，和id选择器用法类似。如果一个元素有多个class属性，将其看做是一个属性</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.p_cls'</span>)  <span class="pl-c"># 查找class属性为p_cls的元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.p_cls'</span>)  <span class="pl-c"># 查找class属性为p_cls的元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.=p_cls'</span>)  <span class="pl-c"># 与上一行一致</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.:_cls'</span>)  <span class="pl-c"># 查找class属性包含_cls的元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'.^p_'</span>)  <span class="pl-c"># 查找class属性以p_开头的元素</span>
@@ -478,14 +478,14 @@ DrissionPage支持的元素定位法
 </li>
 <li>
 <p>文本匹配<code class="notranslate">text</code>，可简写为<code class="notranslate">tx</code>，相当于单属性定位"<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/text/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/text">@text</a>()=文本"，如果文本中包含html实体，需要使用转义字符将html实体转换为十六进制形式</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'text=第二行'</span>)  <span class="pl-c"># 查找文本为“第二行”的元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'text=第二行'</span>)  <span class="pl-c"># 查找文本为“第二行”的元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'text:第二'</span>)  <span class="pl-c"># 查找文本包含“第二”的元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'第二'</span>)  <span class="pl-c"># 与上一行一致</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'第<span class="pl-cce">\u00A0</span>二'</span>)  <span class="pl-c"># 匹配包含&amp;nbsp;文本的元素，需将&amp;nbsp;转为\u00A0</span></pre></div>
 </li>
 <li>
 <p>类型匹配<code class="notranslate">tag</code>，可简写为<code class="notranslate">t</code>，相当于单属性查找<code class="notranslate">@tag()=标签名</code>，相当于元素选择器，<code class="notranslate">tag:</code>与<code class="notranslate">tag=</code>效果一致，没有<code class="notranslate">tag^</code>和<code class="notranslate">tag$</code>语法</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:div'</span>)  <span class="pl-c"># 查找第一个div元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:div'</span>)  <span class="pl-c"># 查找第一个div元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:p@class=p_cls'</span>)  <span class="pl-c"># 与单属性查找配合使用，相当于css选择器 p &gt; .p_cls</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:p@@class=p_cls'</span>)  <span class="pl-c"># 与单属性查找配合使用，相当于css选择器 p .p_cls</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'tag:p@@class=p_cls@@text()=第二行'</span>)  <span class="pl-c"># 与多属性查找配合使用，相当于匹配css选择器 p .p_cls 且文本内容为“第二行”的元素</span></pre></div>
@@ -504,19 +504,19 @@ DrissionPage支持的元素定位法
 <li><code class="notranslate">@元素属性名</code> 通过html标签的属性名定位元素</li>
 <li><code class="notranslate">@text()</code>，可简写为<code class="notranslate">tx()</code>，通过元素的文本内容定位元素，<code class="notranslate">@@text()技巧</code>，此处省略</li>
 </ul>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@tag()=div'</span>)  <span class="pl-c"># 获取第一个div元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@tag()=div'</span>)  <span class="pl-c"># 获取第一个div元素</span>
 <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id=one'</span>)  <span class="pl-c"># 获取第一个`id="one"`的元素</span>
 <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id'</span>)  <span class="pl-c"># 获取第一个有`id`属性的元素</span>
 <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@text()=第一行'</span>)  <span class="pl-c"># 获取第一个文本为“第一行”的元素</span></pre></div>
 </li>
 <li>
 <p>多属性定位且 <code class="notranslate">@@</code>，这种方法可以同时使用标签名、属性名、文本内容等多种条件进行定位，用法和<code class="notranslate">@</code>相同，只是把<code class="notranslate">@</code>换成<code class="notranslate">@@</code></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@@id=one'</span>)  <span class="pl-c"># 查找id="one"的元素</span>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@@id=one'</span>)  <span class="pl-c"># 查找id="one"的元素</span>
 <span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@@class=demo@@text()=第三行'</span>)  <span class="pl-c"># 查找class="demo"且文本为“第三行”的元素</span></pre></div>
 </li>
 <li>
 <p>多属性定位或 <code class="notranslate">@|</code>，用法与<code class="notranslate">@@</code>相似</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">eles</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">eles</span>(<span class="pl-s">'@|id=row1@|id=row2'</span>)  <span class="pl-c"># 查找所有id="row1"或id="row2"的元素</span></pre></div>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">eles</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">eles</span>(<span class="pl-s">'@|id=row1@|id=row2'</span>)  <span class="pl-c"># 查找所有id="row1"或id="row2"的元素</span></pre></div>
 </li>
 <li>
 <p>多属性定位非 <code class="notranslate">@!</code>，用法与<code class="notranslate">@@</code>相似</p>
@@ -532,19 +532,19 @@ ele = tab.ele('@!class')  # 匹配没有class属性的元素
 <ul>
 <li>
 <p>精确匹配 <code class="notranslate">=</code>，用于匹配属性值完全等于指定值的元素</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id=row1'</span>)  <span class="pl-c"># 获取id='row1'的元素</span></pre></div>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id=row1'</span>)  <span class="pl-c"># 获取id='row1'的元素</span></pre></div>
 </li>
 <li>
 <p>模糊匹配 <code class="notranslate">:</code>，用于匹配属性值包含指定值的元素</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id:ow'</span>)  <span class="pl-c"># 获取id属性包含'ow'的元素</span></pre></div>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id:ow'</span>)  <span class="pl-c"># 获取id属性包含'ow'的元素</span></pre></div>
 </li>
 <li>
 <p>开头匹配 <code class="notranslate">^</code>，用于匹配属性值以指定值开头的元素</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id^row'</span>)  <span class="pl-c"># 获取id属性以'row'开头的元素</span></pre></div>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id^row'</span>)  <span class="pl-c"># 获取id属性以'row'开头的元素</span></pre></div>
 </li>
 <li>
 <p>结尾匹配 <code class="notranslate">$</code>，用于匹配属性值以指定值结尾的元素</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id$w1'</span>)  <span class="pl-c"># 获取id属性以'w1'结尾的元素</span></pre></div>
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">ele</span> <span class="pl-c1">=</span> <span class="pl-s1">tab</span>.<span class="pl-c1">ele</span>(<span class="pl-s">'@id$w1'</span>)  <span class="pl-c"># 获取id属性以'w1'结尾的元素</span></pre></div>
 </li>
 </ul>
 </details>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1145,7 +1145,7 @@
 <p><strong>外部样式</strong><br>
 写在单独的 .css 文件中，随后在 HTML 文件中引入使用。新建一个扩展名为 .css 的样式文件，把所有 CSS 代码都放入此文件中。在 HTML 文件中引入 .css 文件。</p>
 <p>第一步：编写一个css文件</p>
-<div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-ent">h3</span> {
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-ent">h3</span> {
     <span class="pl-c1">color</span><span class="pl-kos">:</span> gray;
 }</pre></div>
 <p>第二步：在html文件中引入css文件</p>
@@ -1186,7 +1186,7 @@
 </details>
 <p>CSS代码风格</p>
 <p><strong>展开风格</strong></p>
-<div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-ent">h1</span> {
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-ent">h1</span> {
     <span class="pl-c1">color</span><span class="pl-kos">:</span> red;
     <span class="pl-c1">font-size</span><span class="pl-kos">:</span> <span class="pl-c1">40<span class="pl-smi">px</span></span>;
 }</pre></div>
@@ -1203,13 +1203,13 @@
 <p><strong>元素选择器</strong><br>
 为某种html标签设置统一的样式，元素选择器无法实现差异化设置</p>
 <p>语法：</p>
-<div class="highlight highlight-source-css"><pre class="notranslate">标签名 {
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate">标签名 {
     属性名<span class="pl-kos">:</span> 属性值;
 }</pre></div>
 <p><strong>类选择器 <code class="notranslate">.</code></strong><br>
 根据html标签的 <code class="notranslate">class</code> 属性值（类名），来选中某些元素。使用频率很高</p>
 <p>语法：</p>
-<div class="highlight highlight-source-css"><pre class="notranslate">.类名 {
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate">.类名 {
     属性名<span class="pl-kos">:</span> 属性值;
 }</pre></div>
 <details>
@@ -1224,7 +1224,7 @@
 <p><strong>id选择器 <code class="notranslate">#</code></strong><br>
 根据html标签的 <code class="notranslate">id</code> 属性值，来精准选中某个元素。</p>
 <p>语法：</p>
-<div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-kos">#</span><span class="pl-c1">id</span>值 {
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-kos">#</span><span class="pl-c1">id</span>值 {
     属性名<span class="pl-kos">:</span> 属性值;
 }</pre></div>
 <details>
@@ -1382,7 +1382,7 @@ html元素有五种关系：</p>
 <li><code class="notranslate">::after</code> 在元素最后的位置，创建一个子元素（css必须用 content 属性指定内容），用于批量添加后缀</li>
 </ul>
 <h3>2.4 CSS三大特性</h3>
-<div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">mindmap</span>
+<span class="in-code-lang">mermaid</span><div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">mindmap</span>
   <span class="pl-ent">root</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">((</span></span>CSS三大特性<span class="pl-pds"><span class="pl-sg">))</span></span></span>
     <span class="pl-ent">层叠性</span>
       <span class="pl-ent">发生样式冲突时，会进行样式的覆盖（层叠）</span>
@@ -1403,7 +1403,7 @@ html元素有五种关系：</p>
 <h3>2.5 CSS常用属性</h3>
 <p>像素：电脑屏幕是由一个一个“小点”组成的，每个“小点”，就是一个像素px。像素点越小，呈现的内容就越清晰、越细腻。注意：电脑一般会默认开启缩放以优化用户的使用体验，因此显示的长度可能与实际的像素数不同。</p>
 <p><strong>CSS颜色</strong></p>
-<div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">mindmap</span>
+<span class="in-code-lang">mermaid</span><div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">mindmap</span>
   <span class="pl-ent">root</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">((</span></span>CSS颜色表示法<span class="pl-pds"><span class="pl-sg">))</span></span></span>
     <span class="pl-ent">颜色名表示法</span>
       <span class="pl-ent">直接使用颜色的英文名表示</span>
@@ -1427,7 +1427,7 @@ html元素有五种关系：</p>
 <li>对于 rbga 来说，前三位的 rgb 形式要保持一致，要么都是 0~255 的数字，要么都是        百分比 。</li>
 </ul>
 </details>
-<div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-c">/* 使用 0~255 之间的数字表示一种颜色 */</span>
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-c">/* 使用 0~255 之间的数字表示一种颜色 */</span>
 <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-en">rgb</span>(<span class="pl-c1">255</span><span class="pl-kos">,</span> <span class="pl-c1">0</span><span class="pl-kos">,</span> <span class="pl-c1">0</span>);<span class="pl-c">/* 红色 */</span>
 <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-en">rgb</span>(<span class="pl-c1">0</span><span class="pl-kos">,</span> <span class="pl-c1">255</span><span class="pl-kos">,</span> <span class="pl-c1">0</span>);<span class="pl-c">/* 绿色 */</span>
 <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-en">rgb</span>(<span class="pl-c1">0</span><span class="pl-kos">,</span> <span class="pl-c1">0</span><span class="pl-kos">,</span> <span class="pl-c1">255</span>);<span class="pl-c">/* 蓝色 */</span>
@@ -1442,7 +1442,7 @@ color:rgba(<span class="pl-c1">255</span><span class="pl-kos">,</span> <span cla
 <p><strong>十六进制HEX/HEXA</strong><br>
 HEX 的原理同与 rgb 一样，依然是通过：红、绿、蓝色 进行组合，只不过要用 6位（分成3组） 来表达，格式为：# rrggbb</p>
 <p>每一位数字的取值范围是： 0 ~ f ，即：（ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f ），所以每一种光的最小值是： 00 ，最大值是： ff。IE 浏览器不支持 HEXA ，但支持 HEX</p>
-<div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>ff0000</span>;<span class="pl-c">/* 红色 */</span>
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>ff0000</span>;<span class="pl-c">/* 红色 */</span>
 <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>00ff00</span>;<span class="pl-c">/* 绿色 */</span>
 <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>0000ff</span>;<span class="pl-c">/* 蓝色 */</span>
 <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>000000</span>;<span class="pl-c">/* 黑色 */</span>
@@ -1469,7 +1469,7 @@ HSL 是通过：色相、饱和度、亮度，来表示一个颜色的，格式�
 <p><strong>字体族font-family</strong><br>
 字体种类属性 <code class="notranslate">font-family</code>，用来设置字体。</p>
 <p>语法：</p>
-<div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-ent">div</span> {
+<span class="in-code-lang">css</span><div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-ent">div</span> {
     <span class="pl-c1">font-family</span><span class="pl-kos">:</span> <span class="pl-s">"STCaiyun"</span><span class="pl-kos">,</span><span class="pl-s">"Microsoft YaHei"</span><span class="pl-kos">,</span>sans-serif;
 }</pre></div>
 <details>

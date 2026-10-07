@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -356,7 +356,7 @@ through），写回（write back）</p>
 <li>短格式选项 为英文简写，以 <code class="notranslate">-</code> 开头</li>
 <li>长格式选项 为完整英文单词，以 <code class="notranslate">--</code> 开头</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">[d111kc@localhost <span class="pl-k">~</span>]$ ls
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">[d111kc@localhost <span class="pl-k">~</span>]$ ls
 Desktop    Downloads  Pictures  Templates
 Documents  Music      Public    Videos
 [d111kc@localhost <span class="pl-k">~</span>]$ ls -l
@@ -385,7 +385,7 @@ drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Videos
 <li><code class="notranslate">-s</code> 用简洁格式输出，不显示登陆时间，JCPU，PCPU</li>
 <li>参数 传入用户名，表示只显示此用户的信息</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ w
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ w
  21:19:52 up 28 min,  2 users,  load average: 0.00, 0.00, 0.00
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
 root     pts/2    -                21:02    5:01   0.03s   <span class="pl-k">?</span>    -bash
@@ -417,7 +417,7 @@ d111kc   pts/1    -                30:19  -bash</pre></div>
 <li><code class="notranslate">-s</code> 仅显示名称线路和时间字段信息，是 who 命令的默认选项</li>
 <li>参数 若无指定文件，则 who 命令默认通过<code class="notranslate">/var/run/utmp</code> 文件来获取登陆用户信息</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ who
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ who
 d111kc   pts/1        2025-07-30 20:49</pre></div>
 <h3>echo</h3>
 <p>可将命令行中的参数显示到标准输出（屏幕）上</p>
@@ -426,7 +426,7 @@ d111kc   pts/1        2025-07-30 20:49</pre></div>
 <li><code class="notranslate">-n</code> 取消输出后行末的换行符号</li>
 <li><code class="notranslate">-e</code> 支持使用转义字符</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>1\n2<span class="pl-pds">'</span></span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>1\n2<span class="pl-pds">'</span></span>
 1<span class="pl-cce">\n</span>2
 d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">echo</span> -e <span class="pl-s"><span class="pl-pds">'</span>1\n2<span class="pl-pds">'</span></span>
 1
@@ -450,13 +450,13 @@ hellod111kc@D111KC:<span class="pl-k">~</span>$</pre></div>
 </ul>
 <h3>date 命令</h3>
 <p>显示或设定系统的日期与时间</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ date
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ date
 Wed Jul 30 22:01:25 CST 2025</pre></div>
 <h3>passwd 命令</h3>
 <p>密码配置指令</p>
 <p>基本格式 <code class="notranslate">$ passwd [选项] [用户名]</code></p>
 <p>普通用户仅能修改自己的密码，root用户 可以修改自己和普通用户的密码。默认修改当前用户的密码。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ passwd
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ passwd
 Changing password <span class="pl-k">for</span> d111kc.
 Current password:
 New password:
@@ -562,7 +562,7 @@ passwd: password updated successfully</pre></div>
 -R 查询软件包的依赖关系，requires</p>
 <p><code class="notranslate">$ rpm -q 包名</code> 查询软件包是否安装</p>
 <p>例如：查询是否安装了Apache服务</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ rpm -q httpd
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ rpm -q httpd
 httpd-2.4.6-99.el7.centos.1.x86_64</pre></div>
 <p><code class="notranslate">$ querry -qa</code> 查询所有已安装软件包，可以用管道符查找出需要的内容，如<code class="notranslate">$ rpm -qa | grep httpd</code>，采用这种方式可以找到含有httpd的所有软件包</p>
 <p><code class="notranslate">$ rpm -qi 包名</code> 查询软件包的详细信息</p>
@@ -593,7 +593,7 @@ web server.
 <p><code class="notranslate">$ rpm -qlp 包全名</code> 未安装软件包中包含的所有文件以及打算安装的路径</p>
 <p><code class="notranslate">$ rpm -qf 系统文件名</code> 反向查询，查询文件属于哪个 RPM 软件包。只有使用 RPM 安装的文件才能使用该命令，手动方式建立的文件无法使用</p>
 <p>例如：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ rpm -qf /bin/ls
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ rpm -qf /bin/ls
 coreutils-8.22-23.el7.x86_64</pre></div>
 <p><code class="notranslate">$ rpm -qR 包名</code> 查询某已安装软件依赖的其他包</p>
 <p><code class="notranslate">$ rpm -qRp 包名</code> 查询某未安装软件依赖的其他包</p>
@@ -604,7 +604,7 @@ coreutils-8.22-23.el7.x86_64</pre></div>
 <h2>shell 编程概述</h2>
 <p>shell 本身是一个用 C 语言编写的程序，是连接 用户 和 UNIX/Linux 内核 的桥梁。</p>
 <p>一个简单的shell脚本 <code class="notranslate">ShowHello.sh</code> （Linux脚本一般使用 <code class="notranslate">.sh</code> 作为文件后缀名）：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#!</span> /bin/bash</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#!</span> /bin/bash</span>
 <span class="pl-c"><span class="pl-c">#</span>ShowHello</span>
 <span class="pl-c"><span class="pl-c">#</span>To show hello to somebody</span>
 <span class="pl-c1">echo</span> -n <span class="pl-s"><span class="pl-pds">"</span>Enter your name:<span class="pl-pds">"</span></span>
@@ -619,7 +619,7 @@ coreutils-8.22-23.el7.x86_64</pre></div>
 </ul>
 <p>这个shell脚本还不能运行，因为它没有 <code class="notranslate">x</code> 权限，无法作为应用程序执行。为这个脚本的所有者 <code class="notranslate">u</code> 添加 <code class="notranslate">x</code> 权限 <code class="notranslate">$ chomd u+x ShowHello.sh</code></p>
 <p>Linux 中，创建文件默认是不可执行的文件，需要修改文件的权限，为文件增加可执行权限，后在命令行模式下直接输入该文件的相对路径 ./文件名，即可运行</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim ShowHello.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim ShowHello.sh
 $ ./ShowHello.sh
 -bash: ./ShowHello.sh: Permission denied
 $ ls -l
@@ -634,7 +634,7 @@ Hello, Mike</pre></div>
 <h2>shell 的种类</h2>
 <p>shell脚本的第一行需要指出该脚本的解释程序，即shell的种类。Linux系统提供了多种不同的shell。</p>
 <p>查看Linux系统提供的shell种类：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/shells
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/shells
 <span class="pl-c"><span class="pl-c">#</span> /etc/shells: valid login shells</span>
 /bin/sh
 /usr/bin/sh
@@ -654,7 +654,7 @@ Hello, Mike</pre></div>
 <p>有3中方式执行shell脚本：</p>
 <h3>方式一</h3>
 <p>将shell脚本的权限设置为可执行，然后在提示符下直接运行。脚本文件的编辑完成后，利用chmod命令修改脚本文件的权限为可执行，如前面的示例：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ chmod u+x ShowHello.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ chmod u+x ShowHello.sh
 $ ./ShowHello.sh</pre></div>
 <p>在运行该脚本时，必须给出该脚本的相对路径（如 <code class="notranslate">./ShowHello.sh</code>，这个相对路径不能省略 <code class="notranslate">./</code>）或绝对路径。在执行系统命令时，只需要给出命令文件名。因为命令和用户的可执行脚本文件是否能够执行，与环境变量PATH有关。</p>
 <p>查看环境变量PATH <code class="notranslate">$ echo $PATH</code></p>
@@ -662,14 +662,14 @@ $ ./ShowHello.sh</pre></div>
 <p>通过这种方式运行脚本，脚本文件第一行的<code class="notranslate">#！/bin/bash</code>一定要写对，好让系统查找到正确的解释器。</p>
 <h3>方式二</h3>
 <p>以脚本名作为参数传递给shell程序。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ bash ShowHello.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ bash ShowHello.sh
 Enter your name:Mike
 Hello, Mike</pre></div>
 <p>这种执行方式就是运行bash，将脚本 <code class="notranslate">ShowHello.sh</code> 作为参数传递给bash。通过这种方式运行脚本，不需要在脚本文件的第一行指定解释器信息，并且脚本名后面还可以带参数。</p>
 <h3>方式三（不推荐使用）</h3>
 <p>将脚本以输入重定向的方式传递给bash。</p>
 <p>运行bash程序，以输入重定向的方式让bash从给定文件中读入命令行，并进行相应处理。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ bash <span class="pl-k">&lt;</span> ShowHello.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ bash <span class="pl-k">&lt;</span> ShowHello.sh
 Enter your name:d111kc@D111KC:<span class="pl-k">~</span>$</pre></div>
 <p>这种方式的脚本后面是不能带参数的</p>
 <h2>shell 基础</h2>
@@ -693,16 +693,16 @@ Enter your name:d111kc@D111KC:<span class="pl-k">~</span>$</pre></div>
 </ol>
 <h4>单引号</h4>
 <p>被单引号括起来的所有字符都是普通字符，就算特殊字符也不再有特殊含义。在某些时候，会希望使用个别特殊字符，如<code class="notranslate">$</code>来引用变量的值，例如：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>the directory is $HOME; the userid is $USER<span class="pl-pds">'</span></span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>the directory is $HOME; the userid is $USER<span class="pl-pds">'</span></span>
 the directory is <span class="pl-smi">$HOME</span><span class="pl-k">;</span> the userid is <span class="pl-smi">$USER</span></pre></div>
 <p>很显然这样的输出并不是我们所需要的。这时命令就不能正常工作，在不使用转义字符 <code class="notranslate">\</code>（若命令中存在多个特殊字符，使用转义字符“\”会让命令可读性变差）时，双引号可以很好地解决这个问题。</p>
 <h4>双引号</h4>
 <p>由双引号括起来的字符（除<code class="notranslate">$</code>、反引号和转义字符 <code class="notranslate">\</code> 外）均作为普通字符。“$”“\”和倒引号是拥有特殊含义的，“$”代表引用变量的值，而反引号代表引用命令。在上述例题中，采用双引号可以使 <code class="notranslate">$</code> 保留特殊含义</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>the directory is $HOME; the userid is $USER<span class="pl-pds">'</span></span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>the directory is $HOME; the userid is $USER<span class="pl-pds">'</span></span>
 the directory is <span class="pl-smi">$HOME</span><span class="pl-k">;</span> the userid is <span class="pl-smi">$USER</span>
 d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>the directory is <span class="pl-smi">$HOME</span>; the userid is <span class="pl-smi">$USER</span><span class="pl-pds">"</span></span>
 the directory is /home/d111kc<span class="pl-k">;</span> the userid is d111kc</pre></div>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ name=d111kc
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ name=d111kc
 $ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>$name<span class="pl-pds">'</span></span>
 <span class="pl-smi">$name</span>
 $ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$name</span><span class="pl-pds">"</span></span>
@@ -710,7 +710,7 @@ d111kc</pre></div>
 <p>如果需要在双引号中间输出“$”和倒引号，则要在符号前加转义符“\”</p>
 <h4>反引号</h4>
 <p>由反引号括起来的字符串被shell解释为命令行，shell会先执行该命令，并以它的标准输出结果取代整个倒引号部分。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ today=<span class="pl-s"><span class="pl-pds">`</span>date<span class="pl-pds">`</span></span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ today=<span class="pl-s"><span class="pl-pds">`</span>date<span class="pl-pds">`</span></span>
 $ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>Today is <span class="pl-smi">$today</span><span class="pl-pds">"</span></span>
 Today is Thu Jul 31 21:45:01 CST 2025</pre></div>
 <h3>重定向符</h3>
@@ -720,7 +720,7 @@ Today is Thu Jul 31 21:45:01 CST 2025</pre></div>
 <p>在默认情况下，大多数程序都会从键盘读取输入，并将输出到显示器。因此在登录时，shell会自动地将程序的输入源设置为键盘，称为标准输入；设置程序运行的正确结果输出到显示器，称为标准输出；将程序运行中的出错信息输出位置也设置为显示器，称为标准错误。标准输入、标准输出和标准错误都以文件的方式存在，通常缩写为<code class="notranslate">stdin</code>、<code class="notranslate">stdout</code>和<code class="notranslate">stderr</code>。</p>
 <p>每次输入命令，都可以告诉shell在此命令执行期间重新设置输入和输出的方向，这正是UNIX（Linux）功能强大的地方。</p>
 <p>使用输出重定向符 <code class="notranslate">&gt;</code> ，改变内容输出的位置：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ls
 ShowHello.sh  bash  name  note1.txt  test1
 $ ls <span class="pl-k">&gt;</span> filelist.txt
 $ cat filelist.txt
@@ -755,14 +755,14 @@ test1</pre></div>
 </ul>
 <h4>输入重定向符号 <code class="notranslate">&lt;</code></h4>
 <p>输入重定向符 <code class="notranslate">&lt;</code> 的作用是把命令（或可执行文件）的标准输入重新定向到指定文件，如：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ wc -l <span class="pl-k">&lt;</span> ShowHello.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ wc -l <span class="pl-k">&lt;</span> ShowHello.sh
 6
 $ wc -l ShowHello.sh
 6 ShowHello.sh</pre></div>
 <p>使用 <code class="notranslate">wc -l</code> 统计 <code class="notranslate">ShowHello.sh</code>这个文件有几行，是否使用输入重定向符并没有太大的差异。</p>
 <h4>输入重定向符号 <code class="notranslate">&lt;&lt;</code></h4>
 <p>与输出重定向 <code class="notranslate">&gt;&gt;</code> 不同，输入重定向符 <code class="notranslate">&lt;&lt;</code> 不代表追加的意思。它的作用是使用特定的分界符作为命令输入的结束标志，而不使用默认的Ctrl+D组合键。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ wc -l <span class="pl-s"><span class="pl-k">&lt;&lt;</span> <span class="pl-k">a</span></span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ wc -l <span class="pl-s"><span class="pl-k">&lt;&lt;</span> <span class="pl-k">a</span></span>
 <span class="pl-s">&gt; 123</span>
 <span class="pl-s">&gt; 456</span>
 <span class="pl-s">&gt; abc</span>
@@ -771,7 +771,7 @@ $ wc -l ShowHello.sh
 <p>不停的输入，直到输入字符 <code class="notranslate">a</code> 之后按回车，才结束输入。上面的 <code class="notranslate">&gt;</code> 表示命令没有结束时的换行</p>
 <h4>输出重定向符 <code class="notranslate">&gt;</code></h4>
 <p>输出重定向符 <code class="notranslate">&gt;</code> 的作用是把命令（或可执行文件）的标准输出重新定向到指定文件（或其他输出目标）。这样，该命令的结果就不在屏幕上显示，而是写入指定文件中（或其他输出目标）。例如：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ls
 ShowHello.sh  bash  filelist.txt  hello.txt  name  note1.txt  test1
 d111kc@D111KC:<span class="pl-k">~</span>$ ls <span class="pl-k">&gt;</span> list.txt
 d111kc@D111KC:<span class="pl-k">~</span>$ cat list.txt
@@ -795,7 +795,7 @@ test1</pre></div>
 <p>多条命令可以在一行中出现，用命令执行操作符连接，则将按如下规则执行命令：</p>
 <h5>顺序执行 <code class="notranslate">;</code></h5>
 <p>如果使用 <code class="notranslate">;</code> 连接多条命令，那么这些命令会依次执行，各命令之间没有任何逻辑关系，也就是说，不论哪条命令报错了，后面的命令仍会依次执行。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls<span class="pl-k">;</span> date<span class="pl-k">;</span> <span class="pl-c1">pwd</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ls<span class="pl-k">;</span> date<span class="pl-k">;</span> <span class="pl-c1">pwd</span>
 ShowHello.sh  bash  filelist.txt  hello.txt  list.txt  name  note1.txt  test1
 Fri Aug  1 21:31:32 CST 2025
 /home/d111kc</pre></div>
@@ -820,20 +820,20 @@ Fri Aug  1 21:31:32 CST 2025
 <p>变量名：用户自定义的变量是最普通的shell变量。变量名以字母或下画线开头，由字母、数字和下划线<code class="notranslate">_</code>组成。注意，数字不能做变量的开头符，大写字母通常是系统默认的变量，用户自定义变量通常用小写字母。</p>
 <p>变量赋值：变量命名后，需要赋值，未赋值的变量其值为空。变量赋值的一般形式为：<code class="notranslate">变量名=值</code>。注意，变量与变量内容以等号<code class="notranslate">=</code>来连接。赋值时等号两边不能有空格。如果出现空格，赋值语句执行失败，变量未被赋值，依然为空。如果字符串中一定包括空格，字符串要加上引号。</p>
 <p>变量引用：在程序中使用变量的值时，要在变量名前面加上<code class="notranslate">$</code>符，表示使用变量的值。例如：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ name=d111kc
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ name=d111kc
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$name</span>
 d111kc
 $ <span class="pl-c1">echo</span> name
 name</pre></div>
 <p>在下述情况下，变量的引用会出现歧义：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ dir=/home/student
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ dir=/home/student
 $ cat <span class="pl-smi">$dir01</span>/file1.txt</pre></div>
 <p>在/home目录下，是以student开头，加学号的学生账户，所以上述命令的本意是要显示<code class="notranslate">/home/student01/file1.txt</code>文件，但是shell无法区别变量名是dir还是dir01，在这种情况下，shell默认到第一个非法变量名字符为止，第一个非法变量名字符是/，所以shell认为变量名为dir01，而dir01<br>
 未赋值，所以为空，命令执行失败。在这种情况下，要正确引用变量，需要用大括号将该变量名括起来，如下所示：</p>
 <pre class="notranslate"><code class="notranslate">$ cat ${dir}01/filel.txt
 </code></pre>
 <p>除了用大括号外，还可以用引号引用变量，上述命令还可以表达成：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$dir</span><span class="pl-pds">"</span></span>01/filel.txt</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ cat <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$dir</span><span class="pl-pds">"</span></span>01/filel.txt</pre></div>
 <p>需要注意的是，大括号一定不要错写成小括号，<code class="notranslate">$()</code>等价于倒引号，其作用是把括号内命令的执行结果赋值给变量，如</p>
 <pre class="notranslate"><code class="notranslate">$ working_dir=$(pwd)
 $ echo $working_dir
@@ -843,7 +843,7 @@ $ echo `pwd`
 </code></pre>
 <p>数组的定义和使用与变量类似。所谓数组，就是相同数据类型的元素按一定顺序排列的集合，也就是把有限个类型相同的变量用一个名字命名，然后用编号区分它们的变量集合，把这个名字称为数组名，把编号称为下标。组成数组的各个变量被称为数组的元素。但是bash仅支持一维数组（不支持多维数组），并且没有限定数组的大小。数组下标从0开始，不能使用负数下标。</p>
 <p>在bash中，用小括号 <code class="notranslate">()</code> 来表示包裹数组，数组元素用“空格”分隔。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ langs=(html css javascript)
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ langs=(html css javascript)
 $ <span class="pl-c1">echo</span> <span class="pl-smi">${langs[*]}</span>
 html css javascript
 $ langs[0]=python
@@ -853,7 +853,7 @@ python c javascript</pre></div>
 <p>还可以用declare命令显式声明一个数组，而不赋值，其形式是 <code class="notranslate">declare -a langs</code> 这时langs就是一个数组名，而不会被解释成变量了。</p>
 <p>通过下标获取数组元素的值 <code class="notranslate">${数组名[下标]}</code>，如果没有给出数组元素的下标，则数组名表示下标为0的数组元素。</p>
 <p>获取整个数组的值 <code class="notranslate">${数组名[*]}</code> 或 <code class="notranslate">${数组名[@]}</code></p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ langs=(html css javascript)
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ langs=(html css javascript)
 $ <span class="pl-c1">echo</span> <span class="pl-smi">${langs[0]}</span>
 html
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$langs</span>
@@ -864,7 +864,7 @@ $ <span class="pl-c1">echo</span> <span class="pl-smi">${langs[@]}</span>
 html css javascript</pre></div>
 <p><code class="notranslate">${langs[*]}</code> 和 <code class="notranslate">${langs[@]}</code> 的区别就是，<code class="notranslate">${langs[*]}</code> 将整个数组扩展为一<br>
 个词（即字符串），这个词由以空格分开的各个数组元素组成；<code class="notranslate">${langs[@]}</code> 将整个数组扩展为多个词，每个数组元素是一个词。例如：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ langs=(html css javascript)
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ langs=(html css javascript)
 $ <span class="pl-k">for</span> <span class="pl-smi">i</span> <span class="pl-k">in</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">${langs[*]}</span><span class="pl-pds">"</span></span><span class="pl-k">;</span> <span class="pl-k">do</span> <span class="pl-c1">echo</span> <span class="pl-smi">$i</span><span class="pl-k">;</span> <span class="pl-k">done</span>
 html css javascript
 $ <span class="pl-k">for</span> <span class="pl-smi">i</span> <span class="pl-k">in</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">${langs[@]}</span><span class="pl-pds">"</span></span><span class="pl-k">;</span> <span class="pl-k">do</span> <span class="pl-c1">echo</span> <span class="pl-smi">$i</span><span class="pl-k">;</span> <span class="pl-k">done</span>
@@ -884,22 +884,22 @@ javascript</pre></div>
 <li><code class="notranslate">$*</code>，<code class="notranslate">$@</code> 命令行上实际给出的所有实参</li>
 </ul>
 <p><code class="notranslate">$?</code> 是上一条命令执行后的返回值，它是一个十进制数。大多数的shell命令（除了let命令计算表达式的值等）执行成功后，返回值为0；执行失败，则返回非0值（不同的值代表不同的错误）</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">pwd</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">pwd</span>
 /home/d111kc
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$?</span>
 0</pre></div>
 <p><code class="notranslate">$$</code> 表示当前进程的进程号。每个进程都有唯一的进程号（PID）</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$$</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$$</span>
 300</pre></div>
 <p>新开一个终端再次运行上面的命令时，输出的值会发生改变。</p>
 <p><code class="notranslate">$!</code> 是上一个后台命令对应的进程号</p>
 <p><code class="notranslate">$-</code> 是当前在运行shell程序的选项。shell命令的一般格式是：<code class="notranslate">命令名 [选项] [参数]</code> 登录后启动的交互式shell也是一个程序，它和上述命令一样有选项（默认不带参数），它的选项可以通过执行 <code class="notranslate">echo $-</code>显示出来：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$-</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$-</span>
 himBHs</pre></div>
 <h4>位置参数变量</h4>
 <p>位置参数变量也属于预定义变量。</p>
 <p>在Linux的命令行中，当一条命令或脚本执行时，后面可以跟多个参数，使用位置参数变量来表示这些参数。其中，<code class="notranslate">$0</code> 代表命令行本身，<code class="notranslate">$1</code> 代表第1个参数，依次类推。当参数个数超过10个时，就要用大括号把这个数字括起来，例如，<code class="notranslate">${10}</code>；代表第10个参数，<code class="notranslate">${14}</code>则代表第14个参数。举个例子：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat filel file2</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ cat filel file2</pre></div>
 <p>在这里，cat对应于<code class="notranslate">$0</code>，file1对应于<code class="notranslate">$1</code>，file2对应于<code class="notranslate">$2</code></p>
 <p>常用的位置参数变量：</p>
 <ul>
@@ -909,7 +909,7 @@ himBHs</pre></div>
 <li><code class="notranslate">$#</code> 命令行上参数的个数</li>
 </ul>
 <p>位置参数变量用于向命令或程序脚本传递信息，比如要写一个做加法计算的脚本 <code class="notranslate">add.sh</code>，在编写脚本的时候，并不知道add脚本将要处理的数据对象，所以编写代码的时候，以位置参数变量来代替将要处理的数据对象：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim add.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim add.sh
 $ cat add.sh
 <span class="pl-c"><span class="pl-c">#!</span> /bin/bash</span>
 <span class="pl-c1">let</span> num1=<span class="pl-smi">$1</span>
@@ -922,7 +922,7 @@ $ ./add.sh 1 2
 <p>上面的 <code class="notranslate">add.sh</code> 脚本可以带两个参数，脚本根据它们在命令上的位置来识别并予以处理，所以称之为位置参数。</p>
 <p>上面的脚本必须传入两个参数，如果想要使用不定长参数，脚本就需要用到循环语句，循环语句需要确定循环的次数，这时候就需要应用<code class="notranslate">$#</code>来解决这个问题，<code class="notranslate">$#</code>代表命令行上参数的个数，但不包含shell脚本名本身，即不包括<code class="notranslate">$0</code>的参数的个数。</p>
 <p>除了使用$#来控制循环次数，还可以使用shift来解决这个问题。shift命令移动位置参数，每执行一次shift命令，就把命令行上的实参向左移动一位。注意shift命令不能将$O移走，shift命令执行后，新$1的值是原$2的值，新$2的值是原$3的值，以此类推。例如可以传入不定长参数的加法运算脚本 <code class="notranslate">add2.sh</code>：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim add2.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim add2.sh
 $ cat add2.sh
 <span class="pl-c"><span class="pl-c">#!</span> /bin/bash</span>
 <span class="pl-c1">let</span> sum=0
@@ -943,7 +943,7 @@ $ ./add2.sh 1 3 5 7 9
 <p>在Linux中一般通过环境变量配置操作系统的环境，如提示符、查找命令的路径、用户家目录等，这些系统默认的环境变量的变量名是固定的，一些环境变量为只读变量，只读变量的值通常是在登录过程中定义的，意味着不能改变这些变量的值；而另一些为非只读变量，可以修改。</p>
 <p>环境变量名一般都大写，便于区分。</p>
 <p>在bash中可以用env命令列出已经定义的所有环境变量：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ env
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ env
 SHELL=/bin/bash
 WSL2_GUI_APPS_ENABLED=1
 WSL_DISTRO_NAME=Ubuntu
@@ -971,11 +971,11 @@ PULSE_SERVER=unix:/mnt/wslg/PulseServer
 _=/usr/bin/env</pre></div>
 <p>常用环境变量：</p>
 <p><code class="notranslate">HOME</code> 用户家目录</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$HOME</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$HOME</span>
 /home/d111kc</pre></div>
 <p><code class="notranslate">PATH</code> shell查找命令的目录列表。PATH变量包含带冒号分界符的字符串，这些字符串代表存放系统命令的绝对路径。通常，用户会在家目录下建一个bin目录，存放自己编写的所有可执行命令，把这个目录加人PATH变量中，如下：<code class="notranslate">$ PATH=$PATH:$HOME/bin</code>即在当前的命令查找路径下增加一个目录$HOME/bin，这时用户就可以像使用系统命令一样使用自已编写的命令，而不用再给出相对路径./sh01。需要注意的是，$HOME/bin一定要放在PATH的最后面，因为系统是严格按照PATH变量值中的路径顺序来查找命令的，也就是说PATH变量值中的路径顺序决定了先从哪个目录查找</p>
 <p><code class="notranslate">PS1</code> shell的主提示符。主提示符是在 shell准备接受命令时显示的字符串。PS1定义主提示符是怎样构成的。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$PS1</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$PS1</span>
 <span class="pl-cce">\[\e</span>]0<span class="pl-k">;</span><span class="pl-cce">\u</span>@<span class="pl-cce">\h</span>: <span class="pl-cce">\w\a\]</span><span class="pl-smi">${debian_chroot<span class="pl-k">:</span>+(<span class="pl-smi">$debian_chroot</span>)}</span><span class="pl-cce">\[\0</span>33[01<span class="pl-k">;</span>32m<span class="pl-cce">\]\u</span>@<span class="pl-cce">\h\[\0</span>33[00m<span class="pl-cce">\]</span>:<span class="pl-cce">\[\0</span>33[01<span class="pl-k">;</span>34m<span class="pl-cce">\]\w\[\0</span>33[00m<span class="pl-cce">\]\$</span></pre></div>
 <p>“\u”表示当前用户的用户名；“\h”显示主机名的第一个字段（简称），如locallhost；“\W”显示完整的工作目录，<code class="notranslate">~</code> 代表家目录在PS1中常用的转义字符及其含义如下：</p>
 <ul>
@@ -988,12 +988,12 @@ _=/usr/bin/env</pre></div>
 </ul>
 <p><code class="notranslate">PWD</code> 当前工作目录的绝对路径。</p>
 <p><code class="notranslate">SHELL</code> 当前使用的shell。它指出shell解释程序放在什么地方。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$SHELL</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">echo</span> <span class="pl-smi">$SHELL</span>
 /bin/bash</pre></div>
 <p>环境变量和用户自定义变量的作用域不同，是通过export命令来设置的。用户自定义变量是局部变量，仅限于自身范围，不能自动传给子进程。如果希望父进程在创建子进程时将变量传递给子进程，须用export命令将这些变量送人进程转出区，进程转出区的变量将被子进程继承，从而使得用户自定义变量成为全局变量。</p>
 <p>export命令的一般使用形式是：<code class="notranslate">$ export变量名</code></p>
 <p>变量通过export命令声明即可被子进程继承。用户自定义变量都是通过export设置为全局变量的。用户自定义变量只能在当前shell中有效，而export命令声明的变量在当前shell和所有子 shell 中有效。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ name=d111kc
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ name=d111kc
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$name</span>
 d111kc
 $ bash
@@ -1003,7 +1003,7 @@ See <span class="pl-s"><span class="pl-pds">"</span>man sudo_root<span class="pl
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$name</span>
 </pre></div>
 <p>这时name变量为空，因为第一句赋值是在父shell中执行的，在执行了bash语句后，处于子shell，在子shell中未对name变量赋值，所以name变量为空，下面继续执行如下命令：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">exit</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ <span class="pl-c1">exit</span>
 <span class="pl-c1">exit</span>
 $ <span class="pl-k">export</span> name
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$name</span>
@@ -1017,7 +1017,7 @@ d111kc</pre></div>
 <p>这时显示name变量的值为zhang，因为在父shell中已经通过export声明了变量name，子shell继承该变量，所以该变量值为d111kc</p>
 <h4>变量的查询和删除</h4>
 <p>用户可以定义变量，在不需要使用该变量的时候也可以注销该变量，注销变量用unset命令，其一般形式是：<code class="notranslate">$ unset 变量名</code></p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ name=d111kc
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">d111kc@D111KC:<span class="pl-k">~</span>$ name=d111kc
 d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">echo</span> <span class="pl-smi">$name</span>
 d111kc
 d111kc@D111KC:<span class="pl-k">~</span>$ <span class="pl-c1">unset</span> name
@@ -1029,7 +1029,7 @@ d111kc@D111KC:<span class="pl-k">~</span>$</pre></div>
 <p>三者的区别就是：set可以查询所有的变量，包括局部变量和全局变量；env命令可以查询所有的环境变量，包括本进程及“祖先进程”所设置的全局（环境）变量；export命令可以显示本进程利用export命令所输出的全部变量。</p>
 <h3>数值运算</h3>
 <p>在在shell中所有的变量默认都是“字符串型”。也就是说，如果不手动指定变量的类型，那么所有的数值都是不能进行运算的。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
 $ b=12
 $ c=<span class="pl-smi">$a</span>+<span class="pl-smi">$b</span>
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
@@ -1047,7 +1047,7 @@ $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 <li><code class="notranslate">-x</code>将变量声明为环境变量</li>
 <li><code class="notranslate">-p</code> 显示指定变量被声明的类型</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
 $ b=12
 $ <span class="pl-k">declare</span> -i c=<span class="pl-smi">$a</span>+<span class="pl-smi">$b</span>
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
@@ -1058,28 +1058,28 @@ $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 <p>declare命令还可以把变量声明为环境变量，它和export命令的作用是一样的。例如：<code class="notranslate">$ declare -x test=123</code>表示把变量test声明为环境变量。</p>
 <h4>使用expr和let命令</h4>
 <p>进行数值运算的第二种方法是使用expr命令，这个命令没有declare命令那么复杂。命令如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
 $ b=12
 $ c=<span class="pl-s"><span class="pl-pds">$(</span>expr <span class="pl-smi">$a</span> + <span class="pl-smi">$b</span><span class="pl-pds">)</span></span>
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 23</pre></div>
 <p>注意使用expr命令进行运算时，“+”号左右两侧必须有空格，否则运算不执行。</p>
 <p>let命令和expr命令类似，let比expr更常用。用法如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
 $ b=12
 $ <span class="pl-c1">let</span> c=<span class="pl-smi">$a</span>+<span class="pl-smi">$b</span>
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 23</pre></div>
 <h4>使用<code class="notranslate">$(())</code>运算</h4>
 <p>凡是用let命令的地方都可以用 <code class="notranslate">$(())</code> 取代，但其中只能包含一个算术表达式</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ a=11
 $ b=12
 $ c=<span class="pl-s"><span class="pl-pds">$((</span> <span class="pl-smi">$a</span> <span class="pl-k">+</span> <span class="pl-smi">$b</span> <span class="pl-pds">))</span></span>
 $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 23</pre></div>
 <h2>if条件语句</h2>
 <p>if语句用于条件控制结构，其一般格式为：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">if</span> 测试条件
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">if</span> 测试条件
     <span class="pl-k">then</span> 命令1
     <span class="pl-k">else</span> 命令2
 <span class="pl-k">fi</span></pre></div>
@@ -1116,7 +1116,7 @@ $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 <p>if语句使用fi结尾，和一般语言使用大括号结尾不同。</p>
 <p>if条件语句的判断思路是测试条件判断式是否成立，如果成立，则执行“then”中的命令；如果不成立，则执行“else”中的命令。</p>
 <p>else部分还可以嵌套if，用关键字“elif”代替“elseif”，其一般格式如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">if</span> [ 条件 ]
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">if</span> [ 条件 ]
     <span class="pl-k">then</span> 命令1
     <span class="pl-k">elif</span> [ 条件 ]
     <span class="pl-k">then</span> 命令2
@@ -1125,7 +1125,7 @@ $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 <h2>case 多分支条件语句</h2>
 <p>case语句和if语句一样都是多分支条件语句，不过和多分支if条件语句不同的是，case语句只能判断一种条件关系，而if语句可以判断多种条件关系。</p>
 <p>case语句的语法如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">case</span> $变量名 <span class="pl-k">in</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">case</span> $变量名 <span class="pl-k">in</span>
     <span class="pl-s"><span class="pl-pds">"</span>值1<span class="pl-pds">"</span></span>) 命令
     命令;;
     “值2<span class="pl-s"><span class="pl-pds">"</span>) 命令</span>
@@ -1137,7 +1137,7 @@ $ <span class="pl-c1">echo</span> <span class="pl-smi">$c</span>
 <p>case语句会取出变量中的值，然后与语句体中的值逐一比较。如果数值符合，则执行对应的程序；如果数值不符，则依次比较下一个值；如果所有的值都不符合，则执行<code class="notranslate">*)</code> 的命令，<code class="notranslate">*</code>可以缺省。</p>
 <p>case语句以“case”开头，以“esac”结尾。</p>
 <p>在每个分支程序之后要以<code class="notranslate">;;</code>（双分号）结尾，代表该程序段结束。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim yesno.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim yesno.sh
 $ chmod u+x yesno.sh
 $ ./yesno.sh
 输入是或否（y/n): y
@@ -1164,7 +1164,7 @@ $ cat yesno.sh
 <h2>while 循环语句</h2>
 <p>shell有多种循环形式，包括while循环、until循环、for循环和selectin循环。此外，还需要了解continue和break关键字，以便在不满足结束条件的时候跳出循环。</p>
 <p>while循环是shell脚本中最简单的一种循环，当条件满足时，while重复地执行一组语句，当条件不满足时，则退出while循环。while循环的用法如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">while</span> condition
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">while</span> condition
     <span class="pl-k">do</span>
         statements
     <span class="pl-k">done</span></pre></div>
@@ -1174,7 +1174,7 @@ done都是shell 中的关键字。</p>
 <p>注意，在while循环体中必须有相应的语句使得condition越来越趋近于“不成立”，只有这样才能最终退出循环，否则while就成了死循环，会一直执行下去，永无休止。</p>
 <p>while语句和if语句中的条件判断用法是一样的，可以使用test或<code class="notranslate">[]</code>命令，也可以使用 <code class="notranslate">(())</code>。</p>
 <p>例如：计算1-100的整数之和：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim sum.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim sum.sh
 $ chmod u+x sum.sh
 $ ./sum.sh
 the sum is 5050
@@ -1190,20 +1190,20 @@ sum=0
 <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>the sum is <span class="pl-smi">$sum</span><span class="pl-pds">"</span></span></pre></div>
 <h2>until 循环</h2>
 <p>until循环和while循环恰好相反，当判断条件不成立时才进行循环，一旦判断条件成立终止循环。until循环的用法如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">until</span> condition
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">until</span> condition
     <span class="pl-k">do</span>
         statements
     <span class="pl-k">done</span></pre></div>
 <h2>for 循环</h2>
 <p>for循环有两种使用形式，一种是算术表达式方式，另一种是值表方式。算术表达式方式的for循环用法如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">for</span> <span class="pl-s"><span class="pl-pds">((</span>expl;exp<span class="pl-c1">2</span>;exp<span class="pl-c1">3</span><span class="pl-pds">))</span></span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">for</span> <span class="pl-s"><span class="pl-pds">((</span>expl;exp<span class="pl-c1">2</span>;exp<span class="pl-c1">3</span><span class="pl-pds">))</span></span>
     <span class="pl-k">do</span>
         statements
     <span class="pl-k">done</span></pre></div>
 <p>expl、exp2、exp3是3个表达式，其中exp2是判断条件，for循环根据exp2的结果来决定是否继续下一次循环；statements是循环体语句，可以有一条，也可以有多条；do和done是shell中的关键字。</p>
 <p>它的运行过程为：步骤一，执行expl；步骤二，执行exp2，如果它的判断结果是成立的，则执行循环体中的语句，否则结束整个for循环；步骤三，执行完循环体后再执行exp3；步骤四，重复执行步骤二和三，直到exp2的判断结果不成立，则结束循环。在上面的步骤中，步骤二和步骤三会重复执行，for语句的主要作用就是不断执行步骤二和三。exp1仅在第一次循环时执行，以后都不会再执行，可以认为这是一个初始化语句。exp2一般是一个关系表达式，决定了是否还要继续下次循环，称为“循环条件”。exp3很多情况下是一个带有自增或自减运算的表达式，以使循环条件逐渐变得“不成立”</p>
 <p>使用for循环计算 1 + 2 + ... + 100:</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim sumfor.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim sumfor.sh
 $ chmod u+x sumfor.sh
 $ ./sumfor.sh
 the sum is 5050
@@ -1217,12 +1217,12 @@ sum=0
 <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>the sum is <span class="pl-smi">$sum</span><span class="pl-pds">"</span></span></pre></div>
 <p>for循环中的expl（初始化语句）、exp2（循环条件）和exp3（自增或自减）都是可选项，都可以省略（但分号；必须保留）。</p>
 <p>值表方式的for循环的用法如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">for</span> <span class="pl-smi">variable</span> <span class="pl-k">in</span> value_list
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">for</span> <span class="pl-smi">variable</span> <span class="pl-k">in</span> value_list
 <span class="pl-k">do</span>
     statements
 <span class="pl-k">done</span></pre></div>
 <p>variable表示变量，value_list表示取值列表，in是shell中的关键字。每次循环都会从value_list中取出一个值赋给变量variable，然后进入循环体（do和done之间的部分），执行循环体中的statements。直到取完value_list中的所有值，循环就结束了。invalue_list部分可以省略，省略后的效果相当于<code class="notranslate">in $@($*)</code>，变量依次取位置参数的值，然后执行循环体内的命令，直至所有的位置参数取完为止。例如：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim forloop.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim forloop.sh
 $ chmod u+x forloop.sh
 $ ./forloop.sh
 1
@@ -1241,7 +1241,7 @@ sum=0
 <span class="pl-k">done</span>
 <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>the sum is <span class="pl-smi">$sum</span><span class="pl-pds">"</span></span></pre></div>
 <p>下面是缺省value_list的情况，这时变量将匹配位置参数，如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim forloop.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim forloop.sh
 $ chmod u+x forloop.sh
 $ ./forloop.sh python c html css javascript
 python
@@ -1257,12 +1257,12 @@ $ cat forloop.sh
 <span class="pl-k">done</span></pre></div>
 <h2>select in 循环</h2>
 <p>select in是shell独有的一种循环，非常适合终端这样的交互场景，是C语言所没有的。selectin循环用来增强交互性，它可以显示出带编号的菜单，用户输人不同的编号就可以选择不同的菜单，并执行不同的功能。select in循环的用法如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">select</span> <span class="pl-smi">variable</span> <span class="pl-k">in</span> value_list
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">select</span> <span class="pl-smi">variable</span> <span class="pl-k">in</span> value_list
 <span class="pl-k">do</span>
     statements
 <span class="pl-k">done</span></pre></div>
 <p>variable表示变量，value_list表示取值列表，in是shell中的关键字。select in和for in的语法是相似的。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim selectin.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim selectin.sh
 $ chmod u+x selectin.sh
 $ ./selectin.sh
 what<span class="pl-s"><span class="pl-pds">'</span>s is your favorite os?</span>
@@ -1277,7 +1277,7 @@ what<span class="pl-s"><span class="pl-pds">'</span>s is your favorite os?</span
 <span class="pl-s">#?</span></pre></div>
 <p><code class="notranslate">#?</code> 用来提示用户输人菜单编号；Ctrl+D组合键，它的作用是结束select in循环。select语句取值列表value_list中的内容会以菜单的形式显示出来，用户输人菜单编号，就表示选中了某个值，这个值就会赋给变量variable，然后再执行循环体中的statements（do和done之间的部分）。每次循环时select都会要求用户输人菜单编号，并使用环境变量PS3的值作为提示符，PS3的默认值为#?，修改PS3的值就可以修改提示符。如果用户输人的菜单编号不在范围之内，例如上面输入的9，就会给variable赋一个空值；如果用户输人一个空值（什么也不输人，直接回车），会重新显示一遍菜单。需要注意，select是无限循环（死循环），输人空值，或者输入的值无效，都不会结束循环，只有遇到break语句，或者按下Ctrl+D组合键才能结束循环。</p>
 <p>select in通常和case in一起使用，在用户输人不同的编号时可以做出不同的反应。修改上面的代码，加人case in语句：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ ./selectin.sh
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ./selectin.sh
 what<span class="pl-s"><span class="pl-pds">'</span>s is your favorite os?</span>
 <span class="pl-s">1) linux</span>
 <span class="pl-s">2) windows</span>
@@ -1310,36 +1310,36 @@ what<span class="pl-s"><span class="pl-pds">'</span>s is your favorite os?</span
 <p>在C语言中，break和continue只能跳出当前或本次循环，内层循环中的break和continue对外层循环不起作用；但是shell中的break和continue却能够跳出多层循环，也就是说，内层循环中的break和continue能够跳出外层循环。不过在实际应用中，break和continue一般只用来跳出当前层次的循环，很少有需要跳出多层循环的情况。</p>
 <h3>break关键字</h3>
 <p>break关键字的用法为：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">break</span> n</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">break</span> n</pre></div>
 <p>n表示跳出循环的层数，如果省略n，则表示跳出整个循环。break关键字通常和if语句一起使用，即在满足条件时便跳出循环。</p>
 <h3>continue关键字</h3>
 <p>continue关键字的用法为：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">continue</span> n</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">continue</span> n</pre></div>
 <p>n表示循环的层数，如果省略n，则表示continue只对当前层次的循环语句有效，遇到continue会跳过本次循环，忽略本次循环的剩余代码，直接进人下一次循环。如果带上n，比如n的值为2，那么continue对内层和外层循环语句都有效，不但内层会跳过本次循环，外层也会跳过本次循环，其效果相当于内层循环和外层循环同时执行了不带n的continue。continue关键字通常也和if语句一起使用，即在满足条件时便跳出循环。</p>
 <h2>shell函数</h2>
 <p>shell函数的本质是一段可以重复使用的脚本代码，这段代码被提前编写好了，放在了指定的位置，使用时直接调取即可。shell中的函数和C语言中的函数类似，只是在语法细节上有所差别。</p>
 <h3>函数定义</h3>
 <p>shell函数定义的语法格式如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">name()</span> {
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">name()</span> {
     statements
     [ <span class="pl-k">return</span> value ] 
 }</pre></div>
 <p>function是shell中的关键字，专门用来定义函数；name是函数名；statements是函数要执行的代码，也就是一组语句；returnvalue表示函数的返回值，其中return是shell的关键字，专门用在函数中返回一个值，这一部分可以写也可以不写。由一包围的部分称为函数体，调用一个函数，实际上就是执行函数体中的代码。</p>
 <p>函数定义时也可以不写function关键字，如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-en">name</span>() {
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-en">name</span>() {
     statements
     [ <span class="pl-k">return</span> value ] 
 }</pre></div>
 <p>如果写了function关键字，也可以省略函数名后面的小括号，如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">name</span> {
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">name</span> {
     statements
     [ <span class="pl-k">return</span> value ] 
 }</pre></div>
 <p>建议使用标准的写法，这样能够做到“见名知意”。</p>
 <p>调用shell函数时可以给它传递参数，也可以不传递。如果不传递参数，直接给出函数名字即可：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">name</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">name</pre></div>
 <p>如果传递参数，那么多个参数之间以空格分隔：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">name param1 param2 param3</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">name param1 param2 param3</pre></div>
 <p>不管是哪种形式，函数名字后面都不需要带括号。</p>
 <p>和其他编程语言不同的是，shell函数在定义时不能指明参数，但是在调用时却可以传递参数，并且给它传递什么参数它就接收什么参数。shell也不限制定义和调用的顺序，可以将定义放在调用的前面，也可以将定义放在调用的后面。</p>
 <h3>函数参数</h3>
@@ -1530,101 +1530,101 @@ what<span class="pl-s"><span class="pl-pds">'</span>s is your favorite os?</span
 </ul>
 <h3>用户和用户组管理</h3>
 <p>登录Linux系统时，虽然输入的是自己的用户名和密码，但其实Linux并不认识用户名，它只认识用户名对应的ID（也就是一串数字）。Linux系统将所有用户名与ID的对应关系都存储在<code class="notranslate">/etc/passwd</code>文件中。用户名并无实际作用，仅是为了方便用户记忆而已。同理，Linux也不认识用户组名称，每个用户组的名称也有一个ID与之对应，对应关系存储在/etc/group文件中。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
-_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
-systemd-timesync:x:996:996:systemd Time Synchronization:/:/usr/sbin/nologin
-dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
-messagebus:x:101:101::/nonexistent:/usr/sbin/nologin
-syslog:x:102:102::/nonexistent:/usr/sbin/nologin
-systemd-resolve:x:991:991:systemd Resolver:/:/usr/sbin/nologin
-uuidd:x:103:103::/run/uuidd:/usr/sbin/nologin
-landscape:x:104:105::/var/lib/landscape:/usr/sbin/nologin
-polkitd:x:990:990:User <span class="pl-k">for</span> polkitd:/:/usr/sbin/nologin
-d111kc:x:1000:1000:,,,:/home/d111kc:/bin/bash
-postfix:x:105:109::/var/spool/postfix:/usr/sbin/nologin
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/passwd
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:0:root:/root:/bin/bash
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:2:bin:/bin:/usr/sbin/nologin
+sys<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">3:3:sys:/dev:/usr/sbin/nologin
+sync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">4:65534:sync:/bin:/bin/sync
+games<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">5:60:games:/usr/games:/usr/sbin/nologin
+man<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">6:12:man:/var/cache/man:/usr/sbin/nologin
+lp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">8:8:mail:/var/mail:/usr/sbin/nologin
+news<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">13:13:proxy:/bin:/usr/sbin/nologin
+www-data<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">33:33:www-data:/var/www:/usr/sbin/nologin
+backup<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">34:34:backup:/var/backups:/usr/sbin/nologin
+list<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">42:65534::/nonexistent:/usr/sbin/nologin
+nobody<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">996:996:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">101:101::/nonexistent:/usr/sbin/nologin
+syslog<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">102:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">991:991:systemd Resolver:/:/usr/sbin/nologin
+uuidd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">103:103::/run/uuidd:/usr/sbin/nologin
+landscape<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">104:105::/var/lib/landscape:/usr/sbin/nologin
+polkitd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">990:990:User <span class="pl-k">for</span> polkitd:/:/usr/sbin/nologin
+d111kc<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1000:1000:,,,:/home/d111kc:/bin/bash
+postfix<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">105:109::/var/spool/postfix:/usr/sbin/nologin
 $ cat /etc/group
-root:x:0:
-daemon:x:1:
-bin:x:2:
-sys:x:3:
-adm:x:4:syslog,d111kc
-tty:x:5:
-disk:x:6:
-lp:x:7:
-mail:x:8:
-news:x:9:
-uucp:x:10:
-man:x:12:
-proxy:x:13:
-kmem:x:15:
-dialout:x:20:d111kc
-fax:x:21:
-voice:x:22:
-cdrom:x:24:d111kc
-floppy:x:25:d111kc
-tape:x:26:
-sudo:x:27:d111kc
-audio:x:29:d111kc
-dip:x:30:d111kc
-www-data:x:33:
-backup:x:34:
-operator:x:37:
-list:x:38:
-irc:x:39:
-src:x:40:
-shadow:x:42:
-utmp:x:43:
-video:x:44:d111kc
-sasl:x:45:
-plugdev:x:46:d111kc
-staff:x:50:
-games:x:60:
-users:x:100:d111kc
-nogroup:x:65534:
-systemd-journal:x:999:
-systemd-network:x:998:
-crontab:x:997:
-systemd-timesync:x:996:
-input:x:995:
-sgx:x:994:
-kvm:x:993:
-render:x:992:
-messagebus:x:101:
-syslog:x:102:
-systemd-resolve:x:991:
-uuidd:x:103:
-_ssh:x:104:
-landscape:x:105:
-polkitd:x:990:
-admin:x:106:
-netdev:x:107:d111kc
-d111kc:x:1000:
-ssl-cert:x:108:
-postfix:x:109:
-postdrop:x:110:
-docker:x:1001:d111kc</pre></div>
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:
+sys<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">3:
+adm<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">4:syslog,d111kc
+tty<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">5:
+disk<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">6:
+lp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">7:
+mail<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">8:
+news<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">9:
+uucp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">10:
+man<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">12:
+proxy<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">13:
+kmem<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">15:
+dialout<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">20:d111kc
+fax<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">21:
+voice<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">22:
+cdrom<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">24:d111kc
+floppy<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">25:d111kc
+tape<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">26:
+sudo<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">27:d111kc
+audio<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">29:d111kc
+dip<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">30:d111kc
+www-data<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">33:
+backup<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">34:
+operator<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">37:
+list<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">38:
+irc<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">39:
+src<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">40:
+shadow<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">42:
+utmp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">43:
+video<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">44:d111kc
+sasl<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">45:
+plugdev<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">46:d111kc
+staff<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">50:
+games<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">60:
+users<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">100:d111kc
+nogroup<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">65534:
+systemd-journal<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">999:
+systemd-network<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">998:
+crontab<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">997:
+systemd-timesync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">996:
+input<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">995:
+sgx<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">994:
+kvm<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">993:
+render<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">992:
+messagebus<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">101:
+syslog<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">102:
+systemd-resolve<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">991:
+uuidd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">103:
+_ssh<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">104:
+landscape<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">105:
+polkitd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">990:
+admin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">106:
+netdev<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">107:d111kc
+d111kc<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1000:
+ssl-cert<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">108:
+postfix<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">109:
+postdrop<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">110:
+docker<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1001:d111kc</pre></div>
 <p>在<code class="notranslate">/etc/passwd</code>文件中，每一行用户记录的各个数据段用 <code class="notranslate">:</code> 分隔，分别定义了用户的各方面属性。第1字段就是用户的用户名，用户名是方便用户记忆的登录系统的唯一身份标识，而系统是以用户ID作为用户登录系统的唯一身份标识。第3字段和第4字段分别记录了用户的两种ID，即用户ID（UserID，简<br>
 称UID）和用户组ID（GroupID，简称GID）。用户名和UID的对应关系记录在/etc/passwd文件中。</p>
 <p>为了合理地控制用户访问系统资源，UID、GID与文件拥有者和拥有群组两种属性相对应。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ ls -l
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ ls -l
 total 12
 -rwxr--r-- 1 d111kc d111kc  41 Aug  6 20:55 forloop.sh
 -rwxr--r-- 1 d111kc d111kc 196 Aug  6 21:39 login.sh
@@ -1645,36 +1645,36 @@ total 12
 <li>字段6 家目录</li>
 <li>字段7 默认shell</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
-_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
-systemd-timesync:x:996:996:systemd Time Synchronization:/:/usr/sbin/nologin
-dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
-messagebus:x:101:101::/nonexistent:/usr/sbin/nologin
-syslog:x:102:102::/nonexistent:/usr/sbin/nologin
-systemd-resolve:x:991:991:systemd Resolver:/:/usr/sbin/nologin
-uuidd:x:103:103::/run/uuidd:/usr/sbin/nologin
-landscape:x:104:105::/var/lib/landscape:/usr/sbin/nologin
-polkitd:x:990:990:User <span class="pl-k">for</span> polkitd:/:/usr/sbin/nologin
-d111kc:x:1000:1000:,,,:/home/d111kc:/bin/bash
-postfix:x:105:109::/var/spool/postfix:/usr/sbin/nologin</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ cat /etc/passwd
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:0:root:/root:/bin/bash
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:2:bin:/bin:/usr/sbin/nologin
+sys<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">3:3:sys:/dev:/usr/sbin/nologin
+sync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">4:65534:sync:/bin:/bin/sync
+games<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">5:60:games:/usr/games:/usr/sbin/nologin
+man<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">6:12:man:/var/cache/man:/usr/sbin/nologin
+lp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">8:8:mail:/var/mail:/usr/sbin/nologin
+news<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">13:13:proxy:/bin:/usr/sbin/nologin
+www-data<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">33:33:www-data:/var/www:/usr/sbin/nologin
+backup<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">34:34:backup:/var/backups:/usr/sbin/nologin
+list<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">42:65534::/nonexistent:/usr/sbin/nologin
+nobody<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">996:996:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">101:101::/nonexistent:/usr/sbin/nologin
+syslog<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">102:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">991:991:systemd Resolver:/:/usr/sbin/nologin
+uuidd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">103:103::/run/uuidd:/usr/sbin/nologin
+landscape<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">104:105::/var/lib/landscape:/usr/sbin/nologin
+polkitd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">990:990:User <span class="pl-k">for</span> polkitd:/:/usr/sbin/nologin
+d111kc<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1000:1000:,,,:/home/d111kc:/bin/bash
+postfix<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">105:109::/var/spool/postfix:/usr/sbin/nologin</pre></div>
 <p>字段1：用户名。用户名仅是为了方便用户记忆，Linux系统是通过UID来识别用户身份、分配用户权限的。<code class="notranslate">/etc/passwd</code>文件定义了用户名和UID之间的对应关系。</p>
 <p>字段2：密码。系统用密码来验证用户的合法性。在<code class="notranslate">/etc/passwd</code>文件中用“x”表示此用户设有密码，但它不是真正的密码，真正的密码保存在<code class="notranslate">/etc/shadow</code>文件中。</p>
 <p>字段3：UID。UID是一个数值，每个用户都有唯一的UID，Linux系统通过UID来识别不同的用户。实际上，UID取值范围为0～65535。在某些情况下，系统允许存在多个拥有不同用户名但UID相同的用户。</p>
@@ -1684,7 +1684,7 @@ postfix:x:105:109::/var/spool/postfix:/usr/sbin/nologin</pre></div>
 <p>字段6：主目录。用户登录后有操作权限的访问目录，通常称为用户的主目录。例如，root超级管理员账户的主目录为/root，普通用户的主目录为/home/yourname，即在/home目录下建立和用户名相同的目录作为主目录，如lamp用户的主目录就是/home/lamp目录。用户登录后均有自己独立的工作环境，个人用户的文件都放在各自的主目录下。</p>
 <h3>/etc/shadow</h3>
 <p>/etc/shadow文件用于存储Linux系统中用户的密码信息，又称为“影子文件”。/etc/passwd文件，由于该文件允许所有用户读取，易导致用户密码泄露，因此Linux系统将用户的密码信息从/etc/passwd文件中分离出来，单独放到了/etc/shadow文件中。/etc/shadow文件只有root用户拥有读权限，其他用户没有任何权限，这样就保证了用户密码的安全性。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> cat /etc/shadow</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> cat /etc/shadow</span>
 root:<span class="pl-smi">$y$j9T$ZrywLYh0e4DLF5n</span>/9Ks3A0<span class="pl-smi">$ClR3vOIXpIho6s8R</span>.qF68WTvqSspvkFmfw6V2UTIcG5:20291:0:99999:7:::
 daemon:<span class="pl-k">*</span>:20094:0:99999:7:::
 bin:<span class="pl-k">*</span>:20094:0:99999:7:::
@@ -1729,7 +1729,7 @@ postfix:<span class="pl-k">!</span>:20302::::::</pre></div>
 <p>字段1：用户名。该字段与/etc/passwd文件的用户名有相同的含义。</p>
 <p>字段2：加密密码。这里保存的是真正加密的密码。目前Linux的密码采用的是SHA512散列加密算法，原来采用的是MD5或DES加密算法。SHA512散列加密算法的加密等级更高，也更加安全。注意，这串密码产生的乱码不能手动修改，如果手动修改，系统将无法识别密码，导致密码失效。在密码串前加上<code class="notranslate">!</code> <code class="notranslate">*</code> 或<code class="notranslate">x</code>使密码暂时失效。</p>
 <p>字段3：最后一次修改时间。此字段表示最后一次修改密码的时间。显示的是从1970.1.1到上次修改密码的天数，换算时间：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ date -d <span class="pl-s"><span class="pl-pds">"</span>1970-01-01 20291 days<span class="pl-pds">"</span></span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ date -d <span class="pl-s"><span class="pl-pds">"</span>1970-01-01 20291 days<span class="pl-pds">"</span></span>
 Tue Jul 22 00:00:00 CST 2025</pre></div>
 <p>字段4：最小修改时间间隔。也就是说，该字段规定了从字段3（最后一次修改时间）起，多长时间之内不能修改密码。如果是0，则密码可以随时修改；如果是10，则代表密码修改后10天之内不能再次修改。此字段是针对某些人频繁更改账户密码而设计的。</p>
 <p>字段5：密码有效期。经常变更密码是个好习惯，为了强制用户变更密码，这个字段可以指定距离字段3（最后一次修改时间）多长时间内需要再次变更密码，否则该账户密码会过期。该字段的默认值为99999，约274年，可认为永久生效。如果改为90，则表示密码被修改90<br>
@@ -1741,7 +1741,7 @@ Tue Jul 22 00:00:00 CST 2025</pre></div>
 <p>对于普通账户的密码遗失，可以通过root账户解决，它会重新配置好指定账户的密码，而不需要知道原来的密码（利用root的身份使用passwd命令即可）。如果root账号的密码遗失，则需要重新启动系统，进人单用户模式，系统会提供root权限的bash接口，此时可以用passwd命令修改账户密码。</p>
 <h3>/etc/gshadow</h3>
 <p>/etc/passwd文件存储用户基本信息，同时考虑到账户的安全性，将用户的密码信息存放在另一个文件/etc/shadow中。/etc/gshadow文件也是如此，组用户信息存储在/etc/group文件中，而将组用户的密码信息存储在/etc/gshadow文件中。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> cat /etc/gshadow</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> cat /etc/gshadow</span>
 root:<span class="pl-k">*</span>::
 daemon:<span class="pl-k">*</span>::
 bin:<span class="pl-k">*</span>::
@@ -1846,29 +1846,29 @@ docker:<span class="pl-k">!</span>::d111kc</pre></div>
 <li><code class="notranslate">-i</code> 设置用户密码失效日期，对应/etc/shadow文件中各行密码的字段7。</li>
 </ul>
 <p>例如，使用root账户修改普通用户d111kc的密码，可以使用如下命令：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> passwd d111kc</span>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> passwd d111kc</span>
 New password:
 Retype new password:
 passwd: password updated successfully</pre></div>
 <p>普通用户只能使用passwd命令修改自己的密码，而不能修改其他用户的密码。与使用root账户修改普通用户的密码不同，普通用户修改自己的密码需要先输人自己的旧密码，只有旧密码输人正确后才能输人新密码。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ passwd
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ passwd
 Changing password <span class="pl-k">for</span> d111kc.
 Current password:
 New password:
 Retype new password:
 passwd: password updated successfully</pre></div>
 <h3>修改用户信息命令</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> usermod [选项] 用户名</span></pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> usermod [选项] 用户名</span></pre></div>
 <h3>修改用户密码状态命令</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> change [选项] 用户名</span></pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> change [选项] 用户名</span></pre></div>
 <h3>删除用户命令</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> userdel -r 用户名</span></pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> userdel -r 用户名</span></pre></div>
 <p>只用 root 用户才能用</p>
 <p><code class="notranslate">-r</code> 表示在删除用户的同时删除用户的家目录。</p>
 <h3>查看用户的UID和GID命令</h3>
 <p>id命令可以查询用户的UID、GID和附加组的信息。命令比较简单，格式如下：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ id 用户名</pre></div>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ id root
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ id 用户名</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ id root
 uid=0(root) gid=0(root) groups=0(root)</pre></div>
 <h3>用户间切换命令</h3>
 <pre class="notranslate"><code class="notranslate">$ su [选项] 用户名
@@ -1942,7 +1942,7 @@ uid=0(root) gid=0(root) groups=0(root)</pre></div>
 <li><code class="notranslate">-b</code> 与-n不同，此选项表示只对非空行进行编号。</li>
 <li><code class="notranslate">-s</code> 当遇到连续2行以上的空白行时，就替换为1行的空白行。</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim hello.txt
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim hello.txt
 $ cat hello.txt
 hello
 world
@@ -1952,7 +1952,7 @@ $ cat -n hello.txt
      2  world
      3  linux</pre></div>
 <p>当cat后面带多个参数时，cat就会依次将参数所表示的文件显示在显示屏上，从而将多个文件连接在一起，如果需要将连接后的文件生成一个新文件，使用<code class="notranslate">&gt;</code>输出重定向符，就可以将连接后的文件保存在一个新文件中</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vim lang.txt
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vim lang.txt
 $ cat lang.txt
 html
 css
@@ -1982,35 +1982,35 @@ javascript</pre></div>
 <li><code class="notranslate">+n</code> 从第n行开始显示文件内容，n代表数字。</li>
 <li><code class="notranslate">-n</code> 一次显示的行数，n代表数字。</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ more /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nolo
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ more /etc/passwd
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:0:root:/root:/bin/bash
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:2:bin:/bin:/usr/sbin/nologin
+sys<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">3:3:sys:/dev:/usr/sbin/nologin
+sync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">4:65534:sync:/bin:/bin/sync
+games<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">5:60:games:/usr/games:/usr/sbin/nologin
+man<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">6:12:man:/var/cache/man:/usr/sbin/nologin
+lp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">8:8:mail:/var/mail:/usr/sbin/nologin
+news<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">13:13:proxy:/bin:/usr/sbin/nologin
+www-data<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">33:33:www-data:/var/www:/usr/sbin/nologin
+backup<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">34:34:backup:/var/backups:/usr/sbin/nologin
+list<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">38:38:Mailing List Manager:/var/list:/usr/sbin/nolo
 gin
-irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
-_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-systemd-network:x:998:998:systemd Network Management:/:/us
+irc<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">42:65534::/nonexistent:/usr/sbin/nologin
+nobody<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">998:998:systemd Network Management:/:/us
 r/sbin/nologin
-systemd-timesync:x:996:996:systemd Time Synchronization:/:
+systemd-timesync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">996:996:systemd Time Synchronization:/:
 /usr/sbin/nologin
-dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/
+dhcpcd<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/
 bin/false
-messagebus:x:101:101::/nonexistent:/usr/sbin/nologin
-syslog:x:102:102::/nonexistent:/usr/sbin/nologin
-systemd-resolve:x:991:991:systemd Resolver:/:/usr/sbin/nol
+messagebus<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">101:101::/nonexistent:/usr/sbin/nologin
+syslog<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">102:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">991:991:systemd Resolver:/:/usr/sbin/nol
 ogin
 --More--(80%)</pre></div>
 <p>使用空格键翻页。</p>
@@ -2027,27 +2027,27 @@ ogin
 <li><code class="notranslate">-v</code> 显示文件名。</li>
 </ul>
 <p>如不设置显示的具体行数，则默认显示10行的文本数据。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">~</span>$ head /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-k">~</span>$ head /etc/passwd
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:0:root:/root:/bin/bash
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:2:bin:/bin:/usr/sbin/nologin
+sys<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">3:3:sys:/dev:/usr/sbin/nologin
+sync<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">4:65534:sync:/bin:/bin/sync
+games<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">5:60:games:/usr/games:/usr/sbin/nologin
+man<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">6:12:man:/var/cache/man:/usr/sbin/nologin
+lp<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">8:8:mail:/var/mail:/usr/sbin/nologin
+news<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">9:9:news:/var/spool/news:/usr/sbin/nologin</pre></div>
 <p>head命令默认显示文件的开头10行内容。如果想显示指定的行数，则只需使用<code class="notranslate">-n</code>选项即可：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ head -n 3 /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ head -n 3 /etc/passwd
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:0:root:/root:/bin/bash
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:2:bin:/bin:/usr/sbin/nologin</pre></div>
 <p>这是显示文件的开头3行内容，也可以直接写<code class="notranslate">-行数</code></p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ head -3 /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ head -3 /etc/passwd
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:0:root:/root:/bin/bash
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:2:bin:/bin:/usr/sbin/nologin</pre></div>
 <h4>tail命令</h4>
 <p>tail命令和head命令正好相反，它用来查看文件末尾的数据，其基本格式如下：<code class="notranslate">$ tail [选项] 文件名</code></p>
 <p>tail命令可以使用“-f”选项来监听文件的新增内容，例如执行命令<code class="notranslate">$ tail -f file</code>，光标不会退出文件，而会一直监听在文件的结尾处。如果向文件中追加一些数据，那么，在原始的正在监听的终端中，会看到追加的信息。如果想终止输出，按Ctrl+C键中断tail命令即可。</p>
@@ -2056,7 +2056,7 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin</pre></div>
 参数）。</p>
 <p>在Linux系统中，每个文件主要拥有3个时间参数（通过stat命令进行查看），分别是文件的<br>
 访问时间、数据修改时间以及状态修改时间。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ stat /etc/passwd
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ stat /etc/passwd
   File: /etc/passwd
   Size: 1521            Blocks: 8          IO Block: 4096   regular file
 Device: 8,32    Inode: 44737       Links: 1
@@ -2101,8 +2101,8 @@ Change: 2025-08-07 14:50:57.770158646 +0800
 <li>-v:列出没有匹配模式的行。</li>
 </ul>
 <p>注意：如果是搜索多个文件，grep命令的搜索结果只显示文件中发现匹配模式的文件名。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ grep root /etc/passwd
-root:x:0:0:root:/root:/bin/bash</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ grep root /etc/passwd
+root<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">0:0:root:/root:/bin/bash</pre></div>
 <h4>sed 命令</h4>
 <p>主要用来自动编辑一个或多个文件，简化对文件的反复操作，编写转换程序等。</p>
 <p>语法 <code class="notranslate">$ sed [选项] 编辑命令 文件名</code></p>
@@ -2125,9 +2125,9 @@ root:x:0:0:root:/root:/bin/bash</pre></div>
 <li>s：字符串替换（匹配正则表达式）substitution</li>
 </ul>
 <p>将/etc/passwd文件的第二行和第三行输出到控制台：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ sed -n <span class="pl-s"><span class="pl-pds">"</span>2,3p<span class="pl-pds">"</span></span> /etc/passwd
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ sed -n <span class="pl-s"><span class="pl-pds">"</span>2,3p<span class="pl-pds">"</span></span> /etc/passwd
+daemon<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin<img class="emoji" alt=":x:" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">2:2:bin:/bin:/usr/sbin/nologin</pre></div>
 <h4>awk 命令</h4>
 <h4>cp 命令</h4>
 <h4>rm 命令</h4>
@@ -2274,11 +2274,11 @@ renice 命令可以在进程运行时修改其 NI 值，从而调整优先级。
 <p>所有的硬件设备必须挂载之后才能使用，有些硬件设备（比如硬盘）在每次系统启动时会自动挂载，而有些（比如U盘、光盘）则需要手动进行挂载。</p>
 <p>挂载指的是将硬件设备的 文件系统 和 Linux 系统中的文件系统，通过 指定目录（作为挂载点） 进行关联。而将文件系统挂载到 Linux 系统上，需要使用 mount 挂载命令。</p>
 <h4>mount 命令</h4>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ mount -l</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ mount -l</pre></div>
 <p>单纯使用 mount 命令，会显示出系统中已挂载的设备。使用-l，会额外显示出卷标名称。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ mount -a</pre></div>
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ mount -a</pre></div>
 <p>自动检查/etc/fstab 文件中有无因疏漏而未被挂载的设备文件，若有则进行自动挂载操作。/etc/fstab 文件为自动挂载文件，系统开机时会主动读取文件内容，根据文件配置，系统会自动挂载指定设备。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ mount [-t 系统类型] [-L 卷标名] [-o 特殊选项] [-n] 设备文件名 挂载
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ mount [-t 系统类型] [-L 卷标名] [-o 特殊选项] [-n] 设备文件名 挂载
 点</pre></div>
 <p>-t 系统类型：指定欲挂载的文件系统类型。常见的支持类型有 EXT2、EXT3、EXT4、iso9660、vfat、reiserfs 等。<br>
 -L 卷标名：除了使用设备文件名（如/dev/hdc6）之外，还可以利用文件系统的卷标名称进行挂载。<br>
@@ -2374,7 +2374,7 @@ fsck 命令修复磁盘分区以后，若发现分区中有文件丢失，可以
 <p>系统启动时会检测主机硬件并加载适当的驱动程序（模块，modules），让硬件正确地启动与运行。内核所检测到的各项硬件设备，会记录在/proc 中</p>
 <h3>查看 CPU 信息的命令</h3>
 <p>lscpu 命令 查看 CPU 和处理单元的信息</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ lscpu
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ lscpu
 Architecture:             x86_64
   CPU op-mode(s):         32-bit, 64-bit
   Address sizes:          39 bits physical, 48 bits virtual
@@ -2428,7 +2428,7 @@ Vulnerabilities:
 <h4>free 命令</h4>
 <p>显示系统内存状态，包括空闲的和已用的物流内存，swap 内存，以及被内核使用的缓冲区。</p>
 <p>语法 <code class="notranslate">$ free [选项]</code></p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ free
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ free
                total        used        free      shared  buff/cache   available
 Mem:         7975248      596900     7442636        3248      137100     7378348
 Swap:        2097152           0     2097152</pre></div>
@@ -2443,7 +2443,7 @@ Swap:        2097152           0     2097152</pre></div>
 <h4>vmstat 命令</h4>
 <p>Virtual Meomory Statistics 虚拟内存统计。Linux 内存管理主要通过“调页（Paging）”和” 交换（Swapping）”来完成内存调度。页面写入磁盘的过程称作 Page-Out，页面从磁盘重新回到内存的过程被称作 Page-In。</p>
 <p>当内核需要一个页面，但发现此页面不在物理内存中（因为被 Page-Out）时，就发生页面错误（Page Fault）。若 pageout 频繁发生，内核管理分页的时间超过运行程序的时间时，系统性能会急剧下降。这时系统已经运行非常慢或进入暂停状态，这种状态亦被称作颠簸 Thrashing</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ vmstat
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ vmstat
 procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
  r  b   swpd   free   buff  cache   si   so    bi    bo   <span class="pl-k">in</span>   cs us sy id wa st gu
  1  0      0 7442724   1308 136264    0    0   481   133   57    0  0  0 100  0  0  0</pre></div>
@@ -2451,7 +2451,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu----
 <h4>dmesg 命令</h4>
 <p>可以查看 Linux 系统启动信息的命令<br>
 常用于查看系统的硬件信息。除此之外，开机信息也可以通过/var/log/目录中的 dmesg 文件查看。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ dmesg <span class="pl-k">|</span> grep CPU
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ dmesg <span class="pl-k">|</span> grep CPU
 [    0.025044] smpboot: Allowing 16 CPUs, 0 hotplug CPUs
 [    0.029566] setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:16 nr_node_ids:1
 [    0.071783] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=16, Nodes=1
@@ -2466,7 +2466,7 @@ $ dmesg <span class="pl-k">|</span> grep eth0
 <h4>lsblk 命令</h4>
 <p>列出系统中的所有可用块设备信息，还能显示他们之间的依赖关系，但不会列出 RAM 盘的信息。块设备如，硬盘、闪存盘、CD-ROM 等。</p>
 <p>块设备指设备将数据按可寻址的块为单位进行输入/输出，一次 I/O 操作固定大小的数据块，通过缓冲区来读写块设备，允许随机访问。这种方式适用于发送大量的信息，常见的块设备有硬盘、磁盘、光盘驱动器等。</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">$ lsblk
+<span class="in-code-lang">shell</span><div class="highlight highlight-source-shell"><pre class="notranslate">$ lsblk
 NAME
     MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 sda   8:0    0 388.4M  1 disk

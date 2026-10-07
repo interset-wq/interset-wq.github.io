@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -175,7 +175,7 @@
 </ol>
 <h3>1.5 闭包Closure</h3>
 <p>一个函数对周围状态的引用捆绑在一起，内层函数中访问到其外层函数的作用域. 简单理解：闭包 =  内层函数 + 外层函数的变量</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 闭包的简单写法</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 闭包的简单写法</span>
 <span class="pl-k">function</span> <span class="pl-en">outer</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
    <span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
    <span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
@@ -187,7 +187,7 @@
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4e29deff8b91f963d99ab8bf357b58c85d789109a3b1576b540f0049b0198ca4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32382f586e41686b4a4b6961474563536c522e6a7067"><img src="https://camo.githubusercontent.com/4e29deff8b91f963d99ab8bf357b58c85d789109a3b1576b540f0049b0198ca4/68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32382f586e41686b4a4b6961474563536c522e6a7067" alt="闭包.jpg" data-canonical-src="https://s2.loli.net/2025/05/28/XnAhkJKiaGEcSlR.jpg" style="max-width: 100%;"></a></p>
 <p>闭包作用：封闭数据，提供操作，外部也可以访问函数内部的变量</p>
 <p>闭包基本格式:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法一</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法一</span>
 <span class="pl-k">function</span> <span class="pl-en">outer</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
     <span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
@@ -197,7 +197,7 @@
 <span class="pl-kos">}</span>
 <span class="pl-k">const</span> <span class="pl-s1">fun</span> <span class="pl-c1">=</span> <span class="pl-en">outer</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 变量fun实际上是函数fn</span>
 <span class="pl-s1">fun</span><span class="pl-kos">(</span><span class="pl-kos">)</span>  <span class="pl-c">// 输出结果 1 // 调用函数fun, 实际上是调用了函数fn</span></pre></div>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法二</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法二</span>
 <span class="pl-k">function</span> <span class="pl-en">outer</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
     <span class="pl-k">return</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
@@ -209,7 +209,7 @@
 <p>闭包应用：实现数据的私有. 比如，我们要做个统计函数调用次数，函数调用一次，就++</p>
 <p>在控制台输出函数被调用的次数:</p>
 <p>不使用闭包:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
 <span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-s1">i</span> <span class="pl-c1">++</span> 
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`函数被调用了<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">i</span><span class="pl-kos">}</span></span>次`</span><span class="pl-kos">)</span>
@@ -220,7 +220,7 @@
 <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">100</span> <span class="pl-c">// i是全局变量，很容易被修改,从而影响调用函数fn()的结果</span>
 <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 函数被调用了101次</span></pre></div>
 <p>使用闭包:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
     <span class="pl-k">function</span> <span class="pl-en">fun</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
         <span class="pl-s1">i</span> <span class="pl-c1">++</span> 
@@ -242,7 +242,7 @@
 </details>
 <h3>1.6 变量提升</h3>
 <p>变量提升是 JavaScript 中比较“奇怪”的现象，它允许在变量声明之前即被访问（仅存在于var声明变量）</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用 var 声明变量,可以先使用变量,再声明变量</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用 var 声明变量,可以先使用变量,再声明变量</span>
 <span class="pl-c">// 因为变量提升会自动将 var 声明的变量移动到当前作用域的最前面</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">msg</span> <span class="pl-c1">+</span> <span class="pl-s">' world!'</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 undefined world!</span>
 <span class="pl-k">var</span> <span class="pl-s1">msg</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello'</span>
@@ -280,13 +280,13 @@
 <li>函数表达式不存在提升的现象</li>
 <li>函数提升出现在相同作用域当中</li>
 </ul>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// JS 可以先调用函数,再声明函数</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// JS 可以先调用函数,再声明函数</span>
 <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 Hello world!</span>
 
 <span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Hello world!'</span><span class="pl-kos">)</span>
 <span class="pl-kos">}</span></pre></div>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 函数表达式没有函数提升</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 函数表达式没有函数提升</span>
 <span class="pl-c">// fun() // 报错 Uncaught TypeError: fun is not a function</span>
 <span class="pl-k">var</span> <span class="pl-en">fun</span> <span class="pl-c1">=</span> <span class="pl-k">function</span> <span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Hello world!'</span><span class="pl-kos">)</span>
@@ -305,7 +305,7 @@
 <p>JS 中的动态参数和剩余参数相当于 Python 中的不定长参数 <code class="notranslate">*args</code></p>
 <p><strong>动态参数:</strong></p>
 <p>arguments 是函数内部内置的伪数组变量，它包含了调用函数时传入的所有实参</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">print_sum</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">print_sum</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-c">// console.log(arguments) // 返回传入实参的伪数组</span>
     <span class="pl-k">let</span> <span class="pl-s1">sum</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
     <span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span><span class="pl-c1">=</span><span class="pl-c1">0</span><span class="pl-kos">;</span> <span class="pl-s1">i</span> <span class="pl-c1">&lt;</span> <span class="pl-smi">arguments</span><span class="pl-kos">.</span><span class="pl-c1">length</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
@@ -325,7 +325,7 @@
 </details>
 <p><strong>剩余参数:</strong></p>
 <p>剩余参数允许我们将一个不定数量的参数表示为一个数组, 用法与 Python 不定长参数几乎完全相同</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">print_args</span><span class="pl-kos">(</span>...<span class="pl-s1">other</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">print_args</span><span class="pl-kos">(</span>...<span class="pl-s1">other</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">other</span><span class="pl-kos">)</span>
 <span class="pl-kos">}</span>
 
@@ -339,10 +339,10 @@
 </ul>
 </details>
 <p><strong>JS</strong></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">nums</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">nums</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">]</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span>...<span class="pl-s1">nums</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 1 2 3</span></pre></div>
 <p><strong>Python</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">nums</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
+<span class="in-code-lang">python</span><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">nums</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
 <span class="pl-en">print</span>(<span class="pl-c1">*</span><span class="pl-s1">nums</span>) <span class="pl-c"># 输出结果 1 2 3</span></pre></div>
 <details>
 <summary>展开运算符...</summary>
@@ -350,13 +350,13 @@
 展开运算符(…),将一个数组进行展开, 不会修改原数组. 典型运用场景： 求数组最大值(最小值)、合并数组等
 <p>剩余参数：函数参数使用，得到真数组. 展开运算符：数组中使用，数组展开</p>
 <p><strong>求数组最值</strong></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">8</span><span class="pl-kos">,</span> <span class="pl-c1">4</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">,</span> <span class="pl-c1">9</span><span class="pl-kos">,</span> <span class="pl-c1">1</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">8</span><span class="pl-kos">,</span> <span class="pl-c1">4</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">,</span> <span class="pl-c1">9</span><span class="pl-kos">,</span> <span class="pl-c1">1</span><span class="pl-kos">]</span>
 <span class="pl-k">let</span> <span class="pl-s1">max</span> <span class="pl-c1">=</span> <span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-en">max</span><span class="pl-kos">(</span>...<span class="pl-s1">arr</span><span class="pl-kos">)</span>
 <span class="pl-k">let</span> <span class="pl-s1">min</span> <span class="pl-c1">=</span> <span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-en">min</span><span class="pl-kos">(</span>...<span class="pl-s1">arr</span><span class="pl-kos">)</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`数组最大值为<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">max</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// 数组最大值为9</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`数组最小值为<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">min</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// 数组最大值为1</span></pre></div>
 <p><strong>合并数组</strong></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr1</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'cpp'</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr1</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'cpp'</span><span class="pl-kos">]</span>
 <span class="pl-k">let</span> <span class="pl-s1">arr2</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">]</span>
 <span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span>...<span class="pl-s1">arr1</span><span class="pl-kos">,</span> ...<span class="pl-s1">arr2</span><span class="pl-kos">]</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// ['py', 'c', 'cpp', 'html', 'css', 'js']</span></pre></div>
@@ -364,7 +364,7 @@
 <p>引入箭头函数的目的是更简短的函数写法并且不绑定this，箭头函数的语法比函数表达式更简洁. 使用场景：箭头函数更适用于那些本来需要匿名函数的地方</p>
 <h4>2.3.1 箭头函数基本语法</h4>
 <p><strong>基本写法</strong></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数</span>
 <span class="pl-c">// function fn() {</span>
 <span class="pl-c">//     console.log('Hello world!')</span>
 <span class="pl-c">// }</span>
@@ -376,7 +376,7 @@
 <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 Hello world!</span></pre></div>
 <p><strong>省略小括号</strong><br>
 只有一个参数可以省略小括号</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">//  普通函数</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">//  普通函数</span>
 <span class="pl-c">// function fn(x) {</span>
 <span class="pl-c">//     return x + x</span>
 <span class="pl-c">// }</span>
@@ -395,7 +395,7 @@
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 10</span></pre></div>
 <p><strong>省略return</strong><br>
 如果函数体只有一行代码(return语句)，可以写到一行上，并且无需写 return 直接返回值</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数</span>
 <span class="pl-c">// function fn(x, y) {</span>
 <span class="pl-c">//     return x + y</span>
 <span class="pl-c">// }</span>
@@ -411,7 +411,7 @@
 <span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-c1">4</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">)</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">result</span><span class="pl-kos">)</span> <span class="pl-c">// 输出结果 11</span></pre></div>
 <p><strong>返回对象的箭头函数</strong></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 箭头函数(返回值是对象数据类型时,要使用小括号包裹对象的花括号,用以区分函数体的花括号)</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 箭头函数(返回值是对象数据类型时,要使用小括号包裹对象的花括号,用以区分函数体的花括号)</span>
 <span class="pl-k">const</span> <span class="pl-en">fn</span> <span class="pl-c1">=</span> <span class="pl-s1">uname</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">(</span><span class="pl-kos">{</span> <span class="pl-c1">name</span>: <span class="pl-s1">uname</span> <span class="pl-kos">}</span><span class="pl-kos">)</span>
 
 <span class="pl-k">const</span> <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-s">'wq'</span><span class="pl-kos">)</span>
@@ -427,7 +427,7 @@
 </details>
 <h4>2.3.2 箭头函数参数</h4>
 <p>普通函数有 <code class="notranslate">arguments</code> 动态参数, 但是箭头函数没有 <code class="notranslate">arguments</code> 动态参数，有 剩余参数 <code class="notranslate">..args</code></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数使用动态参数</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 普通函数使用动态参数</span>
 <span class="pl-c">// function get_sum() {</span>
 <span class="pl-c">//     let sum = 0</span>
 <span class="pl-c">//     for (let i=0; i &lt; arguments.length; i++) {</span>
@@ -472,7 +472,7 @@
         <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-smi">this</span><span class="pl-kos">)</span> <span class="pl-c">// 事件监听,this指向DOM对象,此处指向btn对象</span>
     <span class="pl-kos">}</span><span class="pl-kos">)</span>   
 <span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span></pre></div>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c1">&lt;</span><span class="pl-s1">button</span><span class="pl-c1">&gt;</span>submit<span class="pl-kos">&lt;/</span><span class="pl-s1">button</span><span class="pl-c1">&gt;</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c1">&lt;</span><span class="pl-s1">button</span><span class="pl-c1">&gt;</span>submit<span class="pl-kos">&lt;/</span><span class="pl-s1">button</span><span class="pl-c1">&gt;</span>
 <span class="pl-c1">&lt;</span><span class="pl-s1">script</span><span class="pl-c1">&gt;</span>
     <span class="pl-en">const</span> <span class="pl-s1">fn</span> <span class="pl-c1">=</span> <span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
         <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-smi">this</span><span class="pl-kos">)</span> <span class="pl-c">// this指向window对象</span>
@@ -508,11 +508,11 @@
 <h3>3.1 数组解构</h3>
 <p>解构赋值是一种快速为变量赋值的简洁语法，本质上仍然是为变量赋值。类似于 Python 使用元组同时为多个变量赋值.</p>
 <p>基本语法： 赋值运算符 <code class="notranslate">=</code> 左侧的 <code class="notranslate">[]</code> 用于包裹批量声明变量，右侧数组的元素值将被赋值给左侧的变量. 变量的顺序对应数组单元值的位置依次进行赋值操作</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">5</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">5</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">]</span>
 <span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`a=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">a</span><span class="pl-kos">}</span></span>, b=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">b</span><span class="pl-kos">}</span></span>, c=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">c</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// a=5, b=3, c=6</span></pre></div>
 <p>可以使用这种方法交换两个变量的值</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">5</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">5</span>
 <span class="pl-k">let</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">7</span><span class="pl-kos">;</span> <span class="pl-c">// 此处的";"必不可少,因为当方括号位于句首时,前面必须要有结束符号";",否则会报错</span>
 <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">a</span><span class="pl-kos">]</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`a=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">a</span><span class="pl-kos">}</span></span>, b=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">b</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// a=7, b=5</span></pre></div>
@@ -521,7 +521,7 @@
 <ul>
 <li>
 <p>立即执行函数</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法一</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法一</span>
 <span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span><span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
 <span class="pl-c">// 写法二</span>
@@ -529,18 +529,18 @@
 </li>
 <li>
 <p>数组解构</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">;</span><span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">a</span><span class="pl-kos">]</span></pre></div>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">;</span><span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">a</span><span class="pl-kos">]</span></pre></div>
 </li>
 </ul>
 </details>
 <p>变量的数量大于数组元素值数量时，多余的变量将被赋值为 <code class="notranslate">undefined</code></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">]</span>
 <span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-c">// c</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// undefined</span></pre></div>
 <p>变量的数量小于数组元素值数量时，多余的元素值不分配,或使用剩余参数全分配给最后一个变量</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
 
 <span class="pl-c">// 多余的数组元素不分配</span>
 <span class="pl-c">// const [a, b, c] = arr</span>
@@ -554,21 +554,21 @@
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-c">// c</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// ['js', 'html', 'css']</span></pre></div>
 <p>设置默认值,防止有 <code class="notranslate">undefined</code></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 设置默认值,防止出现undefined</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 设置默认值,防止出现undefined</span>
 <span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">]</span>
 <span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-c1">=</span><span class="pl-s">'cpp'</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-c1">=</span><span class="pl-s">'cpp'</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-c1">=</span><span class="pl-s">'cpp'</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-c">// c</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// cpp</span></pre></div>
 <p>故意跳过某些值</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 故意跳过 'c'</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 故意跳过 'c'</span>
 <span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">]</span>
 <span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">,</span> <span class="pl-s1">d</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// js</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">d</span><span class="pl-kos">)</span> <span class="pl-c">// html</span></pre></div>
 <p>多维数组</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-kos">[</span><span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">]</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-kos">[</span><span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">]</span><span class="pl-kos">]</span>
 
 <span class="pl-c">// const [a, b] = arr</span>
 <span class="pl-c">// console.log(a) // py</span>
@@ -587,7 +587,7 @@
 <li>注意解构的变量名不要和外面的变量名冲突否则报错</li>
 <li>对象中找不到与变量名一致的属性时变量值为 <code class="notranslate">undefined</code></li>
 </ul>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
 <span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
@@ -603,7 +603,7 @@
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">uname</span><span class="pl-kos">)</span> <span class="pl-c">// wq</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-c">// 18</span></pre></div>
 <p>对数组对象进行对象解构:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个数组对象</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个数组对象</span>
 <span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span>
     <span class="pl-kos">{</span>
         <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
@@ -616,7 +616,7 @@
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">)</span> <span class="pl-c">// wq</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-c">// 18</span></pre></div>
 <p>多级对象解构:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
 <span class="pl-k">const</span> <span class="pl-s1">lang</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">msg</span>: <span class="pl-s">'Hello world!'</span><span class="pl-kos">,</span>
     <span class="pl-c1">h5</span>: <span class="pl-kos">{</span>
@@ -633,7 +633,7 @@
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">style</span><span class="pl-kos">)</span> <span class="pl-c">// css</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">action</span><span class="pl-kos">)</span> <span class="pl-c">// js</span></pre></div>
 <p>可以根据自己的实际需要进行对象解构:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
 <span class="pl-k">const</span> <span class="pl-s1">lang</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">msg</span>: <span class="pl-s">'Hello world!'</span><span class="pl-kos">,</span>
     <span class="pl-c1">h5</span>: <span class="pl-kos">{</span>
@@ -651,7 +651,7 @@
 <ul>
 <li>
 <p>方式一: 通过字面量创建</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 通过字面量创建</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 通过字面量创建</span>
 <span class="pl-k">const</span> <span class="pl-s1">obj</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
@@ -659,7 +659,7 @@
 </li>
 <li>
 <p>方式二: new Object</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// new Object</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// new Object</span>
 <span class="pl-k">const</span> <span class="pl-s1">obj</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Object</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
@@ -671,7 +671,7 @@
 </ul>
 <h3>4.2 构造函数</h3>
 <p>构造函数 ：是一种特殊的函数，主要用来初始化对象. 可以通过构造函数来快速创建多个类似的对象. 类似于 Python 通过类的实例化创建对象. 构造函数在技术上是常规函数</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">Person</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">Person</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">=</span> <span class="pl-s1">name</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-s1">age</span>
 <span class="pl-kos">}</span>
@@ -722,7 +722,7 @@
 </ul>
 </details>
 <h3>4.4 内置构造函数</h3>
-<div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">flowchart</span> <span class="pl-c1">LR</span>
+<span class="in-code-lang">mermaid</span><div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">flowchart</span> <span class="pl-c1">LR</span>
     <span class="pl-ent">A</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>JavaScript的6中主要基本数据类型<span class="pl-pds"><span class="pl-sg">]</span></span></span> <span class="pl-k">--&gt;</span>  <span class="pl-ent">B</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>基本数据类型/包装类型<span class="pl-pds"><span class="pl-sg">]</span></span></span>
     <span class="pl-ent">A</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">C</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>引用类型/对象<span class="pl-pds"><span class="pl-sg">]</span></span></span>
     <span class="pl-ent">B</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">D</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>字符串String<span class="pl-pds"><span class="pl-sg">]</span></span></span>
@@ -734,7 +734,7 @@
 <p>字符串、数值、布尔、等基本类型也都有专门的构造函数，这些我们称为包装类型。JS中几乎所有的数据都可以基于构成函数创建。</p>
 <h4>4.4.1 对象Object</h4>
 <p><code class="notranslate">Object</code> 是内置的构造函数，用于创建普通对象。 推荐使用字面量方式声明对象，而不是 Object 构造函数</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用构造函数创建对象</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用构造函数创建对象</span>
 <span class="pl-c">// const user = new Object({</span>
 <span class="pl-c">//     name: 'wq',</span>
 <span class="pl-c">//     age: 18</span>
@@ -746,7 +746,7 @@
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
 <span class="pl-kos">}</span></pre></div>
 <p>不使用对象的静态方法时, 要想要遍历对象的值需要使用 <code class="notranslate">for (in)</code> 语句</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
 <span class="pl-kos">}</span>
@@ -760,7 +760,7 @@
 <ul>
 <li>
 <p><code class="notranslate">Object.keys()</code> 传入对象,获取对象的全部属性,返回属性列表, 类似于Python字典的 <code class="notranslate">.keys()</code> 方法,只不过Python字典的 <code class="notranslate">.keys()</code>方法只用于遍历</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
 <span class="pl-kos">}</span>
@@ -770,7 +770,7 @@
 </li>
 <li>
 <p><code class="notranslate">Object.values()</code> 传入对象,获取对象的全部属性值,返回属性值列表, 类似于Python字典的 <code class="notranslate">.values()</code> 方法</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
 <span class="pl-kos">}</span>
@@ -780,14 +780,14 @@
 </li>
 <li>
 <p><code class="notranslate">Object.assign(obj1, obj2)</code> 将obj2拷贝到obj1, 常用于对象添加属性</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span><span class="pl-kos">}</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span><span class="pl-kos">}</span>
 <span class="pl-k">const</span> <span class="pl-s1">obj2</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
 <span class="pl-kos">}</span>
 <span class="pl-v">Object</span><span class="pl-kos">.</span><span class="pl-en">assign</span><span class="pl-kos">(</span><span class="pl-s1">obj1</span><span class="pl-kos">,</span> <span class="pl-s1">obj2</span><span class="pl-kos">)</span>  
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">obj1</span><span class="pl-kos">)</span> <span class="pl-c">// {name: 'wq', age: 18}  </span></pre></div>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
 <span class="pl-kos">}</span>
@@ -797,7 +797,7 @@
 </ul>
 <h4>4.4.2 数组Array</h4>
 <p><code class="notranslate">Array</code> 是内置的构造函数，用于创建数组. 创建数组建议使用字面量创建，不用 Array构造函数创建</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用构造函数创建数组</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用构造函数创建数组</span>
 <span class="pl-c">// const arr = new Array(1, 2, 3) // 不需要方括号</span>
 <span class="pl-c">// console.log(arr) // [1, 2, 3]</span>
 
@@ -809,7 +809,7 @@
 <p><code class="notranslate">.forEach()</code> 遍历数组, 无返回值</p>
 <p><code class="notranslate">.forEach()</code> 方法用于调用数组的每个元素，并将元素传递给回调函数. 这个方法没有返回值,它的作用就是遍历数组, 类似于python的<code class="notranslate">enumerate()</code>函数</p>
 <p>语法:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">forEach</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">forEach</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-c">// 函数体</span>
 <span class="pl-kos">}</span><span class="pl-kos">)</span>
 
@@ -834,7 +834,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <p><code class="notranslate">.filter()</code> 过滤数组, 筛选数组元素,返回新数组</p>
 <p><code class="notranslate">.filter()</code> 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组</p>
 <p>语法:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
     <span class="pl-k">return</span> <span class="pl-s1">筛选条件</span>
 <span class="pl-kos">}</span><span class="pl-kos">)</span>
 
@@ -843,7 +843,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
     <span class="pl-k">return</span> <span class="pl-s1">筛选条件</span>
 <span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
 <p>返回值：返回数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组. 因为返回新数组，所以不会影响原数组</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">51</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">,</span> <span class="pl-c1">15</span><span class="pl-kos">,</span> <span class="pl-c1">37</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">51</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">,</span> <span class="pl-c1">15</span><span class="pl-kos">,</span> <span class="pl-c1">37</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">]</span>
 
 <span class="pl-k">const</span> <span class="pl-s1">newArr</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
     <span class="pl-k">return</span> <span class="pl-s1">item</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">20</span>
@@ -854,7 +854,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <p><code class="notranslate">.map()</code> 迭代数组</p>
 <p>数组的 <code class="notranslate">.map(function (item, index) {})</code> 方法, 类似于python列表推导式,可以用于产生新数组. 也类似于python列表遍历的 <code class="notranslate">enumerate()</code> 函数,可以同时遍历数组的元素和下标(但是这种遍历方法不推荐使用,因为 <code class="notranslate">.map()</code> 方法是用来产生新元组的).</p>
 <p>语法:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
 <span class="pl-k">const</span> <span class="pl-s1">newArr</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">map</span><span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-c">// 遍历数组,依次输出数组元素和下标</span>
     <span class="pl-k">return</span> <span class="pl-s1">item</span> <span class="pl-c1">+</span> <span class="pl-s">'语言'</span>
@@ -869,7 +869,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 - 如果没有起始值， 则累计值以数组的第一个数组元素作为起始值开始累计<br>
 - 后面每次遍历就会用后面的数组元素 累计到 累计值 里面 （类似求和里面的 sum ）<br>
 - 有起始值最后的求和结果相当于没有起始值时的结果加上起始值</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">]</span>
 
 <span class="pl-c">// 无起始值</span>
 <span class="pl-c">// const total = arr.reduce(function(prev, current){</span>
@@ -886,7 +886,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <li>
 <p><code class="notranslate">.join()</code> 将数组元素拼接为字符串,返回字符串</p>
 <p>数组的 <code class="notranslate">.join()</code>  可以用来将数组中的元素拼接为一个字符串, 类似于python中的 <code class="notranslate">','.join(list)</code> 方法,只不过js中的 <code class="notranslate">.join()</code> 不传参时,相当于传入了默认值 <code class="notranslate">','</code></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
 <span class="pl-k">const</span> <span class="pl-s1">newArr1</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">join</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr1</span><span class="pl-kos">)</span> <span class="pl-c">// py,js,html,css</span>
 <span class="pl-k">const</span> <span class="pl-s1">newArr2</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">join</span><span class="pl-kos">(</span><span class="pl-s">''</span><span class="pl-kos">)</span>
@@ -894,7 +894,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </li>
 <li>
 <p><code class="notranslate">.find()</code> 查找元素,符合测试条件的第一个数组元素值，如果没有符合条件的则返回 <code class="notranslate">undefined</code></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span>
     <span class="pl-kos">{</span>
         <span class="pl-c1">lang</span>: <span class="pl-s">'python'</span><span class="pl-kos">,</span>
         <span class="pl-c1">suffix</span>: <span class="pl-s">'py'</span>
@@ -943,7 +943,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </li>
 <li>
 <p><code class="notranslate">.split('分隔符')</code> 用来将字符串拆分成数组, 和数组的<code class="notranslate">.join()</code>功能相反</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 将字符串拆分为数组</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 将字符串拆分为数组</span>
 <span class="pl-k">const</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">'js,html,css'</span>
 <span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">split</span><span class="pl-kos">(</span><span class="pl-s">','</span><span class="pl-kos">)</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// ['js', 'html', 'css']</span>
@@ -953,7 +953,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </li>
 <li>
 <p><code class="notranslate">.substring(开始下标[,结束下标])</code> 用于字符串截取,类似于python字符串的切片</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello world!'</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello world!'</span>
 <span class="pl-k">const</span> <span class="pl-s1">newStr</span> <span class="pl-c1">=</span> <span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">substring</span><span class="pl-kos">(</span><span class="pl-c1">3</span><span class="pl-kos">)</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newStr</span><span class="pl-kos">)</span> <span class="pl-c">// lo world!</span></pre></div>
 </li>
@@ -985,7 +985,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <h4>4.4.4 数组Number</h4>
 <p><code class="notranslate">Number</code> 是内置的构造函数，用于创建数值</p>
 <p>常用方法： <code class="notranslate">toFixed()</code> 设置保留小数位的长度,四舍五入</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">num</span> <span class="pl-c1">=</span> <span class="pl-c1">3.1415</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">num</span> <span class="pl-c1">=</span> <span class="pl-c1">3.1415</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">num</span><span class="pl-kos">.</span><span class="pl-en">toFixed</span><span class="pl-kos">(</span><span class="pl-c1">3</span><span class="pl-kos">)</span><span class="pl-kos">)</span> <span class="pl-c">// 3.142</span></pre></div>
 <h2>五、面向对象(OOP)</h2>
 <p>前端语言主要使用面向过程(函数式编程)</p>
@@ -1016,7 +1016,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <li>构造函数实例创建的对象彼此独立、互不影响</li>
 </ul>
 </details>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">=</span> <span class="pl-s1">name</span><span class="pl-kos">,</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-s1">age</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-en">sayHi</span> <span class="pl-c1">=</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
@@ -1033,7 +1033,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <p>通过原型可以解决前面构造函数造成的内存浪费.</p>
 <p>构造函数通过原型分配的函数是所有对象所 共享的。 JavaScript 规定，每一个构造函数都有一个 prototype 属性，指向另一个对象，所以我们也称为原型对象.  这个对象可以挂载函数，对象实例化不会多次创建原型上函数，节约内存. 我们可以把那些不变的方法，直接定义在 prototype 对象上，这样所有对象的实例就可以共享这些方法。 构造函数和原型对象中的this 都指向 实例化的对象</p>
 <p>使用原型改进前面的构造函数:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">=</span> <span class="pl-s1">name</span><span class="pl-kos">,</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-s1">age</span>
 <span class="pl-kos">}</span>
@@ -1048,7 +1048,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <h4>5.3.2 constructor 属性</h4>
 <p>每个原型对象里面都有个<code class="notranslate">constructor</code> 属性（<code class="notranslate">constructor</code> 构造函数）. 作用：该属性指向该原型对象的构造函数</p>
 <p>使用场景：如果有多个对象的方法，我们可以给原型对象采取对象形式赋值.但是这样就会覆盖构造函数原型对象原来的内容，这样修改后的原型对象 <code class="notranslate">constructor</code> 就不再指向当前构造函数了.此时，我们可以在修改后的原型对象中，添加一个 <code class="notranslate">constructor</code> 指向原来的构造函数。</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span><span class="pl-kos">}</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span><span class="pl-kos">}</span>
 
 <span class="pl-c">// 为User构造函数添加方法</span>
 
@@ -1093,7 +1093,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </details>
 <h4>5.3.4 原型继承</h4>
 <p>继承是面向对象编程的另一个特征，通过继承进一步提升代码封装的程度，JavaScript 中大多是借助原型对象实现继承的特性。</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">Dog</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">Dog</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">eyes</span> <span class="pl-c1">=</span> <span class="pl-c1">2</span>
     <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">ears</span> <span class="pl-c1">=</span> <span class="pl-c1">2</span>
 <span class="pl-kos">}</span>
@@ -1121,7 +1121,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </details>
 <h2>六、技巧</h2>
 <h3>6.1 拷贝</h3>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">10</span>
 <span class="pl-kos">}</span>
@@ -1148,7 +1148,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </ul>
 </li>
 </ul>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">10</span>
 <span class="pl-kos">}</span>
@@ -1164,7 +1164,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <span class="pl-c">// 修改obj2,不影响obj1</span>
 <span class="pl-s1">obj2</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-c1">20</span>
 <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">obj1</span><span class="pl-kos">,</span> <span class="pl-s1">obj2</span><span class="pl-kos">)</span> <span class="pl-c">// {name: 'wq', age: 10} {name: 'wq', age: 20}</span></pre></div>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr1</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">]</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr1</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">]</span>
 
 <span class="pl-c">// 使用展开运算符浅拷贝</span>
 <span class="pl-c">// const arr2 = [...arr1]</span>
@@ -1199,7 +1199,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <details>
 <summary>递归</summary>
 <p>如果一个函数在内部可以调用其本身，那么这个函数就是递归函数. 简单理解:函数内部自己调用自己, 这个函数就是递归函数, 递归函数的作用和循环效果类似, 由于递归很容易发生“栈溢出”错误（stack overflow），所以必须要加退出条件 <code class="notranslate">return</code>, 此时的 <code class="notranslate">return</code> 类似于 循环中的 <code class="notranslate">break</code></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
 <span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">i</span><span class="pl-kos">)</span>
     <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">i</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">3</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
@@ -1213,7 +1213,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 </details>
 <details>
 <summary>通过JSON实现深拷贝</summary>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
     <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
     <span class="pl-c1">age</span>: <span class="pl-c1">18</span><span class="pl-kos">,</span>
     <span class="pl-c1">hobby</span>: <span class="pl-kos">{</span>
@@ -1232,7 +1232,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <li>throw 后面跟的是错误提示信息</li>
 <li>Error 对象配合 throw 使用，能够设置更详细的错误信息</li>
 </ul>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">getSum</span><span class="pl-kos">(</span><span class="pl-s1">x</span><span class="pl-kos">,</span> <span class="pl-s1">y</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">getSum</span><span class="pl-kos">(</span><span class="pl-s1">x</span><span class="pl-kos">,</span> <span class="pl-s1">y</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">x</span> <span class="pl-c1">||</span> <span class="pl-c1">!</span><span class="pl-s1">y</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
         <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-v">Error</span><span class="pl-kos">(</span><span class="pl-s">'参数不能为空'</span><span class="pl-kos">)</span>
     <span class="pl-kos">}</span>
@@ -1251,7 +1251,7 @@ const arr = ['py', 'c', 'js', 'css']</p>
 <li><code class="notranslate">finally</code> 不管是否有错误，都会执行</li>
 </ul>
 </details>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+<span class="in-code-lang">js</span><div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
     <span class="pl-k">try</span> <span class="pl-kos">{</span>
         <span class="pl-c">// 可能发送错误的代码 要写到 try</span>
         <span class="pl-k">const</span> <span class="pl-s1">p</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'.p'</span><span class="pl-kos">)</span>
