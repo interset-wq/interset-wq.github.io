@@ -58,23 +58,7 @@
 <p>本文整理常用 Markdown / GFM 语法，每节均为「源码 → 渲染效果」对照，便于随时查阅。<br>
 GitHub 扩展语法见本页底部系列目录《GFM 扩展语法》。</p>
 </blockquote>
-<h2>一、标题</h2>
-<p><code class="notranslate">#</code> 表示标题，一共六级，<code class="notranslate">#</code> 与文字之间需有空格。</p>
-<pre lang="text" class="notranslate"><code class="notranslate"># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-</code></pre>
-<p>渲染效果：</p>
-<h1>一级标题</h1>
-<h2>二级标题</h2>
-<h3>三级标题</h3>
-<h4>四级标题</h4>
-<h5>五级标题</h5>
-<h6>六级标题</h6>
-<h2>二、段落与换行</h2>
+<h2>一、段落与换行</h2>
 <p>段落之间用一个空行分隔。段内换行有三种方式：</p>
 <pre lang="text" class="notranslate"><code class="notranslate">第一行（行尾两个空格）
 第二行
@@ -85,7 +69,7 @@ GitHub 扩展语法见本页底部系列目录《GFM 扩展语法》。</p>
 <p>第一行（行尾两个空格）<br>
 第二行</p>
 <p>或者用 <br> 标签强制换行</p>
-<h2>三、列表</h2>
+<h2>二、列表</h2>
 <h3>3.1 无序列表</h3>
 <p><code class="notranslate">-</code>、<code class="notranslate">+</code>、<code class="notranslate">*</code> 均可创建无序列表，可嵌套（子项缩进两个空格）：</p>
 <pre lang="text" class="notranslate"><code class="notranslate">- html
@@ -134,7 +118,7 @@ GitHub 扩展语法见本页底部系列目录《GFM 扩展语法》。</p>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 未完成任务</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 已完成任务</li>
 </ul>
-<h2>四、强调</h2>
+<h2>三、强调</h2>
 <pre lang="text" class="notranslate"><code class="notranslate">**粗体** 或 __粗体__
 *斜体* 或 _斜体_
 ***粗斜体***
@@ -142,7 +126,7 @@ GitHub 扩展语法见本页底部系列目录《GFM 扩展语法》。</p>
 行内`代码`用反引号
 </code></pre>
 <p>渲染效果：<strong>粗体</strong>、<em>斜体</em>、<em><strong>粗斜体</strong></em>、<del>删除线</del>、行内<code class="notranslate">代码</code>用反引号</p>
-<h2>五、引用</h2>
+<h2>四、引用</h2>
 <p><code class="notranslate">&gt;</code> 创建引用，可嵌套、可包含其他元素：</p>
 <pre lang="text" class="notranslate"><code class="notranslate">&gt; 一级引用
 &gt; &gt; 嵌套二级引用
@@ -158,7 +142,7 @@ GitHub 扩展语法见本页底部系列目录《GFM 扩展语法》。</p>
 <li>引用里的列表</li>
 </ul>
 </blockquote>
-<h2>六、代码块</h2>
+<h2>五、代码块</h2>
 <p>三个反引号包裹，标注语言获得语法高亮：</p>
 <pre lang="text" class="notranslate"><code class="notranslate">``` python
 def greet(name):
@@ -169,18 +153,18 @@ def greet(name):
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">greet</span>(<span class="pl-s1">name</span>):
     <span class="pl-k">return</span> <span class="pl-s">f"Hello, <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">name</span><span class="pl-kos">}</span></span>!"</span></pre></div>
 <p>行内代码用单个反引号：<code class="notranslate">pip install internote</code>。</p>
-<h2>七、链接</h2>
+<h2>六、链接</h2>
 <pre lang="text" class="notranslate"><code class="notranslate">[内联链接](https://github.com)
 带标题的链接：[GitHub](https://github.com "GitHub 首页")
 自动链接：&lt;https://github.com&gt;
 </code></pre>
 <p>渲染效果：<a href="https://github.com">内联链接</a>、<a href="https://github.com" title="GitHub 首页">GitHub</a>、<a href="https://github.com">https://github.com</a></p>
-<h2>八、图片</h2>
+<h2>七、图片</h2>
 <pre lang="text" class="notranslate"><code class="notranslate">![图片描述](图片地址)
 </code></pre>
 <p>渲染效果（GitHub logo）：</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/617169e529ae1e4322baf6482579a23d41dc82661c1d47845c0e90bfe2085ed9/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f6c6f676f735f706167652f4769744875622d4d61726b2e706e67"><img src="https://camo.githubusercontent.com/617169e529ae1e4322baf6482579a23d41dc82661c1d47845c0e90bfe2085ed9/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f6c6f676f735f706167652f4769744875622d4d61726b2e706e67" alt="GitHub" data-canonical-src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="max-width: 100%;"></a></p>
-<h2>九、表格</h2>
+<h2>八、表格</h2>
 <p><code class="notranslate">|</code> 分列、<code class="notranslate">---</code> 分隔行，冒号控制对齐：</p>
 <pre lang="text" class="notranslate"><code class="notranslate">| 左对齐 | 居中 | 右对齐 |
 | :--- | :---: | ---: |
@@ -209,7 +193,7 @@ def greet(name):
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
-<h2>十、分隔线</h2>
+<h2>九、分隔线</h2>
 <p>三个及以上的 <code class="notranslate">-</code>、<code class="notranslate">*</code> 或 <code class="notranslate">_</code>：</p>
 <pre lang="text" class="notranslate"><code class="notranslate">---
 </code></pre>
