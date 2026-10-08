@@ -20,15 +20,15 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="JavaScript 学习笔记，从基础到进阶共八章：简介与变量、数据类型与运算符、分支循环、数组、函数与作用域、对象与面向对象、解构赋值、作用域与实用技巧。">
-<meta property="og:title" content="JavaScript 学习笔记">
-<meta property="og:description" content="JavaScript 学习笔记，从基础到进阶共八章：简介与变量、数据类型与运算符、分支循环、数组、函数与作用域、对象与面向对象、解构赋值、作用域与实用技巧。">
+  <meta name="description" content="My notes on everything.">
+<meta property="og:title" content="数据类型与运算符">
+<meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/80.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/80_6050835695.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>JavaScript 学习笔记</title>
+<title>数据类型与运算符</title>
   
-<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}
   <style>
     .in-progress {
       position: fixed;
@@ -45,7 +45,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">JavaScript 学习笔记</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">数据类型与运算符</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -55,9 +55,12 @@
 </button>
 </nav></header>
   <main class="in-site-main" id="content">  <article>
+    <nav class="in-series-crumb" aria-label="Series">
+      <a href="https://interset-wq.github.io/post/80.html">JavaScript 学习笔记</a>
+      <span>2 / 4</span>
+    </nav>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-05</span>
-      <span class="Label" style="background-color:#1f883d;color:#fff">更新 2026-10-08</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
       <span class="Label" style="background-color:#f1e05a;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#JavaScript">JavaScript</a>
       </span>
@@ -74,10 +77,145 @@
     </nav>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><p>JavaScript 学习笔记，从基础到进阶共八章：简介与变量、数据类型与运算符、分支循环、数组、函数与作用域、对象与面向对象、解构赋值、作用域与实用技巧。</p>
-<blockquote>
-<p>原《JavaScript基础语法》《JavaScript进阶语法》两篇合并为单一系列，按主题拆分，内容不变。</p>
-</blockquote></div>
+    <div class="in-post-body markdown-body"><ul>
+<li>基本数据类型：
+<ul>
+<li>number 数字型</li>
+<li>string 字符串型</li>
+<li>boolean 布尔型</li>
+<li>undefined 未定义型</li>
+<li>null 空类型</li>
+</ul>
+</li>
+<li>引用数据类型：
+<ul>
+<li>object 对象</li>
+</ul>
+</li>
+</ul>
+<h3>3.1 数字number</h3>
+<p>js中的数字类型类似于python中的数字类型。<code class="notranslate">NaN</code> 是js中的一个特殊的数字，它代表一个计算错误，它是一个不正确的或者一个未定义的数学操作所得到的结果，任何对 NaN 的操作都会返回 NaN</p>
+<h3>3.2 字符串string</h3>
+<p>通过单引号（'） 、双引号（"）或反引号(`) 包裹的数据都叫字符串，单引号和双引号没有本质上的区别，推荐使用单引号。字符串可以使用 + 拼接。字符串中有变量时，可以用 ${ } 包住变量，类似于python中是 f字符串</p>
+<ol>
+<li>无论单引号或是双引号必须成对使用</li>
+<li>单引号/双引号可以互相嵌套，但是不以自已嵌套自已（口诀：外双内单，或者外单内双）</li>
+<li>必要时可以使用转义符 \，输出单引号或双引号</li>
+</ol>
+<h3>3.3 布尔值boolean</h3>
+<p>表示肯定或否定时在计算机中对应的是布尔类型数据。</p>
+<p>它有两个固定的值 true 和 false，表示肯定的数据用 true（真），表示否定的数据用 false（假）。</p>
+<h3>3.4 未定义类型undefined</h3>
+<p>未定义是比较特殊的类型，只有一个值 <code class="notranslate">undefined</code></p>
+<p>只声明变量，不赋值的情况下，变量的默认值为 undefined，一般很少直接为某个变量赋值为 undefined。我们开发中经常声明一个变量，等待传送过来的数据。如果我们不知道这个数据是否传递过来，此时我们可以通过检测这个变量是不是undefined，就判断用户是否有数据传递过来。</p>
+<h3>3.5 空类型null</h3>
+<p>JavaScript 中的 null 仅仅是一个代表“无”、“空”或“值未知”的特殊值。常把 null 作为尚未创建的对象，即将来有个变量里面存放的是一个对象，但是对象还没创建好，可以先给个null</p>
+<details>
+<summary>和 undefined 区别</summary>
+<p>undefined 表示没有赋值</p>
+<p>null 表示赋值了，但是内容为空</p>
+</details>
+<h3>3.6 使用typeof判断数据类型</h3>
+<p><code class="notranslate">typeof</code> 运算符可以返回被检测的数据类型。它支持两种语法形式（用x表示变量）：</p>
+<ol>
+<li>作为运算符： <code class="notranslate">typeof x</code> （常用的写法）</li>
+<li>函数形式： <code class="notranslate">typeof(x)</code></li>
+</ol>
+<h3>3.7 类型转换</h3>
+<p><strong>隐式转换</strong><br>
+某些运算符被执行时，系统内部自动将数据类型进行转换，这种转换称为隐式转换。</p>
+<p><code class="notranslate">+</code> 号两边只要有一个是字符串，都会把另外一个转成字符串。除了+以外的算术运算符 比如 - * / 等都会把数据转成数字类型</p>
+<details>
+<summary>tip</summary>
+<ul>
+<li><code class="notranslate">+</code> 号作为正号解析可以转换成数字型</li>
+<li>任何数据和字符串相加结果都是字符串</li>
+</ul>
+</details>
+<p><strong>强制转换</strong><br>
+转换成数字类型：</p>
+<ul>
+<li>
+<p><code class="notranslate">Number(数据)</code> 转成数字类型。如果字符串内容里有非数字，转换失败时结果为 NaN，NaN也是number类型的数据，代表非数字</p>
+</li>
+<li>
+<p><code class="notranslate">parseInt(数据)</code> 只保留整数，可以以数字开头的字符串中提取整数</p>
+<p>???+ tip "将秒数转换为时分秒"<br>
+- 小时数： <code class="notranslate">h = parseInt(总秒数 / 60 / 60 % 24)</code><br>
+- 分钟数： <code class="notranslate">m = parseInt(总秒数 / 60 % 60)</code><br>
+- 秒数： <code class="notranslate">s = parseInt(总秒数 % 60)</code></p>
+</li>
+<li>
+<p><code class="notranslate">parseFloat(数据)</code> 可以保留小数，可以以数字开头的字符串中提取数字</p>
+</li>
+</ul>
+<p>转换成字符串类型：</p>
+<p><code class="notranslate">String(数据)</code><br>
+<code class="notranslate">变量.toString(进制)</code></p>
+<p>转换为布尔值：</p>
+<ul>
+<li>强制转换 <code class="notranslate">Boolean()</code> 函数 将 <code class="notranslate">''</code>, <code class="notranslate">0</code>, <code class="notranslate">undefined</code>, <code class="notranslate">null</code>, <code class="notranslate">false</code>, <code class="notranslate">NaN</code> 转换为false</li>
+<li>进行数学加减法运算时 <code class="notranslate">''</code>, <code class="notranslate">null</code>, <code class="notranslate">false</code> 会转换为数字0</li>
+</ul>
+<h2>运算符</h2>
+<details>
+<summary>优先级</summary>
+<ol>
+<li>小括号 <code class="notranslate">()</code></li>
+<li>一元运算符 自增 <code class="notranslate">++</code>，自减 <code class="notranslate">--</code>，逻辑非 <code class="notranslate">!</code></li>
+<li>算术运算符 按照数学运算顺序</li>
+<li>关系运算符 <code class="notranslate">&gt;</code>, <code class="notranslate">&gt;=</code>, <code class="notranslate">&lt;</code>, <code class="notranslate">&lt;=</code></li>
+<li>相等运算符 <code class="notranslate">==</code>, <code class="notranslate">!=</code>, <code class="notranslate">===</code>, <code class="notranslate">!==</code></li>
+<li>逻辑且 <code class="notranslate">&amp;&amp;</code></li>
+<li>逻辑或 <code class="notranslate">||</code></li>
+<li>赋值运算符 <code class="notranslate">=</code></li>
+<li>逗号运算符 <code class="notranslate">,</code></li>
+</ol>
+</details>
+<p><strong>算术运算符</strong></p>
+<ul>
+<li><code class="notranslate">+</code>求和</li>
+<li><code class="notranslate">-</code>求差</li>
+<li><code class="notranslate">*</code>求积</li>
+<li><code class="notranslate">/</code>求商</li>
+<li><code class="notranslate">%</code>取模（取余数）</li>
+</ul>
+<p><strong>赋值运算符</strong></p>
+<ul>
+<li><code class="notranslate">=</code></li>
+<li><code class="notranslate">+=</code></li>
+<li><code class="notranslate">-=</code></li>
+<li><code class="notranslate">*=</code></li>
+<li><code class="notranslate">/=</code></li>
+<li><code class="notranslate">%=</code></li>
+</ul>
+<p><strong>自增自减运算符</strong><br>
+自增自减运算符可以放在变量之前，也可以放在变量之后，一般放在变量之后。</p>
+<ul>
+<li><code class="notranslate">++</code> 自增运算符</li>
+<li><code class="notranslate">--</code> 自减运算符</li>
+</ul>
+<p><strong>比较运算符</strong></p>
+<ul>
+<li><code class="notranslate">&gt;</code></li>
+<li><code class="notranslate">&lt;</code></li>
+<li><code class="notranslate">&gt;=</code></li>
+<li><code class="notranslate">&lt;=</code></li>
+<li><code class="notranslate">==</code> 值是否相等，不推荐使用</li>
+<li><code class="notranslate">!=</code> 不等于，不推荐使用</li>
+<li><code class="notranslate">===</code> 类型和值是否都相等</li>
+<li><code class="notranslate">!==</code> 左右两边是否不全等</li>
+</ul>
+<details>
+<summary>note</summary>
+<p>涉及到NaN的比较返回false</p>
+</details>
+<p><strong>逻辑运算符</strong></p>
+<ul>
+<li><code class="notranslate">&amp;&amp;</code> 且</li>
+<li><code class="notranslate">||</code> 或</li>
+<li><code class="notranslate">!</code> 非</li>
+</ul></div>
     <nav class="in-series-list" aria-label="Series">
       <h2>JavaScript 学习笔记</h2>
       <ol>
@@ -86,6 +224,10 @@
         <li><a href="https://interset-wq.github.io/post/80_6050836027.html">分支与循环语句</a></li>
         <li><a href="https://interset-wq.github.io/post/80_6050836359.html">数组 Array</a></li>
       </ol>
+    </nav>
+    <nav class="in-series-pager" aria-label="Series pages">
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/80_6050835360.html">JavaScript 简介与变量</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/80_6050836027.html">分支与循环语句</a>
     </nav>
   </article>
 <section class="in-comments-section">
