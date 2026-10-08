@@ -21,12 +21,12 @@
     })();
   </script>
   <meta name="description" content="My notes on everything.">
-<meta property="og:title" content="OOP面向对象">
+<meta property="og:title" content="运算符与数据类型">
 <meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/112_6039403493.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/112_6050754844.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>OOP面向对象</title>
+<title>运算符与数据类型</title>
   <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
   
 <style>
@@ -46,7 +46,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">OOP面向对象</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">运算符与数据类型</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -58,10 +58,10 @@
   <main class="in-site-main" id="content">  <article>
     <nav class="in-series-crumb" aria-label="Series">
       <a href="https://interset-wq.github.io/post/112.html">Python 基础语法</a>
-      <span>4 / 4</span>
+      <span>2 / 4</span>
     </nav>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-07</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
       <span class="Label" style="background-color:#3572a5;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
       </span>
@@ -78,141 +78,270 @@
     </nav>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><p>要使用tkinter进行GUI设计，就不得不用到<strong>面向对象</strong>的编程思想。Tkinter提供的小部件非常有限，而且大多数小部件的功能往往不足以完成相应的任务。在这种情况之下，就不得不使用继承来加强小部件的功能，或者创建新的小部件。</p>
-<p>面向对象编程（object-oriented programming，OOP）是最有效的软件编写方法之一，在面向对象编程中，我们可以：编写表示现实世界中事物或情景的类（class），并基于这些类来创建对象（object）。通过类的实例化来根据类创建对象，并在代码中使用类的实例（instance）对象。</p>
-<p>class关键字，类名以大写字母开头（大驼峰命名法）。 类名后面不需要加括号，但是子类后面需要加括号</p>
-<h2>一、属性</h2>
-<p>使用 <code class="notranslate">dir()</code> 函数可以查看一个对象所有的方法和属性</p>
-<h3>1.1 类属性</h3>
-<p>通俗来说，类属性就是定义在类中的变量。不需要创建实例就能直接使用，当然实例也可以使用类属性。通过类名就可以调用，可以更改属性值，还可以创建新属性。</p>
-<p>我们来创建一个 <em>Banana</em> 类：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
-    <span class="pl-s">"""一种美味的热带水果"""</span>
-    <span class="pl-s1">food_group</span> <span class="pl-c1">=</span> <span class="pl-s">'fruit'</span>
-    <span class="pl-s1">colors</span> <span class="pl-c1">=</span> [<span class="pl-s">'green'</span>, <span class="pl-s">'green-yellow'</span>, <span class="pl-s">'yellow'</span>, <span class="pl-s">'brown spotted'</span>, <span class="pl-s">'black'</span>]</pre></div>
-<p>上面代码中的 <em>food_group</em> 和 <em>colors</em> 就是类属性。它们不需要创建实例就可以使用，对二者调用 <code class="notranslate">print()</code> 函数：</p>
-<pre class="notranslate"><code class="notranslate">print(Banana.food_group) # fruit 
-print(Banana.colors) # ['green', 'green-yellow', 'yellow', 'brown spotted', 'black']
-</code></pre>
-<h3>1.2 实例属性</h3>
-<p>使用初始化方法 <code class="notranslate">__init__()</code> 创建实例属性。<code class="notranslate">self</code> 形参：它是一个指向实例本身的引用，实例的每次调用都会自动传入自身，这样使得实例能够访问类中的属性和方法，self 形参必不可少，而且必须位于其他形参的前面。</p>
-<p>所有的实例属性定义时都有 <code class="notranslate">self.</code> 的前缀，有些属性无须通过形参来定义，可以在 <code class="notranslate">__init__()</code> 方法中为其指定默认值。</p>
-<p>实例属性就是定义在构造方法（又称初始化方法，属于魔术方法的一种） <code class="notranslate">__init__()</code> 中的带有 <em>self.</em> 前缀的变量，必须创建实例之后才能使用。不创建实例通过类名调用会报错。需要先创建实例，才能调用，创建实例后，可以对属性重新赋值，还可以创建新属性。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
-    <span class="pl-c"># --snip--</span>
-    <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'green'</span>):
-        <span class="pl-s1">self</span>.<span class="pl-c1">color</span> <span class="pl-c1">=</span> <span class="pl-s1">color</span></pre></div>
-<p>此处的 <em>self.color</em> 就是实例属性，它是定义在 <code class="notranslate">__init__()</code> 方法中的一个变量。</p>
+    <div class="in-post-body markdown-body"><h2>三、运算符</h2>
+<h3>3.1 算术运算符和数学计算</h3>
 <ul>
-<li><code class="notranslate">__init__(self)</code> 方法的第一个参数必须是 <em>self</em>，用来表示实例本身</li>
-<li><em>self.color</em> 和 <em>color</em> 并不是同一个变量，而是两个不同的变量，<em>self.color</em> 是一个不可分割的整体</li>
+<li><code class="notranslate">+</code> 加</li>
+<li><code class="notranslate">-</code> 减</li>
+<li><code class="notranslate">*</code> 乘</li>
+<li><code class="notranslate">/</code>除 计算结果是浮点数</li>
+<li><code class="notranslate">//</code> 整除</li>
+<li><code class="notranslate">%</code> 取余</li>
+<li><code class="notranslate">**</code> 乘方</li>
 </ul>
-<p>为了使用 <em>self.color</em> 属性，我们需要创建实例：</p>
-<pre class="notranslate"><code class="notranslate">my_banana = Banana()
-print(my_banana.color) # green
-</code></pre>
-<h2>二、方法</h2>
-<h3>2.1 实例方法</h3>
-<p>定义在类中的函数，和 <code class="notranslate">__init__()</code> 方法一样，第一个参数必须是 <em>self</em>。需要先创建实例，才能调用。创建实例后，可以新建方法（先定义一个函数，再使用self.的方式将创建的函数名赋值给self）。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
-    <span class="pl-c"># --snip--</span>
-    <span class="pl-k">def</span> <span class="pl-en">print_color</span>(<span class="pl-s1">self</span>):
-        <span class="pl-en">print</span>(<span class="pl-s1">self</span>.<span class="pl-c1">color</span>)</pre></div>
-<p>需要创建实例才可以使用：</p>
-<pre class="notranslate"><code class="notranslate">my_banana.print_color() # green
-</code></pre>
-<h3>2.2 类方法</h3>
-<p>使用装饰器 <code class="notranslate">@classmethod</code> 修饰的方法，类方法的第一个参数必须是 <em>cls</em>，表示这个类本身。不能使用实例属性和实例方法，但是可以通过 <em>cls.</em> 来访问类属性，类似与实例属性的访问。</p>
-<p>不需要创建实例就可以调用类方法，在类中也可以通过 <code class="notranslate">self.</code> 来调用类方法，类似于实例方法在类中的调用。当然实例也可以调用类方法。</p>
-<p><code class="notranslate">cls()</code> 函数，在类方法中使用可以创建实例对象。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
-    <span class="pl-c"># --snip--</span>
-    <span class="pl-en">@<span class="pl-s1">classmethod</span></span>
-    <span class="pl-k">def</span> <span class="pl-en">check_color</span>(<span class="pl-s1">cls</span>, <span class="pl-s1">color</span>):
-        <span class="pl-k">return</span> <span class="pl-s1">color</span> <span class="pl-c1">in</span> <span class="pl-s1">cls</span>.<span class="pl-c1">colors</span></pre></div>
-<p>这个方法通过类名就可以直接调用：</p>
-<pre class="notranslate"><code class="notranslate">print(Banana.check_color('blue')) # False
-</code></pre>
-<h3>2.3 静态方法</h3>
-<p>使用装饰器<code class="notranslate">@staticmethod</code>修饰的方法，定义静态方法时，不需要传入参数 <em>self</em>或 <em>cls</em> 。静态方法类似于普通的函数。不能在静态方法中使用实例属性和实例方法。</p>
-<p>直接通过类名，就可以调用。当然也可以通过实例调用静态方法。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">Banana</span>:
-    <span class="pl-c"># --snip--</span>
-    <span class="pl-en">@<span class="pl-s1">staticmethod</span></span>
-    <span class="pl-k">def</span> <span class="pl-en">estimate_calories</span>(<span class="pl-s1">num_bananas</span>):
-        <span class="pl-k">return</span> <span class="pl-s1">num_bananas</span> <span class="pl-c1">*</span> <span class="pl-c1">105</span></pre></div>
-<p>这个方法通过类名就可以直接调用：</p>
-<pre class="notranslate"><code class="notranslate">print(Banana.estimate_calories(10)) # 1050
-</code></pre>
-<h2>三、类的三个特性</h2>
-<p>封装、多态、继承</p>
-<h3>3.1 继承</h3>
-<p>代码复用。</p>
-<p>在编写类时，并非总是要从头开始，如果要编写的类是一个已有类的特殊版本，那么我们就可以使用继承（inheritance）。被继承的类称为父类（parent class）或超类，而继承的类称为子类（child class）。子类可以继承父类的所有属性和方法，也可以定义自己的属性和方法。</p>
-<p>父类代码必须放在在子类代码的前面。需要在子类名称后添加括号，并在其中指定父类的名称，括号中指定了当前类继承的父类名称。在子类的初始化方法中， 我们使用了 super() 函数。这是一个特殊的函数，让你能够调用父类的方法，继承父类的实例属性。当父类中定义的一些方法不能满足子类的要求时，可以在子类中随时重写父类的方法：定义一个同名的方法。当调用子类生成的实例时，Python 首先会查找子类中的方法，从而忽略父类中被重写的同名方法。也可以把实例当作属性</p>
-<p>单继承 使用 <code class="notranslate">super().__init__()</code> 继承父类属性和方法</p>
-<p>多继承 使用 <code class="notranslate">父类类名.__init__ ()</code> 继承父类方法和属性</p>
-<p>在子类中重写方法 可以使用 <code class="notranslate">super()</code> 从父类继承原方法</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">class</span> <span class="pl-v">RedBanana</span>(<span class="pl-v">Banana</span>):
-    <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">color</span><span class="pl-c1">=</span><span class="pl-s">'green'</span>):
-        <span class="pl-en">super</span>().<span class="pl-c1">__init__</span>(<span class="pl-s1">color</span>)</pre></div>
-<p>通过继承 <em>RedBanana</em> 类获得了 <em>Banana</em> 类的所有属性和方法。</p>
-<h3>3.2 多态</h3>
-<p>提高程序的可扩展性。</p>
-<p>多个不同的类有同名的方法，通过创建一个参数是类的函数，这个函数中调用这些类同名的方法，可以实现多态（同一个方法，适用于不同的对象产生不同的行为）。</p>
-<h3>3.3 封装</h3>
-<p>保护程序的安全。</p>
-<h4>3.3.1 受保护成员（单下划线）</h4>
-<p>使用单下划线开头的属性和方法表示受保护的成员，只能在类的内部使用，子类可以通过继承获得受保护成员，实际上在外部也可以使用。</p>
-<h4>3.3.2 私有成员（双下划线）</h4>
-<p>使用双下划线开头的变量或方法表示私有成员，只能在类的内部使用，子类无法通过继承获得私有成员</p>
-<h4>3.3.3 魔术方法和魔术属性（首尾双下划线）</h4>
-<p>魔术方法</p>
+<p>如果参与运算的数字中有浮点数，返回的结果也一定是浮点数</p>
+<p>交互模式下，上次输出的表达式会赋给变量 <code class="notranslate">_</code></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c1">&gt;</span><span class="pl-c1">&gt;&gt;</span> <span class="pl-c1">2</span><span class="pl-c1">+</span><span class="pl-c1">3</span>
+<span class="pl-c1">5</span>
+<span class="pl-c1">&gt;</span><span class="pl-c1">&gt;&gt;</span> <span class="pl-c1">10</span> <span class="pl-c1">+</span> <span class="pl-s1">_</span>
+<span class="pl-c1">15</span></pre></div>
+<p>除了 int 和 float，Python 还支持其他数字类型，例如 Decimal 或 Fraction。Python 还内置支持 复数，后缀 j 或 J 用于表示虚数（例如 3+5j ）</p>
+<h3>3.2 赋值运算符</h3>
 <ul>
-<li>构造方法 <code class="notranslate">__init__</code></li>
-<li><code class="notranslate">__str__</code>	对实例调用 <code class="notranslate">print()</code> 函数时，返回的内容</li>
+<li><code class="notranslate">=</code> 赋值</li>
+<li><code class="notranslate">+=</code> 加法赋值运算符</li>
+<li><code class="notranslate">-=</code> 减法赋值运算符</li>
+<li><code class="notranslate">*=</code> 乘法赋值运算符</li>
+<li><code class="notranslate">/=</code> 除法赋值运算符</li>
+<li><code class="notranslate">%=</code> 取模赋值运算符</li>
+<li><code class="notranslate">**=</code> 幂赋值运算符</li>
+<li><code class="notranslate">//=</code> 取整除赋值运算符</li>
 </ul>
-<p>魔术属性</p>
+<h3>3.3 比较运算符</h3>
 <ul>
-<li>obj.__dict__属性 存储对象的属性字典</li>
-<li>obj.__class__属性 存储对象所属于的类，相当于调用了type()函数。在此基础上还可以再使用__name__属性，返类名</li>
-<li>obj.__bases__属性 存储对象父类的元组</li>
-<li>obj.__base__属性 存储对象继承的第一个父类</li>
-<li>obj.__mro__属性 存储直接或间接继承的父类的元组</li>
+<li><code class="notranslate">==</code> 判断内容是否相等，满足为True，不满足为False</li>
+<li><code class="notranslate">!=</code> 判断内容是否不相等，满足为True，不满足为False</li>
+<li><code class="notranslate">&gt;</code> 判断运算符左侧内容是否大于右侧,满足为True，不满足为False</li>
+<li><code class="notranslate">&lt;</code> 判断运算符左侧内容是否小于右侧，满足为True，不满足为False</li>
+<li><code class="notranslate">&gt;=</code> 判断运算符左侧内容是否大于等于右侧，满足为True，不满足为False</li>
+<li><code class="notranslate">&lt;=</code> 判断运算符左侧内容是否小于等于右侧，满足为True，不满足为False</li>
 </ul>
-<h2>四、类型注解</h2>
-<p>类的编写风格</p>
+<h3>3.4 逻辑运算符</h3>
 <ul>
-<li>类名中的每个单词的首字母都应大写，并且不使用下划线。这种命名规则叫做大驼峰式命名法（也称为 Pascal 命名法）。实例名和模块名都应该使用全小写，并在单词之间加上下划线（_）。 这种命名规则叫做下划线命名法（也称为 蛇形命名法）</li>
-<li>每个类定义后的第一行和模块文件的首行，都应该包含一个文档字符串，简要地描述类的功能，以帮助其他人理解我们的代码</li>
-<li>使用两个空行来分隔不同类，使用一个空行分隔类内的不同方法</li>
-<li>当使用 import 语句时，使用一个空行分隔标准库和自己的库</li>
+<li>与 <code class="notranslate">and</code></li>
+<li>或 <code class="notranslate">or</code></li>
+<li>非 <code class="notranslate">not</code></li>
 </ul>
-<p>适用类型注解可以让 <code class="notranslate">PyCharm</code> 为自定义的方法、变量等添加代码提示。</p>
-<p>类型注解在代码简单时，几乎不使用，但是当代码十分复杂时，可以使用类型注解帮助自己更好的记住自己的思路，从而提高自己的工作效率。</p>
-<h3>4.1 对类中的变量添加类型注解</h3>
-<p>写法一</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span>: <span class="pl-smi">list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
-<span class="pl-s1">my_tuple</span>: <span class="pl-smi">tuple</span> <span class="pl-c1">=</span> (<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>)</pre></div>
-<p>写法二</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">my_list</span> <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>] <span class="pl-c"># type: list</span>
-<span class="pl-s1">my_tuple</span> <span class="pl-c1">=</span> (<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>) <span class="pl-c"># type: tuple</span></pre></div>
-<p>分别对my_list和my_tuple两个变量进行了类型注解。</p>
-<h3>4.2 对类中的方法添加类型注解</h3>
-<p>例如：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-en">@<span class="pl-s1">staticmethod</span></span>
-<span class="pl-k">def</span> <span class="pl-en">estimate_calories</span>(<span class="pl-s1">num_bananas</span>: <span class="pl-smi">int</span>) <span class="pl-c1">-&gt;</span> <span class="pl-smi">int</span>:
-   <span class="pl-k">return</span> <span class="pl-s1">num_bananas</span> <span class="pl-c1">*</span> <span class="pl-c1">105</span></pre></div>
-<p>为传入的参数 <em>num_bananas</em> 和 方法的返回值添加了类型注解。</p>
-<h3>4.3 Union联合类型注解</h3>
-<p>如果一个变量中存储了不同类型的数据，那就需要使用联合类型注解，常用于字典、列表等。</p>
-<p>使用前先导入模块 <code class="notranslate">from typing import Union</code></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 旧版本Python</span>
-<span class="pl-k">from</span> <span class="pl-s1">typing</span> <span class="pl-k">import</span> <span class="pl-v">Union</span>
-<span class="pl-s1">my_list</span>: <span class="pl-s1">list</span>[<span class="pl-v">Union</span>[<span class="pl-smi">int</span>, <span class="pl-smi">str</span>]] <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-s">"hello"</span>, <span class="pl-s">"world"</span>]
-<span class="pl-c"># 新版本Python可以不导入typing</span>
-<span class="pl-s1">my_list2</span>: <span class="pl-s1">list</span>[<span class="pl-s1">int</span> <span class="pl-c1">|</span> <span class="pl-s1">str</span>] <span class="pl-c1">=</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-s">"hello"</span>, <span class="pl-s">"world"</span>]</pre></div>
-<p>因为 <em>my_list</em> 变量存储的数据同时有 <em>int</em> 和 <em>str</em>，所以需要使用联合类型注解。</p></div>
+<hr>
+<h2>四、数据类型</h2>
+<p>基本数据类型有 <code class="notranslate">整型int</code> <code class="notranslate">浮点数float</code> <code class="notranslate">布尔数bool -&gt; True/False</code> <code class="notranslate">字符串str</code> <code class="notranslate">复数complex</code> <code class="notranslate">空NoneType -&gt; None</code> <code class="notranslate">列表list</code> <code class="notranslate">集合set</code> <code class="notranslate">元组tuple</code> <code class="notranslate">字典dict</code>。整数和浮点数可以适当添加下划线让数字更易读。可以通过使用逗号分割同时为多个变量赋值。</p>
+<p>数据容器：一种可以容纳多份数据的数据类型，容纳的每一份数据称之为1个元素，每一个元素，可以是任意类型的数据，如字符串、数字、布尔等。五种数据容器分别是 <code class="notranslate">列表list</code> <code class="notranslate">集合set</code> <code class="notranslate">元组tuple</code> <code class="notranslate">字典dict</code> <code class="notranslate">字符串str</code></p>
+<h3>4.1 空类型 <code class="notranslate">&lt;class 'NoneType'&gt;</code></h3>
+<p>None是python中一个特殊的字面量，表示空，无意义。无返回值的函数返回的实际上是None，在if判断语句中None相当于False，定义变量但是暂时不想赋值时使用None当占位符，条件判断中判断是否是None，使用is关键字，而不用相等运算符 <code class="notranslate">==</code></p>
+<h3>4.2 数据容器通用操作</h3>
+<ol>
+<li>遍历 全都可以使用for循环，集合和字典不能使用while循环</li>
+<li>共有的函数
+<ul>
+<li><code class="notranslate">len()</code> 函数</li>
+<li><code class="notranslate">max()</code> 函数</li>
+<li><code class="notranslate">min()</code> 函数</li>
+<li><code class="notranslate">sorted(容器, [reverse=True])</code> 函数 排序，<code class="notranslate">reverse=True</code> 表示降序，返回一个排好序的列表</li>
+</ul>
+</li>
+</ol>
+<h3>4.3 字符串<code class="notranslate">&lt;class 'str'&gt;</code></h3>
+<p>使用单引号、双引号、三重引号包裹，可以使用 <code class="notranslate">+</code> 进行字符串的拼接，使用 <code class="notranslate">* n</code> 进行字符串的重复，<code class="notranslate">n</code> 表示重复次数</p>
+<p>三重引号用于包裹多行字符串。一个引号的写法也可以跨行，只需要在每行的末尾加入表示连接的字符 <code class="notranslate">\</code> 即可</p>
+<p>字符串是不可变对象immutable，不能单独修改字符串某个字符，只能修改整体，字符串str更像是元组tuple而不是列表list</p>
+<p>转义字符</p>
+<ul>
+<li><code class="notranslate">\n</code> 换行符</li>
+<li><code class="notranslate">\t</code> 制表符</li>
+</ul>
+<p>可以切片，也可以使用while循环或for循环遍历</p>
+<h4>4.3.1 字符串格式化</h4>
+<ul>
+<li>f字符串</li>
+<li>占位符字符串</li>
+</ul>
+<p>在不需要控制数字的精度时，采用 <em>f字符串</em> 明显比 <em>占位符字符串</em> 简单。以下重点介绍占位符字符串</p>
+<p>占位符</p>
+<ul>
+<li><code class="notranslate">%s</code> 将内容转换成字符串，放入占位位置</li>
+<li><code class="notranslate">%d</code> 将内容转换成整数，放入占位位置</li>
+<li><code class="notranslate">%f</code> 将内容转换成浮点型，放入占位位置</li>
+</ul>
+<p>用于控制精度的符号</p>
+<ul>
+<li><code class="notranslate">m</code> 控制宽度，要求是数字（很少使用），设置的宽度小于数字自身，不生效。可以在 <code class="notranslate">m</code> 前添加 <code class="notranslate">0</code> 来使用 <code class="notranslate">0</code> 来补位</li>
+<li><code class="notranslate">.n</code> 控制小数点精度，要求是数字，会进行小数的四舍五入</li>
+<li><code class="notranslate">-</code> 配合 <code class="notranslate">m</code> 使用，控制宽度不够时在右边补空格，默认在左边补空格</li>
+</ul>
+<h4>f-string 格式控制</h4>
+<p>基本语法 <code class="notranslate">f"{变量名:格式控制标记}"</code></p>
+<p>格式控制标记 <code class="notranslate">&lt;填充字符&gt;&lt;对齐方式&gt;&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;</code></p>
+<ul>
+<li>填充字符 默认是空格，只能是单个字符，需要配合 <code class="notranslate">宽度</code> 使用</li>
+<li>对齐方式 需要配合<code class="notranslate">宽度</code>使用：
+<ul>
+<li><code class="notranslate">^</code> 居中</li>
+<li><code class="notranslate">&gt;</code> 右对齐</li>
+<li><code class="notranslate">&lt;</code> 左对齐</li>
+</ul>
+</li>
+<li>宽度 整数，表示这个字符串的长度</li>
+<li><code class="notranslate">,</code> 千位分隔符</li>
+</ul>
+<h4>4.3.2 字符串操作</h4>
+<p>常用函数和方法</p>
+<ul>
+<li><code class="notranslate">replace(str1,str2)</code> 方法 将字符串内的全部：str1，替换为str2。不改变原字符串</li>
+<li><code class="notranslate">split(分隔str)</code> 方法 以分隔str为分隔符，将原字符串拆分，返回一个列表。不改变原字符串</li>
+<li><code class="notranslate">strip()</code> 方法 删除字符串前后的空白字符,传入参数时，删除参数字符串中的字母，比如传入'ab'，删除的是字符串前后的字母a和字母b
+<ul>
+<li><code class="notranslate">rstrip()</code> 方法</li>
+<li><code class="notranslate">lstrip()</code> 方法</li>
+</ul>
+</li>
+<li><code class="notranslate">upper()</code>方法 将字符串所以字母转换为大写</li>
+<li><code class="notranslate">lower()</code>方法 将字符串所有字母转换为小写</li>
+<li><code class="notranslate">title()</code>方法 单词首字母大写</li>
+<li><code class="notranslate">removeprefix()</code>方法 删除前缀，需要传入需要删除的前缀</li>
+</ul>
+<p>字符串特点</p>
+<ul>
+<li>只可以存储字符串</li>
+<li>长度任意（取决于内存大小）</li>
+<li>支持下标索引</li>
+<li>允许重复字符串存在</li>
+<li>不可以修改（增加或删除元素等）</li>
+<li>支持for循环</li>
+</ul>
+<h3>4.4 列表 <code class="notranslate">&lt;class 'list'&gt;</code></h3>
+<p>使用方括号 <code class="notranslate">[]</code> 包裹，元素之间使用逗号分隔，列表中的数据可以是不同的数据类型，有顺序，使用下标获取元素。正向下标从 <code class="notranslate">0</code> 开始，反向下标从 <code class="notranslate">-1</code> 开始，列表命名时建议使用名词复数形式</p>
+<p>可以使用for循环或while循环遍历</p>
+<p>列表和字符串一样，也可以进行加法运算和乘法运算，列表是可变对象mutable</p>
+<h4>操作列表</h4>
+<ul>
+<li><code class="notranslate">index(元素)</code> 方法 返回查询元素的下标（正向下标）</li>
+<li><code class="notranslate">列表名[下标] = 新值</code> 更改元素的值</li>
+<li><code class="notranslate">insert(下标，值)</code> 方法 在指定位置插入元素</li>
+<li><code class="notranslate">append(值)</code> 方法 在列表末尾追加元素</li>
+<li><code class="notranslate">extend(数据容器)</code> 方法 将其它数据容器的内容取出，依次追加到列表尾部</li>
+<li><code class="notranslate">pop(下标)</code> 方法 删除元素，不传入参数时删除末尾的元素，返回删除的元素</li>
+<li><code class="notranslate">remove(元素)</code> 方法 删除某元素在列表中的第一个匹配项，根据值删除元素，可以与while循环配合使用删除所有匹配项</li>
+<li><code class="notranslate">clear()</code> 方法 将列表转换为空列表 <code class="notranslate">[]</code></li>
+<li><code class="notranslate">count(元素)</code> 方法 统计某元素在列表中出现次数</li>
+<li><code class="notranslate">sort()</code>方法 正序排列，传入<code class="notranslate">reverse=True</code>时倒序排列（按照数字或字母顺序）</li>
+<li><code class="notranslate">reverse()</code>方法 倒置，将原顺序倒置</li>
+<li><code class="notranslate">del 列表名[下标]</code> 删除元素</li>
+<li><code class="notranslate">len()</code> 函数 返回列表长度</li>
+<li><code class="notranslate">sorted()</code>函数 正序排列，传入参数reverse=True时倒序排列</li>
+<li><code class="notranslate">max(lst)</code>函数 取列表中的最大值</li>
+<li><code class="notranslate">min(lst)</code>函数 取列表中的最小值</li>
+<li><code class="notranslate">sum(lst)</code>函数 计算列表元素之和</li>
+<li><code class="notranslate">zip(lst1, lst2)</code>函数 同时遍历多个列表</li>
+<li><code class="notranslate">enumerate(lst, start)</code> 函数 同时遍历列表下标和元素，可选参数 <code class="notranslate">start</code> 表示列表下标开始值，默认0</li>
+<li>列表推导式</li>
+</ul>
+<h4>列表特点</h4>
+<ul>
+<li>可以容纳多个元素</li>
+<li>可以容纳不同类型的元素（混装）</li>
+<li>数据是有序存储的（有下标序号）</li>
+<li>允许重复数据存在</li>
+<li>可以修改（增加或删除元素等）</li>
+</ul>
+<h4>切片</h4>
+<p>序列是指：内容连续、有序，可使用下标索引的一类数据容器，列表、元组、字符串，均可以可以视为序列。序列的典型特征就是：有序并可用下标索引，字符串、元组、列表均满足这个要求</p>
+<p>切片实际上是浅拷贝</p>
+<p>通过类似于切片的写法，列表可以一次性修改多个元素的值</p>
+<p>语法：<code class="notranslate">序列[起始下标: 结束下标: 步长]</code> 左闭右开区间</p>
+<ul>
+<li>起始可以省略，省略从头开始</li>
+<li>结束可以省略，省略到尾结束</li>
+<li>步长可以省略，省略步长为1（可以为负数，表示倒序执行）</li>
+<li>使用切片创建列表副本	<code class="notranslate">序列[:]</code></li>
+</ul>
+<h3>4.5 元组 <code class="notranslate">&lt;class 'tuple'&gt;</code></h3>
+<p>使用小括号包裹，元素之间使用逗号分隔，单元素元组需要在元素后添加逗号。元组相当于不可修改的列表，元组中的数据可以是不同的数据类型</p>
+<p>可以切片，可以使用while循环或for循环遍历</p>
+<p>常用函数和方法</p>
+<ul>
+<li>len()函数</li>
+<li>index(元素)方法</li>
+<li>count(元素)方法</li>
+</ul>
+<p>元组特点</p>
+<ul>
+<li>不可以修改元组的内容，否则会直接报错</li>
+<li>可以修改元组内嵌套的list的内容（修改元素、增加、删除、反转等）但是不可以替换list为其它list或其它类型</li>
+<li>可以容纳多个数据</li>
+<li>可以容纳不同类型的数据（混装）</li>
+<li>数据是有序存储的（下标索引）</li>
+<li>允许重复数据存在</li>
+<li>支持for循环</li>
+</ul>
+<h3>4.6 集合 <code class="notranslate">&lt;class 'set'&gt;</code></h3>
+<p>使用花括号 <code class="notranslate">{}</code> 包裹，元素使用逗号分隔。元素无序，互不相同，没有下标索引。</p>
+<p>只能使用for循环，不能使用while循环遍历。</p>
+<p>常用函数和方法</p>
+<ul>
+<li><code class="notranslate">add(元素)</code> 方法 添加元素，会导致集合本身遭到修改</li>
+<li><code class="notranslate">remove(元素)</code> 方法 移除元素，会导致集合本身遭到修改</li>
+<li><code class="notranslate">pop()</code> 方法 从集合中随机取出一个元素，会导致集合本身遭到修改</li>
+<li><code class="notranslate">clear()</code> 方法 清空集合，返回空集 <code class="notranslate">set()</code>,会导致集合本身遭到修改变为 <code class="notranslate">set()</code></li>
+<li><code class="notranslate">集合1.difference(集合2)</code> 方法 取出集合1和集合2的差集（集合1有而集合2没有的），得到一个新集合，不改变原来的两个集合</li>
+<li><code class="notranslate">集合1.difference_update(集合2)</code> 方法 消除2个集合的差集，对比集合1和集合2，在集合1内，删除和集合2相同的元素。会导致集合1被修改，集合2不变</li>
+<li><code class="notranslate">集合1.union(集合2)</code> 方法 得到两个集合的并集，不改变原来两个集合</li>
+<li><code class="notranslate">len()</code> 函数</li>
+</ul>
+<p>集合特点</p>
+<ul>
+<li>可以容纳多个数据</li>
+<li>可以容纳不同类型的数据（混装）</li>
+<li>数据是无序存储的（不支持下标索引）</li>
+<li>不允许重复数据存在</li>
+<li>可以修改（增加或删除元素等）</li>
+<li>支持for循环</li>
+</ul>
+<h3>4.7 字典dict</h3>
+<p>通过键获取值，使用花括号包裹，键值对使用逗号分隔，键和值使用冒号连接。</p>
+<p>常用操作</p>
+<ul>
+<li>新增元素 <code class="notranslate">字典名[Key] = Value</code></li>
+<li>更新元素 <code class="notranslate">字典名[Key] = Value</code> 对已存在的键使用</li>
+<li>删除元素 <code class="notranslate">pop(Key)</code> 方法 字典被修改，指定Key的键值对被删除，返回键对应的值value</li>
+<li>清空字典 <code class="notranslate">clear()</code> 方法 字典被修改为空字典{}，元素被清空</li>
+<li>字典长度 <code class="notranslate">len()</code>函数</li>
+<li>删除字典中的键值对：使用 del 语句将指定字典名中要删除的键相应的键值对彻底删除。例如 使用 <code class="notranslate">del mydict['name']</code> 删除mydict字典中的name对应的键值对</li>
+<li><code class="notranslate">get()</code> 方法
+<ul>
+<li>用来访问字典某个键对应的值，如果键不存在，返回默认值或<code class="notranslate">None</code></li>
+<li><code class="notranslate">my_dict.get(key, [default])</code>：根据键获取值，默认值 <code class="notranslate">default</code> 实参是可选的</li>
+</ul>
+</li>
+<li><code class="notranslate">items()</code>方法 用于同时遍历字典的键和值</li>
+</ul>
+<p>代码</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">languages</span> <span class="pl-c1">=</span> {<span class="pl-s">'python'</span>: <span class="pl-s">'py'</span>, <span class="pl-s">'javascript'</span>: <span class="pl-s">'js'</span>, <span class="pl-s">'c++'</span>: <span class="pl-s">'cpp'</span>}
+<span class="pl-k">for</span> <span class="pl-s1">lang</span>, <span class="pl-s1">extension</span> <span class="pl-c1">in</span> <span class="pl-s1">languages</span>.<span class="pl-c1">items</span>():
+    <span class="pl-en">print</span>(<span class="pl-s">f'<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">lang</span><span class="pl-kos">}</span></span>语言的文件后缀名是<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">extension</span><span class="pl-kos">}</span></span>'</span>)</pre></div>
+<p>输出结果</p>
+<pre class="notranslate"><code class="notranslate">python语言的文件后缀名是py
+javascript语言的文件后缀名是js
+c++语言的文件后缀名是cpp
+</code></pre>
+<ul>
+<li><code class="notranslate">keys()</code>方法	返回键的列表，一般用于遍历所有键，直接使用字典名遍历，默认是遍历字典的键的列表</li>
+<li><code class="notranslate">values()</code>方法，返回值的列表，一般用于遍历所有的值</li>
+<li><em>字典推导式</em> 能明显简化代码</li>
+</ul>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">langs</span> <span class="pl-c1">=</span> [<span class="pl-s">'python'</span>, <span class="pl-s">'javascripts'</span>, <span class="pl-s">'c++'</span>]
+<span class="pl-s1">extensions</span> <span class="pl-c1">=</span> [<span class="pl-s">'py'</span>, <span class="pl-s">'js'</span>, <span class="pl-s">'cpp'</span>]
+<span class="pl-s1">languages</span> <span class="pl-c1">=</span> {<span class="pl-s1">lang</span>: <span class="pl-s1">extension</span> <span class="pl-k">for</span> <span class="pl-s1">lang</span>, <span class="pl-s1">extension</span> <span class="pl-c1">in</span> <span class="pl-en">zip</span>(<span class="pl-s1">langs</span>, <span class="pl-s1">extensions</span>)}
+<span class="pl-en">print</span>(<span class="pl-s1">languages</span>) <span class="pl-c"># 输出结果 {'python': 'py', 'javascripts': 'js', 'c++': 'cpp'}</span></pre></div>
+<details>
+<summary>字典特点</summary>
+- 可以容纳多个数据
+- 可以容纳不同类型的数据
+- 每一份数据是KeyValue键值对
+- 可以通过Key获取到Value，Key不可重复（重复会覆盖）
+- 不支持下标索引
+- 可以修改（增加或删除更新元素等）
+- 支持for循环，不支持while循环
+</details></div>
     <nav class="in-series-list" aria-label="Series">
       <h2>Python 基础语法</h2>
       <ol>
@@ -223,7 +352,8 @@ print(my_banana.color) # green
       </ol>
     </nav>
     <nav class="in-series-pager" aria-label="Series pages">
-      <a class="in-series-prev" href="https://interset-wq.github.io/post/112_6050755210.html">判断、循环与函数</a>
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/112_6050754399.html">注释、变量与内置函数</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/112_6050755210.html">判断、循环与函数</a>
     </nav>
   </article>
 <section class="in-comments-section">
