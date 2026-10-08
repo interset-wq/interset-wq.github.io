@@ -846,9 +846,23 @@ a:hover { text-decoration: underline; }
   margin-bottom: 24px;
 }
 
-.in-series-list h2 {
-  margin: 0 0 8px;
+/* series listings are <details> elements: the top copy starts collapsed,
+   the bottom copy starts open (post.j2.html) */
+.in-series-list summary {
+  margin: 0;
   font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  /* GitHub-style blue marker */
+  list-style: revert;
+}
+
+.in-series-list summary:hover {
+  color: var(--in-color-accent, #0969da);
+}
+
+.in-series-list[open] summary {
+  margin-bottom: 8px;
 }
 
 .in-series-list ol {
@@ -926,29 +940,6 @@ a:hover { text-decoration: underline; }
 
 .in-code-block pre {
   margin: 0;
-}
-
-/* Mermaid: the client-rendered diagram replaces the highlighted source
-   block (plugins/mermaid.js). SVG scales with the column like images. */
-.in-mermaid {
-  margin: 16px 0;
-  overflow-x: auto;
-  text-align: center;
-}
-
-.in-mermaid svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/* When rendering fails (offline CDN, bad syntax) the plugin keeps the
-   highlighted source block; mark it so readers know it is a fallback. */
-.in-mermaid-failed::after {
-  content: '图表渲染失败，以下为源码';
-  display: block;
-  margin-top: 6px;
-  font-size: 12px;
-  color: var(--in-color-muted);
 }
 
 .in-code-block:hover {

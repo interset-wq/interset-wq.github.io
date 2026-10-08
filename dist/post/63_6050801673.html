@@ -67,8 +67,8 @@
       </span>
       <a class="in-post-edit" href="https://github.com/interset-wq/blog/issues/63" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
     </div>
-    <nav class="in-series-list" aria-label="Series">
-      <h2>PowerShell 学习笔记</h2>
+    <details class="in-series-list" aria-label="Series">
+      <summary>PowerShell 学习笔记</summary>
       <ol>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050798644.html">DAY 1 背景介绍</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050799004.html">DAY 2 初识PowerShell</a></li>
@@ -81,7 +81,7 @@
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802470.html">DAY 9 深入理解管道</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802825.html">DAY 10 格式化及如何正确使用</a></li>
       </ol>
-    </nav>
+    </details>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
     <div class="in-post-body markdown-body"><p>在 Windows 中，微软管理控制台（Microsoft Management Console，简称 MMC）是一个专门用于管理的控制台。它为 Windows 管理员提供了一个统一的、规范的管理接口和操作平台。</p>
@@ -235,8 +235,8 @@ Subsequent name resolutions may <span class="pl-k">return</span> up<span class="
 <p>微软引入了一个名称为PowerShellGet的模块，这使得从在线仓库中搜索、下载、安装、升级模块变得容易了。PowerShellGet很像Linux管理员喜爱的包管理器 RPM、YUM、apt-get等。微软甚至还维护一个在线源，称为 <a href="http://powershellgallery.com" rel="nofollow">PowerShell Gallery</a></p>
 <p>运行Register-PSRepository添加一个源的URL。<a href="http://PowerShellGallery.com" rel="nofollow">http://PowerShellGallery.com</a> 通常是默认设置，但也可以添加自用的“gallery”，并利用Register-PSRepository指向该地址。使用Find-Module在源中查找模块。你可以在名称、特定标签等列中使用通配符缩小搜索结果。找到所需的模块后，使用Install-Module下载与安装一个模块。使用Update-Module确保你的模块的副本是最新的，如果不是，下载最新版本并安装。</p>
 <hr></div>
-    <nav class="in-series-list" aria-label="Series">
-      <h2>PowerShell 学习笔记</h2>
+    <details class="in-series-list" open aria-label="Series">
+      <summary>PowerShell 学习笔记</summary>
       <ol>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050798644.html">DAY 1 背景介绍</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050799004.html">DAY 2 初识PowerShell</a></li>
@@ -249,7 +249,7 @@ Subsequent name resolutions may <span class="pl-k">return</span> up<span class="
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802470.html">DAY 9 深入理解管道</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802825.html">DAY 10 格式化及如何正确使用</a></li>
       </ol>
-    </nav>
+    </details>
     <nav class="in-series-pager" aria-label="Series pages">
       <a class="in-series-prev" href="https://interset-wq.github.io/blog/post/63_6050801304.html">管道：连接命令</a>
       <a class="in-series-next" href="https://interset-wq.github.io/blog/post/63_6050802143.html">对象：数据的另一个名称</a>
@@ -293,7 +293,7 @@ Subsequent name resolutions may <span class="pl-k">return</span> up<span class="
   <span id="run-days"></span>
   <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
 </div>
-<div class="in-footer-built">构建部署于 2026-10-08 10:27:38</div>
+<div class="in-footer-built">构建部署于 2026-10-08 15:49:33</div>
 <script>
   (function () {
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
@@ -359,7 +359,6 @@ Subsequent name resolutions may <span class="pl-k">return</span> up<span class="
   <script src="https://interset-wq.github.io/blog/plugins/fab.js"></script>
   <script src="https://interset-wq.github.io/blog/plugins/lightbox.js"></script>
   <script src="https://interset-wq.github.io/blog/plugins/code-copy.js"></script>
-  <script src="https://interset-wq.github.io/blog/plugins/mermaid.js"></script>
   <script>
     (function () {
       'use strict';

@@ -67,8 +67,8 @@
       </span>
       <a class="in-post-edit" href="https://github.com/interset-wq/blog/issues/63" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
     </div>
-    <nav class="in-series-list" aria-label="Series">
-      <h2>PowerShell 学习笔记</h2>
+    <details class="in-series-list" aria-label="Series">
+      <summary>PowerShell 学习笔记</summary>
       <ol>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050798644.html">DAY 1 背景介绍</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050799004.html">DAY 2 初识PowerShell</a></li>
@@ -81,7 +81,7 @@
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802470.html">DAY 9 深入理解管道</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802825.html">DAY 10 格式化及如何正确使用</a></li>
       </ol>
-    </nav>
+    </details>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
     <div class="in-post-body markdown-body"><h2>对象</h2>
@@ -317,8 +317,8 @@ Name        Property   string Name {get;}
 TypeName    Property   string TypeName {get;}</pre></div>
 <p>首先是Get-Process命令，将进程对象放入管道。然后运行Gm，该命令分析进程对象并生成该对象的MemberDefinition对象。然后将结果再次利用管道传输给Gm，该命令将分析并产生MemberDefinition成员列表作为输出结果。</p>
 <hr></div>
-    <nav class="in-series-list" aria-label="Series">
-      <h2>PowerShell 学习笔记</h2>
+    <details class="in-series-list" open aria-label="Series">
+      <summary>PowerShell 学习笔记</summary>
       <ol>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050798644.html">DAY 1 背景介绍</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050799004.html">DAY 2 初识PowerShell</a></li>
@@ -331,7 +331,7 @@ TypeName    Property   string TypeName {get;}</pre></div>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802470.html">DAY 9 深入理解管道</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/63_6050802825.html">DAY 10 格式化及如何正确使用</a></li>
       </ol>
-    </nav>
+    </details>
     <nav class="in-series-pager" aria-label="Series pages">
       <a class="in-series-prev" href="https://interset-wq.github.io/blog/post/63_6050801673.html">扩展命令</a>
       <a class="in-series-next" href="https://interset-wq.github.io/blog/post/63_6050802470.html">DAY 9 深入理解管道</a>
@@ -375,7 +375,7 @@ TypeName    Property   string TypeName {get;}</pre></div>
   <span id="run-days"></span>
   <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
 </div>
-<div class="in-footer-built">构建部署于 2026-10-08 10:27:38</div>
+<div class="in-footer-built">构建部署于 2026-10-08 15:49:33</div>
 <script>
   (function () {
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
@@ -441,7 +441,6 @@ TypeName    Property   string TypeName {get;}</pre></div>
   <script src="https://interset-wq.github.io/blog/plugins/fab.js"></script>
   <script src="https://interset-wq.github.io/blog/plugins/lightbox.js"></script>
   <script src="https://interset-wq.github.io/blog/plugins/code-copy.js"></script>
-  <script src="https://interset-wq.github.io/blog/plugins/mermaid.js"></script>
   <script>
     (function () {
       'use strict';

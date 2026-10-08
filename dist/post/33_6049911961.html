@@ -67,8 +67,8 @@
       </span>
       <a class="in-post-edit" href="https://github.com/interset-wq/blog/issues/33" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
     </div>
-    <nav class="in-series-list" aria-label="Series">
-      <h2>前端基础：HTML、CSS 与 Web APIs</h2>
+    <details class="in-series-list" aria-label="Series">
+      <summary>前端基础：HTML、CSS 与 Web APIs</summary>
       <ol>
         <li><a href="https://interset-wq.github.io/blog/post/33_6049908255.html">HTML4 常用语法（上）：文档、文本与链接</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/33_6049908671.html">HTML4 常用语法（下）：表格、表单与元信息</a></li>
@@ -81,7 +81,7 @@
         <li><a href="https://interset-wq.github.io/blog/post/33_6049911961.html">Web APIs（上）：DOM 与事件</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/33_6049912434.html">Web APIs（下）：日期对象、节点操作与 BOM</a></li>
       </ol>
-    </nav>
+    </details>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
     <div class="in-post-body markdown-body"><h2>一、Web APIs 简介</h2>
@@ -335,8 +335,8 @@
 <p>获取宽高 <code class="notranslate">offsetWidth</code> 和 <code class="notranslate">offsetHeight</code> 属性：获取元素的自身宽高（包含元素自身设置的宽高、padding、border），获取出来的是数值。获取的是可视宽高, 如果盒子是隐藏的,获取的结果是0</p>
 <p>获取位置 <code class="notranslate">offsetLeft</code> 和 <code class="notranslate">offsetTop</code> 属性：获取元素距离自己定位父级元素的左、上距离（如果祖先元素没有开启定位，以 文档左上角为基准），可以通过这种方式获取元素在页面中的位置，从而避免使用css计算宽高，这两个属性不可以赋值</p>
 <p>获取位置 <code class="notranslate">对象.getBoundingClientRect()</code>方法 返回元素的大小及其相对于视口的位置</p></div>
-    <nav class="in-series-list" aria-label="Series">
-      <h2>前端基础：HTML、CSS 与 Web APIs</h2>
+    <details class="in-series-list" open aria-label="Series">
+      <summary>前端基础：HTML、CSS 与 Web APIs</summary>
       <ol>
         <li><a href="https://interset-wq.github.io/blog/post/33_6049908255.html">HTML4 常用语法（上）：文档、文本与链接</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/33_6049908671.html">HTML4 常用语法（下）：表格、表单与元信息</a></li>
@@ -349,7 +349,7 @@
         <li><a href="https://interset-wq.github.io/blog/post/33_6049911961.html">Web APIs（上）：DOM 与事件</a></li>
         <li><a href="https://interset-wq.github.io/blog/post/33_6049912434.html">Web APIs（下）：日期对象、节点操作与 BOM</a></li>
       </ol>
-    </nav>
+    </details>
     <nav class="in-series-pager" aria-label="Series pages">
       <a class="in-series-prev" href="https://interset-wq.github.io/blog/post/33_6049911543.html">浮动、定位与经典布局</a>
       <a class="in-series-next" href="https://interset-wq.github.io/blog/post/33_6049912434.html">Web APIs（下）：日期对象、节点操作与 BOM</a>
@@ -393,7 +393,7 @@
   <span id="run-days"></span>
   <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
 </div>
-<div class="in-footer-built">构建部署于 2026-10-08 10:27:38</div>
+<div class="in-footer-built">构建部署于 2026-10-08 15:49:33</div>
 <script>
   (function () {
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
@@ -459,7 +459,6 @@
   <script src="https://interset-wq.github.io/blog/plugins/fab.js"></script>
   <script src="https://interset-wq.github.io/blog/plugins/lightbox.js"></script>
   <script src="https://interset-wq.github.io/blog/plugins/code-copy.js"></script>
-  <script src="https://interset-wq.github.io/blog/plugins/mermaid.js"></script>
   <script>
     (function () {
       'use strict';
