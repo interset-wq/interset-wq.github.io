@@ -20,29 +20,14 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="# glob 文件通配符
-
-glob 模块提供了一个在目录中使用通配符搜索创建文件列表的函数
-
-## 导入
-
-    import glob
-
-。">
-<meta property="og:title" content="glob 文件通配符">
-<meta property="og:description" content="# glob 文件通配符
-
-glob 模块提供了一个在目录中使用通配符搜索创建文件列表的函数
-
-## 导入
-
-    import glob
-
-。">
+  <meta name="description" content="My notes on everything.">
+<meta property="og:title" content="文件、异常与测试">
+<meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/84.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/112_6050755568.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>glob 文件通配符</title>
+<title>文件、异常与测试</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
   
 <style>
   <style>
@@ -61,7 +46,7 @@ glob 模块提供了一个在目录中使用通配符搜索创建文件列表的
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">glob 文件通配符</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">文件、异常与测试</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -71,21 +56,221 @@ glob 模块提供了一个在目录中使用通配符搜索创建文件列表的
 </button>
 </nav></header>
   <main class="in-site-main" id="content">  <article>
+    <nav class="in-series-crumb" aria-label="Series">
+      <a href="https://interset-wq.github.io/post/112.html">Python 基础语法</a>
+      <span>4 / 5</span>
+    </nav>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-09-06</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-05</span>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
       <span class="Label" style="background-color:#3572a5;color:#fff">
         <a href="https://interset-wq.github.io/tag.html#Python">Python</a>
       </span>
-      <a class="in-post-edit" href="https://github.com/interset-wq/interset-wq.github.io/issues/84" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
+      <a class="in-post-edit" href="https://github.com/interset-wq/interset-wq.github.io/issues/112" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
     </div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>Python 基础语法</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/112_6050754399.html">注释、变量与内置函数</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6050754844.html">运算符与数据类型</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6050755210.html">判断、循环与函数</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6050755568.html">文件、异常与测试</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6039403493.html">OOP面向对象</a></li>
+      </ol>
+    </nav>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><h1>glob 文件通配符</h1>
-<p>glob 模块提供了一个在目录中使用通配符搜索创建文件列表的函数</p>
-<h2>导入</h2>
-<pre class="notranslate"><code class="notranslate">import glob
-</code></pre></div>
+    <div class="in-post-body markdown-body"><h2>七、文件操作</h2>
+<h3>7.1 文件操作基本流程</h3>
+<ol>
+<li>打开文件</li>
+<li>读写文件</li>
+<li>关闭文件</li>
+</ol>
+<h3>7.2 通过open函数操作文件</h3>
+<ol>
+<li>
+<p>打开文件</p>
+<ul>
+<li><code class="notranslate">open(file, mode, encoding)</code> 函数，返回文件对象，用于打开文件或创建文件</li>
+<li>file参数 文件路径字符串</li>
+<li>mode参数 文件访问模式</li>
+<li>encoding参数 编码方式，推荐使用utf-8</li>
+</ul>
+<p>mode参数的可选值</p>
+<ul>
+<li>'r' 只读模式（默认）</li>
+<li>'w' 覆写模式，覆盖文件原有内容，写入新内容。文件不存在时，自动创建文件</li>
+<li>'a' 追加模式，在原文件末尾写入内容。文件不存在时，自动创建文件</li>
+<li>'rb' 使用只读模式打开二进制文件（图片等）</li>
+<li>'wb' 使用覆写模式写入二进制文件</li>
+<li><code class="notranslate">+</code> 配合以上方法使用，在原有功能上增加同时读写功能</li>
+</ul>
+</li>
+<li>
+<p>读写文件</p>
+<ul>
+<li><code class="notranslate">read()</code>方法 读取文件内容，默认读取全部内容。传入数字可指定读取的字节长度</li>
+<li><code class="notranslate">readlines()</code>方法 按行读取，返回列表，如果返回的列表需要遍历，则直接遍历文件对象也可以实现这个功能，并且更高效</li>
+<li><code class="notranslate">readline()</code>方法 一次读取一行，此方法和 for i in open()相同，一次读取一行内容，大多数行末尾会有一个换行符</li>
+<li><code class="notranslate">write()</code>方法 将内容写入文件</li>
+<li><code class="notranslate">flush()</code>方法 刷新内容，使write()函数的内容成功写入文件</li>
+<li><code class="notranslate">write()</code>函数将文件内容写到缓冲区，返回写入的字符数，需要使用flush()方法或者close()方法才可以完全写入文件</li>
+<li><code class="notranslate">writelines()</code>方法 传入字符串列表，将此列表写入文件</li>
+<li><code class="notranslate">seek()</code>方法 传入数字，改变当前文件操作指针的位置，英语占一个字节，GBK编码中文占2个字节，UTF-8编码中文占3个字节</li>
+</ul>
+</li>
+<li>
+<p>关闭文件 <code class="notranslate">close()</code>方法</p>
+</li>
+</ol>
+<p>快捷操作 <code class="notranslate">with open() as f</code> 使用with open语句对文件操作结束后，会自动关闭文件</p>
+<h3>7.3 通过pathlib操作文件</h3>
+<ol>
+<li>
+<p>导入标准库 <code class="notranslate">pathlib</code></p>
+<pre class="notranslate"><code class="notranslate"> from pathlib import Path
+</code></pre>
+</li>
+<li>
+<p>创建 <code class="notranslate">Path</code> 对象</p>
+<pre class="notranslate"><code class="notranslate"> path = Path() # 传入文件路径
+</code></pre>
+</li>
+<li>
+<p>对 <code class="notranslate">Path</code> 对象进行操作</p>
+<p><code class="notranslate">Path</code> 对象的常用方法：</p>
+<ul>
+<li><code class="notranslate">read_text()</code> 方法 读取path对象路径文件的所有内容，可选参数encoding指定读取文件使用的编码，常用utf-8</li>
+<li><code class="notranslate">write_text()</code> 方法 将字符串写入文件，如果指定路径的文件不存在，则会创建它，使用此方法写入时会删除文件原有内容</li>
+<li><code class="notranslate">exists()</code> 方法 判断文件是否存在</li>
+<li>path对象可以通过str()函数转换为路径字符串</li>
+</ul>
+</li>
+</ol>
+<p>常和字符串的 <code class="notranslate">splitlines()</code> 方法一起使用，按行分割字符串，返回列表</p>
+<h2>八、异常</h2>
+<p>Python 使用称为异常（exception）的特殊对象来管理程序执行期间发生的错误。</p>
+<p><code class="notranslate">try except else finally</code>语句</p>
+<ul>
+<li><code class="notranslate">try</code> 语句 可能引发异常的代码</li>
+<li><code class="notranslate">except</code> 语句 出现异常时，不出现traceback终止程序
+<ul>
+<li>捕获一种异常 <code class="notranslate">except NameError as e:</code></li>
+<li>捕获多种异常 <code class="notranslate">except (NameError, ZeroDivisionError):</code></li>
+<li>捕获所有异常 <code class="notranslate">except Exception as e:</code></li>
+</ul>
+</li>
+<li><code class="notranslate">else</code> 语句（可选） 不出现异常继续执行的代码</li>
+<li><code class="notranslate">finally</code> 语句（可选） 无论是否异常都要执行的代码</li>
+</ul>
+<h2>十、测试unittest/pytest</h2>
+<p>可以使用 <em>标准库unittest</em> 或 <em>第三方库pytest</em> 进行单元测试。一种最简单的测试是单元测试（unit test），用于核实函数的某个方面没有问题。测试用例（test case）是一组单元测试，这些单元测试一道核实函数在各种情况下的行为都符合要求。良好的测试用例考虑到了函数可能收到的各种输入，包含针对所有这些情况的测试。全覆盖（full coverage）测试用例包含一整套单元测试，涵盖了各种可能的函数使用方式。</p>
+<p>使用 pytest 进行测试，会让单元测试编写起来非常简单。我们将编写一个测试函数，它会调用要测试的函数，并做出有关返回值的断言 （<code class="notranslate">assert</code> 语句）。如果断言正确，表示测试通过；如果断言不正确，表示测试未通过。</p>
+<p>测试函数和测试文件必须以 <code class="notranslate">test_</code> 开头</p>
+<p>几种常用的断言（类似于if语句的条件判断）：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th align="center">unittest断言</th>
+<th align="center">pytest断言</th>
+<th align="left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">assertEqual(a, b)</td>
+<td align="center">assert a == b</td>
+<td align="left">断言两个值相等</td>
+</tr>
+<tr>
+<td align="center">assertNotEqual(a, b)</td>
+<td align="center">assert a != b</td>
+<td align="left">断言两个值不等</td>
+</tr>
+<tr>
+<td align="center">assertTrue(a)</td>
+<td align="center">assert a</td>
+<td align="left">断言 a 的布尔求值为 True</td>
+</tr>
+<tr>
+<td align="center">assertFalse(a)</td>
+<td align="center">assert not a</td>
+<td align="left">断言 a 的布尔求值为 False</td>
+</tr>
+<tr>
+<td align="center">assertIn(element, list)</td>
+<td align="center">assert element in list</td>
+<td align="left">断言元素在列表中</td>
+</tr>
+<tr>
+<td align="center">assertNotIn(element, list)</td>
+<td align="center">assert element not in list</td>
+<td align="left">断言元素不在列表中</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h3>10.1 对函数进行单元测试pytest</h3>
+<p>测试文件和被测试文件要放在同一个目录下，此处都放置在 <code class="notranslate">code/08-pytest</code> 目录下。</p>
+<h4>需要被测试的函数</h4>
+<p><code class="notranslate">name_func.py</code></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">get_format_name</span>(<span class="pl-s1">first</span>: <span class="pl-smi">str</span>, <span class="pl-s1">last</span>: <span class="pl-smi">str</span>) <span class="pl-c1">-&gt;</span> <span class="pl-smi">str</span>:
+    <span class="pl-s">"""返回完整格式的姓名"""</span>
+    <span class="pl-k">return</span> <span class="pl-s1">first</span> <span class="pl-c1">+</span> <span class="pl-s">' '</span> <span class="pl-c1">+</span> <span class="pl-s1">last</span></pre></div>
+<h4>测试函数</h4>
+<p><code class="notranslate">test_name_func.py</code></p>
+<h4>运行测试</h4>
+<p>Pycharm运行测试非常简单，测试函数旁边会出现运行按钮，点击即可运行测试</p>
+<p>通用方法：终端使用cd将当前工作目录切换到 <code class="notranslate">code/08-pytest</code>，输入<code class="notranslate">pytest</code>，回车</p>
+<h3>10.1 对函数进行单元测试unittest</h3>
+<p>测试文件和被测试文件要放在同一个目录下，此处都放置在 <code class="notranslate">code/08-unittest</code> 目录下。</p>
+<h4>需要被测试的函数</h4>
+<p><code class="notranslate">name_func.py</code></p>
+<h4>测试函数</h4>
+<p><code class="notranslate">test_name_func.py</code></p>
+<h4>运行测试</h4>
+<p>直接运行 <code class="notranslate">test_name_func.py</code></p>
+<hr>
+<p>如果我们修改被测试函数，使它能够处理有中间名的姓名：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">get_format_name</span>(<span class="pl-s1">first</span>, <span class="pl-s1">middle</span>, <span class="pl-s1">last</span>):
+    <span class="pl-s">"""返回完整格式的姓名"""</span>
+    <span class="pl-k">return</span> <span class="pl-s1">first</span> <span class="pl-c1">+</span> <span class="pl-s">' '</span> <span class="pl-c1">+</span> <span class="pl-s1">middle</span> <span class="pl-c1">+</span> <span class="pl-s">' '</span> <span class="pl-c1">+</span> <span class="pl-s1">last</span></pre></div>
+<p>此时运行测试，测试将不会通过</p>
+<p>测试不通过，说明我们编写的用于获取全名的函数 <code class="notranslate">name_func()</code> 并没有完成我们预期的行为：将只有姓和名的名字合成为全名，以及将有姓、名以及中间名的名字合成为全名。这种情况下我们应该修改 <code class="notranslate">name_func()</code> 这个函数，而不是修改测试。</p>
+<p>修改后的 <code class="notranslate">name_func.py</code></p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">get_format_name</span>(<span class="pl-s1">first</span>, <span class="pl-s1">last</span>, <span class="pl-s1">middle</span><span class="pl-c1">=</span><span class="pl-s">''</span>):
+    <span class="pl-s">"""返回完整格式的姓名"""</span>
+    <span class="pl-k">if</span> <span class="pl-s1">middle</span>:
+        <span class="pl-k">return</span> <span class="pl-s1">first</span> <span class="pl-c1">+</span> <span class="pl-s">' '</span> <span class="pl-c1">+</span> <span class="pl-s1">middle</span> <span class="pl-c1">+</span> <span class="pl-s">' '</span> <span class="pl-c1">+</span> <span class="pl-s1">last</span>
+    <span class="pl-k">else</span>:
+        <span class="pl-k">return</span> <span class="pl-s1">first</span> <span class="pl-c1">+</span> <span class="pl-s">' '</span> <span class="pl-c1">+</span> <span class="pl-s1">last</span></pre></div>
+<p>此时运行测试，测试将通过。但是我们编写的测试函数只会测试只有姓和名的情况，并不会测试有中间名的情况，因此我们要添加一个用于测试含有中间名名字的测试。</p>
+<h3>10.2 对类进行单元测试</h3>
+<ol>
+<li>
+<p>一个需要被测试的类 <code class="notranslate">survey.py</code></p>
+</li>
+<li>
+<p>编写测试函数 <code class="notranslate">test_survey.py</code></p>
+<p>在测试中，夹具（fixture）可帮助我们搭建测试环境。这通常意味着创建供多个测试使用的资源。在 pytest 中，要创建夹具，可编写一个使用装饰器 <a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/pytest/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/pytest">@pytest</a>.fixture装饰的函数。装饰器（decorator）是放在函数定义前面的指令。在运行函数前，Python将该指令应用于函数，以修改函数代码的行为。</p>
+</li>
+<li>
+<p>运行测试</p>
+</li>
+</ol></div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>Python 基础语法</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/112_6050754399.html">注释、变量与内置函数</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6050754844.html">运算符与数据类型</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6050755210.html">判断、循环与函数</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6050755568.html">文件、异常与测试</a></li>
+        <li><a href="https://interset-wq.github.io/post/112_6039403493.html">OOP面向对象</a></li>
+      </ol>
+    </nav>
+    <nav class="in-series-pager" aria-label="Series pages">
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/112_6050755210.html">判断、循环与函数</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/112_6039403493.html">OOP面向对象</a>
+    </nav>
   </article>
 <section class="in-comments-section">
   <div class="in-comments-container" id="comments">
@@ -125,7 +310,7 @@ glob 模块提供了一个在目录中使用通配符搜索创建文件列表的
   <span id="run-days"></span>
   <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
 </div>
-<div class="in-footer-built">构建部署于 2026-10-08 09:42:42</div>
+<div class="in-footer-built">构建部署于 2026-10-08 10:20:37</div>
 <script>
   (function () {
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
