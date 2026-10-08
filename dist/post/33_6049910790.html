@@ -20,27 +20,15 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="## 一、JavaScript简介
-
-## 1.1 JavaScript 代码的书写位置
-
-### 1.1.1 内部js代码
-
-直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `</body>`的位置。">
-<meta property="og:title" content="README">
-<meta property="og:description" content="## 一、JavaScript简介
-
-## 1.1 JavaScript 代码的书写位置
-
-### 1.1.1 内部js代码
-
-直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `</body>`的位置。">
+  <meta name="description" content="My notes on everything.">
+<meta property="og:title" content="CSS3 新特性：从背景到动画">
+<meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/79.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/33_6049910790.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>README</title>
+<title>CSS3 新特性：从背景到动画</title>
   
-<style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}
   <style>
     .in-progress {
       position: fixed;
@@ -57,7 +45,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">README</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">CSS3 新特性：从背景到动画</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -67,54 +55,139 @@
 </button>
 </nav></header>
   <main class="in-site-main" id="content">  <article>
+    <nav class="in-series-crumb" aria-label="Series">
+      <a href="https://interset-wq.github.io/post/33.html">前端基础：HTML、CSS 与 Web APIs</a>
+      <span>6 / 10</span>
+    </nav>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-09-06</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-06</span>
-      <span class="Label" style="background-color:#f1e05a;color:#fff">
-        <a href="https://interset-wq.github.io/tag.html#JavaScript">JavaScript</a>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
+      <span class="Label" style="background-color:#e34c26;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#H5">H5</a>
       </span>
-      <a class="in-post-edit" href="https://github.com/interset-wq/interset-wq.github.io/issues/79" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
+      <a class="in-post-edit" href="https://github.com/interset-wq/interset-wq.github.io/issues/33" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
     </div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>前端基础：HTML、CSS 与 Web APIs</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/33_6049908255.html">HTML4 常用语法（上）：文档、文本与链接</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049908671.html">HTML4 常用语法（下）：表格、表单与元信息</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049909752.html">CSS2 基础：编写位置、选择器与三大特性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910139.html">CSS2 常用属性速查</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910461.html">HTML5 新增标签与全局属性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910790.html">CSS3 新特性：从背景到动画</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911182.html">盒子模型</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911543.html">浮动、定位与经典布局</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911961.html">Web APIs（上）：DOM 与事件</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049912434.html">Web APIs（下）：日期对象、节点操作与 BOM</a></li>
+      </ol>
+    </nav>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><h2>一、JavaScript简介</h2>
-<h2>1.1 JavaScript 代码的书写位置</h2>
-<h3>1.1.1 内部js代码</h3>
-<p>直接写在html文件中，使用 <code class="notranslate">script</code> 标签包裹，这个 <code class="notranslate">script</code> 标签要放在 <code class="notranslate">body</code> 标签之内，并且要放在最靠近结束标签 <code class="notranslate">&lt;/body&gt;</code>的位置。</p>
-<p>我们将 <code class="notranslate">script</code> 放在HTML文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML页面的底部附近通常是最好的策略。</p>
-<p><strong>外部js代码</strong><br>
-将js代码写在 <code class="notranslate">.js</code> 后缀的文件中，在html文件中使用 <code class="notranslate">script</code> 标签引入。</p>
-<pre class="notranslate"><code class="notranslate">&lt;script src=""&gt;&lt;/script&gt;
+    <div class="in-post-body markdown-body"><h2>二、CSS3</h2>
+<details>
+<summary>CSS3 私有前缀</summary>
+<p>如下代码中的 -webkit- 就是私有前缀</p>
+<pre class="notranslate"><code class="notranslate">div {
+    width:400px;
+    height:400px;
+    -webkit-border-radius: 20px;
+}
 </code></pre>
-<details>
-<summary>note</summary>
-<ol>
-<li>script标签中间无需写代码，否则会被忽略！</li>
-<li>外部JavaScript会使代码更加有序，更易于复用，且没有了脚本的混合，HTML 也会更加易读，因此这是个好的习惯。</li>
-</ol>
-</details>
-<p><strong>写在其他html标签内部</strong><br>
-此处不介绍</p>
-<h2>1.2 注释</h2>
-<p>单行注释 <code class="notranslate">//</code>，快捷键 ++ctrl+slash++</p>
-<p>多行注释 <code class="notranslate">/* 此处代码会被忽略 */</code>，快捷键 ++shift+alt+a++</p>
-<h2>1.3 结束符</h2>
-<p>js代码使用 <code class="notranslate">;</code> 作为每一行代码结束的标志，可写可不写，但是要统一</p>
-<p>实际情况： 实际开发中，可写可不写, 浏览器(JavaScript 引擎) 可以自动推断语句的结束位置</p>
-<p>现状： 在实际开发中，越来越多的人主张，书写 JavaScript 代码时省略结束符</p>
-<p>约定：为了风格统一，结束符要么每句都写，要么每句都不写（按照团队要求.）</p>
-<h2>1.4 常用的输入输出语句</h2>
+<p>W3C 标准所提出的某个 CSS 特性，在被浏览器正式支持之前，浏览器厂商会根据浏览器的内核，使用私有前缀来测试该 CSS 特性，在浏览器正式支持该 CSS 特性后，就不需要私有前缀了。带私有前缀的属性相当于是实验性属性。</p>
+<p>查询 CSS3 兼容性的网站：<a href="https://caniuse.com/" rel="nofollow">https://caniuse.com/</a></p>
+<p>常见浏览器私有前缀</p>
 <ul>
-<li><code class="notranslate">document.write('要输出的内容')</code> 在网页上输出内容，可以传入包含html标签的字符串，这些字符串会被添加到 <code class="notranslate">body</code> 标签内</li>
-<li><code class="notranslate">alert()</code> 页面弹出警告对话框</li>
-<li><code class="notranslate">console.log('要输出的内容')</code> 在浏览器控制台输出传入的内容</li>
-<li><code class="notranslate">prompt('提示信息')</code> 显示一个对话框，对话框中包含一条文字信息，用来提示用户输入文字，返回的数据是字符串类型，如果输入的是数字一般使用 <code class="notranslate">+</code> 进行隐式转换</li>
+<li>Chrome、Safari、Edge 浏览器： -webkit</li>
+<li>Firefox 浏览器： -moz</li>
 </ul>
+</details>
 <details>
-<summary>JavaScript 代码执行顺序</summary>
-<p>按HTML文档流顺序执行JavaScript代码</p>
-<p><code class="notranslate">alert()</code> 和 <code class="notranslate">prompt()</code> 它们会跳过页面渲染先被执行</p>
-</details></div>
+<summary>CSS3 新增长度单位</summary>
+<ul>
+<li><code class="notranslate">rem</code> 根元素字体大小的倍数，只与根元素字体大小有关。</li>
+<li><code class="notranslate">vw</code> 视口宽度的百分之多少 10vw 就是视口宽度的 10% 。</li>
+<li><code class="notranslate">vh</code> 视口高度的百分之多少 10vh 就是视口高度的 10% 。</li>
+<li><code class="notranslate">vmax</code> 视口宽高中大的那个的百分之多少。</li>
+<li><code class="notranslate">vmin</code> 视口宽高中小的那个的百分之多少。</li>
+</ul>
+</details>
+<h3>2.3 新增盒模型相关属性</h3>
+<p><strong>box-sizing 怪异盒模型</strong><br>
+使用 box-sizing 属性可以设置盒模型的两种类型。可选值如下：</p>
+<ul>
+<li>content-box  width 和 height 设置的是盒子内容区的大小。（默认值）</li>
+<li>border-box   width 和 height 设置的是盒子总大小。（怪异盒模型）</li>
+</ul>
+<p><strong>resize 调整盒子大小</strong><br>
+使用 resize 属性可以控制是否允许用户调节元素尺寸。可选值如下：</p>
+<ul>
+<li>none 不允许用户调整元素大小。 (默认)</li>
+<li>both 用户可以调节元素的宽度和高度。</li>
+<li>horizontal 用户可以调节元素的宽度 。</li>
+<li>vertical 用户可以调节元素的高度。</li>
+</ul>
+<p><strong>box-shadow 盒子阴影</strong><br>
+使用 box-shadow 属性为盒子添加阴影。</p>
+<p>语法 <code class="notranslate">box-shadow: h-shadow v-shadow blur spread color inset;</code></p>
+<p>各个值的含义：</p>
+<ul>
+<li>h-shadow 水平阴影的位置，必须填写，可以为负值</li>
+<li>v-shadow 垂直阴影的位置，必须填写，可以为负值</li>
+<li>blur 可选，模糊距离</li>
+<li>spread 可选，阴影的外延值</li>
+<li>color 可选，阴影的颜色</li>
+<li>inset 可选，将外部阴影改为内部阴影</li>
+</ul>
+<p>默认值： box-shadow:none 表示没有阴影</p>
+<p><strong>opacity 不透明度</strong><br>
+opacity 属性能为整个元素添加透明效果， 值是 0 到 1 之间的小数， 0 是完全透明， 1 表示完全不透明。</p>
+<p>opacity 与 rgba 的区别:</p>
+<ul>
+<li>opacity 是一个属性，设置的是整个元素（包括元素里的内容）的不透明度。</li>
+<li>rgba 是颜色的设置方式，用于设置颜色，它的透明度，仅仅是调整颜色的透明度。</li>
+</ul>
+<h3>2.4 CSS3 新增背景属性</h3>
+<p>5.1. background-origin<br>
+作用：设置背景图的原点。<br>
+语法</p>
+<ol>
+<li>padding-box ：从 padding 区域开始显示背景图像。—— 默认值</li>
+<li>border-box ： 从 border 区域开始显示背景图像。</li>
+<li>content-box ： 从 content 区域开始显示背景图像。<br>
+5.2. background-clip<br>
+作用：设置背景图的向外裁剪的区域。<br>
+语法</li>
+<li>border-box ： 从 border 区域开始向外裁剪背景。 —— 默认值</li>
+<li>padding-box ： 从 padding 区域开始向外裁剪背景。</li>
+<li>content-box ： 从 content 区域开始向外裁剪背景。</li>
+<li>text ：背景图只呈现在文字上。注意：若值为 text ，那么 backgroun-clip 要加上 -webkit- 前缀。</li>
+</ol>
+<h3>2.5 CSS3 新增边框属性</h3>
+<h3>2.6 CSS3 新增文本属性</h3>
+<h3>2.7 CSS3 新增渐变</h3>
+<h3>2.8 CSS3 新增2D和3D变换</h3>
+<h3>2.9 CSS3 新增过渡</h3>
+<h3>2.10 CSS3 新增动画</h3>
+<h3>2.11 CSS3 新增多列布局</h3></div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>前端基础：HTML、CSS 与 Web APIs</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/33_6049908255.html">HTML4 常用语法（上）：文档、文本与链接</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049908671.html">HTML4 常用语法（下）：表格、表单与元信息</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049909752.html">CSS2 基础：编写位置、选择器与三大特性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910139.html">CSS2 常用属性速查</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910461.html">HTML5 新增标签与全局属性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910790.html">CSS3 新特性：从背景到动画</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911182.html">盒子模型</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911543.html">浮动、定位与经典布局</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911961.html">Web APIs（上）：DOM 与事件</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049912434.html">Web APIs（下）：日期对象、节点操作与 BOM</a></li>
+      </ol>
+    </nav>
+    <nav class="in-series-pager" aria-label="Series pages">
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/33_6049910461.html">HTML5 新增标签与全局属性</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/33_6049911182.html">盒子模型</a>
+    </nav>
   </article>
 <section class="in-comments-section">
   <div class="in-comments-container" id="comments">

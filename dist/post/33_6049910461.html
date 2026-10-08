@@ -20,27 +20,16 @@
       document.documentElement.setAttribute('data-color-mode', theme);
     })();
   </script>
-  <meta name="description" content="## 一、JavaScript简介
-
-## 1.1 JavaScript 代码的书写位置
-
-### 1.1.1 内部js代码
-
-直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `</body>`的位置。">
-<meta property="og:title" content="README">
-<meta property="og:description" content="## 一、JavaScript简介
-
-## 1.1 JavaScript 代码的书写位置
-
-### 1.1.1 内部js代码
-
-直接写在html文件中，使用 `script` 标签包裹，这个 `script` 标签要放在 `body` 标签之内，并且要放在最靠近结束标签 `</body>`的位置。">
+  <meta name="description" content="My notes on everything.">
+<meta property="og:title" content="HTML5 新增标签与全局属性">
+<meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/79.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/33_6049910461.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>README</title>
+<title>HTML5 新增标签与全局属性</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
   
-<style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}
   <style>
     .in-progress {
       position: fixed;
@@ -57,7 +46,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">README</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">HTML5 新增标签与全局属性</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -67,54 +56,206 @@
 </button>
 </nav></header>
   <main class="in-site-main" id="content">  <article>
+    <nav class="in-series-crumb" aria-label="Series">
+      <a href="https://interset-wq.github.io/post/33.html">前端基础：HTML、CSS 与 Web APIs</a>
+      <span>5 / 10</span>
+    </nav>
     <div class="in-post-meta">
-      <span class="Label" style="background-color:#0969da;color:#fff">2025-09-06</span>
-      <span class="Label" style="background-color:#0969da;color:#fff">更新 2026-10-06</span>
-      <span class="Label" style="background-color:#f1e05a;color:#fff">
-        <a href="https://interset-wq.github.io/tag.html#JavaScript">JavaScript</a>
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
+      <span class="Label" style="background-color:#e34c26;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#H5">H5</a>
       </span>
-      <a class="in-post-edit" href="https://github.com/interset-wq/interset-wq.github.io/issues/79" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
+      <a class="in-post-edit" href="https://github.com/interset-wq/interset-wq.github.io/issues/33" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
     </div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>前端基础：HTML、CSS 与 Web APIs</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/33_6049908255.html">HTML4 常用语法（上）：文档、文本与链接</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049908671.html">HTML4 常用语法（下）：表格、表单与元信息</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049909752.html">CSS2 基础：编写位置、选择器与三大特性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910139.html">CSS2 常用属性速查</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910461.html">HTML5 新增标签与全局属性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910790.html">CSS3 新特性：从背景到动画</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911182.html">盒子模型</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911543.html">浮动、定位与经典布局</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911961.html">Web APIs（上）：DOM 与事件</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049912434.html">Web APIs（下）：日期对象、节点操作与 BOM</a></li>
+      </ol>
+    </nav>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><h2>一、JavaScript简介</h2>
-<h2>1.1 JavaScript 代码的书写位置</h2>
-<h3>1.1.1 内部js代码</h3>
-<p>直接写在html文件中，使用 <code class="notranslate">script</code> 标签包裹，这个 <code class="notranslate">script</code> 标签要放在 <code class="notranslate">body</code> 标签之内，并且要放在最靠近结束标签 <code class="notranslate">&lt;/body&gt;</code>的位置。</p>
-<p>我们将 <code class="notranslate">script</code> 放在HTML文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML页面的底部附近通常是最好的策略。</p>
-<p><strong>外部js代码</strong><br>
-将js代码写在 <code class="notranslate">.js</code> 后缀的文件中，在html文件中使用 <code class="notranslate">script</code> 标签引入。</p>
-<pre class="notranslate"><code class="notranslate">&lt;script src=""&gt;&lt;/script&gt;
-</code></pre>
-<details>
-<summary>note</summary>
+    <div class="in-post-body markdown-body"><h2>一、HTML5</h2>
+<p><a href="https://html.spec.whatwg.org/multipage/index.html" rel="nofollow">:octicons-question-24:whatwg和W3C官方文档</a><br>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" rel="nofollow">:simple-mdnwebdocs: MDN权威文档</a></p>
+<h3>1.1 HTML5简介</h3>
+<p>:simple-html5:HTML5 在狭义上是指新一代的 HTML 标准，在广义上是指：整个前端。HTML5支持： Chrome 、 Safari 、 Opera 、 Firefox 等主流浏览器。IE 浏览器必须是 9 及以上版本才支持 HTML5 ，且 IE9 仅支持部分 HTML5 新特性。</p>
+<p>HTML5的优势：</p>
 <ol>
-<li>script标签中间无需写代码，否则会被忽略！</li>
-<li>外部JavaScript会使代码更加有序，更易于复用，且没有了脚本的混合，HTML 也会更加易读，因此这是个好的习惯。</li>
+<li>针对 JavaScript ，新增了很多可操作的接口。</li>
+<li>新增了一些语义化标签、全局属性。</li>
+<li>新增了多媒体标签，可以很好的替代 flash 。</li>
+<li>更加侧重语义化，对于 SEO 更友好。</li>
+<li>可移植性好，可以大量应用在移动设备上。</li>
 </ol>
-</details>
-<p><strong>写在其他html标签内部</strong><br>
-此处不介绍</p>
-<h2>1.2 注释</h2>
-<p>单行注释 <code class="notranslate">//</code>，快捷键 ++ctrl+slash++</p>
-<p>多行注释 <code class="notranslate">/* 此处代码会被忽略 */</code>，快捷键 ++shift+alt+a++</p>
-<h2>1.3 结束符</h2>
-<p>js代码使用 <code class="notranslate">;</code> 作为每一行代码结束的标志，可写可不写，但是要统一</p>
-<p>实际情况： 实际开发中，可写可不写, 浏览器(JavaScript 引擎) 可以自动推断语句的结束位置</p>
-<p>现状： 在实际开发中，越来越多的人主张，书写 JavaScript 代码时省略结束符</p>
-<p>约定：为了风格统一，结束符要么每句都写，要么每句都不写（按照团队要求.）</p>
-<h2>1.4 常用的输入输出语句</h2>
+<h3>1.2 新增布局标签</h3>
+<p>以下标签全是双标签：</p>
 <ul>
-<li><code class="notranslate">document.write('要输出的内容')</code> 在网页上输出内容，可以传入包含html标签的字符串，这些字符串会被添加到 <code class="notranslate">body</code> 标签内</li>
-<li><code class="notranslate">alert()</code> 页面弹出警告对话框</li>
-<li><code class="notranslate">console.log('要输出的内容')</code> 在浏览器控制台输出传入的内容</li>
-<li><code class="notranslate">prompt('提示信息')</code> 显示一个对话框，对话框中包含一条文字信息，用来提示用户输入文字，返回的数据是字符串类型，如果输入的是数字一般使用 <code class="notranslate">+</code> 进行隐式转换</li>
+<li><code class="notranslate">header</code> 整个页面，或部分区域的头部</li>
+<li><code class="notranslate">footer</code> 整个页面，或部分区域的底部</li>
+<li><code class="notranslate">nav</code> 导航</li>
+<li><code class="notranslate">article</code> 文章、帖子、杂志、新闻、博客、评论等。</li>
+<li><code class="notranslate">section</code> 页面中的某段文字，或文章中的某段文字（里面文字通常里面会包含标题）。</li>
+<li><code class="notranslate">aside</code> 侧边栏</li>
 </ul>
 <details>
-<summary>JavaScript 代码执行顺序</summary>
-<p>按HTML文档流顺序执行JavaScript代码</p>
-<p><code class="notranslate">alert()</code> 和 <code class="notranslate">prompt()</code> 它们会跳过页面渲染先被执行</p>
-</details></div>
+<summary>不建议使用的新增布局标签</summary>
+<ul>
+<li>main 文档的主要内容 ( WHATWG 没有语义， IE 不支持)，几乎不用。</li>
+<li>hgroup 包裹连续的标题，如文章主标题、副标题的组合 （ W3C 将其删除）</li>
+</ul>
+</details>
+<details>
+<summary>article 和 section的区别与联系</summary>
+<ol>
+<li><code class="notranslate">artical</code> 里面可以有多个 <code class="notranslate">section</code></li>
+<li><code class="notranslate">section</code> 强调的是分段或分块，如果你想将一块内容分成几段的时候，可使用 <code class="notranslate">section</code> 元素。</li>
+<li><code class="notranslate">article</code> 比 <code class="notranslate">section</code> 更强调独立性，一块内容如果比较独立、比较完整，应该使用 <code class="notranslate">article</code> 元素。</li>
+</ol>
+</details>
+<h3>1.3 新增状态标签</h3>
+<p><strong>meter 标签</strong><br>
+语义：定义已知范围内的标量测量。也被称为 gauge （尺度），双标签，显示效果类似于手机的电量条。常用属性如下：</p>
+<ul>
+<li>high 数值 规定高值</li>
+<li>low 数值 规定低值</li>
+<li>max 数值 规定最大值</li>
+<li>min 数值 规定最小值</li>
+<li>optimum 数值 规定最优值</li>
+<li>value 数值 规定当前值</li>
+</ul>
+<p><strong>进度条progress标签</strong><br>
+语义：显示某个任务完成的进度的指示器，一般用于表示进度条，双标签，例如：工作完成进度等。常用属性如下：</p>
+<ul>
+<li>max 数值 规定目标值。</li>
+<li>value 数值 规定当前值。</li>
+</ul>
+<h3>1.4 新增列表标签</h3>
+<p>以下标签都是双标签：</p>
+<ul>
+<li>datalist 用于搜索框的关键字提示</li>
+<li>details 用于展示问题和答案，或对专有名词进行解释</li>
+<li>summary 写在 details 的里面，用于指定问题或专有名词</li>
+</ul>
+<h3>1.5 新增文本标签</h3>
+<p><strong>文字注音</strong></p>
+<ul>
+<li>ruby 包裹需要注音的文字 双</li>
+<li>rt 写注音， rt 标签写在 ruby 的里面 双</li>
+</ul>
+<p><strong>文本标记mark标签</strong><br>
+mark 标记 双</p>
+<p>注意： W3C 建议 mark 用于标记搜索结果中的关键字。</p>
+<h3>1.6 新增多媒体标签</h3>
+<p><strong>视频标签video</strong><br>
+video 标签用来定义视频，它是双标签。常用属性如下：</p>
+<ul>
+<li>src 视频地址</li>
+<li>width 设置视频播放器的宽度</li>
+<li>height 设置视频播放器的高度</li>
+<li>controls 无属性值 向用户显示视频控件（比如播放/暂停按钮）</li>
+<li>muted 无属性值 视频静音</li>
+<li>autoplay 无属性值 视频自动播放</li>
+<li>loop 无属性值 循环播放</li>
+<li>poster 属性值是URL地址 视频封面</li>
+<li>preload 视频预加载，如果使用 autoplay ，则忽略该属性。可选值如下：
+<ul>
+<li>none : 不预加载视频。</li>
+<li>metadata : 仅预先获取视频的元数据（例如长度）。</li>
+<li>auto : 可以下载整个视频文件，即使用户不希望使用它。</li>
+</ul>
+</li>
+</ul>
+<p><strong>音频标签audio</strong><br>
+audio 标签用来定义音频，它是双标签。</p>
+<ul>
+<li>src URL地址 音频地址</li>
+<li>controls 无属性值 向用户显示音频控件（比如播放/暂停按钮）</li>
+<li>autoplay 无属性值 音频自动播放</li>
+<li>muted 无属性值 音频静音</li>
+<li>loop 无属性值 循环播放</li>
+<li>preload 音频预加载，如果使用 autoplay ，则忽略该属性。可选值如下：
+<ul>
+<li>none : 不预加载视频。</li>
+<li>metadata : 仅预先获取视频的元数据（例如长度）。</li>
+<li>auto : 可以下载整个视频文件，即使用户不希望使用它。</li>
+</ul>
+</li>
+</ul>
+<h3>1.7 新增全局属性</h3>
+<ul>
+<li>contenteditable 表示元素是否可被用户编辑，可选值如下：
+<ul>
+<li>true ：可编辑</li>
+<li>false ：不可编辑</li>
+</ul>
+</li>
+<li>draggable 表示元素可以被拖动，可选值如下：
+<ul>
+<li>true ：可拖动</li>
+<li>false ：不可拖动</li>
+</ul>
+</li>
+<li>hidden 隐藏元素</li>
+<li>spellcheck 规定是否对元素进行拼写和语法检查，可选值如下：
+<ul>
+<li>true ：检查</li>
+<li>false ：不检查</li>
+</ul>
+</li>
+<li>contextmenu 规定元素的上下文菜单，在用户鼠标右键点击元素时显示。</li>
+<li>data-* 用于存储页面的私有定制数据。</li>
+</ul>
+<h3>1.8 兼容性处理</h3>
+<ul>
+<li>
+<p>添加元信息，让浏览器处于最有的渲染模式</p>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!--设置IE总是使用最新的文档模式进行渲染--&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">http-equiv</span>="<span class="pl-s">X-UA-Compatible</span>" <span class="pl-c1">content</span>="<span class="pl-s">IE=Edge</span>"<span class="pl-kos">&gt;</span>
+<span class="pl-c">&lt;!--优先使用 webkit ( Chromium ) 内核进行渲染, 针对360等壳浏览器--&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">name</span>="<span class="pl-s">renderer</span>" <span class="pl-c1">content</span>="<span class="pl-s">webkit</span>"<span class="pl-kos">&gt;</span></pre></div>
+</li>
+<li>
+<p>使用 html5shiv.js 让低版本浏览器认识 H5 的语义化标签，主要针对IE浏览器</p>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!--[if lt ie 9]&gt;</span>
+<span class="pl-c">&lt;script src="../sources/js/html5shiv.js"&gt;&lt;/script&gt;</span>
+<span class="pl-c">&lt;![endif]--&gt;</span></pre></div>
+<p>???+ note<br>
+- lt 小于<br>
+- lte 小于等于<br>
+- gt 大于<br>
+- gte 大于等于<br>
+- ! 逻辑非</p>
+</li>
+</ul></div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>前端基础：HTML、CSS 与 Web APIs</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/33_6049908255.html">HTML4 常用语法（上）：文档、文本与链接</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049908671.html">HTML4 常用语法（下）：表格、表单与元信息</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049909752.html">CSS2 基础：编写位置、选择器与三大特性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910139.html">CSS2 常用属性速查</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910461.html">HTML5 新增标签与全局属性</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049910790.html">CSS3 新特性：从背景到动画</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911182.html">盒子模型</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911543.html">浮动、定位与经典布局</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049911961.html">Web APIs（上）：DOM 与事件</a></li>
+        <li><a href="https://interset-wq.github.io/post/33_6049912434.html">Web APIs（下）：日期对象、节点操作与 BOM</a></li>
+      </ol>
+    </nav>
+    <nav class="in-series-pager" aria-label="Series pages">
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/33_6049910139.html">CSS2 常用属性速查</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/33_6049910790.html">CSS3 新特性：从背景到动画</a>
+    </nav>
   </article>
 <section class="in-comments-section">
   <div class="in-comments-container" id="comments">
