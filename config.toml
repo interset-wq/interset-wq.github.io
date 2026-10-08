@@ -43,5 +43,5 @@ username = "2775055258"
 id = "wechat"
 title = "WeChat"
 action = "qrcode"
-qrcode = "https://interset-wq.github.io/blog/assets/avatar.png"
+qrcode = "https://interset-wq.github.io/blog/wechat-qr.jpg"
 
