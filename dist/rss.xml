@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Thu, 08 Oct 2026 02:21:15 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>JavaScript 学习笔记</title><link>https://interset-wq.github.io/post/80.html</link><description>JavaScript 学习笔记，从基础到进阶共八章：简介与变量、数据类型与运算符、分支循环、数组、函数与作用域、对象与面向对象、解构赋值、作用域与实用技巧。</description><guid isPermaLink="true">https://interset-wq.github.io/post/80.html</guid><pubDate>Mon, 05 Oct 2026 15:10:59 +0000</pubDate></item><item><title>PowerShell 学习笔记</title><link>https://interset-wq.github.io/post/63.html</link><description>PowerShell 学习笔记，按学习进度拆为十章：从背景介绍与初识、帮助系统、运行命令、提供程序，到管道、扩展命令、对象、深入管道与格式化输出。</description><guid isPermaLink="true">https://interset-wq.github.io/post/63.html</guid><pubDate>Mon, 05 Oct 2026 15:10:11 +0000</pubDate></item><item><title>Linux 学习笔记</title><link>https://interset-wq.github.io/post/49.html</link><description>Linux 学习笔记，从基础到进阶共十八章：系统介绍、常用命令、shell 脚本编程、VI/Emacs 编辑器、用户管理、文件管理、进程与存储管理、设备管理，到网络管理、系统服务与日志、OpenSSH、Web 服务器、应用开发、文件操作、常用操作与用户权限。</description><guid isPermaLink="true">https://interset-wq.github.io/post/49.html</guid><pubDate>Mon, 05 Oct 2026 15:09:24 +0000</pubDate></item><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io/blog</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io/blog</link></image><lastBuildDate>Thu, 08 Oct 2026 02:28:07 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>JavaScript 学习笔记</title><link>https://interset-wq.github.io/blog/post/80.html</link><description>JavaScript 学习笔记，从基础到进阶共八章：简介与变量、数据类型与运算符、分支循环、数组、函数与作用域、对象与面向对象、解构赋值、作用域与实用技巧。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/80.html</guid><pubDate>Mon, 05 Oct 2026 15:10:59 +0000</pubDate></item><item><title>PowerShell 学习笔记</title><link>https://interset-wq.github.io/blog/post/63.html</link><description>PowerShell 学习笔记，按学习进度拆为十章：从背景介绍与初识、帮助系统、运行命令、提供程序，到管道、扩展命令、对象、深入管道与格式化输出。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/63.html</guid><pubDate>Mon, 05 Oct 2026 15:10:11 +0000</pubDate></item><item><title>Linux 学习笔记</title><link>https://interset-wq.github.io/blog/post/49.html</link><description>Linux 学习笔记，从基础到进阶共十八章：系统介绍、常用命令、shell 脚本编程、VI/Emacs 编辑器、用户管理、文件管理、进程与存储管理、设备管理，到网络管理、系统服务与日志、OpenSSH、Web 服务器、应用开发、文件操作、常用操作与用户权限。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/49.html</guid><pubDate>Mon, 05 Oct 2026 15:09:24 +0000</pubDate></item><item><title>关于</title><link>https://interset-wq.github.io/blog/post/4.html</link><description>## 关于本站
 
-这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>Note</title><link>https://interset-wq.github.io/post/82.html</link><description># Note
+这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>Note</title><link>https://interset-wq.github.io/blog/post/82.html</link><description># Note
 
 ## 使用C语言的7个步骤
 
@@ -15,9 +15,9 @@
 
 ## 变量命名规则
 
-- 可以用小写字母、大写字母、数字和下划线（_）来命名。</description><guid isPermaLink="true">https://interset-wq.github.io/post/82.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>Python 标准库</title><link>https://interset-wq.github.io/post/90.html</link><description>
-Python 标准库常用模块的笔记合集：文件系统（os/pathlib/shutil/glob）、命令行参数（sys/argparse）、日期时间（datetime）、正则表达式（re）、数学运算（math）、文本与并发（string/threading）以及 turtle 海龟绘图。</description><guid isPermaLink="true">https://interset-wq.github.io/post/90.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>Python 基础语法</title><link>https://interset-wq.github.io/post/112.html</link><description>
-Python 基础语法的完整笔记，按主题拆为四篇：语法基础（注释、变量、内置函数）、运算符与数据类型、流程控制与函数、文件操作与异常测试。</description><guid isPermaLink="true">https://interset-wq.github.io/post/112.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>pdfplumber 处理PDF文档</title><link>https://interset-wq.github.io/post/78.html</link><description># pdfplumber 处理PDF文档&#13;
+- 可以用小写字母、大写字母、数字和下划线（_）来命名。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/82.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>Python 标准库</title><link>https://interset-wq.github.io/blog/post/90.html</link><description>
+Python 标准库常用模块的笔记合集：文件系统（os/pathlib/shutil/glob）、命令行参数（sys/argparse）、日期时间（datetime）、正则表达式（re）、数学运算（math）、文本与并发（string/threading）以及 turtle 海龟绘图。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/90.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>Python 基础语法</title><link>https://interset-wq.github.io/blog/post/112.html</link><description>
+Python 基础语法的完整笔记，按主题拆为四篇：语法基础（注释、变量、内置函数）、运算符与数据类型、流程控制与函数、文件操作与异常测试。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/112.html</guid><pubDate>Sat, 06 Sep 2025 15:15:30 +0000</pubDate></item><item><title>pdfplumber 处理PDF文档</title><link>https://interset-wq.github.io/blog/post/78.html</link><description># pdfplumber 处理PDF文档&#13;
 &#13;
 [README.md](https://github.com/jsvine/pdfplumber)&#13;
 &#13;
@@ -57,7 +57,7 @@ Page对象的属性和方法：&#13;
 - `page_number` 属性 用于获取这个Page对象在PDF文档中的页码，Page对象在`pdf.pages`属性中的下标从0开始，但是页码从1开始&#13;
 - `width` 属性 用于获取这个Page对象的页面宽度&#13;
 - `height` 属性 用于获取这个Page对象的高度&#13;
-- `crop(bounding_box, relative=False, strict=True)` 方法 用于裁剪页面，返回裁剪后的Page对象。</description><guid isPermaLink="true">https://interset-wq.github.io/post/78.html</guid><pubDate>Thu, 14 Aug 2025 22:55:22 +0000</pubDate></item><item><title>bs4 解析网页</title><link>https://interset-wq.github.io/post/76.html</link><description># bs4 解析网页
+- `crop(bounding_box, relative=False, strict=True)` 方法 用于裁剪页面，返回裁剪后的Page对象。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/78.html</guid><pubDate>Thu, 14 Aug 2025 22:55:22 +0000</pubDate></item><item><title>bs4 解析网页</title><link>https://interset-wq.github.io/blog/post/76.html</link><description># bs4 解析网页
 
 [bs4官方文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)
 
@@ -106,7 +106,7 @@ soup对象的属性和方法：
 - 所有html标签都可以看做是soup对象的属性，`soup.标签` 相当于对soup对象使用了元素选择器，且只选中 {==第一个==} 匹配到的对象，返回tag对象，以下是tag对象的属性和方法（soup对象支持大多数tag对象的属性和方法）
     
     ???+ note '子节点'
-        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</description><guid isPermaLink="true">https://interset-wq.github.io/post/76.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>DrissionPage 浏览器自动化操作</title><link>https://interset-wq.github.io/post/77.html</link><description># DrissionPage 浏览器自动化操作&#13;
+        tag 可能包含多个字符串或其它的 tag，这些都是这个 Tag 的子节点。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/76.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>DrissionPage 浏览器自动化操作</title><link>https://interset-wq.github.io/blog/post/77.html</link><description># DrissionPage 浏览器自动化操作&#13;
 &#13;
 [DrissionPage官方文档](https://drissionpage.cn/)&#13;
 &#13;
@@ -249,7 +249,7 @@ DrissionPage支持的元素定位法&#13;
     ele = tab.ele('#$ne')  # 查找id属性以ne结尾的元素&#13;
     ```&#13;
 &#13;
-- 类选择器`.`，相当于单属性定位'@class=属性值'，和id选择器用法类似。</description><guid isPermaLink="true">https://interset-wq.github.io/post/77.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>概率统计-概率论</title><link>https://interset-wq.github.io/post/74.html</link><description>✏️ `本文创建于2025-5-1`&#13;
+- 类选择器`.`，相当于单属性定位'@class=属性值'，和id选择器用法类似。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/77.html</guid><pubDate>Fri, 08 Aug 2025 10:42:39 +0000</pubDate></item><item><title>概率统计-概率论</title><link>https://interset-wq.github.io/blog/post/74.html</link><description>✏️ `本文创建于2025-5-1`&#13;
 &#13;
 本篇共 5 章，正文按章拆分为系列文章，点击下方目录或页面底部系列列表阅读：&#13;
 &#13;
@@ -258,20 +258,20 @@ DrissionPage支持的元素定位法&#13;
 - **第三章 随机变量的数字特征**&#13;
 - **第四章 几类重要的概率分布**&#13;
 - **第五章 基本极限定理**&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/74.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>概率统计-数理统计</title><link>https://interset-wq.github.io/post/75.html</link><description>✏️ `本文创建于2025-6-8`&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/74.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>概率统计-数理统计</title><link>https://interset-wq.github.io/blog/post/75.html</link><description>✏️ `本文创建于2025-6-8`&#13;
 &#13;
 本篇共 3 章，正文按章拆分为系列文章，点击下方目录或页面底部系列列表阅读：&#13;
 &#13;
 - **第六章 样本及抽样分布**&#13;
 - **第七章 参数估计**&#13;
 - **第八章 假设检验**&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/75.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>basic-git-command</title><link>https://interset-wq.github.io/post/25.html</link><description># basic-git-command&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/75.html</guid><pubDate>Wed, 06 Aug 2025 14:08:41 +0000</pubDate></item><item><title>basic-git-command</title><link>https://interset-wq.github.io/blog/post/25.html</link><description># basic-git-command&#13;
 &#13;
 [Git 官方文档](https://git-scm.com/doc) · [GitHub 文档](https://docs.github.com/zh) · [GitCode 文档](https://docs.gitcode.com/) · [Gitee 文档](https://gitee.com/all-about-git)&#13;
 &#13;
 &gt; [!WARNING]&#13;
-&gt; 创建 repo 时，一定要创建 `README.md`、`.gitignore` 和 `LICENSE` 文件，减少不必要的麻烦。</description><guid isPermaLink="true">https://interset-wq.github.io/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>前端基础：HTML、CSS 与 Web APIs</title><link>https://interset-wq.github.io/post/33.html</link><description>
-前端入门系列：从 HTML4/CSS2 的基础语法，到 HTML5/CSS3 的新特性，再到盒子模型与经典布局，最后进入 Web APIs（DOM、事件、BOM）。</description><guid isPermaLink="true">https://interset-wq.github.io/post/33.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>AutoCAD</title><link>https://interset-wq.github.io/post/34.html</link><description>✏️ `本文创建于2025-5-31`&#13;
+&gt; 创建 repo 时，一定要创建 `README.md`、`.gitignore` 和 `LICENSE` 文件，减少不必要的麻烦。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/25.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>前端基础：HTML、CSS 与 Web APIs</title><link>https://interset-wq.github.io/blog/post/33.html</link><description>
+前端入门系列：从 HTML4/CSS2 的基础语法，到 HTML5/CSS3 的新特性，再到盒子模型与经典布局，最后进入 Web APIs（DOM、事件、BOM）。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/33.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>AutoCAD</title><link>https://interset-wq.github.io/blog/post/34.html</link><description>✏️ `本文创建于2025-5-31`&#13;
 &#13;
 &lt;details&gt;&#13;
 &lt;summary&gt;abstract&lt;/summary&gt;&#13;
@@ -932,7 +932,7 @@ AutoCAD左下角有类似于Excel左下角工作表标签的选项卡, 模型和
 &#13;
 ## 十三、脚本 `SCRIPT`&#13;
 &#13;
-通过 `.scr` 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.。</description><guid isPermaLink="true">https://interset-wq.github.io/post/34.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>使用 Excel 处理角度</title><link>https://interset-wq.github.io/post/35.html</link><description>✏️ `本文创建于2025-5-28`&#13;
+通过 `.scr` 后缀的CAD脚本文件可批量执行多个命名. 书写脚本文件时注意: 每个命令独占一行,不要随意增减空格.。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/34.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>使用 Excel 处理角度</title><link>https://interset-wq.github.io/blog/post/35.html</link><description>✏️ `本文创建于2025-5-28`&#13;
 &#13;
 众所周知电脑并不能直接对角度制表示的角度进行计算, 使用计算机对角度进行计算时,往往要先化角度制为弧度制.&#13;
 &#13;
@@ -983,7 +983,7 @@ Excel 可以通过一些公式进行角度制角度的计算, 思路是 {==先�
 &#13;
 &#13;
 &#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/35.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit</title><link>https://interset-wq.github.io/post/36.html</link><description>✏️ `本文创建于2025-5-10`&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/35.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit</title><link>https://interset-wq.github.io/blog/post/36.html</link><description>✏️ `本文创建于2025-5-10`&#13;
 &#13;
 &lt;!-- ???+ quote &#13;
     本文提供PDF下载, 点击标题旁边的 📥 图标下载本文PDF --&gt;&#13;
@@ -1455,11 +1455,11 @@ step2 打开菜单栏的 `工具` 选项卡&#13;
 思路:把装饰层看做是一面墙,并紧贴外墙&#13;
 &#13;
 ![3-15.png](https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png)&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/36.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit 天正插件TR</title><link>https://interset-wq.github.io/post/38.html</link><description>✏️ `本文创建于2025-6-24`&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/36.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit 天正插件TR</title><link>https://interset-wq.github.io/blog/post/38.html</link><description>✏️ `本文创建于2025-6-24`&#13;
 &#13;
 ## 天正建筑 选项卡&#13;
 &#13;
-这个选项卡下的功能可以替代revit用于基本建筑建模的所有功能，是天正插件的核心内容。</description><guid isPermaLink="true">https://interset-wq.github.io/post/38.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>jieba 中文分词结巴</title><link>https://interset-wq.github.io/post/40.html</link><description># jieba 中文分词结巴
+这个选项卡下的功能可以替代revit用于基本建筑建模的所有功能，是天正插件的核心内容。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/38.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>jieba 中文分词结巴</title><link>https://interset-wq.github.io/blog/post/40.html</link><description># jieba 中文分词结巴
 
 [README.md](https://github.com/fxsjy/jieba){ .md-button .md-button--primary }
 
@@ -1481,7 +1481,7 @@ step2 打开菜单栏的 `工具` 选项卡&#13;
     - `HMM` 参数用来控制是否使用 HMM 模型
     - `use_paddle` 参数用来控制是否使用paddle模式下的分词模式
 - `jieba.cut_for_search(sentence, HMM=True)` 函数 返回generator迭代器, 可以使用 `list()`函数 转换为分词之后的 `list` 对象. 搜索引擎模式, 该方法适合用于搜索引擎构建倒排索引的分词. 效果类似于 `jieba.cut()`全模式
-    - `sentence` 需要分词的字符串. unicode 或 UTF-8 字符串、GBK 字符串。</description><guid isPermaLink="true">https://interset-wq.github.io/post/40.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>matplotlib</title><link>https://interset-wq.github.io/post/41.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+    - `sentence` 需要分词的字符串. unicode 或 UTF-8 字符串、GBK 字符串。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/40.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>matplotlib</title><link>https://interset-wq.github.io/blog/post/41.html</link><description>✏️ `本文创建于2025-5-16`&#13;
 &#13;
 [matplotlib官方文档](https://matplotlib.org/stable/users/index.html)&#13;
 &#13;
@@ -1495,7 +1495,7 @@ ax.plot(squares) # 绘图&#13;
 plt.show() # 显示图像&#13;
 ```&#13;
 &#13;
-subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot）。</description><guid isPermaLink="true">https://interset-wq.github.io/post/41.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>NumPy</title><link>https://interset-wq.github.io/post/42.html</link><description>✏️ `本文创建于2025-5-16`&#13;
+subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot）。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/41.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>NumPy</title><link>https://interset-wq.github.io/blog/post/42.html</link><description>✏️ `本文创建于2025-5-16`&#13;
 &#13;
 [:simple-numpy: NumPy官方文档](https://numpy.org/doc/stable/index.html)&#13;
 &#13;
@@ -1505,18 +1505,18 @@ subplots()函数可在一个图形（figure）中绘制一或多个绘图（plot
 &#13;
 ## 二 数组ndarray&#13;
 &#13;
-在NumPy中基本数组类被称为`ndarray`, 它代表一个“N维数组”, 类似于python基本数据类型的列表。</description><guid isPermaLink="true">https://interset-wq.github.io/post/42.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>pandas</title><link>https://interset-wq.github.io/post/43.html</link><description>&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
+在NumPy中基本数组类被称为`ndarray`, 它代表一个“N维数组”, 类似于python基本数据类型的列表。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/42.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>pandas</title><link>https://interset-wq.github.io/blog/post/43.html</link><description>&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
 &#13;
 [:simple-pandas: pandas官方文档](https://pandas.pydata.org/docs/)
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/43.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>scipy</title><link>https://interset-wq.github.io/post/44.html</link><description>&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/43.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>scipy</title><link>https://interset-wq.github.io/blog/post/44.html</link><description>&lt;!-- ✏️ `本文创建于2025-5-16` --&gt;&#13;
 &#13;
 [:simple-scipy: scipy官方文档](https://scipy.org/)&#13;
 
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/44.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>预备节：面向对象</title><link>https://interset-wq.github.io/post/45.html</link><description># 预备节：面向对象&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/44.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>预备节：面向对象</title><link>https://interset-wq.github.io/blog/post/45.html</link><description># 预备节：面向对象&#13;
 &#13;
 ✏️ `本文创建于2025-3-16`&#13;
 &#13;
-要使用tkinter进行GUI设计，就不得不用到**面向对象**的编程思想。</description><guid isPermaLink="true">https://interset-wq.github.io/post/45.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>KaTex数学公式</title><link>https://interset-wq.github.io/post/46.html</link><description>✏️ `本文创建于2025-4-29`&#13;
+要使用tkinter进行GUI设计，就不得不用到**面向对象**的编程思想。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/45.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>KaTex数学公式</title><link>https://interset-wq.github.io/blog/post/46.html</link><description>✏️ `本文创建于2025-4-29`&#13;
 &#13;
 [Katex文档](https://katex.org/docs/supported)&#13;
 &#13;
@@ -1761,9 +1761,9 @@ $$&#13;
 &#13;
 $\xrightarrow{over}$&#13;
 &#13;
-    $\xrightarrow{over}$。</description><guid isPermaLink="true">https://interset-wq.github.io/post/46.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Markdown语法</title><link>https://interset-wq.github.io/post/47.html</link><description># Markdown语法&#13;
+    $\xrightarrow{over}$。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/46.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Markdown语法</title><link>https://interset-wq.github.io/blog/post/47.html</link><description># Markdown语法&#13;
 &#13;
-&gt; 本文整理常用 Markdown / GFM 语法，每节均为「源码 → 渲染效果」对照，便于随时查阅。</description><guid isPermaLink="true">https://interset-wq.github.io/post/47.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>快捷键</title><link>https://interset-wq.github.io/post/48.html</link><description># 快捷键&#13;
+&gt; 本文整理常用 Markdown / GFM 语法，每节均为「源码 → 渲染效果」对照，便于随时查阅。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/47.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>快捷键</title><link>https://interset-wq.github.io/blog/post/48.html</link><description># 快捷键&#13;
 &#13;
 ✏️ `本文创建于2025-3-13`&#13;
 &#13;
@@ -1831,4 +1831,4 @@ $\xrightarrow{over}$&#13;
 &#13;
 ## Excel&#13;
 &#13;
-- 手动换行 ++alt+enter++。</description><guid isPermaLink="true">https://interset-wq.github.io/post/48.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item></channel></rss>
+- 手动换行 ++alt+enter++。</description><guid isPermaLink="true">https://interset-wq.github.io/blog/post/48.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item></channel></rss>

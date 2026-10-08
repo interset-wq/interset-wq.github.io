@@ -1,9 +1,9 @@
 # InterNote
 
-> https://interset-wq.github.io
+> https://interset-wq.github.io/blog
 
-- 文章：27 篇 · [标签页](https://interset-wq.github.io/tag.html)
+- 文章：27 篇 · [标签页](https://interset-wq.github.io/blog/tag.html)
 - 字数：93539
-- 构建：2026-10-08 10:21:15
+- 构建：2026-10-08 10:28:07
 
 Powered by [Internote](https://github.com/interset-wq/InterNote)
