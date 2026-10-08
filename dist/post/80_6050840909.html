@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>window.icons = {"arrow-down": "M13.03 8.22a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L5.47 9.28a.75.75 0 1 1 1.06-1.06l1.97 1.97V2.75a.75.75 0 0 1 1.5 0v7.44l1.97-1.97a.75.75 0 0 1 1.06 0Z", "arrow-up": "M3.47 7.78a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 1 1-1.06 1.06L8.75 5.811v7.439a.75.75 0 0 1-1.5 0V5.81L4.53 7.78a.75.75 0 0 1-1.06 0Z", "bars": "M1.75 2.5a.75.75 0 0 1 0-1.5h12.5a.75.75 0 0 1 0 1.5H1.75Zm0 3.75a.75.75 0 0 1 0-1.5h12.5a.75.75 0 0 1 0 1.5H1.75Zm0 3.75a.75.75 0 0 1 0-1.5h12.5a.75.75 0 0 1 0 1.5H1.75Zm0 3.75a.75.75 0 0 1 0-1.5h12.5a.75.75 0 0 1 0 1.5H1.75Z", "check": "M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z", "copy": "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z", "github": "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z", "home": "M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z", "moon": "M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z", "pencil": "M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z", "rss": "M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z", "search": "M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z", "sun": "M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z", "sync": "M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z", "tag": "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"};</script>
+<link rel="icon" type="image/png" href="https://interset-wq.github.io/assets/favicon.png">
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/primer.css">
+  
+  <link rel="stylesheet" href="https://interset-wq.github.io/assets/main.css">
+  <script>
+    // Resolve the stored theme before first paint, otherwise a dark-mode
+    // visitor sees a white flash. theme.js takes over once loaded.
+    (function () {
+      var theme = localStorage.getItem('internote_theme') || 'light';
+      if (theme === 'auto') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-color-mode', theme);
+    })();
+  </script>
+  <meta name="description" content="My notes on everything.">
+<meta property="og:title" content="对象与面向对象（OOP）">
+<meta property="og:description" content="My notes on everything.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://interset-wq.github.io/post/80_6050840909.html">
+<meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
+<title>对象与面向对象（OOP）</title>
+  <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
+  
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}
+  <style>
+    .in-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100%;
+      height: 2px;
+      background: var(--in-color-accent);
+      transform-origin: 0 0;
+      transform: scaleX(0);
+      pointer-events: none;
+    }
+  </style>
+</style></head>
+<body>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">对象与面向对象（OOP）</h1>
+<nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
+    <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
+    <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
+
+  <button class="in-nav-btn" id="in-theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+  <svg class="octicon" width="16" height="16"><path id="themeSwitch" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z" fill-rule="evenodd"></path></svg>
+</button>
+</nav></header>
+  <main class="in-site-main" id="content">  <article>
+    <nav class="in-series-crumb" aria-label="Series">
+      <a href="https://interset-wq.github.io/post/80.html">JavaScript 学习笔记</a>
+      <span>6 / 8</span>
+    </nav>
+    <div class="in-post-meta">
+      <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
+      <span class="Label" style="background-color:#f1e05a;color:#fff">
+        <a href="https://interset-wq.github.io/tag.html#JavaScript">JavaScript</a>
+      </span>
+      <a class="in-post-edit" href="https://github.com/interset-wq/interset-wq.github.io/issues/80" target="_blank" rel="noopener" title="在 GitHub 上编辑" aria-label="在 GitHub 上编辑"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086Z" fill-rule="evenodd"></path></svg></a>
+    </div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>JavaScript 学习笔记</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/80_6050835360.html">JavaScript 简介与变量</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050835695.html">数据类型与运算符</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050836027.html">分支与循环语句</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050836359.html">数组 Array</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050840619.html">函数：从基础到作用域</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050840909.html">对象与面向对象（OOP）</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050841189.html">解构赋值</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050841541.html">作用域与实用技巧</a></li>
+      </ol>
+    </nav>
+    <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
+    <div class="in-progress" id="in-progress"></div>
+    <div class="in-post-body markdown-body"><p>声明对象的两种方式：</p>
+<ul>
+<li>方式一 <code class="notranslate">let 对象名 = {}</code></li>
+<li>方式二 <code class="notranslate">let 对象名 = new Object()</code></li>
+</ul>
+<p>对象由属性和方法组成：</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">对象名</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">属性名</span>: <span class="pl-s1">属性值</span><span class="pl-kos">,</span>
+    <span class="pl-c1">方法名</span>: <span class="pl-s1">函数</span>
+<span class="pl-kos">}</span></pre></div>
+<ul>
+<li>对象中的属性名和属性值类似于python中的字典</li>
+<li>属性名值对使用逗号分隔</li>
+<li>属性名可以使用 "" 或 ''包裹，一般情况下省略，除非名称遇到特殊符号如空格、连字符、下划线等</li>
+</ul>
+<p><strong>操作对象：</strong></p>
+<ul>
+<li>查询属性值：类似于python中的对象，可以使用 <code class="notranslate">.属性名</code> 访问对象属性值；也类似于python中的字典，可以使用 <code class="notranslate">对象名[属性名]</code> 来访问属性值，属性名需要使用单引号或双引号包裹</li>
+<li>更改属性值：类似于python中的对象和字典，可以对属性重新赋值</li>
+<li>新增属性：操作同上，如果属性不存在，则会新增属性</li>
+<li>删除属性：通过属性名删除属性 <code class="notranslate">delete 对象名.属性名</code></li>
+<li>对象中的方法：定义在对象中的函数就是方法，方法中也可以定义函数参数。调用方法类似于python中的方法
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">obj</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-en">sayHi</span>: <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+        <span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s">'hi'</span><span class="pl-kos">)</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span></pre></div>
+</li>
+</ul>
+<p>使用 <code class="notranslate">for in</code> 语句遍历对象，类似于python字典的遍历，此处获取属性值必须使用类似于python字典的写法：</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">obj</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'jack'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">10</span><span class="pl-kos">,</span>
+    <span class="pl-c1">gender</span>: <span class="pl-s">'male'</span>
+<span class="pl-kos">}</span>
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">k</span> <span class="pl-k">in</span> <span class="pl-s1">obj</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">k</span><span class="pl-kos">)</span> <span class="pl-c">// 属性名</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">obj</span><span class="pl-kos">[</span><span class="pl-s1">k</span><span class="pl-kos">]</span><span class="pl-kos">)</span> <span class="pl-c">// 属性值</span>
+<span class="pl-kos">}</span></pre></div>
+<p><strong>内置对象：</strong></p>
+<p>类似于python中的标准库。</p>
+<p>内置对象 <code class="notranslate">Math</code> 提供一系列和数学计算相关的方法</p>
+<ul>
+<li>random：生成0-1之间的随机数（包含0不包括1）</li>
+<li>ceil：向上取整</li>
+<li>floor：向下取整</li>
+<li>max：找最大数</li>
+<li>min：找最小数</li>
+<li>pow：幂运算</li>
+<li>abs：绝对值</li>
+</ul>
+<details>
+<summary>生成随机整数</summary>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 生成0到10之间的随机整数</span>
+<span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-en">floor</span><span class="pl-kos">(</span><span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-c1">random</span> <span class="pl-c1">*</span> <span class="pl-c1">11</span><span class="pl-kos">)</span>
+<span class="pl-c">// 生成5到10之间的随机整数</span>
+<span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-en">floor</span><span class="pl-kos">(</span><span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-c1">random</span> <span class="pl-c1">*</span> <span class="pl-c1">6</span><span class="pl-kos">)</span> <span class="pl-c1">+</span> <span class="pl-c1">5</span>
+<span class="pl-c">// 生成N到M之间的随机整数</span>
+<span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-en">floor</span><span class="pl-kos">(</span><span class="pl-v">Math</span><span class="pl-kos">.</span><span class="pl-c1">random</span> <span class="pl-c1">*</span> <span class="pl-kos">(</span><span class="pl-v">M</span> <span class="pl-c1">-</span> <span class="pl-v">N</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span><span class="pl-kos">)</span><span class="pl-kos">)</span> <span class="pl-c1">+</span> <span class="pl-v">N</span> </pre></div>
+</details>
+<h2>对象进阶</h2>
+<h3>4.1 创建对象的三种方式</h3>
+<ul>
+<li>
+<p>方式一: 通过字面量创建</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 通过字面量创建</span>
+<span class="pl-k">const</span> <span class="pl-s1">obj</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span></pre></div>
+</li>
+<li>
+<p>方式二: new Object</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// new Object</span>
+<span class="pl-k">const</span> <span class="pl-s1">obj</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Object</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
+</li>
+<li>
+<p>方式三: 利用构造函数创建对象</p>
+</li>
+</ul>
+<h3>4.2 构造函数</h3>
+<p>构造函数 ：是一种特殊的函数，主要用来初始化对象. 可以通过构造函数来快速创建多个类似的对象. 类似于 Python 通过类的实例化创建对象. 构造函数在技术上是常规函数</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">Person</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">=</span> <span class="pl-s1">name</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-s1">age</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">person1</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Person</span><span class="pl-kos">(</span><span class="pl-s">'wq'</span><span class="pl-kos">,</span> <span class="pl-c1">18</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">person1</span><span class="pl-kos">)</span> <span class="pl-c">// {name: 'wq', age: 18}</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">person2</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Person</span><span class="pl-kos">(</span><span class="pl-s">'jerry'</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">person2</span><span class="pl-kos">)</span> <span class="pl-c">// {name: 'jerry', age: 20}</span></pre></div>
+<details>
+<summary>note</summary>
+<ul>
+<li>它们的命名以大写字母开头, 大驼峰命名法</li>
+<li>它们只能由 <code class="notranslate">new</code> 操作符来执行</li>
+<li>使用 <code class="notranslate">new</code> 关键字调用函数的行为被称为实例化</li>
+<li>实例化构造函数时没有参数时可以省略 <code class="notranslate">()</code></li>
+<li>构造函数内部无需写 <code class="notranslate">return</code>，返回值即为新创建的对象</li>
+<li>构造函数内部的 <code class="notranslate">return</code> 返回的值无效，所以不要写 <code class="notranslate">return</code></li>
+<li><code class="notranslate">new Object()</code> <code class="notranslate">new Date()</code> 也是实例化构造函数</li>
+</ul>
+</details>
+<details>
+<summary>实例化执行过程</summary>
+<ul>
+<li>创建新对象</li>
+<li>构造函数this指向新对象</li>
+<li>执行构造函数代码，修改this，添加新的属性</li>
+<li>返回新对象</li>
+</ul>
+</details>
+<h3>4.3 实例成员和静态成员</h3>
+<p>实例成员：通过构造函数创建的对象称为实例对象，实例对象中的属性和方法称为实例成员。类似于 Python 中的实例属性和实例方法.</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>实例对象的属性和方法即为实例成员</li>
+<li>为构造函数传入参数，动态创建结构相同但值不同的对象</li>
+<li>构造函数创建的实例对象彼此独立互不影响。</li>
+</ul>
+</details>
+<p>静态成员：构造函数的属性和方法被称为静态成员. 类似于 Python 类属性和类方法.</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>构造函数的属性和方法被称为静态成员</li>
+<li>一般公共特征的属性或方法静态成员设置为静态成员</li>
+<li>静态成员方法中的 this 指向构造函数本身</li>
+</ul>
+</details>
+<h3>4.4 内置构造函数</h3>
+<div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">flowchart</span> <span class="pl-c1">LR</span>
+    <span class="pl-ent">A</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>JavaScript的6中主要基本数据类型<span class="pl-pds"><span class="pl-sg">]</span></span></span> <span class="pl-k">--&gt;</span>  <span class="pl-ent">B</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>基本数据类型/包装类型<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">A</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">C</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>引用类型/对象<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">B</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">D</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>字符串String<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">B</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">E</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>数值Number<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">B</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">F</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>布尔值Boolen<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">B</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">G</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>undefined<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">B</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">H</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>null<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">C</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">I</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>Object/Array/RegExp/Date等<span class="pl-pds"><span class="pl-sg">]</span></span></span></pre></div>
+<p>字符串、数值、布尔、等基本类型也都有专门的构造函数，这些我们称为包装类型。JS中几乎所有的数据都可以基于构成函数创建。</p>
+<h4>4.4.1 对象Object</h4>
+<p><code class="notranslate">Object</code> 是内置的构造函数，用于创建普通对象。 推荐使用字面量方式声明对象，而不是 Object 构造函数</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用构造函数创建对象</span>
+<span class="pl-c">// const user = new Object({</span>
+<span class="pl-c">//     name: 'wq',</span>
+<span class="pl-c">//     age: 18</span>
+<span class="pl-c">// })</span>
+
+<span class="pl-c">// 通过字面量创建对象</span>
+<span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span></pre></div>
+<p>不使用对象的静态方法时, 要想要遍历对象的值需要使用 <code class="notranslate">for (in)</code> 语句</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">key</span> <span class="pl-k">in</span> <span class="pl-s1">user</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">key</span><span class="pl-kos">)</span> <span class="pl-c">// 遍历user对象的属性</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">user</span><span class="pl-kos">[</span><span class="pl-s1">key</span><span class="pl-kos">]</span><span class="pl-kos">)</span> <span class="pl-c">// 遍历user对象的属性值</span>
+<span class="pl-kos">}</span></pre></div>
+<p>这种方法明显不够简便, 使用对象的静态方法可以简化此过程.</p>
+<p>对象的三个常用静态方法:</p>
+<ul>
+<li>
+<p><code class="notranslate">Object.keys()</code> 传入对象,获取对象的全部属性,返回属性列表, 类似于Python字典的 <code class="notranslate">.keys()</code> 方法,只不过Python字典的 <code class="notranslate">.keys()</code>方法只用于遍历</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-v">Object</span><span class="pl-kos">.</span><span class="pl-en">keys</span><span class="pl-kos">(</span><span class="pl-s1">user</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// ['name', 'age']]</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">Object.values()</code> 传入对象,获取对象的全部属性值,返回属性值列表, 类似于Python字典的 <code class="notranslate">.values()</code> 方法</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-v">Object</span><span class="pl-kos">.</span><span class="pl-en">values</span><span class="pl-kos">(</span><span class="pl-s1">user</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// ['wq', 18]]</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">Object.assign(obj1, obj2)</code> 将obj2拷贝到obj1, 常用于对象添加属性</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">obj1</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span><span class="pl-kos">}</span>
+<span class="pl-k">const</span> <span class="pl-s1">obj2</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span>
+<span class="pl-v">Object</span><span class="pl-kos">.</span><span class="pl-en">assign</span><span class="pl-kos">(</span><span class="pl-s1">obj1</span><span class="pl-kos">,</span> <span class="pl-s1">obj2</span><span class="pl-kos">)</span>  
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">obj1</span><span class="pl-kos">)</span> <span class="pl-c">// {name: 'wq', age: 18}  </span></pre></div>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span>
+<span class="pl-v">Object</span><span class="pl-kos">.</span><span class="pl-en">assign</span><span class="pl-kos">(</span><span class="pl-s1">user</span><span class="pl-kos">,</span> <span class="pl-kos">{</span><span class="pl-c1">hobby</span>: <span class="pl-s">'python'</span><span class="pl-kos">}</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">user</span><span class="pl-kos">)</span> <span class="pl-c">// {name: 'wq', age: 18, hobby: 'python'}</span></pre></div>
+</li>
+</ul>
+<h4>4.4.2 数组Array</h4>
+<p><code class="notranslate">Array</code> 是内置的构造函数，用于创建数组. 创建数组建议使用字面量创建，不用 Array构造函数创建</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 使用构造函数创建数组</span>
+<span class="pl-c">// const arr = new Array(1, 2, 3) // 不需要方括号</span>
+<span class="pl-c">// console.log(arr) // [1, 2, 3]</span>
+
+<span class="pl-c">// 使用字面量创建数组</span>
+<span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">]</span></pre></div>
+<p>数组常用实例方法:</p>
+<ul>
+<li>
+<p><code class="notranslate">.forEach()</code> 遍历数组, 无返回值</p>
+<p><code class="notranslate">.forEach()</code> 方法用于调用数组的每个元素，并将元素传递给回调函数. 这个方法没有返回值,它的作用就是遍历数组, 类似于python的<code class="notranslate">enumerate()</code>函数</p>
+<p>语法:</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">forEach</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-c">// 函数体</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span>
+
+<span class="pl-c">// 或</span>
+<span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">forEach</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-c">// 函数体</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
+<p>=== "Python"<br>
+<code class="notranslate">py mylist = ['py', 'c', 'js', 'css'] for index, item in enumerate(mylist): print(index) # 遍历下标 print(item) # 遍历列表 </code></p>
+<p>=== "JavaScript"<br>
+```js<br>
+const arr = ['py', 'c', 'js', 'css']</p>
+<pre class="notranslate"><code class="notranslate">  // forEach可以同时遍历数组元素和下标
+  arr.forEach(function(item, index) {
+      console.log(item) // 遍历数组
+      console.log(index) // 遍历下标
+  })
+  ```
+</code></pre>
+</li>
+<li>
+<p><code class="notranslate">.filter()</code> 过滤数组, 筛选数组元素,返回新数组</p>
+<p><code class="notranslate">.filter()</code> 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组</p>
+<p>语法:</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+    <span class="pl-k">return</span> <span class="pl-s1">筛选条件</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span>
+
+<span class="pl-c">// 或</span>
+<span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+    <span class="pl-k">return</span> <span class="pl-s1">筛选条件</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
+<p>返回值：返回数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组. 因为返回新数组，所以不会影响原数组</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">51</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">,</span> <span class="pl-c1">15</span><span class="pl-kos">,</span> <span class="pl-c1">37</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">]</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">newArr</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+    <span class="pl-k">return</span> <span class="pl-s1">item</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">20</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr</span><span class="pl-kos">)</span> <span class="pl-c">// [51, 37]</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">.map()</code> 迭代数组</p>
+<p>数组的 <code class="notranslate">.map(function (item, index) {})</code> 方法, 类似于python列表推导式,可以用于产生新数组. 也类似于python列表遍历的 <code class="notranslate">enumerate()</code> 函数,可以同时遍历数组的元素和下标(但是这种遍历方法不推荐使用,因为 <code class="notranslate">.map()</code> 方法是用来产生新元组的).</p>
+<p>语法:</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
+<span class="pl-k">const</span> <span class="pl-s1">newArr</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">map</span><span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-c">// 遍历数组,依次输出数组元素和下标</span>
+    <span class="pl-k">return</span> <span class="pl-s1">item</span> <span class="pl-c1">+</span> <span class="pl-s">'语言'</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr</span><span class="pl-kos">)</span> <span class="pl-c">// ['py语言', 'js语言', 'html语言', 'css语言']</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">.reduce()</code> 累加器, 用于数组求和</p>
+<p>基本语法: <code class="notranslate">arr.reduce(function(累计值, 当前元素, 索引号, 原数组){}, 起始值)</code> 起始值可以省略，如果写就作为第一次累计的起始值. 索引号和原数组可省略</p>
+<p>???+ note<br>
+- 如果有起始值，则以起始值为准开始累计， 累计值 = 起始值<br>
+- 如果没有起始值， 则累计值以数组的第一个数组元素作为起始值开始累计<br>
+- 后面每次遍历就会用后面的数组元素 累计到 累计值 里面 （类似求和里面的 sum ）<br>
+- 有起始值最后的求和结果相当于没有起始值时的结果加上起始值</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">]</span>
+
+<span class="pl-c">// 无起始值</span>
+<span class="pl-c">// const total = arr.reduce(function(prev, current){</span>
+<span class="pl-c">//     return prev + current</span>
+<span class="pl-c">// })</span>
+<span class="pl-c">// 使用箭头函数</span>
+<span class="pl-k">const</span> <span class="pl-s1">total1</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">reduce</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">prev</span><span class="pl-kos">,</span> <span class="pl-s1">current</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-s1">prev</span> <span class="pl-c1">+</span> <span class="pl-s1">current</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">total1</span><span class="pl-kos">)</span> <span class="pl-c">// 14</span>
+
+<span class="pl-c">// 有起始值</span>
+<span class="pl-k">const</span> <span class="pl-s1">total2</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">reduce</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">prev</span><span class="pl-kos">,</span> <span class="pl-s1">current</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-s1">prev</span> <span class="pl-c1">+</span> <span class="pl-s1">current</span><span class="pl-kos">,</span> <span class="pl-c1">10</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">total2</span><span class="pl-kos">)</span> <span class="pl-c">// 24</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">.join()</code> 将数组元素拼接为字符串,返回字符串</p>
+<p>数组的 <code class="notranslate">.join()</code>  可以用来将数组中的元素拼接为一个字符串, 类似于python中的 <code class="notranslate">','.join(list)</code> 方法,只不过js中的 <code class="notranslate">.join()</code> 不传参时,相当于传入了默认值 <code class="notranslate">','</code></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
+<span class="pl-k">const</span> <span class="pl-s1">newArr1</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">join</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr1</span><span class="pl-kos">)</span> <span class="pl-c">// py,js,html,css</span>
+<span class="pl-k">const</span> <span class="pl-s1">newArr2</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">join</span><span class="pl-kos">(</span><span class="pl-s">''</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr2</span><span class="pl-kos">)</span> <span class="pl-c">// pyjshtmlcss</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">.find()</code> 查找元素,符合测试条件的第一个数组元素值，如果没有符合条件的则返回 <code class="notranslate">undefined</code></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span>
+    <span class="pl-kos">{</span>
+        <span class="pl-c1">lang</span>: <span class="pl-s">'python'</span><span class="pl-kos">,</span>
+        <span class="pl-c1">suffix</span>: <span class="pl-s">'py'</span>
+    <span class="pl-kos">}</span><span class="pl-kos">,</span>
+    <span class="pl-kos">{</span>
+        <span class="pl-c1">lang</span>: <span class="pl-s">'javascript'</span><span class="pl-kos">,</span>
+        <span class="pl-c1">suffix</span>: <span class="pl-s">'js'</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">]</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">js</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">find</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+    <span class="pl-k">return</span> <span class="pl-s1">item</span><span class="pl-kos">.</span><span class="pl-c1">suffix</span> <span class="pl-c1">===</span> <span class="pl-s">'js'</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">js</span><span class="pl-kos">)</span> <span class="pl-c">// {lang: 'javascript', suffix: 'js'}</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">.every()</code>  检测数组所有元素是否都符合指定条件，如果所有元素都通过检测返回true，否则返回false</p>
+</li>
+<li>
+<p><code class="notranslate">.some()</code>  检测数组中的元素是否满足指定条件如果数组中有元素满足条件返回true，否则返回false</p>
+</li>
+<li>
+<p><code class="notranslate">.concat()</code> 合并两个数组，返回生成新数组</p>
+</li>
+<li>
+<p><code class="notranslate">.sort()</code> 对原数组单元值排序</p>
+</li>
+<li>
+<p><code class="notranslate">.splice()</code> 删除或替换原数组单元</p>
+</li>
+<li>
+<p><code class="notranslate">.reverse()</code> 反转数组</p>
+</li>
+<li>
+<p><code class="notranslate">.findIndex()</code> 查找元素的下标</p>
+</li>
+<li>
+<p>静态方法 <code class="notranslate">Array.from()</code> 将伪数组转换为数组</p>
+</li>
+</ul>
+<h4>4.4.3 字符串String</h4>
+<p>在 JavaScript 中的字符串、数值、布尔具有对象的使用特征，如具有属性和方法. 之所以具有对象特征的原因是字符串、数值、布尔类型数据是 JavaScript 底层使用 Object 构造函数“包装”来的，被称为包装类型。</p>
+<ul>
+<li>
+<p><code class="notranslate">.length</code>属性 用来获取字符串的长度</p>
+</li>
+<li>
+<p><code class="notranslate">.split('分隔符')</code> 用来将字符串拆分成数组, 和数组的<code class="notranslate">.join()</code>功能相反</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 将字符串拆分为数组</span>
+<span class="pl-k">const</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">'js,html,css'</span>
+<span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">split</span><span class="pl-kos">(</span><span class="pl-s">','</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// ['js', 'html', 'css']</span>
+<span class="pl-c">// 将数组拼接为字符串</span>
+<span class="pl-k">const</span> <span class="pl-s1">str2</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">join</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">str2</span><span class="pl-kos">)</span> <span class="pl-c">// js,html,css</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">.substring(开始下标[,结束下标])</code> 用于字符串截取,类似于python字符串的切片</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">str</span> <span class="pl-c1">=</span> <span class="pl-s">'Hello world!'</span>
+<span class="pl-k">const</span> <span class="pl-s1">newStr</span> <span class="pl-c1">=</span> <span class="pl-s1">str</span><span class="pl-kos">.</span><span class="pl-en">substring</span><span class="pl-kos">(</span><span class="pl-c1">3</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newStr</span><span class="pl-kos">)</span> <span class="pl-c">// lo world!</span></pre></div>
+</li>
+<li>
+<p><code class="notranslate">.startsWith(检测字符串[，检测位置索引号])</code> 检测是否以某字符开头,返回布尔值</p>
+</li>
+<li>
+<p><code class="notranslate">.includes(搜索的字符串[，检测位置索引号])</code> 判断一个字符串是否包含在另一个字符串中，根据情况返回true 或false</p>
+</li>
+<li>
+<p><code class="notranslate">.toUppercase()</code> 用于将字母转换成大写</p>
+</li>
+<li>
+<p><code class="notranslate">.toLowerCase()</code> 用于将字母转换成小写</p>
+</li>
+<li>
+<p><code class="notranslate">.indexOf()</code> 检测是否包含某字符</p>
+</li>
+<li>
+<p><code class="notranslate">.endsWith()</code> 检测是否以某字符结尾,返回布尔值</p>
+</li>
+<li>
+<p><code class="notranslate">.replace()</code> 用于替换字符串，支持正则匹配</p>
+</li>
+<li>
+<p><code class="notranslate">.match()</code> 用于查找字符串，支持正则匹配</p>
+</li>
+</ul>
+<h4>4.4.4 数组Number</h4>
+<p><code class="notranslate">Number</code> 是内置的构造函数，用于创建数值</p>
+<p>常用方法： <code class="notranslate">toFixed()</code> 设置保留小数位的长度,四舍五入</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">num</span> <span class="pl-c1">=</span> <span class="pl-c1">3.1415</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">num</span><span class="pl-kos">.</span><span class="pl-en">toFixed</span><span class="pl-kos">(</span><span class="pl-c1">3</span><span class="pl-kos">)</span><span class="pl-kos">)</span> <span class="pl-c">// 3.142</span></pre></div>
+<h2>面向对象</h2>
+<p>前端语言主要使用面向过程(函数式编程)</p>
+<h3>5.1 编程思想</h3>
+<p>面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候再一个一个的依次调用就可以了。面向过程，就是按照我们分析好了的步骤，按照步骤解决问题. 函数式编程</p>
+<p>面向对象是把事务分解成为一个个对象，然后由对象之间分工与合作. 面向对象是以对象功能来划分问题，而不是步骤</p>
+<p>在面向对象程序开发思想中，每一个对象都是功能中心，具有明确分工。面向对象编程具有灵活、代码可复用、容易维护和开发的优点，更适合多人合作的大型软件项目。 面向对象的特性： 封装性, 继承性, 多态性.</p>
+<ul>
+<li>面向过程编程
+<ul>
+<li>优点：性能比面向对象高，适合跟硬件联系很紧密的东西，例如单片机就采用的面向过程编程。</li>
+<li>缺点：没有面向对象易维护、易复用、易扩展</li>
+</ul>
+</li>
+<li>面向对象编程
+<ul>
+<li>优点：易维护、易复用、易扩展，由于面向对象有封装、继承、多态性的特性，可以设计出低耦合的系统，使系统 更加灵活、更加易于维护</li>
+<li>缺点：性能比面向过程低</li>
+</ul>
+</li>
+</ul>
+<h3>5.2 构造函数</h3>
+<p>封装是面向对象思想中比较重要的一部分，js面向对象可以通过构造函数实现的封装。 同样的将变量和函数组合到了一起并能通过 this 实现数据的共享，所不同的是借助构造函数创建出来的实例对象之间是彼此不影响的, 因此存在浪费内存的问题</p>
+<details>
+<summary>note</summary>
+<ul>
+<li>构造函数体现了面向对象的封装特性</li>
+<li>构造函数实例创建的对象彼此独立、互不影响</li>
+</ul>
+</details>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">=</span> <span class="pl-s1">name</span><span class="pl-kos">,</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-s1">age</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-en">sayHi</span> <span class="pl-c1">=</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+        <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Hello world!'</span><span class="pl-kos">)</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">bob</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s">'bob'</span><span class="pl-kos">,</span> <span class="pl-c1">10</span><span class="pl-kos">)</span>
+<span class="pl-k">const</span> <span class="pl-s1">mike</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s">'mike'</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">bob</span><span class="pl-kos">.</span><span class="pl-c1">sayHi</span> <span class="pl-c1">===</span> <span class="pl-s1">mike</span><span class="pl-kos">.</span><span class="pl-c1">sayHi</span><span class="pl-kos">)</span> <span class="pl-c">// false </span>
+<span class="pl-c">// 这说明不同对象的方法占据了不同的内存空间,因此造成了内存浪费</span></pre></div>
+<h3>5.3 原型</h3>
+<h4>5.3.1 原型对象 <code class="notranslate">prototype</code></h4>
+<p>通过原型可以解决前面构造函数造成的内存浪费.</p>
+<p>构造函数通过原型分配的函数是所有对象所 共享的。 JavaScript 规定，每一个构造函数都有一个 prototype 属性，指向另一个对象，所以我们也称为原型对象.  这个对象可以挂载函数，对象实例化不会多次创建原型上函数，节约内存. 我们可以把那些不变的方法，直接定义在 prototype 对象上，这样所有对象的实例就可以共享这些方法。 构造函数和原型对象中的this 都指向 实例化的对象</p>
+<p>使用原型改进前面的构造函数:</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">,</span> <span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">name</span> <span class="pl-c1">=</span> <span class="pl-s1">name</span><span class="pl-kos">,</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">age</span> <span class="pl-c1">=</span> <span class="pl-s1">age</span>
+<span class="pl-kos">}</span>
+<span class="pl-v">User</span><span class="pl-kos">.</span><span class="pl-c1">prototype</span><span class="pl-kos">.</span><span class="pl-en">sayHi</span> <span class="pl-c1">=</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Hello world!'</span><span class="pl-kos">)</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-k">const</span> <span class="pl-s1">bob</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s">'bob'</span><span class="pl-kos">,</span> <span class="pl-c1">10</span><span class="pl-kos">)</span>
+<span class="pl-k">const</span> <span class="pl-s1">mike</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-s">'mike'</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">)</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">bob</span><span class="pl-kos">.</span><span class="pl-c1">sayHi</span> <span class="pl-c1">===</span> <span class="pl-s1">mike</span><span class="pl-kos">.</span><span class="pl-c1">sayHi</span><span class="pl-kos">)</span> <span class="pl-c">// true </span>
+<span class="pl-c">// 解决了以前写法造成的内存浪费</span></pre></div>
+<h4>5.3.2 constructor 属性</h4>
+<p>每个原型对象里面都有个<code class="notranslate">constructor</code> 属性（<code class="notranslate">constructor</code> 构造函数）. 作用：该属性指向该原型对象的构造函数</p>
+<p>使用场景：如果有多个对象的方法，我们可以给原型对象采取对象形式赋值.但是这样就会覆盖构造函数原型对象原来的内容，这样修改后的原型对象 <code class="notranslate">constructor</code> 就不再指向当前构造函数了.此时，我们可以在修改后的原型对象中，添加一个 <code class="notranslate">constructor</code> 指向原来的构造函数。</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">User</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span><span class="pl-kos">}</span>
+
+<span class="pl-c">// 为User构造函数添加方法</span>
+
+<span class="pl-c">// 追加方式添加</span>
+<span class="pl-c">// User.prototype.sayHi = function(){</span>
+<span class="pl-c">//     console.log('Hello World!')</span>
+<span class="pl-c">// }</span>
+<span class="pl-c">// User.prototype.hobby = function(){</span>
+<span class="pl-c">//     console.log('I like js!')</span>
+<span class="pl-c">// }</span>
+
+<span class="pl-c">// 修改原型添加</span>
+<span class="pl-v">User</span><span class="pl-kos">.</span><span class="pl-c1">prototype</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">constructor</span>: <span class="pl-v">User</span><span class="pl-kos">,</span> <span class="pl-c">// 如果没有这行代码,User.prototype.constructor将指向Object</span>
+    <span class="pl-en">sayHi</span>: <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+        <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Hello World!'</span><span class="pl-kos">)</span>
+    <span class="pl-kos">}</span><span class="pl-kos">,</span>
+    <span class="pl-en">hobby</span>: <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+        <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'I like js!'</span><span class="pl-kos">)</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-v">User</span><span class="pl-kos">.</span><span class="pl-c1">prototype</span><span class="pl-kos">.</span><span class="pl-c1">constructor</span><span class="pl-kos">)</span> <span class="pl-c">// 指向 User</span></pre></div>
+<h4>5.3.3 对象原型 <code class="notranslate">__proto__</code></h4>
+<p>构造函数可以创建实例对象，构造函数还有一个原型对象，一些公共的属性或者方法放到这个原型对象身上.</p>
+<p>对象都会有一个属性 <code class="notranslate">__proto__</code> 指向构造函数的 <code class="notranslate">prototype</code> 原型对象，之所以我们对象可以使用构造函数 <code class="notranslate">prototype</code> 原型对象的属性和方法，就是因为对象有 <code class="notranslate">__proto__</code> 原型的存在</p>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">__proto__</code> 是JS非标准属性</li>
+<li><code class="notranslate">[[prototype]]</code>和<code class="notranslate">__proto__</code>意义相同</li>
+<li>用来表明当前实例对象指向哪个原型对象 <code class="notranslate">prototype</code></li>
+<li><code class="notranslate">__proto__</code> 对象原型里面也有一个 <code class="notranslate">constructor</code> 属性，指向创建该实例对象的构造函数</li>
+</ul>
+</details>
+<details>
+<summary>note</summary>
+<ul>
+<li><code class="notranslate">prototype</code> 是 <strong>原型(原型对象)</strong> ,构造函数都自动有原型</li>
+<li><code class="notranslate">prototype</code> 原型 和 对象原型 <code class="notranslate">__proto__</code> 里面都有 <code class="notranslate">constructor</code> 属性, 这个属性都指向创建实例对象/原型的构造函数</li>
+<li><code class="notranslate">__proto__</code> 属性在实例对象里面,指向原型 <code class="notranslate">prototype</code></li>
+</ul>
+</details>
+<h4>5.3.4 原型继承</h4>
+<p>继承是面向对象编程的另一个特征，通过继承进一步提升代码封装的程度，JavaScript 中大多是借助原型对象实现继承的特性。</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">function</span> <span class="pl-v">Dog</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">eyes</span> <span class="pl-c1">=</span> <span class="pl-c1">2</span>
+    <span class="pl-smi">this</span><span class="pl-kos">.</span><span class="pl-c1">ears</span> <span class="pl-c1">=</span> <span class="pl-c1">2</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-c">// 继承Dog()</span>
+<span class="pl-k">function</span> <span class="pl-v">PetDog</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span><span class="pl-kos">}</span>
+<span class="pl-v">PetDog</span><span class="pl-kos">.</span><span class="pl-c1">prototype</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Dog</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+<span class="pl-v">PetDog</span><span class="pl-kos">.</span><span class="pl-c1">prototype</span><span class="pl-kos">.</span><span class="pl-c1">constructor</span> <span class="pl-c1">=</span> <span class="pl-v">PetDog</span>
+<span class="pl-c">// 为PetDog()定义新方法</span>
+<span class="pl-v">PetDog</span><span class="pl-kos">.</span><span class="pl-c1">prototype</span><span class="pl-kos">.</span><span class="pl-en">sit</span> <span class="pl-c1">=</span> <span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">'Sit down.'</span><span class="pl-kos">)</span>
+<span class="pl-kos">}</span></pre></div>
+<h4>5.3.5 原型链</h4>
+<p>基于原型对象的继承使得不同构造函数的原型对象关联在一起，并且这种关联的关系是一种链状的结构，我们将原型对象的链状结构关系称为原型链</p>
+<details>
+<summary>原型链-查找规则</summary>
+<ul>
+<li>当访问一个对象的属性（包括方法）时，首先查找这个对象自身有没有该属性。</li>
+<li>如果没有就查找它的原型（也就是 <code class="notranslate">__proto__</code> 指向的 <code class="notranslate">prototype</code> 原型对象）</li>
+<li>如果还没有就查找原型对象的原型（<code class="notranslate">Object</code>的原型对象）</li>
+<li>依此类推一直找到 <code class="notranslate">Object</code> 为止（null）</li>
+<li><code class="notranslate">__proto__</code> 对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线</li>
+<li>可以使用 <code class="notranslate">instanceof</code> 运算符用于检测构造函数的 <code class="notranslate">prototype</code> 属性是否出现在某个实例对象的原型链上</li>
+</ul>
+</details></div>
+    <nav class="in-series-list" aria-label="Series">
+      <h2>JavaScript 学习笔记</h2>
+      <ol>
+        <li><a href="https://interset-wq.github.io/post/80_6050835360.html">JavaScript 简介与变量</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050835695.html">数据类型与运算符</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050836027.html">分支与循环语句</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050836359.html">数组 Array</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050840619.html">函数：从基础到作用域</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050840909.html">对象与面向对象（OOP）</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050841189.html">解构赋值</a></li>
+        <li><a href="https://interset-wq.github.io/post/80_6050841541.html">作用域与实用技巧</a></li>
+      </ol>
+    </nav>
+    <nav class="in-series-pager" aria-label="Series pages">
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/80_6050840619.html">函数：从基础到作用域</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/80_6050841189.html">解构赋值</a>
+    </nav>
+  </article>
+<section class="in-comments-section">
+  <div class="in-comments-container" id="comments">
+    <script src="https://giscus.app/client.js"
+      data-repo="interset-wq/interset-wq.github.io"
+      data-repo-id="R_kgDOTWqpPQ"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOTWqpPc4DBFW-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+</section>  <div id="in-fab" class="in-fab"
+       data-toc-title="目录"
+       data-top-title="回到顶部"
+       data-bottom-title="下一页"></div>
+</main>
+  <footer class="in-site-footer" id="footer"><div class="in-footer-icons" id="footer-icons" data-copied="已复制">
+  <a class="in-nav-btn in-social" href="https://space.bilibili.com/3546586772670802" target="_blank" rel="noopener" title="Bilibili" aria-label="Bilibili"><svg fill="#00A1D6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bilibili</title><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg></a>
+  <a class="in-nav-btn in-social" href="mailto:intersetwq@gmail.com" target="_blank" rel="noopener" title="Email" aria-label="Email"><svg fill="#EA4335" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+  <button class="in-nav-btn in-social" type="button" title="QQ" aria-label="QQ" data-copy="2775055258"><svg fill="#1EBAFC" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>QQ</title><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg></button>
+  <button class="in-nav-btn in-social" type="button" title="WeChat" aria-label="WeChat" data-qrcode="https://interset-wq.github.io/assets/avatar.png"><svg fill="#07C160" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WeChat</title><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg></button>
+  <a class="in-nav-btn in-social" href="https://interset-wq.github.io/rss.xml" target="_blank" rel="noopener" title="RSS" aria-label="RSS"><svg fill="#FFA500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+  <a class="in-nav-btn in-social" href="https://github.com/interset-wq/interset-wq.github.io" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg fill="#181717" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+</div>
+<div class="in-footer-line" id="footer-copyright">
+  Copyright &copy; <span id="copyright-year"></span>
+  <a href="https://interset-wq.github.io">InterNote</a>
+</div>
+<div class="in-footer-powered" id="footer-powered">
+  <span id="run-days"></span>
+  <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
+</div>
+<div class="in-footer-built">构建部署于 2026-10-08 10:20:05</div>
+<script>
+  (function () {
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    var days = Math.floor(
+      (Date.now() - new Date('2026-09-30').getTime()) / 86400000
+    );
+    document.getElementById('run-days').textContent =
+      '网站运行 ' + days + ' 天 • ';
+
+    // [[social]] copy + qrcode actions. Everything is data-driven from the
+    // server-rendered buttons; with no such buttons this is a no-op.
+    var icons = document.getElementById('footer-icons');
+    if (!icons.querySelector('[data-copy], [data-qrcode]')) {
+      return;
+    }
+
+    var toast = document.createElement('div');
+    toast.className = 'in-social-toast';
+    toast.hidden = true;
+    document.body.appendChild(toast);
+    var toastTimer = null;
+    function showToast(text) {
+      toast.textContent = text;
+      toast.hidden = false;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.hidden = true; }, 1600);
+    }
+
+    var overlay = document.createElement('div');
+    overlay.className = 'in-social-qr';
+    overlay.hidden = true;
+    var img = document.createElement('img');
+    img.alt = '';
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
+    function closeOverlay() { overlay.hidden = true; }
+    overlay.addEventListener('click', closeOverlay);
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') { closeOverlay(); }
+    });
+
+    icons.addEventListener('click', function (event) {
+      var button = event.target.closest('[data-copy], [data-qrcode]');
+      if (!button) { return; }
+      if (button.dataset.copy) {
+        navigator.clipboard.writeText(button.dataset.copy).then(function () {
+          showToast(icons.dataset.copied || 'Copied!');
+        });
+      } else if (button.dataset.qrcode) {
+        img.src = button.dataset.qrcode;
+        overlay.hidden = false;
+      }
+    });
+  })();
+</script></footer>
+  <script src="https://interset-wq.github.io/plugins/theme.js"></script>
+  <script id="internote-search" src="https://interset-wq.github.io/plugins/search.js"
+    data-index-url="https://interset-wq.github.io/search-index.json"
+    data-placeholder="搜索"
+    data-no-results="未找到结果"></script>
+  <script src="https://interset-wq.github.io/plugins/giscus.js"></script>
+  <script src="https://interset-wq.github.io/plugins/toc.js"></script>
+  <script src="https://interset-wq.github.io/plugins/fab.js"></script>
+  <script src="https://interset-wq.github.io/plugins/lightbox.js"></script>
+  <script src="https://interset-wq.github.io/plugins/code-copy.js"></script>
+  <script src="https://interset-wq.github.io/plugins/mermaid.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      var bar = document.getElementById('in-progress');
+      var body = document.querySelector('.in-post-body');
+      function update() {
+        var start = body.offsetTop - 80;
+        var end = body.offsetTop + body.offsetHeight - window.innerHeight + 40;
+        var t = (window.scrollY - start) / Math.max(end - start, 1);
+        bar.style.transform = 'scaleX(' + Math.min(Math.max(t, 0), 1) + ')';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    })();
+  </script>
+  
+</body>
+</html>

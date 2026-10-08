@@ -21,12 +21,12 @@
     })();
   </script>
   <meta name="description" content="My notes on everything.">
-<meta property="og:title" content="数组 Array">
+<meta property="og:title" content="解构赋值">
 <meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/80_6050836359.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/80_6050841189.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>数组 Array</title>
+<title>解构赋值</title>
   <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
   
 <style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}
@@ -46,7 +46,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">数组 Array</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">解构赋值</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -58,7 +58,7 @@
   <main class="in-site-main" id="content">  <article>
     <nav class="in-series-crumb" aria-label="Series">
       <a href="https://interset-wq.github.io/post/80.html">JavaScript 学习笔记</a>
-      <span>4 / 8</span>
+      <span>7 / 8</span>
     </nav>
     <div class="in-post-meta">
       <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
@@ -82,194 +82,147 @@
     </nav>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><p>使用let声明一个数组的两种方式：</p>
-<ul>
-<li><code class="notranslate">let myArr = [元素1, 元素2, 元素3]</code></li>
-<li><code class="notranslate">let myArr = new Array(元素1, 元素2, 元素3)</code></li>
-</ul>
-<p>和python中的列表类似，不过下标索引只支持正向索引。通过数组的 <code class="notranslate">length</code> 属性，可以获取数组的长度。</p>
-<p>使用for循环遍历数组</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// let arr = new Array('js', 'html', 'css')</span>
-<span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
-<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span><span class="pl-kos">;</span> <span class="pl-s1">i</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-c1">length</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-en">alert</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span><span class="pl-kos">)</span>
-<span class="pl-kos">}</span></pre></div>
+    <div class="in-post-body markdown-body"><h3>3.1 数组解构</h3>
+<p>解构赋值是一种快速为变量赋值的简洁语法，本质上仍然是为变量赋值。类似于 Python 使用元组同时为多个变量赋值.</p>
+<p>基本语法： 赋值运算符 <code class="notranslate">=</code> 左侧的 <code class="notranslate">[]</code> 用于包裹批量声明变量，右侧数组的元素值将被赋值给左侧的变量. 变量的顺序对应数组单元值的位置依次进行赋值操作</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">5</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">]</span>
+<span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`a=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">a</span><span class="pl-kos">}</span></span>, b=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">b</span><span class="pl-kos">}</span></span>, c=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">c</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// a=5, b=3, c=6</span></pre></div>
+<p>可以使用这种方法交换两个变量的值</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">5</span>
+<span class="pl-k">let</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">7</span><span class="pl-kos">;</span> <span class="pl-c">// 此处的";"必不可少,因为当方括号位于句首时,前面必须要有结束符号";",否则会报错</span>
+<span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">a</span><span class="pl-kos">]</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s">`a=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">a</span><span class="pl-kos">}</span></span>, b=<span class="pl-s1"><span class="pl-kos">${</span><span class="pl-s1">b</span><span class="pl-kos">}</span></span>`</span><span class="pl-kos">)</span> <span class="pl-c">// a=7, b=5</span></pre></div>
 <details>
-<summary>算法——寻找数组中的最大值和最小值</summary>
-<p>寻找数组[2, 6, 1, 77, 52, 25, 7]中的最大值和最小值。</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">6</span><span class="pl-kos">,</span> <span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">77</span><span class="pl-kos">,</span> <span class="pl-c1">52</span><span class="pl-kos">,</span> <span class="pl-c1">25</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">]</span>
-<span class="pl-c">// 第一步：假设下标为0的元素就是最大值，也是最小值</span>
-<span class="pl-k">let</span> <span class="pl-s1">max</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span>
-<span class="pl-k">let</span> <span class="pl-s1">min</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span>
-<span class="pl-c">// 第二步：for循环遍历，让假定的最值依次和其他元素比较</span>
-<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span><span class="pl-kos">;</span> <span class="pl-s1">i</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-c1">length</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-c">// 第三步：如果找到比假定的最大值还要大的数，将这个数假定为最大值</span>
-    <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span> <span class="pl-c1">&gt;</span> <span class="pl-s1">max</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-        <span class="pl-s1">max</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span>
+<summary>js 前面必须加分号情况</summary>
+<ul>
+<li>
+<p>立即执行函数</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 写法一</span>
+<span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span><span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// 写法二</span>
+<span class="pl-kos">;</span><span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-en">fn</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span><span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">(</span><span class="pl-kos">)</span></pre></div>
+</li>
+<li>
+<p>数组解构</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">;</span><span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">a</span><span class="pl-kos">]</span></pre></div>
+</li>
+</ul>
+</details>
+<p>变量的数量大于数组元素值数量时，多余的变量将被赋值为 <code class="notranslate">undefined</code></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">]</span>
+<span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-c">// c</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// undefined</span></pre></div>
+<p>变量的数量小于数组元素值数量时，多余的元素值不分配,或使用剩余参数全分配给最后一个变量</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
+
+<span class="pl-c">// 多余的数组元素不分配</span>
+<span class="pl-c">// const [a, b, c] = arr</span>
+<span class="pl-c">// console.log(a) // py</span>
+<span class="pl-c">// console.log(b) // c</span>
+<span class="pl-c">// console.log(c) // js</span>
+
+<span class="pl-c">// 将剩余数组元素分配给最后一个变量</span>
+<span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">,</span> ...<span class="pl-s1">c</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-c">// c</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// ['js', 'html', 'css']</span></pre></div>
+<p>设置默认值,防止有 <code class="notranslate">undefined</code></p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 设置默认值,防止出现undefined</span>
+<span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">]</span>
+<span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-c1">=</span><span class="pl-s">'cpp'</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-c1">=</span><span class="pl-s">'cpp'</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-c1">=</span><span class="pl-s">'cpp'</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-c">// c</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// cpp</span></pre></div>
+<p>故意跳过某些值</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 故意跳过 'c'</span>
+<span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">]</span>
+<span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">,</span> <span class="pl-s1">d</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// js</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">d</span><span class="pl-kos">)</span> <span class="pl-c">// html</span></pre></div>
+<p>多维数组</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-kos">[</span><span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">]</span><span class="pl-kos">]</span>
+
+<span class="pl-c">// const [a, b] = arr</span>
+<span class="pl-c">// console.log(a) // py</span>
+<span class="pl-c">// console.log(b) // ['js', 'html']</span>
+
+<span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-kos">[</span><span class="pl-s1">b</span><span class="pl-kos">,</span> <span class="pl-s1">c</span><span class="pl-kos">]</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">)</span> <span class="pl-c">// py</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-c">// js</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">c</span><span class="pl-kos">)</span> <span class="pl-c">// html</span></pre></div>
+<h3>3.2 对象解构</h3>
+<p>对象解构是将对象属性和方法快速批量赋值给一系列变量的简洁语法</p>
+<p>基本语法：</p>
+<ul>
+<li>赋值运算符 <code class="notranslate">=</code> 左侧的 <code class="notranslate">{}</code> 用于包裹需要批量声明的变量，右侧对象的属性值将被赋值给左侧的变量</li>
+<li>对象属性的值将被赋值给与属性名相同的变量</li>
+<li>注意解构的变量名不要和外面的变量名冲突否则报错</li>
+<li>对象中找不到与变量名一致的属性时变量值为 <code class="notranslate">undefined</code></li>
+</ul>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
+<span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
+<span class="pl-kos">}</span>
+
+<span class="pl-c">// 对象解构</span>
+<span class="pl-c">// const {name, age} = user</span>
+<span class="pl-c">// console.log(name) // wq</span>
+<span class="pl-c">// console.log(age) // 18</span>
+
+<span class="pl-c">// 对象解构,并通过':'自定义变量名</span>
+<span class="pl-k">const</span> <span class="pl-kos">{</span><span class="pl-c1">name</span>: <span class="pl-s1">uname</span><span class="pl-kos">,</span> age<span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-s1">user</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">uname</span><span class="pl-kos">)</span> <span class="pl-c">// wq</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-c">// 18</span></pre></div>
+<p>对数组对象进行对象解构:</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个数组对象</span>
+<span class="pl-k">const</span> <span class="pl-s1">user</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span>
+    <span class="pl-kos">{</span>
+        <span class="pl-c1">name</span>: <span class="pl-s">'wq'</span><span class="pl-kos">,</span>
+        <span class="pl-c1">age</span>: <span class="pl-c1">18</span>
     <span class="pl-kos">}</span>
-    <span class="pl-c">// 第三步：如果找到比假定的最小值还要小的数，将这个数假定为最小值</span>
-    <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">min</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-        <span class="pl-s1">min</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">i</span><span class="pl-kos">]</span>
+<span class="pl-kos">]</span>
+
+<span class="pl-c">// 对象解构</span>
+<span class="pl-k">const</span> <span class="pl-kos">[</span><span class="pl-kos">{</span>name<span class="pl-kos">,</span> age<span class="pl-kos">}</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">user</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">name</span><span class="pl-kos">)</span> <span class="pl-c">// wq</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">age</span><span class="pl-kos">)</span> <span class="pl-c">// 18</span></pre></div>
+<p>多级对象解构:</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
+<span class="pl-k">const</span> <span class="pl-s1">lang</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">msg</span>: <span class="pl-s">'Hello world!'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">h5</span>: <span class="pl-kos">{</span>
+        <span class="pl-c1">body</span>: <span class="pl-s">'html'</span><span class="pl-kos">,</span>
+        <span class="pl-c1">style</span>: <span class="pl-s">'css'</span><span class="pl-kos">,</span>
+        <span class="pl-c1">action</span>: <span class="pl-s">'js'</span>
     <span class="pl-kos">}</span>
 <span class="pl-kos">}</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">max</span><span class="pl-kos">)</span> <span class="pl-c">// 77</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">min</span><span class="pl-kos">)</span> <span class="pl-c">// 1</span></pre></div>
-</details>
-<p>操作数组：</p>
-<ul>
-<li>重新赋值 arr[i] = 新值</li>
-<li>在末尾追加元素 <code class="notranslate">arr.push('元素1', '元素2', '元素3')</code> 方法，在数组末尾追加一个或多个元素</li>
-<li>在开头插入元素 <code class="notranslate">arr.unshift('元素1', '元素2', '元素3')</code> 方法，在数组开头插入一个或多个元素，返回新数组长度</li>
-<li>删除元素
-<ul>
-<li>arr.pop() 删除最后一个元素，返回这个被删除的元素</li>
-<li>arr.shift() 删除第一个元素，返回这个被删除的元素</li>
-<li>arr.splice(start, deleteCount) 其中start参数表示开始删除位置的下标，可选参数deleteCount表示删除元素的个数，此方法从start下标开始，删除deleteCount个元素，未传入deleteCount时，删除之后的所有元素</li>
-</ul>
-</li>
-<li>排序 arr.sort() 数组元素从小到大排序，此操作会改变原数组
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 默认，从小到大排序</span>
-<span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">sort</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-k">return</span> <span class="pl-s1">a</span> <span class="pl-c1">-</span> <span class="pl-s1">b</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span>
-<span class="pl-c">// 从大到小排序</span>
-<span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">sort</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">a</span><span class="pl-kos">,</span> <span class="pl-s1">b</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-k">return</span> <span class="pl-s1">b</span> <span class="pl-c1">-</span> <span class="pl-s1">a</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
-</li>
-</ul>
-<details>
-<summary>算法——冒泡排序</summary>
-<p>将数组[5, 4, 3, 2, 1]中的元素按照从小到大排序：</p>
-<p>冒泡排序依次将最大的书往右边移动，每执行一趟，就会有一个数移动到最右侧。{==|==} 右侧是已经排好了的数字。</p>
-<p><strong>分析：</strong></p>
-<ul>
-<li>原顺序 ++5++ ++4++ ++3++ ++2++ ++1++</li>
-<li>第0趟（需要比较4次）:
-<ul>
-<li>第0次比较 ++4++ ++5++ ++3++ ++2++ ++1++ {==|==}</li>
-<li>第1次比较 ++4++ ++3++ ++5++ ++2++ ++1++ {==|==}</li>
-<li>第2次比较 ++4++ ++3++ ++2++ ++5++ ++1++ {==|==}</li>
-<li>第3次比较 ++4++ ++3++ ++2++ ++1++ ++5++ {==|==}</li>
-</ul>
-</li>
-<li>第1趟（需要比较3次）：
-<ul>
-<li>第0次比较 ++3++ ++4++ ++2++ ++1++ {==|==} ++5++</li>
-<li>第1次比较 ++3++ ++2++ ++4++ ++1++ {==|==} ++5++</li>
-<li>第2次比较 ++3++ ++2++ ++1++ ++4++ {==|==} ++5++</li>
-</ul>
-</li>
-<li>第2趟（需要比较2次）：
-<ul>
-<li>第0次比较 ++2++ ++3++ ++1++ {==|==} ++4++ ++5++</li>
-<li>第1次比较 ++2++ ++1++ ++3++ {==|==} ++4++ ++5++</li>
-</ul>
-</li>
-<li>第3趟（需要比较1次）：
-<ul>
-<li>第0次比较 ++1++ ++2++ {==|==} ++3++ ++4++ ++5++</li>
-</ul>
-</li>
-</ul>
-<p>第一步：外层for循环（趟数是4趟，需要循环4次）数组总长度arr.length是5，因此循环终止条件是arr.length-1</p>
-<pre class="notranslate"><code class="notranslate">for (let i = 0; i &lt; arr.length-1; i++) {
-    内层for循环
-}
-</code></pre>
-<p>第二步：内层for循环（每趟需要比较的次数，需要比较 arr.length-1-趟序号 次）</p>
-<pre class="notranslate"><code class="notranslate">for (let j = 0; j &lt; arr.length-i-1; j++) {
-    相邻两数，如果左大于右，交换两数的值
-}
-</code></pre>
-<p>第三步：交换两个数的值</p>
-<pre class="notranslate"><code class="notranslate">if (arr[j] &gt; arr[j + 1]) {
-    let t = arr[j]
-    arr[j] = arr[j + 1]
-    arr[j + 1] = t
-}
-</code></pre>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">let</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">5</span><span class="pl-kos">,</span> <span class="pl-c1">4</span><span class="pl-kos">,</span> <span class="pl-c1">3</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">1</span><span class="pl-kos">]</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// [5, 4, 3, 2, 1]</span>
 
-<span class="pl-c">// 将此数组元素从小到大排序</span>
-<span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">i</span><span class="pl-c1">=</span><span class="pl-c1">0</span><span class="pl-kos">;</span> <span class="pl-s1">i</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-c1">length</span><span class="pl-c1">-</span><span class="pl-c1">1</span><span class="pl-kos">;</span> <span class="pl-s1">i</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-k">for</span> <span class="pl-kos">(</span><span class="pl-k">let</span> <span class="pl-s1">j</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span><span class="pl-kos">;</span> <span class="pl-s1">j</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-c1">length</span><span class="pl-c1">-</span><span class="pl-s1">i</span><span class="pl-c1">-</span><span class="pl-c1">1</span><span class="pl-kos">;</span> <span class="pl-s1">j</span><span class="pl-c1">++</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-        <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">j</span><span class="pl-kos">]</span> <span class="pl-c1">&gt;</span> <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">j</span><span class="pl-c1">+</span><span class="pl-c1">1</span><span class="pl-kos">]</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-            <span class="pl-k">let</span> <span class="pl-s1">t</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">j</span><span class="pl-kos">]</span>
-            <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">j</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">j</span><span class="pl-c1">+</span><span class="pl-c1">1</span><span class="pl-kos">]</span>
-            <span class="pl-s1">arr</span><span class="pl-kos">[</span><span class="pl-s1">j</span><span class="pl-c1">+</span><span class="pl-c1">1</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-s1">t</span>
-        <span class="pl-kos">}</span>
+<span class="pl-c">// 对象解构</span>
+<span class="pl-k">const</span> <span class="pl-kos">{</span>msg<span class="pl-kos">,</span> <span class="pl-c1">h5</span>: <span class="pl-kos">{</span>body<span class="pl-kos">,</span> style<span class="pl-kos">,</span> action<span class="pl-kos">}</span><span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-s1">lang</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">msg</span><span class="pl-kos">)</span> <span class="pl-c">// Hello world!</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">body</span><span class="pl-kos">)</span> <span class="pl-c">// html</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">style</span><span class="pl-kos">)</span> <span class="pl-c">// css</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">action</span><span class="pl-kos">)</span> <span class="pl-c">// js</span></pre></div>
+<p>可以根据自己的实际需要进行对象解构:</p>
+<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-c">// 创建一个对象</span>
+<span class="pl-k">const</span> <span class="pl-s1">lang</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">msg</span>: <span class="pl-s">'Hello world!'</span><span class="pl-kos">,</span>
+    <span class="pl-c1">h5</span>: <span class="pl-kos">{</span>
+        <span class="pl-c1">body</span>: <span class="pl-s">'html'</span><span class="pl-kos">,</span>
+        <span class="pl-c1">style</span>: <span class="pl-s">'css'</span><span class="pl-kos">,</span>
+        <span class="pl-c1">action</span>: <span class="pl-s">'js'</span>
     <span class="pl-kos">}</span>
 <span class="pl-kos">}</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">arr</span><span class="pl-kos">)</span> <span class="pl-c">// [1, 2, 3, 4, 5]</span></pre></div>
-</details>
-<details>
-<summary>map方法(常用)</summary>
-<p>数组的 <code class="notranslate">.map(function (item, index) {})</code> 方法, 类似于python列表推导式,可以用于产生新数组. 也类似于python列表遍历的 <code class="notranslate">enumerate()</code> 函数,可以同时遍历数组的元素和下标(但是这种遍历方法不推荐使用,因为 <code class="notranslate">.map()</code> 方法是用来产生新元组的).</p>
-<p>语法:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
-<span class="pl-k">const</span> <span class="pl-s1">newArr</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">map</span><span class="pl-kos">(</span><span class="pl-k">function</span> <span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-c">// 遍历数组,依次输出数组元素和下标</span>
-    <span class="pl-k">return</span> <span class="pl-s1">item</span> <span class="pl-c1">+</span> <span class="pl-s">'语言'</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr</span><span class="pl-kos">)</span> <span class="pl-c">// ['py语言', 'js语言', 'html语言', 'css语言']</span></pre></div>
-</details>
-<details>
-<summary>.join()方法</summary>
-<p>数组的 <code class="notranslate">.join()</code>  可以用来将数组中的元素拼接为一个字符串, 类似于python中的 <code class="notranslate">','.join(list)</code> 方法,只不过js中的 <code class="notranslate">.join()</code> 不传参时,相当于传入了默认值 <code class="notranslate">','</code></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'html'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
-<span class="pl-k">const</span> <span class="pl-s1">newArr1</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">join</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr1</span><span class="pl-kos">)</span> <span class="pl-c">// py,js,html,css</span>
-<span class="pl-k">const</span> <span class="pl-s1">newArr2</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">join</span><span class="pl-kos">(</span><span class="pl-s">''</span><span class="pl-kos">)</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr2</span><span class="pl-kos">)</span> <span class="pl-c">// pyjshtmlcss</span></pre></div>
-</details>
-<details>
-<summary>.forEach()方法</summary>
-<p><code class="notranslate">.forEach()</code> 方法用于调用数组的每个元素，并将元素传递给回调函数. 这个方法没有返回值,它的作用就是遍历数组, 类似于python的<code class="notranslate">enumerate()</code>函数</p>
-<p>语法:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">forEach</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-c">// 函数体</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span>
 
-<span class="pl-c">// 或</span>
-<span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">forEach</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-c">// 函数体</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
-<p><strong>Python</strong></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">mylist</span> <span class="pl-c1">=</span> [<span class="pl-s">'py'</span>, <span class="pl-s">'c'</span>, <span class="pl-s">'js'</span>, <span class="pl-s">'css'</span>]
-<span class="pl-k">for</span> <span class="pl-s1">index</span>, <span class="pl-s1">item</span> <span class="pl-c1">in</span> <span class="pl-en">enumerate</span>(<span class="pl-s1">mylist</span>):
-    <span class="pl-en">print</span>(<span class="pl-s1">index</span>) <span class="pl-c"># 遍历下标</span>
-    <span class="pl-en">print</span>(<span class="pl-s1">item</span>) <span class="pl-c"># 遍历列表</span></pre></div>
-<p><strong>JavaScript</strong></p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-s">'py'</span><span class="pl-kos">,</span> <span class="pl-s">'c'</span><span class="pl-kos">,</span> <span class="pl-s">'js'</span><span class="pl-kos">,</span> <span class="pl-s">'css'</span><span class="pl-kos">]</span>
-
-<span class="pl-c">// forEach可以同时遍历数组元素和下标</span>
-<span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">forEach</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
-    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">)</span> <span class="pl-c">// 遍历数组</span>
-    <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">index</span><span class="pl-kos">)</span> <span class="pl-c">// 遍历下标</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
-</details>
-<details>
-<summary>.filter()方法</summary>
-<p><code class="notranslate">.filter()</code> 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素. 用于筛选数组符合条件的元素，并返回筛选之后元素的新数组</p>
-<p>语法:</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
-    <span class="pl-k">return</span> <span class="pl-s1">筛选条件</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span>
-
-<span class="pl-c">// 或</span>
-<span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
-    <span class="pl-k">return</span> <span class="pl-s1">筛选条件</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span></pre></div>
-<p>返回值：返回数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组. 因为返回新数组，所以不会影响原数组</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-s1">arr</span> <span class="pl-c1">=</span> <span class="pl-kos">[</span><span class="pl-c1">51</span><span class="pl-kos">,</span> <span class="pl-c1">2</span><span class="pl-kos">,</span> <span class="pl-c1">7</span><span class="pl-kos">,</span> <span class="pl-c1">15</span><span class="pl-kos">,</span> <span class="pl-c1">37</span><span class="pl-kos">,</span> <span class="pl-c1">20</span><span class="pl-kos">]</span>
-
-<span class="pl-k">const</span> <span class="pl-s1">newArr</span> <span class="pl-c1">=</span> <span class="pl-s1">arr</span><span class="pl-kos">.</span><span class="pl-en">filter</span><span class="pl-kos">(</span><span class="pl-k">function</span><span class="pl-kos">(</span><span class="pl-s1">item</span><span class="pl-kos">,</span> <span class="pl-s1">index</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
-    <span class="pl-k">return</span> <span class="pl-s1">item</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">20</span>
-<span class="pl-kos">}</span><span class="pl-kos">)</span>
-<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">newArr</span><span class="pl-kos">)</span> <span class="pl-c">// [51, 37]</span></pre></div>
-</details></div>
+<span class="pl-c">// 对象解构</span>
+<span class="pl-k">const</span> <span class="pl-kos">{</span>h5<span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-s1">lang</span>
+<span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">log</span><span class="pl-kos">(</span><span class="pl-s1">h5</span><span class="pl-kos">)</span> <span class="pl-c">// {body: 'html', style: 'css', action: 'js'}</span></pre></div></div>
     <nav class="in-series-list" aria-label="Series">
       <h2>JavaScript 学习笔记</h2>
       <ol>
@@ -284,8 +237,8 @@
       </ol>
     </nav>
     <nav class="in-series-pager" aria-label="Series pages">
-      <a class="in-series-prev" href="https://interset-wq.github.io/post/80_6050836027.html">分支与循环语句</a>
-      <a class="in-series-next" href="https://interset-wq.github.io/post/80_6050840619.html">函数：从基础到作用域</a>
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/80_6050840909.html">对象与面向对象（OOP）</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/80_6050841541.html">作用域与实用技巧</a>
     </nav>
   </article>
 <section class="in-comments-section">
