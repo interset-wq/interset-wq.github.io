@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Thu, 08 Oct 2026 01:01:05 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>InterNote</title><link>https://interset-wq.github.io</link><description>My notes on everything.</description><copyright>InterNote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>avatar</title><link>https://interset-wq.github.io</link></image><lastBuildDate>Thu, 08 Oct 2026 01:52:22 +0000</lastBuildDate><managingEditor>InterNote</managingEditor><ttl>60</ttl><webMaster>InterNote</webMaster><item><title>关于</title><link>https://interset-wq.github.io/post/4.html</link><description>## 关于本站
 
 这是使用 [InterNote](https://github.com/interset-wq/InterNote) 搭建的个人博客，以 GitHub Issue 为写作入口。</description><guid isPermaLink="true">https://interset-wq.github.io/post/4.html</guid><pubDate>Wed, 30 Sep 2026 01:36:19 +0000</pubDate></item><item><title>README</title><link>https://interset-wq.github.io/post/79.html</link><description>## 一、JavaScript简介&#13;
 &#13;
@@ -2151,33 +2151,7 @@ step2 打开菜单栏的 `工具` 选项卡&#13;
 思路:把装饰层看做是一面墙,并紧贴外墙&#13;
 &#13;
 ![3-15.png](https://s2.loli.net/2025/05/22/bZgYC5MNS2HcnUi.png)&#13;
-。</description><guid isPermaLink="true">https://interset-wq.github.io/post/36.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit 操作技巧</title><link>https://interset-wq.github.io/post/37.html</link><description>✏️ `本文创建于2025-5-10`&#13;
-&#13;
-## 一、常用命令&#13;
-&#13;
-- `RP` 放置参考平面&#13;
-- `HH` 隐藏&#13;
-- `HI` 隔离显示，只显示选中的图元&#13;
-- `HR` 全显示，取消隐藏&#13;
-- `DI` 尺寸标注&#13;
-- `EL` 高程标注&#13;
-- `LL` 绘制标高&#13;
-- `LI` 放置线&#13;
-- `TR` 修剪&#13;
-- `SL` 打断&#13;
-- `DL` 详图线&#13;
-&#13;
-## 二、绘制轴网&#13;
-&#13;
-参考这位大佬是视频：&#13;
-&#13;
-&lt;iframe src='//player.bilibili.com/player.html?isOutside=true&amp;aid=114846536306689&amp;bvid=BV14FuNzcEeS&amp;cid=31019960957&amp;p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'&gt;&lt;/iframe&gt;&#13;
-&#13;
-针对不同情况，有以下两种方式快速绘制：&#13;
-&#13;
-### 2.1 复制CO&#13;
-&#13;
-如果没有连续相同间距的轴线时，直接使用 `CO` 复制命令，并且勾选 `多个` 复选框。</description><guid isPermaLink="true">https://interset-wq.github.io/post/37.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit 天正插件TR</title><link>https://interset-wq.github.io/post/38.html</link><description>✏️ `本文创建于2025-6-24`&#13;
+。</description><guid isPermaLink="true">https://interset-wq.github.io/post/36.html</guid><pubDate>Thu, 31 Jul 2025 02:18:38 +0000</pubDate></item><item><title>Revit 天正插件TR</title><link>https://interset-wq.github.io/post/38.html</link><description>✏️ `本文创建于2025-6-24`&#13;
 &#13;
 ## 天正建筑 选项卡&#13;
 &#13;
