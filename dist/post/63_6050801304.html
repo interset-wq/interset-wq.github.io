@@ -21,15 +21,15 @@
     })();
   </script>
   <meta name="description" content="My notes on everything.">
-<meta property="og:title" content="DAY 4 运行命令">
+<meta property="og:title" content="管道：连接命令">
 <meta property="og:description" content="My notes on everything.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://interset-wq.github.io/post/63_6050799741.html">
+<meta property="og:url" content="https://interset-wq.github.io/post/63_6050801304.html">
 <meta property="og:image" content="https://interset-wq.github.io/assets/avatar.png">
-<title>DAY 4 运行命令</title>
+<title>管道：连接命令</title>
   <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet">
   
-<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}
   <style>
     .in-progress {
       position: fixed;
@@ -46,7 +46,7 @@
   </style>
 </style></head>
 <body>
-  <header class="in-site-header" id="header">  <h1 class="in-post-title">DAY 4 运行命令</h1>
+  <header class="in-site-header" id="header">  <h1 class="in-post-title">管道：连接命令</h1>
 <nav class="in-site-nav" aria-label="Post navigation">    <a class="in-nav-btn" href="https://interset-wq.github.io" title="首页" aria-label="首页"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z" fill-rule="evenodd"></path></svg></a>
     <a class="in-nav-btn" href="https://interset-wq.github.io/tag.html" title="标签" aria-label="标签"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill-rule="evenodd"></path></svg></a>
     <button class="in-nav-btn" id="in-search-open" type="button" title="搜索" aria-label="搜索"><svg class="octicon " width="16" height="16" aria-hidden="true"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" fill-rule="evenodd"></path></svg></button>
@@ -58,7 +58,7 @@
   <main class="in-site-main" id="content">  <article>
     <nav class="in-series-crumb" aria-label="Series">
       <a href="https://interset-wq.github.io/post/63.html">PowerShell 学习笔记</a>
-      <span>4 / 10</span>
+      <span>6 / 10</span>
     </nav>
     <div class="in-post-meta">
       <span class="Label" style="background-color:#1f883d;color:#fff">2026-10-08</span>
@@ -84,62 +84,107 @@
     </nav>
     <nav class="in-toc" id="in-toc" data-toc-title="目录" data-toc-top="回到顶部" aria-label="目录"></nav>
     <div class="in-progress" id="in-progress"></div>
-    <div class="in-post-body markdown-body"><h2>剖析一个命令</h2>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-EventLog</span> <span class="pl-k">-</span>LogName Security <span class="pl-k">-</span>ComputerName WIN8<span class="pl-k">,</span>Server1 <span class="pl-k">-</span>Verbose</pre></div>
-<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>这个命令在新版powershell中的写法已经发生了改变，与这种写法有较大差异</p>
-</div>
-<p>分析这个命令：</p>
-<ul>
-<li><code class="notranslate">Get-EventLog</code> 是cmdlet，powershell cmdlet总是以 <strong>动词+名词</strong> 形式命令</li>
-<li><code class="notranslate">-LogName Security</code> 是参数1，参数名是 <code class="notranslate">-LogName</code>，赋值为 <code class="notranslate">Security</code>，如果赋值的字符串中有空格需要使用引号包裹</li>
-<li><code class="notranslate">-ComputerName WIN8,Server1</code> 是参数2，参数名是 <code class="notranslate">ComputerName</code>，以分隔列表的方式给它赋了2个值，<code class="notranslate">WIN8</code> 和 <code class="notranslate">Server1</code></li>
-<li><code class="notranslate">-Verbose</code> 是开关参数，无需赋值，只需要指定参数即可</li>
-</ul>
-<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
-<ul>
-<li>cmdlet与参数1之间必须要有空格分隔</li>
-<li>参数名总是以 <code class="notranslate">-</code> 开头</li>
-<li>参数名之间需要使用空格分隔，多个参数值之间也必须有空格</li>
-<li><code class="notranslate">-</code> 与参数名之间没有空格</li>
-<li>powershell不区分大小写</li>
-</ul>
-</div>
-<h2>相关术语</h2>
-<ul>
-<li>cmdlet，即command-let，是一个原生的powershell命令行工具，这是powershell专用术语，表示powershell中的命令</li>
-<li>函数，和cmdlet类似，但不以 <code class="notranslate">.NET</code> 语言编写，而是以powershell脚本编写而成</li>
-<li>工作流，是指嵌入powershell的工作流执行系统的一类特殊函数</li>
-<li>应用程序，是任意类型的外部可执行程序，包括 <code class="notranslate">PING</code> <code class="notranslate">Ipconfig</code> 等命令行工具</li>
-<li>命令，是一个通用术语，上面介绍的cmdlet，函数，工作流，应用程序都可以称为命令</li>
-</ul>
-<h2>命名规范</h2>
-<p>以 <code class="notranslate">动词-名词单数</code> 的格式命名，使用的动词需要在 <code class="notranslate">Get-Verb</code> 返回的列表中，以保证命名的规范性，名词随意</p>
-<h2>命令的别名（命令的昵称）</h2>
-<p>别名一般是命令的缩写形式，有些命令实在是太长了，因此别名可以解决命令太长容易输入错误的问题。别名仅仅是命令的一个昵称，无法包含任何预定义的参数</p>
-<p>通过 <code class="notranslate">Get-Alias -Definition 命令名</code> 可以查看命令的别名</p>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Alias</span> <span class="pl-k">-</span>Definition <span class="pl-c1">Get-Service</span>
+    <div class="in-post-body markdown-body"><h2>通过管道连接命令</h2>
+<p>powershell通过管道 <code class="notranslate">|</code> 连接命令。管道通过传输一个命令，把其输出作为另一个cmdlet的输入，使第二个命令可以通过第一个的结果作为输入并联合起来运行。</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> Dir <span class="pl-k">|</span> More
 
-CommandType     Name
-<span class="pl-k">-----------</span>     <span class="pl-k">----</span>
-Alias           gsv <span class="pl-k">-</span><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Service</span></pre></div>
-<h2>参数的别名</h2>
+
+    目录: C:\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+<span class="pl-k">----</span>                 <span class="pl-k">-------------</span>         <span class="pl-k">------</span> <span class="pl-k">----</span>
+d<span class="pl-k">-----</span>         <span class="pl-c1">2025</span><span class="pl-k">/</span><span class="pl-c1">7</span><span class="pl-k">/</span><span class="pl-c1">29</span>     <span class="pl-c1">19</span>:<span class="pl-c1">13</span>                新建文件夹
+<span class="pl-k">-</span>a<span class="pl-k">----</span>         <span class="pl-c1">2025</span><span class="pl-k">/</span><span class="pl-c1">7</span><span class="pl-k">/</span><span class="pl-c1">10</span>     <span class="pl-c1">10</span>:<span class="pl-c1">12</span>            <span class="pl-c1">601</span> FinalShell.lnk
+<span class="pl-k">-</span>a<span class="pl-k">----</span>         <span class="pl-c1">2025</span><span class="pl-k">/</span><span class="pl-c1">7</span><span class="pl-k">/</span><span class="pl-c1">31</span>     <span class="pl-c1">10</span>:<span class="pl-c1">24</span>       <span class="pl-c1">20130571</span> progit.pdf
+<span class="pl-k">-</span>a<span class="pl-k">----</span>         <span class="pl-c1">2025</span><span class="pl-k">/</span><span class="pl-c1">7</span><span class="pl-k">/</span><span class="pl-c1">24</span>     <span class="pl-c1">17</span>:<span class="pl-c1">43</span>            <span class="pl-c1">670</span> ShareX.lnk
+<span class="pl-k">-</span>a<span class="pl-k">----</span>         <span class="pl-c1">2025</span><span class="pl-k">/</span><span class="pl-c1">6</span><span class="pl-k">/</span><span class="pl-c1">17</span>     <span class="pl-c1">19</span>:<span class="pl-c1">47</span>            <span class="pl-c1">820</span> Visual Studio Code.lnk
+<span class="pl-k">-</span>a<span class="pl-k">----</span>         <span class="pl-c1">2025</span><span class="pl-k">/</span><span class="pl-c1">2</span><span class="pl-k">/</span><span class="pl-c1">16</span>     <span class="pl-c1">22</span>:<span class="pl-c1">21</span>            <span class="pl-c1">684</span> XMind <span class="pl-c1">8</span> Update <span class="pl-c1">9.</span>lnk</pre></div>
+<p>上面的例子就是把 <code class="notranslate">dir</code> 的输出结果作为 <code class="notranslate">More</code> 的输入。</p>
+<h2>输出结果到CSV或XML文件</h2>
+<h3>CSV表格</h3>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Export-Csv</span> procs.csv</pre></div>
+<p>将 <code class="notranslate">Get-Process</code> 的输出结果写入 <code class="notranslate">procs.csv</code> 文件，并保存到桌面</p>
+<p>这个csv表格的第一行是 <code class="notranslate">#TYPE System.Diagnostics.Process</code>，这是一个注释 （<code class="notranslate">#</code>用来注释），代表文件中包含的信息类型。这个csv文件中显示的内容比控制台显示的内容更详细，因为控制台只输出一些比较重要的信息</p>
+<p>在控制台导入csv文件，查看其内容：</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">PS C:\Desktop<span class="pl-k">&gt;</span> <span class="pl-c1">Import-Csv</span> procs.csv</pre></div>
+<h3>XML</h3>
+<p><code class="notranslate">Export-clixml</code> 命令，用于创建常规的命令行界面可扩展标记语言文件 generic command-line interface (CLI) extensible makeup language (XML)。<code class="notranslate">clixml</code> 是powershell专用的，但是任何可以解析xml文件的程序都能够读取它。还有 <code class="notranslate">Import-clixml</code> 命令，所有的以 <code class="notranslate">import</code> 和 <code class="notranslate">export</code> 开头的cmdlet都需要传入文件名参数。</p>
+<h3>对比文件</h3>
+<p><code class="notranslate">Compare-Object</code> 用于对比文件的差异，它的别名是 <code class="notranslate">Diff</code>。建议使用 <code class="notranslate">diff</code> 别名</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Export-Clixml</span> reference.xml
+<span class="pl-k">&gt;</span> diff <span class="pl-k">-</span>ReferenceObject (<span class="pl-c1">Import-Clixml</span> .\reference.xml) <span class="pl-k">-</span>DifferenceObject (<span class="pl-c1">Get-Process</span>) <span class="pl-k">-</span>Property name
+
+name               SideIndicator
+<span class="pl-k">----</span>               <span class="pl-k">-------------</span>
+ai                 <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+backgroundTaskHost <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+chrome             <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+conhost            <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+msedgewebview2     <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+msedgewebview2     <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+msedgewebview2     <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+msedgewebview2     <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+msedgewebview2     <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+msedgewebview2     <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+msedgewebview2     <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+mspaint            <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+olk                <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+RuntimeBroker      <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+RuntimeBroker      <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+tasklist           <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+WINWORD            <span class="pl-k">=</span><span class="pl-k">&gt;</span>
+audiodg            <span class="pl-k">&lt;</span><span class="pl-k">=</span>
+ChsIME             <span class="pl-k">&lt;</span><span class="pl-k">=</span>
+MSPCManagerCore    <span class="pl-k">&lt;</span><span class="pl-k">=</span>
+rundll32           <span class="pl-k">&lt;</span><span class="pl-k">=</span>
+smartscreen        <span class="pl-k">&lt;</span><span class="pl-k">=</span>
+svchost            <span class="pl-k">&lt;</span><span class="pl-k">=</span></pre></div>
+<p>通过 <code class="notranslate">Get-Process | Export-Clixml reference.xml</code> 导出xml文件之后，又打开了一些应用程序，通过 <code class="notranslate">diff</code>命令可以比对前后数据的差异。<code class="notranslate">=&gt;</code> 代表只存在与 <code class="notranslate">-DifferenceObject</code> 的内容， <code class="notranslate">&lt;=</code> 代表只存在与 <code class="notranslate">-ReferenceObject</code> 中的内容，二者都有的内容不会出现在输出结果中。 <code class="notranslate">()</code> 可以提高命令执行的优先级</p>
+<h2>管道传输到文件或打印机</h2>
+<p>powershell的输出一般是在控制台上面，但是可以修改它输入内容的位置，使其可以保存到文件中或是通过打印机打印到纸上。</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> dir <span class="pl-k">&gt;</span> DirectoryList.txt
+<span class="pl-k">&gt;</span> dir <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> DirectoryList2.txt</pre></div>
+<p>以上两个命令结果是相同的，都是将 <code class="notranslate">dir</code> 的输出结果保存到txt文件中，但是第一种通过 <code class="notranslate">&gt;</code> 写法是兼容cmd的写法，第二种是powershell的写法</p>
+<p><code class="notranslate">Out-File</code> 提供了一些参数让你定制替代的字符编码（如UTF8或Unicode）、追加内容到现有文件等功能。默认情况下，用“Out-File”创建的文件有80列宽，这种默认的80列宽可能会导致一些内容原本的排版格式被破坏，使可读性变差。</p>
+<p>PowerShell有很多 <code class="notranslate">out</code> 开头的cmdlet，其中一个叫 <code class="notranslate">out-default</code></p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> dir
+<span class="pl-k">&gt;</span> dir <span class="pl-k">|</span> <span class="pl-c1">Out-Default</span> <span class="pl-k">|</span> <span class="pl-c1">Out-Host</span></pre></div>
+<p>当你运行 <code class="notranslate">dir</code> 时，实际上是在运行 <code class="notranslate">Dir | Out-Default | Out-Host</code> 而“Out-Host”是显示结果到显示器中。</p>
 <ul>
-<li>
-<p>参数名称可以只输入前几个字母，这时可以使用tab补全</p>
-</li>
-<li>
-<p>参数名别名，例如：查看 <code class="notranslate">Get-EventLog</code> 命令 <code class="notranslate">Computer</code>参数的别名 <code class="notranslate">Cn</code></p>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> (<span class="pl-c1">Get-Command</span> <span class="pl-c1">Get-EventLog</span> <span class="pl-k">|</span> Select <span class="pl-k">-</span>ExpandProperty parameters).computername.aliases
-Cn</pre></div>
-</li>
-<li>
-<p>位置参数 通过 <code class="notranslate">Help</code> 返回的帮助文档，我们可以看到某个参数的位置，<code class="notranslate">位置?                        0</code> 这种情况表示是第一个位置参数，位置参数传参时可以省略参数名，位置参数只适合简单的命令，如果命令过于复杂，请不要使用位置参数</p>
-</li>
+<li><code class="notranslate">out-printer</code> 用于将输出结果打印到打印机，没有打印机是输出为pdf</li>
+<li><code class="notranslate">out-gridview</code> 用于将输出结果显示在网格视图中，通过powershell ise显示</li>
 </ul>
-<h2>快捷传参</h2>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Show-Command</span> <span class="pl-c1">Get-EventLog</span></pre></div>
-<p>运行这个命令之后会弹出一个对话框，可以在这个对话框中填写参数运行命令。使用这种方法输入的命令格式一定是正确的</p>
-<p><a target="_blank" rel="noopener noreferrer" href="./img/1.jpg"><img src="./img/1.jpg" alt="" style="max-width: 100%;"></a></p>
+<h2>转换成html</h2>
+<p>只需要通过管道将结果传递给“ConvertTo-HTML”命令即可。该命令可以生成结构良好的、通用的HTML数据，并可以在任何Web浏览器中打开。但是这只是原始数据，如果需要美观，需要引用CSS（Cascading Style Sheet）文件定制样式。</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Service</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span></pre></div>
+<p>该命令不需要文件名，直接在控制台输出这个html文件的内容。</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Service</span> <span class="pl-k">|</span> <span class="pl-c1">ConvertTo-Html</span> <span class="pl-k">|</span> <span class="pl-c1">Out-File</span> services.html</pre></div>
+<p>输出为html文件。</p>
+<p>PowerShell附带其他<code class="notranslate">ConvertTo</code>开头的cmdlet，包括“ConvertTo-CSV”和“ConvertTo-XML”等。正如“ConvertTo-HTML”一样，这些命令都不在磁盘上创建文件，只是把命令的输出结果分别转换成CSV或XML。你需要用管道把它们和“Out-File”连接起来以便存储到磁盘上，和使用“Export-CSV”或“Export-CliXML”效果类似。另外，它们能既转换又存储。</p>
+<h2>使用cmdlet修改系统：终止进程和停止服务</h2>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>不要运行下面这个命令，否则电脑会蓝屏死机</p>
+</div>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
+<p>这个命令会关闭所有的进程，会导致电脑死机。带有相同名词（本例中的进程Process）的Cmdlets可以在彼此之间互传信息。通常情况下，你最好带上特定进程名称而不是终止全部进程：</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">Get-Process</span> <span class="pl-k">-</span>Name Notepad <span class="pl-k">|</span> <span class="pl-c1">Stop-Process</span></pre></div>
+<p>上面的代码结束Windows记事本notepad的进程，会关闭记事本。</p>
+<p>服务也是类似的，“Get-Service”命令的输出结果能和其他Cmdlets（如Stop-Service、Start-Service、Set-Service等）一起被管道传输。</p>
+<p>类似于 “Stop-Service”和“Stop-Process” 的 Cmdlets以某些方式修改系统，并且有一个内部定义的影响级别（impact level）。Cmdlet的创建者已经设定了这些影响级别，并且不允许修改。而Shell有一个相应的“$ConfirmPreference”设置，默认为“High”。可以通过下面的命令查看你的Shell的设置：</p>
+<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">&gt;</span> <span class="pl-c1">$ConfirmPreference</span>
+High</pre></div>
+<p>工作原理：当Cmdlet的内部影响级别大于等于Shell的“$ConfirmPreference”设置时，不管Cmdlet正准备做什么，Shell都会自动询问是否进行此操作。当Cmdlet的内部影响级别小于Shell的“$ConfirmPreference”设置时，不会自动弹出这个提示。也就是说，如果权限较高的cmdlet在执行修改系统的操作时，不会提示用户是否进行此操作。</p>
+<p>在末尾添加 <code class="notranslate">-confirm</code>参数，对于某些被支持的用于修改系统的Cmdlet，会弹出提示，并对这些被支持的Cmdlet显示对应的帮助文档。或者使用 <code class="notranslate">-whatif</code> 参数，也可以达成类似的效果。</p>
+<h2>读取文件</h2>
+<p><code class="notranslate">Get-Content</code> 用于读取文件内容。它的别名是 <code class="notranslate">cat</code> <code class="notranslate">type</code></p>
+<p><code class="notranslate">Import</code>开头的cmdlet会关注文件中的内容，尝试解析它们，然后创建一个比原始命令看上去更加顺眼的输出结果。如果你使用“Export-CSV”创建文件，可以使用“Import-CSV”命令来读取它们。如果使用“Export-CliXML”命令创建文件，通常建议使用“Import-CliXML”命令读取。使用这些配套命令可以得到更好的结果。仅在从一个文本文件中读取内容并且不需要PowerShell解析数据时，才使用“Get-Content”命令，也就是你仅需要原始内容。</p>
 <hr></div>
     <nav class="in-series-list" aria-label="Series">
       <h2>PowerShell 学习笔记</h2>
@@ -157,8 +202,8 @@ Cn</pre></div>
       </ol>
     </nav>
     <nav class="in-series-pager" aria-label="Series pages">
-      <a class="in-series-prev" href="https://interset-wq.github.io/post/63_6050799327.html">DAY 3 使用帮助系统</a>
-      <a class="in-series-next" href="https://interset-wq.github.io/post/63_6050800073.html">DAY 5 使用提供程序</a>
+      <a class="in-series-prev" href="https://interset-wq.github.io/post/63_6050800073.html">DAY 5 使用提供程序</a>
+      <a class="in-series-next" href="https://interset-wq.github.io/post/63_6050801673.html">扩展命令</a>
     </nav>
   </article>
 <section class="in-comments-section">
