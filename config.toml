@@ -15,7 +15,7 @@ start_date = "2026-09-30"    # 建站日期（显示运行天数）
 enabled = true
 
 [giscus]
-repo = "interset-wq/interset-wq.github.io"  # 评论存储的仓库（需开启 Discussions）
+repo = "interset-wq/blog"  # 评论存储的仓库（需开启 Discussions）
 repo_id = "R_kgDOTWqpPQ"
 category = "Announcements"
 category_id = "DIC_kwDOTWqpPc4DBFW-"
@@ -43,5 +43,5 @@ username = "2775055258"
 id = "wechat"
 title = "WeChat"
 action = "qrcode"
-qrcode = "https://interset-wq.github.io/assets/avatar.png"
+qrcode = "https://interset-wq.github.io/blog/assets/avatar.png"
 
