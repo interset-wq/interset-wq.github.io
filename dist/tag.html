@@ -58,7 +58,7 @@
   <span id="run-days"></span>
   <span>Powered by <a href="https://github.com/interset-wq/InterNote">InterNote</a></span>
 </div>
-<div class="in-footer-built">构建部署于 2026-10-10 14:47:28</div>
+<div class="in-footer-built">构建部署于 2026-10-10 14:58:55</div>
 <script>
   (function () {
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
@@ -322,15 +322,8 @@
             title.textContent = item.title;
             body.appendChild(title);
 
-            var labelsBox = document.createElement('span');
-            labelsBox.className = 'in-timeline-labels';
-            item.labels.forEach(function (name) {
-              labelsBox.appendChild(badge(name, data.label_colors[name], labelCounts[name] || 0, function () {
-                showLabel(name);
-              }));
-            });
-            body.appendChild(labelsBox);
-
+            // no label chips here: the timeline stays a pure date rail,
+            // tags live on the cards and in the cloud
             entry.appendChild(day);
             entry.appendChild(body);
             group.appendChild(entry);
