@@ -38,6 +38,11 @@
       svg.setAttribute('width', '18');
       svg.setAttribute('height', '18');
       svg.setAttribute('aria-hidden', 'true');
+      // no .octicon class here (that would pull Primer's fill rule via a
+      // class this svg does not carry) - set it directly so the glyph
+      // follows the button colour instead of the default black, which
+      // vanished on the dark-mode button background
+      svg.setAttribute('fill', 'currentColor');
       var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       path.setAttribute('fill-rule', 'evenodd');
       path.setAttribute('d', (window.icons || {})[iconName] || '');
@@ -89,16 +94,17 @@
     fab.appendChild(topBtn);
     fab.appendChild(bottomBtn);
 
-    // Hide the button that does nothing: top is invisible at the top,
-    // bottom is invisible at the bottom.
+    // Disable the button that does nothing: top is useless at the top,
+    // bottom at the bottom. Disabled instead of hidden - the stack never
+    // reflows and every button keeps its place.
     var pending = false;
     function update() {
       pending = false;
       var top = window.scrollY;
       var max =
         document.documentElement.scrollHeight - window.innerHeight;
-      topBtn.classList.toggle('is-dimmed', top < 80);
-      bottomBtn.classList.toggle('is-dimmed', top > max - 80);
+      topBtn.disabled = top < 80;
+      bottomBtn.disabled = top > max - 80;
     }
     window.addEventListener(
       'scroll',
